@@ -1,0 +1,106 @@
+{
+  "assets": [
+    {
+      "reference": 1,
+      "id": "anime-akatsuki-crimson-assembly",
+      "file": "public/wallpapers/scenic/anime-akatsuki-crimson-assembly/mobile.png",
+      "franchise": "Naruto",
+      "family": "anime",
+      "keywords": [
+        "akatsuki",
+        "naruto",
+        "itachi",
+        "pain",
+        "red cloud",
+        "black",
+        "red",
+        "ensemble"
+      ],
+      "prompt": "Use case: stylized-concept. Create one mobile wallpaper 1080 x 2400 pixels, opaque PNG. Reference image is composition, style, characters and palette guidance. Preserve the reference closely: the Akatsuki Naruto ensemble in black red-cloud cloaks, dramatic white highlights and red rim light, deep black backdrop, large muted crimson cloud emblem. Keep the unusual sideways ensemble orientation as seen in the reference, filling tall portrait canvas. Clean detailed anime ink illustration. Artwork only. No text, logos, watermarks, schedule, UI or device frame. Do not add objects or redesign the composition.",
+      "provider": "built-in image_gen",
+      "source": "C:/Users/Admin/.codex/generated_images/01a14e9a-b913-7ea0-8ebb-110b1d513946/exec-5d691de6-4ca5-4ae0-ab31-0be738ad8820.png",
+      "requestedDimensions": [
+        1080,
+        2400
+      ],
+      "visualInspection": "Preserves reference composition and palette; no visible watermark, text, UI or schedule. Raw generator output retained; exact dimensions pending parent validation."
+    },
+    {
+      "reference": 2,
+      "id": "anime-naruto-neon-dojutsu",
+      "file": "public/wallpapers/scenic/anime-naruto-neon-dojutsu/mobile.png",
+      "franchise": "Naruto",
+      "family": "anime",
+      "keywords": [
+        "naruto",
+        "sasuke",
+        "sharingan",
+        "rinnegan",
+        "byakugan",
+        "neon",
+        "eyes",
+        "manga"
+      ],
+      "prompt": "Use case: stylized-concept. One opaque mobile wallpaper, 1080 x 2400 portrait PNG. Reference image role: exact composition, Naruto characters, mood and palette guide. Preserve stacked tilted horizontal manga eye panels almost unchanged, crisp charcoal gray crosshatched faces on black, neon red Sharingan eyes, purple concentric Rinnegan eyes, gold sage eyes, white lavender Byakugan eyes. Retain panel order and dramatic close framing, black gutters and energy accents. Clean high quality anime artwork. Remove all existing writing and watermark signatures. No text, logo, UI, schedule or frame.",
+      "provider": "built-in image_gen",
+      "source": "C:/Users/Admin/.codex/generated_images/01a14e9a-b913-7ea0-8ebb-110b1d513946/exec-aea23227-fac3-4d58-82cd-59b356b493da.png",
+      "requestedDimensions": [
+        1080,
+        2400
+      ],
+      "visualInspection": "Preserves reference composition and palette; no visible watermark, text, UI or schedule. Raw generator output retained; exact dimensions pending parent validation."
+    },
+    {
+      "reference": 3,
+      "id": "anime-naruto-ink-quartet",
+      "file": "public/wallpapers/scenic/anime-naruto-ink-quartet/mobile.png",
+      "franchise": "Naruto",
+      "family": "anime",
+      "keywords": [
+        "naruto",
+        "itachi",
+        "sasuke",
+        "kakashi",
+        "manga",
+        "monochrome",
+        "eyes",
+        "ink"
+      ],
+      "prompt": "Use case: stylized-concept. Create one 1080 x 2400 opaque portrait mobile wallpaper PNG. Reference role: layout, Naruto identities, composition and style. Preserve closely its white paper manga collage of four stacked eye closeup panels: Itachi above, Naruto sage eyes second, masked Kakashi third, Sasuke with one red and one purple eye below. Keep scratchy black hand ink borders, rough extended panel linework, dense stipple and crosshatching, tiny subdued colored eye accents, black hair and white background. Same framing and order with only aspect adjustment. No text, logo, watermark, UI, schedule or device frame.",
+      "provider": "built-in image_gen",
+      "source": "C:/Users/Admin/.codex/generated_images/01a14e9a-b913-7ea0-8ebb-110b1d513946/exec-9f7561d3-cb80-44f4-9f0f-1b4bc41b9459.png",
+      "requestedDimensions": [
+        1080,
+        2400
+      ],
+      "visualInspection": "Preserves reference composition and palette; no visible watermark, text, UI or schedule. Raw generator output retained; exact dimensions pending parent validation."
+    },
+    {
+      "reference": 4,
+      "id": "anime-hunter-prismatic-gaze",
+      "file": "public/wallpapers/scenic/anime-hunter-prismatic-gaze/mobile.png",
+      "franchise": "Hunter x Hunter",
+      "family": "hunter-x-hunter",
+      "keywords": [
+        "hunter x hunter",
+        "hxh",
+        "gon",
+        "killua",
+        "kurapika",
+        "hisoka",
+        "chrollo",
+        "leorio",
+        "neferpitou",
+        "eyes"
+      ],
+      "prompt": "Use case: stylized-concept. One 1080 x 2400 opaque portrait PNG mobile wallpaper. Reference role: preserve the Hunter x Hunter stacked tilted eye collage, character order, colors, crisp monochrome anime illustration and composition closely. Seven horizontal black-divided strips showing Kurapika scarlet eyes, Neferpitou magenta eyes, Gon gold eyes, Killua cyan blue eyes, Chrollo purple eyes with forehead mark, Hisoka narrow gold eyes and face markings, Leorio glasses and intense eyes below. Only slight portrait aspect adjustment, no extra objects, same facial crop. Selective luminous eye color against black and white cel shading. Artwork only, no text, logos, watermarks, schedule, UI or device frame.",
+      "provider": "built-in image_gen",
+      "source": "C:/Users/Admin/.codex/generated_images/01a14e9a-b913-7ea0-8ebb-110b1d513946/exec-f5199d48-b39e-4e2b-88e1-8da795846da0.png",
+      "requestedDimensions": [
+        1080,
+        2400
+      ],
+      "visualInspection": "Preserves reference composition and palette; no visible watermark, text, UI or schedule. Raw generator output retained; exact dimensions pending parent validation."
+    }
+  ]
+}

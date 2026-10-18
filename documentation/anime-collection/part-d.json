@@ -1,0 +1,75 @@
+{
+  "assets": [
+    {
+      "reference": 13,
+      "id": "anime-crimson-manga-eye",
+      "name": "Crimson Manga Eye",
+      "franchise": "Naruto",
+      "keywords": [
+        "anime",
+        "naruto",
+        "itachi",
+        "uchiha",
+        "sharingan",
+        "manga",
+        "red",
+        "black",
+        "crow",
+        "eye",
+        "collage"
+      ],
+      "ref": "C:/Users/Admin/AppData/Local/Temp/codex-clipboard-3fdcfa6c-cb69-4777-b6ee-8188a8833514.png",
+      "prompt": "Use case: stylized-concept. Asset type: SchedSnap opaque mobile anime wallpaper, 1080 x 2400 portrait. Reference image is style and composition guidance. Re-create this composition closely: huge sideways close-up of Itachi Uchiha's red Sharingan eye filling the central tilted panel, black hair across the lower portion, surrounding black-and-white hand-inked manga panels and crow silhouettes, thin vivid red luminous diagonal grid lines. Preserve reference layout, character, scale, panel angles, red-black-white palette, dramatic manga halftone detail. Extend composition naturally to tall 9:20 phone format; do not change the visual concept. Clean sharp detailed illustration. Artwork only, no text, lettering, speech bubbles, logo, watermark, schedule, UI, badges or device frame. Opaque full bleed.",
+      "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a14e9e-e591-7d11-8f31-9d43f33c17fc\\exec-b3a307ac-8ae7-4c71-8627-02b997872599.png",
+      "path": "public/wallpapers/scenic/anime-crimson-manga-eye/mobile.png",
+      "provider": "built-in image_gen"
+    },
+    {
+      "reference": 14,
+      "id": "anime-cyan-spirit-emblems",
+      "name": "Cyan Spirit Emblems",
+      "franchise": "Anime",
+      "keywords": [
+        "anime",
+        "cyan",
+        "blue",
+        "black",
+        "light gray",
+        "emblems",
+        "spirits",
+        "masks",
+        "minimal",
+        "vertical",
+        "flame"
+      ],
+      "ref": "C:/Users/Admin/AppData/Local/Temp/codex-clipboard-6c7e5572-85a4-4f44-bd05-02793156901c.png",
+      "prompt": "Use case: stylized-concept. Asset type: SchedSnap opaque mobile anime wallpaper, 1080 x 2400 portrait. Reference image is style and composition guidance. Re-create this minimalist composition closely: exactly six separate small black and bright cyan anime spirit mask emblems stacked in one centered vertical column on a uniform very light gray background. Keep the six distinct silhouettes and sequence from reference: pointed flame head with red swept accent; horned cyan fire mask; round red forehead target mask with bead collar; grinning ragged cyan flame face; pointed spiky black spirit with cyan chin; elegant antlered narrow black mask with icy cyan horns. Preserve flat crisp ink graphic shapes, tiny pale eyes, large quiet side margins, equal spacing and small emblem scale. Adjust spacing for tall 9:20 phone format without changing arrangement. Artwork only, no text, lettering, logo, watermark, schedule, UI, badges or device frame. Opaque full bleed.",
+      "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a14e9e-e591-7d11-8f31-9d43f33c17fc\\exec-96ff78e0-627b-40aa-8744-064b7b4bec8d.png",
+      "path": "public/wallpapers/scenic/anime-cyan-spirit-emblems/mobile.png",
+      "provider": "built-in image_gen"
+    },
+    {
+      "reference": 15,
+      "id": "anime-clover-sword",
+      "name": "Clover Sword",
+      "franchise": "Black Clover",
+      "keywords": [
+        "anime",
+        "black clover",
+        "asta",
+        "sword",
+        "katana",
+        "clover",
+        "white",
+        "black",
+        "minimal",
+        "smoke"
+      ],
+      "ref": "C:/Users/Admin/AppData/Local/Temp/codex-clipboard-f63a8583-f359-4e1f-bab5-cc6d98452357.png",
+      "prompt": "Use case: stylized-concept. Asset type: SchedSnap opaque mobile anime wallpaper, 1080 x 2400 portrait. Reference image is style and composition guidance. Re-create this minimalist black-and-white anime composition very closely: pure black background; one slim centered vertical white katana with white diamond-cut wrapped handle in upper central third, a fine oval guard, broken dark blade outlined in white beneath; large white five-leaf clover emblem centered in lower middle; the blade continues beneath the clover towards the bottom, surrounded by sparse flowing white flame-like smoke wisps and a few tiny white flecks. Preserve exact narrow central composition, large empty black side margins, white-on-black palette and restrained screenprint texture, tall 9:20 mobile framing. Remove the small Japanese character under clover rather than substituting text. Artwork only, no text, lettering, logo, watermark, schedule, UI, badges or device frame. Opaque full bleed.",
+      "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a14e9e-e591-7d11-8f31-9d43f33c17fc\\exec-7f85fa92-0eeb-4801-8d9c-707d98ebcdf3.png",
+      "path": "public/wallpapers/scenic/anime-clover-sword/mobile.png",
+      "provider": "built-in image_gen"
+    }
+  ]
+}

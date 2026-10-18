@@ -1,0 +1,438 @@
+{
+  "provider": "built-in image_gen",
+  "createdAt": "2026-10-18T10:50:50.511362Z",
+  "assets": [
+    {
+      "reference": 1,
+      "id": "anime-akatsuki-crimson-assembly",
+      "file": "public/wallpapers/scenic/anime-akatsuki-crimson-assembly/mobile.png",
+      "franchise": "Naruto",
+      "family": "anime",
+      "keywords": [
+        "akatsuki",
+        "naruto",
+        "itachi",
+        "pain",
+        "red cloud",
+        "black",
+        "red",
+        "ensemble"
+      ],
+      "prompt": "Use case: stylized-concept. Create one mobile wallpaper 1080 x 2400 pixels, opaque PNG. Reference image is composition, style, characters and palette guidance. Preserve the reference closely: the Akatsuki Naruto ensemble in black red-cloud cloaks, dramatic white highlights and red rim light, deep black backdrop, large muted crimson cloud emblem. Keep the unusual sideways ensemble orientation as seen in the reference, filling tall portrait canvas. Clean detailed anime ink illustration. Artwork only. No text, logos, watermarks, schedule, UI or device frame. Do not add objects or redesign the composition.",
+      "provider": "built-in image_gen",
+      "source": "C:/Users/Admin/.codex/generated_images/01a14e9a-b913-7ea0-8ebb-110b1d513946/exec-5d691de6-4ca5-4ae0-ab31-0be738ad8820.png",
+      "requestedDimensions": [
+        1080,
+        2400
+      ],
+      "visualInspection": "Preserves reference composition and palette; no visible watermark, text, UI or schedule. Raw generator output retained; exact dimensions pending parent validation.",
+      "normalization": "User-authorized local Lanczos fit to opaque RGB 1080x2400; aspect preserved with minimal edge crop."
+    },
+    {
+      "reference": 2,
+      "id": "anime-naruto-neon-dojutsu",
+      "file": "public/wallpapers/scenic/anime-naruto-neon-dojutsu/mobile.png",
+      "franchise": "Naruto",
+      "family": "anime",
+      "keywords": [
+        "naruto",
+        "sasuke",
+        "sharingan",
+        "rinnegan",
+        "byakugan",
+        "neon",
+        "eyes",
+        "manga"
+      ],
+      "prompt": "Use case: stylized-concept. One opaque mobile wallpaper, 1080 x 2400 portrait PNG. Reference image role: exact composition, Naruto characters, mood and palette guide. Preserve stacked tilted horizontal manga eye panels almost unchanged, crisp charcoal gray crosshatched faces on black, neon red Sharingan eyes, purple concentric Rinnegan eyes, gold sage eyes, white lavender Byakugan eyes. Retain panel order and dramatic close framing, black gutters and energy accents. Clean high quality anime artwork. Remove all existing writing and watermark signatures. No text, logo, UI, schedule or frame.",
+      "provider": "built-in image_gen",
+      "source": "C:/Users/Admin/.codex/generated_images/01a14e9a-b913-7ea0-8ebb-110b1d513946/exec-aea23227-fac3-4d58-82cd-59b356b493da.png",
+      "requestedDimensions": [
+        1080,
+        2400
+      ],
+      "visualInspection": "Preserves reference composition and palette; no visible watermark, text, UI or schedule. Raw generator output retained; exact dimensions pending parent validation.",
+      "normalization": "User-authorized local Lanczos fit to opaque RGB 1080x2400; aspect preserved with minimal edge crop."
+    },
+    {
+      "reference": 3,
+      "id": "anime-naruto-ink-quartet",
+      "file": "public/wallpapers/scenic/anime-naruto-ink-quartet/mobile.png",
+      "franchise": "Naruto",
+      "family": "anime",
+      "keywords": [
+        "naruto",
+        "itachi",
+        "sasuke",
+        "kakashi",
+        "manga",
+        "monochrome",
+        "eyes",
+        "ink"
+      ],
+      "prompt": "Use case: stylized-concept. Create one 1080 x 2400 opaque portrait mobile wallpaper PNG. Reference role: layout, Naruto identities, composition and style. Preserve closely its white paper manga collage of four stacked eye closeup panels: Itachi above, Naruto sage eyes second, masked Kakashi third, Sasuke with one red and one purple eye below. Keep scratchy black hand ink borders, rough extended panel linework, dense stipple and crosshatching, tiny subdued colored eye accents, black hair and white background. Same framing and order with only aspect adjustment. No text, logo, watermark, UI, schedule or device frame.",
+      "provider": "built-in image_gen",
+      "source": "C:/Users/Admin/.codex/generated_images/01a14e9a-b913-7ea0-8ebb-110b1d513946/exec-9f7561d3-cb80-44f4-9f0f-1b4bc41b9459.png",
+      "requestedDimensions": [
+        1080,
+        2400
+      ],
+      "visualInspection": "Preserves reference composition and palette; no visible watermark, text, UI or schedule. Raw generator output retained; exact dimensions pending parent validation.",
+      "normalization": "User-authorized local Lanczos fit to opaque RGB 1080x2400; aspect preserved with minimal edge crop."
+    },
+    {
+      "reference": 4,
+      "id": "anime-hunter-prismatic-gaze",
+      "file": "public/wallpapers/scenic/anime-hunter-prismatic-gaze/mobile.png",
+      "franchise": "Hunter x Hunter",
+      "family": "hunter-x-hunter",
+      "keywords": [
+        "hunter x hunter",
+        "hxh",
+        "gon",
+        "killua",
+        "kurapika",
+        "hisoka",
+        "chrollo",
+        "leorio",
+        "neferpitou",
+        "eyes"
+      ],
+      "prompt": "Use case: stylized-concept. One 1080 x 2400 opaque portrait PNG mobile wallpaper. Reference role: preserve the Hunter x Hunter stacked tilted eye collage, character order, colors, crisp monochrome anime illustration and composition closely. Seven horizontal black-divided strips showing Kurapika scarlet eyes, Neferpitou magenta eyes, Gon gold eyes, Killua cyan blue eyes, Chrollo purple eyes with forehead mark, Hisoka narrow gold eyes and face markings, Leorio glasses and intense eyes below. Only slight portrait aspect adjustment, no extra objects, same facial crop. Selective luminous eye color against black and white cel shading. Artwork only, no text, logos, watermarks, schedule, UI or device frame.",
+      "provider": "built-in image_gen",
+      "source": "C:/Users/Admin/.codex/generated_images/01a14e9a-b913-7ea0-8ebb-110b1d513946/exec-f5199d48-b39e-4e2b-88e1-8da795846da0.png",
+      "requestedDimensions": [
+        1080,
+        2400
+      ],
+      "visualInspection": "Preserves reference composition and palette; no visible watermark, text, UI or schedule. Raw generator output retained; exact dimensions pending parent validation.",
+      "normalization": "User-authorized local Lanczos fit to opaque RGB 1080x2400; aspect preserved with minimal edge crop."
+    },
+    {
+      "ref": 5,
+      "id": "anime-titan-eye-panels",
+      "name": "Titan Eye Panels",
+      "franchise": "Attack on Titan",
+      "keywords": [
+        "anime",
+        "attack on titan",
+        "shingeki no kyojin",
+        "eren",
+        "mikasa",
+        "levi",
+        "armin",
+        "eyes",
+        "manga",
+        "monochrome",
+        "neon"
+      ],
+      "reference": "C:/Users/Admin/AppData/Local/Temp/codex-clipboard-72fd2b96-dd01-45af-8d22-ce0aeae5eb6f.png",
+      "prompt": "Use case: stylized-concept. Create one opaque full-bleed 1080 x 2400 mobile anime wallpaper, using attached reference as composition and style reference. Preserve closely its seven stacked diagonal eye-closeup panels, same character identities from Attack on Titan, order and expressive faces, monochrome faces with selectively luminous green, yellow, cyan and blue eyes, bold black diagonal separators and dramatic ink shading. Adapt proportions naturally to tall phone canvas without stretching. Artwork only; no text, letters, logo, watermark, schedule, UI, device frame. Repaint as polished crisp high-resolution anime artwork; do not add new objects.",
+      "provider": "built-in image_gen",
+      "generatedSource": "C:\\Users\\Admin\\.codex\\generated_images\\01a14e9a-de62-77c3-a100-83a2c277a729\\exec-f56c1e2c-9c9f-4bab-8f26-9460ee316194.png",
+      "path": "public/wallpapers/scenic/anime-titan-eye-panels/mobile.png",
+      "requestedDimensions": [
+        1080,
+        2400
+      ],
+      "normalization": "User-authorized local Lanczos fit to opaque RGB 1080x2400; aspect preserved with minimal edge crop.",
+      "visualInspection": "Passed: reference panel order, composition and neon accents preserved; no watermark or UI."
+    },
+    {
+      "ref": 6,
+      "id": "anime-neon-heroines",
+      "name": "Neon Heroines",
+      "franchise": "Anime",
+      "keywords": [
+        "anime",
+        "heroines",
+        "female",
+        "eyes",
+        "neon",
+        "cyan",
+        "purple",
+        "red",
+        "yellow",
+        "manga",
+        "dark"
+      ],
+      "reference": "C:/Users/Admin/AppData/Local/Temp/codex-clipboard-c16ad38b-5a39-4c25-a428-db35dfcc2954.png",
+      "prompt": "Use case: stylized-concept. Create one opaque full-bleed 1080 x 2400 mobile anime wallpaper. Input image is style and composition reference: preserve closely seven stacked horizontal female anime eye closeups, same order, expressions, character hair silhouettes and panel proportions, cyan then yellow then red then purple then amber then red cross pupils then violet glowing eyes. Fine expressive manga ink strokes on dark desaturated gray faces, intense selective neon eye light. Repaint crisp polished high-resolution, adapt naturally to tall phone format without stretching. Artwork only, no text, letters, logos, watermark, UI, timetable, device frame, new objects.",
+      "provider": "built-in image_gen",
+      "generatedSource": "C:\\Users\\Admin\\.codex\\generated_images\\01a14e9a-de62-77c3-a100-83a2c277a729\\exec-a3d1fe97-5e28-4194-b6e9-ef438561c351.png",
+      "path": "public/wallpapers/scenic/anime-neon-heroines/mobile.png",
+      "requestedDimensions": [
+        1080,
+        2400
+      ],
+      "normalization": "User-authorized local Lanczos fit to opaque RGB 1080x2400; aspect preserved with minimal edge crop.",
+      "visualInspection": "Passed: reference panel order, composition and neon accents preserved; no watermark or UI."
+    },
+    {
+      "ref": 7,
+      "id": "anime-hashira-eye-panels",
+      "name": "Hashira Eye Panels",
+      "franchise": "Demon Slayer",
+      "keywords": [
+        "anime",
+        "demon slayer",
+        "kimetsu no yaiba",
+        "hashira",
+        "tengen",
+        "rengoku",
+        "mitsuri",
+        "muichiro",
+        "gyomei",
+        "obanai",
+        "sanemi",
+        "giyu",
+        "shinobu",
+        "eyes",
+        "neon"
+      ],
+      "reference": "C:/Users/Admin/AppData/Local/Temp/codex-clipboard-c4a5b9ad-72e5-4826-a21d-820f51d2e948.png",
+      "prompt": "Use case: stylized-concept. Create one opaque full-bleed 1080 x 2400 mobile anime wallpaper. Input image is composition and style reference. Preserve closely the nine stacked slanted eye-closeup panels of Demon Slayer Hashira characters, their order, facial features, hair, accessories and colored glowing irises: orange, fire orange, green, pale cyan, white, yellow/cyan heterochromia, red, deep blue, pink. Dark grayscale faces, polished crisp inked anime shading, powerful jewel-bright eyes, black panel dividers, subtle mist. Fill gaps with dark charcoal instead of transparency. Natural tall phone composition, no distortion. Artwork only: no text, signatures, watermark, logos, UI, timetable or device frame.",
+      "provider": "built-in image_gen",
+      "generatedSource": "C:\\Users\\Admin\\.codex\\generated_images\\01a14e9a-de62-77c3-a100-83a2c277a729\\exec-211cdbc0-17d6-4561-908d-1c7742b062d0.png",
+      "path": "public/wallpapers/scenic/anime-hashira-eye-panels/mobile.png",
+      "requestedDimensions": [
+        1080,
+        2400
+      ],
+      "normalization": "User-authorized local Lanczos fit to opaque RGB 1080x2400; aspect preserved with minimal edge crop.",
+      "visualInspection": "Passed: reference panel order, composition and neon accents preserved; no watermark or UI."
+    },
+    {
+      "ref": 8,
+      "id": "anime-upper-moon-eyes",
+      "name": "Upper Moon Eyes",
+      "franchise": "Demon Slayer",
+      "keywords": [
+        "anime",
+        "demon slayer",
+        "kimetsu no yaiba",
+        "upper moon",
+        "kokushibo",
+        "doma",
+        "akaza",
+        "hantengu",
+        "gyokko",
+        "gyutaro",
+        "daki",
+        "eyes",
+        "fire",
+        "neon"
+      ],
+      "reference": "C:/Users/Admin/AppData/Local/Temp/codex-clipboard-dd6ab2f9-caf9-45f6-a5a0-dd0a24017088.png",
+      "prompt": "Use case: stylized-concept. Create one opaque full-bleed 1080 x 2400 mobile anime wallpaper using attached image as close style and composition reference. Preserve seven stacked horizontal eye closeup panels of Demon Slayer Upper Moon demons, character identities, expressions, hair silhouettes and relative panel heights. Very dark charcoal faces, crisp cel-shaded anime, intensely glowing irises with fiery gold corona: red, rainbow, ice cyan, orange, gold central eye, pink, green. Preserve geometric iris designs but omit all written kanji or lettering. Naturally adapt to tall phone format without stretching. Artwork only: no text, watermark, signature, logo, schedule, UI or device frame. No extra objects.",
+      "provider": "built-in image_gen",
+      "generatedSource": "C:\\Users\\Admin\\.codex\\generated_images\\01a14e9a-de62-77c3-a100-83a2c277a729\\exec-d1c2ee9d-53f5-4c9b-acac-6ae46a641d36.png",
+      "path": "public/wallpapers/scenic/anime-upper-moon-eyes/mobile.png",
+      "requestedDimensions": [
+        1080,
+        2400
+      ],
+      "normalization": "User-authorized local Lanczos fit to opaque RGB 1080x2400; aspect preserved with minimal edge crop.",
+      "visualInspection": "Passed: reference panel order, composition and neon accents preserved; no watermark or UI."
+    },
+    {
+      "reference": 9,
+      "id": "anime-crimson-sharingan",
+      "name": "Crimson Sharingan",
+      "family": "anime",
+      "franchise": "Naruto",
+      "keywords": [
+        "naruto",
+        "sharingan",
+        "uchiha",
+        "itachi",
+        "sasuke",
+        "red eyes",
+        "manga panels",
+        "dark"
+      ],
+      "path": "public/wallpapers/scenic/anime-crimson-sharingan/mobile.png",
+      "prompt": "Use case: stylized-concept. Asset: SchedSnap mobile anime wallpaper, opaque PNG exactly 1080 x 2400. Use attached reference as composition and character reference; recreate closely with polished crisp anime inkwork. Preserve five stacked horizontal eye close-up strips with dark near-black faces, black hair, glowing crimson Sharingan eye symbols, dense crosshatching, restrained red light. Maintain reference layout and tone, expand vertically only as needed for 9:20. Artwork only, no text, logo, watermark, schedule, UI or device frame.",
+      "provider": "built-in image_gen",
+      "source": "C:/Users/Admin/.codex/generated_images/01a14e9b-0cc5-75a1-9122-98581cfe9d6d/exec-1885113e-d757-4f21-b6fb-643908515360.png",
+      "generatedDimensions": {
+        "width": 841,
+        "height": 1870
+      },
+      "targetDimensions": {
+        "width": 1080,
+        "height": 2400
+      },
+      "dimensionsStatus": "raw output; local normalization pending user authorization",
+      "visualInspection": "passed: reference composition retained, opaque full bleed, no text/watermark/UI/schedule",
+      "normalization": "User-authorized local Lanczos fit to opaque RGB 1080x2400; aspect preserved with minimal edge crop."
+    },
+    {
+      "reference": 10,
+      "id": "anime-jujutsu-gaze",
+      "name": "Jujutsu Gaze",
+      "family": "anime",
+      "franchise": "Jujutsu Kaisen",
+      "keywords": [
+        "jujutsu kaisen",
+        "jjk",
+        "gojo",
+        "sukuna",
+        "yuji",
+        "megumi",
+        "eye panels"
+      ],
+      "path": "public/wallpapers/scenic/anime-jujutsu-gaze/mobile.png",
+      "prompt": "Use case: stylized-concept. Asset: SchedSnap mobile anime wallpaper, opaque PNG exactly 1080 x 2400. Reference image role: preserve composition and characters closely. Create polished Jujutsu Kaisen five stacked diagonally divided close-up eye panels, upper pale haired amber eyed face, then Sukuna red eyes and black facial markings, white haired Gojo icy cyan eyes at center, Yuji orange eyes, bottom dark haired blue eyed face. Keep grayscale lavender faces with vivid eye colors and clean black panel borders, same layout and restrained shading. Fit 9:20 without distorting anatomy. Artwork only, no text, logo, watermark, schedule, UI or device frame.",
+      "provider": "built-in image_gen",
+      "source": "C:/Users/Admin/.codex/generated_images/01a14e9b-0cc5-75a1-9122-98581cfe9d6d/exec-94b14e04-11cc-442d-85c8-d8b87d9d3362.png",
+      "generatedDimensions": {
+        "width": 841,
+        "height": 1870
+      },
+      "targetDimensions": {
+        "width": 1080,
+        "height": 2400
+      },
+      "dimensionsStatus": "raw output; local normalization pending user authorization",
+      "visualInspection": "passed: reference composition retained, opaque full bleed, no text/watermark/UI/schedule",
+      "normalization": "User-authorized local Lanczos fit to opaque RGB 1080x2400; aspect preserved with minimal edge crop."
+    },
+    {
+      "reference": 11,
+      "id": "anime-blue-rift",
+      "name": "Blue Rift",
+      "family": "anime",
+      "franchise": "Anime",
+      "keywords": [
+        "anime",
+        "blue eyes",
+        "black hair",
+        "torn paper",
+        "minimal",
+        "black",
+        "crimson"
+      ],
+      "path": "public/wallpapers/scenic/anime-blue-rift/mobile.png",
+      "prompt": "Use case: stylized-concept. Asset: SchedSnap mobile anime wallpaper, opaque PNG exactly 1080 x 2400. Reference role: preserve exact minimal layout, tone and face composition. Black full bleed portrait with one horizontal torn paper opening across the middle, ragged muted crimson border, inside opening intense handsome dark black haired anime young man's upper face and glowing icy blue eyes with subtle violet aura at far edges. Keep roughly top 40 percent and bottom 34 percent empty pitch black as reference; opening about 26 percent of height, no added objects. Sharp refined anime artwork. No text, logo, watermark, schedule, UI or frame.",
+      "provider": "built-in image_gen",
+      "source": "C:/Users/Admin/.codex/generated_images/01a14e9b-0cc5-75a1-9122-98581cfe9d6d/exec-31629167-50aa-41e2-9488-a10bb0063435.png",
+      "generatedDimensions": {
+        "width": 841,
+        "height": 1870
+      },
+      "targetDimensions": {
+        "width": 1080,
+        "height": 2400
+      },
+      "dimensionsStatus": "raw output; local normalization pending user authorization",
+      "visualInspection": "passed: reference composition retained, opaque full bleed, no text/watermark/UI/schedule",
+      "normalization": "User-authorized local Lanczos fit to opaque RGB 1080x2400; aspect preserved with minimal edge crop."
+    },
+    {
+      "reference": 12,
+      "id": "anime-torn-manga-eyes",
+      "name": "Torn Manga Eyes",
+      "family": "anime",
+      "franchise": "Anime",
+      "keywords": [
+        "anime",
+        "manga",
+        "heterochromia",
+        "amber eyes",
+        "teal eyes",
+        "torn paper",
+        "collage"
+      ],
+      "path": "public/wallpapers/scenic/anime-torn-manga-eyes/mobile.png",
+      "prompt": "Use case: stylized-concept. Asset: SchedSnap mobile anime wallpaper, opaque PNG exactly 1080 x 2400. Reference role: closely retain layout and character composition. Tall portrait manga torn paper collage: narrow diagonal vertical ragged tear from upper right toward lower left reveals sideways anime black haired face with one large luminous amber eye above and one teal green eye below. Surround with intricate monochrome illustrated manga action panels and textured ivory torn edges, floating small paper fragments, deep midnight blue shadows, cinematic fine ink detail. Preserve reference scale and asymmetry. Surrounding panels use artwork and abstract ink strokes only, no legible writing, speech text, lettering, logos or watermarks. No schedule, UI or device frame.",
+      "provider": "built-in image_gen",
+      "source": "C:/Users/Admin/.codex/generated_images/01a14e9b-0cc5-75a1-9122-98581cfe9d6d/exec-286ae0ce-0969-47ec-87d3-1434d71a5321.png",
+      "generatedDimensions": {
+        "width": 841,
+        "height": 1870
+      },
+      "targetDimensions": {
+        "width": 1080,
+        "height": 2400
+      },
+      "dimensionsStatus": "raw output; local normalization pending user authorization",
+      "visualInspection": "passed: reference composition retained, opaque full bleed, no text/watermark/UI/schedule",
+      "normalization": "User-authorized local Lanczos fit to opaque RGB 1080x2400; aspect preserved with minimal edge crop."
+    },
+    {
+      "reference": 13,
+      "id": "anime-crimson-manga-eye",
+      "name": "Crimson Manga Eye",
+      "franchise": "Naruto",
+      "keywords": [
+        "anime",
+        "naruto",
+        "itachi",
+        "uchiha",
+        "sharingan",
+        "manga",
+        "red",
+        "black",
+        "crow",
+        "eye",
+        "collage"
+      ],
+      "ref": "C:/Users/Admin/AppData/Local/Temp/codex-clipboard-3fdcfa6c-cb69-4777-b6ee-8188a8833514.png",
+      "prompt": "Use case: stylized-concept. Asset type: SchedSnap opaque mobile anime wallpaper, 1080 x 2400 portrait. Reference image is style and composition guidance. Re-create this composition closely: huge sideways close-up of Itachi Uchiha's red Sharingan eye filling the central tilted panel, black hair across the lower portion, surrounding black-and-white hand-inked manga panels and crow silhouettes, thin vivid red luminous diagonal grid lines. Preserve reference layout, character, scale, panel angles, red-black-white palette, dramatic manga halftone detail. Extend composition naturally to tall 9:20 phone format; do not change the visual concept. Clean sharp detailed illustration. Artwork only, no text, lettering, speech bubbles, logo, watermark, schedule, UI, badges or device frame. Opaque full bleed.",
+      "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a14e9e-e591-7d11-8f31-9d43f33c17fc\\exec-b3a307ac-8ae7-4c71-8627-02b997872599.png",
+      "path": "public/wallpapers/scenic/anime-crimson-manga-eye/mobile.png",
+      "provider": "built-in image_gen",
+      "normalization": "User-authorized local Lanczos fit to opaque RGB 1080x2400; aspect preserved with minimal edge crop."
+    },
+    {
+      "reference": 14,
+      "id": "anime-cyan-spirit-emblems",
+      "name": "Cyan Spirit Emblems",
+      "franchise": "Anime",
+      "keywords": [
+        "anime",
+        "cyan",
+        "blue",
+        "black",
+        "light gray",
+        "emblems",
+        "spirits",
+        "masks",
+        "minimal",
+        "vertical",
+        "flame"
+      ],
+      "ref": "C:/Users/Admin/AppData/Local/Temp/codex-clipboard-6c7e5572-85a4-4f44-bd05-02793156901c.png",
+      "prompt": "Use case: stylized-concept. Asset type: SchedSnap opaque mobile anime wallpaper, 1080 x 2400 portrait. Reference image is style and composition guidance. Re-create this minimalist composition closely: exactly six separate small black and bright cyan anime spirit mask emblems stacked in one centered vertical column on a uniform very light gray background. Keep the six distinct silhouettes and sequence from reference: pointed flame head with red swept accent; horned cyan fire mask; round red forehead target mask with bead collar; grinning ragged cyan flame face; pointed spiky black spirit with cyan chin; elegant antlered narrow black mask with icy cyan horns. Preserve flat crisp ink graphic shapes, tiny pale eyes, large quiet side margins, equal spacing and small emblem scale. Adjust spacing for tall 9:20 phone format without changing arrangement. Artwork only, no text, lettering, logo, watermark, schedule, UI, badges or device frame. Opaque full bleed.",
+      "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a14e9e-e591-7d11-8f31-9d43f33c17fc\\exec-96ff78e0-627b-40aa-8744-064b7b4bec8d.png",
+      "path": "public/wallpapers/scenic/anime-cyan-spirit-emblems/mobile.png",
+      "provider": "built-in image_gen",
+      "normalization": "User-authorized local Lanczos fit to opaque RGB 1080x2400; aspect preserved with minimal edge crop."
+    },
+    {
+      "reference": 15,
+      "id": "anime-clover-sword",
+      "name": "Clover Sword",
+      "franchise": "Black Clover",
+      "keywords": [
+        "anime",
+        "black clover",
+        "asta",
+        "sword",
+        "katana",
+        "clover",
+        "white",
+        "black",
+        "minimal",
+        "smoke"
+      ],
+      "ref": "C:/Users/Admin/AppData/Local/Temp/codex-clipboard-f63a8583-f359-4e1f-bab5-cc6d98452357.png",
+      "prompt": "Use case: stylized-concept. Asset type: SchedSnap opaque mobile anime wallpaper, 1080 x 2400 portrait. Reference image is style and composition guidance. Re-create this minimalist black-and-white anime composition very closely: pure black background; one slim centered vertical white katana with white diamond-cut wrapped handle in upper central third, a fine oval guard, broken dark blade outlined in white beneath; large white five-leaf clover emblem centered in lower middle; the blade continues beneath the clover towards the bottom, surrounded by sparse flowing white flame-like smoke wisps and a few tiny white flecks. Preserve exact narrow central composition, large empty black side margins, white-on-black palette and restrained screenprint texture, tall 9:20 mobile framing. Remove the small Japanese character under clover rather than substituting text. Artwork only, no text, lettering, logo, watermark, schedule, UI, badges or device frame. Opaque full bleed.",
+      "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a14e9e-e591-7d11-8f31-9d43f33c17fc\\exec-7f85fa92-0eeb-4801-8d9c-707d98ebcdf3.png",
+      "path": "public/wallpapers/scenic/anime-clover-sword/mobile.png",
+      "provider": "built-in image_gen",
+      "normalization": "User-authorized local Lanczos fit to opaque RGB 1080x2400; aspect preserved with minimal edge crop."
+    }
+  ]
+}

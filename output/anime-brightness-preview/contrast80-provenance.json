@@ -1,0 +1,11 @@
+{
+  "provider": "built-in image_gen",
+  "source": "public/wallpapers/scenic/anime-naruto-neon-dojutsu/mobile.png",
+  "request": "20% lower contrast, lifted blacks and softened highlights, similar brightness; preserve artwork",
+  "renderer": "SchedSnap drawWallpaper; same light text and dark containers as preceding preview",
+  "size": [
+    1080,
+    2400
+  ],
+  "published": false
+}

@@ -1,0 +1,157 @@
+{
+  "generatedAt": "2026-10-18T11:20:20.764Z",
+  "provider": "built-in imagegen",
+  "assetCount": 15,
+  "assets": [
+    {
+      "id": "anime-akatsuki-crimson-assembly",
+      "device": "mobile",
+      "path": "public/wallpapers/scenic/anime-akatsuki-crimson-assembly/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "0e70d2e6ce4c058a29dc3ce1f0e44ddcad33f1220101f1e8e41ac083b7936b5f"
+    },
+    {
+      "id": "anime-naruto-neon-dojutsu",
+      "device": "mobile",
+      "path": "public/wallpapers/scenic/anime-naruto-neon-dojutsu/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "7b47b620cf0a6bb67a1dd53f893f31a3793c95398020aba2d2775391a367c456"
+    },
+    {
+      "id": "anime-naruto-ink-quartet",
+      "device": "mobile",
+      "path": "public/wallpapers/scenic/anime-naruto-ink-quartet/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "296c5f96352eca47ad2e63872515b83a2007aac27bfab8bedb492fd78f58860b"
+    },
+    {
+      "id": "anime-hunter-prismatic-gaze",
+      "device": "mobile",
+      "path": "public/wallpapers/scenic/anime-hunter-prismatic-gaze/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "f0192ddb38ebf48154158217d11b2e3ef22a3e690075924bbc0e39c444a6877d"
+    },
+    {
+      "id": "anime-titan-eye-panels",
+      "device": "mobile",
+      "path": "public/wallpapers/scenic/anime-titan-eye-panels/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "1651d25ca5b7e6b92b5582d80295a8a784e108ba81f9179e2c2e86eabd959d54"
+    },
+    {
+      "id": "anime-neon-heroines",
+      "device": "mobile",
+      "path": "public/wallpapers/scenic/anime-neon-heroines/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "7ab91a90bcae66fa53b35186bfed46f84a9766b53e2a21f9c1cf410a3e4dfb22"
+    },
+    {
+      "id": "anime-hashira-eye-panels",
+      "device": "mobile",
+      "path": "public/wallpapers/scenic/anime-hashira-eye-panels/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "8f71f5cfa86ee68fcd820be3ca314a3356cb1bf65b76b8c077c45153029bed7e"
+    },
+    {
+      "id": "anime-upper-moon-eyes",
+      "device": "mobile",
+      "path": "public/wallpapers/scenic/anime-upper-moon-eyes/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "577d6dfc756935fe93996e6e7ca69b1bd2460dac60d78550486987d0aad10cfb"
+    },
+    {
+      "id": "anime-crimson-sharingan",
+      "device": "mobile",
+      "path": "public/wallpapers/scenic/anime-crimson-sharingan/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "8b9a678bac7577528bccfb59747ec7ad7f75dfc93e46d85d613f23f91990a97e"
+    },
+    {
+      "id": "anime-jujutsu-gaze",
+      "device": "mobile",
+      "path": "public/wallpapers/scenic/anime-jujutsu-gaze/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "76653ba32f07debc8cc9463011dd44a25bb37629aed9ab66b6c057068f702bc4"
+    },
+    {
+      "id": "anime-blue-rift",
+      "device": "mobile",
+      "path": "public/wallpapers/scenic/anime-blue-rift/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "7819caa1e181ec33e5057bc55b114c282e03f9bad60c62b60782d917f0b82beb"
+    },
+    {
+      "id": "anime-torn-manga-eyes",
+      "device": "mobile",
+      "path": "public/wallpapers/scenic/anime-torn-manga-eyes/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "a69cdf47148a71051f68f4d5e2e99376291d30fb0d0ccfb1f8966768dfc8e8b1"
+    },
+    {
+      "id": "anime-crimson-manga-eye",
+      "device": "mobile",
+      "path": "public/wallpapers/scenic/anime-crimson-manga-eye/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "6b66ce4f49ea4f93b297aa89b025358dd9aa622c512274d4132a2a9cf4a67c8f"
+    },
+    {
+      "id": "anime-cyan-spirit-emblems",
+      "device": "mobile",
+      "path": "public/wallpapers/scenic/anime-cyan-spirit-emblems/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "56b7f5f652719afd47dd158b3af6fba5d91a15d405de16c3463118630c5b214b"
+    },
+    {
+      "id": "anime-clover-sword",
+      "device": "mobile",
+      "path": "public/wallpapers/scenic/anime-clover-sword/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "fa7288d563452741b53c1b0b932ae43ea5844a060a223511d32726b9a94b9fb3"
+    }
+  ]
+}
