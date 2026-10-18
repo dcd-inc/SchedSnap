@@ -35,6 +35,10 @@ try {
     const markup = renderPage(path);
     if (path !== CREATOR_PATH && !markup.includes('<h1')) throw new Error(`No heading in prerendered ${path}`);
     let html = replaceSeoHead(shell, path).replace('<div id="root"></div>', () => `<div id="root">${markup}</div>`);
+    // Start the LCP image before scripts and styles compete for the connection.
+    if (path === '/') {
+      html = html.replace('<meta name="theme-color" content="#ffffff" />', '<meta name="theme-color" content="#ffffff" />\n    <link rel="preload" as="image" type="image/avif" imagesrcset="/images/hero/hero-phones-stacked-640.avif 640w, /images/hero/hero-phones-stacked-768.avif 768w, /images/hero/hero-phones-stacked-960.avif 960w, /images/hero/hero-phones-stacked-1448.avif 1448w" imagesizes="(max-width: 800px) 100vw, (max-width: 1100px) 60vw, 640px" fetchpriority="high" />');
+    }
     if (path === '/terms' || path === '/privacy' || path === '/cookies' || path === '/guides/class-schedule-wallpaper') {
       const entry = path.startsWith('/guides/') ? 'src/pages/ScheduleGuide.jsx' : 'src/pages/Legal.jsx';
       const css = manifest[entry]?.css || [];

@@ -7,6 +7,7 @@ import { getCachedVisitCount, loadVisitCount } from '../lib/visits.js';
 const COLLECTION_COUNT = galleryCategories.filter(({ id }) => id !== 'all').length;
 const COUNT_DURATION = 1200;
 const prefersReducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const subscribeToCache = () => () => {};
 
 function subscribeToMotion(onChange) {
   const query = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -44,7 +45,10 @@ export default function LandingStats() {
   const TEMPLATE_COUNT = useTemplates().length;
   const sectionRef = useRef(null);
   const [entered, setEntered] = useState(false);
-  const [visits, setVisits] = useState(getCachedVisitCount);
+  const [loadedVisits, setVisits] = useState(null);
+  // Hydration must match the server before reading a returning visitor's cache.
+  const cachedVisits = useSyncExternalStore(subscribeToCache, getCachedVisitCount, () => null);
+  const visits = loadedVisits ?? cachedVisits;
   const reducedMotion = useSyncExternalStore(subscribeToMotion, prefersReducedMotion, () => true);
   const progress = useCountProgress(entered && TEMPLATE_COUNT > 0);
 

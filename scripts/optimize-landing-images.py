@@ -34,7 +34,7 @@ for source, widths in sources.items():
             print(f'{destination.relative_to(ROOT)}: {destination.stat().st_size:,} bytes')
             if source == 'images/hero/hero-phones-stacked.png':
                 avif = destination.with_suffix('.avif')
-                resized.save(avif, 'AVIF', quality=70, speed=6)
+                resized.save(avif, 'AVIF', quality=55, speed=6)
                 with Image.open(avif) as result:
                     assert result.size == (width, height) and 'A' in result.getbands(), avif
                 delivery_bytes += avif.stat().st_size

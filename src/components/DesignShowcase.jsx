@@ -36,6 +36,7 @@ function DeviceShowcase({ device }) {
     : '(max-width: 640px) calc(100vw - 88px), 532px';
   const slides = collections;
   const [activeIndex, setActiveIndex] = useState(0);
+  const [displayedIndex, setDisplayedIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [focusPaused, setFocusPaused] = useState(false);
   const [isInView, setIsInView] = useState(false);
@@ -43,8 +44,8 @@ function DeviceShowcase({ device }) {
   const elapsedRef = useRef(0);
   const reducedMotion = useSyncExternalStore(subscribeToMotion, prefersReducedMotion, () => true);
   const pageVisible = useSyncExternalStore(subscribeToVisibility, pageIsVisible, () => false);
-  const isRotating = !isHovered && !focusPaused && isInView && pageVisible && !reducedMotion;
-  const collection = slides[activeIndex];
+  const isRotating = activeIndex === displayedIndex && !isHovered && !focusPaused && isInView && pageVisible && !reducedMotion;
+  const collection = slides[displayedIndex];
   const previewId = `${device.id}-collection-preview`;
   const isPhone = device.id === 'mobile';
   const isPortrait = isPhone || device.id === 'tablet';
@@ -56,7 +57,25 @@ function DeviceShowcase({ device }) {
     observer.observe(showcaseRef.current);
     return () => observer.disconnect();
   }, []);
-  useEffect(() => { elapsedRef.current = 0; }, [activeIndex]);
+  useEffect(() => { elapsedRef.current = 0; }, [displayedIndex]);
+  useEffect(() => {
+    if (activeIndex === displayedIndex) return;
+    let cancelled = false;
+    const image = new Image();
+    image.sizes = imageSizes;
+    image.srcset = `${assetPath(device.id, slides[activeIndex].id, 560)} 560w, ${assetPath(device.id, slides[activeIndex].id)} 960w`;
+    image.src = assetPath(device.id, slides[activeIndex].id);
+    // Keep the current artwork painted until its replacement is decoded.
+    image.decode().then(() => {
+      if (!cancelled) setDisplayedIndex(activeIndex);
+    }).catch(() => {
+      if (!cancelled) {
+        elapsedRef.current = 0;
+        setActiveIndex(displayedIndex);
+      }
+    });
+    return () => { cancelled = true; };
+  }, [activeIndex, displayedIndex, device.id, imageSizes, slides]);
   useEffect(() => {
     if (!isRotating) return;
     const started = performance.now();
@@ -68,12 +87,12 @@ function DeviceShowcase({ device }) {
   }, [activeIndex, isRotating, slideCount]);
   useEffect(() => {
     if (!isInView) return;
-    const next = collections[(activeIndex + 1) % slideCount];
+    const next = collections[(displayedIndex + 1) % slideCount];
     const image = new Image();
     image.sizes = imageSizes;
     image.srcset = `${assetPath(device.id, next.id, 560)} 560w, ${assetPath(device.id, next.id)} 960w`;
     image.src = assetPath(device.id, next.id);
-  }, [activeIndex, isInView, device.id, slideCount, imageSizes]);
+  }, [displayedIndex, isInView, device.id, slideCount, imageSizes]);
 
   return (
     <section ref={showcaseRef} className={`device-showcase device-showcase-${device.id}`} aria-labelledby={`${device.id}-collection-title`} aria-roledescription="carousel"
@@ -85,15 +104,15 @@ function DeviceShowcase({ device }) {
         <article id={previewId} className="collection-showcase" aria-labelledby={`${device.id}-collection-title`} aria-roledescription="slide">
           <figure className={`collection-image collection-image-${collection.id}`}>
             <button type="button" className="showcase-arrow showcase-image-arrow showcase-image-previous" aria-label={`Previous ${device.label.toLowerCase()} collection`} aria-controls={previewId} onClick={() => changeCollection(-1)}><ChevronLeft size={24} strokeWidth={1.5} aria-hidden="true" /></button>
-            <picture key={collection.id}>
+            <picture>
               <img src={assetPath(device.id, collection.id)} srcSet={`${assetPath(device.id, collection.id, 560)} 560w, ${assetPath(device.id, collection.id)} 960w`} sizes={imageSizes} alt={`${device.label}${device.id === 'tablet' ? ' portrait' : ''} schedule wallpaper preview in the ${collection.name} collection`} width={isPortrait ? 1122 : 1448} height={isPortrait ? 1402 : 1086} loading="lazy" decoding="async" />
             </picture>
             <button type="button" className="showcase-arrow showcase-image-arrow showcase-image-next" aria-label={`Next ${device.label.toLowerCase()} collection`} aria-controls={previewId} onClick={() => changeCollection(1)}><ChevronRight size={24} strokeWidth={1.5} aria-hidden="true" /></button>
           </figure>
           <div className="showcase-controls" aria-label={`Browse ${device.label.toLowerCase()} collections`}>
             <button type="button" className="showcase-arrow showcase-desktop-arrow" aria-label={`Previous ${device.label.toLowerCase()} collection`} aria-controls={previewId} onClick={() => changeCollection(-1)}><ChevronLeft size={24} strokeWidth={1.5} aria-hidden="true" /></button>
-            <div className="showcase-progress" role="img" aria-label={'Preview ' + (activeIndex + 1) + ' of ' + slideCount} style={{ '--rotation-duration': ROTATION_DELAY + 'ms' }}>
-              {slides.map((item, index) => <span key={`${item.id}-${item.orientation || device.id}`} aria-hidden="true">{index === activeIndex && <span className="showcase-progress-fill" style={{ animationPlayState: isRotating ? 'running' : 'paused' }} />}</span>)}
+            <div className="showcase-progress" role="img" aria-label={'Preview ' + (displayedIndex + 1) + ' of ' + slideCount} style={{ '--rotation-duration': ROTATION_DELAY + 'ms' }}>
+              {slides.map((item, index) => <span key={`${item.id}-${item.orientation || device.id}`} aria-hidden="true">{index === displayedIndex && <span className="showcase-progress-fill" style={{ animationPlayState: isRotating ? 'running' : 'paused' }} />}</span>)}
             </div>
             <button type="button" className="showcase-arrow showcase-desktop-arrow" aria-label={`Next ${device.label.toLowerCase()} collection`} aria-controls={previewId} onClick={() => changeCollection(1)}><ChevronRight size={24} strokeWidth={1.5} aria-hidden="true" /></button>
           </div>

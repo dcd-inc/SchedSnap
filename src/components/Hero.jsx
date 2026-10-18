@@ -13,7 +13,7 @@ export default function Hero() {
 
   return (
     <section className="landing-hero" aria-labelledby="hero-heading">
-      <img className="hero-ambient" src="/images/hero/hero-ambient.webp" alt="" aria-hidden="true" width="1672" height="941" decoding="async" />
+      <img className="hero-ambient" src="/images/hero/hero-ambient.webp" alt="" aria-hidden="true" width="1672" height="941" fetchPriority="low" decoding="async" />
       <div className="page-wrap hero-content">
         <div className="hero-copy">
           <h1 id="hero-heading" className="hero-heading">Your schedule.<br />On your screen.</h1>
