@@ -38,8 +38,8 @@ export default function Faq() {
     </div>
     <div className="faq-cta">
       <div className="faq-cta-copy">
-        <h2>Ready to make your schedule a wallpaper?</h2>
-        <p>Add your classes, pick your style, and download it for free.</p>
+        <h2>Ready for a personalized schedule wallpaper?</h2>
+        <p>Input your classes, select a style, and instant download—completely free.</p>
       </div>
       <Link to="/services/schedule-wallpaper" className="button-primary">Create your wallpaper <ArrowRight size={18} aria-hidden="true" /></Link>
     </div>
