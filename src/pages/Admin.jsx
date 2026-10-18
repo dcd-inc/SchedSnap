@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import '../wallpaper-fonts.css';
+import { generativePatterns } from '../assets/generativePatterns.js';
 import { Link, useSearchParams } from 'react-router';
 import { Download, Heart, Plus, LogOut, ArrowLeft, X, Menu, CheckCircle2, Pencil, Eye, EyeOff, Trash2, RotateCcw, MoreVertical, UserRound, LayoutDashboard, PanelsTopLeft, ExternalLink, ChevronLeft, ChevronRight, ChevronDown, Save, Send, Minus, Maximize2, ListFilter } from 'lucide-react';
 import { deviceResolutions, tabletLandscapeResolution } from '../assets/templates.js';
@@ -431,7 +432,7 @@ function DesignEditor({ initial, isNew, existingIds, busy, onSave, onBack, onDir
       <label>Collection<select className="field-input" value={template.collection || 'original'} onChange={e => change('collection', e.target.value)}>{designCollections.filter(c => c.id !== 'all').map(c => <option key={c.id} value={c.id}>{c.name}</option>)}</select></label>
     </fieldset></EditorSection><EditorSection title="Artwork" description={kind === 'pattern' ? 'Pattern and background' : kind === 'mascot' ? 'Character cutout' : 'Mobile, tablet, and laptop images'} open={openSections.artwork} onToggle={open => setOpenSections(s => ({ ...s, artwork: open }))}><fieldset disabled={blocked}><legend className="sr-only">Artwork</legend>
       {error && errorSection === 'artwork' && <p className="admin-error" role="alert">{error}</p>}
-      {kind === 'pattern' ? <label>Pattern<select className="field-input" value={template.pattern || ''} onChange={e => change('pattern', e.target.value || undefined)}><option value="">Solid color</option>{['checker', 'grid', 'ruled', 'circle', 'dots', 'stripes', 'diamonds', 'waves', 'frame'].map(p => <option key={p} value={p}>{p}</option>)}</select></label> : (kind === 'mascot' ? ['character'] : ['mobile', 'tablet', 'laptop']).map(target => {
+      {kind === 'pattern' ? <label>Pattern<select className="field-input" value={template.pattern || ''} onChange={e => change('pattern', e.target.value || undefined)}><option value="">Solid color</option>{['checker', 'grid', 'ruled', 'circle', 'dots', 'stripes', 'diamonds', 'waves', 'frame'].map(p => <option key={p} value={p}>{p}</option>)}{generativePatterns.map(p => <option key={p.id} value={p.id}>{p.name}</option>)}</select></label> : (kind === 'mascot' ? ['character'] : ['mobile', 'tablet', 'laptop']).map(target => {
         const image = target === 'character' ? template.image : template.deviceImages?.[target];
         return <div className="admin-upload" key={target}><div><strong>{target}</strong><small>{target === 'character' ? 'Transparent PNG or WebP' : `${deviceResolutions[target].width} × ${deviceResolutions[target].height}`}</small><span>{uploading === target ? 'Uploading…' : image ? 'Artwork added' : 'No artwork yet'}</span></div><label className="button-secondary">{image ? 'Replace' : 'Upload'}<input className="sr-only" type="file" accept="image/png,image/jpeg,image/webp" disabled={blocked} onChange={e => upload(e, target)} /></label></div>;
       })}

@@ -5,6 +5,7 @@ import { seedCatalog } from '../server/catalogStore.js';
 import { localApiPlugin } from '../development/apiPlugin.js';
 import { snoopyTemplates } from '../src/assets/snoopyTemplates.js';
 import { hunterTemplates } from '../src/assets/hunterTemplates.js';
+import { generativePatternTemplates } from '../src/assets/generativePatterns.js';
 import { withTemplateKeywords } from '../shared/templateKeywords.js';
 
 const env = { CLOUDINARY_CLOUD_NAME: 'preview-test', CLOUDINARY_API_KEY: 'test', CLOUDINARY_API_SECRET: 'test' };
@@ -22,6 +23,12 @@ test('Vite exposes local Snoopy artwork when the shared catalog does not contain
   await middleware({ method: 'GET', url: '/api/catalog' }, result, () => assert.fail('Catalog request was not handled'));
   assert.equal(result.statusCode, 200);
   assert.ok(result.body.templates.some(template => template.id === 'remote-design'));
+  for (const design of generativePatternTemplates) {
+    const records = result.body.templates.filter(template => template.id === design.id);
+    assert.equal(records.length, 1);
+    assert.equal(records[0].pattern, design.pattern);
+    assert.equal(records[0].patternAccent, design.patternAccent);
+  }
   for (const design of snoopyTemplates) {
     const records = result.body.templates.filter(template => template.id === design.id);
     assert.equal(records.length, 1);

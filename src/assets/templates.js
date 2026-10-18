@@ -1,6 +1,7 @@
 import { adventureTimeTemplates } from './characterReferenceTemplates.js';
 import { littleFriendsTemplates } from './littleFriendsTemplates.js';
 import { patternTemplates } from './patternTemplates.js';
+import { generativePatternTemplates } from './generativePatterns.js';
 import { chikawaTemplates } from './chikawaTemplates.js';
 import { chikawaReferenceTemplates } from './chikawaReferenceTemplates.js';
 import { weBareBearsTemplates } from './weBareBearsTemplates.js';
@@ -41,6 +42,7 @@ export const wallpaperTemplates = [
   ...chikawaTemplates.filter(template => !chikawaReferenceTemplates.some(reviewed => reviewed.id === template.id)),
   ...littleFriendsTemplates,
   ...patternTemplates,
+  ...generativePatternTemplates,
 ].map(withTemplateKeywords);
 
 // Gallery examples show one neutral class per weekday; actual uploads are never

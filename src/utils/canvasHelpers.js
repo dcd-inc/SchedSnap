@@ -2,6 +2,7 @@ import { days } from '../../shared/scheduleSchema.js';
 import { mobileResolution } from '../assets/templates.js';
 import { colorInputValue, mascotPosition, wallpaperFontScale, wallpaperCornerRadius, wallpaperFillOpacity, timelineLineWidth, timelineDayStyle } from './wallpaperTheme.js';
 import { drawParticles } from './wallpaperParticles.js';
+import { drawPatternBackground } from './patternBackground.js';
 
 const hasIllustratedFooter = template => template.collection === 'ghibli' || ['wbb-minimal', 'reference-minimal'].includes(template.family);
 
@@ -377,6 +378,7 @@ function drawBackground(ctx, template, image, width = 1080, height = 2400) {
     template.gradient.forEach((color, i) => gradient.addColorStop(i / (template.gradient.length - 1), color));
     ctx.fillStyle = gradient; ctx.fillRect(0, 0, width, height);
   }
+  drawPatternBackground(ctx, template, width, height);
   if (template.pattern === 'checker') {
     ctx.fillStyle = template.patternColor;
     for (let row = -1; row < Math.ceil(height / 220) + 1; row++) for (let col = -1; col < Math.ceil(width / 220) + 1; col++) if ((row + col) % 2 === 0) {

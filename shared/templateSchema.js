@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { generatedMasterUrl, generatedBackgroundUrl } from './generatedArtwork.js';
+import { generativePatternIds } from '../src/assets/generativePatterns.js';
 const color = z.string().max(60).regex(/^(#[a-f0-9]{3,8}|rgba?\([\d.,%\s]+\))$/i);
 const artwork = z.string().max(500).refine(value => /^\/wallpapers\/[a-z0-9/_.-]+$/i.test(value) || /^\/images\/(mascots|pixel-mascots|goofy-mascots|doodle-mascots)\/masters\/[a-z0-9_-]+\.png$/i.test(value) || generatedMasterUrl.test(value) || generatedBackgroundUrl.test(value) || /^https:\/\/res\.cloudinary\.com\/[a-z0-9_-]+\/image\/upload\/(?:v\d+\/)?schedsnap\/admin\/artwork\/[a-z0-9_-]+\.(png|jpg|webp)$/i.test(value), 'Use uploaded artwork.');
 export const templateSchema = z.object({
@@ -18,7 +19,10 @@ export const templateSchema = z.object({
   mascotStyle: z.enum(['soft', 'pixel', 'goofy', 'doodle']).optional(), pixelArt: z.boolean().optional(),
   mascotPosition: z.enum(['left', 'center', 'right']).optional(),
   edition: z.union([z.number(), z.string().max(30)]).optional(),
-  pattern: z.enum(['checker', 'grid', 'ruled', 'circle', 'dots', 'stripes', 'diamonds', 'waves', 'frame']).optional(),
+  pattern: z.enum(['checker', 'grid', 'ruled', 'circle', 'dots', 'stripes', 'diamonds', 'waves', 'frame', ...generativePatternIds]).optional(),
+  patternAccent: color.optional(),
+  patternScale: z.number().min(50).max(200).optional(),
+  patternOpacity: z.number().min(0).max(100).optional(),
   patternColor: color.optional(), gradient: z.array(color).min(2).max(6).optional(), overlay: color.optional(),
   fontFamily: z.enum(['DM Sans Variable', 'Geist Variable', 'Poppins', 'Inter Variable', 'Roboto Variable', 'Open Sans Variable', 'Montserrat Variable', 'Lato', 'DM Serif Display', 'Georgia', 'Quicksand', 'Nunito', 'Itim', 'Fredoka', 'Baloo 2', 'Patrick Hand']).optional(),
   fontScale: z.number().min(0.7).max(1.6).optional(),

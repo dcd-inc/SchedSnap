@@ -2,6 +2,8 @@ import DevicePicker from '../../components/DevicePicker.jsx';
 import { stylePickerOptions } from '../../components/wallpaperOptionIcons.js';
 import { particleStyles } from '../../utils/wallpaperParticles.js';
 import { useRef } from 'react';
+import { generativePatternIds, generativePatternMap } from '../../assets/generativePatterns.js';
+import { patternScale, patternOpacity } from '../../utils/patternBackground.js';
 import { schedulePosition, scheduleMovement, tabletBoxSpacing, scheduleLayout } from '../../utils/canvasHelpers.js';
 import { ChevronDown } from 'lucide-react';
 import { colorInputValue, wallpaperFonts, mascotPosition, wallpaperFontScale, wallpaperCornerRadius, wallpaperFillOpacity, snapSchedulePosition, timelineLineWidth, wallpaperColorIntensity } from '../../utils/wallpaperTheme.js';
@@ -9,16 +11,17 @@ import { colorInputValue, wallpaperFonts, mascotPosition, wallpaperFontScale, wa
 const colorFields = {
   background: { label: 'Background', colors: ['#dce8cb', '#f5daca', '#d8cbef', '#192f4b'] },
   patternColor: { label: 'Pattern', colors: ['#c8d7b7', '#e8c6ae', '#c0afd5', '#c5d8e7'] },
+  patternAccent: { label: 'Accent', colors: ['#d78f83', '#c8a251', '#8ca899', '#a58abd'] },
   surface: { label: 'Fill', colors: ['#f8faf2', '#ffffff', '#f8ebe7', '#2b5145'] },
   ink: { label: 'Text', colors: ['#294b38', '#0f172a', '#71394d', '#fffdf4'] },
   line: { label: 'Border', colors: ['#a6b5a1', '#e2e8f0', '#b98c96', '#8caa96'] },
 };
-const editablePatterns = new Set(['checker', 'grid', 'ruled', 'circle', 'dots', 'stripes', 'diamonds', 'waves', 'frame']);
+const editablePatterns = new Set(['checker', 'grid', 'ruled', 'circle', 'dots', 'stripes', 'diamonds', 'waves', 'frame', ...generativePatternIds]);
 
 function AppearanceColor({ colorKey, template, onChange, toggleKey, label: labelOverride }) {
   const { label: defaultLabel, colors: defaultColors } = colorFields[colorKey];
   const label = labelOverride || defaultLabel;
-  const rawValue = template[colorKey] || (colorKey === 'patternColor' ? (template.pattern === 'circle' ? '#ad5b45' : template.line) : '#ffffff');
+  const rawValue = template[colorKey] || generativePatternMap.get(template.pattern)?.[colorKey] || (colorKey === 'patternColor' ? (template.pattern === 'circle' ? '#ad5b45' : template.line) : '#ffffff');
   const normalizedValue = colorInputValue(rawValue);
   const colors = defaultColors.slice(0, 3);
   const enabled = !toggleKey || template[toggleKey] !== false;
@@ -65,6 +68,17 @@ export default function TemplateControls({ template, onChange, onReset, defaultT
       </div>}
       {!fixedBackground && <AppearanceColor colorKey="background" template={template} onChange={onChange} />}
       {editablePatterns.has(template.pattern) && <AppearanceColor colorKey="patternColor" template={template} onChange={onChange} />}
+      {generativePatternIds.includes(template.pattern) && <>
+        <AppearanceColor colorKey="patternAccent" template={template} onChange={onChange} />
+        <div className="top-margin-control">
+          <div className="top-margin-label"><label htmlFor="pattern-scale">Pattern size</label><span className="position-value"><output htmlFor="pattern-scale">{patternScale(template)}%</output>{patternScale(template) !== patternScale(defaultTemplate) && <button type="button" className="position-reset" aria-label="Reset pattern size" onClick={() => onChange('patternScale', patternScale(defaultTemplate))}>Reset</button>}</span></div>
+          <input id="pattern-scale" type="range" min="50" max="200" step="5" value={patternScale(template)} onChange={event => onChange('patternScale', Number(event.target.value))} />
+        </div>
+        <div className="top-margin-control">
+          <div className="top-margin-label"><label htmlFor="pattern-opacity">Pattern opacity</label><span className="position-value"><output htmlFor="pattern-opacity">{patternOpacity(template)}%</output>{patternOpacity(template) !== patternOpacity(defaultTemplate) && <button type="button" className="position-reset" aria-label="Reset pattern opacity" onClick={() => onChange('patternOpacity', patternOpacity(defaultTemplate))}>Reset</button>}</span></div>
+          <input id="pattern-opacity" type="range" min="0" max="100" step="5" value={patternOpacity(template)} onChange={event => onChange('patternOpacity', Number(event.target.value))} />
+        </div>
+      </>}
     </fieldset>}
     <fieldset className="appearance-group">
       <legend>{timeline ? 'Timeline' : 'Day containers'}</legend>
