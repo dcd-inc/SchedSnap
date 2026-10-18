@@ -29,9 +29,11 @@ const devices = [
 const assetPath = (device, collection, width = 960) => device === 'mobile'
   ? `/images/collections/catalog-mobile/${collection}-${width}.webp`
   : `/images/collections/refreshed/${device}/${device === 'laptop' && collection === 'pattern' ? 'pattern-blue' : collection}-${width}.webp`;
-const imageSizes = '(max-width: 640px) calc(100vw - 136px), 480px';
 
 function DeviceShowcase({ device }) {
+  const imageSizes = device.id === 'mobile'
+    ? '(max-width: 640px) calc(100vw - 136px), 480px'
+    : '(max-width: 640px) calc(100vw - 88px), 532px';
   const slides = collections;
   const [activeIndex, setActiveIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
@@ -71,7 +73,7 @@ function DeviceShowcase({ device }) {
     image.sizes = imageSizes;
     image.srcset = `${assetPath(device.id, next.id, 560)} 560w, ${assetPath(device.id, next.id)} 960w`;
     image.src = assetPath(device.id, next.id);
-  }, [activeIndex, isInView, device.id, slideCount]);
+  }, [activeIndex, isInView, device.id, slideCount, imageSizes]);
 
   return (
     <section ref={showcaseRef} className={`device-showcase device-showcase-${device.id}`} aria-labelledby={`${device.id}-collection-title`} aria-roledescription="carousel"
@@ -81,7 +83,7 @@ function DeviceShowcase({ device }) {
       onBlurCapture={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setFocusPaused(false); }}>
       <div className="collection-list" aria-live={isRotating ? 'off' : 'polite'} aria-atomic="true">
         <article id={previewId} className="collection-showcase" aria-labelledby={`${device.id}-collection-title`} aria-roledescription="slide">
-          <figure className="collection-image">
+          <figure className={`collection-image collection-image-${collection.id}`}>
             <button type="button" className="showcase-arrow showcase-image-arrow showcase-image-previous" aria-label={`Previous ${device.label.toLowerCase()} collection`} aria-controls={previewId} onClick={() => changeCollection(-1)}><ChevronLeft size={24} strokeWidth={1.5} aria-hidden="true" /></button>
             <picture key={collection.id}>
               <img src={assetPath(device.id, collection.id)} srcSet={`${assetPath(device.id, collection.id, 560)} 560w, ${assetPath(device.id, collection.id)} 960w`} sizes={imageSizes} alt={`${device.label}${device.id === 'tablet' ? ' portrait' : ''} schedule wallpaper preview in the ${collection.name} collection`} width={isPortrait ? 1122 : 1448} height={isPortrait ? 1402 : 1086} loading="lazy" decoding="async" />

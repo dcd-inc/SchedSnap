@@ -130,6 +130,8 @@
   .site-header-home { height: 57px; margin-bottom: -57px; }
   .site-brand { gap: 5px; font-size: 18px; }
   .site-brand .brand-mark { width: 32px; height: 32px; }
+}
+@media (max-width: 1100px) {
   .landing-nav { display: none; }
   .mobile-navigation { display: block; }
   .mobile-nav-panel { position: fixed; inset: 0; z-index: 40; display: flex; flex-direction: column; justify-content: center; gap: 12px; width: 100%; height: 100dvh; overflow-y: auto; padding: max(88px, env(safe-area-inset-top)) 32px max(40px, env(safe-area-inset-bottom)); background: #faf6ef; clip-path: circle(0px at var(--menu-origin-x, calc(100% - 38px)) var(--menu-origin-y, 28px)); visibility: hidden; pointer-events: none; transition: clip-path 500ms cubic-bezier(0.65, 0, 0.35, 1), visibility 0s 500ms; }
@@ -144,6 +146,8 @@
   .mobile-menu-footer a.footer-social-icon { min-height: 44px; padding: 0; }
   .mobile-nav-toggle { position: relative; z-index: 42; }
   .site-header-inner > .site-brand { position: relative; z-index: 42; }
+}
+@media (max-width: 640px) {
   .landing-hero { --hero-header-height: 57px; }
   .landing-stats { padding-block: 32px; }
   .landing-stats dl { gap: 12px; }
@@ -255,6 +259,12 @@
   .device-showcase .collection-showcase .collection-image { width: min(100%, 580px); grid-template-columns: 44px minmax(0, 1fr) 44px; gap: 8px; }
   .device-showcase .collection-image picture { width: 100%; max-width: none; height: auto; max-height: none; aspect-ratio: 4 / 5; }
   .device-showcase .collection-image img { width: 100%; height: 100%; object-fit: contain; }
+  .device-showcase-tablet .collection-showcase .collection-image,
+  .device-showcase-laptop .collection-showcase .collection-image { grid-template-columns: 24px minmax(0, 1fr) 24px; gap: 0; }
+  .device-showcase-tablet .collection-image picture,
+  .device-showcase-laptop .collection-image picture { aspect-ratio: 4 / 3; }
+  .device-showcase-tablet .showcase-image-arrow,
+  .device-showcase-laptop .showcase-image-arrow { justify-self: center; }
 }
 @media (min-width: 1101px), (min-width: 801px) and (orientation: landscape) {
   .device-showcase .collection-showcase { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); column-gap: clamp(24px, 4vw, 56px); row-gap: 12px; }
@@ -270,6 +280,12 @@
   .device-showcase .showcase-controls { grid-column: 1; grid-row: 2; }
   .device-showcase-tablet .showcase-controls { grid-column: 2; }
 }
+
+.device-showcase-laptop .collection-image picture { overflow: hidden; }
+.device-showcase-laptop .collection-image img { transform: scale(1.18); }
+.device-showcase-laptop .collection-image-pattern img { transform: scale(1.26); }
+.device-showcase-tablet .collection-image-featured picture { overflow: hidden; }
+.device-showcase-tablet .collection-image-featured img { transform: scale(1.12); }
 
 @media (prefers-reduced-motion: reduce) { .mobile-nav-panel { transition: none; } }
 @media (min-width: 641px) and (max-width: 1000px) {
