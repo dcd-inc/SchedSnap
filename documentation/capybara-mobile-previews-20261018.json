@@ -1,0 +1,38 @@
+{
+  "status": "preview-only; pending user review; not uploaded or registered",
+  "generator": "built-in image_gen",
+  "target": "1080x2400 portrait 9:20",
+  "notes": "Generated artwork inspected inline. Schedule overlays not tested. Existing unrelated workspace changes left untouched.",
+  "assets": [
+    {
+      "name": "teal-peace",
+      "path": "output/artwork-samples/capybara-20261018/teal-peace.png",
+      "source": "exec-687872cf-72b2-4f72-914b-1b410fc648dd.png",
+      "prompt": "Use case: illustration-story. Asset type: standalone mobile schedule wallpaper preview. Generate ONE opaque full bleed tall portrait wallpaper, target 1080 x 2400 pixels, exact 9:20 aspect ratio. Input images 1–5 are style/composition references only, not edit targets. Deep dark teal background; tan capybara rising from bottom edge, eyes happily squeezed shut, tongue out, one paw making peace sign. Follow reference 1 expression and composition. Match the references' charming deliberately silly hand drawn capybara anatomy: blunt rounded muzzle, little brown ears, warm tan lightly textured paint, thick slightly uneven black outlines, naive doodle style. Composition critical: keep the top 72 percent nearly empty uninterrupted background for a future timetable; all character artwork belongs in the bottom 25 percent. Flat 2D softly textured gouache and colored pencil, no realism, no 3D, no shadows behind character. Artwork only. No text, timetable, clock, UI, save or share buttons, borders, white margins, rounded corners, device frame, logos, watermark. One wallpaper only, no collage or contact sheet."
+    },
+    {
+      "name": "navy-tilt",
+      "path": "output/artwork-samples/capybara-20261018/navy-tilt.png",
+      "source": "exec-a4f85af7-2187-4d7b-8c78-d5065be5636d.png",
+      "prompt": "Use case: illustration-story. Asset type: standalone mobile schedule wallpaper preview. Generate ONE opaque full bleed tall portrait wallpaper, target 1080 x 2400 pixels, exact 9:20 aspect ratio. Input images 1–5 are style/composition references only, not edit targets. Textured deep navy blue paper background; goofy tan capybara at bottom, head tilted, round white eyes with tiny black pupils, small forepaws, bemused expression. Follow reference 2. Match the references' charming deliberately silly hand drawn capybara anatomy: blunt rounded muzzle, little brown ears, warm tan lightly textured paint, thick slightly uneven black outlines, naive doodle style. Composition critical: keep the top 72 percent nearly empty uninterrupted background for a future timetable; all character artwork belongs in the bottom 25 percent. Flat 2D softly textured gouache and colored pencil, no realism, no 3D, no shadows behind character. Artwork only. No text, timetable, clock, UI, save or share buttons, borders, white margins, rounded corners, device frame, logos, watermark. One wallpaper only, no collage or contact sheet."
+    },
+    {
+      "name": "blue-peek",
+      "path": "output/artwork-samples/capybara-20261018/blue-peek.png",
+      "source": "exec-bb37d09f-a457-48f3-b771-ec0775ea1159.png",
+      "prompt": "Use case: illustration-story. Asset type: standalone mobile schedule wallpaper preview. Generate ONE opaque full bleed tall portrait wallpaper, target 1080 x 2400 pixels, exact 9:20 aspect ratio. Input images 1–5 are style/composition references only, not edit targets. Dusty medium blue painted paper background; goofy tan capybara peeks in from lower right edge, tilted face and large round white eyes. Follow reference 3; most character cropped naturally beyond right and bottom edges. Match the references' charming deliberately silly hand drawn capybara anatomy: blunt rounded muzzle, little brown ears, warm tan lightly textured paint, thick slightly uneven black outlines, naive doodle style. Composition critical: keep the top 72 percent nearly empty uninterrupted background for a future timetable; all character artwork belongs in the bottom 25 percent. Flat 2D softly textured gouache and colored pencil, no realism, no 3D, no shadows behind character. Artwork only. No text, timetable, clock, UI, save or share buttons, borders, white margins, rounded corners, device frame, logos, watermark. One wallpaper only, no collage or contact sheet."
+    },
+    {
+      "name": "daisy-yellow",
+      "path": "output/artwork-samples/capybara-20261018/daisy-yellow.png",
+      "source": "exec-b925501e-3110-41a9-80cb-38f5591aa32a.png",
+      "prompt": "Use case: illustration-story. Asset type: standalone mobile schedule wallpaper preview. Generate ONE opaque full bleed tall portrait wallpaper, target 1080 x 2400 pixels, exact 9:20 aspect ratio. Input images 1–5 are style/composition references only, not edit targets. Soft butter yellow paper background with sparse tiny white daisies with yellow centers; goofy tan capybara at bottom slightly left, tilted head, round white eyes and tiny pupils. Follow reference 4; daisies very subtle and sparse through center. Match the references' charming deliberately silly hand drawn capybara anatomy: blunt rounded muzzle, little brown ears, warm tan lightly textured paint, thick slightly uneven black outlines, naive doodle style. Composition critical: keep the top 72 percent nearly empty uninterrupted background for a future timetable; all character artwork belongs in the bottom 25 percent. Flat 2D softly textured gouache and colored pencil, no realism, no 3D, no shadows behind character. Artwork only. No text, timetable, clock, UI, save or share buttons, borders, white margins, rounded corners, device frame, logos, watermark. One wallpaper only, no collage or contact sheet."
+    },
+    {
+      "name": "strawberry-hood",
+      "path": "output/artwork-samples/capybara-20261018/strawberry-hood.png",
+      "source": "exec-cd3ecf61-ae11-4657-8d34-ab51e2c3b481.png",
+      "prompt": "Use case: illustration-story. Asset type: standalone mobile schedule wallpaper preview. Generate ONE opaque full bleed tall portrait wallpaper, target 1080 x 2400 pixels, exact 9:20 aspect ratio. Input images 1–5 are style/composition references only, not edit targets. Rich cornflower blue painted paper background; tan capybara rising from bottom edge wearing a bright red strawberry hood, yellow seeds and small green leaf crown, white round eyes and deadpan expression. Follow reference 5; character confined to bottom quarter. Match the references' charming deliberately silly hand drawn capybara anatomy: blunt rounded muzzle, little brown ears, warm tan lightly textured paint, thick slightly uneven black outlines, naive doodle style. Composition critical: keep the top 72 percent nearly empty uninterrupted background for a future timetable; all character artwork belongs in the bottom 25 percent. Flat 2D softly textured gouache and colored pencil, no realism, no 3D, no shadows behind character. Artwork only. No text, timetable, clock, UI, save or share buttons, borders, white margins, rounded corners, device frame, logos, watermark. One wallpaper only, no collage or contact sheet."
+    }
+  ]
+}

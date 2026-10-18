@@ -69,7 +69,7 @@ export function galleryPreviewTemplate(template) {
   return { ...template, topMargin: template.collection === 'hunter-x-hunter' && template.family === 'chibi' ? template.topMargin ?? 0 : 0, bottomMargin: 0, leftMargin: 0, rightMargin: 0,
     leftMarginEnabled: false, rightMarginEnabled: false, horizontalPosition: 0,
     // Keep artwork-specific placement in thumbnails as well as the editor.
-    verticalPosition: (template.collection === 'hunter-x-hunter' && ['chibi', 'plain', 'manga'].includes(template.family)) || ['ghibli-closeup', 'wbb-minimal', 'reference-minimal', 'chibi-elemental', 'snoopy-handmade'].includes(template.family) ? template.verticalPosition ?? 0 : 0 };
+    verticalPosition: (template.collection === 'hunter-x-hunter' && ['chibi', 'plain', 'manga'].includes(template.family)) || ['ghibli-closeup', 'wbb-minimal', 'reference-minimal', 'chibi-elemental', 'snoopy-handmade', 'capybara-doodles'].includes(template.family) ? template.verticalPosition ?? 0 : 0 };
 }
 
 export function customizeWallpaperTemplate(template, settings = {}, device = template?.device) {

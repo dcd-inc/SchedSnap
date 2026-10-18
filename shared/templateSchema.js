@@ -8,7 +8,7 @@ export const templateSchema = z.object({
   keywords: z.string().trim().max(500, 'Keep keywords under 500 characters.').optional(),
   status: z.enum(['draft', 'published', 'hidden']),
   createdAt: z.iso.datetime().optional(), publishedAt: z.iso.datetime().optional(),
-  collection: z.enum(['scenic', 'sanrio', 'snoopy', 'genshin', 'hunter-x-hunter', 'we-bare-bears', 'domo', 'adventure-time', 'chiikawa', 'chikawa', 'ghibli', 'mascot', 'meep', 'little-friends', 'pattern', 'original']).optional(),
+  collection: z.enum(['scenic', 'sanrio', 'snoopy', 'genshin', 'hunter-x-hunter', 'we-bare-bears', 'domo', 'adventure-time', 'chiikawa', 'chikawa', 'ghibli', 'mascot', 'meep', 'capybara', 'little-friends', 'pattern', 'original']).optional(),
   mobileOnly: z.boolean().optional(),
   family: z.string().max(80).optional(),
   background: color, ink: color, muted: color, surface: color, line: color,

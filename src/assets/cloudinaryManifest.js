@@ -4199,5 +4199,40 @@ export default {
     "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792167740/schedsnap/wallpapers/scenic/hxh-leorio-manga/mobile-7e15f3181a78d36b.png",
     "width": 1080,
     "height": 2400
+  },
+  "/wallpapers/scenic/capybara-blue-peek/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-blue-peek/mobile-f4e12d7c2d677c8c",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792316275/schedsnap/wallpapers/scenic/capybara-blue-peek/mobile-f4e12d7c2d677c8c.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/capybara-navy-tilt/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-navy-tilt/mobile-28caab19fab8d98a",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792316275/schedsnap/wallpapers/scenic/capybara-navy-tilt/mobile-28caab19fab8d98a.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/capybara-teal-peace/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-teal-peace/mobile-21782c406421d7e3",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792316276/schedsnap/wallpapers/scenic/capybara-teal-peace/mobile-21782c406421d7e3.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/capybara-daisy-yellow/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-daisy-yellow/mobile-2445e0f82a8e921f",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792316275/schedsnap/wallpapers/scenic/capybara-daisy-yellow/mobile-2445e0f82a8e921f.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/capybara-strawberry-hood/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-strawberry-hood/mobile-884572ad8d700503",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792316277/schedsnap/wallpapers/scenic/capybara-strawberry-hood/mobile-884572ad8d700503.png",
+    "width": 1080,
+    "height": 2400
   }
 };

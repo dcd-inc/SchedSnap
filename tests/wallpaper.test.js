@@ -1,3 +1,4 @@
+import { capybaraTemplates } from '../src/assets/capybaraTemplates.js';
 import { snoopyTemplates } from '../src/assets/snoopyTemplates.js';
 import { adventureTimeTemplates } from '../src/assets/characterReferenceTemplates.js';
 import { genshinChibiTemplates } from '../src/assets/genshinChibiTemplates.js';
@@ -93,7 +94,7 @@ test('all templates fit sample data and dense data is explicitly rejected', () =
 });
 
 test('the existing collections are preserved alongside device-specific illustrated designs', () => {
-  assert.equal(wallpaperTemplates.length, snoopyTemplates.length + adventureTimeTemplates.length + littleFriendsTemplates.length + weBareBearsTemplates.length + patternTemplates.length + chikawaReferenceTemplates.length + chikawaTemplates.filter(t => !chikawaReferenceTemplates.some(r => r.id === t.id)).length + sanrioTemplates.length + domoTemplates.length + meepTemplates.length + ghibliTemplates.length + genshinTemplates.length + genshinBackgroundTemplates.length + genshinChibiTemplates.length + hunterTemplates.length);
+  assert.equal(wallpaperTemplates.length, snoopyTemplates.length + adventureTimeTemplates.length + littleFriendsTemplates.length + weBareBearsTemplates.length + patternTemplates.length + chikawaReferenceTemplates.length + chikawaTemplates.filter(t => !chikawaReferenceTemplates.some(r => r.id === t.id)).length + sanrioTemplates.length + domoTemplates.length + meepTemplates.length + ghibliTemplates.length + genshinTemplates.length + genshinBackgroundTemplates.length + genshinChibiTemplates.length + hunterTemplates.length + capybaraTemplates.length);
   assert.ok(wallpaperTemplates.filter(template => template.image && template.layout !== 'mascot')
     .every(template => (template.mobileOnly ? ['mobile'] : ['mobile', 'tablet', 'laptop']).every(device => template.deviceImages?.[device])));
   assert.equal(new Set(wallpaperTemplates.map((template) => template.id)).size, wallpaperTemplates.length);

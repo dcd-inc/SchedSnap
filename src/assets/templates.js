@@ -13,6 +13,7 @@ import { genshinTemplates } from './genshinTemplates.js';
 import { genshinBackgroundTemplates } from './genshinBackgroundTemplates.js';
 import { genshinChibiTemplates } from './genshinChibiTemplates.js';
 import { hunterTemplates } from './hunterTemplates.js';
+import { capybaraTemplates } from './capybaraTemplates.js';
 import { withTemplateKeywords } from '../../shared/templateKeywords.js';
 
 
@@ -33,6 +34,7 @@ export const wallpaperTemplates = [
   ...genshinBackgroundTemplates,
   ...genshinChibiTemplates,
   ...hunterTemplates,
+  ...capybaraTemplates,
 
   ...sanrioTemplates,
   ...chikawaReferenceTemplates,

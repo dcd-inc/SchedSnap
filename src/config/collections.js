@@ -11,6 +11,7 @@ export const designCollections = [
   { id: 'chiikawa', name: 'Chiikawa' },
   { id: 'ghibli', name: 'Ghibli' },
   { id: 'meep', name: 'Meep' },
+  { id: 'capybara', name: 'Capybara', searchTerms: ['capy', 'cute animals'] },
   { id: 'pattern', name: 'Patterns & prints' },
 ];
 
