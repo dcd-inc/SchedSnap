@@ -1,6 +1,7 @@
 import { createDesignLikes } from '../server/designLikes.js';
 import { sameOrigin } from '../server/adminAuth.js';
 import { cloudConfigured, createCatalogStore, seedCatalog } from '../server/catalogStore.js';
+import { withBuiltInPatterns } from '../shared/patternCatalog.js';
 
 export function createLikesHandler({ env = process.env, store = createCatalogStore(env), likes = createDesignLikes({ env }) } = {}) {
   return async (request, response) => {
@@ -28,7 +29,8 @@ export function createLikesHandler({ env = process.env, store = createCatalogSto
         if (!visitor) return fail(428, 'Allow the cookie used to remember likes, then try again.');
       }
       const catalog = cloudConfigured(env) ? await store.read() : seedCatalog();
-      const ids = catalog.templates.filter(t => t.status === 'published').map(t => t.id);
+      const templates = withBuiltInPatterns(catalog.templates);
+      const ids = templates.filter(t => t.status === 'published').map(t => t.id);
       if (request.method === 'GET') return response.status(200).json({ likes: await likes.read(ids, visitor, catalog.templates.map(t => t.id)), identified: Boolean(visitor) });
       const { id, liked } = request.body;
       if (!ids.includes(id)) return fail(404, 'This design is no longer available.');

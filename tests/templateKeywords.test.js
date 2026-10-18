@@ -61,8 +61,10 @@ test('remote-only and newly added templates receive keywords in the public API w
   const response = { setHeader() {}, status(code) { this.code = code; return this; }, json(data) { this.data = data; } };
   await handler({ method: 'GET' }, response);
   assert.equal(response.code, 200);
-  assert.equal(response.data.templates.length, 1);
-  assert.ok(response.data.templates[0].keywords.includes('green'));
-  assert.ok(response.data.templates[0].keywords.includes('nature'));
-  assert.equal(response.data.templates[0].status, undefined);
+  assert.equal(response.data.templates.length, 101);
+  assert.equal(response.data.templates.some(t => t.id === 'hidden'), false);
+  const published = response.data.templates.find(t => t.id === remote.id);
+  assert.ok(published.keywords.includes('green'));
+  assert.ok(published.keywords.includes('nature'));
+  assert.equal(published.status, undefined);
 });

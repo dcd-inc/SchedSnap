@@ -5,6 +5,11 @@ import { wallpaperTemplates, deviceResolutions } from '../src/assets/templates.j
 import { templateSchema } from '../shared/templateSchema.js';
 import { customizeWallpaperTemplate } from '../src/utils/wallpaperTheme.js';
 import { patternScale, patternOpacity } from '../src/utils/patternBackground.js';
+import { withBuiltInPatterns } from '../shared/patternCatalog.js';
+import { patternTemplates } from '../src/assets/patternTemplates.js';
+import { createLikesHandler } from '../api/likes.js';
+import { createDownloadsHandler } from '../api/downloads.js';
+import { searchWallpaperTemplates } from '../src/utils/wallpaperSearch.js';
 
 test('100 original motifs are discoverable, independently drawable, and publishable on every device', () => {
   assert.equal(generativePatterns.length, 100);
@@ -32,6 +37,8 @@ test('100 original motifs are discoverable, independently drawable, and publisha
   for (const template of generativePatternTemplates) {
     assert.ok(wallpaperTemplates.some(t => t.id === template.id));
     assert.ok(!template.mobileOnly && !template.image);
+    assert.ok(template.keywords.length <= 500 && template.keywords.includes('pattern'));
+    assert.ok(searchWallpaperTemplates(generativePatternTemplates, template.name).some(t => t.id === template.id));
     assert.equal(templateSchema.safeParse({ ...template, status: 'published' }).success, true, template.id);
     for (const device of Object.keys(deviceResolutions)) {
       const settings = { background: '#f0eeee', patternColor: '#ab1234', patternAccent: '#1234ab', patternScale: 150, patternOpacity: 40 };
@@ -40,6 +47,32 @@ test('100 original motifs are discoverable, independently drawable, and publisha
       const parsed = templateSchema.parse({ ...customized, status: 'published' });
       for (const key of Object.keys(settings)) assert.equal(parsed[key], settings[key]);
     }
+  }
+});
+
+test('live catalogs retire the original 24 prints and include the new prints without remote writes', () => {
+  const override = { ...generativePatternTemplates[0], name: 'Saved edit', status: 'published' };
+  const hidden = { ...generativePatternTemplates[1], status: 'hidden' };
+  const remote = [...patternTemplates.map(t => ({ ...t, status: 'published' })), override, hidden, { id: 'other', status: 'published' }];
+  const before = structuredClone(remote);
+  const merged = withBuiltInPatterns(remote);
+  assert.equal(merged.filter(t => t.collection === 'pattern').length, 100);
+  assert.equal(merged.find(t => t.id === override.id).name, 'Saved edit');
+  assert.equal(merged.find(t => t.id === hidden.id).status, 'hidden');
+  assert.ok(merged.some(t => t.id === 'other'));
+  assert.deepEqual(remote, before);
+  assert.ok(wallpaperTemplates.every(t => !patternTemplates.some(old => old.id === t.id)));
+});
+
+test('new built-in prints accept likes and downloads, while retired prints are unavailable', async () => {
+  const env = { CLOUDINARY_CLOUD_NAME: 'test', CLOUDINARY_API_KEY: 'test', CLOUDINARY_API_SECRET: 'test' };
+  const store = { read: async () => ({ templates: patternTemplates.map(t => ({ ...t, status: 'published' })) }) };
+  const likes = { identity: () => 'browser', allow: async () => true, write: async () => ({ count: 1, liked: true }) };
+  const handlers = [createLikesHandler({ env, store, likes }), createDownloadsHandler({ env, store, limiter: likes, downloads: { record: async () => 1 } })];
+  for (const handler of handlers) for (const [id, status] of [[generativePatternTemplates[0].id, 200], [patternTemplates[0].id, 404]]) {
+    const response = { setHeader() {}, status(code) { this.code = code; return this; }, json(body) { this.body = body; } };
+    await handler({ method: 'POST', body: { id, liked: true, device: 'tablet' }, headers: { host: 'localhost', origin: 'http://localhost', 'content-type': 'application/json' } }, response);
+    assert.equal(response.code, status, `${id}: ${response.body.error?.message || 'available'}`);
   }
 });
 

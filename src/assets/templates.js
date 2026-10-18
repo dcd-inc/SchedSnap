@@ -1,6 +1,5 @@
 import { adventureTimeTemplates } from './characterReferenceTemplates.js';
 import { littleFriendsTemplates } from './littleFriendsTemplates.js';
-import { patternTemplates } from './patternTemplates.js';
 import { generativePatternTemplates } from './generativePatterns.js';
 import { chikawaTemplates } from './chikawaTemplates.js';
 import { chikawaReferenceTemplates } from './chikawaReferenceTemplates.js';
@@ -41,7 +40,6 @@ export const wallpaperTemplates = [
   ...chikawaReferenceTemplates,
   ...chikawaTemplates.filter(template => !chikawaReferenceTemplates.some(reviewed => reviewed.id === template.id)),
   ...littleFriendsTemplates,
-  ...patternTemplates,
   ...generativePatternTemplates,
 ].map(withTemplateKeywords);
 

@@ -1,6 +1,6 @@
 # Original generative prints
 
-100 new prints join the existing Patterns & prints collection: 35 geometric, 35 organic, and 30 playful. All are resolution-independent Canvas geometry, available on mobile (1080 × 2400), tablet (1600 × 2560), and laptop (1920 × 1080). The same renderer powers gallery previews, customization, and PNG downloads.
+100 prints replace the original 24 in the active Patterns & prints collection: 35 geometric, 35 organic, and 30 playful. All are resolution-independent Canvas geometry, available on mobile (1080 × 2400), tablet (1600 × 2560), and laptop (1920 × 1080). The same renderer powers gallery previews, customization, and PNG downloads.
 
 ## Provenance
 
@@ -24,4 +24,4 @@ The actual editor was exercised at 390px, 820px, and 1440px viewport widths. Key
 
 This is an extension of the existing Patterns & prints collection and appearance controls. The white/slate application palette, DM Sans type system, shared control styling, focus treatment, and wallpaper schedule layout remain governed by the incumbent `DESIGN.md` and `.impeccable/design.json`. Wallpaper palettes are independently editable artwork values, not new application tokens.
 
-Local preview catalog additions make the new designs available during development. They do not publish or modify the remote cloud catalog; remote catalog publication is a separate operation. No fffuel images, exports, or source code were copied or redistributed.
+The public catalog, likes, and downloads endpoints merge the built-in code-rendered prints into remote catalog reads. No Cloudinary image upload or catalog publication is needed. Saved remote overrides and hidden/draft statuses take precedence. The original 24 print IDs are excluded from the active gallery and public interactions; their definitions remain only for legacy rendering and regression checks. Other collections and stored records are preserved. Every new preset includes deduplicated motif/name/description keywords plus the existing color and style tags; public catalog delivery retains them for search. No fffuel images, exports, or source code were copied or redistributed.

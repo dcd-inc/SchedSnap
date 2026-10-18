@@ -7,6 +7,7 @@ import { snoopyTemplates } from '../src/assets/snoopyTemplates.js';
 import { hunterTemplates } from '../src/assets/hunterTemplates.js';
 import { generativePatternTemplates } from '../src/assets/generativePatterns.js';
 import { withTemplateKeywords } from '../shared/templateKeywords.js';
+import { withBuiltInPatterns } from '../shared/patternCatalog.js';
 
 const env = { CLOUDINARY_CLOUD_NAME: 'preview-test', CLOUDINARY_API_KEY: 'test', CLOUDINARY_API_SECRET: 'test' };
 const response = () => ({ setHeader() {}, status(code) { this.code = code; return this; }, json(body) { this.body = body; return this; } });
@@ -60,14 +61,14 @@ test('local previews append only missing IDs and preserve remote overrides, hidd
   const result = response();
   await createPublicCatalogHandler({ env, store: { read: async () => ({ templates: remote }) }, previewTemplates: preview })({ method: 'GET' }, result);
   assert.equal(result.code, 200);
-  assert.deepEqual(result.body.templates, [expose({ ...preview[0], status: 'published' }), ...remote.filter(t => t.status === 'published').map(expose)]);
+  assert.deepEqual(result.body.templates, withBuiltInPatterns([{ ...preview[0], status: 'published' }, ...remote]).filter(t => t.status === 'published').map(expose));
   assert.deepEqual(remote, original);
 });
 
-test('production/default handler does not expose local preview additions', async () => {
+test('production includes all code-rendered prints without publishing to the remote catalog', async () => {
   const result = response();
   await createPublicCatalogHandler({ env, store: { read: async () => ({ templates: [{ id: 'remote-only', status: 'published' }] }) } })({ method: 'GET' }, result);
-  assert.deepEqual(result.body.templates, [expose({ id: 'remote-only' })]);
+  assert.deepEqual(result.body.templates, [...generativePatternTemplates.map(expose), expose({ id: 'remote-only' })]);
 });
 
 test('unconfigured local catalog keeps seeded designs once when also passed as previews', async () => {

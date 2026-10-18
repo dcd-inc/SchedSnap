@@ -2,6 +2,7 @@ import { createDesignDownloads } from '../server/designDownloads.js';
 import { createDesignLikes } from '../server/designLikes.js';
 import { sameOrigin, isAuthenticated } from '../server/adminAuth.js';
 import { cloudConfigured, createCatalogStore, seedCatalog } from '../server/catalogStore.js';
+import { withBuiltInPatterns } from '../shared/patternCatalog.js';
 
 export function createDownloadsHandler({ env = process.env, store = createCatalogStore(env), downloads = createDesignDownloads({ env }), limiter = createDesignLikes({ env }) } = {}) {
   return async (request, response) => {
@@ -19,11 +20,12 @@ export function createDownloadsHandler({ env = process.env, store = createCatalo
         if (!await limiter.allow(request)) { response.setHeader('Retry-After', '60'); return fail(429, 'Too many downloads. Try again in a minute.'); }
       }
       const catalog = cloudConfigured(env) ? await store.read() : seedCatalog();
+      const templates = withBuiltInPatterns(catalog.templates);
       const admin = request.method === 'GET' && isAuthenticated(request, env, Date.now());
-      const ids = catalog.templates.filter(t => admin || t.status === 'published').map(t => t.id);
+      const ids = templates.filter(t => admin || t.status === 'published').map(t => t.id);
       if (request.method === 'GET') return response.status(200).json({ downloads: await downloads.read(ids, device), device });
       if (!ids.includes(request.body.id)) return fail(404, 'This design is no longer available.');
-      if (device !== 'mobile' && catalog.templates.find(template => template.id === request.body.id)?.mobileOnly) return fail(400, 'This design is available for mobile only.');
+      if (device !== 'mobile' && templates.find(template => template.id === request.body.id)?.mobileOnly) return fail(400, 'This design is available for mobile only.');
       return response.status(200).json({ id: request.body.id, device, count: await downloads.record(request.body.id, device) });
     } catch { return fail(503, 'Download counts are temporarily unavailable.'); }
   };

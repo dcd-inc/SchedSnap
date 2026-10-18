@@ -105,7 +105,11 @@ test('download endpoint validates origin, design status, and rate limits', async
   assert.equal((await send('live', 'https://other.com')).code, 403);
   assert.equal((await send('hidden')).code, 404);
   assert.equal((await send('../invalid')).code, 400);
-  assert.deepEqual((await send(undefined, undefined, 'GET')).data, { downloads: { live: 0 }, device: 'mobile' });
+  const listing = (await send(undefined, undefined, 'GET')).data;
+  assert.equal(listing.device, 'mobile');
+  assert.equal(listing.downloads.live, 0);
+  assert.equal(listing.downloads.hidden, undefined);
+  assert.equal(Object.keys(listing.downloads).filter(id => id.startsWith('print-')).length, 100);
   allowed = false;
   assert.equal((await send('live')).code, 429);
   assert.equal(writes, 1);
