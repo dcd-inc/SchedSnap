@@ -4234,5 +4234,110 @@ export default {
     "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792316277/schedsnap/wallpapers/scenic/capybara-strawberry-hood/mobile-884572ad8d700503.png",
     "width": 1080,
     "height": 2400
+  },
+  "/wallpapers/scenic/anime-blue-rift/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/anime-blue-rift/mobile-7819caa1e181ec33",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792323501/schedsnap/wallpapers/scenic/anime-blue-rift/mobile-7819caa1e181ec33.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/anime-clover-sword/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/anime-clover-sword/mobile-fa7288d563452741",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792320745/schedsnap/wallpapers/scenic/anime-clover-sword/mobile-fa7288d563452741.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/anime-akatsuki-crimson-assembly/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/anime-akatsuki-crimson-assembly/mobile-0e70d2e6ce4c058a",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792320745/schedsnap/wallpapers/scenic/anime-akatsuki-crimson-assembly/mobile-0e70d2e6ce4c058a.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/anime-crimson-manga-eye/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/anime-crimson-manga-eye/mobile-6b66ce4f49ea4f93",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792320745/schedsnap/wallpapers/scenic/anime-crimson-manga-eye/mobile-6b66ce4f49ea4f93.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/anime-crimson-sharingan/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/anime-crimson-sharingan/mobile-8b9a678bac757752",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792320746/schedsnap/wallpapers/scenic/anime-crimson-sharingan/mobile-8b9a678bac757752.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/anime-cyan-spirit-emblems/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/anime-cyan-spirit-emblems/mobile-56b7f5f652719afd",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792320746/schedsnap/wallpapers/scenic/anime-cyan-spirit-emblems/mobile-56b7f5f652719afd.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/anime-hashira-eye-panels/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/anime-hashira-eye-panels/mobile-8f71f5cfa86ee68f",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792320746/schedsnap/wallpapers/scenic/anime-hashira-eye-panels/mobile-8f71f5cfa86ee68f.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/anime-hunter-prismatic-gaze/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/anime-hunter-prismatic-gaze/mobile-f0192ddb38ebf481",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792320746/schedsnap/wallpapers/scenic/anime-hunter-prismatic-gaze/mobile-f0192ddb38ebf481.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/anime-naruto-neon-dojutsu/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/anime-naruto-neon-dojutsu/mobile-7b47b620cf0a6bb6",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792320747/schedsnap/wallpapers/scenic/anime-naruto-neon-dojutsu/mobile-7b47b620cf0a6bb6.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/anime-jujutsu-gaze/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/anime-jujutsu-gaze/mobile-76653ba32f07debc",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792320747/schedsnap/wallpapers/scenic/anime-jujutsu-gaze/mobile-76653ba32f07debc.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/anime-naruto-ink-quartet/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/anime-naruto-ink-quartet/mobile-296c5f96352eca47",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792320747/schedsnap/wallpapers/scenic/anime-naruto-ink-quartet/mobile-296c5f96352eca47.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/anime-neon-heroines/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/anime-neon-heroines/mobile-7ab91a90bcae66fa",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792320747/schedsnap/wallpapers/scenic/anime-neon-heroines/mobile-7ab91a90bcae66fa.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/anime-titan-eye-panels/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/anime-titan-eye-panels/mobile-1651d25ca5b7e6b9",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792320748/schedsnap/wallpapers/scenic/anime-titan-eye-panels/mobile-1651d25ca5b7e6b9.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/anime-upper-moon-eyes/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/anime-upper-moon-eyes/mobile-577d6dfc756935fe",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792320748/schedsnap/wallpapers/scenic/anime-upper-moon-eyes/mobile-577d6dfc756935fe.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/anime-torn-manga-eyes/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/anime-torn-manga-eyes/mobile-a69cdf47148a7105",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792320748/schedsnap/wallpapers/scenic/anime-torn-manga-eyes/mobile-a69cdf47148a7105.png",
+    "width": 1080,
+    "height": 2400
   }
 };

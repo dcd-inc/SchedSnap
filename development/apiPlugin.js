@@ -5,8 +5,6 @@ import { createPublicCatalogHandler } from '../api/catalog.js';
 import { createDownloadsHandler } from '../api/downloads.js';
 import { createLikesHandler } from '../api/likes.js';
 import { MAX_BODY_BYTES } from '../shared/uploadLimits.js';
-import { sanrioTemplates } from '../src/assets/sanrioTemplates.js';
-import { domoTemplates } from '../src/assets/domoTemplates.js';
 import { snoopyTemplates } from '../src/assets/snoopyTemplates.js';
 import { meepTemplates } from '../src/assets/meepTemplates.js';
 import { ghibliTemplates } from '../src/assets/ghibliTemplates.js';
@@ -16,6 +14,7 @@ import { genshinChibiTemplates } from '../src/assets/genshinChibiTemplates.js';
 import { genshinElementalTemplates } from '../src/assets/genshinElementalTemplates.js';
 import { hunterTemplates } from '../src/assets/hunterTemplates.js';
 import { generativePatternTemplates } from '../src/assets/generativePatterns.js';
+import { animeTemplates } from '../src/assets/animeTemplates.js';
 
 
 // Runs only inside Vite's Node process. No credentials enter the browser bundle.
@@ -26,7 +25,7 @@ export function localApiPlugin(env) {
       const analyze = createAnalyzeHandler({ env });
       const visits = createVisitsHandler({ env });
       const admin = createAdminHandler({ env });
-      const catalog = createPublicCatalogHandler({ env, previewTemplates: [...generativePatternTemplates, ...hunterTemplates, ...snoopyTemplates, ...genshinElementalTemplates, ...genshinChibiTemplates, ...genshinTemplates, ...genshinBackgroundTemplates, ...ghibliTemplates, ...meepTemplates, ...sanrioTemplates, ...domoTemplates.filter(template => template.family === 'domo-reference')] });
+      const catalog = createPublicCatalogHandler({ env, previewTemplates: [...animeTemplates, ...generativePatternTemplates, ...hunterTemplates, ...snoopyTemplates, ...genshinElementalTemplates, ...genshinChibiTemplates, ...genshinTemplates, ...genshinBackgroundTemplates, ...ghibliTemplates, ...meepTemplates] });
       const likes = createLikesHandler({ env });
       const downloads = createDownloadsHandler({ env });
       server.middlewares.use(async (request, response, next) => {

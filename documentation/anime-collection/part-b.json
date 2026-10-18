@@ -1,0 +1,129 @@
+[
+  {
+    "ref": 5,
+    "id": "anime-titan-eye-panels",
+    "name": "Titan Eye Panels",
+    "franchise": "Attack on Titan",
+    "keywords": [
+      "anime",
+      "attack on titan",
+      "shingeki no kyojin",
+      "eren",
+      "mikasa",
+      "levi",
+      "armin",
+      "eyes",
+      "manga",
+      "monochrome",
+      "neon"
+    ],
+    "reference": "C:/Users/Admin/AppData/Local/Temp/codex-clipboard-72fd2b96-dd01-45af-8d22-ce0aeae5eb6f.png",
+    "prompt": "Use case: stylized-concept. Create one opaque full-bleed 1080 x 2400 mobile anime wallpaper, using attached reference as composition and style reference. Preserve closely its seven stacked diagonal eye-closeup panels, same character identities from Attack on Titan, order and expressive faces, monochrome faces with selectively luminous green, yellow, cyan and blue eyes, bold black diagonal separators and dramatic ink shading. Adapt proportions naturally to tall phone canvas without stretching. Artwork only; no text, letters, logo, watermark, schedule, UI, device frame. Repaint as polished crisp high-resolution anime artwork; do not add new objects.",
+    "provider": "built-in image_gen",
+    "generatedSource": "C:\\Users\\Admin\\.codex\\generated_images\\01a14e9a-de62-77c3-a100-83a2c277a729\\exec-f56c1e2c-9c9f-4bab-8f26-9460ee316194.png",
+    "path": "public/wallpapers/scenic/anime-titan-eye-panels/mobile.png",
+    "requestedDimensions": [
+      1080,
+      2400
+    ],
+    "normalization": "pending user authorization",
+    "visualInspection": "Passed: reference panel order, composition and neon accents preserved; no watermark or UI."
+  },
+  {
+    "ref": 6,
+    "id": "anime-neon-heroines",
+    "name": "Neon Heroines",
+    "franchise": "Anime",
+    "keywords": [
+      "anime",
+      "heroines",
+      "female",
+      "eyes",
+      "neon",
+      "cyan",
+      "purple",
+      "red",
+      "yellow",
+      "manga",
+      "dark"
+    ],
+    "reference": "C:/Users/Admin/AppData/Local/Temp/codex-clipboard-c16ad38b-5a39-4c25-a428-db35dfcc2954.png",
+    "prompt": "Use case: stylized-concept. Create one opaque full-bleed 1080 x 2400 mobile anime wallpaper. Input image is style and composition reference: preserve closely seven stacked horizontal female anime eye closeups, same order, expressions, character hair silhouettes and panel proportions, cyan then yellow then red then purple then amber then red cross pupils then violet glowing eyes. Fine expressive manga ink strokes on dark desaturated gray faces, intense selective neon eye light. Repaint crisp polished high-resolution, adapt naturally to tall phone format without stretching. Artwork only, no text, letters, logos, watermark, UI, timetable, device frame, new objects.",
+    "provider": "built-in image_gen",
+    "generatedSource": "C:\\Users\\Admin\\.codex\\generated_images\\01a14e9a-de62-77c3-a100-83a2c277a729\\exec-a3d1fe97-5e28-4194-b6e9-ef438561c351.png",
+    "path": "public/wallpapers/scenic/anime-neon-heroines/mobile.png",
+    "requestedDimensions": [
+      1080,
+      2400
+    ],
+    "normalization": "pending user authorization",
+    "visualInspection": "Passed: reference panel order, composition and neon accents preserved; no watermark or UI."
+  },
+  {
+    "ref": 7,
+    "id": "anime-hashira-eye-panels",
+    "name": "Hashira Eye Panels",
+    "franchise": "Demon Slayer",
+    "keywords": [
+      "anime",
+      "demon slayer",
+      "kimetsu no yaiba",
+      "hashira",
+      "tengen",
+      "rengoku",
+      "mitsuri",
+      "muichiro",
+      "gyomei",
+      "obanai",
+      "sanemi",
+      "giyu",
+      "shinobu",
+      "eyes",
+      "neon"
+    ],
+    "reference": "C:/Users/Admin/AppData/Local/Temp/codex-clipboard-c4a5b9ad-72e5-4826-a21d-820f51d2e948.png",
+    "prompt": "Use case: stylized-concept. Create one opaque full-bleed 1080 x 2400 mobile anime wallpaper. Input image is composition and style reference. Preserve closely the nine stacked slanted eye-closeup panels of Demon Slayer Hashira characters, their order, facial features, hair, accessories and colored glowing irises: orange, fire orange, green, pale cyan, white, yellow/cyan heterochromia, red, deep blue, pink. Dark grayscale faces, polished crisp inked anime shading, powerful jewel-bright eyes, black panel dividers, subtle mist. Fill gaps with dark charcoal instead of transparency. Natural tall phone composition, no distortion. Artwork only: no text, signatures, watermark, logos, UI, timetable or device frame.",
+    "provider": "built-in image_gen",
+    "generatedSource": "C:\\Users\\Admin\\.codex\\generated_images\\01a14e9a-de62-77c3-a100-83a2c277a729\\exec-211cdbc0-17d6-4561-908d-1c7742b062d0.png",
+    "path": "public/wallpapers/scenic/anime-hashira-eye-panels/mobile.png",
+    "requestedDimensions": [
+      1080,
+      2400
+    ],
+    "normalization": "pending user authorization",
+    "visualInspection": "Passed: reference panel order, composition and neon accents preserved; no watermark or UI."
+  },
+  {
+    "ref": 8,
+    "id": "anime-upper-moon-eyes",
+    "name": "Upper Moon Eyes",
+    "franchise": "Demon Slayer",
+    "keywords": [
+      "anime",
+      "demon slayer",
+      "kimetsu no yaiba",
+      "upper moon",
+      "kokushibo",
+      "doma",
+      "akaza",
+      "hantengu",
+      "gyokko",
+      "gyutaro",
+      "daki",
+      "eyes",
+      "fire",
+      "neon"
+    ],
+    "reference": "C:/Users/Admin/AppData/Local/Temp/codex-clipboard-dd6ab2f9-caf9-45f6-a5a0-dd0a24017088.png",
+    "prompt": "Use case: stylized-concept. Create one opaque full-bleed 1080 x 2400 mobile anime wallpaper using attached image as close style and composition reference. Preserve seven stacked horizontal eye closeup panels of Demon Slayer Upper Moon demons, character identities, expressions, hair silhouettes and relative panel heights. Very dark charcoal faces, crisp cel-shaded anime, intensely glowing irises with fiery gold corona: red, rainbow, ice cyan, orange, gold central eye, pink, green. Preserve geometric iris designs but omit all written kanji or lettering. Naturally adapt to tall phone format without stretching. Artwork only: no text, watermark, signature, logo, schedule, UI or device frame. No extra objects.",
+    "provider": "built-in image_gen",
+    "generatedSource": "C:\\Users\\Admin\\.codex\\generated_images\\01a14e9a-de62-77c3-a100-83a2c277a729\\exec-d1c2ee9d-53f5-4c9b-acac-6ae46a641d36.png",
+    "path": "public/wallpapers/scenic/anime-upper-moon-eyes/mobile.png",
+    "requestedDimensions": [
+      1080,
+      2400
+    ],
+    "normalization": "pending user authorization",
+    "visualInspection": "Passed: reference panel order, composition and neon accents preserved; no watermark or UI."
+  }
+]

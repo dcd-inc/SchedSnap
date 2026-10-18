@@ -9,7 +9,7 @@ test('shared gallery categories include the artwork collections and style filter
 });
 
 test('Anime groups anime collections without changing stored collections', () => {
-  for (const collection of ['hunter-x-hunter', 'ghibli', 'onepiece']) {
+  for (const collection of ['anime', 'hunter-x-hunter', 'ghibli', 'onepiece']) {
     assert.equal(matchesGalleryCategory({ collection }, 'anime'), true);
   }
   for (const collection of ['genshin', 'pattern', 'snoopy', 'domo', 'mascot']) {

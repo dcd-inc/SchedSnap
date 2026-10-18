@@ -1,6 +1,7 @@
 
 export const designCollections = [
   { id: 'all', name: 'All designs' },
+  { id: 'anime', name: 'Anime', searchTerms: ['anime wallpaper', 'manga'] },
   { id: 'sanrio', name: 'Sanrio' },
   { id: 'snoopy', name: 'Snoopy', searchTerms: ['Peanuts', 'Woodstock'] },
   { id: 'genshin', name: 'Genshin', searchTerms: ['Genshin Impact'] },
@@ -34,9 +35,9 @@ export const scenicFamilies = [
 ];
 
 // Styles are gallery filters; stored designs retain their parent collection.
-export const galleryCategories = [designCollections[0], { id: 'anime', name: 'Anime', searchTerms: ['anime wallpaper', 'manga'] }, ...designCollections.slice(1)];
+export const galleryCategories = [...designCollections];
 
 export function matchesGalleryCategory(template, category) {
-  if (category === 'anime') return ['hunter-x-hunter', 'ghibli', 'onepiece'].includes(getTemplateCollection(template));
+  if (category === 'anime') return ['anime', 'hunter-x-hunter', 'ghibli', 'onepiece'].includes(getTemplateCollection(template));
   return category === 'all' || getTemplateCollection(template) === (['chikawa', 'little-friends'].includes(category) ? 'chiikawa' : category);
 }

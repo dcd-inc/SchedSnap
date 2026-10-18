@@ -1,0 +1,7 @@
+{
+  "provider": "built-in image_gen",
+  "source": "public/wallpapers/scenic/anime-naruto-ink-quartet/mobile.png",
+  "edit": "Brightness-only edit targeting roughly 58% black-overlay appearance; preserve composition and ink detail.",
+  "render": "SchedSnap drawWallpaper, mobile 1080x2400, five-meeting sample schedule, light ink and dark containers",
+  "published": false
+}

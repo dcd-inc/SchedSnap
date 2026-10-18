@@ -1,0 +1,123 @@
+[
+  {
+    "reference": 9,
+    "id": "anime-crimson-sharingan",
+    "name": "Crimson Sharingan",
+    "family": "anime",
+    "franchise": "Naruto",
+    "keywords": [
+      "naruto",
+      "sharingan",
+      "uchiha",
+      "itachi",
+      "sasuke",
+      "red eyes",
+      "manga panels",
+      "dark"
+    ],
+    "path": "public/wallpapers/scenic/anime-crimson-sharingan/mobile.png",
+    "prompt": "Use case: stylized-concept. Asset: SchedSnap mobile anime wallpaper, opaque PNG exactly 1080 x 2400. Use attached reference as composition and character reference; recreate closely with polished crisp anime inkwork. Preserve five stacked horizontal eye close-up strips with dark near-black faces, black hair, glowing crimson Sharingan eye symbols, dense crosshatching, restrained red light. Maintain reference layout and tone, expand vertically only as needed for 9:20. Artwork only, no text, logo, watermark, schedule, UI or device frame.",
+    "provider": "built-in image_gen",
+    "source": "C:/Users/Admin/.codex/generated_images/01a14e9b-0cc5-75a1-9122-98581cfe9d6d/exec-1885113e-d757-4f21-b6fb-643908515360.png",
+    "generatedDimensions": {
+      "width": 841,
+      "height": 1870
+    },
+    "targetDimensions": {
+      "width": 1080,
+      "height": 2400
+    },
+    "dimensionsStatus": "raw output; local normalization pending user authorization",
+    "visualInspection": "passed: reference composition retained, opaque full bleed, no text/watermark/UI/schedule"
+  },
+  {
+    "reference": 10,
+    "id": "anime-jujutsu-gaze",
+    "name": "Jujutsu Gaze",
+    "family": "anime",
+    "franchise": "Jujutsu Kaisen",
+    "keywords": [
+      "jujutsu kaisen",
+      "jjk",
+      "gojo",
+      "sukuna",
+      "yuji",
+      "megumi",
+      "eye panels"
+    ],
+    "path": "public/wallpapers/scenic/anime-jujutsu-gaze/mobile.png",
+    "prompt": "Use case: stylized-concept. Asset: SchedSnap mobile anime wallpaper, opaque PNG exactly 1080 x 2400. Reference image role: preserve composition and characters closely. Create polished Jujutsu Kaisen five stacked diagonally divided close-up eye panels, upper pale haired amber eyed face, then Sukuna red eyes and black facial markings, white haired Gojo icy cyan eyes at center, Yuji orange eyes, bottom dark haired blue eyed face. Keep grayscale lavender faces with vivid eye colors and clean black panel borders, same layout and restrained shading. Fit 9:20 without distorting anatomy. Artwork only, no text, logo, watermark, schedule, UI or device frame.",
+    "provider": "built-in image_gen",
+    "source": "C:/Users/Admin/.codex/generated_images/01a14e9b-0cc5-75a1-9122-98581cfe9d6d/exec-94b14e04-11cc-442d-85c8-d8b87d9d3362.png",
+    "generatedDimensions": {
+      "width": 841,
+      "height": 1870
+    },
+    "targetDimensions": {
+      "width": 1080,
+      "height": 2400
+    },
+    "dimensionsStatus": "raw output; local normalization pending user authorization",
+    "visualInspection": "passed: reference composition retained, opaque full bleed, no text/watermark/UI/schedule"
+  },
+  {
+    "reference": 11,
+    "id": "anime-blue-rift",
+    "name": "Blue Rift",
+    "family": "anime",
+    "franchise": "Anime",
+    "keywords": [
+      "anime",
+      "blue eyes",
+      "black hair",
+      "torn paper",
+      "minimal",
+      "black",
+      "crimson"
+    ],
+    "path": "public/wallpapers/scenic/anime-blue-rift/mobile.png",
+    "prompt": "Use case: stylized-concept. Asset: SchedSnap mobile anime wallpaper, opaque PNG exactly 1080 x 2400. Reference role: preserve exact minimal layout, tone and face composition. Black full bleed portrait with one horizontal torn paper opening across the middle, ragged muted crimson border, inside opening intense handsome dark black haired anime young man's upper face and glowing icy blue eyes with subtle violet aura at far edges. Keep roughly top 40 percent and bottom 34 percent empty pitch black as reference; opening about 26 percent of height, no added objects. Sharp refined anime artwork. No text, logo, watermark, schedule, UI or frame.",
+    "provider": "built-in image_gen",
+    "source": "C:/Users/Admin/.codex/generated_images/01a14e9b-0cc5-75a1-9122-98581cfe9d6d/exec-31629167-50aa-41e2-9488-a10bb0063435.png",
+    "generatedDimensions": {
+      "width": 841,
+      "height": 1870
+    },
+    "targetDimensions": {
+      "width": 1080,
+      "height": 2400
+    },
+    "dimensionsStatus": "raw output; local normalization pending user authorization",
+    "visualInspection": "passed: reference composition retained, opaque full bleed, no text/watermark/UI/schedule"
+  },
+  {
+    "reference": 12,
+    "id": "anime-torn-manga-eyes",
+    "name": "Torn Manga Eyes",
+    "family": "anime",
+    "franchise": "Anime",
+    "keywords": [
+      "anime",
+      "manga",
+      "heterochromia",
+      "amber eyes",
+      "teal eyes",
+      "torn paper",
+      "collage"
+    ],
+    "path": "public/wallpapers/scenic/anime-torn-manga-eyes/mobile.png",
+    "prompt": "Use case: stylized-concept. Asset: SchedSnap mobile anime wallpaper, opaque PNG exactly 1080 x 2400. Reference role: closely retain layout and character composition. Tall portrait manga torn paper collage: narrow diagonal vertical ragged tear from upper right toward lower left reveals sideways anime black haired face with one large luminous amber eye above and one teal green eye below. Surround with intricate monochrome illustrated manga action panels and textured ivory torn edges, floating small paper fragments, deep midnight blue shadows, cinematic fine ink detail. Preserve reference scale and asymmetry. Surrounding panels use artwork and abstract ink strokes only, no legible writing, speech text, lettering, logos or watermarks. No schedule, UI or device frame.",
+    "provider": "built-in image_gen",
+    "source": "C:/Users/Admin/.codex/generated_images/01a14e9b-0cc5-75a1-9122-98581cfe9d6d/exec-286ae0ce-0969-47ec-87d3-1434d71a5321.png",
+    "generatedDimensions": {
+      "width": 841,
+      "height": 1870
+    },
+    "targetDimensions": {
+      "width": 1080,
+      "height": 2400
+    },
+    "dimensionsStatus": "raw output; local normalization pending user authorization",
+    "visualInspection": "passed: reference composition retained, opaque full bleed, no text/watermark/UI/schedule"
+  }
+]

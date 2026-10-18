@@ -1,0 +1,485 @@
+{
+  "backend": "Native Canvas with project font; non-hundred CSS weights approximated for QA",
+  "renders": [
+    {
+      "id": "anime-akatsuki-crimson-assembly",
+      "device": "mobile",
+      "kind": "sample",
+      "path": "output/anime-collection/qa/anime-akatsuki-crimson-assembly-mobile-sample.png",
+      "overflow": false,
+      "scheduleBounds": {
+        "x": 78,
+        "y": 562,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5,
+      "headingShown": true,
+      "sampleClockShown": true
+    },
+    {
+      "id": "anime-akatsuki-crimson-assembly",
+      "device": "mobile",
+      "kind": "dense",
+      "path": "output/anime-collection/qa/anime-akatsuki-crimson-assembly-mobile-dense.png",
+      "overflow": false,
+      "scheduleBounds": {
+        "x": 78,
+        "y": 562,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15,
+      "headingShown": true,
+      "sampleClockShown": false
+    },
+    {
+      "id": "anime-naruto-neon-dojutsu",
+      "device": "mobile",
+      "kind": "sample",
+      "path": "output/anime-collection/qa/anime-naruto-neon-dojutsu-mobile-sample.png",
+      "overflow": false,
+      "scheduleBounds": {
+        "x": 78,
+        "y": 562,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5,
+      "headingShown": true,
+      "sampleClockShown": true
+    },
+    {
+      "id": "anime-naruto-neon-dojutsu",
+      "device": "mobile",
+      "kind": "dense",
+      "path": "output/anime-collection/qa/anime-naruto-neon-dojutsu-mobile-dense.png",
+      "overflow": false,
+      "scheduleBounds": {
+        "x": 78,
+        "y": 562,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15,
+      "headingShown": true,
+      "sampleClockShown": false
+    },
+    {
+      "id": "anime-naruto-ink-quartet",
+      "device": "mobile",
+      "kind": "sample",
+      "path": "output/anime-collection/qa/anime-naruto-ink-quartet-mobile-sample.png",
+      "overflow": false,
+      "scheduleBounds": {
+        "x": 78,
+        "y": 562,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5,
+      "headingShown": true,
+      "sampleClockShown": true
+    },
+    {
+      "id": "anime-naruto-ink-quartet",
+      "device": "mobile",
+      "kind": "dense",
+      "path": "output/anime-collection/qa/anime-naruto-ink-quartet-mobile-dense.png",
+      "overflow": false,
+      "scheduleBounds": {
+        "x": 78,
+        "y": 562,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15,
+      "headingShown": true,
+      "sampleClockShown": false
+    },
+    {
+      "id": "anime-hunter-prismatic-gaze",
+      "device": "mobile",
+      "kind": "sample",
+      "path": "output/anime-collection/qa/anime-hunter-prismatic-gaze-mobile-sample.png",
+      "overflow": false,
+      "scheduleBounds": {
+        "x": 78,
+        "y": 562,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5,
+      "headingShown": true,
+      "sampleClockShown": true
+    },
+    {
+      "id": "anime-hunter-prismatic-gaze",
+      "device": "mobile",
+      "kind": "dense",
+      "path": "output/anime-collection/qa/anime-hunter-prismatic-gaze-mobile-dense.png",
+      "overflow": false,
+      "scheduleBounds": {
+        "x": 78,
+        "y": 562,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15,
+      "headingShown": true,
+      "sampleClockShown": false
+    },
+    {
+      "id": "anime-titan-eye-panels",
+      "device": "mobile",
+      "kind": "sample",
+      "path": "output/anime-collection/qa/anime-titan-eye-panels-mobile-sample.png",
+      "overflow": false,
+      "scheduleBounds": {
+        "x": 78,
+        "y": 562,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5,
+      "headingShown": true,
+      "sampleClockShown": true
+    },
+    {
+      "id": "anime-titan-eye-panels",
+      "device": "mobile",
+      "kind": "dense",
+      "path": "output/anime-collection/qa/anime-titan-eye-panels-mobile-dense.png",
+      "overflow": false,
+      "scheduleBounds": {
+        "x": 78,
+        "y": 562,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15,
+      "headingShown": true,
+      "sampleClockShown": false
+    },
+    {
+      "id": "anime-neon-heroines",
+      "device": "mobile",
+      "kind": "sample",
+      "path": "output/anime-collection/qa/anime-neon-heroines-mobile-sample.png",
+      "overflow": false,
+      "scheduleBounds": {
+        "x": 78,
+        "y": 562,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5,
+      "headingShown": true,
+      "sampleClockShown": true
+    },
+    {
+      "id": "anime-neon-heroines",
+      "device": "mobile",
+      "kind": "dense",
+      "path": "output/anime-collection/qa/anime-neon-heroines-mobile-dense.png",
+      "overflow": false,
+      "scheduleBounds": {
+        "x": 78,
+        "y": 562,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15,
+      "headingShown": true,
+      "sampleClockShown": false
+    },
+    {
+      "id": "anime-hashira-eye-panels",
+      "device": "mobile",
+      "kind": "sample",
+      "path": "output/anime-collection/qa/anime-hashira-eye-panels-mobile-sample.png",
+      "overflow": false,
+      "scheduleBounds": {
+        "x": 78,
+        "y": 562,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5,
+      "headingShown": true,
+      "sampleClockShown": true
+    },
+    {
+      "id": "anime-hashira-eye-panels",
+      "device": "mobile",
+      "kind": "dense",
+      "path": "output/anime-collection/qa/anime-hashira-eye-panels-mobile-dense.png",
+      "overflow": false,
+      "scheduleBounds": {
+        "x": 78,
+        "y": 562,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15,
+      "headingShown": true,
+      "sampleClockShown": false
+    },
+    {
+      "id": "anime-upper-moon-eyes",
+      "device": "mobile",
+      "kind": "sample",
+      "path": "output/anime-collection/qa/anime-upper-moon-eyes-mobile-sample.png",
+      "overflow": false,
+      "scheduleBounds": {
+        "x": 78,
+        "y": 562,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5,
+      "headingShown": true,
+      "sampleClockShown": true
+    },
+    {
+      "id": "anime-upper-moon-eyes",
+      "device": "mobile",
+      "kind": "dense",
+      "path": "output/anime-collection/qa/anime-upper-moon-eyes-mobile-dense.png",
+      "overflow": false,
+      "scheduleBounds": {
+        "x": 78,
+        "y": 562,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15,
+      "headingShown": true,
+      "sampleClockShown": false
+    },
+    {
+      "id": "anime-crimson-sharingan",
+      "device": "mobile",
+      "kind": "sample",
+      "path": "output/anime-collection/qa/anime-crimson-sharingan-mobile-sample.png",
+      "overflow": false,
+      "scheduleBounds": {
+        "x": 78,
+        "y": 562,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5,
+      "headingShown": true,
+      "sampleClockShown": true
+    },
+    {
+      "id": "anime-crimson-sharingan",
+      "device": "mobile",
+      "kind": "dense",
+      "path": "output/anime-collection/qa/anime-crimson-sharingan-mobile-dense.png",
+      "overflow": false,
+      "scheduleBounds": {
+        "x": 78,
+        "y": 562,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15,
+      "headingShown": true,
+      "sampleClockShown": false
+    },
+    {
+      "id": "anime-jujutsu-gaze",
+      "device": "mobile",
+      "kind": "sample",
+      "path": "output/anime-collection/qa/anime-jujutsu-gaze-mobile-sample.png",
+      "overflow": false,
+      "scheduleBounds": {
+        "x": 78,
+        "y": 562,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5,
+      "headingShown": true,
+      "sampleClockShown": true
+    },
+    {
+      "id": "anime-jujutsu-gaze",
+      "device": "mobile",
+      "kind": "dense",
+      "path": "output/anime-collection/qa/anime-jujutsu-gaze-mobile-dense.png",
+      "overflow": false,
+      "scheduleBounds": {
+        "x": 78,
+        "y": 562,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15,
+      "headingShown": true,
+      "sampleClockShown": false
+    },
+    {
+      "id": "anime-blue-rift",
+      "device": "mobile",
+      "kind": "sample",
+      "path": "output/anime-collection/qa/anime-blue-rift-mobile-sample.png",
+      "overflow": false,
+      "scheduleBounds": {
+        "x": 78,
+        "y": 562,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5,
+      "headingShown": true,
+      "sampleClockShown": true
+    },
+    {
+      "id": "anime-blue-rift",
+      "device": "mobile",
+      "kind": "dense",
+      "path": "output/anime-collection/qa/anime-blue-rift-mobile-dense.png",
+      "overflow": false,
+      "scheduleBounds": {
+        "x": 78,
+        "y": 562,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15,
+      "headingShown": true,
+      "sampleClockShown": false
+    },
+    {
+      "id": "anime-torn-manga-eyes",
+      "device": "mobile",
+      "kind": "sample",
+      "path": "output/anime-collection/qa/anime-torn-manga-eyes-mobile-sample.png",
+      "overflow": false,
+      "scheduleBounds": {
+        "x": 78,
+        "y": 562,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5,
+      "headingShown": true,
+      "sampleClockShown": true
+    },
+    {
+      "id": "anime-torn-manga-eyes",
+      "device": "mobile",
+      "kind": "dense",
+      "path": "output/anime-collection/qa/anime-torn-manga-eyes-mobile-dense.png",
+      "overflow": false,
+      "scheduleBounds": {
+        "x": 78,
+        "y": 562,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15,
+      "headingShown": true,
+      "sampleClockShown": false
+    },
+    {
+      "id": "anime-crimson-manga-eye",
+      "device": "mobile",
+      "kind": "sample",
+      "path": "output/anime-collection/qa/anime-crimson-manga-eye-mobile-sample.png",
+      "overflow": false,
+      "scheduleBounds": {
+        "x": 78,
+        "y": 562,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5,
+      "headingShown": true,
+      "sampleClockShown": true
+    },
+    {
+      "id": "anime-crimson-manga-eye",
+      "device": "mobile",
+      "kind": "dense",
+      "path": "output/anime-collection/qa/anime-crimson-manga-eye-mobile-dense.png",
+      "overflow": false,
+      "scheduleBounds": {
+        "x": 78,
+        "y": 562,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15,
+      "headingShown": true,
+      "sampleClockShown": false
+    },
+    {
+      "id": "anime-cyan-spirit-emblems",
+      "device": "mobile",
+      "kind": "sample",
+      "path": "output/anime-collection/qa/anime-cyan-spirit-emblems-mobile-sample.png",
+      "overflow": false,
+      "scheduleBounds": {
+        "x": 78,
+        "y": 562,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5,
+      "headingShown": true,
+      "sampleClockShown": true
+    },
+    {
+      "id": "anime-cyan-spirit-emblems",
+      "device": "mobile",
+      "kind": "dense",
+      "path": "output/anime-collection/qa/anime-cyan-spirit-emblems-mobile-dense.png",
+      "overflow": false,
+      "scheduleBounds": {
+        "x": 78,
+        "y": 562,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15,
+      "headingShown": true,
+      "sampleClockShown": false
+    },
+    {
+      "id": "anime-clover-sword",
+      "device": "mobile",
+      "kind": "sample",
+      "path": "output/anime-collection/qa/anime-clover-sword-mobile-sample.png",
+      "overflow": false,
+      "scheduleBounds": {
+        "x": 78,
+        "y": 562,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5,
+      "headingShown": true,
+      "sampleClockShown": true
+    },
+    {
+      "id": "anime-clover-sword",
+      "device": "mobile",
+      "kind": "dense",
+      "path": "output/anime-collection/qa/anime-clover-sword-mobile-dense.png",
+      "overflow": false,
+      "scheduleBounds": {
+        "x": 78,
+        "y": 562,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15,
+      "headingShown": true,
+      "sampleClockShown": false
+    }
+  ]
+}
