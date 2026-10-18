@@ -27,6 +27,27 @@ export function wallpaperFillOpacity(template) {
   return Number.isFinite(value) ? Math.max(0, Math.min(100, value)) : 100;
 }
 
+export function timelineLineWidth(template) {
+  const value = Number(template.timelineLineWidth ?? 2);
+  return Number.isFinite(value) ? Math.max(0.5, Math.min(6, value)) : 2;
+}
+
+export function wallpaperColorIntensity(template) {
+  const defaultValue = template.containerStyle === 'colored-glass' ? 70 : 60;
+  const value = Number(template.colorIntensity ?? defaultValue);
+  return Number.isFinite(value) ? Math.max(0, Math.min(100, value)) : defaultValue;
+}
+
+export function timelineDayStyle(template, index) {
+  if (template.containerStyle === 'outline') return { ...template, containerFill: false };
+  if (!['colored', 'colored-glass', 'colored-light', 'colored-dark', 'colored-alternating'].includes(template.containerStyle)) return template;
+  const palette = ['#ed839b', '#79b8a0', '#8da8ec', '#e6bb62', '#b697d9'];
+  const color = palette[index % palette.length];
+  const strength = wallpaperColorIntensity(template) / 100;
+  const surface = '#' + [1, 3, 5].map(offset => Math.round(255 + (parseInt(color.slice(offset, offset + 2), 16) - 255) * strength).toString(16).padStart(2, '0')).join('');
+  return { ...template, surface, ...(template.containerFill !== false && !template.customTextColor ? { ink: '#243044', muted: '#243044' } : {}) };
+}
+
 export function wallpaperCornerRadius(template) {
   const layout = template.scheduleLayout || 'stacked';
   const defaultRadius = layout === 'stacked' ? 50 : layout === 'grouped-list' ? 5 : 10;
@@ -43,6 +64,7 @@ export function mascotPosition(template) {
 }
 
 export function galleryPreviewTemplate(template) {
+  if (!template) return template;
   // Samples share one placement so artwork can be compared across designs.
   return { ...template, topMargin: template.collection === 'hunter-x-hunter' && template.family === 'chibi' ? template.topMargin ?? 0 : 0, bottomMargin: 0, leftMargin: 0, rightMargin: 0,
     leftMarginEnabled: false, rightMarginEnabled: false, horizontalPosition: 0,
@@ -54,11 +76,15 @@ export function customizeWallpaperTemplate(template, settings = {}, device = tem
   if (!template) return template;
   const tabletPortrait = device === 'tablet';
   if (!tabletPortrait && (template.collection !== 'genshin' || template.containerStyle === 'glass') && !Object.keys(settings).length) return template;
-  const defaults = { ...(template.collection === 'genshin' ? { containerStyle: 'glass' } : {}), ...(tabletPortrait ? { schedulePosition: 'center', containerStyle: 'glass', tabletBoxSpacing: 80 } : {}) };
+  const defaults = { ...(template.collection === 'genshin' ? { containerStyle: 'glass' } : {}), ...(tabletPortrait ? { schedulePosition: 'center', containerStyle: 'glass', tabletBoxSpacing: (settings.scheduleLayout || template.scheduleLayout || 'stacked') === 'stacked' ? 24 : 80 } : {}) };
   // Device defaults precede the user's explicit appearance choices.
   const customized = { ...template, ...defaults, ...settings };
   if (tabletPortrait) customized.orientation = 'portrait';
-  if (settings.ink) customized.muted = settings.ink;
+  if (settings.ink) {
+    customized.muted = settings.ink;
+    customized.headingInk = settings.ink;
+    customized.customTextColor = true;
+  }
   // Full wallpaper artwork is fixed; animal cutouts and native patterns are separate.
   if (template.image && template.layout !== 'mascot') {
     customized.background = template.background;

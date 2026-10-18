@@ -22,7 +22,7 @@ test('box spacing separates tablet days in either orientation without changing o
       assert.ok(gap(spacious) > gap(after));
     }
   }
-  assert.equal(tabletBoxSpacing({}), 80);
+  assert.equal(tabletBoxSpacing({}), 24);
   assert.equal(tabletBoxSpacing({ tabletBoxSpacing: 240 }), 240);
   assert.equal(tabletBoxSpacing({ tabletBoxSpacing: 999 }), 300);
 });

@@ -3,8 +3,18 @@ import assert from 'node:assert/strict';
 import { drawWallpaper } from '../src/utils/canvasHelpers.js';
 import { templateSchedule, deviceResolutions } from '../src/assets/templates.js';
 import { sanrioTemplates } from '../src/assets/sanrioTemplates.js';
-import { customizeWallpaperTemplate, snapSchedulePosition, wallpaperFontScale, wallpaperCornerRadius } from '../src/utils/wallpaperTheme.js';
+import { customizeWallpaperTemplate, galleryPreviewTemplate, snapSchedulePosition, wallpaperFontScale, wallpaperCornerRadius } from '../src/utils/wallpaperTheme.js';
 import { templateSchema } from '../shared/templateSchema.js';
+
+test('editor defaults match gallery placement while preserving explicit adjustments', () => {
+  const source = { collection: 'sanrio', verticalPosition: -35, horizontalPosition: 20, topMargin: 5, bottomMargin: 2 };
+  for (const device of ['mobile', 'tablet', 'laptop']) {
+    const editor = customizeWallpaperTemplate(galleryPreviewTemplate(source), {}, device);
+    const gallery = customizeWallpaperTemplate(galleryPreviewTemplate(source), {}, device);
+    for (const key of ['verticalPosition', 'horizontalPosition', 'topMargin', 'bottomMargin']) assert.equal(editor[key], gallery[key]);
+    assert.equal(customizeWallpaperTemplate(source, { verticalPosition: 25 }, device).verticalPosition, 25);
+  }
+});
 
 test('font size accepts 70–160 percent and defaults to 100 percent', () => {
   assert.equal(wallpaperFontScale({}), 1);

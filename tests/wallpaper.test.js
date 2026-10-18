@@ -610,5 +610,5 @@ test('sample clock uses the actual preview dimensions and resets the wallpaper t
   assert.match(draws[1].font, /33.6px/);
   const timeWidth = 108 * 4 * 0.52;
   assert.ok(Math.abs(draws[0].x + timeWidth / 2 - 270) < 0.001, 'large time digits are horizontally centered independently of AM');
-  assert.ok(Math.abs(draws[1].x - (draws[0].x + timeWidth + 1200 * 0.012)) < 0.001, 'AM sits beside the centered time');
+  assert.ok(Math.abs(draws[1].x - (draws[0].x + timeWidth + 1200 * 0.001)) < 0.001, 'AM sits beside the centered time');
 });

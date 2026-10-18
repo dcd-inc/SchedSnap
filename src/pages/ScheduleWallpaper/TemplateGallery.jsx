@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { ArrowRight, Download, Heart, LayoutTemplate, X } from 'lucide-react';
+import { ArrowRight, ChevronDown, Download, Heart, X } from 'lucide-react';
 import { deviceResolutions, galleryScheduleFor } from '../../assets/templates.js';
 import useInfiniteGallery from '../../lib/useInfiniteGallery.js';
 import { useCatalogStatus } from '../../lib/catalogContext.js';
@@ -10,6 +10,7 @@ import { templateProperties, trackEvent } from '../../lib/analytics.js';
 import useDesignDownloads from '../../lib/useDesignDownloads.js';
 import CategoryFilters from '../../components/CategoryFilters.jsx';
 import DevicePicker from '../../components/DevicePicker.jsx';
+import { layoutIcons, stylePickerOptions } from '../../components/wallpaperOptionIcons.js';
 import SortPicker from '../../components/SortPicker.jsx';
 import { isNewTemplate } from '../../utils/templateFreshness.js';
 import useDesignLikes from '../../lib/useDesignLikes.js';
@@ -19,7 +20,8 @@ import { searchWallpaperTemplates } from '../../utils/wallpaperSearch.js';
 
 const previewSchedule = galleryScheduleFor;
 
-export default function TemplateGallery({ selectedId, settings = {}, schedule, scheduleTitle = 'Class Schedule', onSelect, category: selectedCategory = 'all', onCategoryChange, device = 'mobile', onDeviceChange, sort = 'likes', onSortChange, previewLayout = 'stacked', onLayoutChange, searchQuery = '', onClearSearch }) {
+export default function TemplateGallery({ selectedId, settings = {}, schedule: enteredSchedule, scheduleTitle = 'Class Schedule', onSelect, category: selectedCategory = 'all', onCategoryChange, device = 'mobile', onDeviceChange, sort = 'likes', onSortChange, previewLayout = 'stacked', onLayoutChange, previewStyle = 'glass', onStyleChange, searchQuery = '', onClearSearch }) {
+  const schedule = enteredSchedule;
   const { templates: wallpaperTemplates, loading: catalogLoading, error } = useCatalogStatus();
   const thumbnailWidth = device === 'laptop' ? 480 : device === 'tablet' ? 384 : 270;
   const designResolution = () => deviceResolutions[device];
@@ -44,9 +46,12 @@ export default function TemplateGallery({ selectedId, settings = {}, schedule, s
   const activeCategoryName = galleryCategories.find((collection) => collection.id === activeCategory)?.name || 'Design';
   return <div>
     <div role="group" aria-label="Filter designs" className="template-filters gallery-filter-row">
+      <div className="gallery-quick-filters">
       <DevicePicker value={device} onChange={onDeviceChange} label="Filter by device" />
       <SortPicker value={sort} onChange={onSortChange} />
-      <DevicePicker value={previewLayout} onChange={onLayoutChange} label="Preview schedule layout" options={scheduleLayoutOptions(device).map(option => [option.value, option.label, LayoutTemplate])} />
+      <DevicePicker value={previewLayout} onChange={onLayoutChange} label="Preview schedule layout" options={scheduleLayoutOptions(device).map(option => [option.value, option.label, layoutIcons[option.value]])} />
+      <DevicePicker value={previewStyle} onChange={onStyleChange} label="Preview style" options={stylePickerOptions} />
+      </div>
       <CategoryFilters categories={galleryCategories} value={activeCategory} controls="template-gallery" onChange={id => {
         if (isSearching && onClearSearch) {
           onClearSearch();
@@ -93,7 +98,7 @@ export default function TemplateGallery({ selectedId, settings = {}, schedule, s
           )}
         </div>
       )}
-      {!loading && visibleTemplates.slice(0, galleryCount).map((original) => { const base = schedule?.classes.length ? original : galleryPreviewTemplate(original); const item = { ...customizeWallpaperTemplate(base, { ...settings[original.id], scheduleLayout: previewLayout }, device), scheduleTitle, device }; const isNew = isNewTemplate(original); const fullResolution = designResolution(item); const thumbnailResolution = { ...fullResolution, width: thumbnailWidth, height: Math.round(thumbnailWidth * fullResolution.height / fullResolution.width) }; const vote = likes[item.id]; const openPreview = () => { setPreview(item); trackEvent('template_previewed', templateProperties(item)); }; return <div key={item.id} className="template-card min-w-0">
+      {!loading && visibleTemplates.slice(0, galleryCount).map((original) => { const base = galleryPreviewTemplate(original); const item = { ...customizeWallpaperTemplate(base, { ...settings[original.id], scheduleLayout: previewLayout, containerStyle: previewStyle }, device), scheduleTitle, device }; const isNew = isNewTemplate(original); const fullResolution = designResolution(item); const thumbnailResolution = { ...fullResolution, width: thumbnailWidth, height: Math.round(thumbnailWidth * fullResolution.height / fullResolution.width) }; const vote = likes[item.id]; const openPreview = () => { setPreview(item); trackEvent('template_previewed', templateProperties(item)); }; return <div key={item.id} className="template-card min-w-0">
         <button type="button" aria-label={`Preview ${item.name}${isNew ? ', New design' : ''}`} aria-haspopup="dialog" onClick={openPreview} className="template-option block w-full rounded-xl text-left">
         <div className={`template-art w-full overflow-hidden rounded-xl ${selectedId === item.id ? 'outline-2 -outline-offset-2 outline-ink' : ''}`}>
           <WallpaperCanvas lazy schedule={schedule?.classes.length ? schedule : previewSchedule(item)} template={item} resolution={thumbnailResolution} className="block h-auto w-full" label={`${item.name} with ${schedule?.classes.length ? 'your' : 'sample'} classes`} />
@@ -112,23 +117,35 @@ export default function TemplateGallery({ selectedId, settings = {}, schedule, s
     {loading && <p role="status" className="sr-only">Loading designs…</p>}
     {!loading && error && <p role="alert">{error}</p>}
     {!loading && visibleTemplates.length > 0 && hasMore && <div ref={sentinel} className="gallery-load-more"><button type="button" className="button-secondary" onClick={loadMore}>Load more designs</button></div>}
-    {preview && <DesignPreview template={preview} schedule={schedule} resolution={designResolution(preview)} onClose={() => setPreview(null)} onSelect={() => onSelect(preview.id)} />}
+    {preview && <DesignPreview template={preview} schedule={schedule} resolution={designResolution(preview)} onClose={() => setPreview(null)} onSelect={() => onSelect(preview.id)} onLayoutChange={layout => { setPreview({ ...customizeWallpaperTemplate(galleryPreviewTemplate(wallpaperTemplates.find(item => item.id === preview.id)), { ...settings[preview.id], scheduleLayout: layout, containerStyle: previewStyle }, device), scheduleTitle, device }); onLayoutChange(layout); }} />}
   </div>;
 }
 
-function DesignPreview({ template, schedule, resolution, onClose, onSelect }) {
+function DesignPreview({ template, schedule, resolution, onClose, onSelect, onLayoutChange }) {
   const dialog = useRef(null);
+  const selectedLayout = scheduleLayoutOptions(resolution.id).find(option => option.value === template.scheduleLayout) || scheduleLayoutOptions(resolution.id)[0];
+  const SelectedLayoutIcon = layoutIcons[selectedLayout.value];
   useEffect(() => {
     const node = dialog.current;
     const trigger = document.activeElement;
     const overflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
+    node.setAttribute('tabindex', '-1');
     node.showModal();
+    node.focus();
     return () => { node.close(); document.body.style.overflow = overflow; if (trigger?.isConnected) trigger.focus(); };
   }, []);
   return <dialog ref={dialog} className="design-preview-dialog" data-device={resolution.id} data-orientation={resolution.width > resolution.height ? 'landscape' : 'portrait'} style={{ '--design-preview-ratio': resolution.width / resolution.height }} aria-labelledby="design-preview-title" onCancel={onClose} onClick={(event) => { if (event.target === event.currentTarget) onClose(); }}>
     <header><h2 id="design-preview-title">{template.name}</h2><button type="button" className="template-modal-control" aria-label="Close design preview" onClick={onClose}><X size={20} aria-hidden="true" /></button></header>
     <div className="design-preview-body"><WallpaperCanvas schedule={schedule?.classes.length ? schedule : previewSchedule(template)} template={template} resolution={resolution} className="block h-auto w-full" label={`${template.name} with ${schedule?.classes.length ? 'your' : 'sample'} classes`} /></div>
-    <footer><button type="button" className="button-primary w-full" onClick={onSelect}>Use this design<ArrowRight size={16} aria-hidden="true" /></button></footer>
+    <footer>
+      <details className="device-picker preview-layout-picker">
+        <summary className="button-secondary" aria-label={`Schedule layout: ${selectedLayout.label}`}><SelectedLayoutIcon aria-hidden="true" /><span>{selectedLayout.label}</span><ChevronDown aria-hidden="true" /></summary>
+        <div className="device-picker-menu" role="group" aria-label="Schedule layout">
+          {scheduleLayoutOptions(resolution.id).map(option => { const Icon = layoutIcons[option.value]; return <button key={option.value} type="button" aria-pressed={template.scheduleLayout === option.value} onClick={event => { onLayoutChange(option.value); event.currentTarget.closest('details').open = false; }}><Icon aria-hidden="true" /><span>{option.label}</span></button>; })}
+        </div>
+      </details>
+      <button type="button" className="button-primary" onClick={onSelect}>Use this design<ArrowRight size={16} aria-hidden="true" /></button>
+    </footer>
   </dialog>;
 }

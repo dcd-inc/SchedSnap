@@ -22,7 +22,7 @@ export function WallpaperCanvas({ schedule, template, resolution, className = ''
       if (cancelled) return;
       try {
         const layout = drawWallpaper(canvas.current, { schedule, template, resolution: renderResolution, backgroundImage });
-        if (showClock && resolution.id !== 'laptop') drawSampleClock(canvas.current, template);
+        if (showClock && resolution.id !== 'laptop') drawSampleClock(canvas.current);
         setReadyKey(renderKey);
         setFailure('');
         onLayout?.({ overflow: layout.overflow, error: '', ready: true });

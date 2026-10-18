@@ -63,4 +63,4 @@ export const dayColumnsPreviewSchedule = {
   warnings: [],
 };
 
-export const galleryScheduleFor = template => template.scheduleLayout === 'day-columns' ? dayColumnsPreviewSchedule : templateSchedule;
+export const galleryScheduleFor = template => ['day-columns', 'weekly'].includes(template.scheduleLayout) ? dayColumnsPreviewSchedule : templateSchedule;

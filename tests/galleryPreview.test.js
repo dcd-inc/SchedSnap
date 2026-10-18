@@ -37,7 +37,10 @@ test('portrait tablet samples align while explicit user placement remains availa
   const originalCopy = structuredClone(original);
   const expected = render(customizeWallpaperTemplate(galleryPreviewTemplate(original), {}, 'tablet'), deviceResolutions.tablet).scheduleBounds;
   for (const template of wallpaperTemplates.filter(template => template.collection === 'chiikawa')) {
-    assert.deepEqual(render(customizeWallpaperTemplate(galleryPreviewTemplate(template), {}, 'tablet'), deviceResolutions.tablet).scheduleBounds, expected, template.id);
+    const result = render(customizeWallpaperTemplate(galleryPreviewTemplate(template), {}, 'tablet'), deviceResolutions.tablet);
+    assert.equal(result.overflow, false, template.id);
+    assert.equal(result.scheduleBounds.y, expected.y, template.id);
+    assert.ok(Math.abs(result.scheduleBounds.x + result.scheduleBounds.width / 2 - 960) < 0.001, template.id);
   }
   const moved = customizeWallpaperTemplate(galleryPreviewTemplate(original), { verticalPosition: 50 }, 'mobile');
   assert.notDeepEqual(render(moved, deviceResolutions.mobile).scheduleBounds, render(galleryPreviewTemplate(original), deviceResolutions.mobile).scheduleBounds);

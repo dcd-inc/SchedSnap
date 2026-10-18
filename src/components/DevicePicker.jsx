@@ -28,7 +28,12 @@ export default function DevicePicker({ value = 'mobile', onChange, label = 'Devi
       document.removeEventListener('keydown', close);
     };
   }, []);
-  return <details ref={pickerRef} className="device-picker">
+  return <details ref={pickerRef} className="device-picker" onToggle={event => {
+    if (!event.currentTarget.open) return;
+    const bounds = event.currentTarget.querySelector('summary').getBoundingClientRect();
+    event.currentTarget.style.setProperty('--picker-menu-top', `${bounds.bottom + 6}px`);
+    event.currentTarget.style.setProperty('--picker-menu-left', `${Math.max(12, Math.min(bounds.left, window.innerWidth - 222))}px`);
+  }}>
     <summary aria-label={`${label}: ${selected[1]}`}><SelectedIcon aria-hidden="true" /><span>{selected[1]}</span><ChevronDown className="device-picker-chevron" aria-hidden="true" /></summary>
     <div className="device-picker-menu" role="menu" aria-label={label}>
       {options.map(([id, name, Icon]) => <button type="button" role="menuitem" key={id} aria-pressed={value === id} onClick={(event) => { onChange(id); event.currentTarget.closest('details').open = false; }}><Icon aria-hidden="true" /><span>{name}</span></button>)}

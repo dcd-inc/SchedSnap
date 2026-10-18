@@ -9,7 +9,7 @@ test('tablets stay portrait, with centered schedules and frosted cards, preservi
     const portrait = customizeWallpaperTemplate(template, { orientation: 'portrait' }, 'tablet');
     assert.equal(portrait.schedulePosition, 'center');
     assert.equal(portrait.containerStyle, 'glass');
-    assert.equal(portrait.tabletBoxSpacing, 80);
+    assert.equal(portrait.tabletBoxSpacing, 24);
     assert.deepEqual(template, original);
     for (const device of ['mobile', 'laptop']) assert.equal(customizeWallpaperTemplate(template, {}, device), template);
     const landscape = customizeWallpaperTemplate(template, { orientation: 'landscape' }, 'tablet');

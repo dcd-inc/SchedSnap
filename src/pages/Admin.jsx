@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import '../wallpaper-fonts.css';
 import { Link, useSearchParams } from 'react-router';
-import { Download, Heart, Plus, LogOut, ArrowLeft, X, Menu, CheckCircle2, Pencil, Eye, EyeOff, Trash2, RotateCcw, MoreVertical, UserRound, LayoutDashboard, PanelsTopLeft, ExternalLink, ChevronLeft, ChevronRight, ChevronDown, Save, Send, Minus, Maximize2, LayoutTemplate, ListFilter } from 'lucide-react';
+import { Download, Heart, Plus, LogOut, ArrowLeft, X, Menu, CheckCircle2, Pencil, Eye, EyeOff, Trash2, RotateCcw, MoreVertical, UserRound, LayoutDashboard, PanelsTopLeft, ExternalLink, ChevronLeft, ChevronRight, ChevronDown, Save, Send, Minus, Maximize2, ListFilter } from 'lucide-react';
 import { deviceResolutions, tabletLandscapeResolution } from '../assets/templates.js';
 import { sampleSchedule } from '../assets/sampleSchedule.js';
 import { designCollections, galleryCategories, matchesGalleryCategory } from '../config/collections.js';
@@ -9,6 +9,7 @@ import CategoryFilters from '../components/CategoryFilters.jsx';
 import SortPicker from '../components/SortPicker.jsx';
 import { sortTemplatesByLikes } from '../utils/sortTemplatesByLikes.js';
 import { scheduleLayoutOptions } from '../utils/canvasHelpers.js';
+import { layoutIcons } from '../components/wallpaperOptionIcons.js';
 import { WallpaperSearchField } from '../components/WallpaperSearch.jsx';
 import { searchWallpaperTemplates } from '../utils/wallpaperSearch.js';
 
@@ -185,7 +186,7 @@ export default function Admin() {
       <div className="template-filters gallery-filter-row" role="group" aria-label="Filter designs">
         <DevicePicker value={device} onChange={setDevice} label="Filter by device" />
         <SortPicker value={sort} onChange={setSort} />
-        <DevicePicker value={previewLayout} onChange={setPreviewLayout} label="Preview schedule layout" options={scheduleLayoutOptions(device).map(option => [option.value, option.label, LayoutTemplate])} />
+        <DevicePicker value={previewLayout} onChange={setPreviewLayout} label="Preview schedule layout" options={scheduleLayoutOptions(device).map(option => [option.value, option.label, layoutIcons[option.value]])} />
         <DevicePicker value={statusFilter} onChange={setStatusFilter} label="Status" options={statusFilters.map(option => [option.id, option.name, statusIcons[option.id]])} />
         <CategoryFilters categories={galleryCategories} value={collection} onChange={setCollection} />
       </div>

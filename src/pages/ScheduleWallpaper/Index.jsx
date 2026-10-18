@@ -14,7 +14,7 @@ import { useTemplates, useCatalogStatus } from '../../lib/catalogContext.js';
 import { scheduleLayoutOptions } from '../../utils/canvasHelpers.js';
 import { sampleSchedule } from '../../assets/sampleSchedule.js';
 import { scheduleSchema } from '../../../shared/scheduleSchema.js';
-import { customizeWallpaperTemplate } from '../../utils/wallpaperTheme.js';
+import { customizeWallpaperTemplate, galleryPreviewTemplate } from '../../utils/wallpaperTheme.js';
 import TemplateGallery from './TemplateGallery.jsx';
 import TemplateWorkspace from './TemplateWorkspace.jsx';
 import WallpaperSearch from '../../components/WallpaperSearch.jsx';
@@ -37,12 +37,17 @@ export default function ScheduleWallpaper() {
     params.set('device', device);
     if (search.get('sort')) params.set('sort', search.get('sort'));
     params.set('layout', previewLayout);
+    params.set('style', previewStyle);
     if (search.get('collection')) params.set('collection', search.get('collection'));
     return `${pathname}?${params}`;
   }
   const [templateSettings, setTemplateSettings] = useState({});
   const resolution = deviceResolutions[device];
   const previewLayout = scheduleLayoutOptions(device).some(option => option.value === search.get('layout')) ? search.get('layout') : 'stacked';
+  const previewStyle = ['glass', 'solid', 'colored', 'colored-glass', 'outline'].includes(search.get('style')) ? search.get('style') : 'glass';
+  function changeStyle(next) {
+    setSearch(previous => { const params = new URLSearchParams(previous); params.set('style', next); return params; });
+  }
   function changeLayout(next) {
     setSearch(previous => { const params = new URLSearchParams(previous); params.set('layout', next); return params; });
   }
@@ -80,9 +85,9 @@ export default function ScheduleWallpaper() {
   const imagePicker = useRef(null);
   const lastTrackedStep = useRef(null);
   const template = useMemo(() => {
-    const preset = customizeWallpaperTemplate(wallpaperTemplates.find((item) => item.id === templateId && (!item.mobileOnly || device === 'mobile')), { ...(search.has('layout') ? { scheduleLayout: previewLayout } : {}), ...templateSettings[templateId] }, device);
+    const preset = customizeWallpaperTemplate(galleryPreviewTemplate(wallpaperTemplates.find((item) => item.id === templateId && (!item.mobileOnly || device === 'mobile'))), { ...(search.has('layout') ? { scheduleLayout: previewLayout } : {}), ...(search.has('style') ? { containerStyle: previewStyle } : {}), ...templateSettings[templateId] }, device);
     return preset ? { ...preset, scheduleTitle, device } : undefined;
-  }, [templateId, templateSettings, scheduleTitle, device, wallpaperTemplates, previewLayout, search]);
+  }, [templateId, templateSettings, scheduleTitle, device, wallpaperTemplates, previewLayout, previewStyle, search]);
   const returnId = search.get('return');
   const previousTemplate = wallpaperTemplates.find((item) => item.id === returnId && (!item.mobileOnly || device === 'mobile'));
   const selectedId = template?.id || previousTemplate?.id;
@@ -150,6 +155,7 @@ export default function ScheduleWallpaper() {
 
   function selectTemplate(id) {
     if (busy) return;
+    setTemplateSettings(previous => ({ ...previous, [id]: { ...previous[id], scheduleLayout: previewLayout, containerStyle: previewStyle } }));
     const selected = wallpaperTemplates.find((item) => item.id === id);
     if (selected) trackEvent('template_selected', templateProperties(selected));
     navigate(devicePath(`${basePath}/${id}${previousTemplate && search.get('step') === 'preview' ? '?step=preview' : ''}`));
@@ -231,7 +237,7 @@ export default function ScheduleWallpaper() {
         {choosingImage && <button type="button" className="button-secondary import-change" aria-label={preparingImage ? 'Preparing image' : 'Change image'} disabled={busy || preparingImage} onClick={() => imagePicker.current?.openPicker()}><ImageUp size={16} aria-hidden="true" />{preparingImage ? 'Preparing…' : <><span className="import-change-desktop">Change image</span><span className="import-change-mobile">Change</span></>}</button>}
       </div>
     </header>
-    {template ? <TemplateWorkspace defaultTemplate={customizeWallpaperTemplate(wallpaperTemplates.find(item => item.id === templateId), {}, device)}
+    {template ? <TemplateWorkspace defaultTemplate={customizeWallpaperTemplate(galleryPreviewTemplate(wallpaperTemplates.find(item => item.id === templateId)), { scheduleLayout: template.scheduleLayout }, device)}
       step={step} onStep={openStep}
       template={template} schedule={schedule} resolution={resolution} onScheduleChange={changeSchedule}
       scheduleSource={scheduleSource} onScheduleSourceChange={setScheduleSource}
@@ -247,7 +253,7 @@ export default function ScheduleWallpaper() {
       onError={(message) => { setError(message); setSuccess(''); }} onAnalyze={analyze} importUsage={importUsage} usageUnavailable={usageUnavailable}
       onSample={() => { setSchedule(structuredClone(sampleSchedule)); setScheduleSource('sample'); trackEvent('sample_schedule_loaded', templateProperties(template)); dismissNotification(); }}
     /> : <>
-      <TemplateGallery previewLayout={previewLayout} onLayoutChange={changeLayout} sort={sort} onSortChange={changeSort} device={device} onDeviceChange={changeDevice} category={search.get('collection')} onCategoryChange={changeCategory} selectedId={selectedId} settings={templateSettings} schedule={schedule} scheduleTitle={scheduleTitle} resolution={resolution} onSelect={selectTemplate} searchQuery={debouncedSearchQuery} onClearSearch={() => setSearchQuery('')} />
+      <TemplateGallery previewStyle={previewStyle} onStyleChange={changeStyle} previewLayout={previewLayout} onLayoutChange={changeLayout} sort={sort} onSortChange={changeSort} device={device} onDeviceChange={changeDevice} category={search.get('collection')} onCategoryChange={changeCategory} selectedId={selectedId} settings={templateSettings} schedule={schedule} scheduleTitle={scheduleTitle} resolution={resolution} onSelect={selectTemplate} searchQuery={debouncedSearchQuery} onClearSearch={() => setSearchQuery('')} />
     </>}
     {step === 'design' && <BackToTop />}
     <Toast message={error || success} kind={error ? 'error' : 'success'} onClose={dismissNotification} />

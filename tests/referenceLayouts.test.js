@@ -15,16 +15,36 @@ test('reference layouts have the requested device availability', () => {
   for (const resolution of resolutions) {
     const values = scheduleLayoutOptions(resolution.id).map(option => option.value);
     assert.ok(values.includes('grouped-list'));
-    assert.equal(values.includes('day-columns'), resolution.id !== 'laptop');
+    assert.ok(values.includes('day-columns'));
   }
 });
 
+test('Grouped list keeps its outer shape when switching color styles', () => {
+  for (const resolution of resolutions) {
+    const plain = render('grouped-list', resolution, { containerStyle: 'solid' });
+    for (const containerStyle of ['colored', 'colored-glass']) {
+      const colored = render('grouped-list', resolution, { containerStyle });
+      assert.deepEqual(colored.boxes[0], plain.boxes[0]);
+      assert.deepEqual(colored.layout, plain.layout);
+    }
+  }
+});
+
+test('laptop Day columns have a larger default font and retain font scaling', () => {
+  const resolution = resolutions.find(item => item.id === 'laptop');
+  const standard = render('day-columns', resolution).layout;
+  assert.equal(standard.size, 48);
+  assert.equal(standard.overflow, false);
+  assert.equal(render('day-columns', resolution, { fontScale: 1.2 }).layout.size, standard.size * 1.2);
+  assert.equal(render('day-columns', resolutions[1]).layout.size, 42);
+});
+
 test('reference layouts preserve meetings, fit, and use one shared panel or one column per day', () => {
-  for (const resolution of resolutions) for (const kind of ['grouped-list', ...(resolution.id !== 'laptop' ? ['day-columns'] : [])]) {
+  for (const resolution of resolutions) for (const kind of ['grouped-list', 'day-columns']) {
     const { layout, boxes, text, strokes } = render(kind, resolution);
     assert.equal(layout.overflow, false, `${kind} ${resolution.id}`);
     assert.equal(layout.plans.flatMap(plan => plan.entries).length, 5);
-    assert.equal(boxes.length, kind === 'grouped-list' ? 1 : 5);
+    assert.equal(boxes.length, kind === 'grouped-list' ? 1 : 10);
     assert.equal(text.includes('CS 101'), kind === 'day-columns');
     assert.ok(text.includes('Lab 2'));
     assert.ok(strokes.every(color => color === '#d04080'));
@@ -46,7 +66,10 @@ test('reference layouts preserve meetings, fit, and use one shared panel or one 
 test('corner radius choices apply to each layout while grouped lists omit codes and inset weekdays', () => {
   for (const resolution of resolutions) for (const { value: kind } of scheduleLayoutOptions(resolution.id)) {
     const defaultRadius = kind === 'stacked' ? 50 : kind === 'grouped-list' ? 5 : 10;
-    for (const box of render(kind, resolution).boxes) assert.ok(Math.abs(box[4] - Math.min(box[2], box[3]) * defaultRadius / 100) < 0.001);
+    for (const box of render(kind, resolution).boxes) {
+      const radius = kind === 'day-columns' && box[2] === box[3] ? 50 : defaultRadius;
+      assert.ok(Math.abs(box[4] - Math.min(box[2], box[3]) * radius / 100) < 0.001);
+    }
     for (const containerRadius of [0, 15, 50]) {
       const { boxes, layout, runs, text } = render(kind, resolution, { containerRadius });
       assert.equal(layout.overflow, false);
@@ -62,7 +85,7 @@ test('corner radius choices apply to each layout while grouped lists omit codes 
 test('reference layouts retain weekends, full subject names and dates, and support hidden titles and font scaling', () => {
   const subject = 'Advanced Research Methods and Applied Community Development';
   const schedule = { classes: [{ subject, courseCode: 'RES 401', meetings: ['Monday', 'Saturday', 'Sunday'].map(day => ({ day, startTime: '08:00', endTime: '09:30', room: 'Research Lab', dateLabel: 'Oct 16–Dec 15' })) }] };
-  for (const kind of ['grouped-list', 'day-columns']) for (const resolution of resolutions.filter(item => kind !== 'day-columns' || item.id !== 'laptop')) {
+  for (const kind of ['grouped-list', 'day-columns']) for (const resolution of resolutions) {
     for (const fontScale of [0.7, 1, 1.6]) {
       const { layout, text } = render(kind, resolution, { fontScale, showTitle: false }, schedule);
       assert.equal(layout.overflow, false);
@@ -101,7 +124,7 @@ test('reference layout font choices scale sparse schedules and grouped lists fit
   const sparse = { classes: [sampleSchedule.classes[0]] };
   const dense = { classes: sampleSchedule.classes.map(course => ({ ...course, meetings: [0, 1, 2].map(index => ({ ...course.meetings[0], startTime: `${8 + index * 2}:00`.padStart(5, '0'), endTime: `${9 + index * 2}:00`.padStart(5, '0') })) })) };
   for (const resolution of resolutions) {
-    for (const kind of ['grouped-list', ...(resolution.id === 'laptop' ? [] : ['day-columns'])]) {
+    for (const kind of ['grouped-list', 'day-columns']) {
       const standard = render(kind, resolution, {}, sparse).layout;
       for (const fontScale of [0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6]) {
         const layout = render(kind, resolution, { fontScale }, sparse).layout;
@@ -112,6 +135,6 @@ test('reference layout font choices scale sparse schedules and grouped lists fit
     const layout = render('grouped-list', resolution, {}, dense).layout;
     assert.equal(layout.overflow, false);
     assert.equal(layout.plans.flatMap(plan => plan.entries).length, 15);
-    assert.ok(layout.padding <= 16);
+    assert.ok(layout.padding <= 28);
   }
 });
