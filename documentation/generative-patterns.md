@@ -1,6 +1,6 @@
 # Original generative prints
 
-200 prints replace the original 24 in the active Patterns & prints collection. The first 100 comprise 35 geometric, 35 organic, and 30 playful designs. A second set adds 35 architectural/textile compositions, 35 botanical prints, and 30 keepsake motifs. All are resolution-independent Canvas geometry, available on mobile (1080 × 2400), tablet (1600 × 2560), and laptop (1920 × 1080). The same renderer powers gallery previews, customization, and PNG downloads.
+300 prints replace the original 24 in the active Patterns & prints collection. The first 100 comprise 35 geometric, 35 organic, and 30 playful designs. A second set adds 35 architectural/textile compositions, 35 botanical prints, and 30 keepsake motifs. A third set adds 35 atelier prints, 35 storybook animals/fruit designs, and 30 sweet daydream motifs. All are resolution-independent Canvas geometry, available on mobile (1080 × 2400), tablet (1600 × 2560), and laptop (1920 × 1080). The same renderer powers gallery previews, customization, and PNG downloads.
 
 ## Provenance
 
@@ -29,6 +29,16 @@ The extended implementation passed 262 tests with no failures or skips, focused 
 The second-batch browser harness also compares all 200 motifs at the same 240 × 240 logical tile size using an identical background, primary color, and accent color. All 200 raster fingerprints were distinct, avoiding palette or density differences as the basis for uniqueness. Evidence includes `output/generative-patterns-wave2/verification.json`, `tests.txt`, `build.txt`, four contact sheets, and representative schedule previews.
 
 These presets are rendered from local code. No Cloudinary artwork upload is needed; deploying the updated code makes the new built-in prints available through the live runtime catalog merge, while saved remote overrides and hidden/draft statuses retain precedence.
+
+## Third-batch direction and validation
+
+The third batch adds 35 atelier compositions, 35 storybook animal/fruit designs, and 30 daydream designs, bringing the active collection to 300 prints. Atelier patterns explore decorative craft and textile rhythms; storybook designs use rounded animals and fruit; daydream designs add cozy desserts, meals, hobby objects, and fairy-tale keepsakes. Spaced compositions, soft shapes, and editable palettes keep the artwork suitable for mobile, tablet, and laptop wallpapers. All 300 presets include searchable keywords and expose the same background, primary color, accent color, pattern size, and opacity controls.
+
+The third-batch test run recorded 264 passing tests and one failure. The failure is an unrelated existing anime-artwork check: `tests/animeTemplates.test.js` cannot read the missing local `public/wallpapers/scenic/anime-akatsuki-crimson-assembly/mobile.png`. This is not a fully passing suite. Focused lint passed, and the production build completed with SEO prerendering. Logs are `output/generative-patterns-wave3/tests.txt` and `build.txt`.
+
+The completed browser audit generated 300 new full-resolution background PNGs: 100 each in `output/generative-patterns-wave3/{mobile,tablet,laptop}`. All five customization properties changed pixels for every new design/device combination, and sample schedules fit without overflow. The browser also compared all 300 motifs at the same 240 × 240 logical tile size with identical colors: every raster fingerprint was unique. Results are in `output/generative-patterns-wave3/verification.json`, with four contact sheets and representative schedule previews alongside it.
+
+The collection retains the incumbent editor controls and shared renderer. These Canvas presets require no Cloudinary artwork upload; deploying the code exposes them through the existing live catalog merge while preserving remote overrides and hidden/draft statuses.
 
 ## Integration boundary
 
