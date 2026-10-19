@@ -11,13 +11,16 @@ export default function ImportSuccessDialog({ provider, classCount, onView, onCl
     const node = dialog.current;
     node.showModal();
     const burst = confetti.create(canvas.current, { resize: true, useWorker: true });
-    const colors = ['#f43f5e', '#fb923c', '#facc15', '#4ade80', '#38bdf8', '#a78bfa', '#f472b6'];
+    const colors = ['#0f172a', '#1e293b', '#334155', '#64748b', '#94a3b8', '#cbd5e1', '#e2e8f0', '#ffffff'];
+    // Burst from the top of the dialog so mobile bottom-sheets do not spray from mid-screen.
+    const rect = node.getBoundingClientRect();
+    const origin = { x: (rect.left + rect.width / 2) / window.innerWidth, y: Math.min(0.9, Math.max(0.06, rect.top / window.innerHeight)) };
     let cancelled = false;
     (async () => {
-      // ponytail: three small bursts over one big one; tune counts here if it feels busy
-      for (let count = 0; count < 3 && !cancelled; count += 1) {
-        await burst({ particleCount: 60, spread: 75, startVelocity: 32, gravity: 0.9, scalar: 0.9, ticks: 190, origin: { x: 0.5, y: 0.4 }, colors, disableForReducedMotion: true });
-        await new Promise(resolve => setTimeout(resolve, 300));
+      // ponytail: five small bursts over one big one; tune counts here if it feels busy
+      for (let count = 0; count < 5 && !cancelled; count += 1) {
+        await burst({ particleCount: 90, spread: 90, startVelocity: 36, gravity: 0.9, scalar: 1, ticks: 210, origin, colors, disableForReducedMotion: true });
+        await new Promise(resolve => setTimeout(resolve, 260));
       }
     })();
     return () => { cancelled = true; burst.reset(); node.close(); };
