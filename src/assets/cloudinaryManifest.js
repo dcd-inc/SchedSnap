@@ -4339,5 +4339,159 @@ export default {
     "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792320748/schedsnap/wallpapers/scenic/anime-torn-manga-eyes/mobile-a69cdf47148a7105.png",
     "width": 1080,
     "height": 2400
+  },
+  "/wallpapers/scenic/capybara-business-suit/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-business-suit/mobile-58b4cd657c76d13d",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792419192/schedsnap/wallpapers/scenic/capybara-business-suit/mobile-58b4cd657c76d13d.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/capybara-bubble-tea-love/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-bubble-tea-love/mobile-f32f0d8f1fa166bd",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792419193/schedsnap/wallpapers/scenic/capybara-bubble-tea-love/mobile-f32f0d8f1fa166bd.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/capybara-big-laugh/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-big-laugh/mobile-294bf0b28993519f",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792419193/schedsnap/wallpapers/scenic/capybara-big-laugh/mobile-294bf0b28993519f.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/capybara-avocado-hood/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-avocado-hood/mobile-1fb906d66ad12c54",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792419193/schedsnap/wallpapers/scenic/capybara-avocado-hood/mobile-1fb906d66ad12c54.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/capybara-cherry-hood/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-cherry-hood/mobile-74ea25b399a25c8a",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792419194/schedsnap/wallpapers/scenic/capybara-cherry-hood/mobile-74ea25b399a25c8a.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/capybara-delivery-hoodie/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-delivery-hoodie/mobile-4bbfb511cd5b82f2",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792419195/schedsnap/wallpapers/scenic/capybara-delivery-hoodie/mobile-4bbfb511cd5b82f2.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/capybara-heart-eyes/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-heart-eyes/mobile-2c3b0b577f77b452",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792419196/schedsnap/wallpapers/scenic/capybara-heart-eyes/mobile-2c3b0b577f77b452.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/capybara-lion-dance/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-lion-dance/mobile-57f01f04ae7c7de1",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792419196/schedsnap/wallpapers/scenic/capybara-lion-dance/mobile-57f01f04ae7c7de1.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/capybara-lily-bouquet/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-lily-bouquet/mobile-4a78270245c85158",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792419198/schedsnap/wallpapers/scenic/capybara-lily-bouquet/mobile-4a78270245c85158.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/capybara-moonlit-roses/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-moonlit-roses/mobile-48e4402f2d041004",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792419201/schedsnap/wallpapers/scenic/capybara-moonlit-roses/mobile-48e4402f2d041004.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/capybara-paper-chaos/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-paper-chaos/mobile-3a105deb4b8bdcb1",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792419205/schedsnap/wallpapers/scenic/capybara-paper-chaos/mobile-3a105deb4b8bdcb1.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/capybara-pink-pear-hood/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-pink-pear-hood/mobile-e3c3f6094af459cb",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792419205/schedsnap/wallpapers/scenic/capybara-pink-pear-hood/mobile-e3c3f6094af459cb.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/capybara-shrug/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-shrug/mobile-73c36c425fab2913",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792419208/schedsnap/wallpapers/scenic/capybara-shrug/mobile-73c36c425fab2913.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/capybara-shy-giggle/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-shy-giggle/mobile-9739c67641db82d4",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792419210/schedsnap/wallpapers/scenic/capybara-shy-giggle/mobile-9739c67641db82d4.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/capybara-skeptical/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-skeptical/mobile-9f04dbddbc71cda9",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792419212/schedsnap/wallpapers/scenic/capybara-skeptical/mobile-9f04dbddbc71cda9.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/capybara-starfruit-hood/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-starfruit-hood/mobile-e78f1da528022d7d",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792419212/schedsnap/wallpapers/scenic/capybara-starfruit-hood/mobile-e78f1da528022d7d.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/capybara-smug/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-smug/mobile-bc55f426ba595672",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792419213/schedsnap/wallpapers/scenic/capybara-smug/mobile-bc55f426ba595672.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/capybara-teary-eyes/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-teary-eyes/mobile-3d2c8935bdbb55d4",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792419215/schedsnap/wallpapers/scenic/capybara-teary-eyes/mobile-3d2c8935bdbb55d4.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/capybara-starry-flowers/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-starry-flowers/mobile-afd1fb77ee2f47b5",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792419216/schedsnap/wallpapers/scenic/capybara-starry-flowers/mobile-afd1fb77ee2f47b5.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/capybara-watermelon-hood/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-watermelon-hood/mobile-e5843ada39ab7092",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792419217/schedsnap/wallpapers/scenic/capybara-watermelon-hood/mobile-e5843ada39ab7092.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/capybara-watermelon-snack/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-watermelon-snack/mobile-26b6352aa0552e98",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792419218/schedsnap/wallpapers/scenic/capybara-watermelon-snack/mobile-26b6352aa0552e98.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/capybara-melon-hood/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-melon-hood/mobile-c118fc8dc24e5cec",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792419229/schedsnap/wallpapers/scenic/capybara-melon-hood/mobile-c118fc8dc24e5cec.png",
+    "width": 1080,
+    "height": 2400
   }
 };
