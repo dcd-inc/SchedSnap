@@ -1,0 +1,53 @@
+{
+  "assets": [
+    {
+      "id": "hxh-plain-chrollo",
+      "sourceUrl": "https://www.ntv.co.jp/hunterhunter/character/images/genei_kuro.jpg",
+      "referencePath": "tmp/hxh-plain/references/chrollo-official-2011.jpg",
+      "referenceInspected": true,
+      "imagegenReferenceInputs": [
+        "C:/Users/QCU/source/repos/SchedSnap/tmp/hxh-plain/references/chrollo-official-2011.jpg",
+        "C:/Users/QCU/source/repos/SchedSnap/public/wallpapers/scenic/hxh-plain-chrollo/mobile.png"
+      ],
+      "prompt": "Correct wallpaper image2 using OFFICIAL2011 anime model sheet image1 as strict visual source of truth. Chrollo Lucilfer must closely match model sheet face and hair: completely slicked straight back compact black hair, evenly combed short contour, NO falling bangs or hanging strands. Large rounded gray eyes, fine brows, softer youthful oval face, exact forehead four-point cross and orb earrings, open dark coat white spiky fur collar. Use simple flat anime cel outlines and two-tone grayscale shading like official reference, not detailed etched manga. Preserve image2 plain smoky plum background and small lower anchored composition, upper60%empty. Character monochrome except tiny teal earrings as alternative accent. One character only. No model sheet text, no labels, no schedule, no frames. Final opaque1080x2400 portrait.",
+      "editPrompt": "Make color-only correction. Preserve EXACT face, slicked hair silhouette, pose, coat shape and placement of this Chrollo wallpaper. Convert character skin, forehead tattoo, coat, fur and gold buttons to true neutral black white grayscale with simple anime cel shading; retain ONLY tiny teal orb earrings color. Preserve muted purple background unchanged. No other changes no text.",
+      "source": "C:/Users/QCU/.codex/generated_images/01a154c2-da37-7ee1-8907-a14cfcab2572/exec-d3c144d9-f786-4220-8d4e-8a2525c561e0.png",
+      "output": "public/wallpapers/scenic/hxh-plain-chrollo/mobile.png",
+      "provider": "built-in image_gen",
+      "qa": "Official2011 character model sheet inspected and supplied as actual image input. Selected output visually inspected for hair/face/outfit improvement. Only RGB conversion and exact dimension resize after generation.",
+      "background": "#61567a"
+    },
+    {
+      "id": "hxh-plain-phinks",
+      "sourceUrl": "https://www.ntv.co.jp/hunterhunter/character/images/genei_fin.jpg",
+      "referencePath": "tmp/hxh-plain/references/phinks-official-2011.jpg",
+      "referenceInspected": true,
+      "imagegenReferenceInputs": [
+        "C:/Users/QCU/source/repos/SchedSnap/tmp/hxh-plain/references/phinks-official-2011.jpg",
+        "C:/Users/QCU/source/repos/SchedSnap/public/wallpapers/scenic/hxh-plain-phinks/mobile.png"
+      ],
+      "prompt": "Correct wallpaper image2 using OFFICIAL2011 anime model sheet image1 as strict source of truth. Phinks Magcub must closely MATCH official model sheet face, not old wallpaper face. His distinctive angry wide small white eyes with tiny dark pupils, horizontal eye shapes, very thin near-invisible eyebrows, long squared rectangular face, long straight angular nose, sharp flat jaw, pronounced forehead vertical furrow, blond hair combed backward into swept ridged blocks with high angular front edge. Reproduce tracksuit from official model sheet, white shoulder/chest yoke and dark zipped center, not generic tracksuit. Simple precise2011 anime cel outlines and flat two-tone grayscale, no etched hatching. Preserve wallpaper muted olive background and lower character position, upper60%empty. Character black white grayscale, tiny amber irises only. Arms folded okay. One character, opaque1080x2400. No text labels schedule logos frame.",
+      "source": "C:/Users/QCU/.codex/generated_images/01a154c2-da37-7ee1-8907-a14cfcab2572/exec-e836b8bf-7cb2-400d-87dd-ee7208372289.png",
+      "output": "public/wallpapers/scenic/hxh-plain-phinks/mobile.png",
+      "provider": "built-in image_gen",
+      "qa": "Official2011 character model sheet inspected and supplied as actual image input. Selected output visually inspected for hair/face/outfit improvement. Only RGB conversion and exact dimension resize after generation.",
+      "background": "#5b614d"
+    },
+    {
+      "id": "hxh-plain-pakunoda",
+      "sourceUrl": "https://www.ntv.co.jp/hunterhunter/character/images/genei_pak.jpg",
+      "referencePath": "tmp/hxh-plain/references/pakunoda-official-2011.jpg",
+      "referenceInspected": true,
+      "imagegenReferenceInputs": [
+        "C:/Users/QCU/source/repos/SchedSnap/tmp/hxh-plain/references/pakunoda-official-2011.jpg",
+        "C:/Users/QCU/source/repos/SchedSnap/public/wallpapers/scenic/hxh-plain-pakunoda/mobile.png"
+      ],
+      "prompt": "Correct wallpaper image2 using OFFICIAL2011 anime model sheet image1 as STRICT visual source of truth for Pakunoda. Reproduce official2011 face and exact hair closely. NOT generic beautiful bob character, not image2 undercut swept-back hair. Pakunoda has sleek blonde CHIN LENGTH rounded bob shaped exactly image1, straight center/near-center part with two long front sections framing face, no shaved side no undercut no short hair behind ear; recognizable long hooked pointed nose, mature angular thin face, narrow half-lidded pinkish eyes, long eyelashes, small full lips. Copy official suit with sharply structured lapels and deep open neckline, one hand on hip. Simple precise anime cel contours and flat grayscale shading, not etched detailed manga. Preserve image2 plain taupe background lower composition upper60%blank. Entire character grayscale including white blonde bob except irises subtle dusty pink. One character only, opaque1080x2400. No model sheet text labels schedule watermark frame.",
+      "source": "C:/Users/QCU/.codex/generated_images/01a154c2-da37-7ee1-8907-a14cfcab2572/exec-4e0c63a1-48bb-463c-8046-50dd4bcd46ed.png",
+      "output": "public/wallpapers/scenic/hxh-plain-pakunoda/mobile.png",
+      "provider": "built-in image_gen",
+      "qa": "Official2011 character model sheet inspected and supplied as actual image input. Selected output visually inspected for hair/face/outfit improvement. Only RGB conversion and exact dimension resize after generation.",
+      "background": "#b0a59d"
+    }
+  ]
+}

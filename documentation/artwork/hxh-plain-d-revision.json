@@ -1,0 +1,85 @@
+{
+  "assets": [
+    {
+      "id": "hxh-plain-franklin",
+      "prompt": "Edit image1 wallpaper, image2 OFFICIAL anime model sheet authoritative identity reference. Replace character drawing to precisely match OFFICIAL2011 anime model sheet facial construction, hair silhouette, costume, flat cel linework. Keep wallpaper composition, identical plain background hue, 1080x2400 portrait9:20, upper52% absolutely blank, character bottom48% only. Character entirely BLACK WHITE GRAYSCALE, ONLY iris tiny color permitted. NO skin tone, NO colored hair, NO colored clothes. Simple authentic anime screenshot-like ink contours and flat2-tone shadows, NOT detailed fanart, NOT shiny polished or smooth gradient shading. No words logos schedule UI. Never reproduce model sheet text or layout. Subject Franklin: use long rectangular face with low downturned mouth and heavy tired eyelids exact reference, uneven horizontal scars across both upper cheeks from ear towards nose, small XXX stitches on mouth corners and chin. Very short dark hair with widowlike hairline. Extremely elongated earlobes and hoops. Overalls bib front over bare chest, open light loose jacket with black collar. Wide powerful shoulders but face must match sheet not generic Frankenstein. Iris muted blue green only.",
+      "referencePaths": [
+        "tmp/hxh-plain/references/ntv-fra.jpg",
+        "public/wallpapers/scenic/hxh-plain-franklin/mobile.png"
+      ],
+      "referenceUrls": [
+        "https://www.ntv.co.jp/hunterhunter/character/genei.html"
+      ],
+      "source": "C:\\Users\\QCU\\.codex\\generated_images\\01a154c9-9ff6-78c2-b721-cfd1a9b7e8ec\\exec-300f75c7-5189-434c-8eec-491f5a43c299.png",
+      "output": "public/wallpapers/scenic/hxh-plain-franklin/mobile.png",
+      "tool": "built-in image_gen",
+      "qa": "Compared to supplied official2011anime model, revised face hair outfit. Monochrome character with iris color only, lower placement, no text. Resize only.",
+      "background": "#5c6668",
+      "dimensions": [
+        1080,
+        2400
+      ]
+    },
+    {
+      "id": "hxh-plain-nobunaga",
+      "prompt": "Edit image1 wallpaper, image2 OFFICIAL anime model sheet authoritative identity reference. Replace character drawing to precisely match OFFICIAL2011 anime model sheet facial construction, hair silhouette, costume, flat cel linework. Keep wallpaper composition, identical plain background hue, 1080x2400 portrait9:20, upper52% absolutely blank, character bottom48% only. Character entirely BLACK WHITE GRAYSCALE, ONLY iris tiny color permitted. NO skin tone, NO colored hair, NO colored clothes. Simple authentic anime screenshot-like ink contours and flat2-tone shadows, NOT detailed fanart, NOT shiny polished or smooth gradient shading. No words logos schedule UI. Never reproduce model sheet text or layout. Subject NOBUNAGA HAZAMA, match official model exactly: long skinny hooked prominent nose, narrow drooping tired eyes, receding close slicked-back hairline, thin sparse mustache and very sparse chin stubble NOT long goatee. Hair gathered to one thin upright cylindrical wrapped topknot ending small splayed spikes. No loose face-framing strands. Gloomy dry expression and very narrow long cheeks, no prettyboy beauty. Official loose dark kimono translated medium-gray monochrome with same-color darker lapel, no white karate uniform. Sword hilt at bottom if visible. Eye iris tiny muted grayblue only. Keep original wallpaper muted plum background.",
+      "additionalPrompt": "Change ONLY the skin/face/ear/neck color of character in this image to neutral white and gray. This is monochrome manga character against SAME muted plum background. The eyes alone may retain tiny blue gray iris. Keep exact facial construction hooked nose droopy eyes sparse scruff hair topknot outfit placement and background absolutely unchanged. No new shading no new objects no text. Output portrait9:20 1080x2400.",
+      "referencePaths": [
+        "tmp/hxh-plain/references/ntv-nob.jpg",
+        "public/wallpapers/scenic/hxh-plain-nobunaga/mobile.png"
+      ],
+      "referenceUrls": [
+        "https://www.ntv.co.jp/hunterhunter/character/genei.html"
+      ],
+      "source": "C:\\Users\\QCU\\.codex\\generated_images\\01a154c9-9ff6-78c2-b721-cfd1a9b7e8ec\\exec-b103bc15-8ad4-4d11-a500-65e9167a9363.png",
+      "output": "public/wallpapers/scenic/hxh-plain-nobunaga/mobile.png",
+      "tool": "built-in image_gen",
+      "qa": "Compared to supplied official2011anime model, revised face hair outfit. Monochrome character with iris color only, lower placement, no text. Resize only.",
+      "background": "#674c64",
+      "dimensions": [
+        1080,
+        2400
+      ]
+    },
+    {
+      "id": "hxh-plain-hisoka",
+      "prompt": "Edit image1 wallpaper, image2 OFFICIAL anime model sheet authoritative identity reference. Replace character drawing to precisely match OFFICIAL2011 anime model sheet facial construction, hair silhouette, costume, flat cel linework. Keep wallpaper composition, identical plain background hue, 1080x2400 portrait9:20, upper52% absolutely blank, character bottom48% only. Character entirely BLACK WHITE GRAYSCALE, ONLY iris tiny color permitted. NO skin tone, NO colored hair, NO colored clothes. Simple authentic anime screenshot-like ink contours and flat2-tone shadows, NOT detailed fanart, NOT shiny polished or smooth gradient shading. No words logos schedule UI. Never reproduce model sheet text or layout. Subject HISOKA MOROW, exactly official model sheet. Long narrow sharp triangular adult face pointed chin, very narrow sly half-lidded eyes, high thin expressive brows, fine sharp nose and thin unsettling smirk. Tall flame-shaped hair swept backward exact model silhouette, represented dark-gray upper locks and black lower hair with minimal white highlights NOT silver hair or finely rendered many strands. Star and teardrop face makeup black monochrome. Sleeveless dark high collar vest with light circular trim and heart diamond chest emblems grayscale as official. May hold blank playing card original pose. Only amber iris colored. Keep original wallpaper muted dusty mauve background.",
+      "referencePaths": [
+        "tmp/hxh-plain/references/ntv-hiso.jpg",
+        "public/wallpapers/scenic/hxh-plain-hisoka/mobile.png"
+      ],
+      "referenceUrls": [
+        "https://www.ntv.co.jp/hunterhunter/character/genei.html"
+      ],
+      "source": "C:\\Users\\QCU\\.codex\\generated_images\\01a154c9-9ff6-78c2-b721-cfd1a9b7e8ec\\exec-44d147dd-7ac8-4640-9bb7-fc4e70795877.png",
+      "output": "public/wallpapers/scenic/hxh-plain-hisoka/mobile.png",
+      "tool": "built-in image_gen",
+      "qa": "Compared to supplied official2011anime model, revised face hair outfit. Monochrome character with iris color only, lower placement, no text. Resize only.",
+      "background": "#86667e",
+      "dimensions": [
+        1080,
+        2400
+      ]
+    },
+    {
+      "id": "hxh-plain-ging",
+      "prompt": "Edit image1 wallpaper. Image2 is actual2011 anime GING FREECSS frame, AUTHORITATIVE face hairstyle outfit reference. Replace generic man with GING exact frame: bold simple flat anime outlines, rounder compact face, larger expressive dark brown eyes with strong sharp brows, straight small angular nose, sparse tiny dotted chin/upperlip stubble, confident faint smile, tall chunky upright black hair spikes above broad wrapped headband, thick light scarf wrapped around shoulders and neck as in actual frame. Do not retain generic handsome narrow face or open jacket. Render whole character neutral BLACK WHITE GRAY ONLY with only tiny BROWN IRIS colored, no skin color, no yellow headband, scarfwhite hairblack. Use exact flat2tone cel shapes like frame, no halftone texture gradients fine hatching detailed fanart. Preserve plain muted olive background of image1, composition mobile1080x2400 portrait9:20, character bottom46% only, top54% completely empty. No landscape no text logos names UI. Character single man.",
+      "referencePaths": [
+        "public/wallpapers/scenic/hxh-plain-ging/mobile.png",
+        "tmp/hxh-plain/references/ging-anime.jpg"
+      ],
+      "referenceUrls": [
+        "https://www.looper.com/img/gallery/15-most-powerful-hunter-x-hunter-characters-ranked/7-ging-1646936526.jpg"
+      ],
+      "source": "C:\\Users\\QCU\\.codex\\generated_images\\01a154c9-9ff6-78c2-b721-cfd1a9b7e8ec\\exec-d89d6a5b-f106-46de-87b7-a64c7025fb49.png",
+      "output": "public/wallpapers/scenic/hxh-plain-ging/mobile.png",
+      "tool": "built-in image_gen",
+      "qa": "Actual anime frame supplied and inspected, matches compact face bold eyes upright hair headband scarf, monochrome except brown iris.",
+      "background": "#878c68",
+      "dimensions": [
+        1080,
+        2400
+      ]
+    }
+  ]
+}

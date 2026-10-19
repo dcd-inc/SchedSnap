@@ -1,0 +1,389 @@
+{
+  "errors": [],
+  "results": [
+    {
+      "id": "hxh-plain-gon-killua",
+      "kind": "sample",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 270.00000000000006,
+        "width": 924,
+        "height": 914
+      },
+      "entries": 5
+    },
+    {
+      "id": "hxh-plain-gon-killua",
+      "kind": "dense",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 270.00000000000006,
+        "width": 924,
+        "height": 920.8679999999999
+      },
+      "entries": 10
+    },
+    {
+      "id": "hxh-plain-chrollo",
+      "kind": "sample",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 270.00000000000006,
+        "width": 924,
+        "height": 914
+      },
+      "entries": 5
+    },
+    {
+      "id": "hxh-plain-chrollo",
+      "kind": "dense",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 270.00000000000006,
+        "width": 924,
+        "height": 920.8679999999999
+      },
+      "entries": 10
+    },
+    {
+      "id": "hxh-plain-hisoka",
+      "kind": "sample",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 235,
+        "width": 924,
+        "height": 914
+      },
+      "entries": 5
+    },
+    {
+      "id": "hxh-plain-hisoka",
+      "kind": "dense",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 235,
+        "width": 924,
+        "height": 920.8679999999999
+      },
+      "entries": 10
+    },
+    {
+      "id": "hxh-plain-machi",
+      "kind": "sample",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 130,
+        "width": 924,
+        "height": 914
+      },
+      "entries": 5
+    },
+    {
+      "id": "hxh-plain-machi",
+      "kind": "dense",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 130,
+        "width": 924,
+        "height": 920.8679999999999
+      },
+      "entries": 10
+    },
+    {
+      "id": "hxh-plain-nobunaga",
+      "kind": "sample",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 235,
+        "width": 924,
+        "height": 914
+      },
+      "entries": 5
+    },
+    {
+      "id": "hxh-plain-nobunaga",
+      "kind": "dense",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 235,
+        "width": 924,
+        "height": 920.8679999999999
+      },
+      "entries": 10
+    },
+    {
+      "id": "hxh-plain-feitan",
+      "kind": "sample",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 270.00000000000006,
+        "width": 924,
+        "height": 914
+      },
+      "entries": 5
+    },
+    {
+      "id": "hxh-plain-feitan",
+      "kind": "dense",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 270.00000000000006,
+        "width": 924,
+        "height": 920.8679999999999
+      },
+      "entries": 10
+    },
+    {
+      "id": "hxh-plain-phinks",
+      "kind": "sample",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 270.00000000000006,
+        "width": 924,
+        "height": 914
+      },
+      "entries": 5
+    },
+    {
+      "id": "hxh-plain-phinks",
+      "kind": "dense",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 270.00000000000006,
+        "width": 924,
+        "height": 920.8679999999999
+      },
+      "entries": 10
+    },
+    {
+      "id": "hxh-plain-franklin",
+      "kind": "sample",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 270.00000000000006,
+        "width": 924,
+        "height": 914
+      },
+      "entries": 5
+    },
+    {
+      "id": "hxh-plain-franklin",
+      "kind": "dense",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 270.00000000000006,
+        "width": 924,
+        "height": 920.8679999999999
+      },
+      "entries": 10
+    },
+    {
+      "id": "hxh-plain-shalnark",
+      "kind": "sample",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 270.00000000000006,
+        "width": 924,
+        "height": 914
+      },
+      "entries": 5
+    },
+    {
+      "id": "hxh-plain-shalnark",
+      "kind": "dense",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 270.00000000000006,
+        "width": 924,
+        "height": 920.8679999999999
+      },
+      "entries": 10
+    },
+    {
+      "id": "hxh-plain-shizuku",
+      "kind": "sample",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 270.00000000000006,
+        "width": 924,
+        "height": 914
+      },
+      "entries": 5
+    },
+    {
+      "id": "hxh-plain-shizuku",
+      "kind": "dense",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 270.00000000000006,
+        "width": 924,
+        "height": 920.8679999999999
+      },
+      "entries": 10
+    },
+    {
+      "id": "hxh-plain-pakunoda",
+      "kind": "sample",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 60,
+        "width": 924,
+        "height": 914
+      },
+      "entries": 5
+    },
+    {
+      "id": "hxh-plain-pakunoda",
+      "kind": "dense",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 60,
+        "width": 924,
+        "height": 920.8679999999999
+      },
+      "entries": 10
+    },
+    {
+      "id": "hxh-plain-bonolenov",
+      "kind": "sample",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 270.00000000000006,
+        "width": 924,
+        "height": 914
+      },
+      "entries": 5
+    },
+    {
+      "id": "hxh-plain-bonolenov",
+      "kind": "dense",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 270.00000000000006,
+        "width": 924,
+        "height": 920.8679999999999
+      },
+      "entries": 10
+    },
+    {
+      "id": "hxh-plain-uvogin",
+      "kind": "sample",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 200,
+        "width": 924,
+        "height": 914
+      },
+      "entries": 5
+    },
+    {
+      "id": "hxh-plain-uvogin",
+      "kind": "dense",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 200,
+        "width": 924,
+        "height": 920.8679999999999
+      },
+      "entries": 10
+    },
+    {
+      "id": "hxh-plain-kortopi",
+      "kind": "sample",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 270.00000000000006,
+        "width": 924,
+        "height": 914
+      },
+      "entries": 5
+    },
+    {
+      "id": "hxh-plain-kortopi",
+      "kind": "dense",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 270.00000000000006,
+        "width": 924,
+        "height": 920.8679999999999
+      },
+      "entries": 10
+    },
+    {
+      "id": "hxh-plain-illumi",
+      "kind": "sample",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 200,
+        "width": 924,
+        "height": 914
+      },
+      "entries": 5
+    },
+    {
+      "id": "hxh-plain-illumi",
+      "kind": "dense",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 200,
+        "width": 924,
+        "height": 920.8679999999999
+      },
+      "entries": 10
+    },
+    {
+      "id": "hxh-plain-ging",
+      "kind": "sample",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 130,
+        "width": 924,
+        "height": 914
+      },
+      "entries": 5
+    },
+    {
+      "id": "hxh-plain-ging",
+      "kind": "dense",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 130,
+        "width": 924,
+        "height": 920.8679999999999
+      },
+      "entries": 10
+    }
+  ]
+}

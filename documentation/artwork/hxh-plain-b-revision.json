@@ -1,0 +1,29 @@
+{
+  "generator": "built-in image_gen reference-based editing",
+  "assets": [
+    {
+      "id": "hxh-plain-uvogin",
+      "prompt": "Correct the first image wallpaper using second image actual2011 anime reference. Keep portrait1080x2400, same plain terracotta background and compact bottom placement with upper60% empty. Replace inaccurate character outfit and hyperdetailed anatomy: Uvogin must wear simple WHITE TANK TOP exactly like reference2, NO fur vest NO bare torso. Copy reference2 exact facial identity, wild spiked hair, sideburns, broad grin and natural2011 anime proportions. Simple authentic anime cel contours converted to monochrome black white manga, restrained halftone, tiny amber eyes only color. Upperarea no content, no text or logos. Artwork occupies bottom40%, not tall.",
+      "referenceUrl": "https://static.fandomspot.com/images/09/20082/06-uvogin-hunter-x-hunter-anime.jpg",
+      "referenceFile": "tmp/hxh-plain/references/uvogin-2011.jpg",
+      "generatedSource": "Generated images are saved to C:\\Users\\QCU\\.codex\\generated_images\\01a154c2-fcf9-7cd3-8475-64bfcf0c1c21 as C:\\Users\\QCU\\.codex\\generated_images\\01a154c2-fcf9-7cd3-8475-64bfcf0c1c21\\exec-1e1f7906-6600-4b55-a9ee-0f219f2f54e4.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "qa": "Inspected actualreference and generated result. Specific clothing corrections visibly present. Exact dimension normalization only."
+    },
+    {
+      "id": "hxh-plain-feitan",
+      "prompt": "Correct image1 wallpaper using actual official2011 anime model sheet image2. Preserve1080x2400, same plain slateblue background and bottomanchored composition with upper60% empty. Feitan outfit MUST copy actualreference: closefitting LONGSLEEVED DARK TUNIC with V-SHAPED fringed scarf/collar covering mouth, triangular chevron V reaching down chest, sawtooth gray trim around V. Small canonical white skull and magenta wing motifs at upper scarf, NOT oversized generic skull, NOT Punisher symbol, NOT coat lapels or crossbody cloak. Faithfully copy actualmodel sheet face eyebrows short choppy bob and eye shapes. Simple2011 anime cel contours converted monochrome, white skin and blackfabric restrained halftone, tiny gold eyes only colored; small canonicalsymbol may remain monochrome. Character bottom40% only. No text logos scenery or additional characters.",
+      "referenceUrl": "https://static.zerochan.net/Feitan.Portor.full.2188906.jpg",
+      "referenceFile": "tmp/hxh-plain/references/feitan-2011.jpg",
+      "generatedSource": "Generated images are saved to C:\\Users\\QCU\\.codex\\generated_images\\01a154c2-fcf9-7cd3-8475-64bfcf0c1c21 as C:\\Users\\QCU\\.codex\\generated_images\\01a154c2-fcf9-7cd3-8475-64bfcf0c1c21\\exec-766baaf9-e5ed-4917-9920-18f26a814324.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "qa": "Inspected actualreference and generated result. Specific clothing corrections visibly present. Exact dimension normalization only."
+    },
+    {
+      "id": "hxh-plain-illumi",
+      "prompt": "Correct first wallpaper using actual2011 anime Illumi model second image for authenticface and clothes. Keep portrait1080x2400, same plain mutedteal background and lowposition, upper60% completelyempty. Faithfully copy canonical Illumi face huge emotionless blackeyes, thin flat nose tiny mouth, straight longblackhair slickedback with high forehead, exact2011 anime proportions. Correct clothes to actualmodel: short puffedsleeved bolero with standcollar and double rows of round jewelbuttons, centerlight panel with black triangular zigzag edging. Render whole character monochrome blackwhite animecel ink except ALL visible round buttons each uniformly emeraldteal green, every collarbutton chestbutton lowerbutton colored, no graybuttons. Do not color skin fabric or eyes. Preserve coherent bright emeraldteal button color matching existing singlecolored button. Simple faithful anime outlines, restrained halftone, no elaborate realistic texture. Character bottom40% only, no text scenery logos.",
+      "referenceUrl": "https://neoapo.com/images/character/42281/7901775ef9c0710a65fa750e239f1067.webp",
+      "referenceFile": "tmp/hxh-plain/references/illumi-2011.webp",
+      "generatedSource": "Generated images are saved to C:\\Users\\QCU\\.codex\\generated_images\\01a154c2-fcf9-7cd3-8475-64bfcf0c1c21 as C:\\Users\\QCU\\.codex\\generated_images\\01a154c2-fcf9-7cd3-8475-64bfcf0c1c21\\exec-ac44e72a-3808-4620-b12d-7cfed727549b.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "qa": "Inspected actualreference and generated result. Specific clothing corrections visibly present. Exact dimension normalization only."
+    }
+  ]
+}

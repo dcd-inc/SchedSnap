@@ -1,0 +1,28 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Hunter × Hunter plain collection review</title>
+<style>body{margin:24px;background:#e7e9ed;font:16px system-ui;color:#172033}section{display:grid;grid-template-columns:repeat(4,270px);gap:20px}figure{margin:0}canvas{width:270px;height:600px}figcaption{padding:8px 0}</style>
+<h1>Hunter × Hunter · plain collection</h1><section id="previews"></section>
+<script type="module">
+import '/src/styles.css';
+import { hunterTemplates } from '/src/assets/hunterTemplates.js';
+import { drawWallpaper } from '/src/utils/canvasHelpers.js';
+import { templateSchedule } from '/src/assets/templates.js';
+import { sampleSchedule } from '/src/assets/sampleSchedule.js';
+import { prepareWallpaperAssets } from '/src/utils/wallpaperAssets.js';
+import { galleryPreviewTemplate } from '/src/utils/wallpaperTheme.js';
+await Promise.all([document.fonts.load('600 40px "DM Sans Variable"'),document.fonts.ready]);
+const templates=hunterTemplates.filter(t=>t.id.startsWith('hxh-plain-'));
+const dense={classes:sampleSchedule.classes.map(course=>({...course,meetings:[...course.meetings,{...course.meetings[0],startTime:'16:00',endTime:'17:30'}]}))};
+window.qa=[];
+for(const t of templates){
+ const resolution={id:'mobile',width:1080,height:2400};
+ const image=await prepareWallpaperAssets(t,resolution);
+ for(const [kind,schedule] of [['sample',templateSchedule],['dense',dense]]){
+  const figure=document.createElement('figure'),canvas=document.createElement('canvas'),caption=document.createElement('figcaption');
+  caption.textContent=`${t.name} · ${kind}`;figure.append(canvas,caption);document.querySelector('section').append(figure);
+  const preset=galleryPreviewTemplate(t);
+  const result=drawWallpaper(canvas,{template:preset,schedule,resolution,backgroundImage:image});
+  window.qa.push({id:t.id,kind,overflow:result.overflow,bounds:result.scheduleBounds,entries:result.plans.flatMap(p=>p.entries).length});
+ }
+}
+window.reviewReady=true;
+</script></html>

@@ -1,0 +1,62 @@
+{
+  "assets": [
+    {
+      "id": "hxh-plain-gon-killua",
+      "name": "Gon & Killua",
+      "source": "C:/Users/QCU/.codex/generated_images/01a154c2-da37-7ee1-8907-a14cfcab2572/exec-74214795-77b3-4656-aa2a-d8c8ba791bd3.png",
+      "prompt": "Create ONE finished opaque mobile wallpaper 1080x2400 (9:20). Reference 1 is the Gon and Killua identity/pose reference; reference 2 only manga ink style and plain background composition (IGNORE ALL text). Preserve reference1 smiles, Gon right laughing eyes shut and tall black spikes, Killua left smiling with messy white hair and blue eyes, white short sleeves over dark high neck layers, same friendly seated pose. Change rendering to crisp black and white manga ink, delicate halftone shadows, only Killua's irises blue. Plain uniform muted slate blue background #456485. CRITICAL: upper 60 percent of image absolutely blank solid background; shrink and place both characters together only in bottom 40 percent, topmost hair at y=1450 or lower, bottom crop at legs. Faces clearly recognizable. No birds clouds scenery, no schedule, no text, no logo watermark border frame. Composition artwork only, full bleed, clean collectible manga wallpaper.",
+      "editPrompt": "Edit this wallpaper: preserve Gon Killua EXACT faces smiles hair outfits pose and monochrome blue eyes, preserve blue background. SCALE THE TWO CHARACTERS MUCH SMALLER so they occupy bottom 35% only. Entire upper TWO THIRDS must be empty blue, topmost Gon hair at 65% image height. They should look like a small illustration at the foot of a mostly empty phone wallpaper. Keep bottom cropping naturally. 1080x2400 9:20 opaque. No text.",
+      "output": "public/wallpapers/scenic/hxh-plain-gon-killua/mobile.png",
+      "provider": "built-in image_gen",
+      "referenceSources": [
+        "https://www.ntv.co.jp/hunterhunter/character/",
+        "https://hunterhunter-ni.bushiroad.com/character/chrollo/"
+      ],
+      "qa": "Visually inspected: recognizable 2011 anime identities, selective colored accents, plain backgrounds, no text. Characters occupy roughly the lower 40-49%. Dimension normalization only outside image_gen.",
+      "background": "#356096"
+    },
+    {
+      "id": "hxh-plain-chrollo",
+      "name": "Chrollo Lucilfer",
+      "source": "C:/Users/QCU/.codex/generated_images/01a154c2-da37-7ee1-8907-a14cfcab2572/exec-b66fc15e-6ff2-4da2-afd4-318ccf9f42c1.png",
+      "prompt": "Generate a 1080x2400 mobile plain wallpaper. TOP TWO THIRDS COMPLETELY EMPTY SOLID smoky plum #676278. Chrollo Lucilfer from Hunter x Hunter2011 anime only in BOTTOM THIRD, small waist-up portrait, topmost hair starts at 65% height. Faithful2011 anime model face, simple clean anime lineart, straight narrow eyes with dark gray irises, slicked black hair with loose central strands, canonical simple black forehead cross, round orb earrings, black open coat with white fur collar and bare chest cross straps, holding book low. Black and white character rendering, sparse halftone only, no realistic etched lines, no generic handsome face. Character 30% total canvas height. Upper area entirely blank, not a close-up portrait. Opaque muted plain background. No text schedule UI watermarks logos scenery.",
+      "output": "public/wallpapers/scenic/hxh-plain-chrollo/mobile.png",
+      "provider": "built-in image_gen",
+      "referenceSources": [
+        "https://www.ntv.co.jp/hunterhunter/character/",
+        "https://hunterhunter-ni.bushiroad.com/character/chrollo/"
+      ],
+      "qa": "Visually inspected: recognizable 2011 anime identities, selective colored accents, plain backgrounds, no text. Characters occupy roughly the lower 40-49%. Dimension normalization only outside image_gen.",
+      "background": "#645d71"
+    },
+    {
+      "id": "hxh-plain-hisoka",
+      "name": "Hisoka Morow",
+      "source": "C:/Users/QCU/.codex/generated_images/01a154c2-da37-7ee1-8907-a14cfcab2572/exec-4232cff4-82a0-4ef4-9dd2-a6b57614e9d4.png",
+      "prompt": "Generate a 1080x2400 mobile plain wallpaper. TOP TWO THIRDS COMPLETELY EMPTY SOLID dusty mauve #8A7283. Hisoka Morow from Hunter x Hunter2011 anime only in BOTTOM THIRD, small waist-up portrait, topmost hair starts at65% height. Faithful2011 anime model face and proportions: angular triangular face, sharply upswept smooth sculpted tall hair, fine pointed eyebrows, narrow amber eyes, small pink star one cheek teardrop opposite, high neck sleeveless magician top with heart and diamond motifs, one hand holding blank card low near chest, sly smile. Simple clean anime lineart in monochrome, sparse halftone only, no etched realistic lines, only eyes amber and tiny pink cheek symbols. Character30% total canvas height. Upper area entirely blank, not a close-up portrait. Opaque muted plain background. No text schedule UI watermarks logos scenery.",
+      "editPrompt": "Edit this Hisoka wallpaper. Preserve exact anime face hair shape smile card outfit and composition. Convert ALL character colors to strict black white grayscale manga ink except amber eyes and tiny pink cheek star/teardrop. Hair grayscale, outfit grayscale, heart/diamond grayscale. Keep mauve background unchanged. Reduce character slightly to keep topmost hair at60% total image height. No text.",
+      "output": "public/wallpapers/scenic/hxh-plain-hisoka/mobile.png",
+      "provider": "built-in image_gen",
+      "referenceSources": [
+        "https://www.ntv.co.jp/hunterhunter/character/",
+        "https://hunterhunter-ni.bushiroad.com/character/chrollo/"
+      ],
+      "qa": "Visually inspected: recognizable 2011 anime identities, selective colored accents, plain backgrounds, no text. Characters occupy roughly the lower 40-49%. Dimension normalization only outside image_gen.",
+      "background": "#866a7d"
+    },
+    {
+      "id": "hxh-plain-machi",
+      "name": "Machi Komacine",
+      "source": "C:/Users/QCU/.codex/generated_images/01a154c2-da37-7ee1-8907-a14cfcab2572/exec-b6f584b6-4f81-4b22-a90f-3a3c7988f951.png",
+      "prompt": "Generate 1080x2400 mobile plain wallpaper. TOP TWO THIRDS COMPLETELY EMPTY SOLID dusty rose #967E89. Small Machi Komacine from Hunter x Hunter2011 anime waist-up only in BOTTOM THIRD with top of hair at65%height. Faithful2011 anime model: stern triangular face slanted blue gray eyes, high messy spiky ponytail and pointed bangs, sleeveless high neck martial ninja tunic dark obi belt, fingerless gloves, hands low with tiny thread. Canon2011 anime face proportions distinctive silhouette not generic pretty anime. Render entire character BLACK WHITE GRAYSCALE, hair WHITE with gray shading, only irises blue. Simple confident black lineart sparse halftone, no realistic etching. Small character30%canvasheight; upper area blank. No text schedule UI watermark logos scenery.",
+      "output": "public/wallpapers/scenic/hxh-plain-machi/mobile.png",
+      "provider": "built-in image_gen",
+      "referenceSources": [
+        "https://www.ntv.co.jp/hunterhunter/character/",
+        "https://hunterhunter-ni.bushiroad.com/character/chrollo/"
+      ],
+      "qa": "Visually inspected: recognizable 2011 anime identities, selective colored accents, plain backgrounds, no text. Characters occupy roughly the lower 40-49%. Dimension normalization only outside image_gen.",
+      "background": "#937682"
+    }
+  ]
+}

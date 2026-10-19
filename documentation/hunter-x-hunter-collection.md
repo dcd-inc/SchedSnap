@@ -1,5 +1,7 @@
 # Hunter × Hunter mobile collection
 
+2026-10-20: 16 additional plain character wallpapers are registered locally, bringing `hunterTemplates` to 31. The revised collection uses actual anime references after user fidelity feedback. See `documentation/hunter-x-hunter-plain-collection.md` for its roster, provenance, previews and delivery status. The 15-design release described below is preserved.
+
 Latest selection (2026-10-17): the four chibis use the plain textured source set from the user's Leorio screenshot, with centered tinted schedule cards below each character. This supersedes the chibi motif descriptions below. See `documentation/hxh-chibi-plain-layout.md` for sources, layout verification and pending upload status. The website remains local; no live catalog publication or deployment is authorized.
 
 15 opaque PNG wallpapers, each 1080 × 2400. Built-in imagegen generated each asset individually. Four subagents contributed; the environment allowed three child agents to run concurrently.

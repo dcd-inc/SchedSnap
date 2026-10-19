@@ -1,0 +1,68 @@
+{
+  "assets": [
+    {
+      "id": "hxh-plain-uvogin",
+      "prompt": "Use case: illustration-story. Create one finished mobile wallpaper exact 1080x2400 portrait aspect9:20 opaque. This is part of matching Hunter x Hunter plain backgrounds collection. Character must precisely match canonical 2011 Hunter x Hunter anime face, hairstyle, outfit and proportions, NOT a generic anime person. Crisp professional anime contours rendered black white gray ink, subtle manga halftone shadows. Entire upper60% canvas absolutely empty flat muted background, no pattern gradient decoration objects. Head top starts at62% canvas height, waist-up character occupies only bottom38%, shoulder edges may bleed bottom corners. Character only monochrome, except tiny chosen eye/garment accent. No text words letters logos symbols UI schedule borders watermark. Subject: UVOGIN, Phantom Troupe giant from2011 anime: massive muscular adult man, wild huge shaggy spiky dark mane, thick eyebrows, sharp confident eyes, rugged sideburns, broad square jaw, fierce toothy grin, sleeveless animal-fur vest with thick fur shoulder collar exposing powerful upper arms. His face and fur silhouette instantly recognizable. Pose arms relaxed, slight three-quarter turn. Background flat muted warm burnt clay #927567; tiny brown amber eyes only colored. Keep tallest hair below60% height, do not make a full-frame portrait.",
+      "source": "C:\\Users\\QCU\\.codex\\generated_images\\01a154c9-9ff6-78c2-b721-cfd1a9b7e8ec\\exec-6c84a89c-1931-43d7-bdc8-3de828311bdb.png",
+      "output": "public/wallpapers/scenic/hxh-plain-uvogin/mobile.png",
+      "tool": "built-in image_gen",
+      "referenceUrls": [
+        "https://www.ntv.co.jp/hunterhunter/character/genei.html"
+      ],
+      "qa": "Visually inspected: identifiable anime character, monochrome ink with tiny accent, no text or schedule, generous blank upper background. Generated native 841x1870, resized to1080x2400 only.",
+      "background": "#8f6d5d",
+      "dimensions": [
+        1080,
+        2400
+      ]
+    },
+    {
+      "id": "hxh-plain-kortopi",
+      "prompt": "Use case: illustration-story. Create one finished mobile wallpaper exact 1080x2400 portrait aspect9:20 opaque. This is part of matching Hunter x Hunter plain backgrounds collection. Character must precisely match canonical 2011 Hunter x Hunter anime face, hairstyle, outfit and proportions, NOT a generic anime person. Crisp professional anime contours rendered black white gray ink, subtle manga halftone shadows. Entire upper60% canvas absolutely empty flat muted background, no pattern gradient decoration objects. Head top starts at62% canvas height, waist-up character occupies only bottom38%, shoulder edges may bleed bottom corners. Character only monochrome, except tiny chosen eye/garment accent. No text words letters logos symbols UI schedule borders watermark. Subject: KORTOPI from2011 anime Phantom Troupe, extremely short small adult, very long shaggy pale silver gray hair all over face and down body, one single round LEFT EYE peeking out through hair on image right, rest face hidden. Thin arms, plain loose long sleeve robe. Faithful enigmatic anime design, NOT giant muscular not monstrous. Waist-up small silhouette at bottom center covering about65% width. Hair crown starts65% down. Background flat muted sage gray #89978e. One exposed iris tiny muted aqua accent, all hair white gray linework.",
+      "source": "C:\\Users\\QCU\\.codex\\generated_images\\01a154c9-9ff6-78c2-b721-cfd1a9b7e8ec\\exec-7a72bee4-8433-45da-9875-410dfc8df694.png",
+      "output": "public/wallpapers/scenic/hxh-plain-kortopi/mobile.png",
+      "tool": "built-in image_gen",
+      "referenceUrls": [
+        "https://www.ntv.co.jp/hunterhunter/character/genei.html"
+      ],
+      "qa": "Visually inspected: identifiable anime character, monochrome ink with tiny accent, no text or schedule, generous blank upper background. Generated native 841x1870, resized to1080x2400 only.",
+      "background": "#87928a",
+      "dimensions": [
+        1080,
+        2400
+      ]
+    },
+    {
+      "id": "hxh-plain-illumi",
+      "prompt": "Use case: illustration-story. Create one finished mobile wallpaper exact 1080x2400 portrait aspect9:20 opaque. This is part of matching Hunter x Hunter plain backgrounds collection. Character must precisely match canonical 2011 Hunter x Hunter anime face, hairstyle, outfit and proportions, NOT a generic anime person. Crisp professional anime contours rendered black white gray ink, subtle manga halftone shadows. Entire upper60% canvas absolutely empty flat muted background, no pattern gradient decoration objects. Head top starts at62% canvas height, waist-up character occupies only bottom38%, shoulder edges may bleed bottom corners. Character only monochrome, except tiny chosen eye/garment accent. No text words letters logos symbols UI schedule borders watermark. Subject: ILLUMI ZOLDYCK original2011 anime appearance: very long pin-straight jet-black hair middle part, pale elongated oval face, large perfectly round black expressionless doll-like eyes with tiny white reflections, no colored iris because canon eyes black; slender adult man narrow shoulders, no makeup. Canonical high rounded collar pale tunic with rows of large round studs on chest and green sleeve cuffs translated monochrome, use ONLY one tiny dark teal stud accent. Waist-up calm front facing slight tilt. Background flat muted desaturated deep jade #527773. Hair top begins62% canvas. Strong canonical recognizable face, avoid generic beautiful anime boy.",
+      "source": "C:\\Users\\QCU\\.codex\\generated_images\\01a154c9-9ff6-78c2-b721-cfd1a9b7e8ec\\exec-c0dc7002-868e-4189-8dc1-fc8b58d799e4.png",
+      "output": "public/wallpapers/scenic/hxh-plain-illumi/mobile.png",
+      "tool": "built-in image_gen",
+      "referenceUrls": [
+        "https://www.ntv.co.jp/hunterhunter/character/other_01.html"
+      ],
+      "qa": "Visually inspected: identifiable anime character, monochrome ink with tiny accent, no text or schedule, generous blank upper background. Generated native 841x1870, resized to1080x2400 only.",
+      "background": "#577874",
+      "dimensions": [
+        1080,
+        2400
+      ]
+    },
+    {
+      "id": "hxh-plain-ging",
+      "prompt": "Use case: illustration-story. Create one finished mobile wallpaper exact 1080x2400 portrait aspect9:20 opaque. This is part of matching Hunter x Hunter plain backgrounds collection. Character must precisely match canonical 2011 Hunter x Hunter anime face, hairstyle, outfit and proportions, NOT a generic anime person. Crisp professional anime contours rendered black white gray ink, subtle manga halftone shadows. Entire upper60% canvas absolutely empty flat muted background, no pattern gradient decoration objects. Head top starts at62% canvas height, waist-up character occupies only bottom38%, shoulder edges may bleed bottom corners. Character only monochrome, except tiny chosen eye/garment accent. No text words letters logos symbols UI schedule borders watermark. Subject: GING FREECSS (Gon's father), faithful2011 Hunter x Hunter anime election arc appearance, rugged lean adult man in his30s, broad casually scruffy face, short messy dark spikes visible above and around wrapped fabric headband, narrow dark eyes with brown iris tiny accent, distinctly short sparse mustache and chin stubble NOT full beard. Canonical light loose open jacket with broad collar, dark undershirt, fabric headwrap. Casual self-assured crooked smile, slight three-quarter facing. His hair/headwrap crown at62% canvas, upper body ends cropped naturally bottom. Background flat muted olive khaki #8d9274. Authentic recognizable Ging not Gon not samurai.",
+      "source": "C:\\Users\\QCU\\.codex\\generated_images\\01a154c9-9ff6-78c2-b721-cfd1a9b7e8ec\\exec-8089bbcc-1beb-4019-82c2-064c45d64b9b.png",
+      "output": "public/wallpapers/scenic/hxh-plain-ging/mobile.png",
+      "tool": "built-in image_gen",
+      "referenceUrls": [
+        "https://www.ntv.co.jp/hunterhunter/character/jyunishin.html"
+      ],
+      "qa": "Visually inspected: identifiable anime character, monochrome ink with tiny accent, no text or schedule, generous blank upper background. Generated native 841x1870, resized to1080x2400 only.",
+      "background": "#8a8d6b",
+      "dimensions": [
+        1080,
+        2400
+      ]
+    }
+  ]
+}

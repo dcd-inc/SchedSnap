@@ -1,0 +1,84 @@
+{
+  "provider": "built-in image_gen",
+  "assets": [
+    {
+      "id": "hxh-plain-shalnark",
+      "name": "shalnark",
+      "sourcePath": "C:\\Users\\QCU\\.codex\\generated_images\\01a154c3-2177-7963-94c5-eb5798d4c9aa\\exec-8b760cf1-c9aa-42fc-980e-dec0ba712404.png",
+      "prompt": "Create one wallpaper 1080x2400 portrait ratio9:20. Hunter x Hunter2011 anime SHALNARK accurate model sheet identity: short blond hair with blunt bangs and small side part, small pointed chin, wide cheerful green eyes, cheerful smile, purple tabard over dark sleeves translated into monochrome, holds antenna cellphone. Character drawn as faithful2011 anime line art in black white screentone, ONLY irises green. Plain sage background #A9BEA7. CRITICAL layout: top1500 pixels ENTIRELY empty background, no character until y=1500, character restricted to bottom900 pixels (37.5% height), waist-cropped at lower edge, centered and only70% canvas width. Small LOWER bust portrait, NOT a half-height portrait. Do not enlarge portrait to fill canvas. Crown at y1500, face y1660, shoulders y1950. No text, schedule, logo, scenery, aura, watermark, frame.",
+      "research": "https://hunterxhunter.fandom.com/wiki/Shalnark",
+      "generatedSize": [
+        841,
+        1870
+      ],
+      "path": "public/wallpapers/scenic/hxh-plain-shalnark/mobile.png",
+      "background": "#a2b89e",
+      "dimensions": [
+        1080,
+        2400
+      ]
+    },
+    {
+      "id": "hxh-plain-shizuku",
+      "name": "shizuku",
+      "sourcePath": "C:\\Users\\QCU\\.codex\\generated_images\\01a154c3-2177-7963-94c5-eb5798d4c9aa\\exec-3d8fa007-8f61-4fee-92ac-6635781f438f.png",
+      "prompt": "Create one wallpaper1080x2400 portrait9:20. Faithful HUNTER X HUNTER2011 anime SHIZUKU MURASAKI character, black short chin-length bob and bangs, LARGE ROUND glasses, calm expression, purple eyes, canonical anime face proportions and sharp small chin, black turtleneck sweater and horned cross pendant. Faithful clean2011 anime line art converted black-white ink and subtle halftone; ONLY irises purple. Plain flat muted lavender background #B3ACBF. CRITICAL layout: TOP1500pixels ENTIRELY EMPTY background. Crown starts y1500, face y1660, shoulders y1950, waist cropped bottom edge. ALL character lies in LOWEST900pixels, bottom37.5%, centered at75%canvas width. SMALL bottom bust portrait, never a half-height image. Nothing in top60%. No text, schedule, scenery, aura, logos, border, watermark or UI. Artwork only.",
+      "research": "https://hunterxhunter.fandom.com/wiki/Shizuku_Murasaki",
+      "generatedSize": [
+        841,
+        1870
+      ],
+      "path": "public/wallpapers/scenic/hxh-plain-shizuku/mobile.png",
+      "background": "#aba5bc",
+      "dimensions": [
+        1080,
+        2400
+      ]
+    },
+    {
+      "id": "hxh-plain-pakunoda",
+      "name": "pakunoda",
+      "sourcePath": "C:\\Users\\QCU\\.codex\\generated_images\\01a154c3-2177-7963-94c5-eb5798d4c9aa\\exec-3714a464-2ecf-46e7-829d-55663ae30541.png",
+      "prompt": "Create one opaque wallpaper1080x2400 portrait9:20. Faithful Hunter x Hunter2011 anime PAKUNODA canonical character face: mature woman with strikingly LONG prominent hooked angular nose, narrow heavy lidded blue eyes, short light hair neatly swept back behind ears, side part with forehead EXPOSED and short pointed nape, NOT bob hairstyle, confident stern expression, black tailored lapelled blazer with deep V neckline. Anime face exact silhouette paramount, not generic pretty lady. Black and white crisp anime manga ink screentone rendering, ONLY blue irises colored. Plain muted warm taupe #BEAFA4. Layout CRITICAL: top1500pixels ABSOLUTELY EMPTY flat color, character crown at y1500, eyes y1740, shoulders y1960, bust cropped at bottom. ALL character confined lowest900pixels, bottom37.5%. Portrait should be SMALL and low at base, not half-height. Centered75%canvas width. NO text, schedule, logo, frame, watermark, scenery or other graphics.",
+      "research": "https://hunterxhunter.fandom.com/wiki/Pakunoda",
+      "generatedSize": [
+        841,
+        1870
+      ],
+      "path": "public/wallpapers/scenic/hxh-plain-pakunoda/mobile.png",
+      "background": "#b7a79e",
+      "dimensions": [
+        1080,
+        2400
+      ]
+    },
+    {
+      "id": "hxh-plain-bonolenov",
+      "name": "bonolenov",
+      "sourcePath": "C:\\Users\\QCU\\.codex\\generated_images\\01a154c3-2177-7963-94c5-eb5798d4c9aa\\exec-5a7b4807-e263-4452-91fb-2d5c362f22db.png",
+      "prompt": "Create one opaque wallpaper1080x2400 portrait9:20. Hunter x Hunter2011 anime BONOLENOV NDONGO accurate recognizable design: whole bald head and muscular torso tightly wrapped in layered white bandages, black oval eye apertures, no exposed nose mouth hair, black boxing gloves held lowered across ribs. Canonical2011 anime proportions and face wrap shape. Clean black and white manga ink screentone, only tiny muted rust trim on glove for colored alternative accent. Flat plain muted tan #BAA588 backdrop. CRITICAL layout top1500pixels ENTIRELY EMPTY; character crown y1500, eyes y1650, shoulders y1870, gloves y2150, waist cropped bottom2400. ALL subject confined lower900pixels37.5%, width70%, SMALL bottom bust portrait. Do not make character taller or enlarge to fill canvas. Upper60% absolute blank plain tan. No text, schedule, scenery, aura, logo, watermark, frame, UI.",
+      "research": "https://hunterxhunter.fandom.com/wiki/Bonolenov_Ndongo",
+      "generatedSize": [
+        841,
+        1870
+      ],
+      "path": "public/wallpapers/scenic/hxh-plain-bonolenov/mobile.png",
+      "background": "#b7a182",
+      "dimensions": [
+        1080,
+        2400
+      ]
+    }
+  ],
+  "iterations": [
+    "Use case: illustration-story. Generate ONE finished Hunter x Hunter mobile schedule wallpaper, portrait 1080x2400, opaque full bleed. Subject: Shalnark, recognizable young man with short light blond hair swept neatly aside, cheerful sly smile, green irises, sleeveless tabard with high collar over long dark sleeves, holding his small antenna cellphone casually near chest. Crisp black and white manga ink and restrained halftone, paper-white skin and light hair, black clothes; ONLY irises vivid leaf green, no other colored character detail. Plain flat muted sage background #A9BEA7. Character bust at bottom edge, cropped at waist, maximum character height 38% canvas, top of head below 62% down. Entire upper 60% absolutely empty flat sage for schedule overlay. No scenery, no shadow, no aura, no text, typography, schedule, border, logo, watermark. Match the provided reference's monochrome manga lower portrait and solid background but correct character identity. Art only.",
+    "Use case: illustration-story. ONE finished Hunter x Hunter mobile schedule wallpaper, 1080x2400 portrait opaque. Subject Shizuku Murasaki, recognizable short straight black bob hair with bangs, large round eyeglasses, calm absent-minded expression, long sleeved black turtleneck and small horned cross pendant. Large eyes with ONLY irises muted plum purple. Black and white manga portrait, white skin, black ink clothes and hair, crisp fine hatching and subtle halftone. Subject bust anchored flush to bottom, cropped at waist, head starts at 64% canvas height, entire character contained bottom36%. Flat plain muted dusty lavender #B3ACBF covers whole backdrop. Entire top60% absolutely blank flat background, generous schedule space. NO text, schedule, letters, logos, graphics, scenery, aura, clouds, border or watermark. Elegant recognizable faithful character anatomy. Art only.",
+    "Use case: illustration-story. Generate ONE Hunter x Hunter mobile schedule wallpaper portrait1080x2400 opaque full bleed. Subject Pakunoda original Phantom Troupe, recognizable adult woman with short pale blonde hair parted sideways and swept behind ears, prominent long angular nose, sharp heavy-lidded eyes, composed cool expression, tailored black lapelled business jacket and white shirt with open neckline. Waist-cropped portrait anchored at bottom; crown of hair BELOW 63% down, ALL character art below60% down, large upper60% perfectly plain empty muted warm taupe #BEAFA4. Black and white manga ink artwork, paper-white skin and hair, solid black clothing, crisp linework with subtle halftone; ONLY irises ice blue. No sexualized pose. Restrained stoic three-quarter portrait turned slightly left. Background completely flat, no texture, gradient, scenery or additional decoration. No writing, schedule, letters, logo, border, watermark or UI. This is bottom-anchored artwork for a timetable wallpaper; prioritize empty space.",
+    "Use case: illustration-story. Generate ONE finished Hunter x Hunter mobile schedule wallpaper, opaque portrait1080x2400. Recognizable Bonolenov Ndongo of original Phantom Troupe: lean muscular male boxer with entire head and body wrapped in overlapping white bandages, dark narrow eye apertures, distinctive rounded boxing gloves held low at chest in calm guarded pose; boxing trunks hinted at bottom. Faithful bandaged head silhouette NO visible hair or exposed mouth. Black and white manga ink with crisp outlines, bold dark shadows and sparse halftone, white bandages. Tiny rust red piping on ONE glove is the ONLY colored character accent, no glowing eyes. Plain uniform muted ochre tan background #BAA588. Character sits bottom38% canvas, crown begins BELOW 62% canvas height, cropped at waist bottom edge. Entire upper60% absolutely blank flat backdrop for timetable. No scenery, no glow, no effects, no gradients or texture, no shadows outside figure, no text or letters, no schedule, no watermark, logo, frame or UI. High quality controlled manga character anatomy.",
+    "Create one wallpaper 1080x2400 portrait ratio9:20. Hunter x Hunter2011 anime SHALNARK accurate model sheet identity: short blond hair with blunt bangs and small side part, small pointed chin, wide cheerful green eyes, cheerful smile, purple tabard over dark sleeves translated into monochrome, holds antenna cellphone. Character drawn as faithful2011 anime line art in black white screentone, ONLY irises green. Plain sage background #A9BEA7. CRITICAL layout: top1500 pixels ENTIRELY empty background, no character until y=1500, character restricted to bottom900 pixels (37.5% height), waist-cropped at lower edge, centered and only70% canvas width. Small LOWER bust portrait, NOT a half-height portrait. Do not enlarge portrait to fill canvas. Crown at y1500, face y1660, shoulders y1950. No text, schedule, logo, scenery, aura, watermark, frame.",
+    "Create one wallpaper1080x2400 portrait9:20. Faithful HUNTER X HUNTER2011 anime SHIZUKU MURASAKI character, black short chin-length bob and bangs, LARGE ROUND glasses, calm expression, purple eyes, canonical anime face proportions and sharp small chin, black turtleneck sweater and horned cross pendant. Faithful clean2011 anime line art converted black-white ink and subtle halftone; ONLY irises purple. Plain flat muted lavender background #B3ACBF. CRITICAL layout: TOP1500pixels ENTIRELY EMPTY background. Crown starts y1500, face y1660, shoulders y1950, waist cropped bottom edge. ALL character lies in LOWEST900pixels, bottom37.5%, centered at75%canvas width. SMALL bottom bust portrait, never a half-height image. Nothing in top60%. No text, schedule, scenery, aura, logos, border, watermark or UI. Artwork only.",
+    "Create one opaque wallpaper1080x2400 portrait9:20. Faithful Hunter x Hunter2011 anime PAKUNODA canonical character face: mature woman with strikingly LONG prominent hooked angular nose, narrow heavy lidded blue eyes, short light hair neatly swept back behind ears, side part with forehead EXPOSED and short pointed nape, NOT bob hairstyle, confident stern expression, black tailored lapelled blazer with deep V neckline. Anime face exact silhouette paramount, not generic pretty lady. Black and white crisp anime manga ink screentone rendering, ONLY blue irises colored. Plain muted warm taupe #BEAFA4. Layout CRITICAL: top1500pixels ABSOLUTELY EMPTY flat color, character crown at y1500, eyes y1740, shoulders y1960, bust cropped at bottom. ALL character confined lowest900pixels, bottom37.5%. Portrait should be SMALL and low at base, not half-height. Centered75%canvas width. NO text, schedule, logo, frame, watermark, scenery or other graphics.",
+    "Create one opaque wallpaper1080x2400 portrait9:20. Hunter x Hunter2011 anime BONOLENOV NDONGO accurate recognizable design: whole bald head and muscular torso tightly wrapped in layered white bandages, black oval eye apertures, no exposed nose mouth hair, black boxing gloves held lowered across ribs. Canonical2011 anime proportions and face wrap shape. Clean black and white manga ink screentone, only tiny muted rust trim on glove for colored alternative accent. Flat plain muted tan #BAA588 backdrop. CRITICAL layout top1500pixels ENTIRELY EMPTY; character crown y1500, eyes y1650, shoulders y1870, gloves y2150, waist cropped bottom2400. ALL subject confined lower900pixels37.5%, width70%, SMALL bottom bust portrait. Do not make character taller or enlarge to fill canvas. Upper60% absolute blank plain tan. No text, schedule, scenery, aura, logo, watermark, frame, UI."
+  ],
+  "qa": "Inspected all final images visually; recognizable character signatures with monochrome and eye/glove accent. Top approximately55-60% clear. Native generated portrait resized only to required mobile dimensions."
+}
