@@ -15,7 +15,7 @@ Following the user's fidelity review, 15 character images were revised using act
 - `output/hxh-plain/manifest.json`: dimensions, opacity verification, SHA256 checksums and palettes.
 - `output/hxh-plain/collection-contact.jpg`: labeled final collection contact sheet.
 - `output/hxh-plain/hunter-x-hunter-plain-mobile.zip`: all 16 full-size PNGs.
-- `output/hxh-plain/review.html`: browser review harness with sample and dense schedules.
+- `output/hxh-plain/publication.json`: verified catalog publication record.
 
 Built-in image generation was used separately for each artwork, including visual revisions. Pillow performed final dimension normalization, inspection and contact-sheet packaging; it did not paint or alter the illustrations. Cloudinary uploads use the existing scoped, content-hashed uploader. Source assets and the ZIP remain local under the repository's existing ignore rules; immutable uploaded image metadata is recorded in `src/assets/cloudinaryManifest.js`.
 
@@ -23,6 +23,8 @@ Built-in image generation was used separately for each artwork, including visual
 
 All 16 selected images were visually inspected for identity, plain background, selective color and absence of text. Exact dimensions, opacity and unique file checksums pass. Palette text contrast is at least 4.5:1. The six Hunter tests pass, including schema, search, inventory, uploads and gallery/export placement. The browser rendered 32 actual Canvas previews (16 with five meetings and 16 with ten meetings), without page errors. Their schedule bottoms stay at or above y=1191, with individual raised placement for taller portraits. Very dense schedules or user changes can extend below this reserved sample area. Browser review uses filesystem-backed request interception because the sandboxed development server was unreachable from the browser; actual renderer modules, local artwork and bundled font were used.
 
-All 16 assets were uploaded; 15 revised images received new immutable uploads. The original 15 Hunter designs and their dates remain intact. The full test suite reports 266 passing and one pre-existing failure caused by missing `public/wallpapers/scenic/anime-akatsuki-crimson-assembly/mobile.png`. Shared catalog publication and frontend deployment have not been performed. The new designs are registered in the local Hunter × Hunter preview catalog for review.
+All 16 assets were uploaded; 15 revised images received new immutable uploads. The original 15 Hunter designs and their dates remain intact. The full test suite reports 266 passing and one pre-existing failure caused by missing `public/wallpapers/scenic/anime-akatsuki-crimson-assembly/mobile.png`.
 
-Final verification: scoped upload dry run reports zero pending of 16; changed-file ESLint and production build pass. The development server was stopped. No shared catalog records were written and no frontend deployment was performed.
+Final verification: scoped upload dry run reports zero pending of 16; changed-file ESLint and production build pass. The development server was stopped.
+
+On October 20, 2026, all 16 additions were published to the shared catalog with immutable Cloudinary URLs. Readback verified all additions while preserving all 251 existing records and dates. No manual frontend deployment was performed. Temporary browser harnesses, generated review reports, build logs and packaging scripts were removed after verification. Final artwork, download bundle, contact sheet, provenance and upload/publication manifests remain. Existing `.vercelignore` and build filters exclude source artwork, output, documentation, tests and scratch files from deployment.
