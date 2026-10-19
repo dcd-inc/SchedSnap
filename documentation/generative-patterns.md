@@ -1,6 +1,6 @@
 # Original generative prints
 
-300 prints replace the original 24 in the active Patterns & prints collection. The first 100 comprise 35 geometric, 35 organic, and 30 playful designs. A second set adds 35 architectural/textile compositions, 35 botanical prints, and 30 keepsake motifs. A third set adds 35 atelier prints, 35 storybook animals/fruit designs, and 30 sweet daydream motifs. All are resolution-independent Canvas geometry, available on mobile (1080 × 2400), tablet (1600 × 2560), and laptop (1920 × 1080). The same renderer powers gallery previews, customization, and PNG downloads.
+400 prints replace the original 24 in the active Patterns & prints collection. The first 100 comprise 35 geometric, 35 organic, and 30 playful designs. A second set adds 35 architectural/textile compositions, 35 botanical prints, and 30 keepsake motifs. A third set adds 35 atelier prints, 35 storybook animals/fruit designs, and 30 sweet daydream motifs. A fourth set adds 35 coquette prints, 35 romantic florals, and 30 beauty/fashion motifs. All are resolution-independent Canvas geometry, available on mobile (1080 × 2400), tablet (1600 × 2560), and laptop (1920 × 1080). The same renderer powers gallery previews, customization, and PNG downloads.
 
 ## Provenance
 
@@ -39,6 +39,16 @@ The third-batch test run recorded 264 passing tests and one failure. The failure
 The completed browser audit generated 300 new full-resolution background PNGs: 100 each in `output/generative-patterns-wave3/{mobile,tablet,laptop}`. All five customization properties changed pixels for every new design/device combination, and sample schedules fit without overflow. The browser also compared all 300 motifs at the same 240 × 240 logical tile size with identical colors: every raster fingerprint was unique. Results are in `output/generative-patterns-wave3/verification.json`, with four contact sheets and representative schedule previews alongside it.
 
 The collection retains the incumbent editor controls and shared renderer. These Canvas presets require no Cloudinary artwork upload; deploying the code exposes them through the existing live catalog merge while preserving remote overrides and hidden/draft statuses.
+
+## Fourth-batch direction and validation
+
+The fourth batch adds 100 girly wallpapers: 35 coquette compositions, 35 romantic floral designs, and 30 beauty/fashion vanity motifs. The active collection now contains 400 prints. Ribbon and lace details, romantic blooms, blush/lilac palettes, and feminine dressing-table objects provide distinct directions with room around each motif. Every new preset has searchable `girly` and `feminine` keywords alongside its own motif, name, description, and color tags. The focused search test confirms all 100 additions carry discoverable style and motif keywords.
+
+The current test run recorded 265 passing tests and one failure, with no claim of a fully passing suite. The failure remains the existing missing local anime PNG reported in third-batch validation. Focused lint passed; the production build and SEO prerender completed. Logs are `output/generative-patterns-wave4/tests.txt` and `build.txt`.
+
+The completed browser audit saved another 300 full-resolution background PNGs, with 100 new designs each in `output/generative-patterns-wave4/{mobile,tablet,laptop}`. All five controls changed rendered pixels for every new design/device combination, and sample schedules fit without overflow. Comparing all 400 motif drawings at the identical 240 × 240 logical tile size with identical colors produced 400 unique raster fingerprints. The report is `output/generative-patterns-wave4/verification.json`; four contact sheets and representative schedule previews are saved beside it.
+
+The new girly artwork keeps the existing editor headings, appearance controls, schedule rendering, and independent background/primary/accent color editing. No Cloudinary artwork upload is required; the deployed code supplies the existing runtime catalog merge while preserving saved remote overrides and hidden/draft statuses.
 
 ## Integration boundary
 

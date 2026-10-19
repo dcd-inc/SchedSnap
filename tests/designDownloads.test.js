@@ -109,7 +109,7 @@ test('download endpoint validates origin, design status, and rate limits', async
   assert.equal(listing.device, 'mobile');
   assert.equal(listing.downloads.live, 0);
   assert.equal(listing.downloads.hidden, undefined);
-  assert.equal(Object.keys(listing.downloads).filter(id => id.startsWith('print-')).length, 300);
+  assert.equal(Object.keys(listing.downloads).filter(id => id.startsWith('print-')).length, 400);
   allowed = false;
   assert.equal((await send('live')).code, 429);
   assert.equal(writes, 1);
