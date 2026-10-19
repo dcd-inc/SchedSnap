@@ -622,5 +622,83 @@
       "width": 581.8751645647492,
       "height": 950.4
     }
+  },
+  {
+    "id": "snoopy-cream-pinstripes",
+    "device": "mobile",
+    "schedule": "sample",
+    "overflow": false,
+    "meetings": 5,
+    "bounds": {
+      "x": 78,
+      "y": 112.39999999999998,
+      "width": 924,
+      "height": 1112
+    }
+  },
+  {
+    "id": "snoopy-cream-pinstripes",
+    "device": "mobile",
+    "schedule": "dense",
+    "overflow": false,
+    "meetings": 15,
+    "bounds": {
+      "x": 78,
+      "y": 112.39999999999998,
+      "width": 924,
+      "height": 1465.1
+    }
+  },
+  {
+    "id": "snoopy-cream-pinstripes",
+    "device": "tablet",
+    "schedule": "sample",
+    "overflow": false,
+    "meetings": 5,
+    "bounds": {
+      "x": 260.5165714285714,
+      "y": 135.168,
+      "width": 1398.9668571428572,
+      "height": 1360.7314285714285
+    }
+  },
+  {
+    "id": "snoopy-cream-pinstripes",
+    "device": "tablet",
+    "schedule": "dense",
+    "overflow": false,
+    "meetings": 15,
+    "bounds": {
+      "x": 260.5165714285714,
+      "y": 135.168,
+      "width": 1398.9668571428572,
+      "height": 1982.7318857142857
+    }
+  },
+  {
+    "id": "snoopy-cream-pinstripes",
+    "device": "laptop",
+    "schedule": "sample",
+    "overflow": false,
+    "meetings": 5,
+    "bounds": {
+      "x": 165.5314285714286,
+      "y": 22.957714285714275,
+      "width": 1108.9371428571428,
+      "height": 850.4228571428572
+    }
+  },
+  {
+    "id": "snoopy-cream-pinstripes",
+    "device": "laptop",
+    "schedule": "dense",
+    "overflow": false,
+    "meetings": 15,
+    "bounds": {
+      "x": 429.0624177176254,
+      "y": 12.96,
+      "width": 581.8751645647492,
+      "height": 950.4
+    }
   }
 ]

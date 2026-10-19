@@ -9,7 +9,7 @@ import { customizeWallpaperTemplate, galleryPreviewTemplate } from '../src/utils
 import { deviceResolutions } from '../src/assets/templates.js';
 
 test('Snoopy designs publish in their own category and are found through Peanuts and Woodstock', () => {
-  assert.equal(snoopyTemplates.length, 8);
+  assert.equal(snoopyTemplates.length, 9);
   for (const template of snoopyTemplates) {
     const parsed = templateSchema.parse({ ...template, status: 'published' });
     assert.equal(matchesGalleryCategory(parsed, 'snoopy'), true);

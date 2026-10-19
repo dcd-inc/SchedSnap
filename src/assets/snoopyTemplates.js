@@ -8,6 +8,7 @@ const designs = [
   ['snoopy-shark-suit', 'Snoopy Shark Suit', 'A smiling Snoopy in a blue shark costume, drawn in bold textured ink.', '#ffffff', '2026-10-16T09:14:22.000Z'],
   ['snoopy-navy-cool', 'Snoopy Navy Cool', 'Round sunglasses and a deep navy sweater with expressive hand-drawn contours.', '#ffffff', '2026-10-16T09:14:22.000Z'],
   ['snoopy-looking-up', 'Snoopy Looking Up', 'A quiet upward glance in soft, imperfect black pen on white.', '#ffffff', '2026-10-16T09:14:22.000Z'],
+  ['snoopy-cream-pinstripes', 'Snoopy Cream Pinstripes', 'Dusty blue and cream paper stripes with a little hand-inked Snoopy.', '#f7f4dd', '2026-10-16T11:29:55.000Z'],
 ];
 
 export const snoopyTemplates = designs.map(([id, name, description, background, createdAt = '2026-10-15T23:30:10.000Z']) => ({

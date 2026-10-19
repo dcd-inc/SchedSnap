@@ -287,6 +287,42 @@
       "dimensionsValid": true,
       "sha256": "9d5f51f556cecd2f1546d296f032d3661488e8e4ab4a59dc4e5346441e8007f0",
       "visuallyReviewed": true
+    },
+    {
+      "id": "snoopy-cream-pinstripes",
+      "device": "mobile",
+      "path": "public/wallpapers/scenic/snoopy-cream-pinstripes/mobile.png",
+      "source": "output/snoopy/masters/snoopy-cream-pinstripes/master.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "66fd94444e09a1ec69bb0fbda92f685800d7a845768e621c4d6ad147c7c5fa52",
+      "visuallyReviewed": true
+    },
+    {
+      "id": "snoopy-cream-pinstripes",
+      "device": "tablet",
+      "path": "public/wallpapers/scenic/snoopy-cream-pinstripes/tablet.png",
+      "source": "output/snoopy/masters/snoopy-cream-pinstripes/tablet-generated.png",
+      "width": 1600,
+      "height": 2560,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "784e95537507967a93dadb723449291c3b392fea7763c6cad366e46ec0040f4b",
+      "visuallyReviewed": true
+    },
+    {
+      "id": "snoopy-cream-pinstripes",
+      "device": "laptop",
+      "path": "public/wallpapers/scenic/snoopy-cream-pinstripes/laptop.png",
+      "source": "output/snoopy/masters/snoopy-cream-pinstripes/laptop-generated.png",
+      "width": 1920,
+      "height": 1080,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "7e80bbcb0a64b2ee1418aad8add45dc67f0eff13037a558cfd5148bed846e91b",
+      "visuallyReviewed": true
     }
   ]
 }
