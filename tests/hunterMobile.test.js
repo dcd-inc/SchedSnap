@@ -20,7 +20,7 @@ const template = {
 
 test('Hunter manga and plain use consistent reference-style presets per variant', () => {
   for (const family of ['manga', 'plain']) {
-    const designs = hunterTemplates.filter(item => item.family === family);
+    const designs = hunterTemplates.filter(item => item.family === family && !item.id.startsWith('hxh-plain-'));
     for (const schedule of [templateSchedule, sampleSchedule]) {
       const bounds = [];
       for (const item of designs) {
@@ -40,6 +40,21 @@ test('Hunter manga and plain use consistent reference-style presets per variant'
       }
       assert.ok(bounds.every(value => JSON.stringify(value) === JSON.stringify(bounds[0])), family);
     }
+  }
+});
+
+test('new plain character schedules stay in the empty upper half and match gallery placement', () => {
+  const designs = hunterTemplates.filter(item => item.id.startsWith('hxh-plain-'));
+  assert.equal(designs.length, 16);
+  const ctx = new Proxy({ font: '', measureText(value) { return { width: value.length * Number(this.font.match(/([\d.]+)px/)?.[1] || 36) * 0.52 }; } }, {
+    get: (target, key) => key in target ? target[key] : ['canvas', 'getTransform'].includes(key) ? undefined : () => {},
+  });
+  for (const item of designs) for (const schedule of [templateSchedule, sampleSchedule]) {
+    const render = preset => drawWallpaper({ getContext: () => ctx }, { schedule, template: preset, resolution: deviceResolutions.mobile });
+    const result = render(item);
+    assert.equal(result.overflow, false, item.id);
+    assert.ok(result.scheduleBounds.y + result.scheduleBounds.height <= 1200, item.id);
+    assert.deepEqual(render(galleryPreviewTemplate(item)).scheduleBounds, result.scheduleBounds, item.id);
   }
 });
 
@@ -84,17 +99,17 @@ test('Hunter designs can be found by character, color, motif and anime category'
   ]) {
     assert.ok(searchWallpaperTemplates(hunterTemplates, query).some(t => t.id === id), query);
   }
-  assert.equal(searchWallpaperTemplates(hunterTemplates, 'anime').length, 15);
+  assert.equal(searchWallpaperTemplates(hunterTemplates, 'anime').length, 31);
   for (const item of hunterTemplates) {
     assert.ok(item.keywords.length <= 500);
     assert.ok(item.keywords.includes(','));
   }
 });
 
-test('Hunter collection contains exactly fifteen mobile PNG templates', () => {
-  assert.equal(hunterTemplates.length, 15);
-  assert.equal(new Set(hunterTemplates.map(item => item.id)).size, 15);
-  assert.deepEqual(['manga', 'plain', 'chibi', 'group'].map(family => hunterTemplates.filter(item => item.family === family).length), [5, 4, 4, 2]);
+test('Hunter collection contains 31 mobile PNG templates including 16 new plain designs', () => {
+  assert.equal(hunterTemplates.length, 31);
+  assert.equal(new Set(hunterTemplates.map(item => item.id)).size, 31);
+  assert.deepEqual(['manga', 'plain', 'chibi', 'group'].map(family => hunterTemplates.filter(item => item.family === family).length), [5, 20, 4, 2]);
   for (const item of hunterTemplates) {
     assert.equal(matchesGalleryCategory(item, 'hunter-x-hunter'), true);
     assert.equal(templateSchema.parse({ ...item, status: 'published' }).mobileOnly, true);

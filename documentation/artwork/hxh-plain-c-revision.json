@@ -1,0 +1,55 @@
+{
+  "provider": "built-in image_gen",
+  "assets": [
+    {
+      "id": "hxh-plain-shizuku",
+      "prompt": "Edit target Image2 wallpaper; image1 is ACTUAL2011 anime frame and the authoritative character design. Correct ONLY character: Shizuku EXACT frame hair, with short outward flicking black side and nape spikes, narrow separated jagged fringe, not round smooth bob. Copy actual frame face and eye shape and glasses: thick black top rims, softly squared lower rims, NOT perfect round thin wire circles. Simple hand-drawn anime contour lines with flat black/white cell shadows, no glossy hair strands, no realistic face, no ornate jewelry redesign. Canonical pendant and dark turtleneck, purple eyes only colored. Preserve wallpaper plain lavender background and lower portrait composition, increase blank upper area to60%, no character above y1440 on1080x2400. Art only no text. Make faithful monochrome adaptation of actual anime screenshot face, do not average with generic old character.",
+      "referenceURLs": [
+        "https://cdn.myanimelist.net/s/common/uploaded_files/1445610232-a53f2d0543a834c39fb67e5a4c5ff16f.png"
+      ],
+      "sourcePath": "C:\\Users\\QCU\\.codex\\generated_images\\01a154c3-2177-7963-94c5-eb5798d4c9aa\\exec-c1af2da5-a694-4afc-8a56-3c5e6abf8388.png",
+      "path": "public/wallpapers/scenic/hxh-plain-shizuku/mobile.png",
+      "background": "#aaa6c9",
+      "dimensions": [
+        1080,
+        2400
+      ]
+    },
+    {
+      "id": "hxh-plain-bonolenov",
+      "prompt": "Correct wallpaper image2 using image1 ACTUAL OFFICIAL NTV2011 ANIME MODEL SHEET as authoritative character design. Bonolenov must have sheet's LEAN narrow shoulders and thin sinewy torso and thin arms, absolutely NOT broad muscular buff body. Bandage-covered head eyes MUST visible white eyeballs and black pupils peering through long angular horizontal bandage gaps exactly as official sheet, NOT black empty sockets. Copy sheet head contour and visible small mouth gap, head to shoulder proportions. Boxing gloves RED on both hands as sheet, sole character color accent. Simplify to crisp2011 anime contours and flat black and white cell shadows, minimal halftone, not realistic shaded mummy. Preserve plain muted tan wallpaper background and character bottom38% composition, top62% completely empty with no character.1080x2400 opaque wallpaper. No text or model sheet graphics. No invented embellishments.",
+      "referenceURLs": [
+        "https://www.ntv.co.jp/hunterhunter/character/images/genei_bono.jpg"
+      ],
+      "sourcePath": "C:\\Users\\QCU\\.codex\\generated_images\\01a154c3-2177-7963-94c5-eb5798d4c9aa\\exec-a64a1a77-d252-400b-bfee-41970e8b915c.png",
+      "path": "public/wallpapers/scenic/hxh-plain-bonolenov/mobile.png",
+      "background": "#b6a286",
+      "dimensions": [
+        1080,
+        2400
+      ],
+      "identityRevisionSourcePath": "C:\\Users\\QCU\\.codex\\generated_images\\01a154c3-2177-7963-94c5-eb5798d4c9aa\\exec-e322b0f6-f807-411c-bbca-e1e12c92d862.png",
+      "colorOnlyPrompt": "COLOR ONLY EDIT. Preserve every line, shape, pose, expression, eye, proportions, exact placement, composition and existing background color. Do NOT redraw or reinterpret anything. Convert ONLY the entire character's blue bandages and purple exposed small skin areas to NEUTRAL grayscale black-white-gray. Bandages paper white and neutral light gray shadows, zero blue hue. Keep BOTH BOXING GLOVES their exact existing RED. Keep eyeballs white with existing pupils, unchanged. Background must remain current muted tan color, do not desaturate background. Absolutely no other edits. Same portrait wallpaper size1080x2400. Character otherwise grayscale; red gloves only colored detail.",
+      "qa": "Color-only correction visually inspected: neutral grayscale character with preserved red gloves or purple iris; canonical design and plain background retained."
+    },
+    {
+      "id": "hxh-plain-kortopi",
+      "prompt": "Correct wallpaper image3 using image1 OFFICIAL NTV2011 anime MODEL SHEET and image2 actual2011 anime frame as authoritative design. KORTOPI: face entirely PITCH BLACK SHADOW hidden behind long hair, ONLY ONE visible large purple eye with white sclera in a long vertical BLACK SLOT. NO exposed flesh, NO nose, NO mouth, NO second eye, NO other face marks, NO wrinkles. Match exact hair silhouette from sheet: straight smooth long pale-gray locks with few simple separated broad tapering clumps, not wildly flowing detailed individual strands. Short slight small-stature body under loose simple tunic, no massive shoulders. Crisp simple flat2011 anime line art monochrome with white hair and gray tunic, ONLY purple iris colored. Preserve image3 flat muted gray sage backdrop, lower character composition, top60% entirely blank.1080x2400 opaque art only no text, no sheet graphics, no aura, no scenery. Prefer near direct faithful silhouette/face adaptation of model sheet enlarged head view.",
+      "referenceURLs": [
+        "https://www.ntv.co.jp/hunterhunter/character/images/genei_col.jpg",
+        "https://image.idntimes.com/post/20220422/4173756-cfaa07b8deef99fb2f69eaad7a4f6abf-5e10e1f509ae1b449d53903f2f0726b5.jpg"
+      ],
+      "sourcePath": "C:\\Users\\QCU\\.codex\\generated_images\\01a154c3-2177-7963-94c5-eb5798d4c9aa\\exec-34e8152a-50be-4ce5-8c78-a27cbc3a7ac0.png",
+      "path": "public/wallpapers/scenic/hxh-plain-kortopi/mobile.png",
+      "background": "#84918a",
+      "dimensions": [
+        1080,
+        2400
+      ],
+      "identityRevisionSourcePath": "C:\\Users\\QCU\\.codex\\generated_images\\01a154c3-2177-7963-94c5-eb5798d4c9aa\\exec-12894db6-8acd-4d9c-8160-a6f456cc2bc7.png",
+      "colorOnlyPrompt": "COLOR ONLY EDIT, do not redraw. Preserve EXACTLY all lines, shapes, face-shadow and ONE eye, proportions, hairstyle, clothing folds and composition. Convert ONLY THE CHARACTER to pure neutral grayscale: hair WHITE with neutral gray shadows, robe DARK GRAY with neutral black shadows. Every hair and robe pixel must have equal R G B, NO blue teal green hue anywhere on character. ONLY one purple iris retains existing purple. Eye white and all-black hidden face preserved exactly. Background untouched preserve muted green gray color. No change to actual identity, face, geometry or placement.1080x2400 opaque same artwork wallpaper. No text, no new details.",
+      "qa": "Color-only correction visually inspected: neutral grayscale character with preserved red gloves or purple iris; canonical design and plain background retained."
+    }
+  ],
+  "qa": "All identity corrections inspected against actual anime references. Bonolenov and Kortopi received focused color-only tool edits retaining final reference-based design while removing unintended body/hair/clothing hues."
+}

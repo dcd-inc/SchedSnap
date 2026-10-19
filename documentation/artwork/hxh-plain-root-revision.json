@@ -1,0 +1,18 @@
+{
+  "assets": [
+    {
+      "id": "hxh-plain-machi",
+      "prompt": "Use ONLY the official Machi anime model sheet attached. Make one plain-background mobile wallpaper. Copy Machi's FRONT-VIEW MODEL from this sheet faithfully: exact familiar face, large blue anime eyes and angular pupils, exact short spiky fringe, high ribbon-tied ponytail and compact petite proportions, white short-sleeve uwagi with dark trim, broad obi and sash, fingerless gloves. DO NOT invent a prettier adult manga face. Do not add detailed glossy hair strands, smooth realism or overrendered shading. Faithful SIMPLE 2011 ANIME MODEL-SHEET linework and flat two-tone cel shadows. ALL CHARACTER COLORS must be BLACK/WHITE/NEUTRAL GRAY ONLY, except BLUE IRISES; white hair and white skin. Plain muted rose #927582 full background. A small waist-up portrait at the BOTTOM, crown at60%height; upper60% empty solid rose. 1080x2400 opaque portrait ratio9:20. No model-sheet layout, no text Japanese labels or extra views, just one front-view character. Preserve the anime model identity and silhouette exactly.",
+      "reference": "https://www.ntv.co.jp/hunterhunter/character/images/genei_machi.jpg",
+      "source": "C:/Users/QCU/.codex/generated_images/01a154b6-0706-7bd2-b3e1-4973b225ece1/exec-4a98301c-9e94-4333-b65e-3ccdfa2ca47e.png"
+    },
+    {
+      "id": "hxh-plain-shalnark",
+      "prompt": "Correct this mobile wallpaper's character using the OFFICIAL NTV ANIME MODEL SHEET (reference1). Existing wallpaper reference2 supplies ONLY plain sage background and bottom placement; replace its inaccurate character. Draw Shalnark exactly as the anime model: familiar wide-set green eyes and precise eye shapes, small simple mouth/nose, short rounded olive/blond hair with straight pointed fringe, mature youthful face NOT baby/anime-generic giant eyes. Exact SLEEVELESS purple tabard shape over sleeveless black high collar, bare upper arms, rectangular chest trim and broad belt; translate all except green irises to crisp BLACK WHITE gray CEL SHADING. DO NOT put black sleeves on him. Simple authentic anime lines, no excessive strands/rendering/beautification. Small waist-up Shalnark centered at bottom with hand holding phone if anatomically natural, crown at60% height, whole upper60% completely plain sage #a2b89f. Full portrait1080x2400 ratio9:20. No model sheet text, no lettering, no UI schedule logos or extra characters. Identity and clothes from official sheet are authoritative.",
+      "colorEditPrompt": "EDIT ONLY COLORS of this wallpaper. Preserve absolutely all linework, exact face/hair/outfit, phone, body pose, size and position. Keep sage background green exactly. Convert EVERY part of the CHARACTER to BLACK, WHITE and NEUTRAL GRAY: hair, skin, clothes, belt, phone all grayscale with black outlines, white highlights and flat neutralgray cel shadows. ONLY the iris interiors remain green. No blond hair, no peach skin, no purple or teal clothing allowed. Character must be monochrome manga/anime with green irises ONLY, over unchanged sage background. No redraw, no text, no change composition. Portrait1080x2400.",
+      "reference": "https://www.ntv.co.jp/hunterhunter/character/images/genei_shal.jpg",
+      "source": "C:/Users/QCU/.codex/generated_images/01a154b6-0706-7bd2-b3e1-4973b225ece1/exec-ba4c5526-4587-4699-8bf3-95baea045962.png"
+    }
+  ],
+  "qa": "Official model sheets inspected and passed as image inputs; corrected costumes, simplified anime cel linework, monochrome except irises. Exact1080x2400 RGB final files."
+}

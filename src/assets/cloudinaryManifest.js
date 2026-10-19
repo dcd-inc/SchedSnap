@@ -4493,5 +4493,117 @@ export default {
     "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792419229/schedsnap/wallpapers/scenic/capybara-melon-hood/mobile-c118fc8dc24e5cec.png",
     "width": 1080,
     "height": 2400
+  },
+  "/wallpapers/scenic/hxh-plain-feitan/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/hxh-plain-feitan/mobile-c5a4a3f0a2d7c61b",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792425804/schedsnap/wallpapers/scenic/hxh-plain-feitan/mobile-c5a4a3f0a2d7c61b.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/hxh-plain-chrollo/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/hxh-plain-chrollo/mobile-de24752c6fa7c4d6",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792425803/schedsnap/wallpapers/scenic/hxh-plain-chrollo/mobile-de24752c6fa7c4d6.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/hxh-plain-franklin/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/hxh-plain-franklin/mobile-1d4525ad3d059b6a",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792425804/schedsnap/wallpapers/scenic/hxh-plain-franklin/mobile-1d4525ad3d059b6a.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/hxh-plain-bonolenov/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/hxh-plain-bonolenov/mobile-a1d6c2aded1a51b8",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792425804/schedsnap/wallpapers/scenic/hxh-plain-bonolenov/mobile-a1d6c2aded1a51b8.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/hxh-plain-ging/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/hxh-plain-ging/mobile-da1a410f26425a13",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792425805/schedsnap/wallpapers/scenic/hxh-plain-ging/mobile-da1a410f26425a13.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/hxh-plain-gon-killua/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/hxh-plain-gon-killua/mobile-2a90d2bc7b939a6e",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792424235/schedsnap/wallpapers/scenic/hxh-plain-gon-killua/mobile-2a90d2bc7b939a6e.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/hxh-plain-illumi/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/hxh-plain-illumi/mobile-ada045221ee0b6e9",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792425806/schedsnap/wallpapers/scenic/hxh-plain-illumi/mobile-ada045221ee0b6e9.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/hxh-plain-kortopi/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/hxh-plain-kortopi/mobile-425d870864c2bfc7",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792425807/schedsnap/wallpapers/scenic/hxh-plain-kortopi/mobile-425d870864c2bfc7.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/hxh-plain-hisoka/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/hxh-plain-hisoka/mobile-14db9e78a9b1b584",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792425805/schedsnap/wallpapers/scenic/hxh-plain-hisoka/mobile-14db9e78a9b1b584.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/hxh-plain-machi/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/hxh-plain-machi/mobile-d6e017a0ea03b447",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792425806/schedsnap/wallpapers/scenic/hxh-plain-machi/mobile-d6e017a0ea03b447.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/hxh-plain-nobunaga/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/hxh-plain-nobunaga/mobile-7efb070dd329f970",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792425807/schedsnap/wallpapers/scenic/hxh-plain-nobunaga/mobile-7efb070dd329f970.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/hxh-plain-pakunoda/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/hxh-plain-pakunoda/mobile-b7610fa5376fc274",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792425807/schedsnap/wallpapers/scenic/hxh-plain-pakunoda/mobile-b7610fa5376fc274.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/hxh-plain-phinks/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/hxh-plain-phinks/mobile-a4751fd0ba0ed4d6",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792425808/schedsnap/wallpapers/scenic/hxh-plain-phinks/mobile-a4751fd0ba0ed4d6.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/hxh-plain-shalnark/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/hxh-plain-shalnark/mobile-e3b80ee03558fdcf",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792425809/schedsnap/wallpapers/scenic/hxh-plain-shalnark/mobile-e3b80ee03558fdcf.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/hxh-plain-shizuku/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/hxh-plain-shizuku/mobile-fad23bbd654d0692",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792425810/schedsnap/wallpapers/scenic/hxh-plain-shizuku/mobile-fad23bbd654d0692.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/hxh-plain-uvogin/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/hxh-plain-uvogin/mobile-b432282f715374d5",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792425810/schedsnap/wallpapers/scenic/hxh-plain-uvogin/mobile-b432282f715374d5.png",
+    "width": 1080,
+    "height": 2400
   }
 };
