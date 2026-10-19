@@ -19,6 +19,7 @@ import TemplateGallery from './TemplateGallery.jsx';
 import TemplateWorkspace from './TemplateWorkspace.jsx';
 import WallpaperSearch from '../../components/WallpaperSearch.jsx';
 import WallpaperLoading from '../../components/WallpaperLoading.jsx';
+import ImportSuccessDialog from './ImportSuccessDialog.jsx';
 import { useDebouncedSearch } from '../../lib/useWallpaperSearch.js';
 
 export default function ScheduleWallpaper() {
@@ -81,6 +82,7 @@ export default function ScheduleWallpaper() {
   const [usageUnavailable, setUsageUnavailable] = useState(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
+  const [importResult, setImportResult] = useState(null);
   const request = useRef(null);
   const heading = useRef(null);
   const imagePicker = useRef(null);
@@ -185,7 +187,7 @@ export default function ScheduleWallpaper() {
       setSchedule(checked.data);
       setScheduleSource('image');
       trackEvent('schedule_import_succeeded', { ...properties, class_count: checked.data.classes.length, warning_count: checked.data.warnings.length, duration_ms: Math.round(performance.now() - started) });
-      setSuccess(`${checked.data.classes.length} ${checked.data.classes.length === 1 ? 'class' : 'classes'} found. Check the details.`);
+      setImportResult({ provider: data.provider === 'deepseek' ? 'deepseek' : 'gemini', classCount: checked.data.classes.length });
       return true;
     } catch (failure) {
       if (failure.response?.data?.usage) { rememberImportUsage(failure.response.data.usage); setImportUsage(failure.response.data.usage); setUsageUnavailable(false); }
@@ -252,7 +254,7 @@ export default function ScheduleWallpaper() {
       onCancelImport={cancelImport}
       imagePickerRef={imagePicker} preparingImage={preparingImage} onPreparingImageChange={setPreparingImage}
       onImage={(next) => { setImage(next); dismissNotification(); }}
-      onError={(message) => { setError(message); setSuccess(''); }} onAnalyze={analyze} importUsage={importUsage} usageUnavailable={usageUnavailable}
+      onError={(message) => { setError(message); setSuccess(''); }} onAnalyze={analyze} importUsage={importUsage} usageUnavailable={usageUnavailable} importError={error}
       onSample={() => {
         const sample = structuredClone(sampleSchedule);
         sample.classes[1].subject = '';
@@ -267,6 +269,7 @@ export default function ScheduleWallpaper() {
       <TemplateGallery previewStyle={previewStyle} onStyleChange={changeStyle} previewLayout={previewLayout} onLayoutChange={changeLayout} sort={sort} onSortChange={changeSort} device={device} onDeviceChange={changeDevice} category={search.get('collection')} onCategoryChange={changeCategory} selectedId={selectedId} settings={templateSettings} schedule={schedule} scheduleTitle={scheduleTitle} resolution={resolution} onSelect={selectTemplate} searchQuery={debouncedSearchQuery} onClearSearch={() => setSearchQuery('')} />
     </>}
     {step === 'design' && <BackToTop />}
-    <Toast message={error || success} kind={error ? 'error' : 'success'} onClose={dismissNotification} />
+    {importResult && <ImportSuccessDialog provider={importResult.provider} classCount={importResult.classCount} onClose={() => setImportResult(null)} onView={() => { setImportResult(null); requestAnimationFrame(() => document.querySelector('.flow-class-editor')?.scrollIntoView({ behavior: 'smooth', block: 'start' })); }} />}
+    <Toast message={success} kind="success" onClose={dismissNotification} />
   </section>;
 }

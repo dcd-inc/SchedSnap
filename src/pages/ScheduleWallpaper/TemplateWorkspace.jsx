@@ -18,13 +18,13 @@ import useDesignDownloads, { recordDesignDownload } from '../../lib/useDesignDow
 import useDesignLikes from '../../lib/useDesignLikes.js';
 import DownloadThanksDialog from '../../components/DownloadThanksDialog.jsx';
 
-export default function TemplateWorkspace({ step, onStep, template, defaultTemplate, schedule, resolution, scheduleSource, onScheduleSourceChange, onScheduleChange, onAppearanceChange, onResetAppearance, image, onImage, busy, onError, onAnalyze, importUsage, usageUnavailable, onSample, importOpen, onImportOpenChange: setImportOpen, onTitleChange, canCancelEntry, onCancelEntryChange: setCanCancelEntry, onCancelImport, imagePickerRef: imagePicker, preparingImage, onPreparingImageChange: setPreparingImage }) {
+export default function TemplateWorkspace({ step, onStep, template, defaultTemplate, schedule, resolution, scheduleSource, onScheduleSourceChange, onScheduleChange, onAppearanceChange, onResetAppearance, image, onImage, busy, onError, onAnalyze, importUsage, usageUnavailable, importError, onSample, importOpen, onImportOpenChange: setImportOpen, onTitleChange, canCancelEntry, onCancelEntryChange: setCanCancelEntry, onCancelImport, imagePickerRef: imagePicker, preparingImage, onPreparingImageChange: setPreparingImage }) {
   const [enlarged, setEnlarged] = useState(false);
   const [showClock, setShowClock] = useState(true);
   const previewClock = step !== 'classes' && showClock;
   const [customizing, setCustomizing] = useState(false);
-  const changeCustomizing = useCallback(next => { setCustomizing(next); setPreviewStuck(false); }, []);
   const [previewStuck, setPreviewStuck] = useState(false);
+  const changeCustomizing = useCallback(next => { setCustomizing(next); setPreviewStuck(false); }, []);
   const [reviewVersion, setReviewVersion] = useState(0);
   const [layout, setLayout] = useState(null);
   const [exporting, setExporting] = useState(false);
@@ -138,7 +138,7 @@ export default function TemplateWorkspace({ step, onStep, template, defaultTempl
   return <>
     {step === 'classes' ? <div className="classes-layout">
       <section className="classes-content" aria-label="Add and review classes">
-        <div hidden={hasSchedule && !importOpen}><Uploader importUsage={importUsage} usageUnavailable={usageUnavailable} pickerRef={imagePicker} image={image} onImage={(next) => { onImage(next); setImportOpen(true); }} onPreparing={setPreparingImage} onCancel={onCancelImport} onAnalyze={async () => { if (await onAnalyze()) { setCanCancelEntry(false); setImportOpen(false); setReviewVersion((value) => value + 1); } }} busy={busy} onError={onError} hasSchedule={hasSchedule} onManual={enterManually} onSample={() => { onSample(); setCanCancelEntry(true); setImportOpen(false); }} /></div>
+        <div hidden={hasSchedule && !importOpen && !importError}><Uploader importUsage={importUsage} usageUnavailable={usageUnavailable} pickerRef={imagePicker} image={image} error={importError} onOpen={() => setImportOpen(true)} onImage={(next) => { onImage(next); setImportOpen(true); }} onPreparing={setPreparingImage} onCancel={onCancelImport} onAnalyze={async () => { if (await onAnalyze()) { setCanCancelEntry(false); setImportOpen(false); setReviewVersion((value) => value + 1); } }} busy={busy} onError={onError} hasSchedule={hasSchedule} onManual={enterManually} onSample={() => { onSample(); setCanCancelEntry(true); setImportOpen(false); }} /></div>
         {hasSchedule && <div hidden={importOpen}>
           <fieldset disabled={busy} aria-busy={busy} className="flow-class-editor"><Editor scheduleSource={scheduleSource} validationRef={classEditor} key={reviewVersion} schedule={schedule} scheduleTitle={template.scheduleTitle} onTitleChange={onTitleChange} onChange={onScheduleChange} onImport={() => imagePicker.current?.openPicker()} preparingImage={preparingImage} /></fieldset>
           {!!warnings.length && <section className="review-warning-rows" aria-label="Review notes"><ul>{warnings.map(warning => <li key={warning} className="review-warning-row"><TriangleAlert size={20} aria-hidden="true" /><p>{warning}</p>{schedule.warnings.includes(warning) && !overlapWarnings.includes(warning) && <button type="button" className="button-secondary" onClick={() => onScheduleChange({ ...schedule, warnings: schedule.warnings.filter(note => note !== warning) })}>Mark resolved</button>}</li>)}</ul></section>}

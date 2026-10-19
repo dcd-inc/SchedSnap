@@ -18,8 +18,8 @@
 .class-day-label::after { content: '·'; font-weight: 400; color: var(--color-muted); }
 .class-edit-dialog { position: fixed; width: min(460px, calc(100vw - 32px)); max-height: calc(100dvh - 24px); margin: auto; padding: 20px; overflow-y: auto; border: 0; border-radius: 16px; background: white; color: var(--color-ink); }
 .class-edit-dialog::backdrop { background: rgb(15 23 42 / 45%); }
-.class-edit-dialog header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
-.class-edit-dialog h2 { font-size: 20px; font-weight: 650; }
+.class-edit-dialog header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--color-line); }
+.class-edit-dialog h2 { font-size: 18px; font-weight: 650; }
 .class-dialog-fields { display: grid; gap: 12px; }
 .flow-class-editor .class-edit-dialog .field-label { display: grid; min-width: 0; gap: 4px; }
 .class-edit-dialog .field-label > label { min-height: 0; font-size: 14px; }
@@ -27,18 +27,28 @@
 .flow-class-editor .class-edit-dialog .field-input[aria-invalid='true'] { background: #fffbeb; border-color: #b45309; }
 .class-dialog-times { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .class-shared-name-note { font-size: 13px; line-height: 1.5; color: var(--color-muted); }
-.class-edit-dialog footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 20px; }
-.class-edit-dialog footer > div { display: flex; gap: 12px; margin-left: auto; }
+.class-dialog-incomplete { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 16px; padding: 12px 14px; border: 1px solid #fcd34d; border-radius: 10px; background: #fffbeb; color: #b45309; font-size: 14px; line-height: 1.5; }
+.class-dialog-incomplete > svg { flex-shrink: 0; margin-top: 2px; }
+.class-dialog-incomplete-title { font-weight: 650; color: #92400e; }
+.class-dialog-view { display: grid; gap: 12px; }
+.class-dialog-view-row { display: grid; gap: 2px; }
+.class-dialog-view-row > dt { font-size: 13px; color: var(--color-muted); }
+.class-dialog-view-row > dd { font-size: 15px; color: var(--color-ink); overflow-wrap: anywhere; }
+.class-edit-dialog .class-dialog-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.class-edit-dialog .class-dialog-actions > button { width: 100%; min-height: 44px; }
+.class-edit-dialog footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--color-line); }
 .class-edit-dialog .class-dialog-delete { color: #923b2d; }
 .class-dialog-delete:hover { background: #f8e9e2; }
+@media (max-width: 1024px) {
+  .class-toolbar-label-full { display: none; }
+  .class-toolbar-label-short { display: inline; }
+}
 @media (max-width: 640px) {
   .flow-class-editor .row-class-editor .review-toolbar { flex-wrap: nowrap; gap: 8px; }
   .class-row-toolbar-actions { flex-wrap: nowrap; flex-shrink: 0; gap: 6px; margin-left: auto; }
   .wallpaper-flow .class-row-toolbar-actions button { padding-inline: 8px; gap: 5px; }
   .row-class-editor .schedule-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 15px; }
   .flow-class-editor .row-class-editor .schedule-title-control .icon-button { width: 28px; }
-  .class-toolbar-label-full { display: none; }
-  .class-toolbar-label-short { display: inline; }
   .class-edit-dialog { inset: auto 0 0; width: 100vw; max-width: 100vw; max-height: calc(100dvh - 16px); margin: 0; padding: 12px 20px max(20px, env(safe-area-inset-bottom)); border-radius: 20px 20px 0 0; }
   .class-edit-dialog::before { content: ''; display: block; width: 36px; height: 4px; margin: 0 auto 8px; border-radius: 99px; background: #cbd5e1; }
 }

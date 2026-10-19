@@ -4,7 +4,7 @@ import { createAnalyzeHandler as createHandler } from '../api/analyze.js';
 import { sampleSchedule } from '../src/assets/sampleSchedule.js';
 import { MAX_IMAGE_BYTES } from '../shared/uploadLimits.js';
 
-const createAnalyzeHandler = (options = {}) => createHandler({ usage: async () => ({ used: 1, limit: 10, resetsAt: Date.now() + 86400000, allowed: true }), ...options });
+const createAnalyzeHandler = (options = {}) => createHandler({ usage: Object.assign(async () => ({ used: 1, limit: 10, resetsAt: Date.now() + 86400000, allowed: true }), { release: async () => ({ used: 0, limit: 10, resetsAt: Date.now() + 86400000, allowed: true }) }), ...options });
 
 const image = { mimeType: 'image/png', image: Buffer.from([137, 80, 78, 71, 13, 10, 26, 10, 0]).toString('base64') };
 
@@ -17,12 +17,15 @@ test('daily limit blocks Gemini before spending quota and reports usage', async 
   assert.equal(response.body.usage.used, 10);
 });
 
-test('quota fallback consumes one daily attempt and failures include the updated counter', async () => {
+test('failed analysis refunds the reserved attempt and reports the refunded counter', async () => {
   let reservations = 0;
+  let releases = 0;
+  const usage = Object.assign(async () => { reservations++; return { used: 2, limit: 10, resetsAt: Date.now() + 10000, allowed: true }; }, { release: async () => { releases++; return { used: 1, limit: 10, resetsAt: Date.now() + 10000, allowed: true }; } });
   const response = responseStub();
-  await createAnalyzeHandler({ env: { GEMINI_API_KEYS: 'one,two' }, usage: async () => { reservations++; return { used: 2, limit: 10, resetsAt: Date.now() + 10000, allowed: true }; }, generate: async () => { throw Object.assign(new Error('quota'), { status: 429 }); } })({ method: 'POST', body: image }, response);
+  await createAnalyzeHandler({ env: { GEMINI_API_KEYS: 'one,two' }, usage, generate: async () => { throw Object.assign(new Error('quota'), { status: 429 }); } })({ method: 'POST', body: image }, response);
   assert.equal(reservations, 1);
-  assert.equal(response.body.usage.used, 2);
+  assert.equal(releases, 1);
+  assert.equal(response.body.usage.used, 1);
 });
 
 test('usage GET returns the shared counter without reserving an import', async () => {
@@ -98,8 +101,9 @@ test('handles absent schedules and malformed or invalid AI results', async () =>
   }
 });
 
-test('provider errors never leak secrets and expose useful recovery codes', async () => {
-  for (const [providerStatus, responseStatus, code] of [[400, 502, 'AI_REQUEST_REJECTED'], [429, 429, 'AI_RATE_LIMIT'], [403, 503, 'AI_UNAVAILABLE'], [404, 503, 'AI_UNAVAILABLE'], [500, 502, 'AI_ERROR']]) {
+test('provider errors never leak secrets and expose useful recovery codes', async (t) => {
+  t.mock.method(globalThis, 'setTimeout', (callback) => { callback(); return 0; });
+  for (const [providerStatus, responseStatus, code] of [[400, 502, 'AI_REQUEST_REJECTED'], [429, 429, 'AI_RATE_LIMIT'], [403, 503, 'AI_UNAVAILABLE'], [404, 503, 'AI_UNAVAILABLE'], [500, 503, 'AI_BUSY'], [503, 503, 'AI_BUSY']]) {
     const response = responseStub();
     await createAnalyzeHandler({ env: { GEMINI_API_KEY: 'test-secret' }, generate: async () => { throw Object.assign(new Error('test-secret provider internals'), { status: providerStatus }); } })({ method: 'POST', body: image }, response);
     assert.equal(response.statusCode, responseStatus);
@@ -138,8 +142,122 @@ test('fallback stops after both keys exhaust quota and never leaks provider deta
   assert.ok(!JSON.stringify(response.body).includes('secret'));
 });
 
+test('capacity spikes rotate keys, then one delayed attempt recovers without user-visible failure', async (t) => {
+  t.mock.method(globalThis, 'setTimeout', (callback) => { callback(); return 0; });
+  const calls = [];
+  const response = responseStub();
+  await createAnalyzeHandler({
+    env: { GEMINI_API_KEYS: 'first,second' },
+    generate: async (parameters, apiKey) => {
+      calls.push(apiKey);
+      if (calls.length < 3) throw Object.assign(new Error('overloaded'), { status: 503 });
+      return { text: JSON.stringify(sampleSchedule) };
+    },
+  })({ method: 'POST', body: image }, response);
+  assert.deepEqual(calls, ['first', 'second', 'first']);
+  assert.equal(response.statusCode, 200);
+  assert.deepEqual(response.body.schedule, sampleSchedule);
+});
+
+test('capacity spikes rotate to the next key and refund once every attempt is overloaded', async (t) => {
+  t.mock.method(globalThis, 'setTimeout', (callback) => { callback(); return 0; });
+  let calls = 0;
+  const response = responseStub();
+  await createAnalyzeHandler({
+    env: { GEMINI_API_KEY: 'primary-secret', GEMINI_FALLBACK_API_KEY: 'backup-secret' },
+    generate: async () => { calls++; throw Object.assign(new Error('overloaded'), { status: 503 }); },
+  })({ method: 'POST', body: image }, response);
+  assert.equal(calls, 3);
+  assert.equal(response.statusCode, 503);
+  assert.equal(response.body.error.code, 'AI_BUSY');
+  assert.equal(response.body.usage.used, 0);
+});
+
+test('DeepSeek runs only after every Gemini attempt fails', async () => {
+  const calls = [];
+  const response = responseStub();
+  await createAnalyzeHandler({
+    env: { GEMINI_API_KEY: 'gemini-secret', DEEPSEEK_API_KEY: 'deepseek-secret' },
+    generate: async (parameters, apiKey) => { calls.push(['gemini', apiKey]); throw Object.assign(new Error('quota'), { status: 429 }); },
+    generateDeepseek: async (parameters, apiKey) => { calls.push(['deepseek', apiKey, parameters.model]); return { text: JSON.stringify(sampleSchedule) }; },
+  })({ method: 'POST', body: image }, response);
+  assert.deepEqual(calls, [['gemini', 'gemini-secret'], ['deepseek', 'deepseek-secret', 'deepseek-v4-flash']]);
+  assert.equal(response.statusCode, 200);
+  assert.equal(response.body.provider, 'deepseek');
+  assert.deepEqual(response.body.schedule, sampleSchedule);
+});
+
+test('Gemini success skips DeepSeek, and DeepSeek works without Gemini keys', async () => {
+  let deepseekCalls = 0;
+  const geminiResponse = responseStub();
+  await createAnalyzeHandler({
+    env: { GEMINI_API_KEY: 'gemini-secret', DEEPSEEK_API_KEY: 'deepseek-secret' },
+    generate: async () => ({ text: JSON.stringify(sampleSchedule) }),
+    generateDeepseek: async () => { deepseekCalls++; return { text: JSON.stringify(sampleSchedule) }; },
+  })({ method: 'POST', body: image }, geminiResponse);
+  assert.equal(geminiResponse.statusCode, 200);
+  assert.equal(geminiResponse.body.provider, 'gemini');
+  assert.equal(deepseekCalls, 0);
+
+  const deepseekResponse = responseStub();
+  await createAnalyzeHandler({
+    env: { DEEPSEEK_API_KEY: 'deepseek-secret' },
+    generateDeepseek: async () => ({ text: JSON.stringify(sampleSchedule) }),
+  })({ method: 'POST', body: image }, deepseekResponse);
+  assert.equal(deepseekResponse.statusCode, 200);
+  assert.equal(deepseekResponse.body.provider, 'deepseek');
+  assert.deepEqual(deepseekResponse.body.schedule, sampleSchedule);
+});
+
+test('both providers failing refunds the attempt and surfaces AI_BUSY', async (t) => {
+  t.mock.method(globalThis, 'setTimeout', (callback) => { callback(); return 0; });
+  const response = responseStub();
+  await createAnalyzeHandler({
+    env: { GEMINI_API_KEY: 'gemini-secret', DEEPSEEK_API_KEY: 'deepseek-secret' },
+    generate: async () => { throw Object.assign(new Error('overloaded'), { status: 503 }); },
+    generateDeepseek: async () => { throw Object.assign(new Error('overloaded'), { status: 503 }); },
+  })({ method: 'POST', body: image }, response);
+  assert.equal(response.statusCode, 503);
+  assert.equal(response.body.error.code, 'AI_BUSY');
+  assert.equal(response.body.usage.used, 0);
+});
+
+test('DeepSeek fallback sends a strict JSON-mode vision request', async (t) => {
+  let request;
+  t.mock.method(globalThis, 'fetch', async (url, options) => {
+    request = { url, headers: new Headers(options.headers), body: JSON.parse(options.body) };
+    return new Response(JSON.stringify({ choices: [{ message: { content: `\`\`\`json\n${JSON.stringify(sampleSchedule)}\n\`\`\`` } }] }), { status: 200, headers: { 'Content-Type': 'application/json' } });
+  });
+  const response = responseStub();
+  await createAnalyzeHandler({
+    env: { GEMINI_API_KEY: 'gemini-secret', DEEPSEEK_API_KEY: 'deepseek-secret', DEEPSEEK_MODEL: 'deepseek-v4-flash' },
+    generate: async () => { throw Object.assign(new Error('quota'), { status: 429 }); },
+  })({ method: 'POST', body: image }, response);
+  assert.equal(request.url, 'https://api.deepseek.com/chat/completions');
+  assert.equal(request.headers.get('authorization'), 'Bearer deepseek-secret');
+  assert.equal(request.body.model, 'deepseek-v4-flash');
+  assert.equal(request.body.response_format.type, 'json_object');
+  assert.equal(request.body.thinking.type, 'disabled');
+  assert.match(request.body.messages[0].content, /Return only one JSON object/);
+  assert.match(request.body.messages[0].content, /Monday/);
+  assert.equal(request.body.messages[1].content[1].image_url.url, `data:image/png;base64,${image.image}`);
+  assert.equal(response.statusCode, 200);
+  assert.deepEqual(response.body.schedule, sampleSchedule);
+});
+
+test('DeepSeek invalid output is rejected and refunded', async () => {
+  const response = responseStub();
+  await createAnalyzeHandler({
+    env: { DEEPSEEK_API_KEY: 'deepseek-secret' },
+    generateDeepseek: async () => ({ text: 'not json' }),
+  })({ method: 'POST', body: image }, response);
+  assert.equal(response.statusCode, 502);
+  assert.equal(response.body.error.code, 'INVALID_AI_RESPONSE');
+  assert.equal(response.body.usage.used, 0);
+});
+
 test('no retry for unrelated errors or missing, blank, or duplicate backup keys', async () => {
-  for (const [status, backup] of [[400, 'backup'], [403, 'backup'], [500, 'backup'], [429, undefined], [429, ' '], [429, ' primary ']]) {
+  for (const [status, backup] of [[400, 'backup'], [403, 'backup'], [429, undefined], [429, ' '], [429, ' primary ']]) {
     let calls = 0;
     const response = responseStub();
     await createAnalyzeHandler({

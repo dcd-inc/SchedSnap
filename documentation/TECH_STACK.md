@@ -106,7 +106,7 @@ The API validates base64, payload length, and image signatures, then requests st
 
 Vercel functions have a 4.5 MB body limit. The browser accepts source files up to 10 MiB, decodes at most 40 megapixels, resizes to a maximum 2400px edge, and compresses to JPEG at most 3 MiB. The server rejects decoded images over 3 MiB and oversized encoded payloads. Transparency is flattened onto white before compression.
 
-`GEMINI_MODEL=gemini-3.1-flash-lite` is the verified configuration. Use this exact API ID, not the display name `Gemini 3.1 Flash Lite`. Quota is shared across the configured Google project. Free-tier processing has different data-use terms from the paid tier; the upload UI explains transmission to Google and asks students to crop out personal details they do not need to share.
+`GEMINI_MODEL=gemini-3.5-flash-lite` is the verified configuration. Use this exact API ID, not the display name `Gemini 3.5 Flash Lite`. Quota is shared across the configured Google project. Free-tier processing has different data-use terms from the paid tier; the upload UI explains transmission to Google and asks students to crop out personal details they do not need to share.
 
 Sources: [Vercel Vite support](https://vercel.com/docs/frameworks/frontend/vite), [Vercel local development](https://vercel.com/docs/cli/dev), [function limits](https://vercel.com/docs/functions/limitations), [Gemini model availability](https://ai.google.dev/gemini-api/docs/deprecations), [Gemini pricing](https://ai.google.dev/gemini-api/docs/pricing), [structured outputs](https://ai.google.dev/gemini-api/docs/structured-output), [GSAP React integration](https://www.npmjs.com/package/@gsap/react).
 

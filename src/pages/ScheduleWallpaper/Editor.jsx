@@ -1,5 +1,5 @@
 import { useEffect, useImperativeHandle, useRef, useState } from 'react';
-import { ChevronDown, CircleAlert, ImageUp, Pencil, Plus, Trash2, TriangleAlert, X } from 'lucide-react';
+import { Check, ChevronDown, CircleAlert, ImageUp, Pencil, Plus, Trash2, TriangleAlert, X } from 'lucide-react';
 import { days, getScheduleIssues } from '../../../shared/scheduleSchema.js';
 import { formatTime } from '../../utils/canvasHelpers.js';
 import './classEditDialog.css';
@@ -10,6 +10,7 @@ const meetingSummary = meeting => `${meeting.startTime ? formatTime(meeting.star
 function ClassDialog({ course, meetingIndex, isNew, showErrors, onSave, onDelete, onClose }) {
   const dialog = useRef(null);
   const [draft, setDraft] = useState(() => ({ subject: course.subject, courseCode: course.courseCode, meeting: { ...(course.meetings[meetingIndex] || newMeeting()) } }));
+  const [mode, setMode] = useState(isNew ? 'edit' : 'view');
   const [submitted, setSubmitted] = useState(showErrors);
   const [touched, setTouched] = useState({});
   const errors = {
@@ -39,9 +40,14 @@ function ClassDialog({ course, meetingIndex, isNew, showErrors, onSave, onDelete
   }
   const errorMessage = key => (submitted || touched[key]) && errors[key] ? <p className="field-error" id={`edit-class-${key}-error`}><CircleAlert size={14} aria-hidden="true" />{errors[key]}</p> : null;
   const updateMeeting = (key, value) => setDraft(previous => ({ ...previous, meeting: { ...previous.meeting, [key]: value || null } }));
+  const viewRows = [['Subject', draft.subject.trim()], ...(draft.courseCode ? [['Course code', draft.courseCode]] : []), ['Day', draft.meeting.day], ['Start time', draft.meeting.startTime ? formatTime(draft.meeting.startTime) : null], ['End time', draft.meeting.endTime ? formatTime(draft.meeting.endTime) : null], ['Room number', draft.meeting.room]];
   return <dialog ref={dialog} className="class-edit-dialog" aria-labelledby="class-edit-heading" onCancel={onClose} onClick={event => { if (event.target === event.currentTarget) onClose(); }}>
-    <header><h2 id="class-edit-heading">{isNew ? 'Add class' : 'Edit class'}</h2><button type="button" className="icon-button" aria-label="Close class editor" onClick={onClose}><X size={20} aria-hidden="true" /></button></header>
-    <form onSubmit={submit} noValidate>
+    <header><h2 id="class-edit-heading">{isNew ? 'Add class' : mode === 'view' ? draft.subject.trim() || 'Class details' : 'Edit class'}</h2><button type="button" className="icon-button" aria-label="Close class editor" onClick={onClose}><X size={20} aria-hidden="true" /></button></header>
+    {mode === 'view' ? <>
+      {Object.values(errors).some(Boolean) && <div className="class-dialog-incomplete" role="status"><TriangleAlert size={18} aria-hidden="true" /><div><p className="class-dialog-incomplete-title">Incomplete details</p><p>Edit this class to add missing details.</p></div></div>}
+      <dl className="class-dialog-view">{viewRows.map(([label, value]) => <div key={label} className="class-dialog-view-row"><dt>{label}</dt><dd>{value || '—'}</dd></div>)}</dl>
+      <footer className="class-dialog-actions"><button type="button" className="button-secondary class-dialog-delete" onClick={onDelete}><Trash2 size={16} aria-hidden="true" />Delete</button><button type="button" className="button-primary" autoFocus onClick={() => setMode('edit')}><Pencil size={16} aria-hidden="true" />Edit</button></footer>
+    </> : <form onSubmit={submit} noValidate>
       <div className="class-dialog-fields">
         <div className="field-label"><label htmlFor="edit-class-subject">Subject</label><input autoComplete="off" className="field-input" {...fieldProps('subject')} maxLength={160} value={draft.subject} onChange={event => setDraft({ ...draft, subject: event.target.value })} placeholder="Subject name" />{errorMessage('subject')}</div>
         <div className="field-label"><label htmlFor="edit-class-code">Course code <span className="field-optional">(optional)</span></label><input className="field-input" id="edit-class-code" maxLength={40} value={draft.courseCode || ''} onChange={event => setDraft({ ...draft, courseCode: event.target.value || null })} /></div>
@@ -50,8 +56,8 @@ function ClassDialog({ course, meetingIndex, isNew, showErrors, onSave, onDelete
         <div className="class-dialog-times">{['startTime', 'endTime'].map(key => <div key={key} className="field-label"><label htmlFor={`edit-class-${key}`}>{key === 'startTime' ? 'Start time' : 'End time'}</label><input className="field-input" {...fieldProps(key)} type="time" value={draft.meeting[key] || ''} onChange={event => updateMeeting(key, event.target.value)} />{errorMessage(key)}</div>)}</div>
         <div className="field-label"><label htmlFor="edit-class-room">Room number <span className="field-optional">(optional)</span></label><input className="field-input" id="edit-class-room" maxLength={80} value={draft.meeting.room || ''} onChange={event => updateMeeting('room', event.target.value)} /></div>
       </div>
-      <footer>{!isNew && <button type="button" className="button-secondary class-dialog-delete" onClick={onDelete}><Trash2 size={16} aria-hidden="true" />Delete</button>}<div><button type="button" className="button-secondary" onClick={onClose}>Cancel</button><button type="submit" className="button-primary">Save</button></div></footer>
-    </form>
+      <footer className="class-dialog-actions"><button type="button" className="button-secondary" onClick={onClose}><X size={16} aria-hidden="true" />Cancel</button><button type="submit" className="button-primary"><Check size={16} aria-hidden="true" />Save</button></footer>
+    </form>}
   </dialog>;
 }
 
@@ -70,7 +76,7 @@ function TitleDialog({ title, onSave, onClose }) {
     <header><h2 id="title-edit-heading">Edit schedule title</h2><button type="button" className="icon-button" aria-label="Close title editor" onClick={onClose}><X size={20} aria-hidden="true" /></button></header>
     <form onSubmit={event => { event.preventDefault(); onSave(value.trim() || 'Class Schedule'); }}>
       <div className="field-label"><label htmlFor="schedule-title">Title</label><input id="schedule-title" className="field-input" maxLength={48} value={value} onChange={event => setValue(event.target.value)} placeholder="Class Schedule" /></div>
-      <footer><div><button type="button" className="button-secondary" onClick={onClose}>Cancel</button><button type="submit" className="button-primary">Save</button></div></footer>
+      <footer className="class-dialog-actions"><button type="button" className="button-secondary" onClick={onClose}><X size={16} aria-hidden="true" />Cancel</button><button type="submit" className="button-primary"><Check size={16} aria-hidden="true" />Save</button></footer>
     </form>
   </dialog>;
 }
