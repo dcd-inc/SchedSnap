@@ -1,6 +1,6 @@
 # Original generative prints
 
-100 prints replace the original 24 in the active Patterns & prints collection: 35 geometric, 35 organic, and 30 playful. All are resolution-independent Canvas geometry, available on mobile (1080 × 2400), tablet (1600 × 2560), and laptop (1920 × 1080). The same renderer powers gallery previews, customization, and PNG downloads.
+200 prints replace the original 24 in the active Patterns & prints collection. The first 100 comprise 35 geometric, 35 organic, and 30 playful designs. A second set adds 35 architectural/textile compositions, 35 botanical prints, and 30 keepsake motifs. All are resolution-independent Canvas geometry, available on mobile (1080 × 2400), tablet (1600 × 2560), and laptop (1920 × 1080). The same renderer powers gallery previews, customization, and PNG downloads.
 
 ## Provenance
 
@@ -12,13 +12,23 @@ Each print exposes background, primary pattern, and accent colors; pattern size 
 
 Pattern tiles are generated locally at raster resolutions matched to the output size, avoiding enlarged low-resolution tiles in tablet exports. The cache caps both entry count (48) and pixel storage (32 MiB). Changing colors regenerates the tile; scale reuses it within a resolution bucket, while opacity reuses it unchanged. Transparent tiles allow the background color to remain independently editable. Patterns are deterministic across preview/export and do not require image downloads.
 
-## Validation
+## First-batch validation
 
 The completed implementation passed 260 active tests, the production build, and focused lint. Browser rendering exported all 100 designs at each device's full resolution: 300 background PNGs in `output/generative-patterns/mobile`, `output/generative-patterns/tablet`, and `output/generative-patterns/laptop`. Sample schedules fit every exported design without overflow. The export harness also found 100 distinct monochrome motif raster fingerprints on each device, comparing geometry independently of the preset palettes.
 
 All five customization properties changed rendered pixels for every design/device combination: background color, primary motif color, accent color, pattern size, and pattern opacity. Detailed per-export results are in `output/generative-patterns/verification.json`. Four contact sheets and representative full-resolution schedule previews sit alongside that report.
 
 The actual editor was exercised at 390px, 820px, and 1440px viewport widths. Keyboard changes to the size and opacity sliders updated the preview; Reset appearance restored the exact original preview pixels and default slider values. All three viewports passed the horizontal-overflow check. Captures are `output/generative-patterns/editor-{mobile,tablet,laptop}.png` and `preview-{mobile,tablet,laptop}.png`; `ui-check.mjs` records the exercised flow.
+
+## Second-batch validation
+
+The second batch adds 35 architectural/textile designs, 35 botanical designs, and 30 cute/cozy keepsakes, bringing the active collection to 200 original prints. All 200 presets include searchable motif, name, and description keywords alongside the existing color/style tags. Existing editor headings, control treatments, and schedule settings remain unchanged.
+
+The extended implementation passed 262 tests with no failures or skips, focused lint, and the production build. These results supersede the first batch's historical 260-test count. Browser validation generated 300 additional full-resolution background exports under `output/generative-patterns-wave2/{mobile,tablet,laptop}`, with 100 PNGs per device and no sample-schedule overflow. The new export report records visible pixel changes for all five customization properties on every new design/device combination.
+
+The second-batch browser harness also compares all 200 motifs at the same 240 × 240 logical tile size using an identical background, primary color, and accent color. All 200 raster fingerprints were distinct, avoiding palette or density differences as the basis for uniqueness. Evidence includes `output/generative-patterns-wave2/verification.json`, `tests.txt`, `build.txt`, four contact sheets, and representative schedule previews.
+
+These presets are rendered from local code. No Cloudinary artwork upload is needed; deploying the updated code makes the new built-in prints available through the live runtime catalog merge, while saved remote overrides and hidden/draft statuses retain precedence.
 
 ## Integration boundary
 

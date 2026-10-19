@@ -11,10 +11,10 @@ import { createLikesHandler } from '../api/likes.js';
 import { createDownloadsHandler } from '../api/downloads.js';
 import { searchWallpaperTemplates } from '../src/utils/wallpaperSearch.js';
 
-test('100 original motifs are discoverable, independently drawable, and publishable on every device', () => {
-  assert.equal(generativePatterns.length, 100);
-  assert.equal(new Set(generativePatterns.map(p => p.id)).size, 100);
-  assert.equal(new Set(generativePatterns.map(p => p.name)).size, 100);
+test('200 original motifs are discoverable, independently drawable, and publishable on every device', () => {
+  assert.equal(generativePatterns.length, 200);
+  assert.equal(new Set(generativePatterns.map(p => p.id)).size, 200);
+  assert.equal(new Set(generativePatterns.map(p => p.name)).size, 200);
   const signatures = new Set();
   for (const design of generativePatterns) {
     const commands = [];
@@ -33,7 +33,7 @@ test('100 original motifs are discoverable, independently drawable, and publisha
     assert.ok(commands.length > 5, `${design.id}: real geometry`);
     signatures.add(JSON.stringify(commands));
   }
-  assert.equal(signatures.size, 100, 'every motif has different geometry with identical colors/seed');
+  assert.equal(signatures.size, 200, 'every motif has different geometry with identical colors/seed');
   for (const template of generativePatternTemplates) {
     assert.ok(wallpaperTemplates.some(t => t.id === template.id));
     assert.ok(!template.mobileOnly && !template.image);
@@ -56,7 +56,7 @@ test('live catalogs retire the original 24 prints and include the new prints wit
   const remote = [...patternTemplates.map(t => ({ ...t, status: 'published' })), override, hidden, { id: 'other', status: 'published' }];
   const before = structuredClone(remote);
   const merged = withBuiltInPatterns(remote);
-  assert.equal(merged.filter(t => t.collection === 'pattern').length, 100);
+  assert.equal(merged.filter(t => t.collection === 'pattern').length, 200);
   assert.equal(merged.find(t => t.id === override.id).name, 'Saved edit');
   assert.equal(merged.find(t => t.id === hidden.id).status, 'hidden');
   assert.ok(merged.some(t => t.id === 'other'));
