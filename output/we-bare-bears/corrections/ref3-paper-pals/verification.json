@@ -1,0 +1,43 @@
+{
+  "provider": "built-in image_gen",
+  "reference": "user attachment 3",
+  "reason": "Replaced lavender solo Ice Bear set with correct dusty-pink trio stationery composition after visual QA.",
+  "assets": [
+    {
+      "device": "mobile",
+      "path": "public/wallpapers/scenic/wbb-paper-pals/mobile.png",
+      "size": [
+        1080,
+        2400
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "sha256": "4f23f6723267bb89fa289e71a17307dcf15bbef0fb698aa2a644b63994e3b729",
+      "prompt": "Use attachment 3 only: dusty pink We Bare Bears trio at the bottom edge. Mobile 9:20. Panda with black eye patches and ears, warm brown expressive Grizzly, calm white Ice Bear, all distinct, together at lower-right among a cream torn-paper corner and tiny heart doodles. Show-like clean 2D cartoon. Keep upper 78% and center clear pink; no text or writing, newspaper, lavender, solo bear, logo, UI, or watermark."
+    },
+    {
+      "device": "tablet",
+      "path": "public/wallpapers/scenic/wbb-paper-pals/tablet.png",
+      "size": [
+        1600,
+        2560
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "sha256": "771301624ca97b57555582cfb2e2321229dc42982d5a42edfac0c9be952dfa3f",
+      "prompt": "Use attachment 3 only: dusty pink We Bare Bears trio at bottom. Portrait tablet 5:8. Distinct clean 2D characters: Panda with round ears/black eye patches, warm brown round Grizzly, stoic white Ice Bear; all faces unobscured. Small group lower-right peeking behind a cream torn-paper scrap with one tiny heart. Upper 75% and broad left-center blank pink. No lavender reader, no text/writing, no newspaper, logo, UI, watermark."
+    },
+    {
+      "device": "laptop",
+      "path": "public/wallpapers/scenic/wbb-paper-pals/laptop.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "sha256": "cc5c86eaf268c1c72e7567ff873021b88e9430ca5bcd23a8067be16ef393178e",
+      "prompt": "Use attachment 3 only: dusty pink We Bare Bears trio at bottom. Landscape 16:9. Panda with bold black eye patches, brown expressive Grizzly, stoic white Ice Bear, clean recognizable 2D show-like art. Small trio peeking above one cream torn-paper corner at lower-right, one little heart; no face covered. Left 75% and top 78% clear pink. No text/writing, newspaper, lavender, logo, UI, watermark, border, or device."
+    }
+  ]
+}

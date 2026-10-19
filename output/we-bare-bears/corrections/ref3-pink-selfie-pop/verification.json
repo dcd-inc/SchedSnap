@@ -1,0 +1,42 @@
+{
+  "reason": "Replaced incorrect lavender single-bear reading set after visual review; matches reference 3 dusty-pink trio selfie composition.",
+  "provider": "built-in image_gen",
+  "generatedAt": "2026-10-13",
+  "sources": [
+    "output/we-bare-bears/corrections/ref3-pink-selfie-pop/mobile-source.png",
+    "output/we-bare-bears/corrections/ref3-pink-selfie-pop/tablet-source.png",
+    "output/we-bare-bears/corrections/ref3-pink-selfie-pop/laptop-source.png"
+  ],
+  "assets": [
+    {
+      "device": "mobile",
+      "path": "public/wallpapers/scenic/wbb-pink-selfie-pop/mobile.png",
+      "size": [
+        1080,
+        2400
+      ],
+      "mode": "RGB",
+      "sha256": "6cadd8008a29a7e88f20ce7e32f5e91903bc80e9965523c762a840985121c784"
+    },
+    {
+      "device": "tablet",
+      "path": "public/wallpapers/scenic/wbb-pink-selfie-pop/tablet.png",
+      "size": [
+        1600,
+        2560
+      ],
+      "mode": "RGB",
+      "sha256": "c1901661a0dbd57fc808b650abc3c769263344d735751d32e67080d34b93abba"
+    },
+    {
+      "device": "laptop",
+      "path": "public/wallpapers/scenic/wbb-pink-selfie-pop/laptop.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "mode": "RGB",
+      "sha256": "7336ae1892e8ea8c0305cc955f710b5ea9937da566a33591b58f9e87c48aecdd"
+    }
+  ]
+}

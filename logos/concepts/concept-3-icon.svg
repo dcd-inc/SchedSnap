@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title description">
+  <title id="title">SchedSnap wallpaper snap icon</title>
+  <desc id="description">A phone wallpaper containing three staggered class blocks, with a snap sparkle at the top right corner.</desc>
+  <g id="icon">
+    <rect x="100" y="52" width="260" height="408" rx="56" fill="#0f172a"/>
+    <rect x="126" y="78" width="208" height="356" rx="31" fill="#faf6ef"/>
+    <rect x="151" y="155" width="116" height="66" rx="14" fill="#0f172a"/>
+    <rect x="193" y="239" width="116" height="66" rx="14" fill="#526074"/>
+    <rect x="151" y="323" width="116" height="66" rx="14" fill="#0f172a"/>
+    <path d="M361 31 378 75 422 92 378 109 361 153 344 109 300 92 344 75Z" fill="#0f172a" stroke="#faf6ef" stroke-width="18" stroke-linejoin="round"/>
+  </g>
+</svg>

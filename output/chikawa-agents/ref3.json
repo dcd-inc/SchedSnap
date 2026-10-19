@@ -1,0 +1,124 @@
+{
+  "collection": "little-friends",
+  "family": "reference-3-red-cream-scrapbook",
+  "createdAt": "2026-10-13T14:07:27.368768+00:00",
+  "assets": [
+    {
+      "id": "chiikawa-strawberry-picnic",
+      "name": "Chiikawa Strawberry Picnic",
+      "reference": "Image #3 (style/composition reference)",
+      "styleSummary": "Retro red-and-cream scrapbook collage, gingham paper, strawberries and lace/doily-like cutouts, visible paper grain, character low or at the edge, open ivory central field.",
+      "deviceImages": {
+        "mobile": {
+          "path": "public/wallpapers/little-friends/chiikawa-strawberry-picnic/mobile.png",
+          "size": {
+            "width": 1080,
+            "height": 2400
+          },
+          "sourceFile": "C:\\Users\\picar\\.codex\\generated_images\\01a13585-8c57-7af0-9543-80eb0d19539a\\exec-133bd61e-6c53-4e79-81ef-ce202d6634d3.png"
+        },
+        "tablet": {
+          "path": "public/wallpapers/little-friends/chiikawa-strawberry-picnic/tablet.png",
+          "size": {
+            "width": 1600,
+            "height": 2560
+          },
+          "sourceFile": "C:\\Users\\picar\\.codex\\generated_images\\01a13585-8c57-7af0-9543-80eb0d19539a\\exec-50c01bea-158d-40cf-b789-f9900900286c.png"
+        },
+        "laptop": {
+          "path": "public/wallpapers/little-friends/chiikawa-strawberry-picnic/laptop.png",
+          "size": {
+            "width": 1920,
+            "height": 1080
+          },
+          "sourceFile": "C:\\Users\\picar\\.codex\\generated_images\\01a13585-8c57-7af0-9543-80eb0d19539a\\exec-9970cd08-14f2-449d-935b-ada8a34b5875.png"
+        }
+      },
+      "prompts": {
+        "mobile": "Use case: illustration-story. Asset: opaque full-bleed Chiikawa digital wallpaper, mobile portrait 1080x2400. Reference Image 3 is style and composition guidance only: retro red-and-cream scrapbook collage, handmade paper cutouts, gingham, strawberry embellishments, cute character placement, vintage print texture. Design 1 of 3, unique concept: Chiikawa carefully serving a strawberry shortcake picnic, character low-center beside a small layered cake on red gingham cloth; a few paper strawberries, cream lace doily fragments, tiny stitched hearts around the outer edges. Warm ivory graph-paper center with generous quiet open area behind a timetable, decorations mostly to margins and lower portion. Rich paper grain, cut-paper layers, screenprint texture, charming kawaii illustration. No text, letters, numbers, logo, UI, schedule, watermark, device frame. Full opaque artwork. Compose specifically for tall phone portrait.",
+        "tablet": "First composition, tablet portrait 1600x2560. Chiikawa shares strawberry shortcake at a red gingham picnic; character and cake lower-left quadrant, cream paper scrapbook field across center/right for schedule readability; torn doily, paper strawberries at borders. Retro cream/red, hand-cut collage, printed paper grain. Compose specifically for wider tablet portrait, don't reuse phone framing.",
+        "laptop": "First composition, laptop landscape 1920x1080. Chiikawa serves strawberry shortcake at a picnic, character and cake grouped on far right third, quiet cream graph-paper field across left/center for schedule readability; paper strawberries and red gingham along far edges. Retro cream/red scrapbook, cut-paper layers and print grain. Compose specifically landscape, don't reuse portrait framing."
+      },
+      "generator": "built-in image_gen",
+      "postProcessing": "Lanczos resize to exact SchedSnap target dimensions; RGB opaque PNG."
+    },
+    {
+      "id": "chiikawa-strawberry-market",
+      "name": "Chiikawa Strawberry Market",
+      "reference": "Image #3 (style/composition reference)",
+      "styleSummary": "Retro red-and-cream scrapbook collage, gingham paper, strawberries and lace/doily-like cutouts, visible paper grain, character low or at the edge, open ivory central field.",
+      "deviceImages": {
+        "mobile": {
+          "path": "public/wallpapers/little-friends/chiikawa-strawberry-market/mobile.png",
+          "size": {
+            "width": 1080,
+            "height": 2400
+          },
+          "sourceFile": "C:\\Users\\picar\\.codex\\generated_images\\01a13585-8c57-7af0-9543-80eb0d19539a\\exec-ffffd4cc-7130-4cdb-a015-4c7640d31cee.png"
+        },
+        "tablet": {
+          "path": "public/wallpapers/little-friends/chiikawa-strawberry-market/tablet.png",
+          "size": {
+            "width": 1600,
+            "height": 2560
+          },
+          "sourceFile": "C:\\Users\\picar\\.codex\\generated_images\\01a13585-8c57-7af0-9543-80eb0d19539a\\exec-3c726c7d-a781-4334-b00e-76e1a0ca1f09.png"
+        },
+        "laptop": {
+          "path": "public/wallpapers/little-friends/chiikawa-strawberry-market/laptop.png",
+          "size": {
+            "width": 1920,
+            "height": 1080
+          },
+          "sourceFile": "C:\\Users\\picar\\.codex\\generated_images\\01a13585-8c57-7af0-9543-80eb0d19539a\\exec-7777710a-fea7-48a2-a050-d6675e169626.png"
+        }
+      },
+      "prompts": {
+        "mobile": "Second distinct design, mobile portrait 1080x2400. Chiikawa explores a vintage strawberry market scrapbook: little basket of strawberries, character peeking from behind a berry crate near lower-right, layered red/cream gingham scraps, postage-edge paper and stitched fabric accents at edges; generous quiet ivory graph-paper central field for schedule. Retro printed collage and visible handmade paper grain, cheerful. Phone portrait-specific composition.",
+        "tablet": "Second design, tablet portrait 1600x2560. Chiikawa explores a strawberry market scrapbook with a small berry basket and crate; character near lower-left, red gingham and paper strawberry clusters at top corners and bottom edge, broad clean cream graph-paper space centrally for schedule. Retro handmade paper collage and print texture. Tablet portrait-specific composition.",
+        "laptop": "Second design, laptop landscape 1920x1080. Chiikawa at a strawberry market scrapbook, small berry basket and character grouped on left third; wide open ivory graph-paper space through middle/right for schedule, decorative gingham and strawberries at corners. Vintage red/cream handmade paper cutout style, subtle print grain. Landscape-specific."
+      },
+      "generator": "built-in image_gen",
+      "postProcessing": "Lanczos resize to exact SchedSnap target dimensions; RGB opaque PNG."
+    },
+    {
+      "id": "chiikawa-gingham-paper-boat",
+      "name": "Chiikawa Gingham Paper Boat",
+      "reference": "Image #3 (style/composition reference)",
+      "styleSummary": "Retro red-and-cream scrapbook collage, gingham paper, strawberries and lace/doily-like cutouts, visible paper grain, character low or at the edge, open ivory central field.",
+      "deviceImages": {
+        "mobile": {
+          "path": "public/wallpapers/little-friends/chiikawa-gingham-paper-boat/mobile.png",
+          "size": {
+            "width": 1080,
+            "height": 2400
+          },
+          "sourceFile": "C:\\Users\\picar\\.codex\\generated_images\\01a13585-8c57-7af0-9543-80eb0d19539a\\exec-f776777a-9017-42f5-a0ac-91a9a30cb03d.png"
+        },
+        "tablet": {
+          "path": "public/wallpapers/little-friends/chiikawa-gingham-paper-boat/tablet.png",
+          "size": {
+            "width": 1600,
+            "height": 2560
+          },
+          "sourceFile": "C:\\Users\\picar\\.codex\\generated_images\\01a13585-8c57-7af0-9543-80eb0d19539a\\exec-2162d205-7580-4011-9530-17de08c5682f.png"
+        },
+        "laptop": {
+          "path": "public/wallpapers/little-friends/chiikawa-gingham-paper-boat/laptop.png",
+          "size": {
+            "width": 1920,
+            "height": 1080
+          },
+          "sourceFile": "C:\\Users\\picar\\.codex\\generated_images\\01a13585-8c57-7af0-9543-80eb0d19539a\\exec-37a4b83c-7e6c-400d-a956-2ac9989aeb8e.png"
+        }
+      },
+      "prompts": {
+        "mobile": "Third distinct design, mobile portrait 1080x2400. Chiikawa on a tiny strawberry sailboat picnic, straw hat-like fruit leaf? avoid hats, Chiikawa itself: character sitting beside one strawberry on folded cream paper boat floating in stylized red gingham sea; minimal playful nautical stitched rope and paper waves only around lower corners, large calm ivory graph-paper center. Retro red/cream cut-paper scrapbook with paper texture. Phone portrait-specific.",
+        "tablet": "Third design, tablet portrait 1600x2560. Chiikawa on a tiny paper boat beside a strawberry, character near lower center-right, scalloped cream paper waves and red gingham fragments along bottom and outer edges, very open warm ivory center for schedule. Handmade retro red/cream scrapbook, stitched accents, light print grain. Tablet-specific framing.",
+        "laptop": "Third design, laptop landscape 1920x1080. Chiikawa in a tiny paper boat beside a strawberry, character on far right third among layered cream paper waves and red gingham; keep broad open warm ivory graph-paper area left and center for schedule. Retro red/cream scrapbook illustration with stitched paper details, print grain, landscape-specific framing."
+      },
+      "generator": "built-in image_gen",
+      "postProcessing": "Lanczos resize to exact SchedSnap target dimensions; RGB opaque PNG."
+    }
+  ]
+}

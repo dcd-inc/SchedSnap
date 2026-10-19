@@ -1,0 +1,26 @@
+{
+  "reviewedAt": "2026-10-14T03:58:09.629Z",
+  "priorRevision": "828ac2fa-d503-4ecb-9ad0-f6c65c8cba30",
+  "designs": [
+    "chikawa-task81-ref1-bluebell-watercolor",
+    "chikawa-task81-ref1-cobalt-screenprint",
+    "chikawa-task81-ref1-petal-collage",
+    "chikawa-task81-ref2-sakura-watercolor",
+    "chikawa-task81-ref2-sakura-cel",
+    "chikawa-task81-ref2-sakura-paper",
+    "chikawa-task81-ref3-strawberry-picnic",
+    "chikawa-task81-ref3-strawberry-market",
+    "chikawa-task81-ref3-paper-boat",
+    "chikawa-task81-ref4-gingham-picnic",
+    "chikawa-task81-ref4-gingham-stickerbook",
+    "chikawa-task81-ref4-gingham-patchwork"
+  ],
+  "uploadedAssetCount": 36,
+  "preservedCount": 229,
+  "preservedDigest": "07c238bb6246cff7061b1cb0580532c1d650b57223bd7fe5a195c6d85575a017",
+  "total": 241,
+  "revision": "828ac2fa-d503-4ecb-9ad0-f6c65c8cba30",
+  "verifiedAt": "2026-10-14T03:58:10.320Z",
+  "publishedDesignCount": 12,
+  "unaffectedRecordsPreserved": true
+}

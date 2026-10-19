@@ -1,0 +1,6 @@
+{
+  "provider": "Built-in image_gen (model identifier not exposed by tool)",
+  "constraint_delivery": "main-prompt constraints",
+  "composition": "A and C lower-left; B lower-right. Extra left candidate deliberately assigned to Calendar buddy.",
+  "requested_dimensions": "1536 × 1536 (native output preserved)"
+}

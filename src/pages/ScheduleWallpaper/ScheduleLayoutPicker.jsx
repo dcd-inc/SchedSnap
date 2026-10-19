@@ -1,11 +1,11 @@
+import ResponsiveDisclosure from '../../components/ResponsiveDisclosure.jsx';
 import { scheduleLayout, scheduleLayoutOptions } from '../../utils/canvasHelpers.js';
-import { ChevronDown, LayoutTemplate } from 'lucide-react';
+import { LayoutTemplate } from 'lucide-react';
 
 export default function ScheduleLayoutPicker({ template, onChange }) {
   const options = scheduleLayoutOptions(template.device);
   if (options.length < 2) return null;
-  return <details className="flow-customize schedule-layout-picker">
-    <summary className="disclosure-summary"><span><LayoutTemplate size={16} aria-hidden="true" />Schedule layout</span><ChevronDown className="disclosure-icon size-4" aria-hidden="true" /></summary>
+  return <ResponsiveDisclosure title="Schedule layout" icon={LayoutTemplate} className="flow-customize schedule-layout-picker">
     <fieldset className="schedule-layout-fieldset">
     <legend className="sr-only">Schedule layout</legend>
     <div className="schedule-layout-options">
@@ -16,5 +16,5 @@ export default function ScheduleLayoutPicker({ template, onChange }) {
       </label>)}
     </div>
     </fieldset>
-  </details>;
+  </ResponsiveDisclosure>;
 }

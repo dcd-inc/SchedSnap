@@ -1,0 +1,60 @@
+import { lazy, Suspense, useEffect } from 'react';
+import { Link, Route, Routes, useLocation } from 'react-router';
+import Navbar from './components/Navbar.jsx';
+import Footer from './components/Footer.jsx';
+import Home from './pages/Home.jsx';
+import DeviceGallery from './pages/DeviceGallery.jsx';
+import InAppBrowserBanner from './components/InAppBrowserBanner.jsx';
+import { CatalogProvider } from './lib/catalog.jsx';
+import PageSeo from './components/PageSeo.jsx';
+import CookieBanner from './components/CookieBanner.jsx';
+import AdminSignIn from './components/AdminSignIn.jsx';
+import WallpaperLoading from './components/WallpaperLoading.jsx';
+
+const ScheduleWallpaper = lazy(() => import('./pages/ScheduleWallpaper/Index.jsx'));
+const Admin = lazy(() => import('./pages/Admin.jsx'));
+const Legal = lazy(() => import('./pages/Legal.jsx'));
+const ScheduleGuide = lazy(() => import('./pages/ScheduleGuide.jsx'));
+
+export default function App() {
+  const { pathname, hash } = useLocation();
+  const isAdmin = pathname === '/admin' || pathname.startsWith('/admin/');
+
+  useEffect(() => {
+    const section = hash === '#designs' ? document.getElementById('designs') : null;
+    if (section) section.scrollIntoView({ behavior: 'instant' });
+    else window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [pathname, hash]);
+
+  return (<CatalogProvider>
+    <PageSeo />
+    <div className="flex min-h-dvh flex-col">
+      <a href="#main" className="skip-link">Skip to content</a>
+      {!isAdmin && <InAppBrowserBanner />}
+      {!isAdmin && <Navbar />}
+      <main id="main" className="flex-1" tabIndex={-1}>
+        <Suspense fallback={isAdmin ? <AdminSignIn checking /> : pathname.startsWith('/services/schedule-wallpaper') ? <WallpaperLoading /> : <p className="page-wrap py-20" role="status">Loading page…</p>}>
+          <Routes>
+            <Route path="/guides/class-schedule-wallpaper" element={<ScheduleGuide />} />
+            <Route path="/admin/*" element={<Admin />} />
+            <Route path="/terms" element={<Legal kind="terms" />} />
+            <Route path="/privacy" element={<Legal kind="privacy" />} />
+            <Route path="/cookies" element={<Legal kind="cookies" />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/wallpapers/:device" element={<DeviceGallery />} />
+            <Route path="/services/schedule-wallpaper/*" element={<ScheduleWallpaper />} />
+            <Route path="*" element={
+              <section className="page-wrap py-24">
+                <h1 className="text-4xl font-semibold">Page not found</h1>
+                <p className="mt-4 text-muted">Head back to SchedSnap to create your schedule wallpaper.</p>
+                <Link to="/" className="button-primary mt-8">Back to SchedSnap</Link>
+              </section>
+            } />
+          </Routes>
+        </Suspense>
+      </main>
+      {!isAdmin && !pathname.startsWith('/services/schedule-wallpaper') && <Footer />}
+      {!isAdmin && pathname !== '/cookies' && <CookieBanner />}
+    </div>
+  </CatalogProvider>);
+}

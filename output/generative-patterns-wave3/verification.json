@@ -1,0 +1,3913 @@
+{
+  "exports": 300,
+  "totalCollection": 300,
+  "all300UniqueAtIdenticalTileSizeAndColors": true,
+  "devices": [
+    "mobile",
+    "tablet",
+    "laptop"
+  ],
+  "uniqueMotifsPerDevice": 100,
+  "results": [
+    {
+      "id": "print-atelier-paisley",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-hemp-stitch",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-shippo",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-standing-steam",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-picot",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-eyelet",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-bobbin",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-chain-stitch",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-feather-stitch",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-satin-fans",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-french-knots",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-bead-ovals",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-lozenge-inlay",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-bargello",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-ikat-flames",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-brocade-filigree",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-celtic",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-battenberg",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-venetian",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-smocking",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-ribbon-braid",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-hemstitch",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-drawn-thread",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-passementerie",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-couching",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-copperplate",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-bookmarble",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-raku",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-wire-fleur",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-needle-crown",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-lace-pennants",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-soutache",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-tambour",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-lace-fans",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-cutwork",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-whale",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-penguin",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-puffin",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-seal",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-fox",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-snail",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-ladybug",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-bee",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-dragonfly",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-turtle",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-frog",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-otter",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-squirrel",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-hedgehog",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-raccoon",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-koala",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-sloth",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-duck",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-swan",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-octopus",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-crab",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-seahorse",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-manta",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-axolotl",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-bat",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-pear",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-pomegranate",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-dragonfruit",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-avocado",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-fig",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-persimmon",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-pineapple",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-kiwi",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-banana",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-peach",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-custard-pudding",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-macaron-box",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-iced-doughnuts",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-gelato-cones",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-ramen-evening",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-onigiri-picnic",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-sushi-rolls",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-peach-soda",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-chocolate-tablets",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-jam-pantry",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-parfait-glasses",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-storybook-castles",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-treasure-trunks",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-snow-globe",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-potion-pantry",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-magic-wands",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-tiny-crowns",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-crystal-futures",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-sewing-machines",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-yarn-nest",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-ferris-fair",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-puzzle-pieces",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-ballet-ribbons",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-tambourine-tunes",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-xylophone-play",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-little-easels",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-picnic-hampers",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-popcorn-party",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-bubble-tea",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-pancake-stack",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-paisley",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-hemp-stitch",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-shippo",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-standing-steam",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-picot",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-eyelet",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-bobbin",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-chain-stitch",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-feather-stitch",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-satin-fans",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-french-knots",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-bead-ovals",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-lozenge-inlay",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-bargello",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-ikat-flames",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-brocade-filigree",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-celtic",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-battenberg",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-venetian",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-smocking",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-ribbon-braid",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-hemstitch",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-drawn-thread",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-passementerie",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-couching",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-copperplate",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-bookmarble",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-raku",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-wire-fleur",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-needle-crown",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-lace-pennants",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-soutache",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-tambour",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-lace-fans",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-cutwork",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-whale",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-penguin",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-puffin",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-seal",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-fox",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-snail",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-ladybug",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-bee",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-dragonfly",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-turtle",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-frog",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-otter",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-squirrel",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-hedgehog",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-raccoon",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-koala",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-sloth",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-duck",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-swan",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-octopus",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-crab",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-seahorse",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-manta",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-axolotl",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-bat",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-pear",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-pomegranate",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-dragonfruit",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-avocado",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-fig",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-persimmon",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-pineapple",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-kiwi",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-banana",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-peach",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-custard-pudding",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-macaron-box",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-iced-doughnuts",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-gelato-cones",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-ramen-evening",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-onigiri-picnic",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-sushi-rolls",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-peach-soda",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-chocolate-tablets",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-jam-pantry",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-parfait-glasses",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-storybook-castles",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-treasure-trunks",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-snow-globe",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-potion-pantry",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-magic-wands",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-tiny-crowns",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-crystal-futures",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-sewing-machines",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-yarn-nest",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-ferris-fair",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-puzzle-pieces",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-ballet-ribbons",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-tambourine-tunes",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-xylophone-play",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-little-easels",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-picnic-hampers",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-popcorn-party",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-bubble-tea",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-pancake-stack",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-paisley",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-hemp-stitch",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-shippo",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-standing-steam",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-picot",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-eyelet",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-bobbin",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-chain-stitch",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-feather-stitch",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-satin-fans",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-french-knots",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-bead-ovals",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-lozenge-inlay",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-bargello",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-ikat-flames",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-brocade-filigree",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-celtic",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-battenberg",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-venetian",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-smocking",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-ribbon-braid",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-hemstitch",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-drawn-thread",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-passementerie",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-couching",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-copperplate",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-bookmarble",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-raku",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-wire-fleur",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-needle-crown",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-lace-pennants",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-soutache",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-tambour",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-lace-fans",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-atelier-cutwork",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-whale",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-penguin",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-puffin",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-seal",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-fox",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-snail",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-ladybug",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-bee",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-dragonfly",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-turtle",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-frog",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-otter",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-squirrel",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-hedgehog",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-raccoon",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-koala",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-sloth",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-duck",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-swan",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-octopus",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-crab",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-seahorse",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-manta",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-axolotl",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-bat",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-pear",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-pomegranate",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-dragonfruit",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-avocado",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-fig",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-persimmon",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-pineapple",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-kiwi",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-banana",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-story-peach",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-custard-pudding",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-macaron-box",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-iced-doughnuts",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-gelato-cones",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-ramen-evening",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-onigiri-picnic",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-sushi-rolls",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-peach-soda",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-chocolate-tablets",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-jam-pantry",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-parfait-glasses",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-storybook-castles",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-treasure-trunks",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-snow-globe",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-potion-pantry",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-magic-wands",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-tiny-crowns",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-crystal-futures",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-sewing-machines",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-yarn-nest",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-ferris-fair",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-puzzle-pieces",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-ballet-ribbons",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-tambourine-tunes",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-xylophone-play",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-little-easels",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-picnic-hampers",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-popcorn-party",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-bubble-tea",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-dream-pancake-stack",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    }
+  ]
+}

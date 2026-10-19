@@ -1,0 +1,150 @@
+{
+  "collection": "little-friends",
+  "reference": "Image #3: retro red/cream scrapbook and strawberry collage",
+  "generator": "built-in image_gen",
+  "postProcessing": "Lanczos resampling to exact SchedSnap target dimensions; RGB opaque PNG.",
+  "createdAt": "2026-10-14T03:38:48.327394+00:00",
+  "visualReview": "Contact sheet reviewed. Chiikawa is round white with tiny round ears, dot eyes, W mouth and blush hatches; Hachiware has pointed blue ears, blue cap marking and whiskers; Usagi has a cream/yellow body and long upright ears. Each orientation keeps a large calm graph-paper schedule field.",
+  "deviceSizes": {
+    "mobile": [
+      1080,
+      2400
+    ],
+    "tablet": [
+      1600,
+      2560
+    ],
+    "laptop": [
+      1920,
+      1080
+    ]
+  },
+  "assets": [
+    {
+      "id": "chiikawa-strawberry-picnic",
+      "device": "mobile",
+      "path": "output/chikawa-agents/ref3-final/chiikawa-strawberry-picnic-mobile.png",
+      "dimensions": {
+        "width": 1080,
+        "height": 2400
+      },
+      "mode": "RGB opaque",
+      "sourceGeneratedImage": "C:\\Users\\picar\\.codex\\generated_images\\01a13585-8c57-7af0-9543-80eb0d19539a\\exec-36571503-ec83-49f2-9fbd-e082370cc6c4.png",
+      "characterMaster": "public/wallpapers/little-friends/white-shy.png",
+      "sha256": "29c05222e73b28c177485717db7a45b35f7263365914c1c30ebc9ff6843a8f4e",
+      "prompt": "Use case: illustration-story. Asset type: opaque full-bleed wallpaper, composed specifically for mobile screen format. Reference Image 1 is the canonical Chiikawa identity reference; faithfully preserve those character-defining features described below. Reference Image 2 is a style reference: retro red-and-cream scrapbook collage, strawberry motifs, gingham fabric, torn paper and vintage doily/lace details. A nostalgic strawberry shortcake picnic. Chiikawa sits low-center beside a tiny cake on a red gingham cloth, a paper strawberry basket nearby. Torn cream lace paper and strawberry scraps decorate the outer border. Keep a large calm warm-ivory graph-paper area through the upper and middle center. Character identity: A small round white creature with a compact round body, two tiny rounded ears, tiny black dot eyes, a little W-shaped mouth, and pink cheeks with short hatch marks. No long ears, no pointed cat ears, no blue markings. Overall style: charming kawaii hand-cut paper illustration with warm textured print grain and a restrained vintage handmade finish. Character must be clear and unmistakable at wallpaper scale, not a generic mascot. Keep the described quiet graph-paper field uncluttered for schedule readability. Artwork only: no text, lettering, numbers, logo, timetable, UI, watermark, badge, or device frame."
+    },
+    {
+      "id": "chiikawa-strawberry-picnic",
+      "device": "tablet",
+      "path": "output/chikawa-agents/ref3-final/chiikawa-strawberry-picnic-tablet.png",
+      "dimensions": {
+        "width": 1600,
+        "height": 2560
+      },
+      "mode": "RGB opaque",
+      "sourceGeneratedImage": "C:\\Users\\picar\\.codex\\generated_images\\01a13585-8c57-7af0-9543-80eb0d19539a\\exec-f457c082-7a74-4108-93f3-67518de93705.png",
+      "characterMaster": "public/wallpapers/little-friends/white-shy.png",
+      "sha256": "67a351b3cdaad3bb27b9432cd2a2a8f4b62b16b50f0e476d14479ab143d6bfe8",
+      "prompt": "Use case: illustration-story. Asset type: opaque full-bleed wallpaper, composed specifically for tablet screen format. Reference Image 1 is the canonical Chiikawa identity reference; faithfully preserve those character-defining features described below. Reference Image 2 is a style reference: retro red-and-cream scrapbook collage, strawberry motifs, gingham fabric, torn paper and vintage doily/lace details. A strawberry shortcake picnic in a hand-layered paper scrapbook. Chiikawa and cake low-left; strawberry basket, red gingham patches and doily fragments along bottom and outer corners. Keep broad quiet cream graph-paper open space central and upper-right. Character identity: A small round white creature with a compact round body, two tiny rounded ears, tiny black dot eyes, a little W-shaped mouth, and pink cheeks with short hatch marks. No long ears, no pointed cat ears, no blue markings. Overall style: charming kawaii hand-cut paper illustration with warm textured print grain and a restrained vintage handmade finish. Character must be clear and unmistakable at wallpaper scale, not a generic mascot. Keep the described quiet graph-paper field uncluttered for schedule readability. Artwork only: no text, lettering, numbers, logo, timetable, UI, watermark, badge, or device frame."
+    },
+    {
+      "id": "chiikawa-strawberry-picnic",
+      "device": "laptop",
+      "path": "output/chikawa-agents/ref3-final/chiikawa-strawberry-picnic-laptop.png",
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      },
+      "mode": "RGB opaque",
+      "sourceGeneratedImage": "C:\\Users\\picar\\.codex\\generated_images\\01a13585-8c57-7af0-9543-80eb0d19539a\\exec-214cba69-f048-4ffd-966f-7508faeac88d.png",
+      "characterMaster": "public/wallpapers/little-friends/white-shy.png",
+      "sha256": "0ea78211e51112c4920018266d72bc11d223f7a7a618e08a54b34750a43f9e7f",
+      "prompt": "Use case: illustration-story. Asset type: opaque full-bleed wallpaper, composed specifically for laptop screen format. Reference Image 1 is the canonical Chiikawa identity reference; faithfully preserve those character-defining features described below. Reference Image 2 is a style reference: retro red-and-cream scrapbook collage, strawberry motifs, gingham fabric, torn paper and vintage doily/lace details. Landscape strawberry shortcake picnic. Chiikawa and little cake grouped at far right; generous quiet cream graph-paper field left and center. Paper strawberries, lace doily and red gingham scraps frame the distant edges. Character identity: A small round white creature with a compact round body, two tiny rounded ears, tiny black dot eyes, a little W-shaped mouth, and pink cheeks with short hatch marks. No long ears, no pointed cat ears, no blue markings. Overall style: charming kawaii hand-cut paper illustration with warm textured print grain and a restrained vintage handmade finish. Character must be clear and unmistakable at wallpaper scale, not a generic mascot. Keep the described quiet graph-paper field uncluttered for schedule readability. Artwork only: no text, lettering, numbers, logo, timetable, UI, watermark, badge, or device frame."
+    },
+    {
+      "id": "hachiware-strawberry-market",
+      "device": "mobile",
+      "path": "output/chikawa-agents/ref3-final/hachiware-strawberry-market-mobile.png",
+      "dimensions": {
+        "width": 1080,
+        "height": 2400
+      },
+      "mode": "RGB opaque",
+      "sourceGeneratedImage": "C:\\Users\\picar\\.codex\\generated_images\\01a13585-8c57-7af0-9543-80eb0d19539a\\exec-d8730667-2d46-4540-af7c-7b3552a24506.png",
+      "characterMaster": "public/wallpapers/little-friends/kitten-snooze.png",
+      "sha256": "5d27b1cc087a85c2d0cc40c5a8d1f63f6017532ada8b576f770a3fd1fd916ea9",
+      "prompt": "Use case: illustration-story. Asset type: opaque full-bleed wallpaper, composed specifically for mobile screen format. Reference Image 1 is the canonical Hachiware identity reference; faithfully preserve those character-defining features described below. Reference Image 2 is a style reference: retro red-and-cream scrapbook collage, strawberry motifs, gingham fabric, torn paper and vintage doily/lace details. A vintage strawberry market scrapbook. Hachiware peeks from beside a little strawberry crate and woven basket near lower-right, under a tiny red gingham stall awning. Paper berries and torn cream lace decorate the outside edges. Keep a large calm ivory graph-paper field central and above. Character identity: A clearly recognizable white cat character, Hachiware: two pointed triangular cat ears with blue ear tips, a strong soft-blue cap marking covering the top half of the head with a clean curved white split across the forehead, white muzzle and body, small black dot eyes, visible fine whiskers, and pink cheeks. No round bear ears and no long rabbit ears. Overall style: charming kawaii hand-cut paper illustration with warm textured print grain and a restrained vintage handmade finish. Character must be clear and unmistakable at wallpaper scale, not a generic mascot. Keep the described quiet graph-paper field uncluttered for schedule readability. Artwork only: no text, lettering, numbers, logo, timetable, UI, watermark, badge, or device frame."
+    },
+    {
+      "id": "hachiware-strawberry-market",
+      "device": "tablet",
+      "path": "output/chikawa-agents/ref3-final/hachiware-strawberry-market-tablet.png",
+      "dimensions": {
+        "width": 1600,
+        "height": 2560
+      },
+      "mode": "RGB opaque",
+      "sourceGeneratedImage": "C:\\Users\\picar\\.codex\\generated_images\\01a13585-8c57-7af0-9543-80eb0d19539a\\exec-a1dd2c92-9262-4926-a7d3-5b69f2f6faae.png",
+      "characterMaster": "public/wallpapers/little-friends/kitten-snooze.png",
+      "sha256": "261ef49aa8b35e076aecdfd99255e4fa095fe2f35f9fd727edb32a0233ef5c7a",
+      "prompt": "Use case: illustration-story. Asset type: opaque full-bleed wallpaper, composed specifically for tablet screen format. Reference Image 1 is the canonical Hachiware identity reference; faithfully preserve those character-defining features described below. Reference Image 2 is a style reference: retro red-and-cream scrapbook collage, strawberry motifs, gingham fabric, torn paper and vintage doily/lace details. Hand-cut strawberry-market scrapbook. Hachiware, blue cap marking and pointed cat ears clearly visible, stands low-left by one berry basket; red gingham awning scraps and paper strawberries stay at borders. Broad quiet warm-cream graph-paper field across the center and upper-right. Character identity: A clearly recognizable white cat character, Hachiware: two pointed triangular cat ears with blue ear tips, a strong soft-blue cap marking covering the top half of the head with a clean curved white split across the forehead, white muzzle and body, small black dot eyes, visible fine whiskers, and pink cheeks. No round bear ears and no long rabbit ears. Overall style: charming kawaii hand-cut paper illustration with warm textured print grain and a restrained vintage handmade finish. Character must be clear and unmistakable at wallpaper scale, not a generic mascot. Keep the described quiet graph-paper field uncluttered for schedule readability. Artwork only: no text, lettering, numbers, logo, timetable, UI, watermark, badge, or device frame."
+    },
+    {
+      "id": "hachiware-strawberry-market",
+      "device": "laptop",
+      "path": "output/chikawa-agents/ref3-final/hachiware-strawberry-market-laptop.png",
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      },
+      "mode": "RGB opaque",
+      "sourceGeneratedImage": "C:\\Users\\picar\\.codex\\generated_images\\01a13585-8c57-7af0-9543-80eb0d19539a\\exec-6c38e525-f995-41f2-a25f-45dfc8fd348f.png",
+      "characterMaster": "public/wallpapers/little-friends/kitten-snooze.png",
+      "sha256": "5f0b3ac4ea2b6780c1cdc23e7b5b9c342e853c6924483c4e95161491a5aa88a5",
+      "prompt": "Use case: illustration-story. Asset type: opaque full-bleed wallpaper, composed specifically for laptop screen format. Reference Image 1 is the canonical Hachiware identity reference; faithfully preserve those character-defining features described below. Reference Image 2 is a style reference: retro red-and-cream scrapbook collage, strawberry motifs, gingham fabric, torn paper and vintage doily/lace details. Landscape berry-market collage. Hachiware with pointed blue-tipped ears and blue cap marking beside one small strawberry basket at left third; spacious calm ivory graph-paper across center/right. Torn gingham canopy and paper berry cutouts frame the outside. Character identity: A clearly recognizable white cat character, Hachiware: two pointed triangular cat ears with blue ear tips, a strong soft-blue cap marking covering the top half of the head with a clean curved white split across the forehead, white muzzle and body, small black dot eyes, visible fine whiskers, and pink cheeks. No round bear ears and no long rabbit ears. Overall style: charming kawaii hand-cut paper illustration with warm textured print grain and a restrained vintage handmade finish. Character must be clear and unmistakable at wallpaper scale, not a generic mascot. Keep the described quiet graph-paper field uncluttered for schedule readability. Artwork only: no text, lettering, numbers, logo, timetable, UI, watermark, badge, or device frame."
+    },
+    {
+      "id": "usagi-gingham-paper-boat",
+      "device": "mobile",
+      "path": "output/chikawa-agents/ref3-final/usagi-gingham-paper-boat-mobile.png",
+      "dimensions": {
+        "width": 1080,
+        "height": 2400
+      },
+      "mode": "RGB opaque",
+      "sourceGeneratedImage": "C:\\Users\\picar\\.codex\\generated_images\\01a13585-8c57-7af0-9543-80eb0d19539a\\exec-a8d58f89-3cec-488d-bd24-66635e7ed4b1.png",
+      "characterMaster": "public/wallpapers/little-friends/bunny-smile.png",
+      "sha256": "b8b9fb920bd6bed06896e37cd52a05223efde30eb1c96fea31f01f52e76e1b8a",
+      "prompt": "Use case: illustration-story. Asset type: opaque full-bleed wallpaper, composed specifically for mobile screen format. Reference Image 1 is the canonical Usagi identity reference; faithfully preserve those character-defining features described below. Reference Image 2 is a style reference: retro red-and-cream scrapbook collage, strawberry motifs, gingham fabric, torn paper and vintage doily/lace details. Playful strawberry paper-boat scrapbook. Usagi's long ears stand upright as it rides in a folded cream paper boat with one strawberry, placed low-center among layered red gingham waves. Keep a generous quiet ivory graph-paper field above. Stitched paper details along the lower edges. Character identity: Usagi is a cream/yellow bunny with a compact rounded body and two very long upright rabbit ears, simple small eyes and pink cheeks. The long ears must be prominent and unmistakable, not small round ears or pointed cat ears. No blue markings. Overall style: charming kawaii hand-cut paper illustration with warm textured print grain and a restrained vintage handmade finish. Character must be clear and unmistakable at wallpaper scale, not a generic mascot. Keep the described quiet graph-paper field uncluttered for schedule readability. Artwork only: no text, lettering, numbers, logo, timetable, UI, watermark, badge, or device frame."
+    },
+    {
+      "id": "usagi-gingham-paper-boat",
+      "device": "tablet",
+      "path": "output/chikawa-agents/ref3-final/usagi-gingham-paper-boat-tablet.png",
+      "dimensions": {
+        "width": 1600,
+        "height": 2560
+      },
+      "mode": "RGB opaque",
+      "sourceGeneratedImage": "C:\\Users\\picar\\.codex\\generated_images\\01a13585-8c57-7af0-9543-80eb0d19539a\\exec-3d37bbc9-33dd-44f4-8db0-08cf81b63fa9.png",
+      "characterMaster": "public/wallpapers/little-friends/bunny-smile.png",
+      "sha256": "59e9eddf8ebb348a4b010835a1259684eba433dc818ab300b262cdd55ef10d57",
+      "prompt": "Use case: illustration-story. Asset type: opaque full-bleed wallpaper, composed specifically for tablet screen format. Reference Image 1 is the canonical Usagi identity reference; faithfully preserve those character-defining features described below. Reference Image 2 is a style reference: retro red-and-cream scrapbook collage, strawberry motifs, gingham fabric, torn paper and vintage doily/lace details. Usagi sails a tiny folded paper boat beside a strawberry in a playful paper-craft collage. Place Usagi low-right with both long upright ears fully visible; layered red gingham and cream stitched waves along bottom and corners. Broad calm ivory graph-paper across upper and center. Character identity: Usagi is a cream/yellow bunny with a compact rounded body and two very long upright rabbit ears, simple small eyes and pink cheeks. The long ears must be prominent and unmistakable, not small round ears or pointed cat ears. No blue markings. Overall style: charming kawaii hand-cut paper illustration with warm textured print grain and a restrained vintage handmade finish. Character must be clear and unmistakable at wallpaper scale, not a generic mascot. Keep the described quiet graph-paper field uncluttered for schedule readability. Artwork only: no text, lettering, numbers, logo, timetable, UI, watermark, badge, or device frame."
+    },
+    {
+      "id": "usagi-gingham-paper-boat",
+      "device": "laptop",
+      "path": "output/chikawa-agents/ref3-final/usagi-gingham-paper-boat-laptop.png",
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      },
+      "mode": "RGB opaque",
+      "sourceGeneratedImage": "C:\\Users\\picar\\.codex\\generated_images\\01a13585-8c57-7af0-9543-80eb0d19539a\\exec-b8f51e51-6a3f-41d8-87e3-943596a06b3e.png",
+      "characterMaster": "public/wallpapers/little-friends/bunny-smile.png",
+      "sha256": "39ead41ecc7998176dbd2b2162085b20decc0fb854b1ac9803c13c63b8bce1ef",
+      "prompt": "Use case: illustration-story. Asset type: opaque full-bleed wallpaper, composed specifically for laptop screen format. Reference Image 1 is the canonical Usagi identity reference; faithfully preserve those character-defining features described below. Reference Image 2 is a style reference: retro red-and-cream scrapbook collage, strawberry motifs, gingham fabric, torn paper and vintage doily/lace details. Landscape paper-boat collage. Usagi with two long upright ears and a folded cream boat carrying one strawberry grouped on far right; broad calm ivory graph-paper field left and center. Layered red gingham water, torn cream lace and stitched paper-wave details along the lower edge. Character identity: Usagi is a cream/yellow bunny with a compact rounded body and two very long upright rabbit ears, simple small eyes and pink cheeks. The long ears must be prominent and unmistakable, not small round ears or pointed cat ears. No blue markings. Overall style: charming kawaii hand-cut paper illustration with warm textured print grain and a restrained vintage handmade finish. Character must be clear and unmistakable at wallpaper scale, not a generic mascot. Keep the described quiet graph-paper field uncluttered for schedule readability. Artwork only: no text, lettering, numbers, logo, timetable, UI, watermark, badge, or device frame."
+    }
+  ]
+}

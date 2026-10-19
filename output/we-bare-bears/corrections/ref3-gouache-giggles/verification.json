@@ -1,0 +1,65 @@
+{
+  "reason": "Replaced the incorrect lavender Ice Bear reading/newspaper images with distinct dusty-pink trio selfie compositions after visual inspection.",
+  "provider": "built-in image_gen",
+  "generatedAt": "2026-10-14",
+  "sources": [
+    "output/we-bare-bears/corrections/ref3-gouache-giggles/mobile-source.png",
+    "output/we-bare-bears/corrections/ref3-gouache-giggles/tablet-source.png",
+    "output/we-bare-bears/corrections/ref3-gouache-giggles/laptop-source.png"
+  ],
+  "prompts": {
+    "mobile": "One finished 9:20 portrait mobile wallpaper, full-bleed solid dusty rose pink. Reference image 3 guides mood and the playful trio-at-bottom composition only. Clean flat 2D We Bare Bears television-cartoon style, gentle pastel gouache texture, crisp dark outlines. Exactly three recognizable friends grouped at the lower right, occupying the bottom 20%: Panda is white with black ears and obvious round black eye patches; cheerful warm-brown Grizzly; stoic white Ice Bear with tiny black eyes. They lean together for a selfie; Panda holds up a small plain black phone. All three faces are clearly visible and correctly colored. The upper 80% is uninterrupted dusty pink schedule space. No lavender, newspaper, reading, other characters, text, logos, watermark, border, frame, or interface.",
+    "tablet": "One finished 5:8 portrait tablet wallpaper, full-bleed solid dusty rose pink, using reference image 3 only for its playful trio-at-bottom composition. Clean flat 2D We Bare Bears television cartoon, gentle pastel gouache texture, crisp dark outlines. Exactly three recognizable friends grouped at the lower left under 22% of canvas height: Panda with black ears and unmistakable round black eye patches, cheerful warm-brown Grizzly stretching an arm around the others, and stoic white Ice Bear with tiny black eyes. Panda waves; all heads and faces unobscured. Leave broad pink space above and open space on the right for schedule. No lavender, newspaper, reading, other characters, text, logos, watermark, border, frame, or interface.",
+    "laptop": "One polished 16:9 landscape laptop wallpaper in clean flat 2D We Bare Bears television-cartoon style with subtle pastel gouache texture and crisp dark outlines. Full-bleed solid dusty rose pink. Exactly three recognizable friends pose together at the bottom right: Panda with unmistakable black eye patches and black ears, happy warm-brown Grizzly, and stoic white Ice Bear with tiny black eyes. Panda raises a small plain black phone for a selfie while Grizzly waves and Ice Bear poses calmly. Keep faces and upper bodies visible. Preserve broad uninterrupted pink schedule space across the left two thirds and upper half. No lavender, lone bear, newspaper, reading, extra characters, text, branding, watermark, frame, or interface."
+  },
+  "processing": "Each device was generated as a separate composition, then Lanczos-resized directly to the exact target dimensions and saved as opaque RGB PNG. No crop or stretch beyond the sub-0.1% aspect-ratio normalization.",
+  "visualReview": "All three device files show Panda with unmistakable black eye patches, brown Grizzly, and white stoic Ice Bear together on dusty rose. The compositions are distinct by device and preserve clear pink schedule space. No upload was performed.",
+  "assets": [
+    {
+      "device": "mobile",
+      "path": "public/wallpapers/scenic/wbb-gouache-giggles/mobile.png",
+      "size": [
+        1080,
+        2400
+      ],
+      "mode": "RGB",
+      "cornerRgb": [
+        235,
+        179,
+        189
+      ],
+      "sha256": "be93c8d47919c51e4dc1b0f45338f371e2772e9ef495ee25d894784e8ffe81c8"
+    },
+    {
+      "device": "tablet",
+      "path": "public/wallpapers/scenic/wbb-gouache-giggles/tablet.png",
+      "size": [
+        1600,
+        2560
+      ],
+      "mode": "RGB",
+      "cornerRgb": [
+        235,
+        181,
+        190
+      ],
+      "sha256": "ee4002b03bd4bb4cabb9dd4b09d7b6b9138c498a5e471b9bddd42a06cec0a229"
+    },
+    {
+      "device": "laptop",
+      "path": "public/wallpapers/scenic/wbb-gouache-giggles/laptop.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "mode": "RGB",
+      "cornerRgb": [
+        236,
+        184,
+        193
+      ],
+      "sha256": "ad25e26c72d7e7c135b1edf15b0e7121acbc3099bd44ed7edf165b60f5fc5cae"
+    }
+  ],
+  "upload": "not uploaded"
+}

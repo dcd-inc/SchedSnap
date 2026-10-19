@@ -1,0 +1,175 @@
+{
+  "theme": "Chiikawa",
+  "referenceImage": "C:\\Users\\picar\\.codex\\attachments\\74d18602-90f5-48ae-8aa3-b182affe434a\\image-2.png",
+  "generator": "built-in image_gen",
+  "processing": "Each device composition generated independently; aspect-preserving center crop and Lanczos resample to the exact target, opaque RGB PNG.",
+  "designs": [
+    {
+      "slug": "sakura-swing-watercolor",
+      "name": "Cherry Blossom Swing",
+      "description": "Chiikawa, Hachiware, and Usagi enjoy swings beneath a rosy spring canopy in a gentle watercolor picture-book scene.",
+      "palette": [
+        "blush pink",
+        "pale turquoise",
+        "fresh meadow green",
+        "warm cream"
+      ],
+      "style": "watercolor picture-book, colored pencil, fine paper grain"
+    },
+    {
+      "slug": "sakura-swing-cel",
+      "name": "Sakura Spring Cel",
+      "description": "The trio drift beneath luminous cherry blossoms in a polished Japanese animation background.",
+      "palette": [
+        "rose pink",
+        "sky blue",
+        "mint green",
+        "soft ivory"
+      ],
+      "style": "Japanese cel-animation background painting, delicate ink lines, soft gradients"
+    },
+    {
+      "slug": "sakura-swing-paper",
+      "name": "Paper Blossom Swings",
+      "description": "A tactile layered-paper spring scene of three friends swinging beside a quiet stream.",
+      "palette": [
+        "petal pink",
+        "pastel mint",
+        "powder blue",
+        "warm paper beige"
+      ],
+      "style": "hand-cut layered-paper collage, fibrous texture, translucent gouache"
+    }
+  ],
+  "assets": [
+    {
+      "design": "sakura-swing-watercolor",
+      "device": "mobile",
+      "path": "public/wallpapers/little-friends/sakura-swing-watercolor/mobile.png",
+      "size": "1080x2400",
+      "prompt": "Use case: illustration-story. Asset type: opaque full-bleed SchedSnap wallpaper, mobile 1080x2400. Input image #2 is a composition and mood reference only: soft pink cherry blossoms, a wide branch with three hanging swings, a tiny trio, meadow and distant hills. Depict Chiikawa, Hachiware, and Usagi as the three cute recognizable round friends sitting on separate swings beneath the tree, in a gentle hand-painted watercolor picture-book style with paper grain, rosy canopy, petals, pale turquoise stream and fresh meadow. Tall portrait composition; branch and blossoms frame the upper area, trio clearly visible in lower-middle, central area kept airy and low-detail for future schedule readability. Original illustration; no copying the reference characters. No text, letters, numbers, schedule, logo, UI, border, watermark."
+    },
+    {
+      "design": "sakura-swing-watercolor",
+      "device": "tablet",
+      "path": "public/wallpapers/little-friends/sakura-swing-watercolor/tablet.png",
+      "size": "1600x2560",
+      "prompt": "Use case: illustration-story. Asset type: opaque full-bleed SchedSnap wallpaper, tablet portrait 1600x2560. Input image #2 guides only the pastel cherry blossom canopy, branch with three hanging swings, tiny trio, meadow, river and soft hills. Depict Chiikawa, Hachiware and Usagi, the three recognizable round friends, sitting on separate swings beneath the flowering branch. Soft watercolor and colored-pencil storybook texture, dusty pink canopy and petals, pale cyan water, tender spring green meadow. Compose specifically for tall tablet portrait: elegant branch spans upper quarter, trio arranged across the lower third, substantial calm low-detail open middle field for schedule readability. Opaque full bleed. No text, numbers, writing, logos, UI, frame, watermark."
+    },
+    {
+      "design": "sakura-swing-watercolor",
+      "device": "laptop",
+      "path": "public/wallpapers/little-friends/sakura-swing-watercolor/laptop.png",
+      "size": "1920x1080",
+      "prompt": "Use case: illustration-story. Asset type: full-bleed SchedSnap wallpaper, laptop/desktop landscape 1920x1080. Input image #2 guides only its pink blossom tree, three swing trio and pastel riverside mood. Original scene with Chiikawa, Hachiware, and Usagi sitting on three separate swings beneath a wide flowering cherry branch. Watercolor and colored-pencil storybook finish, subtle paper texture, rose petals, pale blue stream and green meadow. Compose specifically wide: branch sweeps across top, trio centered along lower-middle, scenic breathing room at both sides, restrained low-detail open middle field for future schedule readability. No text, letters, numbers, schedule, logo, UI, border, watermark."
+    },
+    {
+      "design": "sakura-swing-cel",
+      "device": "mobile",
+      "path": "public/wallpapers/little-friends/sakura-swing-cel/mobile.png",
+      "size": "1080x2400",
+      "prompt": "Use case: illustration-story. Asset type: opaque full-bleed SchedSnap wallpaper, mobile portrait 1080x2400. Input image #2 is only a guide to pink cherry blossoms, three rope swings from a horizontal branch, cute trio, meadow and hills. Create an original Chiikawa, Hachiware and Usagi scene with the three little friends seated on separate swings. Distinct style: polished Japanese cel-animation background painting with delicate ink lines, velvety pastel gradients, soft luminous spring light, floating petals and a pale turquoise stream. Tall portrait framing, blossoming branch overhead, friends grouped in lower-middle, open gentle low-detail center for schedule readability. Do not replicate source image characters. No text, letters, numbers, schedule, logo, UI, frame, watermark."
+    },
+    {
+      "design": "sakura-swing-cel",
+      "device": "tablet",
+      "path": "public/wallpapers/little-friends/sakura-swing-cel/tablet.png",
+      "size": "1600x2560",
+      "prompt": "Use case: illustration-story. Asset type: opaque full-bleed SchedSnap wallpaper, tablet portrait 1600x2560. Input image #2 provides composition only: cherry blossom branch with three dangling swings, little trio, meadow, river and far hills. Draw Chiikawa, Hachiware and Usagi sitting on their own swings. Refined Japanese animation background style, delicate ink contours, soft painted gradients and drifting petals, spring pinks, clear sky blue, mint stream and green meadow. Compose for tall tablet: canopy and branch at top, friends across lower third, middle kept spacious and low detail to allow future schedule text overlay. Original scene. No text, letters, numbers, schedule, logo, UI, frame, watermark."
+    },
+    {
+      "design": "sakura-swing-cel",
+      "device": "laptop",
+      "path": "public/wallpapers/little-friends/sakura-swing-cel/laptop.png",
+      "size": "1920x1080",
+      "prompt": "Use case: illustration-story. Asset type: opaque full-bleed SchedSnap wallpaper, laptop/desktop landscape 1920x1080. Input image #2 guides only the pink blossom tree, three dangling swings, trio placement and pastel riverside mood. Original Chiikawa, Hachiware and Usagi sit on their own swings beneath a broad flowering cherry branch. Refined Japanese cel-animation background painting with clean expressive ink contours, subtle painted gradients, luminous spring light, drifting rose petals, pale turquoise water and green meadow. Compose specifically wide: branch sweeps across upper width, friends clear along lower-middle, open quiet central space for schedule readability and breathing room at both sides. No text, letters, numbers, schedule, logo, UI, frame, watermark."
+    },
+    {
+      "design": "sakura-swing-paper",
+      "device": "mobile",
+      "path": "public/wallpapers/little-friends/sakura-swing-paper/mobile.png",
+      "size": "1080x2400",
+      "prompt": "Use case: illustration-story. Asset type: opaque full-bleed SchedSnap wallpaper, mobile portrait 1080x2400. Input image #2 is a composition mood guide only: pastel cherry blossoms, horizontal bough and three rope swings, small trio over a river meadow. Original Chiikawa, Hachiware and Usagi on three little swings. Distinct style: tactile handmade layered-paper collage, softly cut rounded silhouettes, delicate visible paper fibers and translucent gouache washes, blush blossom shapes and fluttering petals, pastel mint meadow and blue stream. Tall portrait framing with canopy above, trio lower-middle, calm airy middle zone for future schedule readability. No text, letters, numbers, schedule, logo, UI, border, watermark."
+    },
+    {
+      "design": "sakura-swing-paper",
+      "device": "tablet",
+      "path": "public/wallpapers/little-friends/sakura-swing-paper/tablet.png",
+      "size": "1600x2560",
+      "prompt": "Use case: illustration-story. Asset type: opaque full-bleed SchedSnap wallpaper, tablet portrait 1600x2560. Input image #2 guides the scene layout and pastel mood only: blossoms on wide branch, three dangling swings holding a tiny trio, riverside meadow. Show original Chiikawa, Hachiware and Usagi, each seated on one swing. Handmade layered-paper collage illustration, tactile fibrous paper texture, rounded cut shapes, subtle gouache bloom, blush pink petals, soft blue water and spring green. Tall tablet-specific composition: tree canopy near top, trio across lower third, central span open and low-detail for future schedule legibility. No text, writing, numbers, schedule, logo, UI, border, watermark."
+    },
+    {
+      "design": "sakura-swing-paper",
+      "device": "laptop",
+      "path": "public/wallpapers/little-friends/sakura-swing-paper/laptop.png",
+      "size": "1920x1080",
+      "prompt": "Use case: illustration-story. Asset type: opaque full-bleed SchedSnap wallpaper, laptop/desktop landscape 1920x1080. Input image #2 guides the soft cherry-blossom swing-trio mood only. Original Chiikawa, Hachiware and Usagi each seated on a separate swing beneath a broad flowering bough. Handmade layered-paper collage with tactile fibers, softly cut rounded forms, translucent gouache, pink canopy and petals, mint meadow, pale blue stream. Compose specifically wide with branch sweeping overhead, trio centered along lower middle, scenic breathing room on both sides and calmer central field for future schedule readability. No text, writing, numbers, schedule, logo, UI, frame, watermark."
+    }
+  ],
+  "characterIdentityReview": {
+    "reviewedAt": "2026-10-14",
+    "status": "refined",
+    "referenceMasters": [
+      "public/wallpapers/little-friends/white-shy.png",
+      "public/wallpapers/little-friends/kitten-snooze.png",
+      "public/wallpapers/little-friends/bunny-smile.png"
+    ],
+    "visualPrompt": "Edit existing wallpaper using three Little Friends masters as identity references. Preserve spring swing scene, style, background, composition and lighting. Refine characters in place: Hachiware left is round white kitten with two distinct pointed cat ears and blue split cap-like crown marking; Chiikawa center is nearly round white friend with two tiny round ears and pink cheek hatch marks; Usagi right is pale cream with two long upright rabbit ears and pink cheek hatch marks. Keep same swings, poses, scale. No scenery/prop changes, text, logo, UI, watermark.",
+    "generatedAssets": [
+      {
+        "design": "sakura-swing-watercolor",
+        "device": "mobile",
+        "generatedEdit": "C:\\Users\\picar\\.codex\\generated_images\\01a13585-8198-7e21-8ec5-59f8cb19dd60\\exec-c521cbe3-e08a-4b01-90dc-6f29d8403223.png",
+        "finalPath": "public/wallpapers/little-friends/sakura-swing-watercolor/mobile.png"
+      },
+      {
+        "design": "sakura-swing-watercolor",
+        "device": "tablet",
+        "generatedEdit": "C:\\Users\\picar\\.codex\\generated_images\\01a13585-8198-7e21-8ec5-59f8cb19dd60\\exec-a5132a8f-6c34-44c9-9fcc-34a78ba03ec3.png",
+        "finalPath": "public/wallpapers/little-friends/sakura-swing-watercolor/tablet.png"
+      },
+      {
+        "design": "sakura-swing-watercolor",
+        "device": "laptop",
+        "generatedEdit": "C:\\Users\\picar\\.codex\\generated_images\\01a13585-8198-7e21-8ec5-59f8cb19dd60\\exec-4446dc3a-843b-4dbd-85dd-c6dee37964ba.png",
+        "finalPath": "public/wallpapers/little-friends/sakura-swing-watercolor/laptop.png"
+      },
+      {
+        "design": "sakura-swing-cel",
+        "device": "mobile",
+        "generatedEdit": "C:\\Users\\picar\\.codex\\generated_images\\01a13585-8198-7e21-8ec5-59f8cb19dd60\\exec-e16222f9-a4a1-411d-a1ea-5a875fcd22a7.png",
+        "finalPath": "public/wallpapers/little-friends/sakura-swing-cel/mobile.png"
+      },
+      {
+        "design": "sakura-swing-cel",
+        "device": "tablet",
+        "generatedEdit": "C:\\Users\\picar\\.codex\\generated_images\\01a13585-8198-7e21-8ec5-59f8cb19dd60\\exec-da81602d-e491-4143-9e9a-6c7afda760a6.png",
+        "finalPath": "public/wallpapers/little-friends/sakura-swing-cel/tablet.png"
+      },
+      {
+        "design": "sakura-swing-cel",
+        "device": "laptop",
+        "generatedEdit": "C:\\Users\\picar\\.codex\\generated_images\\01a13585-8198-7e21-8ec5-59f8cb19dd60\\exec-57d49d37-52bc-4e5e-881e-136f18d4246d.png",
+        "finalPath": "public/wallpapers/little-friends/sakura-swing-cel/laptop.png"
+      },
+      {
+        "design": "sakura-swing-paper",
+        "device": "mobile",
+        "generatedEdit": "C:\\Users\\picar\\.codex\\generated_images\\01a13585-8198-7e21-8ec5-59f8cb19dd60\\exec-2f77165b-fe99-4caf-9105-5f99cd18d80b.png",
+        "finalPath": "public/wallpapers/little-friends/sakura-swing-paper/mobile.png"
+      },
+      {
+        "design": "sakura-swing-paper",
+        "device": "tablet",
+        "generatedEdit": "C:\\Users\\picar\\.codex\\generated_images\\01a13585-8198-7e21-8ec5-59f8cb19dd60\\exec-e261af93-5ca4-458c-a475-dd90a6f43d0e.png",
+        "finalPath": "public/wallpapers/little-friends/sakura-swing-paper/tablet.png"
+      },
+      {
+        "design": "sakura-swing-paper",
+        "device": "laptop",
+        "generatedEdit": "C:\\Users\\picar\\.codex\\generated_images\\01a13585-8198-7e21-8ec5-59f8cb19dd60\\exec-4378df5f-4446-4388-95db-845d4c2eac56.png",
+        "finalPath": "public/wallpapers/little-friends/sakura-swing-paper/laptop.png"
+      }
+    ]
+  }
+}

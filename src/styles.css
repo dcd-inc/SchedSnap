@@ -204,8 +204,12 @@
 .import-footer .import-submit-actions { flex-shrink: 0; }
 .import-replacement-warning { display: flex; align-items: flex-start; gap: 8px; margin-top: 16px; font-size: 13px; line-height: 1.5; color: #923b2d; }
 .import-replacement-warning svg { flex-shrink: 0; margin-top: 2px; }
-.review-notes { margin-top: 16px; border-block: 1px solid var(--color-line); font-size: 14px; }
-.review-notes ul { padding: 0 0 16px 20px; list-style: disc; color: var(--color-muted); }
+.review-warning-rows { margin-top: 16px; }
+.review-warning-rows ul { display: grid; gap: 8px; list-style: none; }
+.review-warning-row { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; min-height: 64px; padding: 14px 16px; border: 1px solid #fecaca; border-radius: 8px; background: #fef2f2; color: #991b1b; font-size: 14px; line-height: 1.5; }
+.review-warning-row > svg { flex-shrink: 0; }
+.review-warning-row p { flex: 1; min-width: 160px; }
+.review-warning-row .button-secondary { color: #991b1b; border-color: #fecaca; }
 .flow-class-editor { margin-top: 0; min-width: 0; }
 .flow-class-editor .class-form { border: 0; border-radius: 0; }
 .flow-class-editor .review-toolbar { padding-inline: 0; background: white; }

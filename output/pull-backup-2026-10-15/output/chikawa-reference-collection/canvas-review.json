@@ -1,0 +1,3030 @@
+{
+  "renders": 216,
+  "overflowCount": 0,
+  "results": [
+    {
+      "id": "chikawa-pastel-pals",
+      "device": "mobile",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pastel-pals",
+      "device": "mobile",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pastel-pals",
+      "device": "mobile",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pastel-pals",
+      "device": "mobile",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-pastel-pals",
+      "device": "mobile",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-pastel-pals",
+      "device": "mobile",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-pastel-pals",
+      "device": "tablet",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 183.7165714285713,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pastel-pals",
+      "device": "tablet",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 260.5165714285714,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pastel-pals",
+      "device": "tablet",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 337.3165714285715,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pastel-pals",
+      "device": "tablet",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 183.7165714285713,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-pastel-pals",
+      "device": "tablet",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 260.5165714285714,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-pastel-pals",
+      "device": "tablet",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 337.3165714285715,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-pastel-pals",
+      "device": "laptop",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 165.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pastel-pals",
+      "device": "laptop",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 405.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pastel-pals",
+      "device": "laptop",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 645.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pastel-pals",
+      "device": "laptop",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 429.0624177176254,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-pastel-pals",
+      "device": "laptop",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 669.0624177176253,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-pastel-pals",
+      "device": "laptop",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 909.0624177176253,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-sprinkle-friends",
+      "device": "mobile",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-sprinkle-friends",
+      "device": "mobile",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-sprinkle-friends",
+      "device": "mobile",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-sprinkle-friends",
+      "device": "mobile",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-sprinkle-friends",
+      "device": "mobile",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-sprinkle-friends",
+      "device": "mobile",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-sprinkle-friends",
+      "device": "tablet",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 183.7165714285713,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-sprinkle-friends",
+      "device": "tablet",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 260.5165714285714,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-sprinkle-friends",
+      "device": "tablet",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 337.3165714285715,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-sprinkle-friends",
+      "device": "tablet",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 183.7165714285713,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-sprinkle-friends",
+      "device": "tablet",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 260.5165714285714,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-sprinkle-friends",
+      "device": "tablet",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 337.3165714285715,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-sprinkle-friends",
+      "device": "laptop",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 165.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-sprinkle-friends",
+      "device": "laptop",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 405.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-sprinkle-friends",
+      "device": "laptop",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 645.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-sprinkle-friends",
+      "device": "laptop",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 429.0624177176254,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-sprinkle-friends",
+      "device": "laptop",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 669.0624177176253,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-sprinkle-friends",
+      "device": "laptop",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 909.0624177176253,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-cloud-repeat",
+      "device": "mobile",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-cloud-repeat",
+      "device": "mobile",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-cloud-repeat",
+      "device": "mobile",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-cloud-repeat",
+      "device": "mobile",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-cloud-repeat",
+      "device": "mobile",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-cloud-repeat",
+      "device": "mobile",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-cloud-repeat",
+      "device": "tablet",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 183.7165714285713,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-cloud-repeat",
+      "device": "tablet",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 260.5165714285714,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-cloud-repeat",
+      "device": "tablet",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 337.3165714285715,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-cloud-repeat",
+      "device": "tablet",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 183.7165714285713,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-cloud-repeat",
+      "device": "tablet",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 260.5165714285714,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-cloud-repeat",
+      "device": "tablet",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 337.3165714285715,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-cloud-repeat",
+      "device": "laptop",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 165.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-cloud-repeat",
+      "device": "laptop",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 405.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-cloud-repeat",
+      "device": "laptop",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 645.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-cloud-repeat",
+      "device": "laptop",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 429.0624177176254,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-cloud-repeat",
+      "device": "laptop",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 669.0624177176253,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-cloud-repeat",
+      "device": "laptop",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 909.0624177176253,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-instant-friends",
+      "device": "mobile",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-instant-friends",
+      "device": "mobile",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-instant-friends",
+      "device": "mobile",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-instant-friends",
+      "device": "mobile",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-instant-friends",
+      "device": "mobile",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-instant-friends",
+      "device": "mobile",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-instant-friends",
+      "device": "tablet",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 183.7165714285713,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-instant-friends",
+      "device": "tablet",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 260.5165714285714,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-instant-friends",
+      "device": "tablet",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 337.3165714285715,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-instant-friends",
+      "device": "tablet",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 183.7165714285713,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-instant-friends",
+      "device": "tablet",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 260.5165714285714,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-instant-friends",
+      "device": "tablet",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 337.3165714285715,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-instant-friends",
+      "device": "laptop",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 165.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-instant-friends",
+      "device": "laptop",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 405.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-instant-friends",
+      "device": "laptop",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 645.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-instant-friends",
+      "device": "laptop",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 429.0624177176254,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-instant-friends",
+      "device": "laptop",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 669.0624177176253,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-instant-friends",
+      "device": "laptop",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 909.0624177176253,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-photo-album",
+      "device": "mobile",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-photo-album",
+      "device": "mobile",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-photo-album",
+      "device": "mobile",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-photo-album",
+      "device": "mobile",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-photo-album",
+      "device": "mobile",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-photo-album",
+      "device": "mobile",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-photo-album",
+      "device": "tablet",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 183.7165714285713,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-photo-album",
+      "device": "tablet",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 260.5165714285714,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-photo-album",
+      "device": "tablet",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 337.3165714285715,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-photo-album",
+      "device": "tablet",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 183.7165714285713,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-photo-album",
+      "device": "tablet",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 260.5165714285714,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-photo-album",
+      "device": "tablet",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 337.3165714285715,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-photo-album",
+      "device": "laptop",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 165.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-photo-album",
+      "device": "laptop",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 405.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-photo-album",
+      "device": "laptop",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 645.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-photo-album",
+      "device": "laptop",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 429.0624177176254,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-photo-album",
+      "device": "laptop",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 669.0624177176253,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-photo-album",
+      "device": "laptop",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 909.0624177176253,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-blue-buddy-snap",
+      "device": "mobile",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-blue-buddy-snap",
+      "device": "mobile",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-blue-buddy-snap",
+      "device": "mobile",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-blue-buddy-snap",
+      "device": "mobile",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-blue-buddy-snap",
+      "device": "mobile",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-blue-buddy-snap",
+      "device": "mobile",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-blue-buddy-snap",
+      "device": "tablet",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 183.7165714285713,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-blue-buddy-snap",
+      "device": "tablet",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 260.5165714285714,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-blue-buddy-snap",
+      "device": "tablet",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 337.3165714285715,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-blue-buddy-snap",
+      "device": "tablet",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 183.7165714285713,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-blue-buddy-snap",
+      "device": "tablet",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 260.5165714285714,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-blue-buddy-snap",
+      "device": "tablet",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 337.3165714285715,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-blue-buddy-snap",
+      "device": "laptop",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 165.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-blue-buddy-snap",
+      "device": "laptop",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 405.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-blue-buddy-snap",
+      "device": "laptop",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 645.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-blue-buddy-snap",
+      "device": "laptop",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 429.0624177176254,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-blue-buddy-snap",
+      "device": "laptop",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 669.0624177176253,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-blue-buddy-snap",
+      "device": "laptop",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 909.0624177176253,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-meadow-meetup",
+      "device": "mobile",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-meadow-meetup",
+      "device": "mobile",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-meadow-meetup",
+      "device": "mobile",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-meadow-meetup",
+      "device": "mobile",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-meadow-meetup",
+      "device": "mobile",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-meadow-meetup",
+      "device": "mobile",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-meadow-meetup",
+      "device": "tablet",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 183.7165714285713,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-meadow-meetup",
+      "device": "tablet",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 260.5165714285714,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-meadow-meetup",
+      "device": "tablet",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 337.3165714285715,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-meadow-meetup",
+      "device": "tablet",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 183.7165714285713,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-meadow-meetup",
+      "device": "tablet",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 260.5165714285714,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-meadow-meetup",
+      "device": "tablet",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 337.3165714285715,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-meadow-meetup",
+      "device": "laptop",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 165.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-meadow-meetup",
+      "device": "laptop",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 405.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-meadow-meetup",
+      "device": "laptop",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 645.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-meadow-meetup",
+      "device": "laptop",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 429.0624177176254,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-meadow-meetup",
+      "device": "laptop",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 669.0624177176253,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-meadow-meetup",
+      "device": "laptop",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 909.0624177176253,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-sage-picnic",
+      "device": "mobile",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-sage-picnic",
+      "device": "mobile",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-sage-picnic",
+      "device": "mobile",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-sage-picnic",
+      "device": "mobile",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-sage-picnic",
+      "device": "mobile",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-sage-picnic",
+      "device": "mobile",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-sage-picnic",
+      "device": "tablet",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 183.7165714285713,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-sage-picnic",
+      "device": "tablet",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 260.5165714285714,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-sage-picnic",
+      "device": "tablet",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 337.3165714285715,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-sage-picnic",
+      "device": "tablet",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 183.7165714285713,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-sage-picnic",
+      "device": "tablet",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 260.5165714285714,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-sage-picnic",
+      "device": "tablet",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 337.3165714285715,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-sage-picnic",
+      "device": "laptop",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 165.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-sage-picnic",
+      "device": "laptop",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 405.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-sage-picnic",
+      "device": "laptop",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 645.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-sage-picnic",
+      "device": "laptop",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 429.0624177176254,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-sage-picnic",
+      "device": "laptop",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 669.0624177176253,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-sage-picnic",
+      "device": "laptop",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 909.0624177176253,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-daisy-day",
+      "device": "mobile",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-daisy-day",
+      "device": "mobile",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-daisy-day",
+      "device": "mobile",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-daisy-day",
+      "device": "mobile",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-daisy-day",
+      "device": "mobile",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-daisy-day",
+      "device": "mobile",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-daisy-day",
+      "device": "tablet",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 183.7165714285713,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-daisy-day",
+      "device": "tablet",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 260.5165714285714,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-daisy-day",
+      "device": "tablet",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 337.3165714285715,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-daisy-day",
+      "device": "tablet",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 183.7165714285713,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-daisy-day",
+      "device": "tablet",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 260.5165714285714,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-daisy-day",
+      "device": "tablet",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 337.3165714285715,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-daisy-day",
+      "device": "laptop",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 165.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-daisy-day",
+      "device": "laptop",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 405.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-daisy-day",
+      "device": "laptop",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 645.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-daisy-day",
+      "device": "laptop",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 429.0624177176254,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-daisy-day",
+      "device": "laptop",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 669.0624177176253,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-daisy-day",
+      "device": "laptop",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 909.0624177176253,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-pink-plush-parade",
+      "device": "mobile",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pink-plush-parade",
+      "device": "mobile",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pink-plush-parade",
+      "device": "mobile",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pink-plush-parade",
+      "device": "mobile",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-pink-plush-parade",
+      "device": "mobile",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-pink-plush-parade",
+      "device": "mobile",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-pink-plush-parade",
+      "device": "tablet",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 183.7165714285713,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pink-plush-parade",
+      "device": "tablet",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 260.5165714285714,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pink-plush-parade",
+      "device": "tablet",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 337.3165714285715,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pink-plush-parade",
+      "device": "tablet",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 183.7165714285713,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-pink-plush-parade",
+      "device": "tablet",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 260.5165714285714,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-pink-plush-parade",
+      "device": "tablet",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 337.3165714285715,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-pink-plush-parade",
+      "device": "laptop",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 165.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pink-plush-parade",
+      "device": "laptop",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 405.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pink-plush-parade",
+      "device": "laptop",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 645.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pink-plush-parade",
+      "device": "laptop",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 429.0624177176254,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-pink-plush-parade",
+      "device": "laptop",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 669.0624177176253,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-pink-plush-parade",
+      "device": "laptop",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 909.0624177176253,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-pink-present-party",
+      "device": "mobile",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pink-present-party",
+      "device": "mobile",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pink-present-party",
+      "device": "mobile",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pink-present-party",
+      "device": "mobile",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-pink-present-party",
+      "device": "mobile",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-pink-present-party",
+      "device": "mobile",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-pink-present-party",
+      "device": "tablet",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 183.7165714285713,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pink-present-party",
+      "device": "tablet",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 260.5165714285714,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pink-present-party",
+      "device": "tablet",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 337.3165714285715,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pink-present-party",
+      "device": "tablet",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 183.7165714285713,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-pink-present-party",
+      "device": "tablet",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 260.5165714285714,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-pink-present-party",
+      "device": "tablet",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 337.3165714285715,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-pink-present-party",
+      "device": "laptop",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 165.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pink-present-party",
+      "device": "laptop",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 405.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pink-present-party",
+      "device": "laptop",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 645.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pink-present-party",
+      "device": "laptop",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 429.0624177176254,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-pink-present-party",
+      "device": "laptop",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 669.0624177176253,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-pink-present-party",
+      "device": "laptop",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 909.0624177176253,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-pink-starlight-friends",
+      "device": "mobile",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pink-starlight-friends",
+      "device": "mobile",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pink-starlight-friends",
+      "device": "mobile",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1112
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pink-starlight-friends",
+      "device": "mobile",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-pink-starlight-friends",
+      "device": "mobile",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-pink-starlight-friends",
+      "device": "mobile",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 78,
+        "y": 0,
+        "width": 924,
+        "height": 1465.1
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-pink-starlight-friends",
+      "device": "tablet",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 183.7165714285713,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pink-starlight-friends",
+      "device": "tablet",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 260.5165714285714,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pink-starlight-friends",
+      "device": "tablet",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 337.3165714285715,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1360.7314285714285
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pink-starlight-friends",
+      "device": "tablet",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 183.7165714285713,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-pink-starlight-friends",
+      "device": "tablet",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 260.5165714285714,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-pink-starlight-friends",
+      "device": "tablet",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 337.3165714285715,
+        "y": 0,
+        "width": 1398.9668571428572,
+        "height": 1982.7318857142857
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-pink-starlight-friends",
+      "device": "laptop",
+      "density": "sample",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 165.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pink-starlight-friends",
+      "device": "laptop",
+      "density": "sample",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 405.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pink-starlight-friends",
+      "device": "laptop",
+      "density": "sample",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 645.5314285714286,
+        "y": 0,
+        "width": 1108.9371428571428,
+        "height": 850.4228571428572
+      },
+      "meetings": 5
+    },
+    {
+      "id": "chikawa-pink-starlight-friends",
+      "device": "laptop",
+      "density": "dense",
+      "position": "left",
+      "overflow": false,
+      "bounds": {
+        "x": 429.0624177176254,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-pink-starlight-friends",
+      "device": "laptop",
+      "density": "dense",
+      "position": "center",
+      "overflow": false,
+      "bounds": {
+        "x": 669.0624177176253,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    },
+    {
+      "id": "chikawa-pink-starlight-friends",
+      "device": "laptop",
+      "density": "dense",
+      "position": "right",
+      "overflow": false,
+      "bounds": {
+        "x": 909.0624177176253,
+        "y": 0,
+        "width": 581.8751645647492,
+        "height": 950.4
+      },
+      "meetings": 15
+    }
+  ]
+}

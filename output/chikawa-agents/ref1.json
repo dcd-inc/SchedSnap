@@ -1,0 +1,163 @@
+{
+  "referenceImage": "C:/Users/picar/.codex/attachments/74d18602-90f5-48ae-8aa3-b182affe434a/image-1.png",
+  "referenceRole": "composition and style only: tight blue-white floral field with one small white friend nestled low",
+  "collection": "Little Friends / Chiikawa",
+  "generationMode": "built-in image_gen",
+  "generatedAt": "2026-10-13",
+  "dimensions": {
+    "mobile": "1080x2400",
+    "tablet": "1600x2560",
+    "laptop": "1920x1080"
+  },
+  "processing": "Generated separate source composition per device. Final PNGs normalized using aspect-cover resize and centered crop to the exact dimensions; converted to opaque RGB.",
+  "designs": [
+    {
+      "id": "bluebell-watercolor",
+      "name": "Bluebell Watercolor",
+      "style": "Soft watercolor and gouache floral anime illustration",
+      "palette": [
+        "icy white",
+        "#c8def5 powder blue",
+        "#7f9ad0 periwinkle",
+        "#e9a5ad blush"
+      ],
+      "prompts": {
+        "mobile": "Use case: illustration-story. Asset type: opaque full-background cute Chiikawa / Little Friends wallpaper for mobile portrait (target 1080×2400, 9:20). Inspired by the attached reference image's tightly packed white and pale-blue blossoms with a small white round-eared friend nestled low in the flowers. Create a dense, immersive field of layered white and pale blue hydrangea-like blossoms from every edge. One small original Chiikawa-style white round-eared character, gentle face and pink cheek blush, peeks through petals at lower center; keep the floral field dominant, recognizable cute character modest in scale. Watercolor and gouache texture, delicate soft anime linework, serene diffuse daylight, icy whites, powder blue, periwinkle, deep blue-green gaps. Mobile composition: flower clusters span full portrait; character centered about 78% down, face unobscured, flowers continue below. Full bleed, entirely opaque artwork. No text, letters, logo, schedule, timetable, watermark, UI, badge, border, rounded corners, device frame, or mockup.",
+        "tablet": "Use case: illustration-story. Asset type: opaque full-background cute Chiikawa / Little Friends wallpaper for tablet (target 1600×2560, portrait 5:8). Inspired by the attached reference image's tightly packed white and powder-blue blossoms and a small white round-eared friend nestled among them. Create a dense field of layered hydrangea-like blossoms from every edge; one small Chiikawa-style white round-eared character with gentle face and pink cheek blush peeks through petals. Delicate watercolor and gouache, soft anime linework, serene diffuse daylight, icy whites, powder blue, periwinkle and deep blue-green shadow gaps. Tablet portrait: make broad flower rosettes readable at larger scale, with the white character peeking from behind a central lower cluster around 76% down; let blossom texture continue to every edge and keep balanced side clusters. Full bleed, opaque artwork only. No text, lettering, logo, schedule, timetable, watermark, UI, badge, border, rounded corners, device frame, or mockup.",
+        "laptop": "Use case: illustration-story. Asset type: opaque full-background cute Chiikawa / Little Friends wallpaper for laptop (target 1920×1080, landscape 16:9). Inspired by the attached reference image's tightly packed white and powder-blue blossoms and a small white round-eared friend nestled among them. Create a dense field of layered hydrangea-like blossoms from every edge; one small Chiikawa-style white round-eared character with gentle face and pink cheek blush peeks through petals. Delicate watercolor and gouache, soft anime linework, serene diffuse daylight, icy whites, powder blue, periwinkle and deep blue-green shadow gaps. Laptop landscape: fill the panoramic frame edge to edge with layered white and powder-blue blossoms. Set the small white character just right of center, nestled in the lower half around 70% down, with flower clusters extending richly across both sides. Keep the face clear and avoid a large blank text area. Full bleed, opaque artwork only. No text, lettering, logo, schedule, timetable, watermark, UI, badge, border, rounded corners, device frame, or mockup."
+      }
+    },
+    {
+      "id": "cobalt-bloom-screenprint",
+      "name": "Cobalt Bloom Screenprint",
+      "style": "Retro screen-print / cel-art with crisp shapes, limited inks, and printed-paper grain",
+      "palette": [
+        "white",
+        "#b8d8f5 powder blue",
+        "#7ca8dc cornflower",
+        "#24578e cobalt"
+      ],
+      "prompts": {
+        "mobile": "Use case: illustration-story. Asset type: opaque full-background Chiikawa / Little Friends wallpaper, mobile, target 1080×2400 portrait 9:20. Inspired by the reference's all-over white and blue floral close-up with one small cute white friend nestled in blossoms. Create a distinct polished retro screen-print / cel-art treatment: crisp simplified overlapping hydrangea blossoms, limited flat powder-blue, white, cobalt and pale cornflower inks, fine navy contour accents and subtle printed-paper grain. One small white round-eared Chiikawa-style friend with pink cheeks peeks through blossoms. Bright, graphic, sweet, tidy and coherent, not watercolor. Vertical phone framing: compact layered flower clusters fill the whole image, with the small white round-eared friend centered low at 78% height, peeking through the flowers; blossoms remain the clear dominant subject. Full-bleed opaque artwork only; no text, letters, logos, schedule, timetable, watermark, UI, badge, border, rounded corners, device frame or mockup.",
+        "tablet": "Use case: illustration-story. Asset type: opaque full-background Chiikawa / Little Friends wallpaper, tablet, target 1600×2560 portrait 5:8. Inspired by the reference's all-over white and blue floral close-up with one small cute white friend nestled in blossoms. Create a distinct polished retro screen-print / cel-art treatment: crisp simplified overlapping hydrangea blossoms, limited flat powder-blue, white, cobalt and pale cornflower inks, fine navy contour accents and subtle printed-paper grain. One small white round-eared Chiikawa-style friend with pink cheeks peeks through blossoms. Bright, graphic, sweet, tidy and coherent, not watercolor. Tablet portrait: larger clean flower clusters fill all edges, with the small white round-eared friend peeking near lower center at 75% height; retain crisp flower silhouettes and a balanced all-over repeat. Full-bleed opaque artwork only; no text, letters, logos, schedule, timetable, watermark, UI, badge, border, rounded corners, device frame or mockup.",
+        "laptop": "Use case: illustration-story. Asset type: opaque full-background Chiikawa / Little Friends wallpaper, laptop, target 1920×1080 landscape 16:9. Inspired by the reference's all-over white and blue floral close-up with one small cute white friend nestled in blossoms. Create a distinct polished retro screen-print / cel-art treatment: crisp simplified overlapping hydrangea blossoms, limited flat powder-blue, white, cobalt and pale cornflower inks, fine navy contour accents and subtle printed-paper grain. One small white round-eared Chiikawa-style friend with pink cheeks peeks through blossoms. Bright, graphic, sweet, tidy and coherent, not watercolor. Panoramic landscape: dense blossom clusters spread across the full width; place the small white round-eared friend slightly right of center in the lower half, face visible among petals; keep scale and spacing balanced. Full-bleed opaque artwork only; no text, letters, logos, schedule, timetable, watermark, UI, badge, border, rounded corners, device frame or mockup."
+      }
+    },
+    {
+      "id": "petal-paper-collage",
+      "name": "Petal Paper Collage",
+      "style": "Layered paper-cut collage with tactile edges and dimensional shadows",
+      "palette": [
+        "ivory",
+        "#d2e4f4 pale blue",
+        "#91b4dd cornflower",
+        "#f2a7b0 pink blush"
+      ],
+      "prompts": {
+        "mobile": "Use case: illustration-story. Asset type: opaque full-background Chiikawa / Little Friends wallpaper, mobile, target 1080×2400 portrait 9:20. Use the reference's immersive blue-and-white flower coverage and tiny white character nestled in blossoms as composition inspiration. Create an original layered paper-cut collage interpretation: overlapping softly textured cut-paper hydrangea petals with tactile deckled edges and subtle dimensional shadows, alternating white, pale blue and cornflower shapes. Include a small cute white round-eared Chiikawa-style friend with simple gentle face and pink blush nestled in the flowers. Refined handcrafted art, calm and storybook-like, clearly different from watercolor and flat screen-print. Phone portrait: papercut blossoms create a dense tunnel-like frame from top and sides. A small white round-eared friend peeks among petals at lower center about 78% down; leave flower detail below and around them. Full bleed opaque art only. No text, letters, logos, schedule, timetable, watermark, interface, badge, border, rounded corners, device frame or mockup.",
+        "tablet": "Use case: illustration-story. Asset type: opaque full-background Chiikawa / Little Friends wallpaper, tablet, target 1600×2560 portrait 5:8. Use the reference's immersive blue-and-white flower coverage and tiny white character nestled in blossoms as composition inspiration. Create an original layered paper-cut collage interpretation: overlapping softly textured cut-paper hydrangea petals with tactile deckled edges and subtle dimensional shadows, alternating white, pale blue and cornflower shapes. Include a small cute white round-eared Chiikawa-style friend with simple gentle face and pink blush nestled in the flowers. Refined handcrafted art, calm and storybook-like, clearly different from watercolor and flat screen-print. Tablet portrait: broad layered paper blossoms remain legible from edge to edge; the white friend peeks from a lower central flower cluster at around 75% height. Keep silhouette clean and flower shapes rhythmically varied. Full bleed opaque art only. No text, letters, logos, schedule, timetable, watermark, interface, badge, border, rounded corners, device frame or mockup.",
+        "laptop": "Use case: illustration-story. Asset type: opaque full-background Chiikawa / Little Friends wallpaper, laptop, target 1920×1080 landscape 16:9. Use the reference's immersive blue-and-white flower coverage and tiny white character nestled in blossoms as composition inspiration. Create an original layered paper-cut collage interpretation: overlapping softly textured cut-paper hydrangea petals with tactile deckled edges and subtle dimensional shadows, alternating white, pale blue and cornflower shapes. Include a small cute white round-eared Chiikawa-style friend with simple gentle face and pink blush nestled in the flowers. Refined handcrafted art, calm and storybook-like, clearly different from watercolor and flat screen-print. Laptop landscape: layered cut-paper blossoms sweep across the panoramic image with gentle visual rhythm. Place the white friend slightly right of center in the lower half, tucked into one blossom cluster, while petals continue across both sides. Full bleed opaque art only. No text, letters, logos, schedule, timetable, watermark, interface, badge, border, rounded corners, device frame or mockup."
+      }
+    }
+  ],
+  "assets": [
+    {
+      "designId": "bluebell-watercolor",
+      "device": "mobile",
+      "path": "public/wallpapers/little-friends/bluebell-watercolor/mobile.png",
+      "size": "1080x2400",
+      "mimeType": "image/png",
+      "opaque": true
+    },
+    {
+      "designId": "bluebell-watercolor",
+      "device": "tablet",
+      "path": "public/wallpapers/little-friends/bluebell-watercolor/tablet.png",
+      "size": "1600x2560",
+      "mimeType": "image/png",
+      "opaque": true
+    },
+    {
+      "designId": "bluebell-watercolor",
+      "device": "laptop",
+      "path": "public/wallpapers/little-friends/bluebell-watercolor/laptop.png",
+      "size": "1920x1080",
+      "mimeType": "image/png",
+      "opaque": true
+    },
+    {
+      "designId": "cobalt-bloom-screenprint",
+      "device": "mobile",
+      "path": "public/wallpapers/little-friends/cobalt-bloom-screenprint/mobile.png",
+      "size": "1080x2400",
+      "mimeType": "image/png",
+      "opaque": true
+    },
+    {
+      "designId": "cobalt-bloom-screenprint",
+      "device": "tablet",
+      "path": "public/wallpapers/little-friends/cobalt-bloom-screenprint/tablet.png",
+      "size": "1600x2560",
+      "mimeType": "image/png",
+      "opaque": true
+    },
+    {
+      "designId": "cobalt-bloom-screenprint",
+      "device": "laptop",
+      "path": "public/wallpapers/little-friends/cobalt-bloom-screenprint/laptop.png",
+      "size": "1920x1080",
+      "mimeType": "image/png",
+      "opaque": true
+    },
+    {
+      "designId": "petal-paper-collage",
+      "device": "mobile",
+      "path": "public/wallpapers/little-friends/petal-paper-collage/mobile.png",
+      "size": "1080x2400",
+      "mimeType": "image/png",
+      "opaque": true
+    },
+    {
+      "designId": "petal-paper-collage",
+      "device": "tablet",
+      "path": "public/wallpapers/little-friends/petal-paper-collage/tablet.png",
+      "size": "1600x2560",
+      "mimeType": "image/png",
+      "opaque": true
+    },
+    {
+      "designId": "petal-paper-collage",
+      "device": "laptop",
+      "path": "public/wallpapers/little-friends/petal-paper-collage/laptop.png",
+      "size": "1920x1080",
+      "mimeType": "image/png",
+      "opaque": true
+    }
+  ],
+  "revisionHistory": [
+    {
+      "date": "2026-10-13",
+      "reason": "User review found that several characters read as generic bear-like friends rather than Chiikawa Little Friends.",
+      "scope": "All nine reference-1 outputs: three designs across mobile, tablet, and laptop.",
+      "editMethod": "Used built-in image_gen edit mode with each original wallpaper as the target; preserved the floral field, style, palette, framing, pose, and placement while correcting the character.",
+      "characterSpecification": "Hachiware: rounded white cat body, two upright triangular ears with blue inner areas, blue cap-like top marking with a clear zigzag edge, simple black eyes/nose/mouth, and pink hatch-mark cheek blush. Explicitly avoid round bear ears and generic bear faces.",
+      "stylePreservation": {
+        "bluebell-watercolor": "watercolor and gouache blossoms and soft anime linework",
+        "cobalt-bloom-screenprint": "crisp limited-ink cel/screenprint blossoms and print grain",
+        "petal-paper-collage": "layered textured paper petals and dimensional paper shadows"
+      },
+      "finalProcessing": "Edited sources were normalized to their original exact device dimensions with aspect-cover scaling and centered crop; saved as opaque RGB PNGs.",
+      "visualReview": "Reviewed the complete 3×3 contact sheet and full-resolution laptop examples; all nine edits visibly include the blue top marking and triangular ears."
+    },
+    {
+      "date": "2026-10-14",
+      "reason": "Additional likeness review requested unmistakable Hachiware cues, including whiskers and a clearer blue-gray split cap marking.",
+      "scope": "All nine final files were edited again; the three laptop versions were checked individually at full resolution.",
+      "changes": "Added three whisker strokes per cheek; reinforced the blue-gray top-cap marking and pointed ear silhouette; retained simple black facial marks and pink hatch blush.",
+      "preservation": "Kept each design’s blue-and-white flower field, palette, device framing, and original visual treatment (watercolor, screenprint, or paper collage).",
+      "finalProcessing": "Normalized each edit to exact dimensions and saved as opaque RGB PNG. No uploads were made.",
+      "reviewContactSheet": "output/chikawa-agents/ref1-final-contact-sheet.jpg",
+      "reviewResult": "All nine assets show Hachiware cues. The bluebell-watercolor laptop and petal-paper-collage laptop replacements are present and visible in the full-resolution review sheet."
+    }
+  ]
+}

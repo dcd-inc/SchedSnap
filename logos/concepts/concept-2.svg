@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 512" role="img" aria-labelledby="title description">
+  <title id="title">SchedSnap — Schedule Flow</title>
+  <desc id="description">Two offset schedule ribbons form a bold, open S beside the SchedSnap wordmark.</desc>
+  <g id="icon" transform="translate(30 112) scale(.56)">
+    <path fill="#526074" d="M344 112H202C146 112 110 143 110 188s36 76 92 76h92l-34-60h-56c-20 0-30-5-30-16s10-16 30-16h140c17 0 30-13 30-30s-13-30-30-30Z"/>
+    <path fill="#0f172a" d="M168 400h142c56 0 92-31 92-76s-36-76-92-76h-92l34 60h56c20 0 30 5 30 16s-10 16-30 16H168c-17 0-30 13-30 30s13 30 30 30Z"/>
+    <path fill="#faf6ef" d="m194 236 118 32-12 32-118-32Z"/>
+  </g>
+  <g id="wordmark" fill="#0f172a">
+    <text x="294" y="294" font-family="Helvetica, Arial, sans-serif" font-size="105" font-weight="700" letter-spacing="-5">SchedSnap</text>
+  </g>
+</svg>

@@ -1,0 +1,29 @@
+{
+  "measurements": [
+    {
+      "device": "mobile",
+      "sameImage": true,
+      "scrollDelta": 0,
+      "heightDelta": 0,
+      "sameFocus": true
+    },
+    {
+      "device": "tablet",
+      "sameImage": true,
+      "scrollDelta": 0,
+      "heightDelta": 0,
+      "sameFocus": true
+    },
+    {
+      "device": "laptop",
+      "sameImage": true,
+      "scrollDelta": 0,
+      "heightDelta": 0,
+      "sameFocus": true
+    }
+  ],
+  "errors": [
+    "SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.",
+    "Minified React error #418; visit https://react.dev/errors/418?args[]=text&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+  ]
+}

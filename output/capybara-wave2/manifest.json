@@ -1,0 +1,246 @@
+{
+  "assets": [
+    {
+      "number": 1,
+      "id": "capybara-skeptical",
+      "path": "public/wallpapers/scenic/capybara-skeptical/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "9f04dbddbc71cda90ead64655cc4ba94705b5d58368cb0da156d8a2838c029e3",
+      "source": "output\\artwork-samples\\capybara-20261019\\01-skeptical.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "number": 2,
+      "id": "capybara-shrug",
+      "path": "public/wallpapers/scenic/capybara-shrug/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "73c36c425fab2913e47d2a4b4b6a60972bb3942f77c0851a2e7e07d5bdbc35e0",
+      "source": "output\\artwork-samples\\capybara-20261019\\02-shrug.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "number": 3,
+      "id": "capybara-smug",
+      "path": "public/wallpapers/scenic/capybara-smug/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "bc55f426ba59567275842f4bab6f7b289f83e314fad8d1a2648e9973cfb66ed8",
+      "source": "output\\artwork-samples\\capybara-20261019\\03-smug.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "number": 4,
+      "id": "capybara-starry-flowers",
+      "path": "public/wallpapers/scenic/capybara-starry-flowers/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "afd1fb77ee2f47b5099ee59e37c858f1a8bff3a00af492f0ed58a1121a17d5af",
+      "source": "output\\artwork-samples\\capybara-20261019\\04-starry-flowers.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "number": 5,
+      "id": "capybara-business-suit",
+      "path": "public/wallpapers/scenic/capybara-business-suit/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "58b4cd657c76d13d1cd26def1fc96339f2c3b494e25c7d668b41498c04e4a98f",
+      "source": "output\\artwork-samples\\capybara-20261019\\05-business-suit.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "number": 6,
+      "id": "capybara-paper-chaos",
+      "path": "public/wallpapers/scenic/capybara-paper-chaos/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "3a105deb4b8bdcb195a6e3a10d6ff13845a6d69dc9c0794e15b65bfe7c18c449",
+      "source": "output\\artwork-samples\\capybara-20261019\\06-paper-chaos.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "number": 7,
+      "id": "capybara-big-laugh",
+      "path": "public/wallpapers/scenic/capybara-big-laugh/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "294bf0b28993519f5f39cd861857e27d6fa1a845dd749242ae0dafbce5248713",
+      "source": "output\\artwork-samples\\capybara-20261019\\07-big-laugh.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "number": 8,
+      "id": "capybara-teary-eyes",
+      "path": "public/wallpapers/scenic/capybara-teary-eyes/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "3d2c8935bdbb55d4c94e1cf01caa0086ee469d2e975ea0d68f4abf0662dc3666",
+      "source": "output\\artwork-samples\\capybara-20261019\\08-teary-eyes.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "number": 9,
+      "id": "capybara-shy-giggle",
+      "path": "public/wallpapers/scenic/capybara-shy-giggle/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "9739c67641db82d4ca9dfa010eb1c1219f91141400d240ec6a86474e1d058eae",
+      "source": "output\\artwork-samples\\capybara-20261019\\09-shy-giggle.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "number": 10,
+      "id": "capybara-lily-bouquet",
+      "path": "public/wallpapers/scenic/capybara-lily-bouquet/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "4a78270245c851582960e78f8624179ff0a7eb698a2f9afa341214c5a45a122a",
+      "source": "output\\artwork-samples\\capybara-20261019\\10-lily-bouquet.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "number": 11,
+      "id": "capybara-heart-eyes",
+      "path": "public/wallpapers/scenic/capybara-heart-eyes/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "2c3b0b577f77b452745e631041576417327fc37cd6f928c6ddb98bdfc716fd00",
+      "source": "output\\artwork-samples\\capybara-20261019\\11-heart-eyes.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "number": 12,
+      "id": "capybara-avocado-hood",
+      "path": "public/wallpapers/scenic/capybara-avocado-hood/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "1fb906d66ad12c54fed2cd3cd374c315305eac77b62c0127cbc675b4d7b9f880",
+      "source": "output\\artwork-samples\\capybara-20261019\\12-avocado-hood.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "number": 13,
+      "id": "capybara-watermelon-hood",
+      "path": "public/wallpapers/scenic/capybara-watermelon-hood/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "e5843ada39ab7092b4af03ebf865017c168e215c9b77ad96f311a136f1a784c6",
+      "source": "output\\artwork-samples\\capybara-20261019\\13-watermelon-hood.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "number": 14,
+      "id": "capybara-starfruit-hood",
+      "path": "public/wallpapers/scenic/capybara-starfruit-hood/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "e78f1da528022d7da45b8a81d0b07cb6a93ac955b8b2dce7e92c669f8d8a0314",
+      "source": "output\\artwork-samples\\capybara-20261019\\14-starfruit-hood.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "number": 15,
+      "id": "capybara-cherry-hood",
+      "path": "public/wallpapers/scenic/capybara-cherry-hood/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "74ea25b399a25c8aebf6423dc9a9d67d4e47f1bca905fe332585257dae80268d",
+      "source": "output\\artwork-samples\\capybara-20261019\\15-cherry-hood.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "number": 16,
+      "id": "capybara-lion-dance",
+      "path": "public/wallpapers/scenic/capybara-lion-dance/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "57f01f04ae7c7de12c54d928a945fde3eae07c1aa018d716482f2a6db7458680",
+      "source": "output\\artwork-samples\\capybara-20261019\\16-lion-dance.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "number": 17,
+      "id": "capybara-watermelon-snack",
+      "path": "public/wallpapers/scenic/capybara-watermelon-snack/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "26b6352aa0552e9826b5d7a7d72411de54ac28f8ffea19b38ba4d90d9726329e",
+      "source": "output\\artwork-samples\\capybara-20261019\\17-watermelon-snack.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "number": 18,
+      "id": "capybara-melon-hood",
+      "path": "public/wallpapers/scenic/capybara-melon-hood/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "c118fc8dc24e5cecdc412922379146eb6139f0e463ec3c996daeb1e65499171b",
+      "source": "output\\artwork-samples\\capybara-20261019\\18-melon-hood.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "number": 19,
+      "id": "capybara-pink-pear-hood",
+      "path": "public/wallpapers/scenic/capybara-pink-pear-hood/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "e3c3f6094af459cb7fc40d27b16818410111ca078cee51db0c92d8e4f4fe4035",
+      "source": "output\\artwork-samples\\capybara-20261019\\19-pink-pear-hood.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "number": 20,
+      "id": "capybara-moonlit-roses",
+      "path": "public/wallpapers/scenic/capybara-moonlit-roses/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "48e4402f2d0410043248745400d509a0fd28f117b5d9ed6cf858eb5c0c09d7b4",
+      "source": "output\\artwork-samples\\capybara-20261019\\20-moonlit-roses.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "number": 21,
+      "id": "capybara-bubble-tea-love",
+      "path": "public/wallpapers/scenic/capybara-bubble-tea-love/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "f32f0d8f1fa166bddebe7d1494efca34de9784d605ea75a2f336d89f07dbe2d3",
+      "source": "output\\artwork-samples\\capybara-20261019\\21-bubble-tea-love.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "number": 22,
+      "id": "capybara-delivery-hoodie",
+      "path": "public/wallpapers/scenic/capybara-delivery-hoodie/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "4bbfb511cd5b82f202f6fe4fbdd00a1385822bfdac8592773f523733c0a0f6ca",
+      "source": "output\\artwork-samples\\capybara-20261019\\22-delivery-hoodie.png",
+      "width": 1080,
+      "height": 2400
+    }
+  ]
+}

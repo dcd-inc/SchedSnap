@@ -1,138 +1,140 @@
 import { useEffect, useImperativeHandle, useRef, useState } from 'react';
-import { ChevronDown, CircleAlert, ImageUp, Pencil, Plus, Trash2 } from 'lucide-react';
+import { ChevronDown, CircleAlert, ImageUp, Pencil, Plus, Trash2, TriangleAlert, X } from 'lucide-react';
 import { days, getScheduleIssues } from '../../../shared/scheduleSchema.js';
 import { formatTime } from '../../utils/canvasHelpers.js';
+import './classEditDialog.css';
 
 const newMeeting = () => ({ day: null, startTime: null, endTime: null, room: null, dateLabel: null });
-const meetingSummary = (meeting) => [
-  meeting.day?.slice(0, 3),
-  meeting.startTime && meeting.endTime ? `${formatTime(meeting.startTime)}–${formatTime(meeting.endTime)}` : null,
-  meeting.room,
-].filter(Boolean).join(' · ');
+const meetingSummary = meeting => `${meeting.startTime ? formatTime(meeting.startTime) : '—'}–${meeting.endTime ? formatTime(meeting.endTime) : '—'} · ${meeting.room || '—'}`;
 
-function EditorField({ label, fieldId, error, children, className = '' }) {
-  return <div className={`field-label ${className}`}><label htmlFor={fieldId}>{label}</label>{children}{error && <p id={`${fieldId}-error`} className="field-error"><CircleAlert size={14} aria-hidden="true" />{error}</p>}</div>;
+function ClassDialog({ course, meetingIndex, isNew, showErrors, onSave, onDelete, onClose }) {
+  const dialog = useRef(null);
+  const [draft, setDraft] = useState(() => ({ subject: course.subject, courseCode: course.courseCode, meeting: { ...(course.meetings[meetingIndex] || newMeeting()) } }));
+  const [submitted, setSubmitted] = useState(showErrors);
+  const [touched, setTouched] = useState({});
+  const errors = {
+    subject: !draft.subject.trim() ? 'Enter a subject.' : '',
+    day: !draft.meeting.day ? 'Choose a day.' : '',
+    startTime: !draft.meeting.startTime ? 'Set a start time.' : '',
+    endTime: !draft.meeting.endTime ? 'Set an end time.' : draft.meeting.startTime && draft.meeting.endTime <= draft.meeting.startTime ? 'End time must be after start time.' : '',
+  };
+  useEffect(() => {
+    const node = dialog.current;
+    node.showModal();
+    (node.querySelector('[aria-invalid="true"]') || node.querySelector('input'))?.focus();
+    return () => node.close();
+  }, []);
+  function submit(event) {
+    event.preventDefault();
+    setSubmitted(true);
+    if (Object.values(errors).some(Boolean)) {
+      requestAnimationFrame(() => dialog.current?.querySelector('[aria-invalid="true"]')?.focus());
+      return;
+    }
+    onSave({ ...draft, subject: draft.subject.trim() });
+  }
+  function fieldProps(key) {
+    const error = (submitted || touched[key]) && errors[key];
+    return { id: `edit-class-${key}`, 'aria-invalid': !!error, 'aria-describedby': error ? `edit-class-${key}-error` : undefined, onBlur: () => setTouched(previous => ({ ...previous, [key]: true })) };
+  }
+  const errorMessage = key => (submitted || touched[key]) && errors[key] ? <p className="field-error" id={`edit-class-${key}-error`}><CircleAlert size={14} aria-hidden="true" />{errors[key]}</p> : null;
+  const updateMeeting = (key, value) => setDraft(previous => ({ ...previous, meeting: { ...previous.meeting, [key]: value || null } }));
+  return <dialog ref={dialog} className="class-edit-dialog" aria-labelledby="class-edit-heading" onCancel={onClose} onClick={event => { if (event.target === event.currentTarget) onClose(); }}>
+    <header><h2 id="class-edit-heading">{isNew ? 'Add class' : 'Edit class'}</h2><button type="button" className="icon-button" aria-label="Close class editor" onClick={onClose}><X size={20} aria-hidden="true" /></button></header>
+    <form onSubmit={submit} noValidate>
+      <div className="class-dialog-fields">
+        <div className="field-label"><label htmlFor="edit-class-subject">Subject</label><input autoComplete="off" className="field-input" {...fieldProps('subject')} maxLength={160} value={draft.subject} onChange={event => setDraft({ ...draft, subject: event.target.value })} placeholder="Subject name" />{errorMessage('subject')}</div>
+        <div className="field-label"><label htmlFor="edit-class-code">Course code <span className="field-optional">(optional)</span></label><input className="field-input" id="edit-class-code" maxLength={40} value={draft.courseCode || ''} onChange={event => setDraft({ ...draft, courseCode: event.target.value || null })} /></div>
+        {course.meetings.length > 1 && <p className="class-shared-name-note">Subject and course code are shared across this class’s days. Day, time and room apply only to this row.</p>}
+        <div className="field-label"><label htmlFor="edit-class-day">Day</label><div className="field-select"><select className="field-input" {...fieldProps('day')} value={draft.meeting.day || ''} onChange={event => updateMeeting('day', event.target.value)}><option value="">Choose day</option>{days.map(day => <option key={day}>{day}</option>)}</select><ChevronDown size={16} className="field-select-icon" aria-hidden="true" /></div>{errorMessage('day')}</div>
+        <div className="class-dialog-times">{['startTime', 'endTime'].map(key => <div key={key} className="field-label"><label htmlFor={`edit-class-${key}`}>{key === 'startTime' ? 'Start time' : 'End time'}</label><input className="field-input" {...fieldProps(key)} type="time" value={draft.meeting[key] || ''} onChange={event => updateMeeting(key, event.target.value)} />{errorMessage(key)}</div>)}</div>
+        <div className="field-label"><label htmlFor="edit-class-room">Room number <span className="field-optional">(optional)</span></label><input className="field-input" id="edit-class-room" maxLength={80} value={draft.meeting.room || ''} onChange={event => updateMeeting('room', event.target.value)} /></div>
+      </div>
+      <footer>{!isNew && <button type="button" className="button-secondary class-dialog-delete" onClick={onDelete}><Trash2 size={16} aria-hidden="true" />Delete</button>}<div><button type="button" className="button-secondary" onClick={onClose}>Cancel</button><button type="submit" className="button-primary">Save</button></div></footer>
+    </form>
+  </dialog>;
 }
 
-export default function Editor({ schedule, onChange, onImport, preparingImage, validationRef, scheduleTitle = 'Class Schedule', onTitleChange }) {
-  const editor = useRef(null);
-  const pendingFocus = useRef(true);
-  const scrollToNew = useRef(false);
-  const titleInput = useRef(null);
-  const [editingTitle, setEditingTitle] = useState(false);
-  const [titleDraft, setTitleDraft] = useState(scheduleTitle);
-  const [touched, setTouched] = useState({});
-  const [submitted, setSubmitted] = useState(false);
-  const [expandedIndex, setExpandedIndex] = useState(() => {
-    const incomplete = schedule.classes.findIndex((course) => getScheduleIssues({ classes: [course] }).length > 0);
-    return incomplete < 0 ? null : incomplete;
-  });
-  useEffect(() => { if (editingTitle) { titleInput.current?.focus(); titleInput.current?.select(); } }, [editingTitle]);
-  function saveTitle() {
-    onTitleChange(titleDraft.trim() || 'Class Schedule');
-    setEditingTitle(false);
-  }
+function TitleDialog({ title, onSave, onClose }) {
+  const dialog = useRef(null);
+  const [value, setValue] = useState(title);
   useEffect(() => {
-    if (!pendingFocus.current) return;
-    pendingFocus.current = false;
-    const target = editor.current?.querySelector('.class-entry[data-open="true"] input') || editor.current?.querySelector('.class-toggle');
-    target?.focus({ preventScroll: true });
-    if (scrollToNew.current) { target?.closest('.class-entry')?.scrollIntoView({ block: 'start', behavior: 'instant' }); scrollToNew.current = false; }
-  }, [expandedIndex]);
-  useImperativeHandle(validationRef, () => ({
-    validate() {
-      setSubmitted(true);
-      setExpandedIndex(schedule.classes.findIndex((course) => getScheduleIssues({ classes: [course] }).length > 0));
-      requestAnimationFrame(() => {
-        const input = editor.current?.querySelector('[aria-invalid="true"]');
-        input?.focus({ preventScroll: true });
-        input?.scrollIntoView({ block: 'center', behavior: 'instant' });
-      });
-    },
-  }), [schedule]);
-  const visibleError = (key, error) => (submitted || touched[key]) ? error : '';
-  const fieldProps = (key, error) => ({
-    id: key,
-    'aria-invalid': !!visibleError(key, error),
-    'aria-describedby': visibleError(key, error) ? `${key}-error` : undefined,
-    onBlur: (event) => {
-      if (event.relatedTarget?.closest('button')) return;
-      setTouched((previous) => ({ ...previous, [key]: true }));
-    },
-  });
-  function updateCourse(index, key, value) {
-    onChange({ ...schedule, classes: schedule.classes.map((course, i) => i === index ? { ...course, [key]: value } : course) });
+    const node = dialog.current;
+    node.showModal();
+    const input = node.querySelector('input');
+    input.focus();
+    input.select();
+    return () => node.close();
+  }, []);
+  return <dialog ref={dialog} className="class-edit-dialog title-edit-dialog" aria-labelledby="title-edit-heading" onCancel={onClose} onClick={event => { if (event.target === event.currentTarget) onClose(); }}>
+    <header><h2 id="title-edit-heading">Edit schedule title</h2><button type="button" className="icon-button" aria-label="Close title editor" onClick={onClose}><X size={20} aria-hidden="true" /></button></header>
+    <form onSubmit={event => { event.preventDefault(); onSave(value.trim() || 'Class Schedule'); }}>
+      <div className="field-label"><label htmlFor="schedule-title">Title</label><input id="schedule-title" className="field-input" maxLength={48} value={value} onChange={event => setValue(event.target.value)} placeholder="Class Schedule" /></div>
+      <footer><div><button type="button" className="button-secondary" onClick={onClose}>Cancel</button><button type="submit" className="button-primary">Save</button></div></footer>
+    </form>
+  </dialog>;
+}
+
+export default function Editor({ schedule, onChange, onImport, preparingImage, validationRef, scheduleSource, scheduleTitle = 'Class Schedule', onTitleChange }) {
+  const addButton = useRef(null);
+  const titleButton = useRef(null);
+  const lastTrigger = useRef(null);
+  const [editingTitle, setEditingTitle] = useState(false);
+  const [selection, setSelection] = useState(null);
+  function closeTitle() {
+    setEditingTitle(false);
+    requestAnimationFrame(() => titleButton.current?.focus());
   }
-  function updateMeeting(index, meetingIndex, key, value) {
-    updateCourse(index, 'meetings', schedule.classes[index].meetings.map((meeting, i) => i === meetingIndex ? { ...meeting, [key]: value || null } : meeting));
+  function closeDialog() {
+    setSelection(null);
+    requestAnimationFrame(() => {
+      const trigger = lastTrigger.current;
+      (trigger?.isConnected ? trigger : addButton.current)?.focus();
+    });
   }
-  function addClass() {
-    pendingFocus.current = true;
-    scrollToNew.current = true;
-    setSubmitted(false);
-    setExpandedIndex(schedule.classes.length);
-    onChange({ ...schedule, classes: [...schedule.classes, { subject: '', courseCode: null, meetings: [newMeeting()] }] });
+  function openClass(index, meetingIndex, trigger, showErrors = false) {
+    lastTrigger.current = trigger || document.activeElement;
+    setSelection({ index, meetingIndex, showErrors, isNew: false });
   }
-  function removeClass(index) {
-    setTouched({});
-    setExpandedIndex(expandedIndex === index ? null : expandedIndex > index ? expandedIndex - 1 : expandedIndex);
-    onChange({ ...schedule, classes: schedule.classes.filter((_, i) => i !== index) });
+  useImperativeHandle(validationRef, () => ({ validate() {
+    const index = schedule.classes.findIndex(course => getScheduleIssues({ classes: [course] }).length);
+    if (index < 0) return;
+    const course = schedule.classes[index];
+    const meetingIndex = Math.max(0, course.meetings.findIndex(meeting => !meeting.day || !meeting.startTime || !meeting.endTime || meeting.endTime <= meeting.startTime));
+    openClass(index, meetingIndex, null, true);
+  } }), [schedule]);
+  function saveClass(draft) {
+    const course = selection.isNew ? { subject: draft.subject, courseCode: draft.courseCode, meetings: [draft.meeting] } : {
+      ...schedule.classes[selection.index], subject: draft.subject, courseCode: draft.courseCode,
+      meetings: schedule.classes[selection.index].meetings.length ? schedule.classes[selection.index].meetings.map((meeting, index) => index === selection.meetingIndex ? draft.meeting : meeting) : [draft.meeting],
+    };
+    onChange({ ...schedule, classes: selection.isNew ? [...schedule.classes, course] : schedule.classes.map((item, index) => index === selection.index ? course : item) });
+    closeDialog();
   }
-  return (
-    <section ref={editor} aria-labelledby="editor-heading" className="class-form rounded-xl border border-line bg-white">
-      <div className="review-toolbar rounded-t-xl bg-soft px-4">
-        <div className="schedule-title-control">{editingTitle ? <><label id="editor-heading" htmlFor="schedule-title" className="sr-only">Schedule title</label><input ref={titleInput} id="schedule-title" className="field-input" value={titleDraft} maxLength={48} onChange={(event) => setTitleDraft(event.target.value)} onBlur={saveTitle} onKeyDown={(event) => { if (event.key === 'Enter') { event.preventDefault(); saveTitle(); } else if (event.key === 'Escape') { event.preventDefault(); setEditingTitle(false); } }} /></> : <><h2 id="editor-heading" className="schedule-title">{scheduleTitle}</h2><button type="button" className="icon-button" aria-label="Edit schedule title" onClick={() => { setTitleDraft(scheduleTitle); setEditingTitle(true); }}><Pencil size={15} aria-hidden="true" /></button></>}</div>
-          {onImport && <button type="button" className="button-secondary" data-import-trigger disabled={preparingImage} onClick={onImport}><ImageUp size={16} aria-hidden="true" />{preparingImage ? 'Preparing…' : <span>Upload<span className="hidden sm:inline"> image</span></span>}</button>}
-      </div>
-      <div className="border-t border-line">
-        {schedule.classes.map((course, index) => {
-          const subjectKey = `class-${index}-subject`;
-          const codeKey = `class-${index}-code`;
-          const subjectError = !course.subject.trim() ? 'Enter a subject.' : '';
-          return (
-          <article key={index} data-open={expandedIndex === index} className="class-entry min-w-0 border-b border-line">
-            <div className="class-entry-header">
-            <button type="button" aria-expanded={expandedIndex === index} aria-controls={`class-${index}-fields`} onClick={() => setExpandedIndex(expandedIndex === index ? null : index)} className="class-toggle disclosure-summary">
-              <span className="min-w-0 flex-1">
-                <span className="class-name text-sm font-semibold">{course.subject.trim() || 'New Class'}{course.subject.trim() && course.courseCode && <> <span className="class-code">({course.courseCode})</span></>}</span>
-                {expandedIndex !== index && course.meetings.some(meetingSummary) && <span className="mt-0.5 grid gap-y-0.5 text-xs leading-[18px] text-muted">{course.meetings.map((meeting, i) => { const summary = meetingSummary(meeting); return summary ? <span key={i}>{summary}</span> : null; })}</span>}
-              </span>
-              <ChevronDown className="disclosure-icon size-4 shrink-0 text-muted" aria-hidden="true" />
-            </button>
-            <button type="button" className="icon-button class-delete" aria-label={`Delete class ${index + 1}: ${course.subject || 'New Class'}`} onClick={() => removeClass(index)}><Trash2 size={16} aria-hidden="true" /></button>
-            </div>
-          {expandedIndex === index && <fieldset id={`class-${index}-fields`} className="min-w-0 px-4 pt-3 pb-4">
-            <legend className="sr-only">Class {index + 1}: {course.subject || 'New class'}</legend>
-            <div className="class-subject-fields">
-              <EditorField label="Subject" fieldId={subjectKey} error={visibleError(subjectKey, subjectError)}><input className="field-input" {...fieldProps(subjectKey, subjectError)} maxLength={160} value={course.subject} onChange={(event) => updateCourse(index, 'subject', event.target.value)} placeholder="Subject name" /></EditorField>
-              <EditorField label={<span>Course code <span className="field-optional">(optional)</span></span>} fieldId={codeKey}><input id={codeKey} className="field-input" maxLength={40} value={course.courseCode || ''} onChange={(event) => updateCourse(index, 'courseCode', event.target.value || null)} /></EditorField>
-            </div>
-            {course.meetings.map((meeting, meetingIndex) => {
-              const key = `class-${index}-meeting-${meetingIndex}`;
-              const dayError = !meeting.day ? 'Choose a day.' : '';
-              const startError = !meeting.startTime ? 'Set a start time.' : '';
-              const endError = !meeting.endTime ? 'Set an end time.' : meeting.startTime && meeting.endTime <= meeting.startTime ? 'End time must be after start time.' : '';
-              return (
-              <fieldset key={meetingIndex} className="class-meeting">
-                <legend className="sr-only">Meeting {meetingIndex + 1}</legend>
-                {course.meetings.length > 1 && <div className="meeting-toolbar"><span className="meeting-title">Meeting {meetingIndex + 1}</span><button type="button" className="remove-action" aria-label={`Remove meeting ${meetingIndex + 1} from class ${index + 1}`} onClick={() => { setTouched({}); updateCourse(index, 'meetings', course.meetings.filter((_, i) => i !== meetingIndex)); }}><Trash2 size={14} aria-hidden="true" />Remove</button></div>}
-                <div className="class-meeting-fields">
-                  <EditorField label="Day" fieldId={`${key}-day`} className="meeting-day" error={visibleError(`${key}-day`, dayError)}><div className="field-select"><select className="field-input" {...fieldProps(`${key}-day`, dayError)} value={meeting.day || ''} onChange={(event) => updateMeeting(index, meetingIndex, 'day', event.target.value)}><option value="">Choose day</option>{days.map((day) => <option key={day}>{day}</option>)}</select><ChevronDown size={16} className="field-select-icon" aria-hidden="true" /></div></EditorField>
-                  <EditorField label="Start time" fieldId={`${key}-start`} error={visibleError(`${key}-start`, startError)}><input className="field-input" {...fieldProps(`${key}-start`, startError)} type="time" value={meeting.startTime || ''} onChange={(event) => updateMeeting(index, meetingIndex, 'startTime', event.target.value)} /></EditorField>
-                  <EditorField label="End time" fieldId={`${key}-end`} error={visibleError(`${key}-end`, endError)}><input className="field-input" {...fieldProps(`${key}-end`, endError)} type="time" value={meeting.endTime || ''} onChange={(event) => updateMeeting(index, meetingIndex, 'endTime', event.target.value)} /></EditorField>
-                  <EditorField label={<span>Room number <span className="field-optional">(optional)</span></span>} fieldId={`${key}-room`} className="meeting-room"><input id={`${key}-room`} className="field-input" maxLength={80} value={meeting.room || ''} onChange={(event) => updateMeeting(index, meetingIndex, 'room', event.target.value)} /></EditorField>
-                </div>
-              </fieldset>
-            ); })}
-            {submitted && !course.meetings.length && <p className="field-error">Add a meeting.</p>}
-            <div className="class-entry-actions">
-              <button type="button" disabled={course.meetings.length >= 14} className="text-link" onClick={() => updateCourse(index, 'meetings', [...course.meetings, newMeeting()])}><Plus size={16} aria-hidden="true" />Add meeting</button>
-            </div>
-          </fieldset>}
-          </article>
-        ); })}
-      </div>
-      <button type="button" disabled={schedule.classes.length >= 40} className="button-secondary add-class" onClick={addClass}><Plus className="size-4" aria-hidden="true" />Add class</button>
-    </section>
-  );
+  function deleteClass() {
+    const course = schedule.classes[selection.index];
+    const classes = course.meetings.length > 1 ? schedule.classes.map((item, index) => index === selection.index ? { ...item, meetings: item.meetings.filter((_, i) => i !== selection.meetingIndex) } : item) : schedule.classes.filter((_, index) => index !== selection.index);
+    onChange({ ...schedule, classes });
+    closeDialog();
+  }
+  const rows = schedule.classes.flatMap((course, index) => (course.meetings.length ? course.meetings : [newMeeting()]).map((meeting, meetingIndex) => ({ course, index, meeting, meetingIndex, incomplete: !!getScheduleIssues({ classes: [{ ...course, meetings: [meeting] }] }).length })));
+  const dayGroups = [...days, 'Day needed'].map(day => ({
+    day,
+    rows: rows.filter(row => (row.meeting.day || 'Day needed') === day).sort((a, b) => (a.meeting.startTime || '99:99').localeCompare(b.meeting.startTime || '99:99')),
+  })).filter(group => group.rows.length);
+  return <section aria-labelledby="editor-heading" className="class-form row-class-editor rounded-xl border border-line bg-white">
+    <div className="review-toolbar rounded-t-xl bg-soft px-4">
+      <div className="schedule-title-control"><h2 id="editor-heading" className="schedule-title">{scheduleTitle}</h2><button ref={titleButton} type="button" className="icon-button" aria-label="Edit schedule title" aria-haspopup="dialog" onClick={() => setEditingTitle(true)}><Pencil size={15} aria-hidden="true" /></button></div>
+      <div className="class-row-toolbar-actions">{onImport && <button type="button" className="button-secondary" data-import-trigger disabled={preparingImage} onClick={onImport}><ImageUp size={16} aria-hidden="true" />{preparingImage ? 'Preparing…' : <><span className="class-toolbar-label-full">{scheduleSource === 'image' ? 'Reupload image' : 'Upload image'}</span><span className="class-toolbar-label-short">Upload</span></>}</button>}<button ref={addButton} type="button" disabled={schedule.classes.length >= 40} className="button-primary class-row-add" onClick={event => { lastTrigger.current = event.currentTarget; setSelection({ isNew: true, index: schedule.classes.length, meetingIndex: 0, showErrors: false }); }}><Plus size={16} aria-hidden="true" /><span className="class-toolbar-label-full">Add class</span><span className="class-toolbar-label-short">Add</span></button></div>
+    </div>
+    <div className="border-t border-line">{dayGroups.flatMap(group => group.rows.map(({ course, index, meeting, meetingIndex, incomplete }) => <article key={`${index}-${meetingIndex}`} className="class-entry min-w-0 border-b border-line">
+      <button type="button" className="class-entry-header class-summary-row class-row-edit" data-incomplete={incomplete} aria-describedby={incomplete ? `class-${index}-${meetingIndex}-warning` : undefined} aria-haspopup="dialog" aria-label={`Edit ${course.subject || 'New class'}, ${meeting.day || 'day needed'}, ${meeting.startTime ? formatTime(meeting.startTime) : 'time needed'}`} onClick={event => openClass(index, meetingIndex, event.currentTarget, incomplete)}>
+        <span className="min-w-0 flex-1"><span className="class-name block text-sm font-semibold">{incomplete ? 'Incomplete details' : course.subject.trim()}{!incomplete && course.courseCode && <span className="class-code"> ({course.courseCode})</span>}</span>{incomplete ? <span id={`class-${index}-${meetingIndex}-warning`} className="class-row-details text-xs leading-[18px] text-muted">Edit this class to add missing details.</span> : <span className="class-row-details text-xs leading-[18px] text-muted"><span className="class-day-label" data-day={meeting.day}>{meeting.day.slice(0, 3)}</span><span>{meetingSummary(meeting)}</span></span>}</span>
+        {incomplete && <span className="class-row-warning"><TriangleAlert size={18} aria-hidden="true" /></span>}
+        <Pencil size={16} className="class-row-pencil" aria-hidden="true" />
+      </button>
+    </article>))}</div>
+    {editingTitle && <TitleDialog title={scheduleTitle} onClose={closeTitle} onSave={value => { onTitleChange(value); closeTitle(); }} />}
+    {selection && <ClassDialog key={`${selection.index}-${selection.meetingIndex}-${selection.isNew}`} course={selection.isNew ? { subject: '', courseCode: null, meetings: [newMeeting()] } : schedule.classes[selection.index]} meetingIndex={selection.meetingIndex} isNew={selection.isNew} showErrors={selection.showErrors} onClose={closeDialog} onSave={saveClass} onDelete={deleteClass} />}
+  </section>;
 }

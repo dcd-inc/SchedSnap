@@ -24,3 +24,11 @@ test('malformed drafts are rejected and unavailable storage does not interrupt e
   assert.equal(readDraft(blocked), null);
   assert.equal(saveDraft(blocked, schedule, 'My timetable'), false);
 });
+
+test('drafts preserve image and sample sources for the upload label', () => {
+  const store = storage();
+  for (const source of ['image', 'sample', 'manual']) {
+    saveDraft(store, schedule, 'Class Schedule', source);
+    assert.equal(readDraft(store).source, source);
+  }
+});

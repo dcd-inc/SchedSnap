@@ -1,0 +1,26 @@
+{
+  "measurements": [
+    {
+      "device": "mobile",
+      "sameImage": true,
+      "scrollDelta": 0,
+      "heightDelta": 0,
+      "sameFocus": true
+    },
+    {
+      "device": "tablet",
+      "sameImage": true,
+      "scrollDelta": 0,
+      "heightDelta": 0,
+      "sameFocus": true
+    },
+    {
+      "device": "laptop",
+      "sameImage": true,
+      "scrollDelta": 0,
+      "heightDelta": 0,
+      "sameFocus": true
+    }
+  ],
+  "errors": []
+}

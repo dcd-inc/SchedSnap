@@ -1,0 +1,34 @@
+{
+  "assets": [
+    {
+      "path": "public/wallpapers/scenic/capybara-blue-peek/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "f4e12d7c2d677c8c1329f44023af7a47603e1b9ebf3cb33b89b678bc527b1f35"
+    },
+    {
+      "path": "public/wallpapers/scenic/capybara-daisy-yellow/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "2445e0f82a8e921fb3ac2d17ab5b1d6baf59e170513c30fa6f2d67c984157bc6"
+    },
+    {
+      "path": "public/wallpapers/scenic/capybara-navy-tilt/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "28caab19fab8d98afc3359ff84b1d04e5002b772164cc2c26c7b9b39ed07d521"
+    },
+    {
+      "path": "public/wallpapers/scenic/capybara-strawberry-hood/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "884572ad8d70050306ec2136df8e25eb3e5eb66823e7b22341e6c65e2689551e"
+    },
+    {
+      "path": "public/wallpapers/scenic/capybara-teal-peace/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "21782c406421d7e319765970bc8ce5fbd77e9149f78d6d4ea36fb4192b1f14ec"
+    }
+  ]
+}

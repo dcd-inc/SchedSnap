@@ -49,6 +49,7 @@ export default function ScheduleWallpaper() {
     setSearch(previous => { const params = new URLSearchParams(previous); params.set('style', next); return params; });
   }
   function changeLayout(next) {
+    if (templateId) setTemplateSettings(previous => ({ ...previous, [templateId]: { ...previous[templateId], scheduleLayout: next } }));
     setSearch(previous => { const params = new URLSearchParams(previous); params.set('layout', next); return params; });
   }
   const [schedule, setSchedule] = useState({ classes: [], warnings: [] });
@@ -70,9 +71,9 @@ export default function ScheduleWallpaper() {
   });
   useEffect(() => {
     if (pendingDraft) return;
-    try { saveDraft(window.sessionStorage, schedule, scheduleTitle); }
+    try { saveDraft(window.sessionStorage, schedule, scheduleTitle, scheduleSource); }
     catch { /* The unload guard remains active when storage is unavailable. */ }
-  }, [schedule, scheduleTitle, pendingDraft]);
+  }, [schedule, scheduleTitle, scheduleSource, pendingDraft]);
   const [canCancelEntry, setCanCancelEntry] = useState(false);
   const [preparingImage, setPreparingImage] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -132,14 +133,14 @@ export default function ScheduleWallpaper() {
     if (!hasUnsavedChanges) return;
     function confirmRefresh(event) {
       try {
-        if (!pendingDraft && saveDraft(window.sessionStorage, schedule, scheduleTitle) && (schedule.classes.length > 0 || (!image && !unsavedAppearance && scheduleTitle === 'Class Schedule'))) return;
+        if (!pendingDraft && saveDraft(window.sessionStorage, schedule, scheduleTitle, scheduleSource) && (schedule.classes.length > 0 || (!image && !unsavedAppearance && scheduleTitle === 'Class Schedule'))) return;
       } catch { /* Warn before losing edits when storage is unavailable. */ }
       event.preventDefault();
       event.returnValue = '';
     }
     window.addEventListener('beforeunload', confirmRefresh);
     return () => window.removeEventListener('beforeunload', confirmRefresh);
-  }, [hasUnsavedChanges, pendingDraft, image, templateSettings, schedule, scheduleTitle]);
+  }, [hasUnsavedChanges, pendingDraft, image, templateSettings, schedule, scheduleTitle, scheduleSource]);
   useEffect(() => {
     heading.current?.focus({ preventScroll: true });
     window.scrollTo({ top: 0, behavior: 'instant' });
@@ -224,7 +225,8 @@ export default function ScheduleWallpaper() {
     {step === 'classes' && pendingDraft && <RestoreClassesDialog count={pendingDraft.schedule.classes.length} onRestore={() => {
       setSchedule(pendingDraft.schedule);
       setScheduleTitle(pendingDraft.title);
-      setScheduleSource('draft');
+      setScheduleSource(pendingDraft.source || 'draft');
+      setCanCancelEntry(true);
       setPendingDraft(null);
       if (template) navigate(devicePath(`${basePath}/${template.id}`), { replace: true });
       requestAnimationFrame(() => heading.current?.focus());
@@ -251,7 +253,16 @@ export default function ScheduleWallpaper() {
       imagePickerRef={imagePicker} preparingImage={preparingImage} onPreparingImageChange={setPreparingImage}
       onImage={(next) => { setImage(next); dismissNotification(); }}
       onError={(message) => { setError(message); setSuccess(''); }} onAnalyze={analyze} importUsage={importUsage} usageUnavailable={usageUnavailable}
-      onSample={() => { setSchedule(structuredClone(sampleSchedule)); setScheduleSource('sample'); trackEvent('sample_schedule_loaded', templateProperties(template)); dismissNotification(); }}
+      onSample={() => {
+        const sample = structuredClone(sampleSchedule);
+        sample.classes[1].subject = '';
+        sample.classes[2].meetings[0].endTime = null;
+        sample.classes[3].meetings[0].day = null;
+        setSchedule(sample);
+        setScheduleSource('sample');
+        trackEvent('sample_schedule_loaded', templateProperties(template));
+        dismissNotification();
+      }}
     /> : <>
       <TemplateGallery previewStyle={previewStyle} onStyleChange={changeStyle} previewLayout={previewLayout} onLayoutChange={changeLayout} sort={sort} onSortChange={changeSort} device={device} onDeviceChange={changeDevice} category={search.get('collection')} onCategoryChange={changeCategory} selectedId={selectedId} settings={templateSettings} schedule={schedule} scheduleTitle={scheduleTitle} resolution={resolution} onSelect={selectTemplate} searchQuery={debouncedSearchQuery} onClearSearch={() => setSearchQuery('')} />
     </>}

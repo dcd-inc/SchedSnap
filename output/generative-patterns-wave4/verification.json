@@ -1,0 +1,3913 @@
+{
+  "exports": 300,
+  "totalCollection": 400,
+  "all400UniqueAtIdenticalTileSizeAndColors": true,
+  "devices": [
+    "mobile",
+    "tablet",
+    "laptop"
+  ],
+  "uniqueMotifsPerDevice": 100,
+  "results": [
+    {
+      "id": "print-coquette-corset",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-ribbon-ladder",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-cameo",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-wax-seal",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-rosette-badge",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-locket",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-pendant-chain",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-stitched-heart",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-scroll-letter",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-ruffle-hem",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-scallop-envelope",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-heart-trellis",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-tulle-hearts",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-pearl-festoons",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-folded-knots",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-pleated-ruff",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-broderie",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-sachet",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-bookplate",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-heart-window",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-ballet-ticket",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-doll-dress",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-puff-sleeves",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-satin-crossings",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-woven-hearts",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-scallop-checks",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-streamers",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-embossed-loops",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-love-stamps",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-heart-chains",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-frilly-cuffs",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-bell-skirts",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-ribbon-medaillon",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-pearl-diamonds",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-ribbon-windows",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-rosebud",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-peony",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-orchid",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-magnolia",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-camellia",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-sakura",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-calla",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-hibiscus",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-sweet-pea",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-bleeding-heart",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-fuchsia",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-foxglove",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-wisteria",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-delphinium",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-hollyhock",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-gladiolus",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-paradise",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-protea",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-ranunculus",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-chrysanthemum",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-dahlia",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-passionflower",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-clematis",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-lily",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-freesia",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-snowdrop",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-mimosa",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-dogwood",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-hellebore",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-ylang",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-frangipani",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-amaryllis",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-scabiosa",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-astilbe",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-allium",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-compact-mirrors",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-velvet-lipsticks",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-manicure-bottles",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-perfume-atomizers",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-powder-brushes",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-hair-claws",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-dresser-combs",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-velcro-rollers",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-satin-scrunchies",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-drop-earrings",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-slingback-heels",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-mary-jane-shoes",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-top-handle-bags",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-cat-eye-sunglasses",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-lip-gloss-wands",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-mascara-mornings",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-satin-pillows",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-slip-dresses",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-party-dresses",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-vanity-tables",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-hair-dryer-club",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-face-cream-jars",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-hand-cream-tubes",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-makeup-palettes",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-powder-puffs",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-pearl-bracelets",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-padded-headbands",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-sleeping-masks",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-sunhat-strolls",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-ankle-boots",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-corset",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-ribbon-ladder",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-cameo",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-wax-seal",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-rosette-badge",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-locket",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-pendant-chain",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-stitched-heart",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-scroll-letter",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-ruffle-hem",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-scallop-envelope",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-heart-trellis",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-tulle-hearts",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-pearl-festoons",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-folded-knots",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-pleated-ruff",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-broderie",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-sachet",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-bookplate",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-heart-window",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-ballet-ticket",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-doll-dress",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-puff-sleeves",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-satin-crossings",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-woven-hearts",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-scallop-checks",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-streamers",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-embossed-loops",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-love-stamps",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-heart-chains",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-frilly-cuffs",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-bell-skirts",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-ribbon-medaillon",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-pearl-diamonds",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-ribbon-windows",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-rosebud",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-peony",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-orchid",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-magnolia",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-camellia",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-sakura",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-calla",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-hibiscus",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-sweet-pea",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-bleeding-heart",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-fuchsia",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-foxglove",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-wisteria",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-delphinium",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-hollyhock",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-gladiolus",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-paradise",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-protea",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-ranunculus",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-chrysanthemum",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-dahlia",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-passionflower",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-clematis",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-lily",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-freesia",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-snowdrop",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-mimosa",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-dogwood",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-hellebore",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-ylang",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-frangipani",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-amaryllis",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-scabiosa",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-astilbe",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-allium",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-compact-mirrors",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-velvet-lipsticks",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-manicure-bottles",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-perfume-atomizers",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-powder-brushes",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-hair-claws",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-dresser-combs",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-velcro-rollers",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-satin-scrunchies",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-drop-earrings",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-slingback-heels",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-mary-jane-shoes",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-top-handle-bags",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-cat-eye-sunglasses",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-lip-gloss-wands",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-mascara-mornings",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-satin-pillows",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-slip-dresses",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-party-dresses",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-vanity-tables",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-hair-dryer-club",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-face-cream-jars",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-hand-cream-tubes",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-makeup-palettes",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-powder-puffs",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-pearl-bracelets",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-padded-headbands",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-sleeping-masks",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-sunhat-strolls",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-ankle-boots",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-corset",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-ribbon-ladder",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-cameo",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-wax-seal",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-rosette-badge",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-locket",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-pendant-chain",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-stitched-heart",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-scroll-letter",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-ruffle-hem",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-scallop-envelope",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-heart-trellis",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-tulle-hearts",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-pearl-festoons",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-folded-knots",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-pleated-ruff",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-broderie",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-sachet",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-bookplate",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-heart-window",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-ballet-ticket",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-doll-dress",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-puff-sleeves",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-satin-crossings",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-woven-hearts",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-scallop-checks",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-streamers",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-embossed-loops",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-love-stamps",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-heart-chains",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-frilly-cuffs",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-bell-skirts",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-ribbon-medaillon",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-pearl-diamonds",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-coquette-ribbon-windows",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-rosebud",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-peony",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-orchid",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-magnolia",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-camellia",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-sakura",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-calla",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-hibiscus",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-sweet-pea",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-bleeding-heart",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-fuchsia",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-foxglove",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-wisteria",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-delphinium",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-hollyhock",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-gladiolus",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-paradise",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-protea",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-ranunculus",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-chrysanthemum",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-dahlia",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-passionflower",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-clematis",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-lily",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-freesia",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-snowdrop",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-mimosa",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-dogwood",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-hellebore",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-ylang",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-frangipani",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-amaryllis",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-scabiosa",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-astilbe",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-romance-allium",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-compact-mirrors",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-velvet-lipsticks",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-manicure-bottles",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-perfume-atomizers",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-powder-brushes",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-hair-claws",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-dresser-combs",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-velcro-rollers",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-satin-scrunchies",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-drop-earrings",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-slingback-heels",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-mary-jane-shoes",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-top-handle-bags",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-cat-eye-sunglasses",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-lip-gloss-wands",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-mascara-mornings",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-satin-pillows",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-slip-dresses",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-party-dresses",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-vanity-tables",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-hair-dryer-club",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-face-cream-jars",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-hand-cream-tubes",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-makeup-palettes",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-powder-puffs",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-pearl-bracelets",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-padded-headbands",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-sleeping-masks",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-sunhat-strolls",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-vanity-ankle-boots",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    }
+  ]
+}

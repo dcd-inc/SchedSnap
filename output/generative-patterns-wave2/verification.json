@@ -1,0 +1,3913 @@
+{
+  "exports": 300,
+  "totalCollection": 200,
+  "all200UniqueAtIdenticalTileSizeAndColors": true,
+  "devices": [
+    "mobile",
+    "tablet",
+    "laptop"
+  ],
+  "uniqueMotifsPerDevice": 100,
+  "results": [
+    {
+      "id": "print-arch-meander",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-quatrefoil",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-octagon",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-guilloche",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-optic-lens",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-shard-mosaic",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-crosshatch",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-houndstooth",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-argyle",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-dentil",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-balusters",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-portcullis",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-lancets",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-fluting",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-ashlar",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-brick-bond",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-reed-screen",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-marquetry",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-coffers",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-ogee",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-log-cabin",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-tatami",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-quilting",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-accordion",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-feather-weave",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-curtain",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-reeded-glass",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-rose-window",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-optic-check",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-zipper",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-basket-stars",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-deco-wings",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-arc-blocks",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-bowed-grid",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-twill",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-ginkgo",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-monstera",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-acorn",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-pinecone",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-wheat",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-bamboo",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-hydrangea",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-poppy",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-lavender",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-eucalyptus",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-valley-bells",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-maple",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-oak",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-palm",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-saguaro",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-succulent",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-agave",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-morel",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-willow",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-alpine",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-volcanic",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-waterfall",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-iceberg",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-cotton",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-cattail",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-mangrove",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-baobab",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-poplar",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-birch",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-violet-pot",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-plane-seeds",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-anemone",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-iris",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-thistle",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-helicopter-seeds",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-open-books",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-tea-service",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-headphone-hours",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-cassette-mix",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-vinyl-room",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-camera-roll",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-key-ring",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-milk-cartons",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-paintbrush-studio",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-camp-lantern",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-cupcake-corner",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-sailing-day",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-melody-notes",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-sweet-wrappers",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-pretzel-break",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-sewing-scissors",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-butter-toast",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-teapot-table",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-alarm-clock",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-satchel-stories",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-cinema-tickets",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-bright-ideas",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-message-bottles",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-rainy-umbrellas",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-roller-rink",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-balloon-journey",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-pocket-compass",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-game-night",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-watering-can",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-croissant-cafe",
+      "device": "mobile",
+      "width": 1080,
+      "height": 2400,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-meander",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-quatrefoil",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-octagon",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-guilloche",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-optic-lens",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-shard-mosaic",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-crosshatch",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-houndstooth",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-argyle",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-dentil",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-balusters",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-portcullis",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-lancets",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-fluting",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-ashlar",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-brick-bond",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-reed-screen",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-marquetry",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-coffers",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-ogee",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-log-cabin",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-tatami",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-quilting",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-accordion",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-feather-weave",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-curtain",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-reeded-glass",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-rose-window",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-optic-check",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-zipper",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-basket-stars",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-deco-wings",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-arc-blocks",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-bowed-grid",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-twill",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-ginkgo",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-monstera",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-acorn",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-pinecone",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-wheat",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-bamboo",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-hydrangea",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-poppy",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-lavender",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-eucalyptus",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-valley-bells",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-maple",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-oak",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-palm",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-saguaro",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-succulent",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-agave",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-morel",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-willow",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-alpine",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-volcanic",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-waterfall",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-iceberg",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-cotton",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-cattail",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-mangrove",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-baobab",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-poplar",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-birch",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-violet-pot",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-plane-seeds",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-anemone",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-iris",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-thistle",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-helicopter-seeds",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-open-books",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-tea-service",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-headphone-hours",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-cassette-mix",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-vinyl-room",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-camera-roll",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-key-ring",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-milk-cartons",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-paintbrush-studio",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-camp-lantern",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-cupcake-corner",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-sailing-day",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-melody-notes",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-sweet-wrappers",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-pretzel-break",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-sewing-scissors",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-butter-toast",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-teapot-table",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-alarm-clock",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-satchel-stories",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-cinema-tickets",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-bright-ideas",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-message-bottles",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-rainy-umbrellas",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-roller-rink",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-balloon-journey",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-pocket-compass",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-game-night",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-watering-can",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-croissant-cafe",
+      "device": "tablet",
+      "width": 1600,
+      "height": 2560,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-meander",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-quatrefoil",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-octagon",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-guilloche",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-optic-lens",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-shard-mosaic",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-crosshatch",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-houndstooth",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-argyle",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-dentil",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-balusters",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-portcullis",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-lancets",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-fluting",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-ashlar",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-brick-bond",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-reed-screen",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-marquetry",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-coffers",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-ogee",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-log-cabin",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-tatami",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-quilting",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-accordion",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-feather-weave",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-curtain",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-reeded-glass",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-rose-window",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-optic-check",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-zipper",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-basket-stars",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-deco-wings",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-arc-blocks",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-bowed-grid",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-arch-twill",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-ginkgo",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-monstera",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-acorn",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-pinecone",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-wheat",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-bamboo",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-hydrangea",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-poppy",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-lavender",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-eucalyptus",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-valley-bells",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-maple",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-oak",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-palm",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-saguaro",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-succulent",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-agave",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-morel",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-willow",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-alpine",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-volcanic",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-waterfall",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-iceberg",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-cotton",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-cattail",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-mangrove",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-baobab",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-poplar",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-birch",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-violet-pot",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-plane-seeds",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-anemone",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-iris",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-thistle",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-nature-helicopter-seeds",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-open-books",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-tea-service",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-headphone-hours",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-cassette-mix",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-vinyl-room",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-camera-roll",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-key-ring",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-milk-cartons",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-paintbrush-studio",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-camp-lantern",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-cupcake-corner",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-sailing-day",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-melody-notes",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-sweet-wrappers",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-pretzel-break",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-sewing-scissors",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-butter-toast",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-teapot-table",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-alarm-clock",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-satchel-stories",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-cinema-tickets",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-bright-ideas",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-message-bottles",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-rainy-umbrellas",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-roller-rink",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-balloon-journey",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-pocket-compass",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-game-night",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-watering-can",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    },
+    {
+      "id": "print-keepsake-croissant-cafe",
+      "device": "laptop",
+      "width": 1920,
+      "height": 1080,
+      "changes": {
+        "patternColor": true,
+        "patternAccent": true,
+        "patternScale": true,
+        "patternOpacity": true,
+        "background": true
+      }
+    }
+  ]
+}

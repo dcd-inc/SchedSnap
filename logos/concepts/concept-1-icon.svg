@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">SchedSnap — Calendar Fold</title>
+  <desc id="desc">A bold calendar with a folded lower corner, bringing a class schedule onto a fresh sheet of wallpaper.</desc>
+  <g id="icon">
+    <path fill="#0f172a" d="M132 108h248c22 0 40 18 40 40v160L304 424H132c-22 0-40-18-40-40V148c0-22 18-40 40-40Z"/>
+    <rect x="156" y="68" width="32" height="86" rx="16" fill="#0f172a"/>
+    <rect x="324" y="68" width="32" height="86" rx="16" fill="#0f172a"/>
+    <path d="M124 186h264" stroke="#faf6ef" stroke-width="16"/>
+    <rect x="140" y="230" width="84" height="44" rx="10" fill="#faf6ef"/>
+    <rect x="256" y="230" width="84" height="44" rx="10" fill="#faf6ef"/>
+    <rect x="140" y="306" width="84" height="44" rx="10" fill="#faf6ef"/>
+    <path fill="#526074" d="M304 424v-84c0-18 14-32 32-32h84L304 424Z"/>
+  </g>
+</svg>

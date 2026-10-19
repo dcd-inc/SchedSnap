@@ -1,0 +1,164 @@
+{
+  "theme": "Chiikawa / Little Friends",
+  "referenceImage": "C:\\Users\\picar\\.codex\\attachments\\74d18602-90f5-48ae-8aa3-b182affe434a\\image-4.png",
+  "referenceRole": "style and composition cues only: clean warm-white field, regularly spaced black polka dots, black-line kawaii faces, powder-blue gingham bows",
+  "generator": "built-in image_gen",
+  "generatedAt": "2026-10-13",
+  "processing": "Each device artwork was generated as a separate composition, then aspect-cover cropped only as needed and Lanczos-resampled to the exact SchedSnap device dimensions; saved as opaque RGB PNG.",
+  "dimensions": {
+    "mobile": "1080x2400",
+    "tablet": "1600x2560",
+    "laptop": "1920x1080"
+  },
+  "designs": [
+    {
+      "id": "chikawa-gingham-picnic",
+      "name": "Gingham Picnic",
+      "style": "watercolor-pencil stationery illustration with black ink contours, gingham picnic cloth and tiny picnic vignette",
+      "prompts": {
+        "mobile": "Use case: illustration-story. Asset type: full-bleed opaque wallpaper artwork for a SchedSnap timetable background, Mobile portrait, 1080 × 2400 composition. Input image: Reference 4, style/composition reference only: use its warm white field, tiny evenly scattered black polka dots, black hand-drawn outlines, powder-blue gingham bows, and gentle kawaii tone. Do not copy the exact character or layout. Primary request: Original Chiikawa wallpaper design “Gingham Picnic”. Feature an adorable small round white Chiikawa-like character in a tiny picnic vignette, with one powder-blue gingham bow, plus a tiny Hachiware friend. Keep characters small at the bottom corners and a few bow/ribbon accents at far top corners; preserve a broad uninterrupted low-detail central area for schedule readability. Scene/backdrop: clean warm-white paper with restrained, evenly spaced black polka dots across whole background; subtle hand-painted watercolor pencil texture. Style/medium: gentle kawaii stationery illustration, clean confident black ink contours, blush-pink cheeks, powder-blue gingham fabric details. Composition/framing: tall phone wallpaper, visual framing accents at outer edge only, ample quiet center, all subjects entirely within frame. Lighting/mood: soft daylight, sweet, calm. Constraints: opaque artwork only, exact portrait phone aspect 9:20, no text, no date, no timetable, no UI, no badges, no logo, no watermark, no device frame, no border.",
+        "tablet": "Use case: illustration-story. Asset type: full-bleed opaque wallpaper artwork for SchedSnap schedule background; tablet portrait, 1600 × 2560 composition (5:8). Input image: reference 4, style/composition reference only: warm white, evenly scattered tiny black polka dots, black hand-inked cute characters, powder-blue gingham bows; preserve the gentle kawaii stationery feel, do not copy the exact reference layout. Primary request: Chiikawa “Gingham Picnic” tablet wallpaper, a new portrait composition distinct from phone: tiny Chiikawa and Hachiware characters and a small picnic basket with a powder-blue gingham cloth, grouped along the bottom edge; two gingham bows frame the upper corners. Broad clean central field for schedule readability. Keep all details minimal and low contrast outside bottom vignette. Style: soft watercolor-pencil stationery illustration, clean black line, blush pink cheeks, pale blue accents, warm ivory paper and regular small black dots. Constraints: phone-safe style, schedule-safe negative space; opaque full bleed; no text, no schedule, no logo, no badge, no watermark, no device frame, no border.",
+        "laptop": "Use case: illustration-story. Create a full-bleed opaque laptop/desktop wallpaper in exact 16:9 landscape composition for a SchedSnap schedule background, 1920 × 1080 target. Input image: attached reference 4 is STYLE ONLY; transfer its warm white paper, tidy black polka dots, powder-blue gingham bows, black-line kawaii character tone without copying layout. Gingham Picnic design: a small hand-drawn Chiikawa and Hachiware picnic vignette with tiny basket and gingham picnic cloth anchored at the far right bottom corner, one petite gingham bow at far upper left, leave the entire left and central 75% light, simple, low contrast for timetable content, sparse regular dots throughout. Soft watercolor-pencil stationery art, gently imperfect ink, tiny blush cheeks, few flowers. Wide landscape-specific composition, do not stretch phone art. Artwork only. No text, dates, UI, logo, badge, watermark, device frame, border."
+      }
+    },
+    {
+      "id": "chikawa-gingham-stickerbook",
+      "name": "Gingham Stickerbook",
+      "style": "hand-cut paper stickers with soft white die-cut rims and gentle paper shadows",
+      "prompts": {
+        "mobile": "Generate a 9:20 ultra-tall portrait image (not 9:16), aspect ratio 0.45, designed for final 1080 × 2400 wallpaper. Use case: illustration-story. Opaque full-bleed mobile wallpaper. Reference image 4 is style-only: warm white paper, regular black polka dots, powder-blue gingham bows, black hand-drawn kawaii stationery style. Gingham Stickerbook design: light paper cut sticker style, small Chiikawa character and bow at top-left edge, Hachiware face at top-right edge, little Usagi and gingham bow at opposite bottom corners, each entirely in frame with safe margin. Quiet, broad center with sparse dots for schedule. Distinct from picnic illustration, subtle white die-cut rim and paper shadow, powder blue and blush palette. Compose as a very tall narrow 9:20 poster, no horizontal framing. Artwork only: no words, text, logo, watermark, UI, frame, border.",
+        "tablet": "Use case: illustration-story. Full-bleed opaque tablet-portrait SchedSnap wallpaper, target 1600 × 2560 (5:8), composed specifically for tablet. Input reference 4 only: warm ivory white field, tidy black polka dots, black-outline cute characters, powder-blue gingham bows, gentle kawaii tone. Gingham Stickerbook design in papercraft sticker style, distinct from watercolor picnic: sparse small white Chiikawa sticker with big gingham bow and blue flower along top-left edge, Hachiware head sticker at upper-right edge, tiny Usagi + ribbon stickers at bottom corners, all as paper-cut stickers with subtle white die-cut rim and light paper shadow. Simple evenly distributed small black dots on ivory background, broad quiet central schedule zone. Keep all accents entirely inside edge margins. Hand-cut paper and lightly drawn black line; soft blush. No collage clutter. Artwork only, no text, UI, schedule, logo, badge, watermark, border, device frame.",
+        "laptop": "Use case: illustration-story. Full-bleed opaque laptop/desktop SchedSnap wallpaper, target 1920 × 1080 (16:9), landscape-specific composition. Input reference 4 only: warm ivory, tidy tiny black dots, hand-drawn kawaii expressions and powder-blue gingham bows. Gingham Stickerbook style: arrange three small die-cut paper stickers as edge accents, Chiikawa and gingham bow at far left, Hachiware face and small blue flower at far right, tiny Usagi sticker tucked bottom left; broad quiet central and central-lower area for schedule text. Keep stickers fully visible within frame; small black dots on cream field; subtle white sticker outline and soft paper shadow, simple not crowded. This is paper-cut craft, distinct from the hand-painted picnic art. Artwork only, no text, schedule, logo, UI, badge, watermark, frame, border."
+      }
+    },
+    {
+      "id": "chikawa-gingham-patchwork",
+      "name": "Gingham Patchwork",
+      "style": "soft felt appliqué with embroidered black facial lines, stitched seams, and fabric grain",
+      "prompts": {
+        "mobile": "Use case: illustration-story. Opaque full-bleed SchedSnap mobile wallpaper, exact 1080 × 2400 target 9:20 portrait, composed specifically for phone. Reference image 4 style cues only: white field, black polka dots, powder-blue gingham bows, sweet round kawaii black-line characters. New “Gingham Patchwork” variant in soft felt appliqué and embroidery: put small soft-felt Chiikawa and Hachiware patch characters nestled together at the bottom, with visible but delicate stitched seams, one large powder-blue gingham fabric bow at top-right and one tiny patch flower at top-left; sparse regular black dots all over ivory white; very open center kept calm for schedule readability. Simple sewn fabric texture, smooth gentle edges, cheeks in muted pink. Avoid crowding, avoid loud colors. Artwork only, no text, dates, interface, watermark, logo, badges, device, border.",
+        "tablet": "Use case: illustration-story. Opaque full-bleed SchedSnap tablet portrait wallpaper, exact 1600 × 2560 target 5:8, separately composed for tablet. Use reference image 4 STYLE ONLY: warm-white field, black polka dots, powder-blue gingham bows, cute black-line kawaii. Gingham Patchwork variant: stylized fabric appliqué and embroidered Chiikawa, Hachiware, and a small Usagi head patch arranged as a little horizontal sewn patch garland at the lower edge; two small padded powder-blue gingham bows at upper corners; sparse regular black dots; quiet wide central field for schedule text. Clearly tactile fabric grain and tiny stitch details on characters, bow edges and tiny flower patches, pale blue and blush palette. Keep schedule area clean and low contrast. No text, UI, dates, logo, watermark, badges, border, device frame.",
+        "laptop": "Use case: illustration-story. Full-bleed opaque laptop/desktop SchedSnap wallpaper, landscape 1920 × 1080 target, exact 16:9, separately composed for wide screen. Reference image 4 style only: warm white fabric-like background, orderly black polka dots, soft powder-blue gingham bows and cute black-line Chiikawa friends. Gingham Patchwork variant: tactile felt appliqué Chiikawa and Hachiware patch characters sitting together in a tiny patch picnic at the far right lower corner, a small sewn gingham bow in far upper-left; preserve broad, simple low-contrast central and left side for schedule content; sparse black dots across ivory cloth. Soft embroidery stitching along edges, slight fabric grain, muted powder-blue and blush. Keep important stitched subjects entirely inside frame. Artwork only, no text, UI, schedule, badge, logo, watermark, device frame, border."
+      }
+    }
+  ],
+  "assets": [
+    {
+      "design": "chikawa-gingham-picnic",
+      "device": "mobile",
+      "path": "public/wallpapers/little-friends/chikawa-gingham-picnic/mobile.png",
+      "size": "1080x2400",
+      "actualDimensions": [
+        1080,
+        2400
+      ],
+      "opaque": true,
+      "sha256": "36702edb347374cbf6cb64690c715e5eca6ef16e21fa7c5869196ad9362107fd",
+      "generatedSource": "C:\\Users\\picar\\.codex\\generated_images\\01a13588-88cb-7e02-9dea-1f5cd01b431c\\e"
+    },
+    {
+      "design": "chikawa-gingham-picnic",
+      "device": "tablet",
+      "path": "public/wallpapers/little-friends/chikawa-gingham-picnic/tablet.png",
+      "size": "1600x2560",
+      "actualDimensions": [
+        1600,
+        2560
+      ],
+      "opaque": true,
+      "sha256": "d6fadea533bb52afc21d2ccced41c9d214a89f6a7974c25f9f3ac383f11db0a0",
+      "generatedSource": "C:\\Users\\picar\\.codex\\generated_images\\01a13588-88cb-7e02-9dea-1f5cd01b431c\\e"
+    },
+    {
+      "design": "chikawa-gingham-picnic",
+      "device": "laptop",
+      "path": "public/wallpapers/little-friends/chikawa-gingham-picnic/laptop.png",
+      "size": "1920x1080",
+      "actualDimensions": [
+        1920,
+        1080
+      ],
+      "opaque": true,
+      "sha256": "dc67f313799232330797acd92f4d32f19f84f7945ff679fa71242e0ab4c3a565",
+      "generatedSource": "C:\\Users\\picar\\.codex\\generated_images\\01a13588-88cb-7e02-9dea-1f5cd01b431c\\e"
+    },
+    {
+      "design": "chikawa-gingham-stickerbook",
+      "device": "mobile",
+      "path": "public/wallpapers/little-friends/chikawa-gingham-stickerbook/mobile.png",
+      "size": "1080x2400",
+      "actualDimensions": [
+        1080,
+        2400
+      ],
+      "opaque": true,
+      "sha256": "1aabbeedb30df4fb1d2e5864ec747857bc87f4176a691b775ceccc632b1656e8",
+      "generatedSource": "C:\\Users\\picar\\.codex\\generated_images\\01a13588-88cb-7e02-9dea-1f5cd01b431c\\e"
+    },
+    {
+      "design": "chikawa-gingham-stickerbook",
+      "device": "tablet",
+      "path": "public/wallpapers/little-friends/chikawa-gingham-stickerbook/tablet.png",
+      "size": "1600x2560",
+      "actualDimensions": [
+        1600,
+        2560
+      ],
+      "opaque": true,
+      "sha256": "8ab1215f36f7e55c4ed5768d899eccd8295bb413ebcb7bfaba90ca1e6859d9f5",
+      "generatedSource": "C:\\Users\\picar\\.codex\\generated_images\\01a13588-88cb-7e02-9dea-1f5cd01b431c\\e"
+    },
+    {
+      "design": "chikawa-gingham-stickerbook",
+      "device": "laptop",
+      "path": "public/wallpapers/little-friends/chikawa-gingham-stickerbook/laptop.png",
+      "size": "1920x1080",
+      "actualDimensions": [
+        1920,
+        1080
+      ],
+      "opaque": true,
+      "sha256": "74c4653df1082f77963ef8385e2c9bddc11cd7faaf68de57bc824db6eb15dbb2",
+      "generatedSource": "C:\\Users\\picar\\.codex\\generated_images\\01a13588-88cb-7e02-9dea-1f5cd01b431c\\e"
+    },
+    {
+      "design": "chikawa-gingham-patchwork",
+      "device": "mobile",
+      "path": "public/wallpapers/little-friends/chikawa-gingham-patchwork/mobile.png",
+      "size": "1080x2400",
+      "actualDimensions": [
+        1080,
+        2400
+      ],
+      "opaque": true,
+      "sha256": "7e8a738a081ed0d68a7f1369ef2978705adf1ec81bf7536be46f4ba0934e934e",
+      "generatedSource": "C:\\Users\\picar\\.codex\\generated_images\\01a13588-88cb-7e02-9dea-1f5cd01b431c\\e"
+    },
+    {
+      "design": "chikawa-gingham-patchwork",
+      "device": "tablet",
+      "path": "public/wallpapers/little-friends/chikawa-gingham-patchwork/tablet.png",
+      "size": "1600x2560",
+      "actualDimensions": [
+        1600,
+        2560
+      ],
+      "opaque": true,
+      "sha256": "9c5ab050aaac0c1b16365aae48f9a1959b7b6b8ce17631b7c0cd51acc90d3b53",
+      "generatedSource": "C:\\Users\\picar\\.codex\\generated_images\\01a13588-88cb-7e02-9dea-1f5cd01b431c\\e"
+    },
+    {
+      "design": "chikawa-gingham-patchwork",
+      "device": "laptop",
+      "path": "public/wallpapers/little-friends/chikawa-gingham-patchwork/laptop.png",
+      "size": "1920x1080",
+      "actualDimensions": [
+        1920,
+        1080
+      ],
+      "opaque": true,
+      "sha256": "0dfbf0a14cc99b0b56c49e65373c1ef4aeb692c8868ccc2e000070cedcdf3e35",
+      "generatedSource": "C:\\Users\\picar\\.codex\\generated_images\\01a13588-88cb-7e02-9dea-1f5cd01b431c\\e"
+    }
+  ]
+}

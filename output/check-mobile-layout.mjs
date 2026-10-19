@@ -1,0 +1,9 @@
+import puppeteer from 'file:///C:/Users/picar/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/puppeteer-core/lib/puppeteer/puppeteer-core.js';
+import {sampleSchedule} from '../src/assets/sampleSchedule.js';
+const browser=await puppeteer.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true});
+try{const page=await browser.newPage();await page.setViewport({width:390,height:844,isMobile:true,hasTouch:true});
+await page.evaluateOnNewDocument(schedule=>sessionStorage.setItem('schedsnap-class-draft-v1',JSON.stringify({schedule,title:'Class Schedule',source:'manual'})),sampleSchedule);
+await page.goto('http://localhost:5173/services/schedule-wallpaper');await page.waitForSelector('.template-option');await page.evaluate(()=>[...document.querySelectorAll('button')].find(el=>el.textContent==='Reject cookies')?.click());await page.$eval('.template-option',el=>el.click());await page.waitForSelector('dialog[open] footer > button');await page.$eval('dialog[open] footer > button',el=>el.click());await page.waitForSelector('.restore-classes-dialog[open]');await page.$eval('.restore-classes-actions .button-primary',el=>el.click());await page.waitForFunction(()=>!document.querySelector('.classes-next .preview')?.disabled);await page.click('.classes-next .preview');await page.waitForSelector('.schedule-layout-picker');await page.click('.schedule-layout-picker summary');
+for(const value of ['timeline','grouped-list','day-columns','stacked']){await page.click(`.schedule-layout-option:has(input[value="${value}"])`);await new Promise(resolve=>setTimeout(resolve,250));console.log(value,await page.$eval('.schedule-layout-picker',el=>({open:el.open,checked:el.querySelector(':checked')?.value})),page.url());}
+await page.screenshot({path:'documentation/previews/mobile-layout-debug.png',fullPage:true});
+}finally{await browser.close();}

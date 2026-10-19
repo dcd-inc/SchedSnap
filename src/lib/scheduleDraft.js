@@ -6,6 +6,7 @@ export const draftKey = 'schedsnap-class-draft-v1';
 const draftSchema = z.object({
   schedule: scheduleSchema.extend({ classes: z.array(scheduleSchema.shape.classes.element.extend({ subject: z.string().max(160) })).min(1).max(40) }),
   title: z.string().max(160),
+  source: z.enum(['unknown', 'manual', 'sample', 'image', 'draft']).optional(),
 });
 
 export function readDraft(storage) {
@@ -17,9 +18,9 @@ export function readDraft(storage) {
   return null;
 }
 
-export function saveDraft(storage, schedule, title) {
+export function saveDraft(storage, schedule, title, source) {
   try {
-    if (schedule.classes.length) storage.setItem(draftKey, JSON.stringify({ schedule, title }));
+    if (schedule.classes.length) storage.setItem(draftKey, JSON.stringify({ schedule, title, source }));
     else storage.removeItem(draftKey);
     return true;
   } catch { return false; }
