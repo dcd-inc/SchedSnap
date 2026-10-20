@@ -23,7 +23,7 @@ export function createPublicCatalogHandler({ env = process.env, store = createCa
         ids.add(t.id);
         return true;
       }).map(t => ({ ...t, status: 'published' }));
-      return response.status(200).json({ templates: withBuiltInPatterns([...additions, ...catalog.templates]).filter(t => t.status === 'published').map(currentPlacement).map(withTemplateKeywords).map(t => Object.fromEntries(Object.entries(t).filter(([key]) => key !== 'status'))) });
+      return response.status(200).json({ templates: withBuiltInPatterns([...additions, ...catalog.templates]).filter(t => t.status === 'published' && t.id !== 'adventure-bmo').map(currentPlacement).map(withTemplateKeywords).map(t => Object.fromEntries(Object.entries(t).filter(([key]) => key !== 'status'))) });
     } catch {
       response.setHeader('Cache-Control', 'no-store');
       return response.status(503).json({ error: { message: 'Design library temporarily unavailable.' } });
