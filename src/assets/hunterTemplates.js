@@ -59,8 +59,8 @@ export const hunterTemplates = designs.map(([suffix, name, family, background, k
     } : {}),
     ...(id === 'hxh-gon-chibi' ? { headingInk: '#fff8ed' } : {}),
     ...(suffix.startsWith('plain-') ? {
-      verticalPosition: ({ 'plain-pakunoda': -100, 'plain-machi': -90, 'plain-ging': -90,
-        'plain-uvogin': -80, 'plain-illumi': -80, 'plain-nobunaga': -75, 'plain-hisoka': -75 })[suffix] ?? -70,
+      verticalPosition: ({ 'plain-pakunoda': -40, 'plain-machi': -35, 'plain-ging': -35,
+        'plain-uvogin': -45, 'plain-illumi': -45, 'plain-nobunaga': -40, 'plain-hisoka': -40 })[suffix] ?? -35,
     } : {}),
     image: `/wallpapers/scenic/${id}/mobile.png`,
     deviceImages: { mobile: `/wallpapers/scenic/${id}/mobile.png` },

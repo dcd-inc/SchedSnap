@@ -79,3 +79,13 @@ test('unconfigured local catalog keeps seeded designs once when also passed as p
   assert.equal(result.body.templates.filter(t => t.id === seed.templates[0].id).length, 1);
   assert.equal(result.body.templates[0].id, 'local-missing');
 });
+
+test('published Hunter plain designs upgrade stale placement without changing custom positions', async () => {
+  const result = response();
+  const original = hunterTemplates.find(t => t.id === 'hxh-plain-ging');
+  await createPublicCatalogHandler({ env, store: { read: async () => ({ templates: [{ ...original, status: 'published', verticalPosition: -90 }] }) } })({ method: 'GET' }, result);
+  assert.equal(result.body.templates.find(t => t.id === original.id).verticalPosition, original.verticalPosition);
+  const custom = response();
+  await createPublicCatalogHandler({ env, store: { read: async () => ({ templates: [{ ...original, status: 'published', verticalPosition: 10 }] }) } })({ method: 'GET' }, custom);
+  assert.equal(custom.body.templates.find(t => t.id === original.id).verticalPosition, 10);
+});

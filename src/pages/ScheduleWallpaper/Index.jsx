@@ -43,6 +43,7 @@ export default function ScheduleWallpaper() {
     return `${pathname}?${params}`;
   }
   const [templateSettings, setTemplateSettings] = useState({});
+  const [appearanceUndo, setAppearanceUndo] = useState(null);
   const resolution = deviceResolutions[device];
   const previewLayout = scheduleLayoutOptions(device).some(option => option.value === search.get('layout')) ? search.get('layout') : 'stacked';
   const previewStyle = ['glass', 'solid', 'colored', 'colored-glass', 'outline'].includes(search.get('style')) ? search.get('style') : 'glass';
@@ -97,7 +98,7 @@ export default function ScheduleWallpaper() {
   const step = template ? search.get('step') === 'preview' ? 'preview' : 'classes' : 'design';
   const basePath = '/services/schedule-wallpaper';
   const choosingImage = step === 'classes' && !!image && (importOpen || !schedule.classes.length);
-  const showingImport = step === 'classes' && (importOpen || !schedule.classes.length);
+  const showingImport = step === 'classes' && (importOpen || (!schedule.classes.length && !(scheduleSource === 'manual' && canCancelEntry)));
   useEffect(() => {
     if (!showingImport) return;
     let active = true;
@@ -224,15 +225,15 @@ export default function ScheduleWallpaper() {
   </section>;
 
   return <section className="page-wrap wallpaper-flow" data-device={device} data-orientation={resolution.width > resolution.height ? 'landscape' : 'portrait'} style={{ '--wallpaper-ratio': `${resolution.width} / ${resolution.height}`, '--wallpaper-ratio-value': resolution.width / resolution.height }}>
-    {step === 'classes' && pendingDraft && <RestoreClassesDialog count={pendingDraft.schedule.classes.length} onRestore={() => {
+    {(step === 'classes' || step === 'preview') && pendingDraft && <RestoreClassesDialog count={pendingDraft.schedule.classes.length} onRestore={() => {
       setSchedule(pendingDraft.schedule);
       setScheduleTitle(pendingDraft.title);
       setScheduleSource(pendingDraft.source || 'draft');
       setCanCancelEntry(true);
       setPendingDraft(null);
-      if (template) navigate(devicePath(`${basePath}/${template.id}`), { replace: true });
+      if (template && step !== 'preview') navigate(devicePath(`${basePath}/${template.id}`), { replace: true });
       requestAnimationFrame(() => heading.current?.focus());
-    }} onDiscard={() => { setPendingDraft(null); requestAnimationFrame(() => heading.current?.focus()); }} />}
+    }} onDiscard={() => { setPendingDraft(null); if (step === 'preview' && template) navigate(devicePath(`${basePath}/${template.id}`), { replace: true }); requestAnimationFrame(() => heading.current?.focus()); }} />}
     {step === 'design' ? <Link to="/" className="tool-back"><ArrowLeft className="size-4" aria-hidden="true" />Back</Link> : <button type="button" className="tool-back" onClick={goBack}><ArrowLeft className="size-4" aria-hidden="true" />{step === 'classes' && importOpen && schedule.classes.length ? 'Back to classes' : 'Back'}</button>}
     <header className="wallpaper-flow-header" data-importing={choosingImage}>
       <h1 tabIndex={-1} ref={heading}>{step === 'design' ? 'Choose a design' : step === 'classes' ? 'Add your classes' : 'Your wallpaper'}</h1>
@@ -245,8 +246,9 @@ export default function ScheduleWallpaper() {
       step={step} onStep={openStep}
       template={template} schedule={schedule} resolution={resolution} onScheduleChange={changeSchedule}
       scheduleSource={scheduleSource} onScheduleSourceChange={setScheduleSource}
-      onAppearanceChange={(key, value) => { if (key === 'scheduleLayout') changeLayout(value); else setTemplateSettings((previous) => ({ ...previous, [templateId]: { ...previous[templateId], [key]: value } })); trackEvent('wallpaper_appearance_changed', { ...templateProperties(template), setting: key }); }}
-      onResetAppearance={() => { setTemplateSettings((previous) => ({ ...previous, [templateId]: {} })); trackEvent('wallpaper_appearance_reset', templateProperties(template)); }}
+      onAppearanceChange={(key, value) => { if (key === 'scheduleLayout') changeLayout(value); else setTemplateSettings(previous => { const settings = { ...previous[templateId] }; if (value === undefined) delete settings[key]; else settings[key] = value; return { ...previous, [templateId]: settings }; }); setAppearanceUndo(null); trackEvent('wallpaper_appearance_changed', { ...templateProperties(template), setting: key }); }}
+      canUndoAppearance={appearanceUndo?.id === templateId} onUndoAppearance={() => { if (appearanceUndo?.id === templateId) { setTemplateSettings(previous => ({ ...previous, [templateId]: appearanceUndo.settings })); setAppearanceUndo(null); } }}
+      onResetAppearance={() => { setAppearanceUndo({ id: templateId, settings: templateSettings[templateId] || {} }); setTemplateSettings((previous) => ({ ...previous, [templateId]: {} })); trackEvent('wallpaper_appearance_reset', templateProperties(template)); }}
       image={image} busy={busy}
       importOpen={importOpen} onImportOpenChange={setImportOpen}
       onTitleChange={setScheduleTitle}
@@ -257,9 +259,6 @@ export default function ScheduleWallpaper() {
       onError={(message) => { setError(message); setSuccess(''); }} onAnalyze={analyze} importUsage={importUsage} usageUnavailable={usageUnavailable} importError={error}
       onSample={() => {
         const sample = structuredClone(sampleSchedule);
-        sample.classes[1].subject = '';
-        sample.classes[2].meetings[0].endTime = null;
-        sample.classes[3].meetings[0].day = null;
         setSchedule(sample);
         setScheduleSource('sample');
         trackEvent('sample_schedule_loaded', templateProperties(template));

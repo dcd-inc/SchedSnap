@@ -2,10 +2,10 @@ import ResponsiveDisclosure from '../../components/ResponsiveDisclosure.jsx';
 import { scheduleLayout, scheduleLayoutOptions } from '../../utils/canvasHelpers.js';
 import { LayoutTemplate } from 'lucide-react';
 
-export default function ScheduleLayoutPicker({ template, onChange }) {
+export default function ScheduleLayoutPicker({ template, onChange, inline = false }) {
   const options = scheduleLayoutOptions(template.device);
   if (options.length < 2) return null;
-  return <ResponsiveDisclosure title="Schedule layout" icon={LayoutTemplate} className="flow-customize schedule-layout-picker">
+  const content = <>
     <fieldset className="schedule-layout-fieldset">
     <legend className="sr-only">Schedule layout</legend>
     <div className="schedule-layout-options">
@@ -16,5 +16,6 @@ export default function ScheduleLayoutPicker({ template, onChange }) {
       </label>)}
     </div>
     </fieldset>
-  </ResponsiveDisclosure>;
+  </>;
+  return inline ? content : <ResponsiveDisclosure title="Schedule layout" icon={LayoutTemplate} className="flow-customize schedule-layout-picker">{content}</ResponsiveDisclosure>;
 }

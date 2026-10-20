@@ -32,7 +32,7 @@ test('Hunter manga and plain use consistent reference-style presets per variant'
           get: (target, key) => key in target ? target[key] : ['canvas', 'getTransform'].includes(key) ? undefined : () => {},
         });
         const render = preset => drawWallpaper({ getContext: () => ctx }, { schedule, template: preset, resolution: deviceResolutions.mobile });
-        const editor = render(customizeWallpaperTemplate(item, {}, 'mobile'));
+        const editor = render(customizeWallpaperTemplate(galleryPreviewTemplate(item), {}, 'mobile'));
         assert.equal(editor.overflow, false, item.id);
         assert.deepEqual(render(galleryPreviewTemplate(item)).scheduleBounds, editor.scheduleBounds, item.id);
         bounds.push(editor.scheduleBounds);
@@ -43,7 +43,7 @@ test('Hunter manga and plain use consistent reference-style presets per variant'
   }
 });
 
-test('new plain character schedules stay in the empty upper half and match gallery placement', () => {
+test('new plain character schedules use the lowered upper-area placement and match the gallery', () => {
   const designs = hunterTemplates.filter(item => item.id.startsWith('hxh-plain-'));
   assert.equal(designs.length, 16);
   const ctx = new Proxy({ font: '', measureText(value) { return { width: value.length * Number(this.font.match(/([\d.]+)px/)?.[1] || 36) * 0.52 }; } }, {
@@ -51,9 +51,9 @@ test('new plain character schedules stay in the empty upper half and match galle
   });
   for (const item of designs) for (const schedule of [templateSchedule, sampleSchedule]) {
     const render = preset => drawWallpaper({ getContext: () => ctx }, { schedule, template: preset, resolution: deviceResolutions.mobile });
-    const result = render(item);
+    const result = render(galleryPreviewTemplate(item));
     assert.equal(result.overflow, false, item.id);
-    assert.ok(result.scheduleBounds.y + result.scheduleBounds.height <= 1200, item.id);
+    assert.equal(result.scheduleBounds.y, 696, item.id);
     assert.deepEqual(render(galleryPreviewTemplate(item)).scheduleBounds, result.scheduleBounds, item.id);
   }
 });

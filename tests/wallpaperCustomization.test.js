@@ -76,3 +76,28 @@ test('pointer dragging snaps near default while keyboard steps stay precise', ()
   assert.equal(snapSchedulePosition(-32, true, -35), -35);
   assert.equal(snapSchedulePosition(-29, true, -35), -29);
 });
+
+test('title alignment reaches the shared wallpaper renderer and validates', () => {
+  for (const titleAlignment of ['left', 'center', 'right']) {
+    let heading;
+    const ctx = { measureText: text => ({ width: text.length * 20 }), scale() {}, translate() {}, fillRect() {}, fillText(text, x) { if (text === 'Alignment test') heading = { x, alignment: this.textAlign }; }, beginPath() {}, roundRect() {}, fill() {}, stroke() {}, arc() {}, save() {}, restore() {} };
+    const template = { ...sanrioTemplates[0], titleAlignment, scheduleTitle: 'Alignment test' };
+    drawWallpaper({ getContext: () => ctx }, { schedule: templateSchedule, template, resolution: deviceResolutions.mobile });
+    assert.equal(heading.alignment, titleAlignment);
+    assert.equal(heading.x, titleAlignment === 'left' ? 78 : titleAlignment === 'right' ? 1002 : 540);
+    assert.equal(templateSchema.parse({ ...sanrioTemplates[0], status: 'draft', titleAlignment }).titleAlignment, titleAlignment);
+  }
+  assert.equal(templateSchema.safeParse({ ...sanrioTemplates[0], status: 'draft', titleAlignment: 'invalid' }).success, false);
+});
+
+test('text opacity affects text only and restores the canvas method after rendering', () => {
+  const textAlphas = [], fillAlphas = [];
+  const ctx = { globalAlpha: 1, measureText: text => ({ width: text.length * 20 }), scale() {}, translate() {}, fillRect() { fillAlphas.push(this.globalAlpha); }, fillText() { textAlphas.push(this.globalAlpha); }, beginPath() {}, roundRect() {}, fill() {}, stroke() {}, arc() {}, save() {}, restore() {} };
+  const original = ctx.fillText;
+  drawWallpaper({ getContext: () => ctx }, { schedule: templateSchedule, template: { ...sanrioTemplates[0], textOpacity: 40 }, resolution: deviceResolutions.mobile });
+  assert.ok(textAlphas.length > 0);
+  assert.equal(textAlphas[0], 0.4);
+  assert.equal(fillAlphas[0], 1);
+  assert.equal(ctx.fillText, original);
+  assert.equal(templateSchema.parse({ ...sanrioTemplates[0], status: 'draft', textOpacity: 40 }).textOpacity, 40);
+});

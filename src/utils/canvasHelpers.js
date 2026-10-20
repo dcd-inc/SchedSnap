@@ -1,6 +1,6 @@
 import { days } from '../../shared/scheduleSchema.js';
 import { mobileResolution } from '../assets/templates.js';
-import { colorInputValue, mascotPosition, wallpaperFontScale, wallpaperCornerRadius, wallpaperFillOpacity, timelineLineWidth, timelineDayStyle } from './wallpaperTheme.js';
+import { colorInputValue, mascotPosition, wallpaperTextOpacity, wallpaperFontScale, wallpaperCornerRadius, wallpaperFillOpacity, timelineLineWidth, timelineDayStyle } from './wallpaperTheme.js';
 import { drawParticles } from './wallpaperParticles.js';
 import { drawPatternBackground } from './patternBackground.js';
 
@@ -93,7 +93,7 @@ export function layoutSchedule(ctx, schedule, template, height = 2400, options =
   const limit = options.limit ?? (template.layout === 'mascot' ? height - 660 : timeline ? height * 0.83 : hasIllustratedFooter(template) ? height * 0.77 : height - 150);
   let result;
   for (let baseSize = compactTimeline ? 64 : timeline ? 56 : options.baseFontSize ?? 42; baseSize >= 28; baseSize -= 2) {
-    const size = baseSize * wallpaperFontScale(template) * (timeline ? 0.7 : 1);
+    const size = baseSize * (wallpaperFontScale(template) * 0.9) * (timeline ? 0.7 : 1);
     if (compactTimeline && baseSize > 28) {
       textFont(size * 0.78);
       if (groups.some(group => group.entries.some(entry => [entry.startTime, entry.endTime].some(time => ctx.measureText(formatWallpaperTime(time)).width > timeWidth - 8)))) continue;
@@ -199,7 +199,7 @@ function layoutReferenceSchedule(ctx, schedule, template, height, options) {
   const limit = options.limit ?? (template.layout === 'mascot' ? height - 660 : height * 0.94);
   let result;
   for (let baseSize = columns ? width > 1244 ? (options.columnFontSize ?? 42) : 28 : (options.groupedFontSize ?? 40); baseSize >= 20; baseSize -= 2) {
-    const size = baseSize * wallpaperFontScale(template), smallSize = size * 0.78;
+    const size = baseSize * (wallpaperFontScale(template) * 0.9), smallSize = size * 0.78;
     const padding = columns ? 14 : size >= 36 ? 28 : 16;
     const planWidth = columns ? (width - Math.max(0, groups.length - 1) * gap) / Math.max(1, groups.length) : width;
     const dayWidth = columns ? 0 : width * 0.2, roomWidth = columns ? 0 : width * 0.19;
@@ -300,7 +300,7 @@ function layoutDayCards(ctx, schedule, template, height, options) {
   const cardWidth = (options.width - gap) / 2;
   let result;
   for (let baseSize = 42; baseSize >= 28; baseSize -= 2) {
-    const size = baseSize * wallpaperFontScale(template);
+    const size = baseSize * (wallpaperFontScale(template) * 0.9);
     const padding = 32, headerHeight = size * 1.4 + 36;
     const lineHeight = size * 1.2, smallLineHeight = size * 0.65 * 1.3;
     const plans = groups.map((group, index) => {
@@ -435,15 +435,16 @@ function drawBackground(ctx, template, image, width = 1080, height = 2400) {
 function drawHeading(ctx, template, y = 650, width = 1080) {
   if (template.showTitle === false || template.showScheduleTitle === false) return;
   ctx.save();
-  ctx.fillStyle = template.headingInk || template.ink; ctx.textAlign = 'center';
-  const titleSize = template.device === 'tablet' ? 102 : 88;
+  const alignment = ['left', 'right'].includes(template.titleAlignment) ? template.titleAlignment : 'center';
+  ctx.fillStyle = template.headingInk || template.ink; ctx.textAlign = alignment;
+  const titleSize = (template.device === 'tablet' ? 102 : 88) * 0.9;
   font(ctx, titleSize, 750, template.fontFamily);
   const title = template.scheduleTitle?.trim() || 'Class Schedule';
   for (let size = titleSize - 2; size >= 24 && ctx.measureText(title).width > width - 156; size -= 2) font(ctx, size, 750, template.fontFamily);
   if (template.headingInk && template.headingInk !== template.ink) {
     ctx.shadowColor = 'rgba(35,24,38,0.55)'; ctx.shadowBlur = 7; ctx.shadowOffsetY = 3;
   }
-  ctx.fillText(title, width / 2, y, width - 156);
+  ctx.fillText(title, alignment === 'left' ? 78 : alignment === 'right' ? width - 78 : width / 2, y, width - 156);
   ctx.restore();
 }
 
@@ -528,7 +529,7 @@ function drawScheduleCards(ctx, baseTemplate, layout) {
     const badgeRadius = Math.min(plan.dayRadius, (plan.height - 28) / 2);
     ctx.beginPath(); ctx.arc(dayX, dayY, badgeRadius, 0, Math.PI * 2); ctx.fill(); ctx.restore();
     ctx.textAlign = 'center'; ctx.fillStyle = template.ink;
-    textFont((initialDays[plan.day].length > 1 ? 44 : 58) * badgeRadius / 65 * wallpaperFontScale(template), 750);
+    textFont((initialDays[plan.day].length > 1 ? 44 : 58) * badgeRadius / 65 * (wallpaperFontScale(template) * 0.9), 750);
     drawCenteredDayLabel(ctx, initialDays[plan.day], dayX, dayY);
     ctx.textAlign = 'left';
     ctx.save();
@@ -697,7 +698,7 @@ function layoutWeeklyTimetable(ctx, schedule, template, height, options) {
       const box = { x: plan.x + meeting.lane * laneWidth, y: gridTop + (meeting.start - startMinute) / (endMinute - startMinute) * bodyHeight, width: laneWidth, height: (meeting.end - meeting.start) / (endMinute - startMinute) * bodyHeight };
       let fitted;
       for (let baseSize = options.fontSize ?? 54; baseSize >= 28; baseSize -= 2) {
-        const size = baseSize * wallpaperFontScale(template), maxWidth = box.width - 56;
+        const size = baseSize * (wallpaperFontScale(template) * 0.9), maxWidth = box.width - 56;
         font(ctx, size, 750, template.fontFamily);
         const codeLines = meeting.courseCode?.trim() ? wrapText(ctx, meeting.courseCode, maxWidth) : [];
         const subjectSize = size * (codeLines.length ? 0.72 : 1);
@@ -834,7 +835,7 @@ export function drawSampleClock(canvas) {
   const timeWidth = ctx.measureText('9:41').width;
   const gap = canvas.height * 0.001;
   const x = (canvas.width - timeWidth) / 2;
-  const y = canvas.height * 0.16;
+  const y = canvas.height * 0.175;
   font(ctx, canvas.height * 0.09, 600, 'DM Sans Variable');
   ctx.fillText('9:41', x, y);
   font(ctx, canvas.height * 0.028, 600, 'DM Sans Variable');
@@ -891,19 +892,20 @@ function drawDeviceWallpaper(canvas, { schedule, template, resolution, backgroun
     if (!expanded.overflow && fittedScale >= 0.42) { scale = fittedScale; layout = expanded; }
   }
   if (weekly) scale *= 0.88;
+  scale = Math.min(scale * 0.9, height * 0.64 / (layout.bottom + 60));
   const contentHeight = (layout.bottom + 60) * scale;
   const margin = Math.min(width * 0.05, (width - columnWidth) * 0.4);
   const columnX = position === 'left' ? margin : position === 'right' ? width - columnWidth - margin : (width - columnWidth) / 2;
   const baseX = columnX + (columnWidth - designWidth * scale) / 2 + leftInset - rightInset;
   const x = baseX + movementShift(scheduleMovement(template, 'horizontal'), baseX + 78 * scale, width - (baseX + (78 + layoutOptions.width) * scale));
-  const initialY = Math.max(baseTop, weekly ? height * 0.025 : landscape && !footerCharacter ? (height - contentHeight) / 2 : baseTop);
-  const baseY = Math.max(0, Math.min(height * 0.965 - contentHeight, initialY + topOffset - height * scheduleBottomMargin(template) / 100));
+  const baseY = height * 0.29 - (flowLayout ? (template.showTitle === false || template.showScheduleTitle === false ? (layout.plans[0]?.y ?? 180) - 14 : 12) * scale : 0) + topOffset - height * scheduleBottomMargin(template) / 100;
   const visibleTop = flowLayout ? (template.showTitle === false || template.showScheduleTitle === false ? (layout.plans[0]?.y ?? 180) - 14 : 12) * scale : 0;
   const visibleBottom = flowLayout ? (layout.bottom + 2) * scale : contentHeight;
   // Explicit movement uses the visible artwork bounds, including the title and day containers.
   const upwardSpace = flowLayout ? baseY + visibleTop - height * 0.025 : baseY;
   const bottomEdge = height * (flowLayout ? 0.975 : 0.965);
   const y = baseY + movementShift(scheduleMovement(template, 'vertical'), upwardSpace, bottomEdge - (baseY + visibleBottom));
+  const positionOffset = { horizontal: (x - baseX) / width, vertical: (y - baseY) / height };
   layout.overflow ||= y + visibleBottom > bottomEdge + 0.001;
   const scheduleBounds = { x: x + 78 * scale, y: y + visibleTop, width: layoutOptions.width * scale, height: visibleBottom - visibleTop };
   ctx.save(); ctx.translate(x, y); ctx.scale(scale, scale);
@@ -921,7 +923,7 @@ function drawDeviceWallpaper(canvas, { schedule, template, resolution, backgroun
     const maxWidth = width * (landscape ? footerCharacter ? 0.3 : position === 'center' ? 0.14 : 0.23 : 0.5);
     const belowSchedule = height - (scheduleBounds.y + scheduleBounds.height) - height * 0.025;
     const maxHeight = Math.max(0, landscape ? footerCharacter ? Math.min(height * 0.32, belowSchedule) : height * 0.58 : Math.min(height * 0.32, height * 0.965 - (scheduleBounds.y + scheduleBounds.height) - height * 0.025));
-    if (maxHeight <= 0) return { ...layout, scheduleBounds, art, position };
+    if (maxHeight <= 0) return { ...layout, scheduleBounds, art, position, positionOffset };
     const artScale = Math.min(maxWidth / bounds.width, maxHeight / bounds.height);
     const artWidth = bounds.width * artScale, artHeight = bounds.height * artScale;
     // Portrait artwork follows its mobile corner; landscape artwork sits
@@ -937,10 +939,10 @@ function drawDeviceWallpaper(canvas, { schedule, template, resolution, backgroun
     ctx.restore();
     drawParticles(ctx, template, art, scheduleBounds, width, height);
   }
-  return { ...layout, scheduleBounds, art, position };
+  return { ...layout, scheduleBounds, art, position, positionOffset };
 }
 
-export function drawWallpaper(canvas, { schedule, template, resolution = mobileResolution, backgroundImage }) {
+function renderWallpaper(canvas, { schedule, template, resolution = mobileResolution, backgroundImage }) {
   if (resolution.id === 'tablet' || resolution.id === 'laptop') return drawDeviceWallpaper(canvas, { schedule, template, resolution, backgroundImage });
   canvas.width = resolution.width; canvas.height = resolution.height;
   const ctx = canvas.getContext('2d');
@@ -951,7 +953,7 @@ export function drawWallpaper(canvas, { schedule, template, resolution = mobileR
   drawBackground(ctx, template, backgroundImage);
   const topOffset = 2400 * scheduleTopMargin(template) / 100;
   const bottomOffset = 2400 * scheduleBottomMargin(template) / 100;
-  const verticalOffset = topOffset - bottomOffset;
+  const verticalOffset = topOffset - bottomOffset + 2400 * 0.02;
   const selectedLayout = scheduleLayout(template, 'mobile');
   const reference = ['grouped-list', 'day-columns'].includes(selectedLayout);
   const timeline = selectedLayout === 'timeline';
@@ -962,16 +964,19 @@ export function drawWallpaper(canvas, { schedule, template, resolution = mobileR
   const measureLayout = reference ? layoutReferenceSchedule : layoutSchedule;
   const layout = measureLayout(ctx, schedule, template, 2400, { columns: selectedLayout === 'day-columns', ...(flowLayout ? { timeline: true, compactTimeline: true, x: 36, width: 1008, timeWidth: 230, roomWidth: 224, top: timelineTop + verticalOffset } : verticalOffset ? { top: 760 + verticalOffset } : {}) });
   const headingY = 650 + verticalOffset;
-  const sideSpace = flowLayout ? 36 : 78;
+  const sideSpace = 540 + ((flowLayout ? 36 : 78) - 540) * 0.9;
   const moveX = movementShift(scheduleMovement(template, 'horizontal'), timeline ? Math.max(0, sideSpace + 26 - layout.size * 0.5 - 2) : sideSpace, sideSpace);
   const limit = template.layout === 'mascot' ? 1740 : timeline ? layout.limit : hasIllustratedFooter(template) ? 2400 * 0.77 : 2250;
   const showTitle = template.showTitle !== false && template.showScheduleTitle !== false;
   const visibleTop = showTitle ? headingY - 88 : (layout.plans[0]?.y ?? timelineTop) - (flowLayout ? 14 : 0);
-  const visibleBottom = layout.bottom + (flowLayout ? 2 : 0);
+  const visibleBottom = visibleTop + (layout.bottom + (flowLayout ? 2 : 0) - visibleTop) * 0.9;
   const movementLimit = flowLayout && template.layout !== 'mascot' ? 2340 : limit;
-  const moveY = movementShift(scheduleMovement(template, 'vertical'), Math.max(0, visibleTop - 2400 * 0.025), movementLimit - visibleBottom);
+  const baselineShift = 2400 * 0.29 - visibleTop;
+  const moveY = movementShift(scheduleMovement(template, 'vertical'), 2400 * (0.29 - 0.025), movementLimit - visibleBottom - baselineShift);
   ctx.save();
-  if (moveX || moveY) ctx.translate(moveX, moveY);
+  ctx.translate(moveX, moveY + baselineShift);
+  ctx.translate(54, visibleTop * 0.1);
+  ctx.scale(0.9, 0.9);
   drawHeading(ctx, template, headingY);
   if (layout.overflow) {
     ctx.fillStyle = template.ink; textFont(38, 600); ctx.fillText('Your schedule needs more room.', 90, 1060);
@@ -983,14 +988,30 @@ export function drawWallpaper(canvas, { schedule, template, resolution = mobileR
   else if (timeline) drawTimeline(ctx, template, layout);
   else drawScheduleCards(ctx, template, layout);
   ctx.restore();
-  const scheduleBounds = { x: sideSpace + moveX, y: visibleTop + moveY, width: flowLayout ? 1008 : 924, height: visibleBottom - visibleTop };
+  const scheduleBounds = { x: sideSpace + moveX, y: visibleTop + baselineShift + moveY, width: (flowLayout ? 1008 : 924) * 0.9, height: visibleBottom - visibleTop };
   if (template.layout === 'mascot') {
     const art = drawMascotFooter(ctx, template, backgroundImage);
     if (art && ctx.bezierCurveTo) drawParticles(ctx, template, art, timeline ? scheduleBounds : { x: 78 + moveX, y: 460 + moveY, width: 924, height: layout.bottom - 460 });
   }
-  return { ...layout, scheduleBounds };
+  return { ...layout, scheduleBounds, positionOffset: { horizontal: moveX / 1080, vertical: moveY / 2400 } };
 }
 
 export function canvasBlob(canvas) {
   return new Promise((resolve, reject) => canvas.toBlob((blob) => blob ? resolve(blob) : reject(new Error('Could not export the wallpaper. Please try again.')), 'image/png'));
+}
+
+// Scope text alpha to this render; fills, borders, artwork, and the sample clock retain their opacity.
+export function drawWallpaper(canvas, options) {
+  const ctx = canvas.getContext('2d');
+  const opacity = wallpaperTextOpacity(options.template) / 100;
+  if (!ctx || opacity === 1) return renderWallpaper(canvas, options);
+  const original = ctx.fillText;
+  ctx.fillText = function (...args) {
+    const alpha = this.globalAlpha ?? 1;
+    this.globalAlpha = alpha * opacity;
+    try { return original.apply(this, args); }
+    finally { this.globalAlpha = alpha; }
+  };
+  try { return renderWallpaper(canvas, options); }
+  finally { ctx.fillText = original; }
 }

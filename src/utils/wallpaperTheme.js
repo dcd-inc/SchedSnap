@@ -65,11 +65,9 @@ export function mascotPosition(template) {
 
 export function galleryPreviewTemplate(template) {
   if (!template) return template;
-  // Samples share one placement so artwork can be compared across designs.
-  return { ...template, topMargin: template.collection === 'hunter-x-hunter' && template.family === 'chibi' ? template.topMargin ?? 0 : 0, bottomMargin: 0, leftMargin: 0, rightMargin: 0,
-    leftMarginEnabled: false, rightMarginEnabled: false, horizontalPosition: 0,
-    // Keep artwork-specific placement in thumbnails as well as the editor.
-    verticalPosition: (template.collection === 'hunter-x-hunter' && ['chibi', 'plain', 'manga'].includes(template.family)) || ['ghibli-closeup', 'wbb-minimal', 'reference-minimal', 'chibi-elemental', 'snoopy-handmade', 'capybara-doodles'].includes(template.family) ? template.verticalPosition ?? 0 : 0 };
+  // Every catalog design starts at the same baseline; explicit editor settings apply afterward.
+  return { ...template, topMargin: 0, bottomMargin: 0, leftMargin: 0, rightMargin: 0,
+    leftMarginEnabled: false, rightMarginEnabled: false, horizontalPosition: 0, verticalPosition: 0 };
 }
 
 export function customizeWallpaperTemplate(template, settings = {}, device = template?.device) {
@@ -100,4 +98,8 @@ export function colorInputValue(value) {
   if (/^#[0-9a-f]{3}$/i.test(value)) return `#${value[1]}${value[1]}${value[2]}${value[2]}${value[3]}${value[3]}`.toLowerCase();
   const channels = value?.match(/^rgba?\(\s*(\d+)[,\s]+(\d+)[,\s]+(\d+)/i);
   return channels ? `#${channels.slice(1).map((channel) => Number(channel).toString(16).padStart(2, '0')).join('')}`.toLowerCase() : '#ffffff';
+}
+
+export function wallpaperTextOpacity(template) {
+  return Number.isFinite(template.textOpacity) ? Math.max(0, Math.min(100, template.textOpacity)) : 100;
 }

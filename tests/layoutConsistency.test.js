@@ -29,9 +29,9 @@ test('all phone layouts share the title position and reach the top of the screen
       const result = drawWallpaper(canvas, { schedule: value === 'day-columns' ? galleryScheduleFor({ scheduleLayout: value }) : sampleSchedule, resolution: deviceResolutions.mobile,
         template: { background: '#fff', ink: '#123', muted: '#456', surface: '#fff', line: '#ddd', scheduleLayout: value, verticalPosition } });
       assert.equal(result.overflow, false, value);
-      assert.deepEqual(headings, [650], value);
+      assert.deepEqual(headings, [698], value);
       assert.ok(result.scheduleBounds.y >= 60, `${value} must remain on the screen`);
-      if (verticalPosition === -100) assert.equal(result.scheduleBounds.y, 60, `${value} must reach top of screen`);
+      if (verticalPosition === -100) assert.ok(Math.abs(result.scheduleBounds.y - 60) < 0.001, `${value} must reach top of screen`);
       bounds.push(result.scheduleBounds.y);
     }
     assert.equal(new Set(bounds).size, 1, 'changing layouts must not shift the title');

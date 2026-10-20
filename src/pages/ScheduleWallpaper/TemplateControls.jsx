@@ -1,89 +1,91 @@
 import DevicePicker from '../../components/DevicePicker.jsx';
 import { stylePickerOptions } from '../../components/wallpaperOptionIcons.js';
 import { particleStyles } from '../../utils/wallpaperParticles.js';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { generativePatternIds, generativePatternMap } from '../../assets/generativePatterns.js';
 import { patternScale, patternOpacity } from '../../utils/patternBackground.js';
-import { schedulePosition, scheduleMovement, tabletBoxSpacing, scheduleLayout } from '../../utils/canvasHelpers.js';
-import { ChevronDown } from 'lucide-react';
-import { colorInputValue, wallpaperFonts, mascotPosition, wallpaperFontScale, wallpaperCornerRadius, wallpaperFillOpacity, snapSchedulePosition, timelineLineWidth, wallpaperColorIntensity } from '../../utils/wallpaperTheme.js';
+import { scheduleMovement, tabletBoxSpacing, scheduleLayout } from '../../utils/canvasHelpers.js';
+import { ChevronDown, LayoutTemplate, Image, PanelsTopLeft, Type, Sparkles } from 'lucide-react';
+import { colorInputValue, wallpaperFonts, mascotPosition, wallpaperTextOpacity, wallpaperFontScale, wallpaperCornerRadius, wallpaperFillOpacity, snapSchedulePosition, timelineLineWidth, wallpaperColorIntensity } from '../../utils/wallpaperTheme.js';
 
 const colorFields = {
   background: { label: 'Background', colors: ['#dce8cb', '#f5daca', '#d8cbef', '#192f4b'] },
   patternColor: { label: 'Pattern', colors: ['#c8d7b7', '#e8c6ae', '#c0afd5', '#c5d8e7'] },
   patternAccent: { label: 'Accent', colors: ['#d78f83', '#c8a251', '#8ca899', '#a58abd'] },
   surface: { label: 'Fill', colors: ['#f8faf2', '#ffffff', '#f8ebe7', '#2b5145'] },
-  ink: { label: 'Text', colors: ['#294b38', '#0f172a', '#71394d', '#fffdf4'] },
+  ink: { label: 'Text color', colors: ['#294b38', '#0f172a', '#71394d', '#fffdf4'] },
   line: { label: 'Border', colors: ['#a6b5a1', '#e2e8f0', '#b98c96', '#8caa96'] },
 };
+const categoryIcons = { layout: LayoutTemplate, wallpaper: Image, cards: PanelsTopLeft, text: Type, decorations: Sparkles };
 const editablePatterns = new Set(['checker', 'grid', 'ruled', 'circle', 'dots', 'stripes', 'diamonds', 'waves', 'frame', ...generativePatternIds]);
 
-function AppearanceColor({ colorKey, template, onChange, toggleKey, label: labelOverride }) {
+function AppearanceColor({ colorKey, template, defaultTemplate = {}, onChange, toggleKey, label: labelOverride, stacked = false, trailing }) {
   const { label: defaultLabel, colors: defaultColors } = colorFields[colorKey];
   const label = labelOverride || defaultLabel;
   const rawValue = template[colorKey] || generativePatternMap.get(template.pattern)?.[colorKey] || (colorKey === 'patternColor' ? (template.pattern === 'circle' ? '#ad5b45' : template.line) : '#ffffff');
   const normalizedValue = colorInputValue(rawValue);
-  const colors = defaultColors.slice(0, 3);
+  const original = colorInputValue(defaultTemplate[colorKey] || generativePatternMap.get(defaultTemplate.pattern)?.[colorKey] || (colorKey === 'patternColor' ? (defaultTemplate.pattern === 'circle' ? '#ad5b45' : defaultTemplate.line) : '#ffffff'));
+  const colors = [original, ...defaultColors.filter(color => colorInputValue(color) !== original)].slice(0, 3);
   const enabled = !toggleKey || template[toggleKey] !== false;
-  return <div className="appearance-row">
+  return <div className={`appearance-row${stacked ? ' appearance-color-stacked' : ''}`}>
     {toggleKey ? <label className="appearance-label appearance-switch"><input type="checkbox" checked={enabled} onChange={(event) => onChange(toggleKey, event.target.checked)} />{label}</label> : <span className="appearance-label">{label}</span>}
+    {trailing}
     <fieldset className="appearance-palette" aria-label={`${label} choices`} disabled={!enabled}>
-      {colors.map((color) => <button key={color} type="button" aria-label={`${label} ${color}`} aria-pressed={normalizedValue === colorInputValue(color)} onClick={() => onChange(colorKey, color)} className="color-swatch" style={{ '--swatch': color }} />)}
+      {colors.map((color, index) => <button key={color} type="button" aria-label={index === 0 ? `Default ${label.toLowerCase()}` : `${label} ${color}`} title={index === 0 ? `Default ${label.toLowerCase()}` : color} aria-pressed={normalizedValue === colorInputValue(color)} onClick={() => onChange(colorKey, index === 0 ? undefined : color)} className="color-swatch" style={{ '--swatch': color }} />)}
       <label className="custom-color" data-active={!colors.some(color => colorInputValue(color) === normalizedValue)} title={`Custom ${label.toLowerCase()}`}><span className="sr-only">Custom {label.toLowerCase()}</span><input type="color" aria-label={`Custom ${label.toLowerCase()}${!colors.some(color => colorInputValue(color) === normalizedValue) ? ', selected' : ''}`} value={normalizedValue} onChange={(event) => onChange(colorKey, event.target.value)} /></label>
     </fieldset>
   </div>;
 }
 
-export default function TemplateControls({ template, onChange, onReset, defaultTemplate = {}, enablePlacement = false }) {
+export default function TemplateControls({ template, onChange, defaultTemplate = {}, enablePlacement = false, layoutPicker, positionOffset }) {
+  const [category, setCategory] = useState('layout');
+  const sectionKeys = { layout: ['horizontalPosition', 'verticalPosition', 'schedulePosition'], wallpaper: ['background', 'patternColor', 'patternAccent', 'patternScale', 'patternOpacity', 'mascotPosition'], cards: ['tabletBoxSpacing', 'containerStyle', 'colorIntensity', 'containerRadius', 'surface', 'containerFill', 'containerOpacity', 'line', 'containerBorder', 'timelineLineWidth'], text: ['textOpacity', 'titleAlignment', 'showTitle', 'showScheduleTitle', 'fontScale', 'fontFamily', 'ink'], decorations: ['particleStyle'] };
+  const resetSection = key => { sectionKeys[key].forEach(field => onChange(field, undefined)); if (key === 'layout' && layoutPicker) onChange('scheduleLayout', 'stacked'); };
   const fixedBackground = Boolean(template.image && template.layout !== 'mascot');
   const timeline = ['timeline', 'grouped-list', 'day-columns'].includes(scheduleLayout(template));
   const radius = wallpaperCornerRadius(template);
   const defaultRadius = wallpaperCornerRadius({ ...template, containerRadius: undefined });
   const defaultColorIntensity = wallpaperColorIntensity({ ...defaultTemplate, containerStyle: template.containerStyle });
   const dragging = useRef({});
-  return <aside aria-label="Template appearance" className="template-settings">
-    {(enablePlacement || (template.device && template.device !== 'mobile')) && <fieldset className="appearance-group">
-      <legend>Schedule placement</legend>
-      {['horizontal', 'vertical'].map(axis => {
-        const value = scheduleMovement(template, axis);
-        const defaultValue = scheduleMovement(defaultTemplate, axis);
-        const direction = axis === 'horizontal' ? value < 0 ? 'Left' : 'Right' : value < 0 ? 'Up' : 'Down';
-        const description = value === defaultValue ? 'Default position' : `${direction} ${Math.abs(value)}%`;
-        const id = `schedule-${axis}-position`;
-        return <div key={axis} className="top-margin-control">
-          <div className="top-margin-label position-label"><label htmlFor={id}>{axis === 'horizontal' ? 'Horizontal position' : 'Vertical position'}</label><span className="position-value"><output htmlFor={id}>{description}</output>{value !== defaultValue && <button type="button" className="position-reset" aria-label={`Reset ${axis} position`} onClick={() => onChange(`${axis}Position`, defaultValue)}>Reset</button>}</span></div>
-          <input id={id} type="range" min="-100" max="100" step="1" value={value} aria-valuetext={description} onPointerDown={() => { dragging.current[axis] = true; }} onPointerUp={() => { dragging.current[axis] = false; }} onPointerCancel={() => { dragging.current[axis] = false; }} onBlur={() => { dragging.current[axis] = false; }} onChange={event => onChange(`${axis}Position`, snapSchedulePosition(Number(event.target.value), dragging.current[axis], defaultValue))} />
-        </div>;
-      })}
-      {(enablePlacement || (template.device && template.device !== 'mobile')) && <div className="appearance-row">
-        <label className="appearance-label" htmlFor="schedule-position">Schedule position</label>
-        <div className="field-select appearance-select"><select id="schedule-position" className="field-input" value={template.schedulePosition || schedulePosition(template)} onChange={(event) => onChange('schedulePosition', event.target.value)}><option value="left">Left</option><option value="center">Center</option><option value="right">Right</option></select><ChevronDown size={16} className="field-select-icon" aria-hidden="true" /></div>
-      </div>}
-    </fieldset>}
-    {(!fixedBackground || editablePatterns.has(template.pattern)) && <fieldset className="appearance-group">
-      <legend>Wallpaper</legend>
+  const categories = [['layout', 'Layout'], ...(!fixedBackground || editablePatterns.has(template.pattern) ? [['wallpaper', 'Wallpaper']] : []), ['cards', 'Day cards'], ['text', 'Text'], ...(template.layout === 'mascot' ? [['decorations', 'Decorations']] : [])];
+  return <aside aria-label="Template appearance" className="template-settings" data-category={category}>
+    <nav className="appearance-categories" aria-label="Appearance categories" style={{ '--category-count': categories.length, '--category-index': Math.max(0, categories.findIndex(([key]) => key === category)) }}><span className="category-indicator" aria-hidden="true" />{categories.map(([key, label]) => { const Icon = categoryIcons[key]; return <button key={key} type="button" aria-pressed={category === key} onClick={() => setCategory(key)}><Icon size={16} aria-hidden="true" /><span>{label}</span></button>; })}</nav>
+    {(enablePlacement || (template.device && template.device !== 'mobile')) && <section className="appearance-section" data-section="layout" hidden={category !== 'layout'}><fieldset className="appearance-group">
+      <legend className="sr-only">Layout</legend>{layoutPicker}
+      <div className="position-offset">
+        <div className="top-margin-label"><span>Position Adjustment</span><span className="position-value"><button type="button" className="position-reset" disabled={['horizontal', 'vertical'].every(axis => scheduleMovement(template, axis) === scheduleMovement(defaultTemplate, axis))} onClick={() => { onChange('horizontalPosition', undefined); onChange('verticalPosition', undefined); }}>Reset</button><output>{positionOffset?.horizontal ?? 0}, {positionOffset?.vertical ?? 0}</output></span></div>
+        {['horizontal', 'vertical'].map(axis => {
+          const value = scheduleMovement(template, axis);
+          const defaultValue = scheduleMovement(defaultTemplate, axis);
+          const id = `schedule-${axis}-position`;
+          return <div className="position-axis" key={axis}><label htmlFor={id}>{axis === 'horizontal' ? 'Left / Right' : 'Up / Down'}</label><input id={id} type="range" min="-100" max="100" step="1" value={value} aria-label={`${axis === 'horizontal' ? 'Horizontal' : 'Vertical'} position`} aria-valuetext={positionOffset ? `${positionOffset[axis]} pixels` : `${value}%`} onPointerDown={() => { dragging.current[axis] = true; }} onPointerUp={() => { dragging.current[axis] = false; }} onPointerCancel={() => { dragging.current[axis] = false; }} onBlur={() => { dragging.current[axis] = false; }} onChange={event => onChange(`${axis}Position`, snapSchedulePosition(Number(event.target.value), dragging.current[axis], defaultValue))} /><output htmlFor={id}>{positionOffset ? `${positionOffset[axis]} px` : `${value}%`}</output></div>;
+        })}
+      </div>
+    </fieldset><button type="button" className="button-secondary section-reset layout-default-reset" onClick={() => resetSection('layout')}>Reset layout to default</button></section>}
+    {(!fixedBackground || editablePatterns.has(template.pattern)) && <section className="appearance-section" data-section="wallpaper" hidden={category !== 'wallpaper'}><fieldset className="appearance-group">
+      <legend className="sr-only">Wallpaper</legend>
       {template.layout === 'mascot' && <div className="appearance-row">
         <label className="appearance-label" htmlFor="mascot-position">Character position</label>
         <div className="field-select appearance-select"><select id="mascot-position" className="field-input" value={mascotPosition(template)} onChange={(event) => onChange('mascotPosition', event.target.value)}><option value="left">Left</option><option value="center">Center</option><option value="right">Right</option></select><ChevronDown size={16} className="field-select-icon" aria-hidden="true" /></div>
       </div>}
-      {!fixedBackground && <AppearanceColor colorKey="background" template={template} onChange={onChange} />}
-      {editablePatterns.has(template.pattern) && <AppearanceColor colorKey="patternColor" template={template} onChange={onChange} />}
+      {!fixedBackground && <AppearanceColor colorKey="background" template={template} defaultTemplate={defaultTemplate} onChange={onChange} />}
+      {editablePatterns.has(template.pattern) && <AppearanceColor colorKey="patternColor" template={template} defaultTemplate={defaultTemplate} onChange={onChange} />}
       {generativePatternIds.includes(template.pattern) && <>
-        <AppearanceColor colorKey="patternAccent" template={template} onChange={onChange} />
+        <AppearanceColor colorKey="patternAccent" template={template} defaultTemplate={defaultTemplate} onChange={onChange} />
         <div className="top-margin-control">
-          <div className="top-margin-label"><label htmlFor="pattern-scale">Pattern size</label><span className="position-value"><output htmlFor="pattern-scale">{patternScale(template)}%</output>{patternScale(template) !== patternScale(defaultTemplate) && <button type="button" className="position-reset" aria-label="Reset pattern size" onClick={() => onChange('patternScale', patternScale(defaultTemplate))}>Reset</button>}</span></div>
+          <div className="top-margin-label"><label htmlFor="pattern-scale">Pattern size</label><span className="position-value"><output htmlFor="pattern-scale">{patternScale(template)}%</output><button type="button" className="position-reset" disabled={!(patternScale(template) !== patternScale(defaultTemplate))} aria-label="Reset pattern size" onClick={() => onChange('patternScale', patternScale(defaultTemplate))}>Reset</button></span></div>
           <input id="pattern-scale" type="range" min="50" max="200" step="5" value={patternScale(template)} onChange={event => onChange('patternScale', Number(event.target.value))} />
         </div>
         <div className="top-margin-control">
-          <div className="top-margin-label"><label htmlFor="pattern-opacity">Pattern opacity</label><span className="position-value"><output htmlFor="pattern-opacity">{patternOpacity(template)}%</output>{patternOpacity(template) !== patternOpacity(defaultTemplate) && <button type="button" className="position-reset" aria-label="Reset pattern opacity" onClick={() => onChange('patternOpacity', patternOpacity(defaultTemplate))}>Reset</button>}</span></div>
+          <div className="top-margin-label"><label htmlFor="pattern-opacity">Pattern opacity</label><span className="position-value"><output htmlFor="pattern-opacity">{patternOpacity(template)}%</output><button type="button" className="position-reset" disabled={!(patternOpacity(template) !== patternOpacity(defaultTemplate))} aria-label="Reset pattern opacity" onClick={() => onChange('patternOpacity', patternOpacity(defaultTemplate))}>Reset</button></span></div>
           <input id="pattern-opacity" type="range" min="0" max="100" step="5" value={patternOpacity(template)} onChange={event => onChange('patternOpacity', Number(event.target.value))} />
         </div>
       </>}
-    </fieldset>}
-    <fieldset className="appearance-group">
-      <legend>{timeline ? 'Timeline' : 'Day containers'}</legend>
+    </fieldset><button type="button" className="button-secondary section-reset" onClick={() => resetSection('wallpaper')}>Reset wallpaper</button></section>}
+    <section className="appearance-section" data-section="cards" hidden={category !== 'cards'}><fieldset className="appearance-group">
+      <legend className="sr-only">Day cards</legend>
       {template.device === 'tablet' && <div className="top-margin-control">
-        <div className="top-margin-label"><label htmlFor="tablet-box-spacing">{timeline ? 'Space between days' : 'Space between boxes'}</label><span className="position-value"><output htmlFor="tablet-box-spacing">{tabletBoxSpacing(template)}</output>{tabletBoxSpacing(template) !== tabletBoxSpacing(defaultTemplate) && <button type="button" className="position-reset" aria-label="Reset spacing" onClick={() => onChange('tabletBoxSpacing', tabletBoxSpacing(defaultTemplate))}>Reset</button>}</span></div>
+        <div className="top-margin-label"><label htmlFor="tablet-box-spacing">{timeline ? 'Space between days' : 'Space between boxes'}</label><span className="position-value"><output htmlFor="tablet-box-spacing">{tabletBoxSpacing(template)}</output><button type="button" className="position-reset" disabled={!(tabletBoxSpacing(template) !== tabletBoxSpacing(defaultTemplate))} aria-label="Reset spacing" onClick={() => onChange('tabletBoxSpacing', tabletBoxSpacing(defaultTemplate))}>Reset</button></span></div>
         <input id="tablet-box-spacing" type="range" min="0" max="300" step="1" value={tabletBoxSpacing(template)} aria-valuetext={`${tabletBoxSpacing(template)} spacing units`} onChange={event => onChange('tabletBoxSpacing', Number(event.target.value))} />
       </div>}
       <div className="appearance-row">
@@ -91,37 +93,36 @@ export default function TemplateControls({ template, onChange, onReset, defaultT
         <DevicePicker value={template.containerStyle === 'colored-glass' ? 'colored-glass' : template.containerStyle?.startsWith('colored') ? 'colored' : template.containerStyle || 'glass'} onChange={value => onChange('containerStyle', value)} label="Style" options={stylePickerOptions} />
       </div>
       {template.containerStyle?.startsWith('colored') && <div className="top-margin-control">
-        <div className="top-margin-label"><label htmlFor="color-intensity">Color intensity</label><span className="position-value"><output htmlFor="color-intensity">{wallpaperColorIntensity(template)}%</output>{wallpaperColorIntensity(template) !== defaultColorIntensity && <button type="button" className="position-reset" aria-label="Reset color intensity" onClick={() => onChange('colorIntensity', defaultColorIntensity)}>Reset</button>}</span></div>
+        <div className="top-margin-label"><label htmlFor="color-intensity">Color intensity</label><span className="position-value"><output htmlFor="color-intensity">{wallpaperColorIntensity(template)}%</output><button type="button" className="position-reset" disabled={!(wallpaperColorIntensity(template) !== defaultColorIntensity)} aria-label="Reset color intensity" onClick={() => onChange('colorIntensity', defaultColorIntensity)}>Reset</button></span></div>
         <input id="color-intensity" type="range" min="0" max="100" step="1" value={wallpaperColorIntensity(template)} onChange={event => onChange('colorIntensity', Number(event.target.value))} />
       </div>}
       <div className="top-margin-control">
-        <div className="top-margin-label"><label htmlFor="appearance-shape">Corner radius</label><span className="position-value"><output htmlFor="appearance-shape">{radius}%</output>{radius !== defaultRadius && <button type="button" className="position-reset" aria-label="Reset corner radius" onClick={() => onChange('containerRadius', undefined)}>Reset</button>}</span></div>
+        <div className="top-margin-label"><label htmlFor="appearance-shape">Corner radius</label><span className="position-value"><output htmlFor="appearance-shape">{radius}%</output><button type="button" className="position-reset" disabled={!(radius !== defaultRadius)} aria-label="Reset corner radius" onClick={() => onChange('containerRadius', undefined)}>Reset</button></span></div>
         <input id="appearance-shape" type="range" min="0" max="50" step="1" value={radius} aria-valuetext={`${radius}% corner radius`} onChange={event => onChange('containerRadius', Number(event.target.value))} />
       </div>
 
-      <AppearanceColor colorKey="surface" template={template} onChange={onChange} toggleKey="containerFill" />
-      <div className="top-margin-control">
-        <div className="top-margin-label"><label htmlFor="fill-opacity">Fill opacity</label><span className="position-value"><output htmlFor="fill-opacity">{wallpaperFillOpacity(template)}%</output>{wallpaperFillOpacity(template) !== wallpaperFillOpacity(defaultTemplate) && <button type="button" className="position-reset" aria-label="Reset fill opacity" onClick={() => onChange('containerOpacity', wallpaperFillOpacity(defaultTemplate))}>Reset</button>}</span></div>
+
+      <AppearanceColor colorKey="surface" template={template} defaultTemplate={defaultTemplate} onChange={onChange} toggleKey="containerFill" />
+      {(template.containerFill !== false) && <div className="top-margin-control">
+        <div className="top-margin-label"><label htmlFor="fill-opacity">Fill opacity</label><span className="position-value"><output htmlFor="fill-opacity">{wallpaperFillOpacity(template)}%</output><button type="button" className="position-reset" disabled={!(wallpaperFillOpacity(template) !== wallpaperFillOpacity(defaultTemplate))} aria-label="Reset fill opacity" onClick={() => onChange('containerOpacity', wallpaperFillOpacity(defaultTemplate))}>Reset</button></span></div>
         <input id="fill-opacity" type="range" min="0" max="100" step="1" value={wallpaperFillOpacity(template)} disabled={template.containerFill === false} aria-valuetext={`${wallpaperFillOpacity(template)}% fill opacity`} onChange={event => onChange('containerOpacity', Number(event.target.value))} />
-      </div>
-      {!timeline && <AppearanceColor colorKey="line" template={template} onChange={onChange} toggleKey="containerBorder" />}
-      {timeline && <AppearanceColor colorKey="line" label="Day outline" template={template} onChange={onChange} toggleKey="containerBorder" />}
-      <div className="top-margin-control">
-        <div className="top-margin-label"><label htmlFor="timeline-line-width">Line thickness</label><span className="position-value"><output htmlFor="timeline-line-width">{timelineLineWidth(template)} px</output>{timelineLineWidth(template) !== timelineLineWidth(defaultTemplate) && <button type="button" className="position-reset" aria-label="Reset line thickness" onClick={() => onChange('timelineLineWidth', timelineLineWidth(defaultTemplate))}>Reset</button>}</span></div>
+      </div>}
+      {!timeline && <AppearanceColor colorKey="line" template={template} defaultTemplate={defaultTemplate} onChange={onChange} toggleKey="containerBorder" />}
+      {timeline && <AppearanceColor colorKey="line" label="Day outline" template={template} defaultTemplate={defaultTemplate} onChange={onChange} toggleKey="containerBorder" />}
+      {(timeline || template.containerBorder !== false) && <div className="top-margin-control">
+        <div className="top-margin-label"><label htmlFor="timeline-line-width">{timeline ? 'Line thickness' : 'Border thickness'}</label><span className="position-value"><output htmlFor="timeline-line-width">{timelineLineWidth(template)} px</output><button type="button" className="position-reset" disabled={!(timelineLineWidth(template) !== timelineLineWidth(defaultTemplate))} aria-label="Reset line thickness" onClick={() => onChange('timelineLineWidth', timelineLineWidth(defaultTemplate))}>Reset</button></span></div>
         <input id="timeline-line-width" type="range" min="0.5" max="6" step="0.5" value={timelineLineWidth(template)} onChange={event => onChange('timelineLineWidth', Number(event.target.value))} />
-      </div>
-    </fieldset>
-    <fieldset className="appearance-group">
-      <legend>Schedule Text</legend>
+      </div>}
+
+    </fieldset><button type="button" className="button-secondary section-reset day-styles-reset" onClick={() => resetSection('cards')}>Reset day cards to default</button></section>
+    <section className="appearance-section" data-section="text" hidden={category !== 'text'}><fieldset className="appearance-group">
+      <legend className="sr-only">Text</legend>
       <div className="appearance-row">
-        <label className="appearance-label appearance-switch"><input type="checkbox" checked={template.showTitle !== false} onChange={event => onChange('showTitle', event.target.checked)} />Show title</label>
-      </div>
-      <div className="appearance-row">
-        <label className="appearance-label" htmlFor="appearance-font-size">Font size</label>
-        <div className="field-select appearance-select"><select id="appearance-font-size" className="field-input" value={wallpaperFontScale(template)} onChange={event => onChange('fontScale', Number(event.target.value))}>{[70, 80, 90, 100, 110, 120, 130, 140, 150, 160].map(percent => <option key={percent} value={percent / 100}>{percent === 100 ? 'Default · 100%' : `${percent}%`}</option>)}</select><ChevronDown size={16} className="field-select-icon" aria-hidden="true" /></div>
+        <label className="appearance-label appearance-switch"><input type="checkbox" checked={template.showTitle !== false && template.showScheduleTitle !== false} onChange={event => { onChange('showTitle', event.target.checked); onChange('showScheduleTitle', event.target.checked); }} />Title</label>
+        <div className="field-select appearance-select"><select id="title-alignment" aria-label="Title alignment" className="field-input" disabled={template.showTitle === false || template.showScheduleTitle === false} value={template.titleAlignment || 'center'} onChange={event => onChange('titleAlignment', event.target.value)}><option value="left">Left</option><option value="center">Center</option><option value="right">Right</option></select><ChevronDown size={16} className="field-select-icon" aria-hidden="true" /></div>
       </div>
       <div className="appearance-row">
-        <label className="appearance-label" htmlFor="appearance-font">Font family</label>
+        <div className="appearance-label"><label htmlFor="appearance-font">Font family</label><button type="button" className="position-reset" disabled={!((template.fontFamily || 'DM Sans Variable') !== (defaultTemplate.fontFamily || 'DM Sans Variable'))} aria-label="Reset font family" onClick={() => onChange('fontFamily', undefined)}>Reset</button></div>
         <div className="field-select appearance-select">
           <select id="appearance-font" className="field-input" value={template.fontFamily || 'DM Sans Variable'} onChange={(event) => onChange('fontFamily', event.target.value)}>
             {wallpaperFonts.map(({ value, label }) => <option key={value} value={value}>{label}</option>)}
@@ -129,10 +130,18 @@ export default function TemplateControls({ template, onChange, onReset, defaultT
           <ChevronDown size={16} className="field-select-icon" aria-hidden="true" />
         </div>
       </div>
-      <AppearanceColor colorKey="ink" template={template} onChange={onChange} />
-    </fieldset>
-    {template.layout === 'mascot' && <fieldset className="appearance-group">
-      <legend>Decorations</legend>
+      <div className="top-margin-control">
+        <div className="top-margin-label"><label htmlFor="appearance-font-size">Font size</label><span className="position-value"><button type="button" className="position-reset" disabled={wallpaperFontScale(template) === wallpaperFontScale(defaultTemplate)} aria-label="Reset font size" onClick={() => onChange('fontScale', undefined)}>Reset</button><output htmlFor="appearance-font-size">{Math.round(wallpaperFontScale(template) * 100)}%</output></span></div>
+        <input id="appearance-font-size" type="range" min="70" max="160" step="10" value={Math.round(wallpaperFontScale(template) * 100)} aria-valuetext={`${Math.round(wallpaperFontScale(template) * 100)}% font size`} onChange={event => onChange('fontScale', Number(event.target.value) / 100)} />
+      </div>
+      <AppearanceColor colorKey="ink" template={template} defaultTemplate={defaultTemplate} onChange={onChange} />
+      <div className="top-margin-control">
+        <div className="top-margin-label"><label htmlFor="text-opacity">Text opacity</label><span className="position-value"><button type="button" className="position-reset" disabled={wallpaperTextOpacity(template) === wallpaperTextOpacity(defaultTemplate)} aria-label="Reset text opacity" onClick={() => onChange('textOpacity', undefined)}>Reset</button><output htmlFor="text-opacity">{wallpaperTextOpacity(template)}%</output></span></div>
+        <input id="text-opacity" type="range" min="0" max="100" step="1" value={wallpaperTextOpacity(template)} aria-valuetext={`${wallpaperTextOpacity(template)}% text opacity`} onChange={event => onChange('textOpacity', Number(event.target.value))} />
+      </div>
+    </fieldset><button type="button" className="button-secondary section-reset" onClick={() => resetSection('text')}>Reset text to default</button></section>
+    {template.layout === 'mascot' && <section className="appearance-section" data-section="decorations" hidden={category !== 'decorations'}><fieldset className="appearance-group">
+      <legend className="sr-only">Decorations</legend>
       <div className="appearance-row">
         <label className="appearance-label" htmlFor="particle-style">Particles</label>
         <div className="field-select appearance-select">
@@ -142,8 +151,8 @@ export default function TemplateControls({ template, onChange, onReset, defaultT
           <ChevronDown size={16} className="field-select-icon" aria-hidden="true" />
         </div>
       </div>
-    </fieldset>}
-    <button type="button" className="text-link appearance-reset" onClick={onReset}>Reset appearance</button>
+    </fieldset><button type="button" className="button-secondary section-reset" onClick={() => resetSection('decorations')}>Reset decorations</button></section>}
+
   </aside>;
 }
 

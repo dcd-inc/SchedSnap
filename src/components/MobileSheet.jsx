@@ -1,9 +1,9 @@
 import { useEffect, useId, useRef } from 'react';
 import { createPortal } from 'react-dom';
-import { X } from 'lucide-react';
+import { Eye, X } from 'lucide-react';
 import './mobileSheet.css';
 
-export default function MobileSheet({ title, onClose, children }) {
+export default function MobileSheet({ title, onClose, preview, onPreview, children }) {
   const dialog = useRef(null);
   const titleId = useId();
   useEffect(() => {
@@ -21,9 +21,10 @@ export default function MobileSheet({ title, onClose, children }) {
       if (trigger?.isConnected) trigger.focus();
     };
   }, [onClose]);
-  return createPortal(<dialog ref={dialog} className="mobile-control-sheet" aria-labelledby={titleId} onCancel={event => { event.preventDefault(); onClose(); }} onClick={event => { if (event.target === event.currentTarget) onClose(); }}>
-    <header><h2 id={titleId}>{title}</h2><button type="button" className="icon-button" aria-label={`Close ${title}`} onClick={onClose}><X size={20} aria-hidden="true" /></button></header>
+  return createPortal(<dialog ref={dialog} className={`mobile-control-sheet${preview ? ' mobile-appearance-editor' : ''}`} aria-labelledby={titleId} onCancel={event => { event.preventDefault(); onClose(); }} onClick={event => { if (event.target === event.currentTarget) onClose(); }}>
+    <header><h2 id={titleId}>{title}</h2>{preview ? <button type="button" className="button-primary appearance-save" onClick={onClose}>Save</button> : <button type="button" className="icon-button" aria-label={`Close ${title}`} onClick={onClose}><X size={20} aria-hidden="true" /></button>}</header>
+    {preview && <div className="mobile-editor-preview">{preview}<div className="editor-preview-zoom"><button type="button" aria-label="View enlarged wallpaper" onClick={onPreview}><Eye size={18} aria-hidden="true" /></button></div></div>}
     <div className="mobile-sheet-content">{children}</div>
-    <button type="button" className="button-primary mobile-sheet-done" onClick={onClose}>Done</button>
+    {!preview && <button type="button" className="button-primary mobile-sheet-done" onClick={onClose}>Done</button>}
   </dialog>, document.body);
 }
