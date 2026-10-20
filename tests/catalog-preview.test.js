@@ -13,13 +13,14 @@ const env = { CLOUDINARY_CLOUD_NAME: 'preview-test', CLOUDINARY_API_KEY: 'test',
 const response = () => ({ setHeader() {}, status(code) { this.code = code; return this; }, json(body) { this.body = body; return this; } });
 const expose = template => Object.fromEntries(Object.entries(withTemplateKeywords(template)).filter(([key]) => key !== 'status'));
 
-test('BMO is excluded from seeded, remote, and preview catalogs', async () => {
-  assert.ok(seedCatalog().templates.every(t => t.id !== 'adventure-bmo'));
-  for (const templates of [[], [{ id: 'adventure-bmo', status: 'published' }]]) {
+test('retired designs are excluded from seeded, remote, and preview catalogs', async () => {
+  const retiredIds = ['adventure-bmo', 'wbb-paper-pals', 'wbb-dusk-book-club'];
+  assert.ok(seedCatalog().templates.every(t => !retiredIds.includes(t.id)));
+  for (const templates of [[], retiredIds.map(id => ({ id, status: 'published' }))]) {
     const result = response();
-    await createPublicCatalogHandler({ env, store: { read: async () => ({ templates }) }, previewTemplates: [{ id: 'adventure-bmo' }, { id: 'keep-design' }] })({ method: 'GET' }, result);
+    await createPublicCatalogHandler({ env, store: { read: async () => ({ templates }) }, previewTemplates: [...retiredIds.map(id => ({ id })), { id: 'keep-design' }] })({ method: 'GET' }, result);
     assert.equal(result.code, 200);
-    assert.ok(result.body.templates.every(t => t.id !== 'adventure-bmo'));
+    assert.ok(result.body.templates.every(t => !retiredIds.includes(t.id)));
     assert.ok(result.body.templates.some(t => t.id === 'keep-design'));
   }
 });
