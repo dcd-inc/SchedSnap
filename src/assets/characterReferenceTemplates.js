@@ -12,7 +12,6 @@ const designs = [
   ['adventure-finn-smile', 'Finn Smile', 'adventure-time', '#ffffff', false],
   ['adventure-marceline', 'Marceline Midnight', 'adventure-time', '#10112d', true],
   ['adventure-flame-princess', 'Flame Princess', 'adventure-time', '#ff4b00', false],
-  ['adventure-bmo', 'BMO Playtime', 'adventure-time', '#25a99d', false],
 ];
 
 export const characterReferenceTemplates = designs.map(([id, name, collection, background, dark]) => ({
