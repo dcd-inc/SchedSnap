@@ -21,7 +21,7 @@ test('color names include real palette colors and metadata details without impor
   const expected = [
     ['sanrio-pixel-lilac', ['purple', 'Hello Kitty', 'pixel art', 'ribbons']],
     ['snoopy-navy-cool', ['blue', 'white', 'Snoopy', 'hand drawn']],
-    ['wbb-dusk-book-club', ['purple', 'Ice Bear', 'reading']],
+    ['wbb-lavender-reader', ['purple', 'Ice Bear', 'reading']],
     ['domo-velvet-cosmos', ['brown', 'celestial', 'fabric']],
     ['little-friends-kitten-snooze', ['Hachiware', 'cat', 'pastel']],
     ['ghibli-jiji-sage-paper', ['green', 'Jiji', "Kiki's Delivery Service"]],
