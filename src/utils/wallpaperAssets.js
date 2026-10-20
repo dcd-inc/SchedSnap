@@ -1,7 +1,7 @@
 import { cloudinaryAssetUrl } from './cloudinaryAssets.js';
 
 const images = new Map();
-let fonts;
+const fonts = new Map();
 
 function mascotBounds(image) {
   const canvas = document.createElement('canvas');
@@ -26,19 +26,13 @@ export async function prepareWallpaperAssets(template, resolution) {
   // Pixel masters stay lossless and unscaled until the nearest-neighbor Canvas draw.
   // Keep unapproved Hunter revisions local during development.
   const imagePath = import.meta.env?.DEV && template.collection === 'hunter-x-hunter'
-    ? sourcePath : cloudinaryAssetUrl(sourcePath, template.pixelArt ? undefined : resolution);
-  fonts ||= Promise.all([
-    document.fonts.load('400 100px "Great Vibes"'),
-    document.fonts.load('400 100px "DM Serif Display"'),
-    document.fonts.load('italic 400 100px "DM Serif Display"'),
-    document.fonts.load('600 40px "DM Sans Variable"'),
-    document.fonts.load('750 100px "DM Sans Variable"'),
-  ]);
-  await fonts;
-  // Wait for the chosen family before measuring or exporting canvas text.
-  if (template.fontFamily) await Promise.all([400, 500, 600, 650, 750].map((weight) =>
-    document.fonts.load(`${weight} 100px "${template.fontFamily}"`),
-  ));
+    ? sourcePath : cloudinaryAssetUrl(sourcePath, resolution, { lossless: !!template.pixelArt });
+  // Only the selected font must be ready before measuring canvas text.
+  const family = template.fontFamily || 'DM Sans Variable';
+  if (!fonts.has(family)) fonts.set(family, Promise.all([400, 500, 600, 650, 700, 750].map(weight =>
+    document.fonts.load(`${weight} 100px "${family}"`),
+  )).catch(error => { fonts.delete(family); throw error; }));
+  await fonts.get(family);
   if (!imagePath) return undefined;
   if (!images.has(imagePath)) images.set(imagePath, new Promise((resolve, reject) => {
     const image = new Image();

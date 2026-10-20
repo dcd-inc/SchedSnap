@@ -238,11 +238,119 @@ test('DeepSeek fallback sends a strict JSON-mode vision request', async (t) => {
   assert.equal(request.body.model, 'deepseek-v4-flash');
   assert.equal(request.body.response_format.type, 'json_object');
   assert.equal(request.body.thinking.type, 'disabled');
+  assert.equal(request.body.messages[1].content[1].image_url.detail, 'original');
   assert.match(request.body.messages[0].content, /Return only one JSON object/);
   assert.match(request.body.messages[0].content, /Monday/);
+  assert.match(request.body.messages[0].content, /SAME row/);
+  assert.match(request.body.messages[0].content, /TTh means Tuesday AND Thursday/);
+  assert.match(request.body.messages[0].content, /Never infer AM\/PM/);
   assert.equal(request.body.messages[1].content[1].image_url.url, `data:image/png;base64,${image.image}`);
   assert.equal(response.statusCode, 200);
   assert.deepEqual(response.body.schedule, sampleSchedule);
+});
+
+test('malformed, empty and invalid Gemini output falls back before refunding an import', async () => {
+  for (const result of [undefined, { text: '' }, { text: 'not json' }, { text: 'null' }, { text: JSON.stringify({ classes: [{ subject: '', meetings: [] }] }) }]) {
+    let releases = 0;
+    const response = responseStub();
+    await createAnalyzeHandler({
+      env: { GEMINI_API_KEY: 'gemini', DEEPSEEK_API_KEY: 'deepseek' },
+      usage: Object.assign(async () => ({ used: 1, limit: 10, allowed: true }), { release: async () => { releases++; } }),
+      generate: async () => result,
+      generateDeepseek: async () => ({ text: JSON.stringify(sampleSchedule) }),
+    })({ method: 'POST', body: image }, response);
+    assert.equal(response.statusCode, 200);
+    assert.equal(response.body.provider, 'deepseek');
+    assert.deepEqual(response.body.schedule, sampleSchedule);
+    assert.equal(response.body.usage.used, 1);
+    assert.equal(releases, 0);
+  }
+});
+
+test('a valid no-schedule result does not spend a second provider request', async () => {
+  let fallbackCalls = 0;
+  const response = responseStub();
+  await createAnalyzeHandler({
+    env: { GEMINI_API_KEY: 'gemini', DEEPSEEK_API_KEY: 'deepseek' },
+    generate: async () => ({ text: JSON.stringify({ classes: [], warnings: ['No schedule visible.'] }) }),
+    generateDeepseek: async () => { fallbackCalls++; },
+  })({ method: 'POST', body: image }, response);
+  assert.equal(response.statusCode, 422);
+  assert.equal(response.body.error.code, 'NO_SCHEDULE');
+  assert.equal(response.body.usage.used, 0);
+  assert.equal(fallbackCalls, 0);
+});
+
+test('capacity failures switch directly to DeepSeek after rotating Gemini keys', async () => {
+  const calls = [];
+  const response = responseStub();
+  await createAnalyzeHandler({
+    env: { GEMINI_API_KEYS: 'first,second', DEEPSEEK_API_KEY: 'deepseek' },
+    generate: async (parameters, key) => { calls.push(key); throw Object.assign(new Error('busy'), { status: 503 }); },
+    generateDeepseek: async () => { calls.push('deepseek'); return { text: JSON.stringify(sampleSchedule) }; },
+  })({ method: 'POST', body: image }, response);
+  assert.deepEqual(calls, ['first', 'second', 'deepseek']);
+  assert.equal(response.statusCode, 200);
+});
+
+test('real Gemini SDK timeout leaves 25 seconds for DeepSeek and skips unused keys', async (t) => {
+  let now = 1000;
+  t.mock.method(Date, 'now', () => now);
+  const timeouts = [];
+  t.mock.method(globalThis, 'setTimeout', (callback, delay) => {
+    timeouts.push(delay);
+    now += delay;
+    callback();
+    return 0;
+  });
+  let geminiCalls = 0;
+  t.mock.method(globalThis, 'fetch', async (url, options) => {
+    geminiCalls++;
+    assert.equal(options.signal.aborted, true);
+    throw Object.assign(new Error('Request timed out'), { name: 'AbortError' });
+  });
+  let fallbackTimeout;
+  const response = responseStub();
+  await createAnalyzeHandler({
+    env: { GEMINI_API_KEYS: 'first,second', DEEPSEEK_API_KEY: 'deepseek' },
+    generateDeepseek: async ({ timeout }) => { fallbackTimeout = timeout; return { text: JSON.stringify(sampleSchedule) }; },
+  })({ method: 'POST', body: image }, response);
+  assert.deepEqual(timeouts, [20_000]);
+  assert.equal(geminiCalls, 1);
+  assert.equal(fallbackTimeout, 25_000);
+  assert.equal(response.statusCode, 200);
+  assert.equal(response.body.provider, 'deepseek');
+});
+
+test('an expired overall budget does not send a doomed one-millisecond fallback request', async (t) => {
+  let now = 1000;
+  t.mock.method(Date, 'now', () => now);
+  let fallbackCalls = 0;
+  const response = responseStub();
+  await createAnalyzeHandler({
+    env: { GEMINI_API_KEY: 'gemini', DEEPSEEK_API_KEY: 'deepseek' },
+    generate: async () => { now += 45_000; throw Object.assign(new Error('timeout'), { name: 'AbortError' }); },
+    generateDeepseek: async () => { fallbackCalls++; },
+  })({ method: 'POST', body: image }, response);
+  assert.equal(fallbackCalls, 0);
+  assert.equal(response.statusCode, 504);
+  assert.equal(response.body.error.code, 'AI_TIMEOUT');
+  assert.equal(response.body.usage.used, 0);
+});
+
+test('one provider with invalid model configuration cannot block the healthy provider', async () => {
+  for (const invalid of ['gemini', 'deepseek']) {
+    const calls = [];
+    const response = responseStub();
+    await createAnalyzeHandler({
+      env: { GEMINI_API_KEY: 'gemini', GEMINI_MODEL: invalid === 'gemini' ? 'invalid model' : 'configured-model', DEEPSEEK_API_KEY: 'deepseek', DEEPSEEK_MODEL: invalid === 'deepseek' ? 'invalid model' : 'deepseek-v4-flash' },
+      generate: async () => { calls.push('gemini'); return { text: JSON.stringify(sampleSchedule) }; },
+      generateDeepseek: async () => { calls.push('deepseek'); return { text: JSON.stringify(sampleSchedule) }; },
+    })({ method: 'POST', body: image }, response);
+    assert.equal(response.statusCode, 200);
+    assert.deepEqual(calls, [invalid === 'gemini' ? 'deepseek' : 'gemini']);
+    assert.equal(response.body.provider, calls[0]);
+  }
 });
 
 test('DeepSeek invalid output is rejected and refunded', async () => {

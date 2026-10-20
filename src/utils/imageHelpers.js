@@ -16,10 +16,21 @@ export async function prepareImage(file) {
     ctx.fillStyle = '#ffffff';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
-    for (const quality of [0.92, 0.82, 0.68]) {
-      const dataUrl = canvas.toDataURL('image/jpeg', quality);
-      const image = dataUrl.split(',')[1];
-      if (image.length * 0.75 <= MAX_IMAGE_BYTES) return { image, mimeType: 'image/jpeg', preview: dataUrl, name: file.name };
+    // Keep screenshot text lossless when it fits; re-encoding still strips file metadata.
+    const formats = file.type === 'image/png' && file.size <= MAX_IMAGE_BYTES
+      ? [['image/png'], ['image/jpeg', 0.92], ['image/jpeg', 0.82], ['image/jpeg', 0.68]]
+      : [['image/jpeg', 0.92], ['image/jpeg', 0.82], ['image/jpeg', 0.68]];
+    for (const [mimeType, quality] of formats) {
+      const blob = await new Promise(resolve => canvas.toBlob(resolve, mimeType, quality));
+      if (!blob) throw new Error('This image could not be prepared. Try another image.');
+      if (blob.size > MAX_IMAGE_BYTES) continue;
+      const preview = await new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = () => reject(new Error('This image could not be prepared. Try another image.'));
+        reader.readAsDataURL(blob);
+      });
+      return { image: preview.split(',')[1], mimeType: blob.type, preview, name: file.name };
     }
     throw new Error('This image is still too large after compression. Try a smaller copy.');
   } finally { bitmap.close(); }

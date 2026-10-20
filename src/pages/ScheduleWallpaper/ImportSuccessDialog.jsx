@@ -30,7 +30,7 @@ export default function ImportSuccessDialog({ provider, classCount, onView, onCl
     <span className="import-success-icon"><Check size={30} strokeWidth={2.5} aria-hidden="true" /></span>
     <h2 id="import-success-title">Schedule imported successfully!</h2>
     <p id="import-success-description">Your schedule has been analyzed and imported. Double-check that everything looks correct, then make any adjustments you need.</p>
-    <p className="import-success-provider"><ProviderIcon provider={provider} />Analyzed with {name} · {classCount} {classCount === 1 ? 'class' : 'classes'}</p>
+    <p className="import-success-provider" title={`AI provider: ${name}`}><ProviderIcon provider={provider} />Analyzed with AI · {classCount} {classCount === 1 ? 'class' : 'classes'}</p>
     <button type="button" className="button-primary import-success-action" autoFocus onClick={onView}>View my schedule</button>
     <canvas ref={canvas} className="import-success-confetti" aria-hidden="true" />
   </dialog>;

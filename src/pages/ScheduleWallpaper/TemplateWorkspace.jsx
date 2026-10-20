@@ -4,7 +4,7 @@ import { ArrowRight, Download, Eye, Heart, Images, Maximize2, Pencil, SlidersHor
 import { getScheduleIssues } from '../../../shared/scheduleSchema.js';
 import { canvasBlob, drawWallpaper, findOverlaps } from '../../utils/canvasHelpers.js';
 import { prepareWallpaperAssets } from '../../utils/wallpaperAssets.js';
-import { galleryScheduleFor } from '../../assets/templates.js';
+import { galleryScheduleFor } from '../../assets/wallpaperPresets.js';
 import { downloadBlob } from '../../utils/downloadBlob.js';
 import { templateProperties, trackEvent } from '../../lib/analytics.js';
 import { WallpaperCanvas } from './CanvasPreview.jsx';
@@ -173,9 +173,9 @@ export default function TemplateWorkspace({ step, onStep, template, defaultTempl
       <section className="download-options" aria-label="Download and customize">
         <h2>{template.name}</h2>
         <p className="download-meta">{schedule.classes.length} {schedule.classes.length === 1 ? 'class' : 'classes'} · {resolution.width} × {resolution.height} PNG</p>
-        <div className="download-design-stats" aria-label="Design totals">
-          <span title={downloadError || 'Total downloads'} aria-label={`${downloads[template.id]?.toLocaleString() ?? 'Unavailable'} downloads`}><Download size={18} aria-hidden="true" /><span aria-hidden="true">{downloads[template.id]?.toLocaleString() ?? '—'}</span></span>
-          <span className="download-design-hearts" data-liked={vote?.liked || false} title="Total hearts" aria-label={`${vote?.count.toLocaleString() ?? 'Unavailable'} hearts`}><Heart size={18} fill={vote?.liked ? 'currentColor' : 'none'} aria-hidden="true" /><span aria-hidden="true">{vote?.count.toLocaleString() ?? '—'}</span></span>
+        <div className="download-design-stats" role="group" aria-label="Design totals">
+          <span role="img" title={downloadError || 'Total downloads'} aria-label={`${downloads[template.id]?.toLocaleString() ?? 'Unavailable'} downloads`}><Download size={18} aria-hidden="true" /><span aria-hidden="true">{downloads[template.id]?.toLocaleString() ?? '—'}</span></span>
+          <span role="img" className="download-design-hearts" data-liked={vote?.liked || false} title="Total hearts" aria-label={`${vote?.count.toLocaleString() ?? 'Unavailable'} hearts`}><Heart size={18} fill={vote?.liked ? 'currentColor' : 'none'} aria-hidden="true" /><span aria-hidden="true">{vote?.count.toLocaleString() ?? '—'}</span></span>
           {downloadError && <button type="button" className="text-link" onClick={refreshDownloads}>Retry downloads</button>}
           {likeError && <button type="button" className="text-link" disabled={!!pendingLikes} onClick={() => refreshLikes(true)}>Retry hearts</button>}
         </div>

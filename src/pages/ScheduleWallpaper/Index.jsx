@@ -6,10 +6,10 @@ import Toast from '../../components/Toast.jsx';
 import BackToTop from '../../components/BackToTop.jsx';
 import RestoreClassesDialog from '../../components/RestoreClassesDialog.jsx';
 import { readDraft, saveDraft } from '../../lib/scheduleDraft.js';
-import { api } from '../../lib/api.js';
+import { api, getAnalysisErrorMessage } from '../../lib/api.js';
 import { loadImportUsage, rememberImportUsage } from '../../lib/importUsage.js';
 import { templateProperties, trackEvent } from '../../lib/analytics.js';
-import { deviceResolutions } from '../../assets/templates.js';
+import { deviceResolutions } from '../../assets/wallpaperPresets.js';
 import { useTemplates, useCatalogStatus } from '../../lib/catalogContext.js';
 import { scheduleLayoutOptions } from '../../utils/canvasHelpers.js';
 import { sampleSchedule } from '../../assets/sampleSchedule.js';
@@ -195,7 +195,7 @@ export default function ScheduleWallpaper() {
       else rememberImportUsage(null);
       if (controller.signal.aborted) trackEvent('schedule_import_cancelled', properties);
       else trackEvent('schedule_import_failed', { ...properties, http_status: failure.response?.status || 0, error_type: failure.code === 'ECONNABORTED' ? 'timeout' : failure.response ? 'server_error' : 'invalid_response_or_network', duration_ms: Math.round(performance.now() - started) });
-      if (!controller.signal.aborted) setError(failure.response?.data?.error?.message || (failure.code === 'ECONNABORTED' ? 'The request took too long. Try again or enter your classes manually.' : failure.message || 'Could not read the image. Try again.'));
+      if (!controller.signal.aborted) setError(getAnalysisErrorMessage(failure));
     } finally {
       if (request.current === controller) { setBusy(false); request.current = null; }
     }

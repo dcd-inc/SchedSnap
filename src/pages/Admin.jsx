@@ -3,7 +3,7 @@ import '../wallpaper-fonts.css';
 import { generativePatterns } from '../assets/generativePatterns.js';
 import { Link, useSearchParams } from 'react-router';
 import { Download, Heart, Plus, LogOut, ArrowLeft, X, Menu, CheckCircle2, Pencil, Eye, EyeOff, Trash2, RotateCcw, MoreVertical, UserRound, LayoutDashboard, PanelsTopLeft, ExternalLink, ChevronLeft, ChevronRight, ChevronDown, Save, Send, Minus, Maximize2, ListFilter } from 'lucide-react';
-import { deviceResolutions, tabletLandscapeResolution } from '../assets/templates.js';
+import { deviceResolutions, tabletLandscapeResolution } from '../assets/wallpaperPresets.js';
 import { sampleSchedule } from '../assets/sampleSchedule.js';
 import { designCollections, galleryCategories, matchesGalleryCategory } from '../config/collections.js';
 import CategoryFilters from '../components/CategoryFilters.jsx';

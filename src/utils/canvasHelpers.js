@@ -1,5 +1,5 @@
 import { days } from '../../shared/scheduleSchema.js';
-import { mobileResolution } from '../assets/templates.js';
+import { mobileResolution } from '../assets/wallpaperPresets.js';
 import { colorInputValue, mascotPosition, wallpaperTextOpacity, wallpaperFontScale, wallpaperCornerRadius, wallpaperFillOpacity, timelineLineWidth, timelineDayStyle } from './wallpaperTheme.js';
 import { drawParticles } from './wallpaperParticles.js';
 import { drawPatternBackground } from './patternBackground.js';

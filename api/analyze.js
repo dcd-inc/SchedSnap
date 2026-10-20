@@ -12,8 +12,15 @@ If no class schedule is visible, return an empty classes array and an explanator
 
 const jsonShape = `{"classes":[{"subject":"string","courseCode":"string or null","meetings":[{"day":"${days.join('|')} or null","startTime":"HH:MM or null","endTime":"HH:MM or null","room":"string or null","dateLabel":"string or null"}]}],"warnings":["string"]}`;
 const fallbackPrompt = `${prompt}
+Read the table by its column headings and row boundaries, not by guessing familiar course names. Match each course code, subject, day, time, and room from the SAME row. Join wrapped subject names. A continuation row belongs to the preceding subject only when the table clearly groups them. Keep distinct courses separate, even when their titles match.
+For a timetable grid, use weekday headings and the time axis for each class block. For a registration table, ignore units, section numbers, instructor names, and fees when reading times or rooms.
+Use the image's day legend when present. Otherwise M/Mon=Monday, T/Tue=Tuesday, W/Wed=Wednesday, Th/Thu=Thursday, F/Fri=Friday, Sat=Saturday, Sun=Sunday. Read Th before T; TTh means Tuesday AND Thursday. Ambiguous S is null unless a legend makes it clear. Make one meeting per day; keep separate lecture/lab rows and their own rooms and times.
+Convert explicit AM/PM correctly: 12 AM=00:00, 12 PM=12:00, 1 PM=13:00. A trailing AM/PM can apply to a whole range when unambiguous (8-9:30 AM becomes 08:00-09:30). Never infer AM/PM from typical school hours. Use null and a short warning for ambiguous text; do not replace readable fields with null just because another field is unclear.
+Example: a row "CS 101 | Computing | TTh | 1:00-2:30 PM | Lab 2" means one class with two meetings: Tuesday 13:00-14:30 in Lab 2 and Thursday 13:00-14:30 in Lab 2. It does not mean a Tuesday-to-Thursday date range.
+Check that every readable schedule row is included once and that no meeting borrowed details from an adjacent row. Preserve the printed subject and room wording. Do not output explanations or transcriptions.
 Return only one JSON object with exactly this shape, no markdown:
-${jsonShape}`;
+${jsonShape}
+Use actual JSON null for missing values, never the string "null". Every class needs a nonempty subject and at least one meeting (fields may be null). Use [] for warnings when nothing needs review.`;
 
 // Use Gemini's portable schema subset for generation; Zod enforces limits after extraction.
 const nullableText = { type: 'STRING', nullable: true };
@@ -40,6 +47,16 @@ const outputSchema = {
 
 function fail(response, status, code, message) {
   return response.status(status).json({ error: { code, message } });
+}
+
+function readSchedule(result) {
+  let parsed;
+  try { parsed = JSON.parse(result?.text); }
+  catch { throw Object.assign(new Error('Invalid AI response'), { code: 'INVALID_AI_RESPONSE' }); }
+  if (Array.isArray(parsed?.classes) && parsed.classes.length === 0) throw Object.assign(new Error('No schedule'), { code: 'NO_SCHEDULE' });
+  const checked = scheduleSchema.safeParse(parsed);
+  if (!checked.success) throw Object.assign(new Error('Invalid AI response'), { code: 'INVALID_AI_RESPONSE' });
+  return checked.data;
 }
 
 export function validateImage(body) {
@@ -83,10 +100,11 @@ export function createAnalyzeHandler({ env = process.env, generate, generateDeep
     ].map((key) => key?.trim()).filter(Boolean))];
     if (!apiKeys.length && !env.DEEPSEEK_API_KEY?.trim()) return fail(response, 503, 'AI_NOT_CONFIGURED', 'Schedule analysis is unavailable. You can enter your classes manually.');
     const model = (env.GEMINI_MODEL?.trim() || 'gemini-3.5-flash-lite').replace(/^models\//, '');
-    if (apiKeys.length && !/^[a-z0-9][a-z0-9._-]+$/.test(model)) return fail(response, 503, 'INVALID_MODEL_CONFIG', 'Schedule analysis is not configured correctly. You can enter your classes manually.');
     const deepseekKey = env.DEEPSEEK_API_KEY?.trim();
     const deepseekModel = env.DEEPSEEK_MODEL?.trim() || 'deepseek-v4-flash';
-    if (deepseekKey && !/^[a-z0-9][a-z0-9._-]+$/.test(deepseekModel)) return fail(response, 503, 'INVALID_MODEL_CONFIG', 'Schedule analysis is not configured correctly. You can enter your classes manually.');
+    const geminiConfigured = apiKeys.length > 0 && /^[a-z0-9][a-z0-9._-]+$/.test(model);
+    const deepseekConfigured = !!deepseekKey && /^[a-z0-9][a-z0-9._-]+$/.test(deepseekModel);
+    if (!geminiConfigured && !deepseekConfigured) return fail(response, 503, 'INVALID_MODEL_CONFIG', 'Schedule analysis is not configured correctly. You can enter your classes manually.');
 
     let dailyUsage;
     try { dailyUsage = await usage(request, true); }
@@ -110,8 +128,10 @@ export function createAnalyzeHandler({ env = process.env, generate, generateDeep
 
     try {
       const deadline = Date.now() + 45_000;
+      // Leave a real fallback window instead of handing DeepSeek an almost-expired timeout.
+      const geminiDeadline = deepseekConfigured ? deadline - 25_000 : deadline;
       // Switch keys immediately on quota errors instead of retrying the exhausted key.
-      const call = generate ?? ((parameters, apiKey) => new GoogleGenAI({ apiKey, httpOptions: { timeout: Math.max(1, deadline - Date.now()), retryOptions: { attempts: 1 } } }).models.generateContent(parameters));
+      const call = generate ?? ((parameters, apiKey) => new GoogleGenAI({ apiKey, httpOptions: { timeout: Math.max(1, geminiDeadline - Date.now()), retryOptions: { attempts: 1 } } }).models.generateContent(parameters));
       const parameters = {
         model,
         contents: [{ role: 'user', parts: [{ text: prompt }, { inlineData: image }] }],
@@ -127,7 +147,7 @@ export function createAnalyzeHandler({ env = process.env, generate, generateDeep
               { role: 'system', content: fallbackPrompt },
               { role: 'user', content: [
                 { type: 'text', text: 'Extract the class schedule from this registration-form image.' },
-                { type: 'image_url', image_url: { url: `data:${request.image.mimeType};base64,${request.image.data}` } },
+                { type: 'image_url', image_url: { url: `data:${request.image.mimeType};base64,${request.image.data}`, detail: 'original' } },
               ] },
             ],
             response_format: { type: 'json_object' },
@@ -145,14 +165,14 @@ export function createAnalyzeHandler({ env = process.env, generate, generateDeep
         if (typeof content !== 'string' || !content.trim()) throw Object.assign(new Error('Empty AI response'), { status: 502 });
         return { text: content.trim().replace(/^```(?:json)?\s*/i, '').replace(/```$/, '') };
       });
-      let result;
+      let schedule;
       let provider = 'gemini';
-      if (apiKeys.length) {
+      if (geminiConfigured) {
         try {
           let capacityError;
           for (const [index, apiKey] of apiKeys.entries()) {
             try {
-              result = await call(parameters, apiKey);
+              schedule = readSchedule(await call(parameters, apiKey));
               break;
             } catch (error) {
               // Quota (429) and provider capacity (500/503) stress move to the next key instead of retrying it.
@@ -164,32 +184,31 @@ export function createAnalyzeHandler({ env = process.env, generate, generateDeep
                 capacityError = error;
                 break;
               }
-              if (Date.now() >= deadline) throw error;
+              if (Date.now() >= geminiDeadline) throw error;
             }
           }
-          if (!result && capacityError) {
+          if (!schedule && capacityError) {
+            if (deepseekConfigured) throw capacityError;
             // Capacity spikes usually clear within seconds: one delayed attempt before switching providers.
             const pause = Math.min(3000, deadline - Date.now() - 1000);
             if (pause < 1000) throw capacityError;
             await new Promise(resolve => setTimeout(resolve, pause));
-            result = await call(parameters, apiKeys[0]);
+            schedule = readSchedule(await call(parameters, apiKeys[0]));
           }
         } catch (error) {
-          if (!deepseekKey) throw error;
+          if (!deepseekConfigured || error.code === 'NO_SCHEDULE') throw error;
         }
       }
-      if (!result && deepseekKey) {
-        result = await callDeepseek({ model: deepseekModel, image, timeout: Math.max(1, deadline - Date.now()) }, deepseekKey);
+      if (!schedule && deepseekConfigured) {
+        const timeout = deadline - Date.now();
+        if (timeout <= 0) throw Object.assign(new Error('AI timeout'), { name: 'TimeoutError' });
+        schedule = readSchedule(await callDeepseek({ model: deepseekModel, image, timeout }, deepseekKey));
         provider = 'deepseek';
       }
-      let parsed;
-      try { parsed = JSON.parse(result.text); }
-      catch { return failRefunded(502, 'INVALID_AI_RESPONSE', 'The schedule could not be read reliably. Try a clearer image or enter your classes manually.'); }
-      if (Array.isArray(parsed?.classes) && parsed.classes.length === 0) return failRefunded(422, 'NO_SCHEDULE', 'No class schedule was found. Upload a clearer image showing subjects, days, and times.');
-      const checked = scheduleSchema.safeParse(parsed);
-      if (!checked.success) return failRefunded(502, 'INVALID_AI_RESPONSE', 'Some schedule details could not be read. Try a clearer image or enter your classes manually.');
-      return response.status(200).json({ schedule: checked.data, provider });
+      return response.status(200).json({ schedule, provider });
     } catch (error) {
+      if (error.code === 'NO_SCHEDULE') return failRefunded(422, 'NO_SCHEDULE', 'No class schedule was found. Upload a clearer image showing subjects, days, and times.');
+      if (error.code === 'INVALID_AI_RESPONSE') return failRefunded(502, 'INVALID_AI_RESPONSE', 'The schedule could not be read reliably. Try a clearer image or enter your classes manually.');
       const status = Number(error.status ?? error.code);
       if (status === 429) return failRefunded(429, 'AI_RATE_LIMIT', 'The AI has reached its limit right now. Try again later or enter your classes manually.');
       if (status === 500 || status === 503) return failRefunded(503, 'AI_BUSY', 'Too many people are using the AI right now. Try again in a minute or enter your classes manually.');

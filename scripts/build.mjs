@@ -15,6 +15,13 @@ await cp(publicDirectory, output, { recursive: true,
   filter: source => isPublicDeploymentAsset(relative(publicDirectory, source).split(sep).join('/')),
 });
 const manifest = JSON.parse(await readFile(resolve(output, '.vite/manifest.json'), 'utf8'));
+const creatorEntry = manifest['src/pages/ScheduleWallpaper/Index.jsx'];
+const creatorPreloads = [creatorEntry, ...creatorEntry.imports.map(key => manifest[key])];
+const creatorHead = [...new Set(creatorPreloads.flatMap(entry => [
+  `<link rel="modulepreload" href="/${entry.file}" />`,
+  ...(entry.css || []).map(file => `<link rel="stylesheet" href="/${file}" />`),
+])), '<link rel="preload" href="/api/catalog" as="fetch" crossorigin />'].join('\n');
+const prepareCreator = html => html.replace('</head>', `${creatorHead}\n</head>`);
 const renderDirectory = resolve(output, '.seo-render');
 if (dirname(renderDirectory) !== output) throw new Error('Unsafe prerender cleanup path');
 try {
@@ -35,6 +42,7 @@ try {
     const markup = renderPage(path);
     if (path !== CREATOR_PATH && !markup.includes('<h1')) throw new Error(`No heading in prerendered ${path}`);
     let html = replaceSeoHead(shell, path).replace('<div id="root"></div>', () => `<div id="root">${markup}</div>`);
+    if (path === CREATOR_PATH) html = prepareCreator(html);
     // Start the LCP image before scripts and styles compete for the connection.
     if (path === '/') {
       html = html.replace('<meta name="theme-color" content="#ffffff" />', '<meta name="theme-color" content="#ffffff" />\n    <link rel="preload" as="image" type="image/avif" imagesrcset="/images/hero/hero-phones-stacked-640.avif 640w, /images/hero/hero-phones-stacked-768.avif 768w, /images/hero/hero-phones-stacked-960.avif 960w, /images/hero/hero-phones-stacked-1448.avif 1448w" imagesizes="(max-width: 800px) 100vw, (max-width: 1100px) 60vw, 640px" fetchpriority="high" />');
@@ -48,7 +56,7 @@ try {
     await writeFile(target, html);
   }
   // Editor and admin routes must never fall back to the homepage's canonical/content.
-  await writeFile(resolve(output, 'app.html'), replaceSeoHead(shell, `${CREATOR_PATH}/editor`));
+  await writeFile(resolve(output, 'app.html'), prepareCreator(replaceSeoHead(shell, `${CREATOR_PATH}/editor`)));
   await writeFile(resolve(output, 'admin.html'), replaceSeoHead(shell, '/admin'));
   const urls = Object.entries(SEO_PAGES).map(([path, page]) => `  <url><loc>${SITE_URL}${path}</loc>${page.lastModified ? `<lastmod>${page.lastModified}</lastmod>` : ''}</url>`).join('\n');
   await writeFile(resolve(output, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`);
