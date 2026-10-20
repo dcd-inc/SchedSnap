@@ -22,10 +22,13 @@ previews, full-size PNG responses, and canvas CORS headers. The initial samples
 were 97–99% smaller than their original PNG files. This checks delivery, not a
 browser download or a visual quality comparison.
 
-Gallery canvases request artwork sized to their canvas dimensions with automatic
-format and quality. Full-size canvases request lossless PNG. Original
-files remain in public as source material; unmapped paths continue using them.
-The image loader enables anonymous CORS so pixel reads and PNG exports can work.
+Gallery canvases request artwork limited to their canvas dimensions. Standard
+art uses Cloudinary's automatic format and quality; pixel-art previews are
+resized but remain lossless PNG. Full-size canvases request lossless PNG.
+Original files remain in public as source material; unmapped paths continue
+using them. The image loader enables anonymous CORS so pixel reads and PNG
+exports can work. See [image sizing and optimization](IMAGE_OPTIMIZATION.md)
+before changing source dimensions or formats.
 
 This migration covers template artwork, not landing-page images, fonts, user
 schedule uploads, or generated downloads. Public asset delivery consumes your

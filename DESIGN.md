@@ -20,7 +20,7 @@ colors:
 typography:
   display:
     fontFamily: "DM Sans Variable, sans-serif"
-    fontSize: "clamp(2.7rem, 4.1vw, 3.65rem)"
+    fontSize: "clamp(2.25rem, calc(1.25rem + 3vw), 3.65rem)"
     fontWeight: 650
     lineHeight: 1.08
     letterSpacing: "-0.04em"

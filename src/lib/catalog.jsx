@@ -4,7 +4,9 @@ export function CatalogProvider({ children }) {
   const [catalog, setCatalog] = useState({ templates: [], loading: true, error: '' });
   useEffect(() => {
     const controller = new AbortController();
-    const load = () => fetch('/api/catalog', { signal: controller.signal }).then(async response => {
+    // Match the static shell's crossorigin fetch preload so the browser can
+    // reuse that early response instead of downloading the catalog twice.
+    const load = () => fetch('/api/catalog', { signal: controller.signal, mode: 'cors', credentials: 'same-origin' }).then(async response => {
       if (!response.ok) throw new Error('Could not load designs. Please try again.');
       const data = await response.json();
       if (!Array.isArray(data.templates)) throw new Error('Could not load designs. Please try again.');

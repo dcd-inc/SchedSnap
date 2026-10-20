@@ -23,7 +23,7 @@ function mascotBounds(image) {
 
 export async function prepareWallpaperAssets(template, resolution) {
   const sourcePath = template.deviceImages?.[resolution?.id || 'mobile'] || template.image;
-  // Pixel masters stay lossless and unscaled until the nearest-neighbor Canvas draw.
+  // Pixel previews stay lossless and use nearest-neighbor Canvas rendering.
   // Keep unapproved Hunter revisions local during development.
   const imagePath = import.meta.env?.DEV && template.collection === 'hunter-x-hunter'
     ? sourcePath : cloudinaryAssetUrl(sourcePath, resolution, { lossless: !!template.pixelArt });

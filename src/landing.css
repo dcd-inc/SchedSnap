@@ -19,7 +19,7 @@
   .landing-hero { position: relative; isolation: isolate; display: flex; align-items: center; height: calc(100svh - var(--iab-h, 0px)); min-height: 480px; background: #faf6ef; }
   .hero-content { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); align-items: center; gap: 40px; height: 100%; }
   .hero-copy { max-width: 430px; pointer-events: auto; }
-  .hero-heading { font-size: clamp(2rem, calc(1.125rem + 3vw), 3.65rem); line-height: 1.08; font-weight: 650; letter-spacing: -0.04em; }
+  .hero-heading { font-size: clamp(2.25rem, calc(1.25rem + 3vw), 3.65rem); line-height: 1.08; font-weight: 650; letter-spacing: -0.04em; }
   .hero-description { max-width: 32ch; margin-top: 24px; font-size: clamp(1rem, calc(0.9375rem + 0.2vw), 1.125rem); line-height: 1.7; color: #5b5b55; }
   .hero-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-start; gap: 12px; margin-top: 28px; }
   .hero-action { min-height: 50px; padding-inline: 21px; font-size: 15px; }

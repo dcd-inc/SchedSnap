@@ -55,6 +55,18 @@ test('design keywords survive authenticated save and public catalog delivery', a
   assert.equal(templateSchema.safeParse({ ...template, keywords: 'x'.repeat(501) }).success, false);
 });
 
+test('public catalog responses are briefly cacheable while failures are not', async () => {
+  const success = response();
+  await createPublicCatalogHandler({ env, store: { read: async () => seedCatalog() } })({ method: 'GET' }, success);
+  assert.equal(success.code, 200);
+  assert.equal(success.headers['Cache-Control'], 'public, max-age=0, s-maxage=30, stale-while-revalidate=60');
+
+  const failure = response();
+  await createPublicCatalogHandler({ env, store: { read: async () => { throw new Error('catalog unavailable'); } } })({ method: 'GET' }, failure);
+  assert.equal(failure.code, 503);
+  assert.equal(failure.headers['Cache-Control'], 'no-store');
+});
+
 test('partial background drafts save while publishing requires three distinct variants', () => {
   const base = seedCatalog().templates.find(template => template.deviceImages && template.layout !== 'mascot');
   assert.ok(base, 'The fixture needs a background with device variants');

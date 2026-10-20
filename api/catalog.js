@@ -13,7 +13,9 @@ function currentPlacement(template) {
 export function createPublicCatalogHandler({ env = process.env, store = createCatalogStore(env), previewTemplates = [] } = {}) {
   return async (request, response) => {
     if (request.method !== 'GET') return response.status(405).json({ error: { message: 'Method not allowed.' } });
-    response.setHeader('Cache-Control', 'no-store');
+    // Published designs are shared by all visitors and change infrequently.
+    // Let Vercel serve a short-lived edge copy while the browser revalidates.
+    response.setHeader('Cache-Control', 'public, max-age=0, s-maxage=30, stale-while-revalidate=60');
     try {
       const catalog = cloudConfigured(env) ? await store.read() : seedCatalog();
       // Development can preview new local artwork without publishing to the

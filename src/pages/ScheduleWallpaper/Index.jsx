@@ -216,7 +216,7 @@ export default function ScheduleWallpaper() {
     } else openStep(step === 'classes' ? 'design' : 'classes');
   }
 
-  if (catalogStatus.loading) return <WallpaperLoading />;
+  if (catalogStatus.loading && templateId) return <WallpaperLoading />;
   if (catalogStatus.error && !wallpaperTemplates.length) return <section className="page-wrap py-12"><p role="alert">{catalogStatus.error}</p><button className="button-primary mt-6" onClick={() => window.location.reload()}>Try again</button></section>;
   if (templateId && !template) return <section className="page-wrap py-12">
     <h1 className="text-2xl font-semibold">Template not found</h1>

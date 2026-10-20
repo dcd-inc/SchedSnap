@@ -20,6 +20,8 @@ Uploading images, publishing catalog records, and deploying the frontend are sep
 
 Tablet landscape rendering uses **2560 × 1600**. For a landscape-specific illustrated design, inspect `orientation` and the renderer before adding assets: existing scenic validation/tests assume portrait tablet files. The mascot master is reusable in either orientation.
 
+Keep these as source/master dimensions; do not shrink artwork to gallery-thumbnail size. Gallery Canvas requests are resized by Cloudinary to the rendered preview dimensions; standard artwork uses automatic format/quality, while pixel art stays lossless PNG. Full-resolution wallpaper exports request PNG. Check both pixel dimensions and source file bytes before upload, and preserve quality, transparency, or crisp pixel edges. See [image sizing, file-size checks, and preview delivery](../../IMAGE_OPTIMIZATION.md) for the exact workflow. User-uploaded schedule screenshots use separate limits and preparation rules in `src/utils/imageHelpers.js` and `shared/uploadLimits.js`.
+
 Supported mascot packs: `mascots` (soft 3D), `pixel-mascots`, `goofy-mascots` (3D reactions), and `doodle-mascots`. Adding a new pack requires changes to uploader path validation, schema, and deletion guards; prefer the existing packs.
 
 ## Generate clean artwork
