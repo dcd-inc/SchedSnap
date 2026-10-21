@@ -1,4 +1,4 @@
-import { Rows3, List, Columns3, PanelsTopLeft, GitCommitVertical, Table2, Layers, Square, Palette, SquareDashed, Blend } from 'lucide-react';
+import { Rows3, List, Columns3, PanelsTopLeft, GitCommitVertical, Table2, Layers, Square, Palette, SquareDashed, Blend, Ban } from 'lucide-react';
 
 export const layoutIcons = {
   stacked: Rows3,
@@ -15,4 +15,5 @@ export const stylePickerOptions = [
   ['colored', 'Solid color', Palette],
   ['colored-glass', 'Colored glass', Blend],
   ['outline', 'Outline', SquareDashed],
+  ['none', 'No container', Ban],
 ];

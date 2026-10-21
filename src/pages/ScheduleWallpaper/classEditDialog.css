@@ -49,6 +49,16 @@
   .wallpaper-flow .class-row-toolbar-actions button { padding-inline: 8px; gap: 5px; }
   .row-class-editor .schedule-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 15px; }
   .flow-class-editor .row-class-editor .schedule-title-control .icon-button { width: 28px; }
-  .class-edit-dialog { inset: auto 0 0; width: 100vw; max-width: 100vw; max-height: calc(100dvh - 16px); margin: 0; padding: 12px 20px max(20px, env(safe-area-inset-bottom)); border-radius: 20px 20px 0 0; }
+  .class-edit-dialog { inset: auto 0 0; width: 100vw; max-width: 100vw; max-height: calc(100dvh - 16px); margin: 0; padding: 12px 20px var(--mobile-action-bottom, calc(12px + env(safe-area-inset-bottom, 0px))); border-radius: 20px 20px 0 0; }
   .class-edit-dialog::before { content: ''; display: block; width: 36px; height: 4px; margin: 0 auto 8px; border-radius: 99px; background: #cbd5e1; }
 }
+
+.class-edit-dialog .required-marker { color: #b91c1c; }
+
+.class-suggest-field { position: relative; min-width: 0; }
+.class-suggestions { position: absolute; inset: calc(100% + 4px) 0 auto; z-index: 5; display: grid; gap: 2px; max-height: 180px; overflow-y: auto; padding: 4px; border: 1px solid var(--color-line); border-radius: 10px; background: var(--color-paper); box-shadow: 0 6px 18px rgb(15 23 42 / 12%); }
+.class-suggestions button { max-width: 100%; min-height: 44px; padding: 8px 12px; border: 1px solid var(--color-line); border-radius: 8px; background: var(--color-soft); color: var(--color-ink); text-align: left; overflow-wrap: anywhere; font-size: 13px; }
+.class-suggestions button:hover { border-color: var(--color-ink); }
+
+.class-suggestions button { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; }
+.class-suggestions button > svg { flex-shrink: 0; color: var(--color-muted); }

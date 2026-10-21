@@ -1,3 +1,4 @@
+import { Mail } from 'lucide-react';
 import { SOCIAL_LINKS } from '../config/socialLinks.js';
 
 const socials = [
@@ -13,6 +14,7 @@ export default function SocialLinks() {
             const artwork = <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">{icon}</svg>;
             return SOCIAL_LINKS[key] ? <a key={key} className="footer-social-icon" href={SOCIAL_LINKS[key]} target="_blank" rel="noopener noreferrer" aria-label={`${name} (opens in a new tab)`}>{artwork}</a> : <span key={key} className="footer-social-icon" role="img" aria-label={`${name} link coming soon`} title={`${name} link coming soon`}>{artwork}</span>;
           })}
+          <a className="footer-social-icon" href="mailto:dcd.inc.mail@gmail.com" aria-label="Email dcd.inc.mail@gmail.com" title="dcd.inc.mail@gmail.com"><Mail size={18} aria-hidden="true" /></a>
         </div>
   );
 }

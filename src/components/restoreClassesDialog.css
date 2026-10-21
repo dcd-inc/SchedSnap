@@ -6,4 +6,17 @@
 .restore-classes-dialog .restore-classes-note { font-size: 13px; }
 .restore-classes-actions { display: flex; gap: 12px; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--color-line); }
 .restore-classes-actions button { flex: 1; min-height: 44px; }
-@media (max-width: 380px) { .restore-classes-actions { flex-direction: column-reverse; } }
+.restore-label-mobile { display: none; }
+@media (max-width: 640px) {
+  .restore-classes-actions { gap: 10px; }
+  .restore-classes-actions button { min-width: 0; padding: 10px 12px; }
+  .restore-label-desktop { display: none; }
+  .restore-label-mobile { display: inline; }
+}
+
+.restore-classes-dialog #restore-classes-title:focus { outline: none; }
+
+.restore-classes-notes { margin-top: 12px; padding-left: 20px; list-style: disc; font-size: 15px; line-height: 1.6; color: var(--color-muted); }
+.restore-classes-notes li + li { margin-top: 8px; }
+
+.restore-classes-visual { display: block; width: 100%; height: auto; max-height: 160px; object-fit: contain; margin-top: 12px; }

@@ -177,11 +177,11 @@ export function layoutSchedule(ctx, schedule, template, height = 2400, options =
 
 export function scheduleLayoutOptions(device) {
   return [
-    { value: 'stacked', label: 'Stacked days', description: 'One day per row' },
-    { value: 'grouped-list', label: 'Grouped list', description: 'All days in one shared panel' },
-    { value: 'day-columns', label: 'Day columns', description: 'Weekday circles and class stacks' },
-    ...(device === 'laptop' ? [{ value: 'day-cards', label: 'Day cards', description: 'Paired days with a timeline' }] : []),
-    ...(['mobile', 'tablet'].includes(device) ? [{ value: 'timeline', label: 'Timeline', description: 'Connected days, clear rows' }] : []),
+    { value: 'stacked', label: 'Stacked days', description: 'A separate card for each day' },
+    { value: 'grouped-list', label: 'Grouped list', description: 'All days in one panel' },
+    { value: 'day-columns', label: 'Day columns', description: 'A column for each day' },
+    ...(device === 'laptop' ? [{ value: 'day-cards', label: 'Day cards', description: 'Day cards in two columns' }] : []),
+    ...(['mobile', 'tablet'].includes(device) ? [{ value: 'timeline', label: 'Timeline', description: 'Days along a vertical line' }] : []),
   ];
 }
 
@@ -835,7 +835,7 @@ export function drawSampleClock(canvas) {
   const timeWidth = ctx.measureText('9:41').width;
   const gap = canvas.height * 0.001;
   const x = (canvas.width - timeWidth) / 2;
-  const y = canvas.height * 0.175;
+  const y = canvas.height * 0.195;
   font(ctx, canvas.height * 0.09, 600, 'DM Sans Variable');
   ctx.fillText('9:41', x, y);
   font(ctx, canvas.height * 0.028, 600, 'DM Sans Variable');
@@ -1002,6 +1002,7 @@ export function canvasBlob(canvas) {
 
 // Scope text alpha to this render; fills, borders, artwork, and the sample clock retain their opacity.
 export function drawWallpaper(canvas, options) {
+  if (options.template.containerStyle === 'none') options = { ...options, template: { ...options.template, containerFill: false, containerBorder: false } };
   const ctx = canvas.getContext('2d');
   const opacity = wallpaperTextOpacity(options.template) / 100;
   if (!ctx || opacity === 1) return renderWallpaper(canvas, options);

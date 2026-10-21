@@ -134,16 +134,16 @@
 @media (max-width: 1100px) {
   .landing-nav { display: none; }
   .mobile-navigation { display: block; }
-  .mobile-nav-panel { position: fixed; inset: 0; z-index: 40; display: flex; flex-direction: column; justify-content: center; gap: 12px; width: 100%; height: 100dvh; overflow-y: auto; padding: max(88px, env(safe-area-inset-top)) 32px max(40px, env(safe-area-inset-bottom)); background: #faf6ef; clip-path: circle(0px at var(--menu-origin-x, calc(100% - 38px)) var(--menu-origin-y, 28px)); visibility: hidden; pointer-events: none; transition: clip-path 500ms cubic-bezier(0.65, 0, 0.35, 1), visibility 0s 500ms; }
+  .mobile-nav-panel { position: fixed; inset: 0; z-index: 40; display: flex; flex-direction: column; justify-content: center; gap: 12px; width: 100%; height: 100dvh; overflow-y: auto; padding: max(88px, env(safe-area-inset-top)) 32px max(40px, env(safe-area-inset-bottom)); background: #faf6ef; clip-path: circle(0px at var(--menu-origin-x, calc(100% - 38px)) var(--menu-origin-y, 28px)); visibility: hidden; pointer-events: none; transition: clip-path 330ms cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0s 330ms; }
   .mobile-nav-panel[data-open="true"] { clip-path: circle(150vmax at var(--menu-origin-x, calc(100% - 38px)) var(--menu-origin-y, 28px)); visibility: visible; pointer-events: auto; transition-delay: 0s; }
-  .mobile-section-links { display: grid; gap: 12px; margin-block: auto; padding-block: 24px; }
-  .mobile-section-links a { justify-content: center; min-height: 52px; padding: 12px 0; font-size: clamp(1.25rem, 5vw, 1.5rem); font-weight: 600; letter-spacing: -0.02em; text-align: center; }
+  .mobile-section-links { display: grid; justify-items: center; gap: 12px; margin-block: auto; padding-block: 24px; }
+  .mobile-section-links a { justify-self: center; width: fit-content; justify-content: center; min-height: 52px; padding: 12px 16px; font-size: clamp(1.25rem, 5vw, 1.5rem); font-weight: 600; letter-spacing: -0.02em; text-align: center; }
   .mobile-menu-footer { display: grid; justify-items: center; gap: 12px; flex-shrink: 0; }
   .mobile-menu-footer .maker-content { width: 100%; padding: 0; gap: 12px; }
   .mobile-menu-footer .maker-mascot { width: 72px; }
   .mobile-menu-footer .maker-message { font-size: 16px; }
   .mobile-menu-footer .footer-socials { justify-self: center; }
-  .mobile-menu-footer a.footer-social-icon { min-height: 44px; padding: 0; }
+  .mobile-menu-footer a.footer-social-icon { width: 44px; height: 44px; min-height: 44px; padding: 0; border-radius: 50%; }
   .mobile-nav-toggle { position: relative; z-index: 42; }
   .site-header-inner > .site-brand { position: relative; z-index: 42; }
 }
@@ -295,4 +295,31 @@
   .footer-content { grid-template-columns: 1fr; justify-items: center; gap: 24px; }
   .footer-policies { justify-content: center; }
   .footer-socials { justify-self: center; }
+}
+
+.mobile-social-label { font-size: 13px; color: var(--color-muted); }
+
+.menu-toggle-lines { position: relative; display: block; width: 22px; height: 18px; }
+.menu-toggle-lines > span { position: absolute; left: 0; top: 8px; width: 22px; height: 2px; border-radius: 2px; background: currentColor; transform: translateY(-4px); transition: transform 330ms cubic-bezier(0.2, 0.8, 0.2, 1); }
+.menu-toggle-lines > span + span { transform: translateY(4px); }
+.mobile-nav-toggle[aria-expanded='true'] .menu-toggle-lines > span { transform: rotate(45deg); }
+.mobile-nav-toggle[aria-expanded='true'] .menu-toggle-lines > span + span { transform: rotate(-45deg); }
+@media (prefers-reduced-motion: reduce) { .menu-toggle-lines > span { transition: none; } }
+
+@media (max-width: 640px) {
+  .landing-footer .footer-content > .site-brand { order: 0; }
+  .landing-footer .footer-content > .footer-socials { order: 1; }
+  .landing-footer .footer-content > .footer-links { order: 2; }
+  .landing-footer .footer-content > .footer-credit { order: 3; }
+}
+
+@media (max-width: 640px) {
+  .landing-footer .footer-content { row-gap: 10px; padding-block: 12px 16px; }
+  .landing-footer .footer-credit { padding-top: 12px; }
+  .landing-footer .maker-content { padding-bottom: 12px; }
+}
+
+@media (max-width: 640px) {
+  .mobile-section-links { justify-items: center; }
+  .mobile-section-links a { width: fit-content; padding-inline: 16px; }
 }

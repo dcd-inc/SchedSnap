@@ -236,7 +236,7 @@ export default function ScheduleWallpaper() {
     }} onDiscard={() => { setPendingDraft(null); if (step === 'preview' && template) navigate(devicePath(`${basePath}/${template.id}`), { replace: true }); requestAnimationFrame(() => heading.current?.focus()); }} />}
     {step === 'design' ? <Link to="/" className="tool-back"><ArrowLeft className="size-4" aria-hidden="true" />Back</Link> : <button type="button" className="tool-back" onClick={goBack}><ArrowLeft className="size-4" aria-hidden="true" />{step === 'classes' && importOpen && schedule.classes.length ? 'Back to classes' : 'Back'}</button>}
     <header className="wallpaper-flow-header" data-importing={choosingImage}>
-      <h1 tabIndex={-1} ref={heading}>{step === 'design' ? 'Choose a design' : step === 'classes' ? 'Add your classes' : 'Your wallpaper'}</h1>
+      <h1 tabIndex={-1} ref={heading}>{step === 'design' ? 'Choose a design' : step === 'classes' ? 'Add your classes' : 'Wallpaper preview'}</h1>
       <div className="wallpaper-flow-header-actions">
         {step === 'design' && <WallpaperSearch value={searchQuery} onChange={setSearchQuery} />}
         {choosingImage && <button type="button" className="button-secondary import-change" aria-label={preparingImage ? 'Preparing image' : 'Change image'} disabled={busy || preparingImage} onClick={() => imagePicker.current?.openPicker()}><ImageUp size={16} aria-hidden="true" />{preparingImage ? 'Preparing…' : <><span className="import-change-desktop">Change image</span><span className="import-change-mobile">Change</span></>}</button>}

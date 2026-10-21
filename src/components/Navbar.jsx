@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
-import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router';
 import BrandMark from './BrandMark.jsx';
 import MakerBanner from './MakerBanner.jsx';
@@ -66,11 +65,11 @@ export default function Navbar() {
             menuRef.current.style.setProperty('--menu-origin-y', `${bounds.top + bounds.height / 2}px`);
             setMenuOpen(open => !open);
           }}>
-            {menuOpen ? <X size={22} aria-hidden="true" /> : <Menu size={22} aria-hidden="true" />}
+            <span className="menu-toggle-lines" aria-hidden="true"><span /><span /></span>
           </button>
           <div id="mobile-section-nav" className="mobile-nav-panel" data-open={menuOpen} inert={!menuOpen}>
             <nav className="mobile-section-links" aria-label="Mobile navigation">{sectionLinks()}</nav>
-            <div className="mobile-menu-footer"><MakerBanner /><SocialLinks /></div>
+            <div className="mobile-menu-footer"><p className="mobile-social-label">Find us on</p><SocialLinks /><MakerBanner /></div>
           </div>
         </div>}
       </div>

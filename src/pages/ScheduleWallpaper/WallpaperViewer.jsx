@@ -54,15 +54,15 @@ export default function WallpaperViewer({ children, resolution, onClose, title =
     if (event.key === '-') { event.preventDefault(); changeZoom(-25); }
     if (event.key === '0') { event.preventDefault(); setZoom(100); }
   }}>
-    <div className="flex h-full min-h-0 flex-col">
+    <div className="viewer-shell">
       <div className="viewer-header">
         <h2 id="viewer-heading" className="text-base font-semibold">{title}</h2>
         <div className="viewer-zoom-desktop">{zoomControls}</div>
         <button type="button" className="icon-button size-11" aria-label="Close enlarged preview" onClick={onClose}><X className="size-5" aria-hidden="true" /></button>
       </div>
-      <div ref={pane} tabIndex={0} role="region" aria-label="Zoomed image. Scroll to move around. Hold Control and scroll to zoom." className="min-h-0 flex-1 overflow-auto overscroll-contain bg-soft">
+      <div ref={pane} tabIndex={0} role="region" aria-label="Zoomed image. Scroll to move around. Hold Control and scroll to zoom." className="viewer-pane bg-soft">
         <div className="grid min-h-full min-w-full place-items-center p-4" style={{ width: width + 32, height: height + 32 }}>
-          <div style={{ width }} className="shrink-0">{children}</div>
+          <div style={{ width, height }} className="viewer-image">{children}</div>
         </div>
       </div>
       <div className="viewer-zoom-mobile">{zoomControls}</div>

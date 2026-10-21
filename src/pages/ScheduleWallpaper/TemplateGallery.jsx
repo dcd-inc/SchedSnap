@@ -123,6 +123,7 @@ export default function TemplateGallery({ selectedId, settings = {}, schedule: e
 
 function DesignPreview({ template, schedule, resolution, onClose, onSelect, onLayoutChange }) {
   const dialog = useRef(null);
+  const layoutPicker = useRef(null);
   const selectedLayout = scheduleLayoutOptions(resolution.id).find(option => option.value === template.scheduleLayout) || scheduleLayoutOptions(resolution.id)[0];
   const SelectedLayoutIcon = layoutIcons[selectedLayout.value];
   useEffect(() => {
@@ -135,11 +136,30 @@ function DesignPreview({ template, schedule, resolution, onClose, onSelect, onLa
     node.focus();
     return () => { node.close(); document.body.style.overflow = overflow; if (trigger?.isConnected) trigger.focus(); };
   }, []);
+  useEffect(() => {
+    const dismiss = event => {
+      if (!layoutPicker.current?.contains(event.target)) layoutPicker.current?.removeAttribute('open');
+    };
+    const escape = event => {
+      if (event.key === 'Escape' && layoutPicker.current?.open) {
+        event.preventDefault();
+        event.stopPropagation();
+        layoutPicker.current.open = false;
+        layoutPicker.current.querySelector('summary')?.focus();
+      }
+    };
+    document.addEventListener('pointerdown', dismiss, true);
+    document.addEventListener('keydown', escape, true);
+    return () => {
+      document.removeEventListener('pointerdown', dismiss, true);
+      document.removeEventListener('keydown', escape, true);
+    };
+  }, []);
   return <dialog ref={dialog} className="design-preview-dialog" data-device={resolution.id} data-orientation={resolution.width > resolution.height ? 'landscape' : 'portrait'} style={{ '--design-preview-ratio': resolution.width / resolution.height }} aria-labelledby="design-preview-title" onCancel={onClose} onClick={(event) => { if (event.target === event.currentTarget) onClose(); }}>
     <header><h2 id="design-preview-title">{template.name}</h2><button type="button" className="template-modal-control" aria-label="Close design preview" onClick={onClose}><X size={20} aria-hidden="true" /></button></header>
     <div className="design-preview-body"><WallpaperCanvas schedule={schedule?.classes.length ? schedule : previewSchedule(template)} template={template} resolution={resolution} className="block h-auto w-full" label={`${template.name} with ${schedule?.classes.length ? 'your' : 'sample'} classes`} /></div>
     <footer>
-      <details className="device-picker preview-layout-picker">
+      <details ref={layoutPicker} className="device-picker preview-layout-picker">
         <summary className="button-secondary" aria-label={`Schedule layout: ${selectedLayout.label}`}><SelectedLayoutIcon aria-hidden="true" /><span>{selectedLayout.label}</span><ChevronDown aria-hidden="true" /></summary>
         <div className="device-picker-menu" role="group" aria-label="Schedule layout">
           {scheduleLayoutOptions(resolution.id).map(option => { const Icon = layoutIcons[option.value]; return <button key={option.value} type="button" aria-pressed={template.scheduleLayout === option.value} onClick={event => { onLayoutChange(option.value); event.currentTarget.closest('details').open = false; }}><Icon aria-hidden="true" /><span>{option.label}</span></button>; })}

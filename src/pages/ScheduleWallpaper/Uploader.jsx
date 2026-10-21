@@ -1,5 +1,6 @@
 import { Link } from 'react-router';
-import { useEffect, useImperativeHandle, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
+import { useCallback, useEffect, useImperativeHandle, useRef, useState } from 'react';
 import { Ban, CircleAlert, ImageUp, ListChecks, LoaderCircle, Maximize2, Pencil, X } from 'lucide-react';
 import { prepareImage } from '../../utils/imageHelpers.js';
 import { trackEvent } from '../../lib/analytics.js';
@@ -16,13 +17,13 @@ function UploadTipsDialog({ onContinue, onClose }) {
   }, []);
   return <dialog ref={dialog} className="class-edit-dialog" aria-labelledby="upload-tips-title" aria-describedby="upload-tips-list" onCancel={event => { event.preventDefault(); onClose(); }} onClick={event => { if (event.target === event.currentTarget) onClose(); }}>
     <header>
-      <h2 id="upload-tips-title" className="upload-tips-title"><ImageUp size={20} aria-hidden="true" />Upload tips</h2>
-      <button type="button" className="icon-button" aria-label="Close upload tips" onClick={onClose}><X size={20} aria-hidden="true" /></button>
+      <h2 id="upload-tips-title" className="upload-tips-title">Upload guide</h2>
+      <button type="button" className="icon-button" aria-label="Close upload guide" onClick={onClose}><X size={20} aria-hidden="true" /></button>
     </header>
+    <div className="upload-tips-example-frame"><img className="upload-tips-example" src="/upload-tips-example.png" width="1536" height="1024" alt="Example of a clear timetable with every day, time, subject and room fully in frame." /></div>
     <ul id="upload-tips-list" className="upload-guide">
-      <li>Use a screenshot or a straight-on photo in good lighting.</li>
-      <li>Keep the whole schedule in frame, including every day and time.</li>
-      <li>Avoid blur, glare, and shadows over the text.</li>
+      <li>Include the whole schedule, with all days and times.</li>
+      <li>Use a clear, straight-on image without glare.</li>
     </ul>
     <div className="upload-tips-actions">
       <button type="button" className="button-secondary" onClick={onClose}>Cancel</button>
@@ -43,7 +44,8 @@ function ReplaceConfirmDialog({ onConfirm, onClose }) {
       <h2 id="replace-confirm-title">Replace your classes?</h2>
       <button type="button" className="icon-button" aria-label="Close" onClick={onClose}><X size={20} aria-hidden="true" /></button>
     </header>
-    <p className="placement-note">Importing this image replaces your current classes and edits. The AI reads the new schedule and your existing classes are removed once the import finishes. This uses one of your daily AI imports.</p>
+    <img className="replace-classes-visual" src="/replace-classes-example.png" width="1774" height="887" alt="" />
+    <ul className="placement-note import-replace-notes"><li>Replaces your current classes and edits after import.</li><li>Uses one daily AI import.</li></ul>
     <div className="upload-tips-actions">
       <button type="button" className="button-secondary" onClick={onClose}>Cancel</button>
       <button type="button" className="button-primary" autoFocus onClick={onConfirm}>Import classes</button>
@@ -65,6 +67,7 @@ export default function Uploader({ image, onImage, onAnalyze, busy, error, impor
   const locked = usageUnavailable || limitReached;
   const importBlocked = !importUsage || locked;
   const input = useRef(null);
+  const importArea = useRef(null);
   const uploadButton = useRef(null);
   const requestId = useRef(0);
   const [preparing, setPreparing] = useState(false);
@@ -73,10 +76,10 @@ export default function Uploader({ image, onImage, onAnalyze, busy, error, impor
   const [imageSize, setImageSize] = useState({ width: 1080, height: 1080 });
   const [tipsOpen, setTipsOpen] = useState(false);
   const [confirmOpen, setConfirmOpen] = useState(false);
-  useImperativeHandle(pickerRef, () => ({ openPicker() { if (busy || preparing) return; onOpen?.(); input.current?.click(); }, focusUpload() { uploadButton.current?.focus(); } }), [busy, preparing, onOpen]);
+  useImperativeHandle(pickerRef, () => ({ openPicker() { if (busy || preparing) return; setTipsOpen(true); }, focusUpload() { uploadButton.current?.focus(); } }), [busy, preparing]);
   useEffect(() => () => { requestId.current += 1; }, []);
 
-  async function choose(file) {
+  const choose = useCallback(async (file) => {
     if (!file || busy || preparing || importBlocked) return;
     const id = ++requestId.current;
     setPreparing(true);
@@ -89,7 +92,23 @@ export default function Uploader({ image, onImage, onAnalyze, busy, error, impor
       if (id === requestId.current) { onImage(prepared); trackEvent('schedule_upload_succeeded', properties); }
     } catch (failure) { if (id === requestId.current) { onError(failure.message); trackEvent('schedule_upload_failed', { ...properties, error_type: 'image_preparation' }); } }
     finally { if (id === requestId.current) { setPreparing(false); onPreparing?.(false); } }
-  }
+  }, [busy, preparing, importBlocked, onPreparing, onError, onImage]);
+
+  useEffect(() => {
+    const paste = event => {
+      if (window.matchMedia('(max-width: 640px)').matches || busy || preparing || importBlocked) return;
+      if (!importArea.current || importArea.current.closest('[hidden]') || document.querySelector('dialog:modal')) return;
+      if (event.target instanceof Element && event.target.closest('input, textarea, [contenteditable="true"]')) return;
+      const files = Array.from(event.clipboardData?.items || []).filter(item => item.kind === 'file' && item.type.startsWith('image/')).map(item => item.getAsFile()).filter(Boolean);
+      if (!files.length) return;
+      event.preventDefault();
+      if (files.length > 1) { onError('Paste one schedule image at a time.'); return; }
+      onOpen?.();
+      void choose(files[0]);
+    };
+    window.addEventListener('paste', paste);
+    return () => window.removeEventListener('paste', paste);
+  }, [busy, preparing, importBlocked, onError, onOpen, choose]);
 
   const dropEvents = {
     onDragOver: (event) => { event.preventDefault(); event.dataTransfer.dropEffect = busy || preparing || locked ? 'none' : 'copy'; if (!busy && !preparing && !locked) setDragging(true); },
@@ -97,7 +116,7 @@ export default function Uploader({ image, onImage, onAnalyze, busy, error, impor
     onDrop: (event) => { event.preventDefault(); setDragging(false); if (event.dataTransfer.files.length > 1) { onError('Drop one schedule image at a time.'); return; } choose(event.dataTransfer.files[0]); },
   };
 
-  return <section id="schedule-import" aria-label="Import your schedule" className="schedule-import">
+  return <section ref={importArea} id="schedule-import" aria-label="Import your schedule" className="schedule-import">
     <div id="daily-import-usage" className="upload-usage" role="status">
       {usageUnavailable ? <p>AI import is unavailable right now. You can still enter classes manually.</p> : importUsage ? limitReached ? <>
         <p className="upload-usage-title"><Ban size={18} aria-hidden="true" />Daily AI Limit Reached ({importUsage.used}/{importUsage.limit})</p>
@@ -109,13 +128,14 @@ export default function Uploader({ image, onImage, onAnalyze, busy, error, impor
     </div>
     <input ref={input} type="file" accept="image/jpeg,image/png,image/webp" className="sr-only" tabIndex={-1} aria-label="Schedule image" onChange={(event) => { choose(event.target.files[0]); event.target.value = ''; }} disabled={busy || preparing} />
     {image ? <>
-      {busy ? <ImportProgress /> : <button type="button" className={`schedule-image-preview ${dragging ? 'is-dragging' : ''}`} aria-label="Enlarge uploaded schedule" aria-haspopup="dialog" onClick={() => setEnlarged(true)} {...dropEvents}><img src={image.preview} alt="Selected schedule" onLoad={(event) => setImageSize({ width: event.currentTarget.naturalWidth, height: event.currentTarget.naturalHeight })} /><span className="preview-enlarge" aria-hidden="true"><Maximize2 size={16} /></span></button>}
+      {busy ? <ImportProgress /> : <div className="uploaded-image-frame"><button type="button" className={`schedule-image-preview ${dragging ? 'is-dragging' : ''}`} aria-label="Enlarge uploaded schedule" aria-haspopup="dialog" onClick={() => setEnlarged(true)} {...dropEvents}><img src={image.preview} alt="Selected schedule" onLoad={(event) => setImageSize({ width: event.currentTarget.naturalWidth, height: event.currentTarget.naturalHeight })} /><span className="preview-enlarge" aria-hidden="true"><Maximize2 size={16} /></span></button>
+      <button type="button" className="button-secondary upload-change-mobile" disabled={preparing || importBlocked} onClick={() => { setTipsOpen(true); }}><ImageUp size={16} aria-hidden="true" />Change image</button></div>}
       <div className="import-footer-row"><p id="upload-data-disclosure" className="upload-privacy">Processed by AI. Not stored here. <Link to="/terms" target="_blank" rel="noopener noreferrer">Terms</Link> · <Link to="/privacy" target="_blank" rel="noopener noreferrer">Privacy</Link></p><div className="import-footer"><div className="import-submit-actions"><button type="button" className="button-secondary import-cancel" disabled={preparing} onClick={onCancel}>Cancel</button><button type="button" disabled={busy || preparing || importBlocked} aria-describedby="daily-import-usage upload-data-disclosure" onClick={() => hasSchedule ? setConfirmOpen(true) : onAnalyze()} className="button-primary">Import classes</button></div></div></div>
     </> : <>
-      <button ref={uploadButton} type="button" className={`schedule-dropzone ${dragging ? 'is-dragging' : ''} ${locked ? 'is-locked' : ''}`} disabled={busy || preparing || locked} onClick={() => setTipsOpen(true)} {...dropEvents}>
+      <button ref={uploadButton} type="button" className={`schedule-dropzone ${dragging ? 'is-dragging' : ''} ${locked ? 'is-locked' : ''}`} disabled={busy || preparing || locked} onClick={() => { setTipsOpen(true); }} {...dropEvents}>
         {locked ? <Ban size={32} strokeWidth={1.5} aria-hidden="true" /> : <ImageUp size={32} strokeWidth={1.5} aria-hidden="true" />}
         <span className="upload-label">{preparing ? 'Preparing…' : dragging ? 'Drop image here' : locked ? limitReached ? 'Daily AI limit reached' : 'AI import unavailable' : 'Upload image'}</span>
-        <span className="upload-drop-hint">{locked ? 'Need more? Add classes manually instead.' : 'or drag and drop it here'}</span>
+        <span className="upload-drop-hint">{locked ? 'Need more? Add classes manually instead.' : 'or drag, drop, or paste an image'}</span>
         {!locked && <span className="upload-formats">JPG, PNG, WebP · 10 MB max</span>}
       </button>
       {!hasSchedule && <div className="upload-alternatives"><button type="button" disabled={busy || preparing} onClick={onManual} className="button-secondary upload-manual"><Pencil size={16} aria-hidden="true" />Enter manually</button><button type="button" disabled={busy || preparing} onClick={onSample} className="button-secondary"><ListChecks size={16} aria-hidden="true" />Try a sample</button></div>}
@@ -123,7 +143,7 @@ export default function Uploader({ image, onImage, onAnalyze, busy, error, impor
     </>}
     {error && <p className="import-inline-error" role="alert"><CircleAlert size={16} aria-hidden="true" />{error}</p>}
     {enlarged && image && <WallpaperViewer title="Schedule image" resolution={imageSize} onClose={() => setEnlarged(false)}><img src={image.preview} alt="Uploaded schedule" className="block h-auto w-full" /></WallpaperViewer>}
-    {tipsOpen && <UploadTipsDialog onClose={() => setTipsOpen(false)} onContinue={() => { setTipsOpen(false); input.current?.click(); }} />}
+    {tipsOpen && createPortal(<UploadTipsDialog onClose={() => setTipsOpen(false)} onContinue={() => { setTipsOpen(false); onOpen?.(); input.current?.click(); }} />, document.body)}
     {confirmOpen && <ReplaceConfirmDialog onClose={() => setConfirmOpen(false)} onConfirm={() => { setConfirmOpen(false); onAnalyze(); }} />}
   </section>;
 }

@@ -39,6 +39,7 @@ export function wallpaperColorIntensity(template) {
 }
 
 export function timelineDayStyle(template, index) {
+  if (template.containerStyle === 'none') return { ...template, containerFill: false, containerBorder: false };
   if (template.containerStyle === 'outline') return { ...template, containerFill: false };
   if (!['colored', 'colored-glass', 'colored-light', 'colored-dark', 'colored-alternating'].includes(template.containerStyle)) return template;
   const palette = ['#ed839b', '#79b8a0', '#8da8ec', '#e6bb62', '#b697d9'];

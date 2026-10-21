@@ -8,7 +8,7 @@ const devices = [
   ['laptop', 'Laptop', Laptop],
 ];
 
-export default function DevicePicker({ value = 'mobile', onChange, label = 'Device', options = devices, className = '' }) {
+export default function DevicePicker({ value = 'mobile', onChange, label = 'Device', options = devices, className = '', disabled = false, previewFonts = false }) {
   const pickerRef = useRef(null);
   const [sheetOpen, setSheetOpen] = useState(false);
   const closeSheet = useCallback(() => setSheetOpen(false), []);
@@ -31,16 +31,16 @@ export default function DevicePicker({ value = 'mobile', onChange, label = 'Devi
       document.removeEventListener('keydown', close);
     };
   }, []);
-  return <details ref={pickerRef} className={`device-picker ${className}`} onToggle={event => {
+  return <details inert={disabled} ref={pickerRef} className={`device-picker ${className}`} onToggle={event => {
     if (!event.currentTarget.open) return;
     const bounds = event.currentTarget.querySelector('summary').getBoundingClientRect();
     event.currentTarget.style.setProperty('--picker-menu-top', `${bounds.bottom + 6}px`);
     event.currentTarget.style.setProperty('--picker-menu-left', `${Math.max(12, Math.min(bounds.left, window.innerWidth - 222))}px`);
   }}>
-    <summary aria-label={`${label}: ${selected[1]}`} onClick={event => { if (window.matchMedia('(max-width: 640px)').matches) { event.preventDefault(); setSheetOpen(true); } }}><SelectedIcon aria-hidden="true" /><span>{selected[1]}</span><ChevronDown className="device-picker-chevron" aria-hidden="true" /></summary>
+    <summary aria-disabled={disabled || undefined} aria-label={`${label}: ${selected[1]}`} onClick={event => { if (window.matchMedia('(max-width: 640px)').matches) { event.preventDefault(); setSheetOpen(true); } }}><SelectedIcon aria-hidden="true" /><span style={previewFonts ? { fontFamily: `"${selected[0]}"` } : undefined}>{selected[1]}</span><ChevronDown className="device-picker-chevron" aria-hidden="true" /></summary>
     <div className="device-picker-menu" role="menu" aria-label={label}>
-      {options.map(([id, name, Icon]) => <button type="button" role="menuitem" key={id} aria-pressed={value === id} onClick={(event) => { onChange(id); event.currentTarget.closest('details').open = false; }}><Icon aria-hidden="true" /><span>{name}</span></button>)}
+      {options.map(([id, name, Icon]) => <button type="button" role="menuitem" key={id} aria-pressed={value === id} onClick={(event) => { onChange(id); event.currentTarget.closest('details').open = false; }}><Icon aria-hidden="true" /><span style={previewFonts ? { fontFamily: `"${id}"` } : undefined}>{name}</span></button>)}
     </div>
-    {sheetOpen && <MobileSheet title={label} onClose={closeSheet}><div className="mobile-sheet-options">{options.map(([id, name, Icon]) => <button type="button" key={id} aria-pressed={value === id} onClick={() => { onChange(id); closeSheet(); }}><Icon aria-hidden="true" /><span>{name}</span></button>)}</div></MobileSheet>}
+    {sheetOpen && <MobileSheet title={label} onClose={closeSheet}><div className="mobile-sheet-options">{options.map(([id, name, Icon]) => <button type="button" key={id} aria-pressed={value === id} onClick={() => { onChange(id); closeSheet(); }}><Icon aria-hidden="true" /><span style={previewFonts ? { fontFamily: `"${id}"` } : undefined}>{name}</span></button>)}</div></MobileSheet>}
   </details>;
 }

@@ -1,5 +1,5 @@
 .mobile-disclosure-trigger { width: 100%; text-align: left; }
-.mobile-control-sheet { position: fixed; inset: auto 0 0; width: 100vw; max-width: 100vw; max-height: calc(100dvh - 24px); margin: 0; padding: 12px 20px max(20px, env(safe-area-inset-bottom)); border: 0; border-radius: 20px 20px 0 0; overflow-y: auto; background: white; color: var(--color-ink); }
+.mobile-control-sheet { position: fixed; inset: auto 0 0; width: 100vw; max-width: 100vw; max-height: calc(100dvh - 24px); margin: 0; padding: 12px 20px var(--mobile-action-bottom, calc(12px + env(safe-area-inset-bottom, 0px))); border: 0; border-radius: 20px 20px 0 0; overflow-y: auto; background: white; color: var(--color-ink); }
 .mobile-control-sheet::before { content: ''; display: block; width: 36px; height: 4px; margin: 0 auto 12px; border-radius: 99px; background: #cbd5e1; }
 .mobile-control-sheet::backdrop { background: rgb(15 23 42 / 45%); }
 .mobile-control-sheet > header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--color-line); }
@@ -14,7 +14,15 @@
   dialog.restore-classes-dialog, dialog.download-thanks-dialog, dialog.design-preview-dialog, dialog.design-preview-dialog[data-device], dialog.import-success-dialog, dialog.wallpaper-viewer {
     position: fixed; inset: auto 0 0; width: 100vw; max-width: 100vw; margin: 0; max-height: calc(100dvh - 16px); border-radius: 20px 20px 0 0;
   }
-  dialog.restore-classes-dialog, dialog.download-thanks-dialog, dialog.import-success-dialog { padding-bottom: max(24px, env(safe-area-inset-bottom)); }
+  dialog.restore-classes-dialog, dialog.download-thanks-dialog, dialog.import-success-dialog { padding-bottom: var(--mobile-action-bottom, calc(12px + env(safe-area-inset-bottom, 0px))); }
   dialog.wallpaper-viewer { height: calc(100dvh - 16px); }
-  dialog.design-preview-dialog footer { padding-bottom: max(16px, env(safe-area-inset-bottom)); }
+  dialog.design-preview-dialog footer { padding-bottom: var(--mobile-action-bottom, calc(12px + env(safe-area-inset-bottom, 0px))); }
 }
+
+/* Keep picker actions visible while long option lists scroll. */
+.mobile-control-sheet:not(.mobile-appearance-editor)[open] { display: flex; flex-direction: column; min-height: min(320px, 75dvh); max-height: 75dvh; overflow: hidden; }
+.mobile-control-sheet:not(.mobile-appearance-editor)::before,
+.mobile-control-sheet:not(.mobile-appearance-editor) > header,
+.mobile-control-sheet:not(.mobile-appearance-editor) > .mobile-sheet-done { flex-shrink: 0; }
+.mobile-control-sheet:not(.mobile-appearance-editor) > .mobile-sheet-content { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; }
+.mobile-control-sheet:not(.mobile-appearance-editor) > .mobile-sheet-done { margin-top: 12px; min-height: 44px; }
