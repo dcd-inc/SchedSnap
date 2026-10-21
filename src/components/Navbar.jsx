@@ -15,6 +15,8 @@ export default function Navbar() {
   const scrolled = useSyncExternalStore(subscribeToScroll, hasScrolled, () => false);
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
+  const headerRef = useRef(null);
+  const [headerHidden, setHeaderHidden] = useState(false);
   const toggleRef = useRef(null);
   useEffect(() => {
     if (!menuOpen) return;
@@ -32,8 +34,23 @@ export default function Navbar() {
       document.removeEventListener('keydown', closeEscape);
     };
   }, [menuOpen]);
+  useEffect(() => {
+    if (!isHome || menuOpen) return;
+    let lastY = Math.max(0, window.scrollY);
+    const updateHeader = () => {
+      const y = Math.max(0, window.scrollY);
+      const delta = y - lastY;
+      if (y <= 80) setHeaderHidden(false);
+      else if (Math.abs(delta) >= 8) {
+        setHeaderHidden(delta > 0 && !headerRef.current?.contains(document.activeElement));
+      } else return;
+      lastY = y;
+    };
+    window.addEventListener('scroll', updateHeader, { passive: true });
+    return () => window.removeEventListener('scroll', updateHeader);
+  }, [isHome, menuOpen]);
   function sectionLinks() {
-    return [['how-it-works', 'How it works'], ['designs', 'Designs'], ['faq', 'FAQs']].map(([id, label]) => <a key={id} href={`#${id}`} onClick={event => {
+    return [['how-it-works', 'How it works'], ['collections', 'Collections'], ['designs', 'Designs'], ['faq', 'FAQs']].map(([id, label]) => <a key={id} href={`#${id}`} onClick={event => {
       event.preventDefault();
       setMenuOpen(false);
       const section = document.getElementById(id);
@@ -42,7 +59,7 @@ export default function Navbar() {
     }}>{label}</a>);
   }
   return (
-    <header className={`site-header${menuOpen ? ' mobile-menu-open' : ''}${isHome ? ` site-header-home${!scrolled ? ' is-at-top' : ''}` : ''}`}>
+    <header ref={headerRef} className={`site-header${isHome && headerHidden && !menuOpen ? ' is-scroll-hidden' : ''}${menuOpen ? ' mobile-menu-open' : ''}${isHome ? ` site-header-home${!scrolled ? ' is-at-top' : ''}` : ''}`}>
       <div className="page-wrap site-header-inner">
         <Link to="/" className="site-brand" onClick={event => {
           setMenuOpen(false);
