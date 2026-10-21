@@ -323,8 +323,6 @@
 .schedule-layout-option:last-child:nth-child(3) { grid-column: 1 / -1; flex-wrap: nowrap; padding-right: 42px; }
 .layout-miniature-timeline { padding-left: 13px; flex-shrink: 0; }
 .layout-miniature-timeline > span { position: relative; border: 0; border-bottom: 1px solid var(--color-muted); border-radius: 0; }
-.layout-miniature-timeline > span::before { content: ''; position: absolute; left: -9px; top: 0; width: 5px; height: 5px; border: 1px solid var(--color-muted); border-radius: 50%; }
-.layout-miniature-timeline > span:not(:last-child)::after { content: ''; position: absolute; left: -7px; top: 5px; height: 4px; width: 1px; background: var(--color-muted); }
 .flow-customize > summary { padding-block: 16px; font-size: 14px; font-weight: 600; }
 .flow-customize > summary span { display: inline-flex; align-items: center; gap: 8px; }
 .flow-customize .template-settings { padding: 4px 0 8px; }
