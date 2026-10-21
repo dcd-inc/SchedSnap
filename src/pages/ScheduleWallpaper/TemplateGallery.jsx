@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { ArrowRight, ChevronDown, Download, Heart, X } from 'lucide-react';
+import { ArrowRight, ChevronDown, Heart, X } from 'lucide-react';
 import { deviceResolutions, galleryScheduleFor } from '../../assets/wallpaperPresets.js';
 import useInfiniteGallery from '../../lib/useInfiniteGallery.js';
 import { useCatalogStatus } from '../../lib/catalogContext.js';
@@ -12,6 +12,7 @@ import CategoryFilters from '../../components/CategoryFilters.jsx';
 import DevicePicker from '../../components/DevicePicker.jsx';
 import { layoutIcons, stylePickerOptions } from '../../components/wallpaperOptionIcons.js';
 import SortPicker from '../../components/SortPicker.jsx';
+import ClickSpark from '../../components/ClickSpark.jsx';
 import { isNewTemplate } from '../../utils/templateFreshness.js';
 import useDesignLikes from '../../lib/useDesignLikes.js';
 import { sortTemplatesByLikes } from '../../utils/sortTemplatesByLikes.js';
@@ -106,11 +107,15 @@ export default function TemplateGallery({ selectedId, settings = {}, schedule: e
         </div>
         </button>
         <div className="template-card-caption">
-          <button type="button" className="template-card-name" aria-haspopup="dialog" onClick={openPreview}>{item.name}</button>
-          <div className="template-card-stats"><span className="template-downloads" role="img" aria-label={`${downloads[item.id] === undefined ? "Unavailable" : downloads[item.id].toLocaleString()} downloads`} title="Downloads"><Download size={16} aria-hidden="true" /><span aria-hidden="true">{downloads[item.id]?.toLocaleString() ?? "—"}</span></span>
+          <div className="template-card-details">
+            <button type="button" className="template-card-name" aria-haspopup="dialog" onClick={openPreview}>{item.name}</button>
+            <p className="template-downloads">{downloads[item.id] === undefined ? 'Downloads unavailable' : `${downloads[item.id].toLocaleString()} ${downloads[item.id] === 1 ? 'download' : 'downloads'}`}</p>
+          </div>
+          <ClickSpark sparkColor="#be123c" sparkSize={14} sparkRadius={30} sparkCount={8} duration={500} disabled={!vote} style={{ width: 'auto', height: 'auto', flexShrink: 0 }}>
           <button type="button" className="template-heart" aria-pressed={vote?.liked || false} aria-label={`${vote?.liked ? 'Unlike' : 'Like'} ${item.name}${vote ? `, ${vote.count} ${vote.count === 1 ? 'like' : 'likes'}` : ', likes unavailable'}`} disabled={!vote} onClick={() => toggleLike(item.id)}>
-            <Heart size={18} fill={vote?.liked ? 'currentColor' : 'none'} aria-hidden="true" /><span aria-hidden="true">{vote ? vote.count.toLocaleString() : '—'}</span>
-          </button></div>
+            <Heart size={20} fill={vote?.liked ? 'currentColor' : 'none'} aria-hidden="true" /><span aria-hidden="true">{vote ? vote.count.toLocaleString() : '—'}</span>
+          </button>
+          </ClickSpark>
         </div>
       </div>; })}
     </div>
