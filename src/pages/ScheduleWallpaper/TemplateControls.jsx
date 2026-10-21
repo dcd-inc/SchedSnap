@@ -1,4 +1,5 @@
-import DevicePicker from '../../components/DevicePicker.jsx';
+import PopupPicker from '../../components/PopupPicker.jsx';
+import FineSlider from '../../components/FineSlider.jsx';
 import { stylePickerOptions } from '../../components/wallpaperOptionIcons.js';
 import { particleStyles } from '../../utils/wallpaperParticles.js';
 import { useLayoutEffect, useRef, useState } from 'react';
@@ -37,7 +38,7 @@ function AppearanceColor({ colorKey, template, defaultTemplate = {}, onChange, t
   </div>;
 }
 
-export default function TemplateControls({ template, onChange, defaultTemplate = {}, enablePlacement = false, layoutPicker, positionOffset, onTitleChange }) {
+export default function TemplateControls({ template, onChange, defaultTemplate = {}, enablePlacement = false, layoutPicker, onTitleChange }) {
   const [category, setCategory] = useState('layout');
   const settingsRef = useRef(null);
   const scrollTabToStart = useRef(false);
@@ -56,6 +57,7 @@ export default function TemplateControls({ template, onChange, defaultTemplate =
   const fixedBackground = Boolean(template.image && template.layout !== 'mascot');
   const timeline = ['timeline', 'grouped-list', 'day-columns'].includes(scheduleLayout(template));
   const radius = wallpaperCornerRadius(template);
+  const fontSize = Math.round(wallpaperFontScale(template) * 1000) / 10;
   const defaultRadius = wallpaperCornerRadius({ ...template, containerRadius: undefined });
   const defaultColorIntensity = wallpaperColorIntensity({ ...defaultTemplate, containerStyle: template.containerStyle });
   const dragging = useRef({});
@@ -65,12 +67,12 @@ export default function TemplateControls({ template, onChange, defaultTemplate =
     {(enablePlacement || (template.device && template.device !== 'mobile')) && <section className="appearance-section" data-section="layout" hidden={category !== 'layout'}><fieldset className="appearance-group">
       <legend className="sr-only">Layout</legend>{layoutPicker}
       <div className="position-offset">
-        <div className="top-margin-label"><span>Position</span><span className="position-value"><button type="button" className="position-reset" disabled={['horizontal', 'vertical'].every(axis => scheduleMovement(template, axis) === scheduleMovement(defaultTemplate, axis))} onClick={() => { onChange('horizontalPosition', undefined); onChange('verticalPosition', undefined); }}>Reset</button><output>{positionOffset?.horizontal ?? 0}, {positionOffset?.vertical ?? 0}</output></span></div>
+        <div className="top-margin-label"><span>Position</span><span className="position-value"><button type="button" className="position-reset" disabled={['horizontal', 'vertical'].every(axis => scheduleMovement(template, axis) === scheduleMovement(defaultTemplate, axis))} onClick={() => { onChange('horizontalPosition', undefined); onChange('verticalPosition', undefined); }}>Reset</button><output>{scheduleMovement(template, 'horizontal')}%, {scheduleMovement(template, 'vertical')}%</output></span></div>
         {['horizontal', 'vertical'].map(axis => {
           const value = scheduleMovement(template, axis);
           const defaultValue = scheduleMovement(defaultTemplate, axis);
           const id = `schedule-${axis}-position`;
-          return <div className="position-axis" key={axis}><label htmlFor={id}>{axis === 'horizontal' ? 'Left / Right' : 'Up / Down'}</label><input id={id} type="range" min="-100" max="100" step="1" value={value} aria-label={`${axis === 'horizontal' ? 'Horizontal' : 'Vertical'} position`} aria-valuetext={positionOffset ? `${positionOffset[axis]} pixels` : `${value}%`} onPointerDown={() => { dragging.current[axis] = true; }} onPointerUp={() => { dragging.current[axis] = false; }} onPointerCancel={() => { dragging.current[axis] = false; }} onBlur={() => { dragging.current[axis] = false; }} onChange={event => onChange(`${axis}Position`, snapSchedulePosition(Number(event.target.value), dragging.current[axis], defaultValue))} /><output htmlFor={id}>{positionOffset ? `${positionOffset[axis]} px` : `${value}%`}</output></div>;
+          return <div className="position-axis" key={axis}><label htmlFor={id}>{axis === 'horizontal' ? 'Left / Right' : 'Up / Down'}</label><FineSlider id={id} min="-100" max="100" step="1" value={value} aria-label={`${axis === 'horizontal' ? 'Horizontal' : 'Vertical'} position`} aria-valuetext={`${value}%`} onDragStart={() => { dragging.current[axis] = true; }} onDragEnd={() => { dragging.current[axis] = false; }} onValueChange={value => onChange(`${axis}Position`, snapSchedulePosition(value, dragging.current[axis], defaultValue))} /><output htmlFor={id}>{value}%</output></div>;
         })}
       </div>
     </fieldset><button type="button" className="button-secondary section-reset layout-default-reset" onClick={() => resetSection('layout')}>Reset layout to default</button></section>}
@@ -86,11 +88,11 @@ export default function TemplateControls({ template, onChange, defaultTemplate =
         <AppearanceColor colorKey="patternAccent" template={template} defaultTemplate={defaultTemplate} onChange={onChange} />
         <div className="top-margin-control">
           <div className="top-margin-label"><label htmlFor="pattern-scale">Pattern size</label><span className="position-value"><output htmlFor="pattern-scale">{patternScale(template)}%</output><button type="button" className="position-reset" disabled={!(patternScale(template) !== patternScale(defaultTemplate))} aria-label="Reset pattern size" onClick={() => onChange('patternScale', patternScale(defaultTemplate))}>Reset</button></span></div>
-          <input id="pattern-scale" type="range" min="50" max="200" step="5" value={patternScale(template)} onChange={event => onChange('patternScale', Number(event.target.value))} />
+          <FineSlider id="pattern-scale" min="50" max="200" step="5" value={patternScale(template)} onValueChange={value => onChange('patternScale', value)} />
         </div>
         <div className="top-margin-control">
           <div className="top-margin-label"><label htmlFor="pattern-opacity">Pattern opacity</label><span className="position-value"><output htmlFor="pattern-opacity">{patternOpacity(template)}%</output><button type="button" className="position-reset" disabled={!(patternOpacity(template) !== patternOpacity(defaultTemplate))} aria-label="Reset pattern opacity" onClick={() => onChange('patternOpacity', patternOpacity(defaultTemplate))}>Reset</button></span></div>
-          <input id="pattern-opacity" type="range" min="0" max="100" step="5" value={patternOpacity(template)} onChange={event => onChange('patternOpacity', Number(event.target.value))} />
+          <FineSlider id="pattern-opacity" min="0" max="100" step="5" value={patternOpacity(template)} onValueChange={value => onChange('patternOpacity', value)} />
         </div>
       </>}
     </fieldset><button type="button" className="button-secondary section-reset" onClick={() => resetSection('wallpaper')}>Reset wallpaper</button></section>}
@@ -98,7 +100,7 @@ export default function TemplateControls({ template, onChange, defaultTemplate =
       <legend className="sr-only">{timeline ? 'Day groups' : 'Day containers'}</legend>
       {template.device === 'tablet' && <div className="top-margin-control">
         <div className="top-margin-label"><label htmlFor="tablet-box-spacing">{timeline ? 'Space between days' : 'Space between boxes'}</label><span className="position-value"><output htmlFor="tablet-box-spacing">{tabletBoxSpacing(template)}</output><button type="button" className="position-reset" disabled={!(tabletBoxSpacing(template) !== tabletBoxSpacing(defaultTemplate))} aria-label="Reset spacing" onClick={() => onChange('tabletBoxSpacing', tabletBoxSpacing(defaultTemplate))}>Reset</button></span></div>
-        <input id="tablet-box-spacing" type="range" min="0" max="300" step="1" value={tabletBoxSpacing(template)} aria-valuetext={`${tabletBoxSpacing(template)} spacing units`} onChange={event => onChange('tabletBoxSpacing', Number(event.target.value))} />
+        <FineSlider id="tablet-box-spacing" min="0" max="300" step="1" value={tabletBoxSpacing(template)} aria-valuetext={`${tabletBoxSpacing(template)} spacing units`} onValueChange={value => onChange('tabletBoxSpacing', value)} />
       </div>}
       <fieldset className="schedule-layout-fieldset container-style-picker">
         <legend className="sr-only">Container style</legend>
@@ -117,24 +119,24 @@ export default function TemplateControls({ template, onChange, defaultTemplate =
       <div hidden={template.containerStyle === 'none'}>
       {template.containerStyle?.startsWith('colored') && <div className="top-margin-control">
         <div className="top-margin-label"><label htmlFor="color-intensity">Color intensity</label><span className="position-value"><output htmlFor="color-intensity">{wallpaperColorIntensity(template)}%</output><button type="button" className="position-reset" disabled={!(wallpaperColorIntensity(template) !== defaultColorIntensity)} aria-label="Reset color intensity" onClick={() => onChange('colorIntensity', defaultColorIntensity)}>Reset</button></span></div>
-        <input id="color-intensity" type="range" min="0" max="100" step="1" value={wallpaperColorIntensity(template)} onChange={event => onChange('colorIntensity', Number(event.target.value))} />
+        <FineSlider id="color-intensity" min="0" max="100" step="1" value={wallpaperColorIntensity(template)} onValueChange={value => onChange('colorIntensity', value)} />
       </div>}
       <div className="top-margin-control">
         <div className="top-margin-label"><label htmlFor="appearance-shape">Corner radius</label><span className="position-value"><output htmlFor="appearance-shape">{radius}%</output><button type="button" className="position-reset" disabled={!(radius !== defaultRadius)} aria-label="Reset corner radius" onClick={() => onChange('containerRadius', undefined)}>Reset</button></span></div>
-        <input id="appearance-shape" type="range" min="0" max="50" step="1" value={radius} aria-valuetext={`${radius}% corner radius`} onChange={event => onChange('containerRadius', Number(event.target.value))} />
+        <FineSlider id="appearance-shape" min="0" max="50" step="1" value={radius} aria-valuetext={`${radius}% corner radius`} onValueChange={value => onChange('containerRadius', value)} />
       </div>
 
 
       <AppearanceColor colorKey="surface" template={template} defaultTemplate={defaultTemplate} onChange={onChange} toggleKey="containerFill" />
       {(template.containerFill !== false) && <div className="top-margin-control">
         <div className="top-margin-label"><label htmlFor="fill-opacity">Fill opacity</label><span className="position-value"><output htmlFor="fill-opacity">{wallpaperFillOpacity(template)}%</output><button type="button" className="position-reset" disabled={!(wallpaperFillOpacity(template) !== wallpaperFillOpacity(defaultTemplate))} aria-label="Reset fill opacity" onClick={() => onChange('containerOpacity', wallpaperFillOpacity(defaultTemplate))}>Reset</button></span></div>
-        <input id="fill-opacity" type="range" min="0" max="100" step="1" value={wallpaperFillOpacity(template)} disabled={template.containerFill === false} aria-valuetext={`${wallpaperFillOpacity(template)}% fill opacity`} onChange={event => onChange('containerOpacity', Number(event.target.value))} />
+        <FineSlider id="fill-opacity" min="0" max="100" step="1" value={wallpaperFillOpacity(template)} disabled={template.containerFill === false} aria-valuetext={`${wallpaperFillOpacity(template)}% fill opacity`} onValueChange={value => onChange('containerOpacity', value)} />
       </div>}
       {!timeline && <AppearanceColor colorKey="line" template={template} defaultTemplate={defaultTemplate} onChange={onChange} toggleKey="containerBorder" />}
       {timeline && <AppearanceColor colorKey="line" label="Day outline" template={template} defaultTemplate={defaultTemplate} onChange={onChange} toggleKey="containerBorder" />}
       {(timeline || template.containerBorder !== false) && <div className="top-margin-control">
         <div className="top-margin-label"><label htmlFor="timeline-line-width">{timeline ? 'Line thickness' : 'Border thickness'}</label><span className="position-value"><output htmlFor="timeline-line-width">{timelineLineWidth(template)} px</output><button type="button" className="position-reset" disabled={!(timelineLineWidth(template) !== timelineLineWidth(defaultTemplate))} aria-label="Reset line thickness" onClick={() => onChange('timelineLineWidth', timelineLineWidth(defaultTemplate))}>Reset</button></span></div>
-        <input id="timeline-line-width" type="range" min="0.5" max="6" step="0.5" value={timelineLineWidth(template)} onChange={event => onChange('timelineLineWidth', Number(event.target.value))} />
+        <FineSlider id="timeline-line-width" min="0.5" max="6" step="0.5" value={timelineLineWidth(template)} onValueChange={value => onChange('timelineLineWidth', value)} />
       </div>}
 
       </div>
@@ -147,20 +149,20 @@ export default function TemplateControls({ template, onChange, defaultTemplate =
       </div>
       <div className="appearance-row">
         <span className="appearance-label">Title position</span>
-        <DevicePicker label="Title position" disabled={template.showTitle === false || template.showScheduleTitle === false} value={template.titleAlignment || 'center'} onChange={value => onChange('titleAlignment', value)} options={[[ 'left', 'Left', AlignLeft ], [ 'center', 'Center', AlignCenter ], [ 'right', 'Right', AlignRight ]]} />
+        <PopupPicker label="Title position" disabled={template.showTitle === false || template.showScheduleTitle === false} value={template.titleAlignment || 'center'} onChange={value => onChange('titleAlignment', value)} options={[[ 'left', 'Left', AlignLeft ], [ 'center', 'Center', AlignCenter ], [ 'right', 'Right', AlignRight ]]} />
       </div>
       <div className="appearance-row">
         <span className="appearance-label">Font family</span>
-        <DevicePicker previewFonts label="Font family" value={template.fontFamily || 'DM Sans Variable'} onChange={value => onChange('fontFamily', value)} options={wallpaperFonts.map(({ value, label }) => [value, label, Type])} />
+        <PopupPicker previewFonts label="Font family" value={template.fontFamily || 'DM Sans Variable'} onChange={value => onChange('fontFamily', value)} options={wallpaperFonts.map(({ value, label }) => [value, label, Type])} />
       </div>
       <div className="top-margin-control">
-        <div className="top-margin-label"><label htmlFor="appearance-font-size">Font size</label><span className="position-value"><button type="button" className="position-reset" disabled={wallpaperFontScale(template) === wallpaperFontScale(defaultTemplate)} aria-label="Reset font size" onClick={() => onChange('fontScale', undefined)}>Reset</button><output htmlFor="appearance-font-size">{Math.round(wallpaperFontScale(template) * 100)}%</output></span></div>
-        <input id="appearance-font-size" type="range" min="70" max="160" step="10" value={Math.round(wallpaperFontScale(template) * 100)} aria-valuetext={`${Math.round(wallpaperFontScale(template) * 100)}% font size`} onChange={event => onChange('fontScale', Number(event.target.value) / 100)} />
+        <div className="top-margin-label"><label htmlFor="appearance-font-size">Font size</label><span className="position-value"><button type="button" className="position-reset" disabled={wallpaperFontScale(template) === wallpaperFontScale(defaultTemplate)} aria-label="Reset font size" onClick={() => onChange('fontScale', undefined)}>Reset</button><output htmlFor="appearance-font-size">{fontSize}%</output></span></div>
+        <FineSlider id="appearance-font-size" min="70" max="160" step="0.5" value={fontSize} aria-valuetext={`${fontSize}% font size`} onValueChange={value => onChange('fontScale', value / 100)} />
       </div>
       <AppearanceColor colorKey="ink" template={template} defaultTemplate={defaultTemplate} onChange={onChange} />
       <div className="top-margin-control">
         <div className="top-margin-label"><label htmlFor="text-opacity">Text opacity</label><span className="position-value"><button type="button" className="position-reset" disabled={wallpaperTextOpacity(template) === wallpaperTextOpacity(defaultTemplate)} aria-label="Reset text opacity" onClick={() => onChange('textOpacity', undefined)}>Reset</button><output htmlFor="text-opacity">{wallpaperTextOpacity(template)}%</output></span></div>
-        <input id="text-opacity" type="range" min="0" max="100" step="1" value={wallpaperTextOpacity(template)} aria-valuetext={`${wallpaperTextOpacity(template)}% text opacity`} onChange={event => onChange('textOpacity', Number(event.target.value))} />
+        <FineSlider id="text-opacity" min="0" max="100" step="1" value={wallpaperTextOpacity(template)} aria-valuetext={`${wallpaperTextOpacity(template)}% text opacity`} onValueChange={value => onChange('textOpacity', value)} />
       </div>
     </fieldset><button type="button" className="button-secondary section-reset" onClick={() => resetSection('text')}>Reset text to default</button></section>
     {template.layout === 'mascot' && <section className="appearance-section" data-section="decorations" hidden={category !== 'decorations'}><fieldset className="appearance-group">
@@ -178,4 +180,3 @@ export default function TemplateControls({ template, onChange, defaultTemplate =
 
   </aside>;
 }
-

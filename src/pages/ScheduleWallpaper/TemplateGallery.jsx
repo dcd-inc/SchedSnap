@@ -41,7 +41,7 @@ export default function TemplateGallery({ selectedId, settings = {}, schedule: e
   }, [wallpaperTemplates, searchQuery, isSearching, category, rankingLikes, device, sort, downloads]);
 
   const filterKey = `${sort}:${isSearching ? `search:${searchQuery.trim()}` : category}:${device}`;
-  const { count: galleryCount, hasMore, sentinel, loadMore } = useInfiniteGallery(visibleTemplates.length, filterKey);
+  const { count: galleryCount, hasMore, sentinel, loadMore } = useInfiniteGallery(visibleTemplates.length, filterKey, 8);
 
   const activeCategoryName = galleryCategories.find((collection) => collection.id === activeCategory)?.name || 'Design';
   return <div>

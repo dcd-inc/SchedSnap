@@ -29,9 +29,16 @@ export function findOverlaps(schedule) {
   const warnings = [];
   for (const group of groupSchedule(schedule)) for (let i = 0; i < group.entries.length; i++) for (let j = i + 1; j < group.entries.length; j++) {
     const a = group.entries[i], b = group.entries[j];
-    if (a.startTime && a.endTime && b.startTime && b.endTime && a.startTime < b.endTime && b.startTime < a.endTime) warnings.push(`${group.day}: ${a.subject} overlaps with ${b.subject}.`);
+    if (a.startTime && a.endTime && b.startTime && b.endTime && a.startTime < b.endTime && b.startTime < a.endTime) warnings.push(`${group.day}: ${a.courseCode || a.subject} and ${b.courseCode || b.subject} overlap.`);
   }
   return [...new Set(warnings)];
+}
+
+export function getReviewWarnings(schedule) {
+  const overlapWarnings = findOverlaps(schedule);
+  // Old imports can contain static AI overlap notes; current times are the source of truth.
+  const imageWarnings = schedule.warnings.filter(note => !/\b(?:overlap(?:s|ped|ping)?|conflict(?:s|ing)?|clash(?:es|ing)?|same time)\b/i.test(note));
+  return { overlapWarnings, warnings: [...new Set([...imageWarnings, ...overlapWarnings])] };
 }
 
 export function wrapText(ctx, text, maxWidth) {

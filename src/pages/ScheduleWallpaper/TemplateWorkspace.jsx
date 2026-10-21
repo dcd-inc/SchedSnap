@@ -2,7 +2,7 @@ import ResponsiveDisclosure from '../../components/ResponsiveDisclosure.jsx';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { ArrowRight, Download, Eye, Heart, Images, Maximize2, Pencil, SlidersHorizontal, TriangleAlert } from 'lucide-react';
 import { getScheduleIssues } from '../../../shared/scheduleSchema.js';
-import { canvasBlob, drawWallpaper, findOverlaps } from '../../utils/canvasHelpers.js';
+import { canvasBlob, drawWallpaper, getReviewWarnings } from '../../utils/canvasHelpers.js';
 import { prepareWallpaperAssets } from '../../utils/wallpaperAssets.js';
 import { galleryScheduleFor } from '../../assets/wallpaperPresets.js';
 import { downloadBlob } from '../../utils/downloadBlob.js';
@@ -18,10 +18,8 @@ import useDesignDownloads, { recordDesignDownload } from '../../lib/useDesignDow
 import useDesignLikes from '../../lib/useDesignLikes.js';
 import DownloadThanksDialog from '../../components/DownloadThanksDialog.jsx';
 
-export default function TemplateWorkspace({ step, onStep, template, defaultTemplate, schedule, resolution, scheduleSource, onScheduleSourceChange, onScheduleChange, onAppearanceChange, onResetAppearance, onUndoAppearance, canUndoAppearance, image, onImage, busy, onError, onAnalyze, importUsage, usageUnavailable, importError, onSample, importOpen, onImportOpenChange: setImportOpen, onTitleChange, canCancelEntry, onCancelEntryChange: setCanCancelEntry, onCancelImport, imagePickerRef: imagePicker, preparingImage, onPreparingImageChange: setPreparingImage }) {
+export default function TemplateWorkspace({ customizeRequest = 0, step, onStep, template, defaultTemplate, schedule, resolution, scheduleSource, onScheduleSourceChange, onScheduleChange, onAppearanceChange, onResetAppearance, onUndoAppearance, canUndoAppearance, image, onImage, busy, onError, onAnalyze, importUsage, usageUnavailable, importError, onSample, importOpen, onImportOpenChange: setImportOpen, onTitleChange, canCancelEntry, onCancelEntryChange: setCanCancelEntry, onCancelImport, imagePickerRef: imagePicker, preparingImage, onPreparingImageChange: setPreparingImage }) {
   const [enlarged, setEnlarged] = useState(false);
-  const [showClock, setShowClock] = useState(true);
-  const previewClock = step !== 'classes' && showClock;
   const [customizing, setCustomizing] = useState(false);
   const [previewStuck, setPreviewStuck] = useState(false);
   const [previewAtHeader, setPreviewAtHeader] = useState(false);
@@ -39,6 +37,8 @@ export default function TemplateWorkspace({ step, onStep, template, defaultTempl
   const classEditor = useRef(null);
   const previewAnchor = useRef(null);
   const stickyPreview = useRef(null);
+  const customization = useRef(null);
+  const lastCustomizeRequest = useRef(customizeRequest);
   const active = useRef(true);
   const hasSchedule = !!schedule.classes.length;
   const manualEntry = scheduleSource === 'manual' && canCancelEntry;
@@ -46,11 +46,12 @@ export default function TemplateWorkspace({ step, onStep, template, defaultTempl
   const exportKey = JSON.stringify([schedule, template, resolution]);
   const updateLayout = useCallback((next) => setLayout({ ...next, key: exportKey }), [exportKey]);
   const issues = getScheduleIssues(schedule);
-  const overlapWarnings = findOverlaps(schedule);
-  const warnings = [...new Set([...schedule.warnings, ...overlapWarnings])];
+  const { overlapWarnings, warnings } = getReviewWarnings(schedule);
   const currentLayout = layout?.key === exportKey ? layout : null;
+  // Keep feedback steady during redraws so the controls below it do not jump.
+  const previewFeedback = currentLayout || layout;
   const canDownload = !busy && !exporting && !issues.length && !warnings.length && currentLayout?.ready && !currentLayout.overflow && !currentLayout.error;
-  const exportStatus = busy ? 'Reading schedule…' : issues.length ? issues[0] : warnings.length ? 'Resolve the review notes before continuing.' : currentLayout?.error ? 'Preview could not load. Try another design.' : currentLayout?.overflow ? 'Classes don’t fit. Reduce the top margin, shorten names or choose another design.' : !currentLayout?.ready ? 'Preparing preview…' : '';
+  const exportStatus = busy ? 'Reading schedule…' : issues.length ? issues[0] : warnings.length ? 'Resolve the review notes before continuing.' : previewFeedback?.error ? 'Preview could not load. Try another design.' : previewFeedback?.overflow ? 'Classes don’t fit. Reduce the top margin, shorten names or choose another design.' : !previewFeedback?.ready ? 'Preparing preview…' : '';
   useEffect(() => {
     active.current = true;
     return () => { active.current = false; };
@@ -97,6 +98,26 @@ export default function TemplateWorkspace({ step, onStep, template, defaultTempl
     observer.observe(node);
     return () => observer.disconnect();
   }, [step, customizing]);
+
+  useEffect(() => {
+    if (step !== 'preview' || customizeRequest === lastCustomizeRequest.current) return;
+    changeCustomizing(true);
+  }, [customizeRequest, step, changeCustomizing]);
+
+  useEffect(() => {
+    if (step !== 'preview' || !customizing) return;
+    const frame = requestAnimationFrame(() => {
+      const tabs = customization.current?.querySelector('.appearance-categories');
+      if (!tabs) return;
+      lastCustomizeRequest.current = customizeRequest;
+      const mobile = window.matchMedia('(max-width: 640px)').matches;
+      const clearance = mobile ? stickyPreview.current?.getBoundingClientRect().height || 0 : 88;
+      const top = window.scrollY + tabs.getBoundingClientRect().top - clearance;
+      tabs.querySelector('button[aria-pressed="true"]')?.focus({ preventScroll: true });
+      window.scrollTo({ top: Math.max(0, top), behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [customizeRequest, step, customizing]);
 
   function enterManually() {
     onScheduleSourceChange('manual');
@@ -156,7 +177,7 @@ export default function TemplateWorkspace({ step, onStep, template, defaultTempl
 
   const preview = <><div className="flow-preview-art preview-size-md">
     <button type="button" aria-label="Enlarge wallpaper" aria-haspopup="dialog" onClick={() => { setEnlarged(true); trackEvent('wallpaper_preview_enlarged', templateProperties(template)); }} className="flow-wallpaper">
-      <WallpaperCanvas schedule={shownSchedule} template={template} resolution={resolution} showClock={previewClock} onLayout={updateLayout} className="block h-auto w-full" label={`${template.name} ${hasSchedule ? 'with your classes' : 'with sample classes'}${previewClock && resolution.id !== 'laptop' ? ', sample clock at 9:41 AM' : ''}`} />
+      <WallpaperCanvas schedule={shownSchedule} template={template} resolution={resolution} onLayout={updateLayout} className="block h-auto w-full" label={`${template.name} ${hasSchedule ? 'with your classes' : 'with sample classes'}`} />
       <span className="preview-enlarge" aria-hidden="true"><Maximize2 size={16} /></span>
     </button>
     {step === 'preview' && <div className="inline-preview-controls"><button type="button" aria-label="View full-screen preview" onClick={() => setEnlarged(true)}><Eye size={18} aria-hidden="true" /></button></div>}
@@ -169,7 +190,7 @@ export default function TemplateWorkspace({ step, onStep, template, defaultTempl
       <section className="classes-content" aria-label="Add and review classes">
         <div hidden={(hasSchedule || manualEntry) && !importOpen && !importError}><Uploader importUsage={importUsage} usageUnavailable={usageUnavailable} pickerRef={imagePicker} image={image} error={importError} onOpen={() => setImportOpen(true)} onImage={(next) => { onImage(next); setImportOpen(true); }} onPreparing={setPreparingImage} onCancel={onCancelImport} onAnalyze={async () => { if (await onAnalyze()) { setCanCancelEntry(true); setImportOpen(false); setReviewVersion((value) => value + 1); } }} busy={busy} onError={onError} hasSchedule={hasSchedule} onManual={enterManually} onSample={() => { onSample(); setCanCancelEntry(true); setImportOpen(false); }} /></div>
         {(hasSchedule || manualEntry) && <div hidden={importOpen}>
-          <fieldset disabled={busy} aria-busy={busy} className="flow-class-editor"><Editor scheduleSource={scheduleSource} validationRef={classEditor} key={reviewVersion} schedule={schedule} scheduleTitle={template.scheduleTitle} onTitleChange={onTitleChange} onChange={onScheduleChange} onImport={() => imagePicker.current?.openPicker()} preparingImage={preparingImage} /></fieldset>
+          <fieldset disabled={busy} aria-busy={busy} className="flow-class-editor"><Editor scheduleSource={scheduleSource} validationRef={classEditor} key={reviewVersion} schedule={schedule} scheduleTitle={template.scheduleTitle} onTitleChange={onTitleChange} onChange={onScheduleChange} onImport={() => { onImage(null); imagePicker.current?.openPicker(); }} preparingImage={preparingImage} /></fieldset>
           {!!warnings.length && <section className="review-warning-rows" aria-label="Review notes"><ul>{warnings.map(warning => <li key={warning} className="review-warning-row"><TriangleAlert size={20} aria-hidden="true" /><p>{warning}</p>{schedule.warnings.includes(warning) && !overlapWarnings.includes(warning) && <button type="button" className="button-secondary" onClick={() => onScheduleChange({ ...schedule, warnings: schedule.warnings.filter(note => note !== warning) })}>Mark resolved</button>}</li>)}</ul></section>}
           {warnings.length > 0 && <p id="class-validation-status" className="class-validation-note" role="status">Resolve the review notes to continue.</p>}
           <div className="classes-next"><div className="classes-next-actions">{canCancelEntry && <button type="button" disabled={busy || preparingImage} className="button-secondary" onClick={cancelEntry}>Cancel</button>}<button type="button" disabled={busy || preparingImage || issues.length > 0 || warnings.length > 0} aria-describedby={warnings.length ? "class-validation-status" : undefined} className="button-primary preview" onClick={() => { if (issues.length) classEditor.current?.validate(); else if (!warnings.length) onStep('preview'); }}>Continue<ArrowRight size={16} aria-hidden="true" /></button></div></div>
@@ -181,12 +202,7 @@ export default function TemplateWorkspace({ step, onStep, template, defaultTempl
       </aside>
     </div> : <div className="download-layout" data-customizing={customizing} data-preview-stuck={previewStuck} data-preview-at-header={previewAtHeader}>
       <div ref={previewAnchor} className="preview-sticky-anchor" aria-hidden="true" />
-      <section ref={stickyPreview} className="download-preview" aria-label="Wallpaper preview">{preview}<div className="desktop-preview-clock">{step !== 'classes' && resolution.id !== 'laptop' && <div className="preview-clock-control">
-      <label className="appearance-switch"><input type="checkbox" checked={showClock} onChange={(event) => setShowClock(event.target.checked)} />Show clock preview</label>
-    </div>}</div></section>
-      {resolution.id !== 'laptop' && <div className="download-clock-row">{step !== 'classes' && resolution.id !== 'laptop' && <div className="preview-clock-control">
-      <label className="appearance-switch"><input type="checkbox" checked={showClock} onChange={(event) => setShowClock(event.target.checked)} />Show clock preview</label>
-    </div>}</div>}
+      <section ref={stickyPreview} className="download-preview" aria-label="Wallpaper preview">{preview}</section>
       <section className="download-options" aria-label="Download and customize">
         <h2>{template.name}</h2>
         <p className="download-meta">{schedule.classes.length} {schedule.classes.length === 1 ? 'class' : 'classes'} · {resolution.width} × {resolution.height}</p>
@@ -197,12 +213,12 @@ export default function TemplateWorkspace({ step, onStep, template, defaultTempl
           {likeError && <button type="button" className="text-link" disabled={!!pendingLikes} onClick={() => refreshLikes(true)}>Retry hearts</button>}
         </div>
         <button type="button" onClick={download} disabled={!canDownload} aria-describedby={exportStatus ? 'wallpaper-export-status' : undefined} className="button-primary download-wallpaper"><Download size={18} aria-hidden="true" />{exporting ? 'Creating PNG…' : exportResult?.key === exportKey ? 'Download again' : 'Download wallpaper'}</button>
-        {exportStatus && <div className={`export-status${issues.length || warnings.length || currentLayout?.overflow ? ' class-dialog-incomplete export-warning' : ''}`} role="status" id="wallpaper-export-status">{(issues.length > 0 || warnings.length > 0 || currentLayout?.overflow) && <TriangleAlert size={20} aria-hidden="true" />}<div><p>{exportStatus}</p>{(issues.length > 0 || warnings.length > 0 || currentLayout?.overflow) && <button type="button" className="text-link" onClick={() => onStep('classes')}>{schedule.classes.length ? 'Fix class details' : 'Add classes'}</button>}{currentLayout?.error && <button type="button" className="text-link" onClick={() => onStep('design')}>Change design</button>}</div></div>}
-        <ResponsiveDisclosure title="Customize wallpaper" description="Adjust colors, fonts and layout" icon={SlidersHorizontal} className="flow-customize customize-appearance" open={customizing} onOpenChange={changeCustomizing} inlineMobile><TemplateControls onTitleChange={onTitleChange} positionOffset={{ horizontal: Math.round((layout?.positionOffset?.horizontal || 0) * resolution.width), vertical: Math.round((layout?.positionOffset?.vertical || 0) * resolution.height) }} layoutPicker={<ScheduleLayoutPicker template={template} onChange={onAppearanceChange} inline />} onUndo={onUndoAppearance} canUndo={canUndoAppearance} template={template} defaultTemplate={defaultTemplate} enablePlacement onChange={onAppearanceChange} onReset={onResetAppearance} /></ResponsiveDisclosure>
+        {exportStatus && <div className={`export-status${issues.length || warnings.length || previewFeedback?.overflow ? ' class-dialog-incomplete export-warning' : ''}`} role="status" id="wallpaper-export-status">{(issues.length > 0 || warnings.length > 0 || previewFeedback?.overflow) && <TriangleAlert size={20} aria-hidden="true" />}<div><p>{exportStatus}</p>{(issues.length > 0 || warnings.length > 0 || previewFeedback?.overflow) && <button type="button" className="text-link" onClick={() => onStep('classes')}>{schedule.classes.length ? 'Fix class details' : 'Add classes'}</button>}{previewFeedback?.error && <button type="button" className="text-link" onClick={() => onStep('design')}>Change design</button>}</div></div>}
         <div className="wallpaper-edit-actions"><button type="button" className="button-secondary" onClick={() => onStep('classes')}><Pencil size={16} aria-hidden="true" />Edit classes</button><button type="button" className="button-secondary" onClick={() => onStep('design')}><Images size={16} aria-hidden="true" />Change design</button></div>
+        <div ref={customization} id="wallpaper-customization"><ResponsiveDisclosure title="Customize wallpaper" description="Adjust colors, fonts and layout" icon={SlidersHorizontal} className="flow-customize customize-appearance" open={customizing} onOpenChange={changeCustomizing} inlineMobile><TemplateControls onTitleChange={onTitleChange} layoutPicker={<ScheduleLayoutPicker template={template} onChange={onAppearanceChange} inline />} onUndo={onUndoAppearance} canUndo={canUndoAppearance} template={template} defaultTemplate={defaultTemplate} enablePlacement onChange={onAppearanceChange} onReset={onResetAppearance} /></ResponsiveDisclosure></div>
       </section>
     </div>}
-    {enlarged && <WallpaperViewer resolution={resolution} onClose={() => setEnlarged(false)}><WallpaperCanvas schedule={shownSchedule} template={template} resolution={resolution} showClock={previewClock} className="block h-auto w-full" label={`${template.name} enlarged wallpaper${previewClock && resolution.id !== 'laptop' ? ', sample clock at 9:41 AM' : ''}`} /></WallpaperViewer>}
+    {enlarged && <WallpaperViewer resolution={resolution} onClose={() => setEnlarged(false)}><WallpaperCanvas schedule={shownSchedule} template={template} resolution={resolution} className="block h-auto w-full" label={`${template.name} enlarged wallpaper`} /></WallpaperViewer>}
     {thankYouDesign === template.id && <DownloadThanksDialog name={template.name} vote={vote} pending={pendingLikes} error={likeError} onHeart={() => toggleLike(template.id)} onRetry={() => refreshLikes(true)} onClose={() => setThankYouDesign(null)} />}
     <Toast message={message} kind={messageKind} onClose={dismissNotification} />
   </>;

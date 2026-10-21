@@ -11,7 +11,7 @@ export const meetingSchema = z.object({
 });
 export const scheduleSchema = z.object({
   classes: z.array(z.object({
-    subject: z.string().trim().min(1).max(160),
+    subject: z.string().trim().max(160),
     courseCode: z.string().max(40).nullable(),
     meetings: z.array(meetingSchema).min(1).max(14),
   })).min(1).max(40),

@@ -26,9 +26,10 @@ const devices = [
   { id: 'tablet', title: 'For tablet.', label: 'Tablet', description: 'Keep your class times and rooms on your tablet’s wallpaper for a quick reference while studying.' },
   { id: 'laptop', title: 'For laptop.', label: 'Laptop', description: 'Browse desktop wallpaper designs that keep your weekly class schedule visible while you study.' },
 ];
-const assetPath = (device, collection, width = 960) => device === 'mobile'
-  ? `/images/collections/catalog-mobile/${collection}-${width}.webp`
-  : `/images/collections/refreshed/${device}/${device === 'laptop' && collection === 'pattern' ? 'pattern-blue' : collection}-${width}.webp`;
+const assetPath = (device, collection, width = 960, format = 'webp') => device === 'mobile'
+  ? `/images/collections/catalog-mobile/${collection}-${width}.${format}`
+  : `/images/collections/refreshed/${device}/${device === 'laptop' && collection === 'pattern' ? 'pattern-blue' : collection}-${width}.${format}`;
+const avifSources = (device, collection) => [360, 560, 960].map(width => `${assetPath(device, collection, width, 'avif')} ${width}w`).join(', ');
 
 function DeviceShowcase({ device }) {
   const imageSizes = device.id === 'mobile'
@@ -90,8 +91,8 @@ function DeviceShowcase({ device }) {
     const next = collections[(displayedIndex + 1) % slideCount];
     const image = new Image();
     image.sizes = imageSizes;
-    image.srcset = `${assetPath(device.id, next.id, 560)} 560w, ${assetPath(device.id, next.id)} 960w`;
-    image.src = assetPath(device.id, next.id);
+    image.srcset = avifSources(device.id, next.id);
+    image.src = assetPath(device.id, next.id, 960, 'avif');
   }, [displayedIndex, isInView, device.id, slideCount, imageSizes]);
 
   return (
@@ -105,6 +106,7 @@ function DeviceShowcase({ device }) {
           <figure className={`collection-image collection-image-${collection.id}`}>
             <button type="button" className="showcase-arrow showcase-image-arrow showcase-image-previous" aria-label={`Previous ${device.label.toLowerCase()} collection`} aria-controls={previewId} onClick={() => changeCollection(-1)}><ChevronLeft size={24} strokeWidth={1.5} aria-hidden="true" /></button>
             <picture>
+              <source type="image/avif" srcSet={avifSources(device.id, collection.id)} sizes={imageSizes} />
               <img src={assetPath(device.id, collection.id)} srcSet={`${assetPath(device.id, collection.id, 560)} 560w, ${assetPath(device.id, collection.id)} 960w`} sizes={imageSizes} alt={`${device.label}${device.id === 'tablet' ? ' portrait' : ''} schedule wallpaper preview in the ${collection.name} collection`} width={isPortrait ? 1122 : 1448} height={isPortrait ? 1402 : 1086} loading="lazy" decoding="async" />
             </picture>
             <button type="button" className="showcase-arrow showcase-image-arrow showcase-image-next" aria-label={`Next ${device.label.toLowerCase()} collection`} aria-controls={previewId} onClick={() => changeCollection(1)}><ChevronRight size={24} strokeWidth={1.5} aria-hidden="true" /></button>

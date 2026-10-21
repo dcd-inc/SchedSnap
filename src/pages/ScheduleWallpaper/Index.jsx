@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import '../../wallpaper-fonts.css';
-import { ArrowLeft, ImageUp } from 'lucide-react';
+import { ArrowLeft, ImageUp, SlidersHorizontal } from 'lucide-react';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router';
 import Toast from '../../components/Toast.jsx';
 import BackToTop from '../../components/BackToTop.jsx';
@@ -44,6 +43,7 @@ export default function ScheduleWallpaper() {
   }
   const [templateSettings, setTemplateSettings] = useState({});
   const [appearanceUndo, setAppearanceUndo] = useState(null);
+  const [customizeRequest, setCustomizeRequest] = useState(0);
   const resolution = deviceResolutions[device];
   const previewLayout = scheduleLayoutOptions(device).some(option => option.value === search.get('layout')) ? search.get('layout') : 'stacked';
   const previewStyle = ['glass', 'solid', 'colored', 'colored-glass', 'outline'].includes(search.get('style')) ? search.get('style') : 'glass';
@@ -186,6 +186,7 @@ export default function ScheduleWallpaper() {
       const checked = scheduleSchema.safeParse(data.schedule);
       if (!checked.success) throw new Error('The schedule response was incomplete. Try another image.');
       setSchedule(checked.data);
+      setImage(null);
       setScheduleSource('image');
       trackEvent('schedule_import_succeeded', { ...properties, class_count: checked.data.classes.length, warning_count: checked.data.warnings.length, duration_ms: Math.round(performance.now() - started) });
       setImportResult({ provider: data.provider === 'deepseek' ? 'deepseek' : 'gemini', classCount: checked.data.classes.length });
@@ -236,14 +237,15 @@ export default function ScheduleWallpaper() {
     }} onDiscard={() => { setPendingDraft(null); if (step === 'preview' && template) navigate(devicePath(`${basePath}/${template.id}`), { replace: true }); requestAnimationFrame(() => heading.current?.focus()); }} />}
     {step === 'design' ? <Link to="/" className="tool-back"><ArrowLeft className="size-4" aria-hidden="true" />Back</Link> : <button type="button" className="tool-back" onClick={goBack}><ArrowLeft className="size-4" aria-hidden="true" />{step === 'classes' && importOpen && schedule.classes.length ? 'Back to classes' : 'Back'}</button>}
     <header className="wallpaper-flow-header" data-importing={choosingImage}>
-      <h1 tabIndex={-1} ref={heading}>{step === 'design' ? 'Choose a design' : step === 'classes' ? 'Add your classes' : 'Wallpaper preview'}</h1>
+      <h1 tabIndex={-1} ref={heading}>{step === 'design' ? 'Choose a design' : step === 'classes' ? 'Add your classes' : 'Live Preview'}</h1>
       <div className="wallpaper-flow-header-actions">
+        {step === 'preview' && <button type="button" className="button-secondary preview-customize" aria-controls="wallpaper-customization" onClick={() => setCustomizeRequest(value => value + 1)}><SlidersHorizontal size={16} aria-hidden="true" />Customize</button>}
         {step === 'design' && <WallpaperSearch value={searchQuery} onChange={setSearchQuery} />}
         {choosingImage && <button type="button" className="button-secondary import-change" aria-label={preparingImage ? 'Preparing image' : 'Change image'} disabled={busy || preparingImage} onClick={() => imagePicker.current?.openPicker()}><ImageUp size={16} aria-hidden="true" />{preparingImage ? 'Preparing…' : <><span className="import-change-desktop">Change image</span><span className="import-change-mobile">Change</span></>}</button>}
       </div>
     </header>
     {template ? <TemplateWorkspace defaultTemplate={customizeWallpaperTemplate(galleryPreviewTemplate(wallpaperTemplates.find(item => item.id === templateId)), { scheduleLayout: template.scheduleLayout }, device)}
-      step={step} onStep={openStep}
+      step={step} onStep={openStep} customizeRequest={customizeRequest}
       template={template} schedule={schedule} resolution={resolution} onScheduleChange={changeSchedule}
       scheduleSource={scheduleSource} onScheduleSourceChange={setScheduleSource}
       onAppearanceChange={(key, value) => { if (key === 'scheduleLayout') changeLayout(value); else setTemplateSettings(previous => { const settings = { ...previous[templateId] }; if (value === undefined) delete settings[key]; else settings[key] = value; return { ...previous, [templateId]: settings }; }); setAppearanceUndo(null); trackEvent('wallpaper_appearance_changed', { ...templateProperties(template), setting: key }); }}

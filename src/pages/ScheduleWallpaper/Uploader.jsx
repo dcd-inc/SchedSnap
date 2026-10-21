@@ -2,7 +2,8 @@ import { Link } from 'react-router';
 import { createPortal } from 'react-dom';
 import { useCallback, useEffect, useImperativeHandle, useRef, useState } from 'react';
 import { Ban, CircleAlert, ImageUp, ListChecks, LoaderCircle, Maximize2, Pencil, X } from 'lucide-react';
-import { prepareImage } from '../../utils/imageHelpers.js';
+import { inspectImage, prepareImage } from '../../utils/imageHelpers.js';
+import ImageCropDialog from './ImageCropDialog.jsx';
 import { trackEvent } from '../../lib/analytics.js';
 import WallpaperViewer from './WallpaperViewer.jsx';
 
@@ -20,7 +21,7 @@ function UploadTipsDialog({ onContinue, onClose }) {
       <h2 id="upload-tips-title" className="upload-tips-title">Upload guide</h2>
       <button type="button" className="icon-button" aria-label="Close upload guide" onClick={onClose}><X size={20} aria-hidden="true" /></button>
     </header>
-    <div className="upload-tips-example-frame"><img className="upload-tips-example" src="/upload-tips-example.png" width="1536" height="1024" alt="Example of a clear timetable with every day, time, subject and room fully in frame." /></div>
+    <div className="upload-tips-example-frame"><img className="upload-tips-example" src="/upload-tips-example-960.webp" srcSet="/upload-tips-example-480.webp 480w, /upload-tips-example-960.webp 960w" sizes="(max-width: 640px) 120vw, 504px" width="960" height="640" fetchPriority="high" decoding="async" alt="Example of a clear timetable with every day, time, subject and room fully in frame." /></div>
     <ul id="upload-tips-list" className="upload-guide">
       <li>Include the whole schedule, with all days and times.</li>
       <li>Use a clear, straight-on image without glare.</li>
@@ -44,7 +45,7 @@ function ReplaceConfirmDialog({ onConfirm, onClose }) {
       <h2 id="replace-confirm-title">Replace your classes?</h2>
       <button type="button" className="icon-button" aria-label="Close" onClick={onClose}><X size={20} aria-hidden="true" /></button>
     </header>
-    <img className="replace-classes-visual" src="/replace-classes-example.png" width="1774" height="887" alt="" />
+    <img className="replace-classes-visual" src="/replace-classes-example-960.webp" srcSet="/replace-classes-example-480.webp 480w, /replace-classes-example-960.webp 960w" sizes="(max-width: 640px) calc(100vw - 40px), 420px" width="960" height="480" fetchPriority="high" decoding="async" alt="" />
     <ul className="placement-note import-replace-notes"><li>Replaces your current classes and edits after import.</li><li>Uses one daily AI import.</li></ul>
     <div className="upload-tips-actions">
       <button type="button" className="button-secondary" onClick={onClose}>Cancel</button>
@@ -76,6 +77,9 @@ export default function Uploader({ image, onImage, onAnalyze, busy, error, impor
   const [imageSize, setImageSize] = useState({ width: 1080, height: 1080 });
   const [tipsOpen, setTipsOpen] = useState(false);
   const [confirmOpen, setConfirmOpen] = useState(false);
+  const [cropSource, setCropSource] = useState(null);
+  const [cropError, setCropError] = useState('');
+  useEffect(() => () => { if (cropSource) URL.revokeObjectURL(cropSource.url); }, [cropSource]);
   useImperativeHandle(pickerRef, () => ({ openPicker() { if (busy || preparing) return; setTipsOpen(true); }, focusUpload() { uploadButton.current?.focus(); } }), [busy, preparing]);
   useEffect(() => () => { requestId.current += 1; }, []);
 
@@ -88,11 +92,27 @@ export default function Uploader({ image, onImage, onAnalyze, busy, error, impor
     const properties = { file_type: ['image/jpeg', 'image/png', 'image/webp'].includes(file.type) ? file.type : 'other', file_size_bytes: file.size };
     trackEvent('schedule_upload_started', properties);
     try {
-      const prepared = await prepareImage(file);
-      if (id === requestId.current) { onImage(prepared); trackEvent('schedule_upload_succeeded', properties); }
+      const bitmap = await inspectImage(file);
+      const dimensions = { width: bitmap.width, height: bitmap.height };
+      bitmap.close();
+      if (id === requestId.current) { setCropError(''); setCropSource({ file, ...dimensions, url: URL.createObjectURL(file), properties }); }
     } catch (failure) { if (id === requestId.current) { onError(failure.message); trackEvent('schedule_upload_failed', { ...properties, error_type: 'image_preparation' }); } }
     finally { if (id === requestId.current) { setPreparing(false); onPreparing?.(false); } }
-  }, [busy, preparing, importBlocked, onPreparing, onError, onImage]);
+  }, [busy, preparing, importBlocked, onPreparing, onError]);
+
+  const confirmCrop = async crop => {
+    if (preparing || !cropSource) return;
+    const id = ++requestId.current;
+    setPreparing(true);
+    onPreparing?.(true);
+    setCropError('');
+    try {
+      const prepared = await prepareImage(cropSource.file, crop);
+      if (id === requestId.current) { onImage(prepared); trackEvent('schedule_upload_succeeded', cropSource.properties); setCropSource(null); }
+    } catch (failure) {
+      if (id === requestId.current) { setCropError(failure.message); trackEvent('schedule_upload_failed', { ...cropSource.properties, error_type: 'image_preparation' }); }
+    } finally { if (id === requestId.current) { setPreparing(false); onPreparing?.(false); } }
+  };
 
   useEffect(() => {
     const paste = event => {
@@ -144,6 +164,7 @@ export default function Uploader({ image, onImage, onAnalyze, busy, error, impor
     {error && <p className="import-inline-error" role="alert"><CircleAlert size={16} aria-hidden="true" />{error}</p>}
     {enlarged && image && <WallpaperViewer title="Schedule image" resolution={imageSize} onClose={() => setEnlarged(false)}><img src={image.preview} alt="Uploaded schedule" className="block h-auto w-full" /></WallpaperViewer>}
     {tipsOpen && createPortal(<UploadTipsDialog onClose={() => setTipsOpen(false)} onContinue={() => { setTipsOpen(false); onOpen?.(); input.current?.click(); }} />, document.body)}
+    {cropSource && createPortal(<ImageCropDialog source={cropSource} busy={preparing} error={cropError} onClose={() => setCropSource(null)} onConfirm={confirmCrop} />, document.body)}
     {confirmOpen && <ReplaceConfirmDialog onClose={() => setConfirmOpen(false)} onConfirm={() => { setConfirmOpen(false); onAnalyze(); }} />}
   </section>;
 }

@@ -2,6 +2,7 @@ import { cloudinaryAssetUrl } from './cloudinaryAssets.js';
 
 const images = new Map();
 const fonts = new Map();
+let fontStyles;
 
 function mascotBounds(image) {
   const canvas = document.createElement('canvas');
@@ -29,6 +30,10 @@ export async function prepareWallpaperAssets(template, resolution) {
     ? sourcePath : cloudinaryAssetUrl(sourcePath, resolution, { lossless: !!template.pixelArt });
   // Only the selected font must be ready before measuring canvas text.
   const family = template.fontFamily || 'DM Sans Variable';
+  if (family !== 'DM Sans Variable' && typeof window !== 'undefined') {
+    fontStyles ??= import('../wallpaper-fonts.css').catch(error => { fontStyles = undefined; throw error; });
+    await fontStyles;
+  }
   if (!fonts.has(family)) fonts.set(family, Promise.all([400, 500, 600, 650, 700, 750].map(weight =>
     document.fonts.load(`${weight} 100px "${family}"`),
   )).catch(error => { fonts.delete(family); throw error; }));
