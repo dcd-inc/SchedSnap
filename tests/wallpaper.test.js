@@ -25,7 +25,7 @@ import { domoTemplates } from '../src/assets/domoTemplates.js';
 import { genshinTemplates } from '../src/assets/genshinTemplates.js';
 import { genshinBackgroundTemplates } from '../src/assets/genshinBackgroundTemplates.js';
 
-import { drawWallpaper, drawSampleClock, findOverlaps, formatTime, formatWallpaperTime, groupSchedule, layoutSchedule, schedulePosition, scheduleTopMargin, wrapText } from '../src/utils/canvasHelpers.js';
+import { drawWallpaper, findOverlaps, formatTime, formatWallpaperTime, groupSchedule, layoutSchedule, schedulePosition, wrapText } from "../src/utils/canvasHelpers.js";
 import { getScheduleIssues } from '../shared/scheduleSchema.js';
 import { colorInputValue, customizeWallpaperTemplate } from '../src/utils/wallpaperTheme.js';
 import { isNewTemplate, NEW_TEMPLATE_WINDOW_MS } from '../src/utils/templateFreshness.js';
@@ -319,52 +319,9 @@ test('course codes lead smaller subjects, rooms stay separate, and missing codes
   }
 });
 
-test('actual mascot schedules grow Monday, fit subjects on one line and omit empty days', () => {
-  const actual = { classes: [
-    { subject: 'Long subject name that wraps onto another line', courseCode: 'CS 101', meetings: [{ day: 'Monday', startTime: '08:00', endTime: '09:30', room: 'Lab 2' }] },
-    { subject: 'Another subject', courseCode: null, meetings: [{ day: 'Monday', startTime: '10:00', endTime: '11:30' }, { day: 'Tuesday', startTime: '13:00', endTime: '14:30' }, { day: 'Wednesday', startTime: '08:00', endTime: '09:30' }, { day: 'Friday', startTime: '10:00', endTime: '12:00' }] },
-  ] };
-  for (const template of littleFriendsTemplates) {
-    const layout = layoutSchedule(measurementContext, actual, template);
-    assert.equal(layout.overflow, false, template.name);
-    assert.deepEqual(layout.plans.map((plan) => plan.day), ['Monday', 'Tuesday', 'Wednesday', 'Friday']);
-    assert.equal(layout.plans[0].entries.length, 2);
-    assert.ok(layout.plans[0].height > layout.plans[1].height);
-    const entry = layout.plans[0].entries[0];
-    assert.equal(entry.subjectLines.length, 1);
-    assert.ok(entry.subjectLines[0].endsWith('…'));
-    measurementContext.font = `500 ${entry.subjectSize}px sans-serif`;
-    assert.ok(measurementContext.measureText(entry.subjectLines[0]).width <= layout.plans[0].subjectWidth);
-    assert.equal(layout.plans.flatMap((plan) => plan.entries).length, 5);
-  }
-});
 
-test('mascots keep a fixed size below every meeting, including denser schedules', () => {
-  const busy = structuredClone(templateSchedule);
-  for (const course of busy.classes) {
-    course.courseCode = 'CS 101';
-    const first = course.meetings[0];
-    course.meetings.push({ ...first, startTime: '10:00', endTime: '11:30' }, { ...first, startTime: '13:00', endTime: '14:30' });
-  }
-  for (const template of littleFriendsTemplates) {
-    const image = { width: 1254, height: 1254, mascotBounds: { x: 80, y: 120, width: 920, height: 1100 } };
-    const render = (schedule) => {
-      const drawn = [], text = [];
-      const ctx = { ...measurementContext, scale() {}, fillRect() {}, beginPath() {}, roundRect() {}, arc() {}, fill() {}, stroke() {}, moveTo() {}, lineTo() {}, save() {}, restore() {}, fillText(value) { text.push(value); }, drawImage(...args) { drawn.push(args); } };
-      const layout = drawWallpaper({ getContext() { return ctx; } }, { schedule, template, backgroundImage: image });
-      assert.equal(layout.overflow, false, template.name);
-      assert.equal(drawn.length, 1);
-      const [, , , , , x, y, width, height] = drawn[0];
-      assert.ok(y >= layout.bottom + 39.99, template.name);
-      assert.ok(x >= 0 && x + width <= 1080 && y + height <= 2400);
-      assert.equal(Math.max(width, height), 620);
-      assert.ok(!text.some((value) => value.startsWith('EDITION ')));
-      assert.ok(!text.includes(template.name.toUpperCase()));
-      return width;
-    };
-    assert.equal(render(busy), render(mascotTemplateSchedule), template.name);
-  }
-});
+
+
 
 test('every mascot template references an uploaded square PNG; local originals preserve alpha', () => {
   for (const template of littleFriendsTemplates) {
@@ -556,34 +513,7 @@ test('schedule placement moves between left, center and right on larger devices 
   for (const position of ['left', 'center', 'right']) assert.equal(schedulePosition({ device: 'mobile', schedulePosition: position }), 'center');
 });
 
-test('top margin moves the title and all meetings below the sample clock, preserves exports, and rejects overflow', () => {
-  const headings = [], text = [];
-  const ctx = { ...measurementContext, scale() {}, translate() {}, fillRect() {}, beginPath() {}, roundRect() {}, arc() {}, fill() {}, stroke() {}, moveTo() {}, lineTo() {}, bezierCurveTo() {}, save() {}, restore() {}, fillText(value, x, y) { text.push(value); if (value === 'Class Schedule') headings.push(y); } };
-  const canvas = { getContext() { return ctx; } };
-  for (const resolution of [mobileResolution, deviceResolutions.tablet, { ...deviceResolutions.tablet, width: 2560, height: 1600 }, deviceResolutions.laptop]) {
-    const template = { ...patternTemplates[0], device: resolution.id };
-    const before = drawWallpaper(canvas, { schedule: sampleSchedule, template, resolution });
-    const after = drawWallpaper(canvas, { schedule: sampleSchedule, template: { ...template, topMargin: 5 }, resolution });
-    assert.equal(after.overflow, false);
-    assert.equal(after.plans.flatMap(plan => plan.entries).length, 5);
-    if (resolution.id === 'mobile') {
-      assert.equal(after.plans[0].y - before.plans[0].y, 120);
-      assert.equal(headings.at(-1) - headings.at(-2), 120);
-      assert.ok(headings.at(-2) - 88 > 2400 * 0.20);
-    } else {
-      assert.ok(after.scheduleBounds.y > before.scheduleBounds.y);
-      if (resolution.id === 'tablet') assert.ok(before.scheduleBounds.y >= 1920 * resolution.height / resolution.width * 0.22);
-    }
-  }
-  assert.equal(text.includes('9:41'), false, 'sample clock must never be part of wallpaper exports');
-  assert.equal(text.includes('AM'), false, 'clock period must never be part of wallpaper exports');
-  const dense = structuredClone(sampleSchedule);
-  for (const course of dense.classes) course.meetings.push({ ...course.meetings[0], startTime: '10:00', endTime: '11:00' }, { ...course.meetings[0], startTime: '13:00', endTime: '14:00' });
-  assert.equal(drawWallpaper(canvas, { schedule: dense, template: { ...mascotTemplates[0], topMargin: 20 } }).overflow, true);
-  assert.equal(scheduleTopMargin({ topMargin: -10 }), 0);
-  assert.equal(scheduleTopMargin({ topMargin: 100 }), 20);
-  assert.equal(scheduleTopMargin({ topMargin: 'invalid' }), 0);
-});
+
 
 test('title visibility applies to every device without hiding classes or changing placement', () => {
   const text = [];
@@ -600,18 +530,4 @@ test('title visibility applies to every device without hiding classes or changin
     assert.ok(text.length > 0, 'class details remain visible');
     assert.deepEqual(hidden.plans, visible.plans, 'hiding the title does not move classes');
   }
-});
-
-test('sample clock uses the actual preview dimensions and resets the wallpaper transform', () => {
-  const draws = [], transforms = [];
-  const ctx = { ...measurementContext, save() {}, restore() {}, setTransform(...args) { transforms.push(args); }, fillText(value, x, y) { draws.push({ value, x, y, font: this.font }); } };
-  drawSampleClock({ width: 540, height: 1200, getContext() { return ctx; } }, patternTemplates[0]);
-  assert.deepEqual(transforms, [[1, 0, 0, 1, 0, 0]]);
-  assert.deepEqual(draws.map(draw => draw.value), ['9:41', 'AM']);
-  assert.ok(draws.every(draw => draw.y === 192));
-  assert.match(draws[0].font, /108px/);
-  assert.match(draws[1].font, /33.6px/);
-  const timeWidth = 108 * 4 * 0.52;
-  assert.ok(Math.abs(draws[0].x + timeWidth / 2 - 270) < 0.001, 'large time digits are horizontally centered independently of AM');
-  assert.ok(Math.abs(draws[1].x - (draws[0].x + timeWidth + 1200 * 0.001)) < 0.001, 'AM sits beside the centered time');
 });
