@@ -72,7 +72,7 @@ export default function WallpaperCarousel() {
         <h2 id="wallpaper-carousel-heading">Popular collections.</h2>
       </div>
       <div className="page-wrap wallpaper-carousel-stage">
-        <CircularCarousel items={mobile ? mobileItems : items} preset="orbit" intro="rise" cardWidth={220} fitWidth={mobile ? 1 : 0.94} aspectRatio={0.45} gap={mobile ? -25 : 25} curve={0} tilt={-10} perspective={1500} speed={14} parallax={0.3} stretch={0.5} depthFade={0.55} fadeColor="#ffffff" innerShade={0.6} cornerRadius={30} captions className="wallpaper-phone-carousel" />
+        <CircularCarousel items={mobile ? mobileItems : items} preset="orbit" intro="rise" cardWidth={220} fitWidth={mobile ? 1 : 0.94} aspectRatio={0.45} gap={mobile ? 0 : 25} curve={0} tilt={-10} perspective={1500} speed={14} parallax={0.3} stretch={0.5} depthFade={0.55} fadeColor="#ffffff" innerShade={0.6} cornerRadius={30} captions className="wallpaper-phone-carousel" />
       </div>
     </section>
   );
