@@ -13,6 +13,7 @@ import DevicePicker from '../../components/DevicePicker.jsx';
 import { layoutIcons, stylePickerOptions } from '../../components/wallpaperOptionIcons.js';
 import SortPicker from '../../components/SortPicker.jsx';
 import ClickSpark from '../../components/ClickSpark.jsx';
+import GalleryCardSkeleton from '../../components/GalleryCardSkeleton.jsx';
 import { isNewTemplate } from '../../utils/templateFreshness.js';
 import useDesignLikes from '../../lib/useDesignLikes.js';
 import { sortTemplatesByLikes } from '../../utils/sortTemplatesByLikes.js';
@@ -66,7 +67,7 @@ export default function TemplateGallery({ selectedId, settings = {}, schedule: e
     {downloadError && <div className="gallery-like-error" role="alert"><span>{downloadError}</span><button type="button" className="text-link" onClick={refreshDownloads}>Retry</button></div>}
     {likeError && <div className="gallery-like-error" role="alert"><span>{likeError}</span><button type="button" className="text-link" onClick={() => refreshLikes(true)} disabled={!!pending}>Retry</button></div>}
     <div id="template-gallery" role="group" aria-label={`${activeCategoryName} gallery`} aria-busy={loading} className={`template-grid template-grid-${device}`}>
-      {loading && Array.from({ length: 10 }, (_, i) => <div key={`skeleton-${i}`} className="gallery-card-skeleton wallpaper-skeleton" aria-hidden="true" />)}
+      {loading && Array.from({ length: 8 }, (_, i) => <GalleryCardSkeleton key={`skeleton-${i}`} device={device} />)}
       {!loading && visibleTemplates.length === 0 && (
         <div className="gallery-empty-state" role="status">
           {isSearching ? (
