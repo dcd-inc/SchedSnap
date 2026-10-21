@@ -26,7 +26,7 @@ A white section immediately before **Find your style.** fades in from the cream 
 
 ## Device showcases
 
-**Find your style.** introduces three independent four-style rows ordered mobile, tablet and laptop. Desktop alternates artwork left/copy right, copy left/artwork right, then artwork left/copy right. Screens through 800px and portrait tablets through 1100px stack artwork, countdown and centered copy. Titles are **For mobile.**, **For tablet.** and **For laptop.**; each has one concise description and **View more**, without extra taglines or an orientation toggle.
+**Find your style.** introduces three independent four-style rows ordered mobile, tablet and laptop. Desktop alternates artwork left/copy right, copy left/artwork right, then artwork left/copy right. Tablets keep the same alternating side-by-side layout as desktop in both orientations. Screens through 640px stack artwork, countdown and centered copy. Titles are **For mobile.**, **For tablet.** and **For laptop.**; each has one concise description and **View more**, without extra taglines or an orientation toggle.
 
 Each row cycles Little Friends, Mascots, Patterns and Originals every five seconds while at least 25% visible. Mouse hover, control focus, hidden pages and offscreen rows pause rotation; reduced motion disables it. Manual chevrons retain 44px targets. The four-segment countdown remains below the panel on desktop and immediately below artwork on stacked layouts. Rows track their own state and preload the next image.
 
