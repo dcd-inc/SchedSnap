@@ -38,6 +38,7 @@ function DeviceShowcase({ device }) {
   const slides = collections;
   const [activeIndex, setActiveIndex] = useState(0);
   const [displayedIndex, setDisplayedIndex] = useState(0);
+  const [navigationVersion, setNavigationVersion] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [focusPaused, setFocusPaused] = useState(false);
   const [isInView, setIsInView] = useState(false);
@@ -51,21 +52,27 @@ function DeviceShowcase({ device }) {
   const isPhone = device.id === 'mobile';
   const isPortrait = isPhone || device.id === 'tablet';
   const slideCount = slides.length;
-  const changeCollection = (direction) => setActiveIndex((index) => (index + direction + slideCount) % slideCount);
+  const changeCollection = (direction) => {
+    setActiveIndex((index) => (index + direction + slideCount) % slideCount);
+    setNavigationVersion((version) => version + 1);
+    // Restart playback after navigation, even while the arrow retains focus.
+    setIsHovered(false);
+    setFocusPaused(false);
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => setIsInView(entry.isIntersecting && entry.intersectionRatio >= 0.25), { threshold: 0.25 });
     observer.observe(showcaseRef.current);
     return () => observer.disconnect();
   }, []);
-  useEffect(() => { elapsedRef.current = 0; }, [displayedIndex]);
+  useEffect(() => { elapsedRef.current = 0; }, [displayedIndex, navigationVersion]);
   useEffect(() => {
     if (activeIndex === displayedIndex) return;
     let cancelled = false;
     const image = new Image();
     image.sizes = imageSizes;
-    image.srcset = `${assetPath(device.id, slides[activeIndex].id, 560)} 560w, ${assetPath(device.id, slides[activeIndex].id)} 960w`;
-    image.src = assetPath(device.id, slides[activeIndex].id);
+    image.srcset = avifSources(device.id, slides[activeIndex].id);
+    image.src = assetPath(device.id, slides[activeIndex].id, 960, 'avif');
     // Keep the current artwork painted until its replacement is decoded.
     image.decode().then(() => {
       if (!cancelled) setDisplayedIndex(activeIndex);
@@ -85,7 +92,7 @@ function DeviceShowcase({ device }) {
       window.clearTimeout(timer);
       elapsedRef.current = Math.min(ROTATION_DELAY, elapsedRef.current + performance.now() - started);
     };
-  }, [activeIndex, isRotating, slideCount]);
+  }, [activeIndex, isRotating, slideCount, navigationVersion]);
   useEffect(() => {
     if (!isInView) return;
     const next = collections[(displayedIndex + 1) % slideCount];
@@ -114,7 +121,7 @@ function DeviceShowcase({ device }) {
           <div className="showcase-controls" aria-label={`Browse ${device.label.toLowerCase()} collections`}>
             <button type="button" className="showcase-arrow showcase-desktop-arrow" aria-label={`Previous ${device.label.toLowerCase()} collection`} aria-controls={previewId} onClick={() => changeCollection(-1)}><ChevronLeft size={24} strokeWidth={1.5} aria-hidden="true" /></button>
             <div className="showcase-progress" role="img" aria-label={'Preview ' + (displayedIndex + 1) + ' of ' + slideCount} style={{ '--rotation-duration': ROTATION_DELAY + 'ms' }}>
-              {slides.map((item, index) => <span key={`${item.id}-${item.orientation || device.id}`} aria-hidden="true">{index === displayedIndex && <span className="showcase-progress-fill" style={{ animationPlayState: isRotating ? 'running' : 'paused' }} />}</span>)}
+              {slides.map((item, index) => <span key={`${item.id}-${item.orientation || device.id}`} aria-hidden="true">{index === displayedIndex && <span key={navigationVersion} className="showcase-progress-fill" style={{ animationPlayState: isRotating ? 'running' : 'paused' }} />}</span>)}
             </div>
             <button type="button" className="showcase-arrow showcase-desktop-arrow" aria-label={`Next ${device.label.toLowerCase()} collection`} aria-controls={previewId} onClick={() => changeCollection(1)}><ChevronRight size={24} strokeWidth={1.5} aria-hidden="true" /></button>
           </div>

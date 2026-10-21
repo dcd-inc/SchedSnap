@@ -1,19 +1,19 @@
 const steps = [
   {
     title: 'Choose a design',
-    description: 'Select your phone, tablet, or laptop, then choose a wallpaper design for your class schedule.',
+    description: 'Pick your device and find a wallpaper that fits your style.',
     image: '/images/how-it-works/choose-design.webp',
     height: 512,
   },
   {
     title: 'Add your classes',
-    description: 'Upload an image of your timetable or enter classes manually. Review your subjects, days, times, and rooms.',
+    description: 'Upload your timetable or enter classes manually, then check the details.',
     image: '/images/how-it-works/add-classes.webp',
     height: 512,
   },
   {
     title: 'Customize and download',
-    description: 'Adjust the colors and layout, download your PNG, and set it as your lock screen or desktop wallpaper.',
+    description: 'Adjust the layout and colors, then download your schedule as a wallpaper.',
     image: '/images/how-it-works/download-wallpaper.webp',
     height: 576,
   },
