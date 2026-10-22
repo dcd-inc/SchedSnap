@@ -260,6 +260,7 @@ const CircularCarousel = ({
   const cameraRef = useRef(null);
   const ringRef = useRef(null);
   const cardRefs = useRef([]);
+  const shadeRefs = useRef([]);
   const wakeRef = useRef(() => {});
   const measureRef = useRef(() => {});
   const activeRef = useRef(0);
@@ -399,6 +400,7 @@ const CircularCarousel = ({
     const state = stateRef.current;
     let raf = 0;
     let visible = true;
+    let scrollLocked = document.body.style.overflow === 'hidden';
 
     const nearest = angle => Math.round(angle / settingsRef.current.step) * settingsRef.current.step;
 
@@ -518,8 +520,9 @@ const CircularCarousel = ({
         const tau = 0.18 + s.momentum * 1.5;
         state.velocity += (cruise - state.velocity) * (1 - Math.exp(-dt / tau));
         state.angle += state.velocity * dt;
-        if (cruise === 0 && s.snap && Math.abs(state.velocity) < SETTLE_SPEED) {
-          state.target = nearest(state.angle);
+        const snapAngle = nearest(state.angle);
+        if (cruise === 0 && s.snap && Math.abs(state.velocity) < SETTLE_SPEED && Math.abs(snapAngle - state.angle) > 0.004) {
+          state.target = snapAngle;
         }
         busy = busy || cruise !== 0 || Math.abs(state.velocity) > 0.01 || state.target !== null;
       }
@@ -594,7 +597,11 @@ const CircularCarousel = ({
         const facing = Math.cos(world * TO_RAD);
         if (s.layout.inward) card.style.visibility = Math.abs(world) > 86 ? 'hidden' : '';
         const fade = s.depthFade * Math.pow((1 - facing) / 2, 1.25);
-        card.style.setProperty('--cc-depth', fade.toFixed(3));
+        const opacity = String(Math.round(fade * 1000) / 1000);
+        // Update only the shade layer; an inherited variable invalidates the whole phone subtree.
+        for (const shade of shadeRefs.current[index] || []) {
+          if (shade.style.opacity !== opacity) shade.style.opacity = opacity;
+        }
       }
 
       const index = ((Math.round(-state.angle / s.step) % s.count) + s.count) % s.count || 0;
@@ -612,12 +619,12 @@ const CircularCarousel = ({
       state.last = now;
       const busy = advance(s, dt, now);
       render(s, now);
-      if (busy && visible && !document.hidden) raf = requestAnimationFrame(frame);
+      if (busy && visible && !document.hidden && !scrollLocked) raf = requestAnimationFrame(frame);
       else state.last = 0;
     };
 
     const wake = () => {
-      if (!raf && visible && !document.hidden) raf = requestAnimationFrame(frame);
+      if (!raf && visible && !document.hidden && !scrollLocked) raf = requestAnimationFrame(frame);
     };
     wakeRef.current = wake;
 
@@ -628,6 +635,17 @@ const CircularCarousel = ({
         state.last = 0;
       } else wake();
     };
+
+    // Full-screen menus lock scrolling; pause the covered carousel until they close.
+    const scrollLockObserver = new MutationObserver(() => {
+      scrollLocked = document.body.style.overflow === 'hidden';
+      if (scrollLocked) {
+        cancelAnimationFrame(raf);
+        raf = 0;
+        state.last = 0;
+      } else wake();
+    });
+    scrollLockObserver.observe(document.body, { attributes: true, attributeFilter: ['style'] });
 
     const resize = new ResizeObserver(() => {
       measure();
@@ -674,6 +692,7 @@ const CircularCarousel = ({
     return () => {
       cancelAnimationFrame(raf);
       resize.disconnect();
+      scrollLockObserver.disconnect();
       io.disconnect();
       clearTimeout(state.wheelTimer);
       root.removeEventListener('wheel', onWheel);
@@ -931,6 +950,7 @@ const CircularCarousel = ({
                   key={index}
                   ref={element => {
                     cardRefs.current[index] = element;
+                    shadeRefs.current[index] = element ? element.querySelectorAll('.circular-carousel__shade') : [];
                   }}
                   className="circular-carousel__card"
                   data-cc-index={index}
