@@ -13,6 +13,7 @@ export function genshinKeywords(template) {
 }
 
 const collectionTags = {
+  naruto: ['Naruto', 'anime', 'manga', 'hand drawn', 'ink'],
   sanrio: ['Sanrio', 'kawaii', 'cute', 'cartoon'],
   snoopy: ['Snoopy', 'Peanuts', 'dog', 'cartoon', 'hand drawn'],
   genshin: ['Genshin Impact', 'anime', 'game'],

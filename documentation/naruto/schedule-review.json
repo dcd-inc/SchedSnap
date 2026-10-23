@@ -1,0 +1,530 @@
+[
+  {
+    "id": "naruto-leaf-ink-lineup",
+    "device": "mobile",
+    "schedule": "sample",
+    "overflow": false,
+    "meetings": 5,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 124.19999999999999,
+      "y": 696,
+      "width": 831.6,
+      "height": 1000.8000000000002
+    },
+    "coordinateWidth": 1080,
+    "coordinateHeight": 2400,
+    "inkBounds": {
+      "x": 0.2361111111111111,
+      "y": 0.8183333333333334,
+      "right": 0.8046296296296296,
+      "bottom": 0.9995833333333334
+    }
+  },
+  {
+    "id": "naruto-leaf-ink-lineup",
+    "device": "mobile",
+    "schedule": "dense",
+    "overflow": false,
+    "meetings": 15,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 124.19999999999999,
+      "y": 696,
+      "width": 831.6,
+      "height": 1104.1425
+    },
+    "coordinateWidth": 1080,
+    "coordinateHeight": 2400,
+    "inkBounds": {
+      "x": 0.2361111111111111,
+      "y": 0.8183333333333334,
+      "right": 0.8046296296296296,
+      "bottom": 0.9995833333333334
+    }
+  },
+  {
+    "id": "naruto-leaf-ink-lineup",
+    "device": "tablet",
+    "schedule": "sample",
+    "overflow": false,
+    "meetings": 5,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 238.3378285714286,
+      "y": 890.8799999999999,
+      "width": 1443.3243428571427,
+      "height": 1318.019657142857
+    },
+    "coordinateWidth": 1920,
+    "coordinateHeight": 3072,
+    "inkBounds": {
+      "x": 0.308125,
+      "y": 0.816015625,
+      "right": 0.71,
+      "bottom": 0.97890625
+    }
+  },
+  {
+    "id": "naruto-leaf-ink-lineup",
+    "device": "tablet",
+    "schedule": "dense",
+    "overflow": false,
+    "meetings": 15,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 238.3378285714286,
+      "y": 890.8799999999999,
+      "width": 1443.3243428571427,
+      "height": 1509.2543314285715
+    },
+    "coordinateWidth": 1920,
+    "coordinateHeight": 3072,
+    "inkBounds": {
+      "x": 0.308125,
+      "y": 0.816015625,
+      "right": 0.71,
+      "bottom": 0.97890625
+    }
+  },
+  {
+    "id": "naruto-leaf-ink-lineup",
+    "device": "laptop",
+    "schedule": "sample",
+    "overflow": false,
+    "meetings": 5,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 269.34339622641505,
+      "y": 313.2,
+      "width": 901.3132075471699,
+      "height": 691.2
+    },
+    "coordinateWidth": 1920,
+    "coordinateHeight": 1080,
+    "inkBounds": {
+      "x": 0.7567708333333333,
+      "y": 0.4740740740740741,
+      "right": 0.9989583333333333,
+      "bottom": 0.9990740740740741
+    }
+  },
+  {
+    "id": "naruto-leaf-ink-lineup",
+    "device": "laptop",
+    "schedule": "dense",
+    "overflow": false,
+    "meetings": 15,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 443.4764319780287,
+      "y": 313.2,
+      "width": 553.0471360439426,
+      "height": 691.2
+    },
+    "coordinateWidth": 1920,
+    "coordinateHeight": 1080,
+    "inkBounds": {
+      "x": 0.7567708333333333,
+      "y": 0.4740740740740741,
+      "right": 0.9989583333333333,
+      "bottom": 0.9990740740740741
+    }
+  },
+  {
+    "id": "naruto-retrieval-squad",
+    "device": "mobile",
+    "schedule": "sample",
+    "overflow": false,
+    "meetings": 5,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 124.19999999999999,
+      "y": 696,
+      "width": 831.6,
+      "height": 1000.8000000000002
+    },
+    "coordinateWidth": 1080,
+    "coordinateHeight": 2400,
+    "inkBounds": {
+      "x": 0.16574074074074074,
+      "y": 0.8079166666666666,
+      "right": 0.8296296296296296,
+      "bottom": 0.9995833333333334
+    }
+  },
+  {
+    "id": "naruto-retrieval-squad",
+    "device": "mobile",
+    "schedule": "dense",
+    "overflow": false,
+    "meetings": 15,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 124.19999999999999,
+      "y": 696,
+      "width": 831.6,
+      "height": 1104.1425
+    },
+    "coordinateWidth": 1080,
+    "coordinateHeight": 2400,
+    "inkBounds": {
+      "x": 0.16574074074074074,
+      "y": 0.8079166666666666,
+      "right": 0.8296296296296296,
+      "bottom": 0.9995833333333334
+    }
+  },
+  {
+    "id": "naruto-retrieval-squad",
+    "device": "tablet",
+    "schedule": "sample",
+    "overflow": false,
+    "meetings": 5,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 238.3378285714286,
+      "y": 890.8799999999999,
+      "width": 1443.3243428571427,
+      "height": 1318.019657142857
+    },
+    "coordinateWidth": 1920,
+    "coordinateHeight": 3072,
+    "inkBounds": {
+      "x": 0.245,
+      "y": 0.795703125,
+      "right": 0.72875,
+      "bottom": 0.99921875
+    }
+  },
+  {
+    "id": "naruto-retrieval-squad",
+    "device": "tablet",
+    "schedule": "dense",
+    "overflow": false,
+    "meetings": 15,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 238.3378285714286,
+      "y": 890.8799999999999,
+      "width": 1443.3243428571427,
+      "height": 1509.2543314285715
+    },
+    "coordinateWidth": 1920,
+    "coordinateHeight": 3072,
+    "inkBounds": {
+      "x": 0.245,
+      "y": 0.795703125,
+      "right": 0.72875,
+      "bottom": 0.99921875
+    }
+  },
+  {
+    "id": "naruto-retrieval-squad",
+    "device": "laptop",
+    "schedule": "sample",
+    "overflow": false,
+    "meetings": 5,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 269.34339622641505,
+      "y": 313.2,
+      "width": 901.3132075471699,
+      "height": 691.2
+    },
+    "coordinateWidth": 1920,
+    "coordinateHeight": 1080,
+    "inkBounds": {
+      "x": 0.7109375,
+      "y": 0.31574074074074077,
+      "right": 0.9989583333333333,
+      "bottom": 0.9990740740740741
+    }
+  },
+  {
+    "id": "naruto-retrieval-squad",
+    "device": "laptop",
+    "schedule": "dense",
+    "overflow": false,
+    "meetings": 15,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 443.4764319780287,
+      "y": 313.2,
+      "width": 553.0471360439426,
+      "height": 691.2
+    },
+    "coordinateWidth": 1920,
+    "coordinateHeight": 1080,
+    "inkBounds": {
+      "x": 0.7109375,
+      "y": 0.31574074074074077,
+      "right": 0.9989583333333333,
+      "bottom": 0.9990740740740741
+    }
+  },
+  {
+    "id": "naruto-sasuke-quiet-ink",
+    "device": "mobile",
+    "schedule": "sample",
+    "overflow": false,
+    "meetings": 5,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 124.19999999999999,
+      "y": 696,
+      "width": 831.6,
+      "height": 1000.8000000000002
+    },
+    "coordinateWidth": 1080,
+    "coordinateHeight": 2400,
+    "inkBounds": {
+      "x": 0.34814814814814815,
+      "y": 0.775,
+      "right": 0.6388888888888888,
+      "bottom": 0.9995833333333334
+    }
+  },
+  {
+    "id": "naruto-sasuke-quiet-ink",
+    "device": "mobile",
+    "schedule": "dense",
+    "overflow": false,
+    "meetings": 15,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 124.19999999999999,
+      "y": 696,
+      "width": 831.6,
+      "height": 1104.1425
+    },
+    "coordinateWidth": 1080,
+    "coordinateHeight": 2400,
+    "inkBounds": {
+      "x": 0.34814814814814815,
+      "y": 0.775,
+      "right": 0.6388888888888888,
+      "bottom": 0.9995833333333334
+    }
+  },
+  {
+    "id": "naruto-sasuke-quiet-ink",
+    "device": "tablet",
+    "schedule": "sample",
+    "overflow": false,
+    "meetings": 5,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 238.3378285714286,
+      "y": 890.8799999999999,
+      "width": 1443.3243428571427,
+      "height": 1318.019657142857
+    },
+    "coordinateWidth": 1920,
+    "coordinateHeight": 3072,
+    "inkBounds": {
+      "x": 0.4,
+      "y": 0.785546875,
+      "right": 0.595,
+      "bottom": 0.99921875
+    }
+  },
+  {
+    "id": "naruto-sasuke-quiet-ink",
+    "device": "tablet",
+    "schedule": "dense",
+    "overflow": false,
+    "meetings": 15,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 238.3378285714286,
+      "y": 890.8799999999999,
+      "width": 1443.3243428571427,
+      "height": 1509.2543314285715
+    },
+    "coordinateWidth": 1920,
+    "coordinateHeight": 3072,
+    "inkBounds": {
+      "x": 0.4,
+      "y": 0.785546875,
+      "right": 0.595,
+      "bottom": 0.99921875
+    }
+  },
+  {
+    "id": "naruto-sasuke-quiet-ink",
+    "device": "laptop",
+    "schedule": "sample",
+    "overflow": false,
+    "meetings": 5,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 269.34339622641505,
+      "y": 313.2,
+      "width": 901.3132075471699,
+      "height": 691.2
+    },
+    "coordinateWidth": 1920,
+    "coordinateHeight": 1080,
+    "inkBounds": {
+      "x": 0.7984375,
+      "y": 0.42314814814814816,
+      "right": 0.9875,
+      "bottom": 0.9583333333333334
+    }
+  },
+  {
+    "id": "naruto-sasuke-quiet-ink",
+    "device": "laptop",
+    "schedule": "dense",
+    "overflow": false,
+    "meetings": 15,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 443.4764319780287,
+      "y": 313.2,
+      "width": 553.0471360439426,
+      "height": 691.2
+    },
+    "coordinateWidth": 1920,
+    "coordinateHeight": 1080,
+    "inkBounds": {
+      "x": 0.7984375,
+      "y": 0.42314814814814816,
+      "right": 0.9875,
+      "bottom": 0.9583333333333334
+    }
+  },
+  {
+    "id": "naruto-kakashi-obito",
+    "device": "mobile",
+    "schedule": "sample",
+    "overflow": false,
+    "meetings": 5,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 124.19999999999999,
+      "y": 696,
+      "width": 831.6,
+      "height": 1000.8000000000002
+    },
+    "coordinateWidth": 1080,
+    "coordinateHeight": 2400,
+    "inkBounds": {
+      "x": 0.33055555555555555,
+      "y": 0.7933333333333333,
+      "right": 0.6861111111111111,
+      "bottom": 0.9854166666666667
+    }
+  },
+  {
+    "id": "naruto-kakashi-obito",
+    "device": "mobile",
+    "schedule": "dense",
+    "overflow": false,
+    "meetings": 15,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 124.19999999999999,
+      "y": 696,
+      "width": 831.6,
+      "height": 1104.1425
+    },
+    "coordinateWidth": 1080,
+    "coordinateHeight": 2400,
+    "inkBounds": {
+      "x": 0.33055555555555555,
+      "y": 0.7933333333333333,
+      "right": 0.6861111111111111,
+      "bottom": 0.9854166666666667
+    }
+  },
+  {
+    "id": "naruto-kakashi-obito",
+    "device": "tablet",
+    "schedule": "sample",
+    "overflow": false,
+    "meetings": 5,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 238.3378285714286,
+      "y": 890.8799999999999,
+      "width": 1443.3243428571427,
+      "height": 1318.019657142857
+    },
+    "coordinateWidth": 1920,
+    "coordinateHeight": 3072,
+    "inkBounds": {
+      "x": 0.391875,
+      "y": 0.83828125,
+      "right": 0.606875,
+      "bottom": 0.99921875
+    }
+  },
+  {
+    "id": "naruto-kakashi-obito",
+    "device": "tablet",
+    "schedule": "dense",
+    "overflow": false,
+    "meetings": 15,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 238.3378285714286,
+      "y": 890.8799999999999,
+      "width": 1443.3243428571427,
+      "height": 1509.2543314285715
+    },
+    "coordinateWidth": 1920,
+    "coordinateHeight": 3072,
+    "inkBounds": {
+      "x": 0.391875,
+      "y": 0.83828125,
+      "right": 0.606875,
+      "bottom": 0.99921875
+    }
+  },
+  {
+    "id": "naruto-kakashi-obito",
+    "device": "laptop",
+    "schedule": "sample",
+    "overflow": false,
+    "meetings": 5,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 269.34339622641505,
+      "y": 313.2,
+      "width": 901.3132075471699,
+      "height": 691.2
+    },
+    "coordinateWidth": 1920,
+    "coordinateHeight": 1080,
+    "inkBounds": {
+      "x": 0.7755208333333333,
+      "y": 0.562962962962963,
+      "right": 0.9848958333333333,
+      "bottom": 0.9981481481481481
+    }
+  },
+  {
+    "id": "naruto-kakashi-obito",
+    "device": "laptop",
+    "schedule": "dense",
+    "overflow": false,
+    "meetings": 15,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 443.4764319780287,
+      "y": 313.2,
+      "width": 553.0471360439426,
+      "height": 691.2
+    },
+    "coordinateWidth": 1920,
+    "coordinateHeight": 1080,
+    "inkBounds": {
+      "x": 0.7755208333333333,
+      "y": 0.562962962962963,
+      "right": 0.9848958333333333,
+      "bottom": 0.9981481481481481
+    }
+  }
+]

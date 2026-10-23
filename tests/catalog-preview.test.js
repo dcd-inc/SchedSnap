@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { createPublicCatalogHandler } from '../api/catalog.js';
 import { seedCatalog } from '../server/catalogStore.js';
 import { localApiPlugin } from '../development/apiPlugin.js';
+import { narutoTemplates } from '../src/assets/narutoTemplates.js';
 import { snoopyTemplates } from '../src/assets/snoopyTemplates.js';
 import { hunterTemplates } from '../src/assets/hunterTemplates.js';
 import { generativePatternTemplates } from '../src/assets/generativePatterns.js';
@@ -36,6 +37,12 @@ test('Vite exposes local Snoopy artwork when the shared catalog does not contain
   await middleware({ method: 'GET', url: '/api/catalog' }, result, () => assert.fail('Catalog request was not handled'));
   assert.equal(result.statusCode, 200);
   assert.ok(result.body.templates.some(template => template.id === 'remote-design'));
+  for (const design of narutoTemplates) {
+    const records = result.body.templates.filter(template => template.id === design.id);
+    assert.equal(records.length, 1);
+    assert.equal(records[0].collection, 'naruto');
+    assert.deepEqual(records[0].deviceImages, design.deviceImages);
+  }
   for (const design of generativePatternTemplates) {
     const records = result.body.templates.filter(template => template.id === design.id);
     assert.equal(records.length, 1);

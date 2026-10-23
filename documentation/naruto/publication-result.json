@@ -1,0 +1,134 @@
+{
+  "revision": "74a162c0-274b-4550-8e80-4406462324ff",
+  "catalogRecords": 271,
+  "narutoDesigns": [
+    {
+      "id": "naruto-leaf-ink-lineup",
+      "name": "Leaf Ink Lineup",
+      "createdAt": "2026-10-22T09:45:00.000Z",
+      "publishedAt": "2026-10-22T10:05:10.967Z"
+    },
+    {
+      "id": "naruto-retrieval-squad",
+      "name": "Retrieval Squad",
+      "createdAt": "2026-10-22T09:45:00.000Z",
+      "publishedAt": "2026-10-22T10:05:10.967Z"
+    },
+    {
+      "id": "naruto-sasuke-quiet-ink",
+      "name": "Sasuke Quiet Ink",
+      "createdAt": "2026-10-22T09:45:00.000Z",
+      "publishedAt": "2026-10-22T10:05:10.967Z"
+    },
+    {
+      "id": "naruto-kakashi-obito",
+      "name": "Back to Back",
+      "createdAt": "2026-10-22T09:45:00.000Z",
+      "publishedAt": "2026-10-22T10:05:10.967Z"
+    },
+    {
+      "id": "anime-akatsuki-crimson-assembly",
+      "name": "Akatsuki Crimson Assembly",
+      "createdAt": "2026-10-18T10:50:50.511362Z",
+      "publishedAt": "2026-10-18T10:53:27.870Z"
+    },
+    {
+      "id": "anime-naruto-neon-dojutsu",
+      "name": "Naruto Neon Dojutsu",
+      "createdAt": "2026-10-18T10:50:50.511362Z",
+      "publishedAt": "2026-10-18T10:53:27.870Z"
+    },
+    {
+      "id": "anime-naruto-ink-quartet",
+      "name": "Naruto Ink Quartet",
+      "createdAt": "2026-10-18T10:50:50.511362Z",
+      "publishedAt": "2026-10-18T10:53:27.870Z"
+    },
+    {
+      "id": "anime-crimson-sharingan",
+      "name": "Crimson Sharingan",
+      "createdAt": "2026-10-18T10:50:50.511362Z",
+      "publishedAt": "2026-10-18T10:53:27.870Z"
+    },
+    {
+      "id": "anime-crimson-manga-eye",
+      "name": "Crimson Manga Eye",
+      "createdAt": "2026-10-18T10:50:50.511362Z",
+      "publishedAt": "2026-10-18T10:53:27.870Z"
+    }
+  ],
+  "delivery": [
+    {
+      "id": "naruto-leaf-ink-lineup",
+      "device": "mobile",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "id": "naruto-leaf-ink-lineup",
+      "device": "tablet",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "id": "naruto-leaf-ink-lineup",
+      "device": "laptop",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "id": "naruto-retrieval-squad",
+      "device": "mobile",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "id": "naruto-retrieval-squad",
+      "device": "tablet",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "id": "naruto-retrieval-squad",
+      "device": "laptop",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "id": "naruto-sasuke-quiet-ink",
+      "device": "mobile",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "id": "naruto-sasuke-quiet-ink",
+      "device": "tablet",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "id": "naruto-sasuke-quiet-ink",
+      "device": "laptop",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "id": "naruto-kakashi-obito",
+      "device": "mobile",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "id": "naruto-kakashi-obito",
+      "device": "tablet",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "id": "naruto-kakashi-obito",
+      "device": "laptop",
+      "status": 200,
+      "contentType": "image/png"
+    }
+  ]
+}

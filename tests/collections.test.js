@@ -5,11 +5,11 @@ import { genshinTemplates } from '../src/assets/genshinTemplates.js';
 import { searchWallpaperTemplates } from '../src/utils/wallpaperSearch.js';
 
 test('shared gallery categories include the artwork collections and style filters', () => {
-  assert.deepEqual(galleryCategories.map(category => category.id), ['all', 'anime', 'sanrio', 'snoopy', 'genshin', 'hunter-x-hunter', 'we-bare-bears', 'domo', 'adventure-time', 'chiikawa', 'ghibli', 'meep', 'capybara', 'pattern']);
+  assert.deepEqual(galleryCategories.map(category => category.id), ['all', 'anime', 'naruto', 'sanrio', 'snoopy', 'genshin', 'hunter-x-hunter', 'we-bare-bears', 'domo', 'adventure-time', 'chiikawa', 'ghibli', 'meep', 'capybara', 'pattern']);
 });
 
 test('Anime groups anime collections without changing stored collections', () => {
-  for (const collection of ['anime', 'hunter-x-hunter', 'ghibli', 'onepiece']) {
+  for (const collection of ['anime', 'naruto', 'hunter-x-hunter', 'ghibli', 'onepiece']) {
     assert.equal(matchesGalleryCategory({ collection }, 'anime'), true);
   }
   for (const collection of ['genshin', 'pattern', 'snoopy', 'domo', 'mascot']) {

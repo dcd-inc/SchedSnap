@@ -4605,5 +4605,89 @@ export default {
     "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792425810/schedsnap/wallpapers/scenic/hxh-plain-uvogin/mobile-b432282f715374d5.png",
     "width": 1080,
     "height": 2400
+  },
+  "/wallpapers/scenic/naruto-kakashi-obito/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-kakashi-obito/mobile-fc836ff4ac0eaec6",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792663472/schedsnap/wallpapers/scenic/naruto-kakashi-obito/mobile-fc836ff4ac0eaec6.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/naruto-leaf-ink-lineup/laptop.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-leaf-ink-lineup/laptop-88587f98d7e5dece",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792663472/schedsnap/wallpapers/scenic/naruto-leaf-ink-lineup/laptop-88587f98d7e5dece.png",
+    "width": 1920,
+    "height": 1080
+  },
+  "/wallpapers/scenic/naruto-kakashi-obito/laptop.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-kakashi-obito/laptop-b81b64ae511ad2de",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792663472/schedsnap/wallpapers/scenic/naruto-kakashi-obito/laptop-b81b64ae511ad2de.png",
+    "width": 1920,
+    "height": 1080
+  },
+  "/wallpapers/scenic/naruto-kakashi-obito/tablet.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-kakashi-obito/tablet-38b619d4fa806583",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792663473/schedsnap/wallpapers/scenic/naruto-kakashi-obito/tablet-38b619d4fa806583.png",
+    "width": 1600,
+    "height": 2560
+  },
+  "/wallpapers/scenic/naruto-leaf-ink-lineup/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-leaf-ink-lineup/mobile-5e4bf387a365e716",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792663476/schedsnap/wallpapers/scenic/naruto-leaf-ink-lineup/mobile-5e4bf387a365e716.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/naruto-retrieval-squad/laptop.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-retrieval-squad/laptop-e7fec2300fb0bbb5",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792663477/schedsnap/wallpapers/scenic/naruto-retrieval-squad/laptop-e7fec2300fb0bbb5.png",
+    "width": 1920,
+    "height": 1080
+  },
+  "/wallpapers/scenic/naruto-leaf-ink-lineup/tablet.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-leaf-ink-lineup/tablet-e8abe1a3eb2c7ef1",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792663477/schedsnap/wallpapers/scenic/naruto-leaf-ink-lineup/tablet-e8abe1a3eb2c7ef1.png",
+    "width": 1600,
+    "height": 2560
+  },
+  "/wallpapers/scenic/naruto-retrieval-squad/tablet.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-retrieval-squad/tablet-1f6e58915fb0c0a2",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792663481/schedsnap/wallpapers/scenic/naruto-retrieval-squad/tablet-1f6e58915fb0c0a2.png",
+    "width": 1600,
+    "height": 2560
+  },
+  "/wallpapers/scenic/naruto-sasuke-quiet-ink/laptop.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-sasuke-quiet-ink/laptop-f7ea6b81c13422c1",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792663481/schedsnap/wallpapers/scenic/naruto-sasuke-quiet-ink/laptop-f7ea6b81c13422c1.png",
+    "width": 1920,
+    "height": 1080
+  },
+  "/wallpapers/scenic/naruto-sasuke-quiet-ink/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-sasuke-quiet-ink/mobile-ebdc1caf57d10a12",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792663482/schedsnap/wallpapers/scenic/naruto-sasuke-quiet-ink/mobile-ebdc1caf57d10a12.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/naruto-sasuke-quiet-ink/tablet.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-sasuke-quiet-ink/tablet-09bbf7888e1e9fb6",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792663483/schedsnap/wallpapers/scenic/naruto-sasuke-quiet-ink/tablet-09bbf7888e1e9fb6.png",
+    "width": 1600,
+    "height": 2560
+  },
+  "/wallpapers/scenic/naruto-retrieval-squad/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-retrieval-squad/mobile-ed6b17e2651e0002",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792663484/schedsnap/wallpapers/scenic/naruto-retrieval-squad/mobile-ed6b17e2651e0002.png",
+    "width": 1080,
+    "height": 2400
   }
 };
