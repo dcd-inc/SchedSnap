@@ -1,0 +1,182 @@
+{
+  "revision": "2801b9c4-056d-4e12-90f3-024d00f769f8",
+  "catalogRecords": 279,
+  "narutoDesigns": [
+    {
+      "id": "naruto-resolute-ink",
+      "name": "Resolute Ink",
+      "createdAt": "2026-10-23T23:25:57.000Z",
+      "publishedAt": "2026-10-23T23:37:54.575Z"
+    },
+    {
+      "id": "naruto-sasuke-shadow",
+      "name": "Sasuke Shadow",
+      "createdAt": "2026-10-23T23:25:57.000Z",
+      "publishedAt": "2026-10-23T23:37:54.575Z"
+    },
+    {
+      "id": "naruto-sharingan-gaze",
+      "name": "Sharingan Gaze",
+      "createdAt": "2026-10-23T23:25:57.000Z",
+      "publishedAt": "2026-10-23T23:37:54.575Z"
+    },
+    {
+      "id": "naruto-itachi-stillness",
+      "name": "Itachi Stillness",
+      "createdAt": "2026-10-23T23:25:57.000Z",
+      "publishedAt": "2026-10-23T23:37:54.575Z"
+    },
+    {
+      "id": "naruto-fourth-hokage",
+      "name": "Fourth Hokage",
+      "createdAt": "2026-10-23T23:25:57.000Z",
+      "publishedAt": "2026-10-23T23:37:54.575Z"
+    },
+    {
+      "id": "naruto-leaf-ink-lineup",
+      "name": "Leaf Ink Lineup",
+      "createdAt": "2026-10-22T09:45:00.000Z",
+      "publishedAt": "2026-10-22T10:05:10.967Z"
+    },
+    {
+      "id": "naruto-retrieval-squad",
+      "name": "Retrieval Squad",
+      "createdAt": "2026-10-22T09:45:00.000Z",
+      "publishedAt": "2026-10-22T10:05:10.967Z"
+    },
+    {
+      "id": "naruto-sasuke-quiet-ink",
+      "name": "Sasuke Quiet Ink",
+      "createdAt": "2026-10-22T09:45:00.000Z",
+      "publishedAt": "2026-10-22T10:05:10.967Z"
+    },
+    {
+      "id": "naruto-kakashi-obito",
+      "name": "Back to Back",
+      "createdAt": "2026-10-22T09:45:00.000Z",
+      "publishedAt": "2026-10-22T10:05:10.967Z"
+    },
+    {
+      "id": "anime-akatsuki-crimson-assembly",
+      "name": "Akatsuki Crimson Assembly",
+      "createdAt": "2026-10-18T10:50:50.511362Z",
+      "publishedAt": "2026-10-18T10:53:27.870Z"
+    },
+    {
+      "id": "anime-naruto-neon-dojutsu",
+      "name": "Naruto Neon Dojutsu",
+      "createdAt": "2026-10-18T10:50:50.511362Z",
+      "publishedAt": "2026-10-18T10:53:27.870Z"
+    },
+    {
+      "id": "anime-naruto-ink-quartet",
+      "name": "Naruto Ink Quartet",
+      "createdAt": "2026-10-18T10:50:50.511362Z",
+      "publishedAt": "2026-10-18T10:53:27.870Z"
+    },
+    {
+      "id": "anime-crimson-sharingan",
+      "name": "Crimson Sharingan",
+      "createdAt": "2026-10-18T10:50:50.511362Z",
+      "publishedAt": "2026-10-18T10:53:27.870Z"
+    },
+    {
+      "id": "anime-crimson-manga-eye",
+      "name": "Crimson Manga Eye",
+      "createdAt": "2026-10-18T10:50:50.511362Z",
+      "publishedAt": "2026-10-18T10:53:27.870Z"
+    }
+  ],
+  "delivery": [
+    {
+      "id": "naruto-resolute-ink",
+      "device": "mobile",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "id": "naruto-resolute-ink",
+      "device": "tablet",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "id": "naruto-resolute-ink",
+      "device": "laptop",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "id": "naruto-sasuke-shadow",
+      "device": "mobile",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "id": "naruto-sasuke-shadow",
+      "device": "tablet",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "id": "naruto-sasuke-shadow",
+      "device": "laptop",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "id": "naruto-sharingan-gaze",
+      "device": "mobile",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "id": "naruto-sharingan-gaze",
+      "device": "tablet",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "id": "naruto-sharingan-gaze",
+      "device": "laptop",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "id": "naruto-itachi-stillness",
+      "device": "mobile",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "id": "naruto-itachi-stillness",
+      "device": "tablet",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "id": "naruto-itachi-stillness",
+      "device": "laptop",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "id": "naruto-fourth-hokage",
+      "device": "mobile",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "id": "naruto-fourth-hokage",
+      "device": "tablet",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "id": "naruto-fourth-hokage",
+      "device": "laptop",
+      "status": 200,
+      "contentType": "image/png"
+    }
+  ]
+}

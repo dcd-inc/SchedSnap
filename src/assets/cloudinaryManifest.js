@@ -4752,5 +4752,110 @@ export default {
     "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792797486/schedsnap/wallpapers/scenic/snoopy-lazy-afternoon/laptop-f0b4e8b5e126d0ba.png",
     "width": 1920,
     "height": 1080
+  },
+  "/wallpapers/scenic/naruto-fourth-hokage/laptop.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-fourth-hokage/laptop-8be1b621411f5786",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792798562/schedsnap/wallpapers/scenic/naruto-fourth-hokage/laptop-8be1b621411f5786.png",
+    "width": 1920,
+    "height": 1080
+  },
+  "/wallpapers/scenic/naruto-fourth-hokage/tablet.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-fourth-hokage/tablet-0c2d5f6eb51700b8",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792798563/schedsnap/wallpapers/scenic/naruto-fourth-hokage/tablet-0c2d5f6eb51700b8.png",
+    "width": 1600,
+    "height": 2560
+  },
+  "/wallpapers/scenic/naruto-fourth-hokage/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-fourth-hokage/mobile-7f776a474d18d14f",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792798564/schedsnap/wallpapers/scenic/naruto-fourth-hokage/mobile-7f776a474d18d14f.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/naruto-itachi-stillness/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-itachi-stillness/mobile-91b4888243b7bc1e",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792798565/schedsnap/wallpapers/scenic/naruto-itachi-stillness/mobile-91b4888243b7bc1e.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/naruto-itachi-stillness/tablet.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-itachi-stillness/tablet-dd5ccbd50355ad32",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792798567/schedsnap/wallpapers/scenic/naruto-itachi-stillness/tablet-dd5ccbd50355ad32.png",
+    "width": 1600,
+    "height": 2560
+  },
+  "/wallpapers/scenic/naruto-resolute-ink/laptop.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-resolute-ink/laptop-68a01157eee72de1",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792798569/schedsnap/wallpapers/scenic/naruto-resolute-ink/laptop-68a01157eee72de1.png",
+    "width": 1920,
+    "height": 1080
+  },
+  "/wallpapers/scenic/naruto-resolute-ink/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-resolute-ink/mobile-3a91f9388c2e147f",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792798570/schedsnap/wallpapers/scenic/naruto-resolute-ink/mobile-3a91f9388c2e147f.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/naruto-resolute-ink/tablet.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-resolute-ink/tablet-abed95a3097426aa",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792798570/schedsnap/wallpapers/scenic/naruto-resolute-ink/tablet-abed95a3097426aa.png",
+    "width": 1600,
+    "height": 2560
+  },
+  "/wallpapers/scenic/naruto-sasuke-shadow/tablet.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-sasuke-shadow/tablet-c95ebeef75c40740",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792798573/schedsnap/wallpapers/scenic/naruto-sasuke-shadow/tablet-c95ebeef75c40740.png",
+    "width": 1600,
+    "height": 2560
+  },
+  "/wallpapers/scenic/naruto-sasuke-shadow/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-sasuke-shadow/mobile-c732095148bd8544",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792798575/schedsnap/wallpapers/scenic/naruto-sasuke-shadow/mobile-c732095148bd8544.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/naruto-sharingan-gaze/laptop.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-sharingan-gaze/laptop-021bda997562f013",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792798576/schedsnap/wallpapers/scenic/naruto-sharingan-gaze/laptop-021bda997562f013.png",
+    "width": 1920,
+    "height": 1080
+  },
+  "/wallpapers/scenic/naruto-sharingan-gaze/tablet.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-sharingan-gaze/tablet-9c59f87b60fd128c",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792798579/schedsnap/wallpapers/scenic/naruto-sharingan-gaze/tablet-9c59f87b60fd128c.png",
+    "width": 1600,
+    "height": 2560
+  },
+  "/wallpapers/scenic/naruto-sharingan-gaze/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-sharingan-gaze/mobile-b6e4f7c5e24601d0",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792798580/schedsnap/wallpapers/scenic/naruto-sharingan-gaze/mobile-b6e4f7c5e24601d0.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/naruto-sasuke-shadow/laptop.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-sasuke-shadow/laptop-f6e9522144bbe5e1",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792798587/schedsnap/wallpapers/scenic/naruto-sasuke-shadow/laptop-f6e9522144bbe5e1.png",
+    "width": 1920,
+    "height": 1080
+  },
+  "/wallpapers/scenic/naruto-itachi-stillness/laptop.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-itachi-stillness/laptop-ce1da65328ef424a",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792798588/schedsnap/wallpapers/scenic/naruto-itachi-stillness/laptop-ce1da65328ef424a.png",
+    "width": 1920,
+    "height": 1080
   }
 };
