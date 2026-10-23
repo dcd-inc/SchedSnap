@@ -1,3 +1,5 @@
+import { snoopyReferenceTemplates } from './snoopyReferenceTemplates.js';
+
 // Reference-led ink drawings; timetable content is rendered separately by Canvas.
 const designs = [
   ['snoopy-dotted-peek', 'Snoopy Dotted Peek', 'Snoopy peeks around a page of tiny hand-inked dots.', '#ffffff'],
@@ -11,7 +13,7 @@ const designs = [
   ['snoopy-cream-pinstripes', 'Snoopy Cream Pinstripes', 'Dusty blue and cream paper stripes with a little hand-inked Snoopy.', '#f7f4dd', '2026-10-16T11:29:55.000Z'],
 ];
 
-export const snoopyTemplates = designs.map(([id, name, description, background, createdAt = '2026-10-15T23:30:10.000Z']) => ({
+export const snoopyTemplates = [...snoopyReferenceTemplates, ...designs.map(([id, name, description, background, createdAt = '2026-10-15T23:30:10.000Z']) => ({
   id, name, description, background,
   collection: 'snoopy',
   family: 'snoopy-handmade',
@@ -26,4 +28,4 @@ export const snoopyTemplates = designs.map(([id, name, description, background, 
   deviceImages: Object.fromEntries(['mobile', 'tablet', 'laptop'].map(device => [
     device, `/wallpapers/scenic/${id}/${device}.png`,
   ])),
-}));
+}))];
