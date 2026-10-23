@@ -14,6 +14,7 @@ import { genshinChibiTemplates } from '../src/assets/genshinChibiTemplates.js';
 import { genshinElementalTemplates } from '../src/assets/genshinElementalTemplates.js';
 import { hunterTemplates } from '../src/assets/hunterTemplates.js';
 import { generativePatternTemplates } from '../src/assets/generativePatterns.js';
+import { narutoTemplates } from '../src/assets/narutoTemplates.js';
 import { animeTemplates } from '../src/assets/animeTemplates.js';
 
 
@@ -25,7 +26,7 @@ export function localApiPlugin(env) {
       const analyze = createAnalyzeHandler({ env });
       const visits = createVisitsHandler({ env });
       const admin = createAdminHandler({ env });
-      const catalog = createPublicCatalogHandler({ env, previewTemplates: [...animeTemplates, ...generativePatternTemplates, ...hunterTemplates, ...snoopyTemplates, ...genshinElementalTemplates, ...genshinChibiTemplates, ...genshinTemplates, ...genshinBackgroundTemplates, ...ghibliTemplates, ...meepTemplates] });
+      const catalog = createPublicCatalogHandler({ env, previewTemplates: [...narutoTemplates, ...animeTemplates, ...generativePatternTemplates, ...hunterTemplates, ...snoopyTemplates, ...genshinElementalTemplates, ...genshinChibiTemplates, ...genshinTemplates, ...genshinBackgroundTemplates, ...ghibliTemplates, ...meepTemplates] });
       const likes = createLikesHandler({ env });
       const downloads = createDownloadsHandler({ env });
       server.middlewares.use(async (request, response, next) => {
