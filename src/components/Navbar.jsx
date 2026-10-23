@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
+import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from 'react';
 import { Link, useLocation } from 'react-router';
 import BrandMark from './BrandMark.jsx';
 import MakerBanner from './MakerBanner.jsx';
@@ -10,16 +10,35 @@ function subscribeToScroll(onChange) {
 }
 const hasScrolled = () => window.scrollY > 8;
 
+function updateMenuReveal(button, menu) {
+  const bounds = button.getBoundingClientRect();
+  const x = bounds.left + bounds.width / 2;
+  const y = bounds.top + bounds.height / 2;
+  const radius = Math.ceil(Math.hypot(Math.max(x, window.innerWidth - x), Math.max(y, window.innerHeight - y))) + 2;
+  menu.style.setProperty('--menu-origin-x', `${x}px`);
+  menu.style.setProperty('--menu-origin-y', `${y}px`);
+  menu.style.setProperty('--menu-radius', `${radius}px`);
+}
+
+function scrollToLandingTarget(id) {
+  const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth';
+  if (id === 'top') { window.scrollTo({ top: 0, behavior }); return; }
+  const section = document.getElementById(id);
+  section?.scrollIntoView({ behavior, block: 'start' });
+  if (section) { section.setAttribute('tabindex', '-1'); section.focus({ preventScroll: true }); }
+}
+
 export default function Navbar() {
   const isHome = useLocation().pathname === '/';
   const scrolled = useSyncExternalStore(subscribeToScroll, hasScrolled, () => false);
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
-  const headerRef = useRef(null);
-  const [headerHidden, setHeaderHidden] = useState(false);
   const toggleRef = useRef(null);
+  const pendingTargetRef = useRef(null);
   useEffect(() => {
     if (!menuOpen) return;
+    const updateReveal = () => updateMenuReveal(toggleRef.current, menuRef.current);
+    window.addEventListener('resize', updateReveal);
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
     const closeOutside = event => { if (!menuRef.current?.contains(event.target)) setMenuOpen(false); };
@@ -30,62 +49,55 @@ export default function Navbar() {
     document.addEventListener('keydown', closeEscape);
     return () => {
       document.body.style.overflow = previousOverflow;
+      window.removeEventListener('resize', updateReveal);
       document.removeEventListener('pointerdown', closeOutside);
       document.removeEventListener('keydown', closeEscape);
     };
   }, [menuOpen]);
   useEffect(() => {
-    if (!isHome || menuOpen) return;
-    let lastY = Math.max(0, window.scrollY);
-    const updateHeader = () => {
-      const y = Math.max(0, window.scrollY);
-      const delta = y - lastY;
-      if (y <= 80) setHeaderHidden(false);
-      else if (Math.abs(delta) >= 8) {
-        setHeaderHidden(delta > 0 && !headerRef.current?.contains(document.activeElement));
-      } else return;
-      lastY = y;
-    };
-    window.addEventListener('scroll', updateHeader, { passive: true });
-    return () => window.removeEventListener('scroll', updateHeader);
-  }, [isHome, menuOpen]);
-  function sectionLinks() {
-    return [['how-it-works', 'How it works'], ['collections', 'Collections'], ['designs', 'Designs'], ['faq', 'FAQs']].map(([id, label]) => <a key={id} href={`#${id}`} onClick={event => {
-      event.preventDefault();
+    if (menuOpen || pendingTargetRef.current === null) return;
+    const target = pendingTargetRef.current;
+    pendingTargetRef.current = null;
+    // The menu effect restores scrolling before this effect navigates to the section.
+    scrollToLandingTarget(target);
+  }, [menuOpen]);
+  const navigateTo = useCallback(id => {
+    if (menuOpen) {
+      pendingTargetRef.current = id;
       setMenuOpen(false);
-      const section = document.getElementById(id);
-      section?.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start' });
-      if (section) { section.setAttribute('tabindex', '-1'); section.focus({ preventScroll: true }); }
-    }}>{label}</a>);
+    } else scrollToLandingTarget(id);
+  }, [menuOpen]);
+  function handleSectionClick(event) {
+    event.preventDefault();
+    navigateTo(event.currentTarget.hash.slice(1));
   }
+  const sectionLinks = [['how-it-works', 'How it works'], ['collections', 'Collections'], ['designs', 'Designs'], ['faq', 'FAQs']].map(([id, label]) => <a key={id} href={`#${id}`} onClick={handleSectionClick}>{label}</a>);
   return (
-    <header ref={headerRef} className={`site-header${isHome && headerHidden && !menuOpen ? ' is-scroll-hidden' : ''}${menuOpen ? ' mobile-menu-open' : ''}${isHome ? ` site-header-home${!scrolled ? ' is-at-top' : ''}` : ''}`}>
+    <header className={`site-header${menuOpen ? ' mobile-menu-open' : ''}${isHome ? ` site-header-home${!scrolled ? ' is-at-top' : ''}` : ''}`}>
       <div className="page-wrap site-header-inner">
         <Link to="/" className="site-brand" onClick={event => {
           setMenuOpen(false);
           if (isHome) {
             event.preventDefault();
-            window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+            navigateTo('top');
           }
         }}>
           <BrandMark /> SchedSnap
         </Link>
         {isHome && <nav className="landing-nav" aria-label="Main navigation">
-          {sectionLinks()}
+          {sectionLinks}
         </nav>}
         {isHome && <div className="mobile-navigation" ref={menuRef} onBlur={event => {
-          if (!event.currentTarget.contains(event.relatedTarget)) setMenuOpen(false);
+          if (event.relatedTarget && !event.currentTarget.contains(event.relatedTarget)) setMenuOpen(false);
         }}>
           <button ref={toggleRef} type="button" className="mobile-nav-toggle" aria-expanded={menuOpen} aria-controls="mobile-section-nav" aria-label={menuOpen ? 'Close navigation' : 'Open navigation'} onClick={() => {
-            const bounds = toggleRef.current.getBoundingClientRect();
-            menuRef.current.style.setProperty('--menu-origin-x', `${bounds.left + bounds.width / 2}px`);
-            menuRef.current.style.setProperty('--menu-origin-y', `${bounds.top + bounds.height / 2}px`);
+            if (!menuOpen) updateMenuReveal(toggleRef.current, menuRef.current);
             setMenuOpen(open => !open);
           }}>
             <span className="menu-toggle-lines" aria-hidden="true"><span /><span /></span>
           </button>
           <div id="mobile-section-nav" className="mobile-nav-panel" data-open={menuOpen} inert={!menuOpen}>
-            <nav className="mobile-section-links" aria-label="Mobile navigation">{sectionLinks()}</nav>
+            <nav className="mobile-section-links" aria-label="Mobile navigation">{sectionLinks}</nav>
             <div className="mobile-menu-footer"><p className="mobile-social-label">Find us on</p><SocialLinks /><MakerBanner /></div>
           </div>
         </div>}

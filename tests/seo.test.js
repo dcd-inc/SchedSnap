@@ -1,6 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { CREATOR_PATH, getPageSeo, SEO_PAGES, SITE_URL } from '../shared/seo.js';
+import { CREATOR_PATH, getPageSeo, getPageSchema, SEO_PAGES, SITE_URL, SOCIAL_IMAGE_PATH } from '../shared/seo.js';
+import { isPublicDeploymentAsset } from '../scripts/public-assets.mjs';
+import { stat } from 'node:fs/promises';
 import { seoHead, replaceSeoHead } from '../scripts/seo-html.mjs';
 
 test('public pages have distinct titles, descriptions, and preferred URLs', () => {
@@ -32,10 +34,26 @@ test('static route HTML replaces homepage metadata instead of accumulating dupli
   assert.equal((creator.match(/<title>/g) || []).length, 1);
   assert.equal((creator.match(/rel="canonical"/g) || []).length, 1);
   assert.match(creator, /Create a Class Schedule Wallpaper/);
-  assert.ok(!creator.includes('website-schema'));
+  assert.equal(JSON.parse(creator.match(/type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])['@type'], 'WebApplication');
   const schema = JSON.parse(home.match(/type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
   assert.equal(schema['@type'], 'WebSite');
   assert.equal(schema.name, 'SchedSnap');
   assert.equal(schema.alternateName, 'Sched Snap');
   assert.equal(schema.url, `${SITE_URL}/`);
+});
+
+test('social preview image exists and survives deployment asset filtering', async () => {
+  assert.ok((await stat(`public${SOCIAL_IMAGE_PATH}`)).size > 0);
+  assert.equal(isPublicDeploymentAsset(SOCIAL_IMAGE_PATH.slice(1)), true);
+  assert.equal(isPublicDeploymentAsset('images/hero/hero-phones-stacked.png'), false);
+  assert.ok(seoHead('/').includes(`content="${SITE_URL}${SOCIAL_IMAGE_PATH}"`));
+});
+
+test('page schema follows public routes and never describes private editor sessions', () => {
+  assert.equal(getPageSchema('/').publisher.name, '.dcd');
+  assert.equal(getPageSchema(`${CREATOR_PATH}/`).isAccessibleForFree, true);
+  for (const path of ['/privacy', '/admin', `${CREATOR_PATH}/sample`, '/missing']) {
+    assert.equal(getPageSchema(path), null);
+    assert.ok(!seoHead(path).includes('id="page-schema"'));
+  }
 });

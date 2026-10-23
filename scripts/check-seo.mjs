@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFile, stat } from 'node:fs/promises';
 import { resolve } from 'node:path';
-import { CREATOR_PATH, SEO_PAGES, SITE_URL } from '../shared/seo.js';
+import { CREATOR_PATH, SEO_PAGES, SITE_URL, SOCIAL_IMAGE_PATH } from '../shared/seo.js';
 
 for (const path of Object.keys(SEO_PAGES)) {
   const file = path === '/' ? 'index.html' : `${path.slice(1)}/index.html`;
@@ -14,19 +14,28 @@ for (const path of Object.keys(SEO_PAGES)) {
   assert.ok(!html.includes('rel="icon" type="image/webp"'), path);
   if (path !== CREATOR_PATH) assert.ok(html.includes('<h1'), path);
   if (path === '/') {
-    const schema = JSON.parse(html.match(/id="website-schema" type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
+    const schema = JSON.parse(html.match(/id="page-schema" type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
     assert.equal(schema.alternateName, 'Sched Snap');
-    assert.ok(html.includes('Upload your class schedule and turn it into a wallpaper for free.'));
+    assert.ok(html.includes('A free class schedule wallpaper maker for your phone, tablet, or laptop.'));
     assert.ok(html.includes('Frequently asked questions'));
     assert.ok(html.includes('Can I turn a timetable screenshot into a wallpaper?'));
     assert.ok(html.includes('Your schedule.'));
     assert.ok(html.includes('href="/services/schedule-wallpaper"'));
     assert.ok(html.includes('How it works'));
   }
+  if (path === '/') {
+    assert.ok(html.includes('href="/guides/class-schedule-wallpaper"'), path);
+  }
+  if (path === CREATOR_PATH) {
+    assert.ok(!html.includes('aria-label="About the wallpaper creator"'));
+    const schema = JSON.parse(html.match(/id="page-schema" type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
+    assert.equal(schema['@type'], 'WebApplication');
+  }
   for (const [, asset] of html.matchAll(/(?:src|href)="(\/assets\/[^"?#]+)"/g)) {
     await stat(resolve('dist', asset.slice(1)));
   }
 }
+await stat(resolve('dist', SOCIAL_IMAGE_PATH.slice(1)));
 for (const file of ['admin.html', 'app.html']) {
   const html = await readFile(resolve('dist', file), 'utf8');
   assert.ok(html.includes('content="noindex, follow"'), file);
