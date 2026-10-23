@@ -4689,5 +4689,68 @@ export default {
     "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792663484/schedsnap/wallpapers/scenic/naruto-retrieval-squad/mobile-ed6b17e2651e0002.png",
     "width": 1080,
     "height": 2400
+  },
+  "/wallpapers/scenic/snoopy-cassette-days/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/snoopy-cassette-days/mobile-6f71012a0731ac10",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792797483/schedsnap/wallpapers/scenic/snoopy-cassette-days/mobile-6f71012a0731ac10.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/snoopy-cassette-days/laptop.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/snoopy-cassette-days/laptop-f7d110caa356abb6",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792797483/schedsnap/wallpapers/scenic/snoopy-cassette-days/laptop-f7d110caa356abb6.png",
+    "width": 1920,
+    "height": 1080
+  },
+  "/wallpapers/scenic/snoopy-daisy-pause/laptop.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/snoopy-daisy-pause/laptop-718b9a30c540f37c",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792797483/schedsnap/wallpapers/scenic/snoopy-daisy-pause/laptop-718b9a30c540f37c.png",
+    "width": 1920,
+    "height": 1080
+  },
+  "/wallpapers/scenic/snoopy-cassette-days/tablet.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/snoopy-cassette-days/tablet-456a71391a1890a1",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792797484/schedsnap/wallpapers/scenic/snoopy-cassette-days/tablet-456a71391a1890a1.png",
+    "width": 1600,
+    "height": 2560
+  },
+  "/wallpapers/scenic/snoopy-daisy-pause/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/snoopy-daisy-pause/mobile-e5716b819747c1eb",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792797485/schedsnap/wallpapers/scenic/snoopy-daisy-pause/mobile-e5716b819747c1eb.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/snoopy-lazy-afternoon/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/snoopy-lazy-afternoon/mobile-ef19f0996124a7bc",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792797487/schedsnap/wallpapers/scenic/snoopy-lazy-afternoon/mobile-ef19f0996124a7bc.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/snoopy-daisy-pause/tablet.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/snoopy-daisy-pause/tablet-c70d79a4902a08d1",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792797487/schedsnap/wallpapers/scenic/snoopy-daisy-pause/tablet-c70d79a4902a08d1.png",
+    "width": 1600,
+    "height": 2560
+  },
+  "/wallpapers/scenic/snoopy-lazy-afternoon/tablet.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/snoopy-lazy-afternoon/tablet-5eee8c0a5f63416d",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792797487/schedsnap/wallpapers/scenic/snoopy-lazy-afternoon/tablet-5eee8c0a5f63416d.png",
+    "width": 1600,
+    "height": 2560
+  },
+  "/wallpapers/scenic/snoopy-lazy-afternoon/laptop.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/snoopy-lazy-afternoon/laptop-f0b4e8b5e126d0ba",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792797486/schedsnap/wallpapers/scenic/snoopy-lazy-afternoon/laptop-f0b4e8b5e126d0ba.png",
+    "width": 1920,
+    "height": 1080
   }
 };
