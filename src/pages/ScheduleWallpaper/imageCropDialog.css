@@ -1,4 +1,4 @@
-.class-edit-dialog.image-crop-dialog { width: min(760px, calc(100vw - 32px)); }
+.class-edit-dialog.image-crop-dialog { width: min(760px, calc(100vw - 32px)); overflow: hidden; }
 .image-crop-dialog > p { margin: 12px 0; color: var(--color-muted); font-size: 14px; line-height: 1.5; }
 .crop-workspace { display: flex; justify-content: center; padding: 24px; background: #e2e8f0; border-radius: 12px; overflow: hidden; }
 .crop-stage { position: relative; max-width: 100%; }

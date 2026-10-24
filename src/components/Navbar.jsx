@@ -71,7 +71,7 @@ export default function Navbar() {
     event.preventDefault();
     navigateTo(event.currentTarget.hash.slice(1));
   }
-  const sectionLinks = [['how-it-works', 'How it works'], ['collections', 'Collections'], ['designs', 'Designs'], ['faq', 'FAQs']].map(([id, label]) => <a key={id} href={`#${id}`} onClick={handleSectionClick}>{label}</a>);
+  const sectionLinks = [['how-it-works', 'How it works'], ['designs', 'Designs'], ['faq', 'FAQs']].map(([id, label]) => <a key={id} href={`#${id}`} onClick={handleSectionClick}>{label}</a>);
   return (
     <header className={`site-header${menuOpen ? ' mobile-menu-open' : ''}${isHome ? ` site-header-home${!scrolled ? ' is-at-top' : ''}` : ''}`}>
       <div className="page-wrap site-header-inner">

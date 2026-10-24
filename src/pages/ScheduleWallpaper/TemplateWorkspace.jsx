@@ -1,6 +1,6 @@
 import ResponsiveDisclosure from '../../components/ResponsiveDisclosure.jsx';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { ArrowRight, Download, Eye, Heart, Images, Maximize2, Pencil, SlidersHorizontal, TriangleAlert } from 'lucide-react';
+import { ArrowRight, Download, Heart, Images, Maximize2, Pencil, SlidersHorizontal, TriangleAlert } from 'lucide-react';
 import { getScheduleIssues } from '../../../shared/scheduleSchema.js';
 import { canvasBlob, drawWallpaper, getReviewWarnings } from '../../utils/canvasHelpers.js';
 import { prepareWallpaperAssets } from '../../utils/wallpaperAssets.js';
@@ -138,6 +138,7 @@ export default function TemplateWorkspace({ customizeRequest = 0, step, onStep, 
   }
 
   async function recordDownload() {
+    if (template.customBackground) return;
     const saved = await recordDesignDownload(template.id, resolution.id);
     if (saved && active.current) refreshDownloads();
   }
@@ -164,7 +165,7 @@ export default function TemplateWorkspace({ customizeRequest = 0, step, onStep, 
       void recordDownload();
       trackEvent('wallpaper_download_started', { ...properties, download_method: inApp ? 'new_tab' : 'download_link', duration_ms: Math.round(performance.now() - started) });
       setExportResult({ key: exportKey });
-      if (!vote?.liked) setThankYouDesign(template.id);
+      if (!template.customBackground && !vote?.liked) setThankYouDesign(template.id);
       setMessageKind('success');
       setMessage(
         inApp
@@ -180,7 +181,7 @@ export default function TemplateWorkspace({ customizeRequest = 0, step, onStep, 
       <WallpaperCanvas schedule={shownSchedule} template={template} resolution={resolution} onLayout={updateLayout} className="block h-auto w-full" label={`${template.name} ${hasSchedule ? 'with your classes' : 'with sample classes'}`} />
       <span className="preview-enlarge" aria-hidden="true"><Maximize2 size={16} /></span>
     </button>
-    {step === 'preview' && <div className="inline-preview-controls"><button type="button" aria-label="View full-screen preview" onClick={() => setEnlarged(true)}><Eye size={18} aria-hidden="true" /></button></div>}
+    {step === 'preview' && <div className="inline-preview-controls"><button type="button" aria-label="View full-screen preview" onClick={() => setEnlarged(true)}><Maximize2 size={18} aria-hidden="true" /></button></div>}
   </div>
 
   </>;
@@ -206,12 +207,12 @@ export default function TemplateWorkspace({ customizeRequest = 0, step, onStep, 
       <section className="download-options" aria-label="Download and customize">
         <h2>{template.name}</h2>
         <p className="download-meta">{schedule.classes.length} {schedule.classes.length === 1 ? 'class' : 'classes'} · {resolution.width} × {resolution.height}</p>
-        <div className="download-design-stats" role="group" aria-label="Design totals">
+        {!template.customBackground && <div className="download-design-stats" role="group" aria-label="Design totals">
           <span role="img" title={downloadError || 'Total downloads'} aria-label={`${downloads[template.id]?.toLocaleString() ?? 'Unavailable'} downloads`}><Download size={18} aria-hidden="true" /><span aria-hidden="true">{downloads[template.id]?.toLocaleString() ?? '—'}</span></span>
           <span role="img" className="download-design-hearts" data-liked={vote?.liked || false} title="Total hearts" aria-label={`${vote?.count.toLocaleString() ?? 'Unavailable'} hearts`}><Heart size={18} fill={vote?.liked ? 'currentColor' : 'none'} aria-hidden="true" /><span aria-hidden="true">{vote?.count.toLocaleString() ?? '—'}</span></span>
           {downloadError && <button type="button" className="text-link" onClick={refreshDownloads}>Retry downloads</button>}
           {likeError && <button type="button" className="text-link" disabled={!!pendingLikes} onClick={() => refreshLikes(true)}>Retry hearts</button>}
-        </div>
+        </div>}
         <button type="button" onClick={download} disabled={!canDownload} aria-describedby={exportStatus ? 'wallpaper-export-status' : undefined} className="button-primary download-wallpaper"><Download size={18} aria-hidden="true" />{exporting ? 'Creating PNG…' : exportResult?.key === exportKey ? 'Download again' : 'Download wallpaper'}</button>
         {exportStatus && <div className={`export-status${issues.length || warnings.length || previewFeedback?.overflow ? ' class-dialog-incomplete export-warning' : ''}`} role="status" id="wallpaper-export-status">{(issues.length > 0 || warnings.length > 0 || previewFeedback?.overflow) && <TriangleAlert size={20} aria-hidden="true" />}<div><p>{exportStatus}</p>{(issues.length > 0 || warnings.length > 0 || previewFeedback?.overflow) && <button type="button" className="text-link" onClick={() => onStep('classes')}>{schedule.classes.length ? 'Fix class details' : 'Add classes'}</button>}{previewFeedback?.error && <button type="button" className="text-link" onClick={() => onStep('design')}>Change design</button>}</div></div>}
         <div className="wallpaper-edit-actions"><button type="button" className="button-secondary" onClick={() => onStep('classes')}><Pencil size={16} aria-hidden="true" />Edit classes</button><button type="button" className="button-secondary" onClick={() => onStep('design')}><Images size={16} aria-hidden="true" />Change design</button></div>

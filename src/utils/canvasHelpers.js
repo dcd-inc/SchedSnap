@@ -553,7 +553,7 @@ function drawScheduleCards(ctx, baseTemplate, layout) {
       ctx.fillStyle = template.muted; textFont(layout.size * 0.65);
       entry.detailLines.forEach((line, i) => ctx.fillText(line, subjectCenter, entry.detailY + i * layout.detailLineHeight));
       ctx.textAlign = 'center';
-      ctx.fillStyle = template.muted;
+      ctx.fillStyle = template.customBackground ? template.ink : template.muted;
       entry.timeLines.forEach((line, i) => ctx.fillText(line, plan.timeX + (plan.timeWidth - 16) / 2, entry.timeY + i * layout.timeLineHeight));
       ctx.textAlign = 'center'; ctx.fillStyle = template.ink; textFont(layout.size * 0.8, 650);
       entry.roomLines.forEach((line, i) => ctx.fillText(line, plan.roomX + plan.roomWidth / 2, entry.roomY + i * layout.roomLineHeight));
@@ -593,7 +593,7 @@ function drawDayCards(ctx, baseTemplate, layout) {
     }
     for (const [index, entry] of plan.entries.entries()) {
       const textX = plan.x + 80;
-      ctx.textAlign = 'left'; ctx.fillStyle = template.muted;
+      ctx.textAlign = 'left'; ctx.fillStyle = template.customBackground ? template.ink : template.muted;
       font(ctx, layout.size * 0.65, 500, template.fontFamily);
       entry.timeLines.forEach((line, i) => ctx.fillText(line, textX, entry.y + i * layout.smallLineHeight));
       let textY = entry.y + entry.timeLines.length * layout.smallLineHeight + 10;
@@ -657,7 +657,7 @@ function drawTimeline(ctx, baseTemplate, layout) {
       ctx.fillStyle = template.muted; font(ctx, layout.size * 0.65, 500, template.fontFamily);
       entry.detailLines.forEach((line, i) => ctx.fillText(line, plan.subjectX, entry.detailY + i * layout.detailLineHeight));
       font(ctx, layout.size * 0.78, 500, template.fontFamily);
-      ctx.fillStyle = template.muted;
+      ctx.fillStyle = template.customBackground ? template.ink : template.muted;
       entry.timeLines.forEach((line, i) => ctx.fillText(line, plan.timeX, entry.timeY + i * layout.timeLineHeight));
       ctx.fillStyle = template.ink; font(ctx, layout.size * 0.8, 500, template.fontFamily);
       entry.roomLines.forEach((line, i) => ctx.fillText(line, plan.roomX, entry.roomY + i * layout.roomLineHeight));

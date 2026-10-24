@@ -1,3 +1,4 @@
+import useMobileSheetDismiss from '../../lib/useMobileSheetDismiss.js';
 import { Link } from 'react-router';
 import { createPortal } from 'react-dom';
 import { useCallback, useEffect, useImperativeHandle, useRef, useState } from 'react';
@@ -11,6 +12,7 @@ const importStages = ['Reading the image…', 'Identifying courses…', 'Finding
 
 function UploadTipsDialog({ onContinue, onClose }) {
   const dialog = useRef(null);
+  useMobileSheetDismiss(dialog, onClose);
   useEffect(() => {
     const element = dialog.current;
     element.showModal();
@@ -35,6 +37,7 @@ function UploadTipsDialog({ onContinue, onClose }) {
 
 function ReplaceConfirmDialog({ onConfirm, onClose }) {
   const dialog = useRef(null);
+  useMobileSheetDismiss(dialog, onClose);
   useEffect(() => {
     const element = dialog.current;
     element.showModal();

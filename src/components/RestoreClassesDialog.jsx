@@ -1,9 +1,11 @@
+import useMobileSheetDismiss from '../lib/useMobileSheetDismiss.js';
 import { useEffect, useRef } from 'react';
 import { X } from 'lucide-react';
 import './restoreClassesDialog.css';
 
 export default function RestoreClassesDialog({ count, onRestore, onDiscard }) {
   const dialog = useRef(null);
+  useMobileSheetDismiss(dialog, onDiscard);
   useEffect(() => {
     const element = dialog.current;
     const previousFocus = document.activeElement;

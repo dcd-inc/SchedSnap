@@ -1,5 +1,6 @@
+import useMobileSheetDismiss from '../../lib/useMobileSheetDismiss.js';
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { ArrowRight, ChevronDown, Heart, X } from 'lucide-react';
+import { ArrowRight, ChevronDown, Heart, Plus, X } from 'lucide-react';
 import { deviceResolutions, galleryScheduleFor } from '../../assets/wallpaperPresets.js';
 import useInfiniteGallery from '../../lib/useInfiniteGallery.js';
 import { useCatalogStatus } from '../../lib/catalogContext.js';
@@ -22,7 +23,7 @@ import { searchWallpaperTemplates } from '../../utils/wallpaperSearch.js';
 
 const previewSchedule = galleryScheduleFor;
 
-export default function TemplateGallery({ selectedId, settings = {}, schedule: enteredSchedule, scheduleTitle = 'Class Schedule', onSelect, category: selectedCategory = 'all', onCategoryChange, device = 'mobile', onDeviceChange, sort = 'likes', onSortChange, previewLayout = 'stacked', onLayoutChange, previewStyle = 'glass', onStyleChange, searchQuery = '', onClearSearch }) {
+export default function TemplateGallery({ onUpload, selectedId, settings = {}, schedule: enteredSchedule, scheduleTitle = 'Class Schedule', onSelect, category: selectedCategory = 'all', onCategoryChange, device = 'mobile', onDeviceChange, sort = 'likes', onSortChange, previewLayout = 'stacked', onLayoutChange, previewStyle = 'glass', onStyleChange, searchQuery = '', onClearSearch }) {
   const schedule = enteredSchedule;
   const { templates: wallpaperTemplates, loading: catalogLoading, error } = useCatalogStatus();
   const thumbnailWidth = device === 'laptop' ? 480 : device === 'tablet' ? 384 : 270;
@@ -67,6 +68,16 @@ export default function TemplateGallery({ selectedId, settings = {}, schedule: e
     {downloadError && <div className="gallery-like-error" role="alert"><span>{downloadError}</span><button type="button" className="text-link" onClick={refreshDownloads}>Retry</button></div>}
     {likeError && <div className="gallery-like-error" role="alert"><span>{likeError}</span><button type="button" className="text-link" onClick={() => refreshLikes(true)} disabled={!!pending}>Retry</button></div>}
     <div id="template-gallery" role="group" aria-label={`${activeCategoryName} gallery`} aria-busy={loading} className={`template-grid template-grid-${device}`}>
+      {onUpload && activeCategory === 'all' && !isSearching && <div className="template-card min-w-0">
+      <button type="button" className="gallery-upload-card" onClick={onUpload}>
+        <span className="gallery-upload-card-icon"><Plus size={28} aria-hidden="true" /></span>
+        <strong>Upload Background</strong>
+      </button>
+      <div className="template-card-caption"><div className="template-card-details">
+        <button type="button" className="template-card-name" onClick={onUpload}>Blank / Custom</button>
+        <p className="template-downloads">Upload your own wallpaper.</p>
+      </div></div>
+      </div>}
       {loading && Array.from({ length: 8 }, (_, i) => <GalleryCardSkeleton key={`skeleton-${i}`} device={device} />)}
       {!loading && visibleTemplates.length === 0 && (
         <div className="gallery-empty-state" role="status">
@@ -127,8 +138,9 @@ export default function TemplateGallery({ selectedId, settings = {}, schedule: e
   </div>;
 }
 
-function DesignPreview({ template, schedule, resolution, onClose, onSelect, onLayoutChange }) {
+export function DesignPreview({ template, schedule, resolution, onClose, onSelect, onLayoutChange, selectLabel = 'Use this design' }) {
   const dialog = useRef(null);
+  useMobileSheetDismiss(dialog, onClose);
   const layoutPicker = useRef(null);
   const selectedLayout = scheduleLayoutOptions(resolution.id).find(option => option.value === template.scheduleLayout) || scheduleLayoutOptions(resolution.id)[0];
   const SelectedLayoutIcon = layoutIcons[selectedLayout.value];
@@ -161,7 +173,7 @@ function DesignPreview({ template, schedule, resolution, onClose, onSelect, onLa
       document.removeEventListener('keydown', escape, true);
     };
   }, []);
-  return <dialog ref={dialog} className="design-preview-dialog" data-device={resolution.id} data-orientation={resolution.width > resolution.height ? 'landscape' : 'portrait'} style={{ '--design-preview-ratio': resolution.width / resolution.height }} aria-labelledby="design-preview-title" onCancel={onClose} onClick={(event) => { if (event.target === event.currentTarget) onClose(); }}>
+  return <dialog ref={dialog} className="design-preview-dialog" data-custom-background={template.customBackground || undefined} data-device={resolution.id} data-orientation={resolution.width > resolution.height ? 'landscape' : 'portrait'} style={{ '--design-preview-ratio': resolution.width / resolution.height }} aria-labelledby="design-preview-title" onCancel={onClose} onClick={(event) => { if (event.target === event.currentTarget) onClose(); }}>
     <header><h2 id="design-preview-title">{template.name}</h2><button type="button" className="template-modal-control" aria-label="Close design preview" onClick={onClose}><X size={20} aria-hidden="true" /></button></header>
     <div className="design-preview-body"><WallpaperCanvas schedule={schedule?.classes.length ? schedule : previewSchedule(template)} template={template} resolution={resolution} className="block h-auto w-full" label={`${template.name} with ${schedule?.classes.length ? 'your' : 'sample'} classes`} /></div>
     <footer>
@@ -171,7 +183,7 @@ function DesignPreview({ template, schedule, resolution, onClose, onSelect, onLa
           {scheduleLayoutOptions(resolution.id).map(option => { const Icon = layoutIcons[option.value]; return <button key={option.value} type="button" aria-pressed={template.scheduleLayout === option.value} onClick={event => { onLayoutChange(option.value); event.currentTarget.closest('details').open = false; }}><Icon aria-hidden="true" /><span>{option.label}</span></button>; })}
         </div>
       </details>
-      <button type="button" className="button-primary" onClick={onSelect}>Use this design<ArrowRight size={16} aria-hidden="true" /></button>
+      <button type="button" className="button-primary" onClick={onSelect}>{selectLabel}<ArrowRight size={16} aria-hidden="true" /></button>
     </footer>
   </dialog>;
 }

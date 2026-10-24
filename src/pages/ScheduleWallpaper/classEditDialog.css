@@ -50,7 +50,6 @@
   .row-class-editor .schedule-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 15px; }
   .flow-class-editor .row-class-editor .schedule-title-control .icon-button { width: 28px; }
   .class-edit-dialog { inset: auto 0 0; width: 100vw; max-width: 100vw; max-height: calc(100dvh - 16px); margin: 0; padding: 12px 20px var(--mobile-action-bottom, calc(12px + env(safe-area-inset-bottom, 0px))); border-radius: 20px 20px 0 0; }
-  .class-edit-dialog::before { content: ''; display: block; width: 36px; height: 4px; margin: 0 auto 8px; border-radius: 99px; background: #cbd5e1; }
 }
 
 .class-edit-dialog .required-marker { color: #b91c1c; }

@@ -79,6 +79,7 @@ export function customizeWallpaperTemplate(template, settings = {}, device = tem
   // Device defaults precede the user's explicit appearance choices.
   const customized = { ...template, ...defaults, ...settings };
   if (tabletPortrait) customized.orientation = 'portrait';
+  if (customized.customBackground && !settings.muted) customized.muted = customized.ink;
   if (settings.ink) {
     customized.muted = settings.ink;
     customized.headingInk = settings.ink;

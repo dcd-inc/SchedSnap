@@ -1,7 +1,7 @@
 const steps = [
   {
     title: 'Choose a design',
-    description: 'Pick your device and find a wallpaper that fits your style.',
+    description: 'Pick your device and find a wallpaper that fits your style, or upload your own wallpaper.',
     image: '/images/how-it-works/choose-design.webp',
     height: 512,
   },

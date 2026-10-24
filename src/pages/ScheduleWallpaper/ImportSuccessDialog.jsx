@@ -1,3 +1,4 @@
+import useMobileSheetDismiss from '../../lib/useMobileSheetDismiss.js';
 import { useEffect, useRef } from 'react';
 import { Check, X } from 'lucide-react';
 import confetti from 'canvas-confetti';
@@ -5,6 +6,7 @@ import ProviderIcon from './ProviderIcon.jsx';
 
 export default function ImportSuccessDialog({ provider, classCount, onView, onClose }) {
   const dialog = useRef(null);
+  useMobileSheetDismiss(dialog, onClose);
   const canvas = useRef(null);
   const name = provider === 'deepseek' ? 'DeepSeek' : 'Gemini';
   useEffect(() => {

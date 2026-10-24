@@ -1,8 +1,40 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { getCropView, moveCrop, resizeCrop } from '../src/utils/imageCrop.js';
+import { aspectCrop, getCropView, moveCrop, resizeCrop } from '../src/utils/imageCrop.js';
+
+test('device crops preserve the target aspect ratio through every corner resize and movement', () => {
+  for (const sourceRatio of [0.3, 1, 1.5, 3]) for (const targetRatio of [1080 / 2400, 1600 / 2560, 1920 / 1080]) {
+    const normalizedRatio = targetRatio / sourceRatio;
+    const initial = aspectCrop(sourceRatio, targetRatio);
+    const check = crop => {
+      assert.ok(Math.abs((crop.right - crop.left) / (crop.bottom - crop.top) * sourceRatio - targetRatio) < 1e-8);
+      assert.ok(crop.left >= -1e-10 && crop.top >= -1e-10 && crop.right <= 1 + 1e-10 && crop.bottom <= 1 + 1e-10);
+      assert.ok(crop.right > crop.left && crop.bottom > crop.top);
+    };
+    check(initial);
+    for (const corner of ['nw', 'ne', 'sw', 'se']) for (const [dx, dy] of [[-2, 2], [2, -2], [0.1, 0], [0, -0.1]]) {
+      const resized = resizeCrop(initial, corner, dx, dy, normalizedRatio);
+      check(resized);
+      check(moveCrop(resized, 2, -2));
+    }
+  }
+});
 
 const box = { left: 0.2, top: 0.2, right: 0.8, bottom: 0.8 };
+
+test('device crop views fill their frame without stretching the photo or changing the selected pixels', () => {
+  for (const sourceRatio of [0.3, 1, 1.5, 3]) for (const targetRatio of [1080 / 2400, 1600 / 2560, 1920 / 1080]) {
+    const initial = aspectCrop(sourceRatio, targetRatio);
+    for (const selection of [initial, resizeCrop(initial, 'se', -0.1, -0.1, targetRatio / sourceRatio)]) {
+      const view = getCropView(selection, true);
+      const viewWidth = view.right - view.left, viewHeight = view.bottom - view.top;
+      assert.ok(Math.abs(sourceRatio * viewWidth / viewHeight - targetRatio) < 1e-8, 'uniform image scaling in the device frame');
+      assert.ok((selection.right - selection.left) / viewWidth > 0.98, 'selection fills the crop frame');
+      assert.ok(view.left >= -1e-10 && view.top >= -1e-10 && view.right <= 1 + 1e-10 && view.bottom <= 1 + 1e-10);
+      assert.ok(view.left <= selection.left + 1e-10 && view.right >= selection.right - 1e-10);
+    }
+  }
+});
 
 test('preview zooms to the selection with handle clearance without changing the crop', () => {
   const selection = { left: 0.2, top: 0.3, right: 0.6, bottom: 0.5 };
