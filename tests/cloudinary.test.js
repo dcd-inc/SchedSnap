@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import manifest from '../src/assets/cloudinaryManifest.js';
 import { cloudinaryAssetUrl } from '../src/utils/cloudinaryAssets.js';
+import { cloudinaryImageUrl } from '../src/utils/cloudinaryImageUrl.js';
 
 
 
@@ -23,4 +24,14 @@ test('mapped previews are resized without cropping; export artwork stays PNG', (
 test('direct Cloudinary pixel masters without dimensions remain lossless and unscaled', () => {
   const url = 'https://res.cloudinary.com/example/image/upload/v123/schedsnap/images/pixel-mascots/masters/pixel-cat-0123456789abcdef.png';
   assert.equal(cloudinaryAssetUrl(url), url.replace('/image/upload/', '/image/upload/f_png/'));
+});
+
+test('manifest-free Cloudinary delivery matches legacy preview and export URLs', () => {
+  const asset = Object.values(manifest)[0];
+  for (const resolution of [{ width: 270, height: 600 }, { width: 1080, height: 2400 }, { width: 1920, height: 1080 }]) {
+    for (const lossless of [false, true]) {
+      assert.equal(cloudinaryImageUrl({ url: asset.url }, resolution, { lossless }),
+        cloudinaryAssetUrl(asset.url, resolution, { lossless }));
+    }
+  }
 });

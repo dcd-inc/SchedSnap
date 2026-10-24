@@ -15,15 +15,18 @@ export function WallpaperCanvas({ schedule, template, resolution, className = ''
     return { ...resolution, width: Math.round(resolution.width * scale), height: Math.round(resolution.height * scale) };
   }, [resolution]);
   const renderKey = JSON.stringify([schedule, template, renderResolution]);
+  // Gallery parents recreate these objects on likes, downloads and catalog refreshes.
+  // Keep drawing inputs stable until their values actually change.
+  const [drawSchedule, drawTemplate, drawResolution] = useMemo(() => JSON.parse(renderKey), [renderKey]);
   const pending = readyKey !== renderKey;
   useEffect(() => {
     let cancelled = false;
-    const render = () => prepareWallpaperAssets(template, renderResolution).then(async (backgroundImage) => {
+    const render = () => prepareWallpaperAssets(drawTemplate, drawResolution).then(async (backgroundImage) => {
       // Give input and painting a turn between gallery canvases that become ready together.
       if (lazy) await new Promise(resolve => setTimeout(resolve, 0));
       if (cancelled) return;
       try {
-        const layout = drawWallpaper(canvas.current, { schedule, template, resolution: renderResolution, backgroundImage });
+        const layout = drawWallpaper(canvas.current, { schedule: drawSchedule, template: drawTemplate, resolution: drawResolution, backgroundImage });
         setReadyKey(renderKey);
         setFailure('');
         onLayout?.({ overflow: layout.overflow, positionOffset: layout.positionOffset, error: '', ready: true });
@@ -37,7 +40,7 @@ export function WallpaperCanvas({ schedule, template, resolution, className = ''
       observer.observe(canvas.current);
     } else render();
     return () => { cancelled = true; observer?.disconnect(); };
-  }, [schedule, template, renderResolution, renderKey, onLayout, lazy]);
+  }, [drawSchedule, drawTemplate, drawResolution, renderKey, onLayout, lazy]);
   return <><canvas ref={canvas} width={renderResolution.width} height={renderResolution.height} role="img" aria-label={pending ? `Loading ${label}` : label} aria-busy={pending} className={`${className} ${pending ? 'wallpaper-skeleton' : ''}`} style={{ backgroundColor: template.background }} />{!pending && failure && <span role="alert" className="text-xs text-muted">{failure}</span>}</>;
 }
 

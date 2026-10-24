@@ -1,4 +1,4 @@
-import { cloudinaryAssetUrl } from './cloudinaryAssets.js';
+import { cloudinaryImageUrl } from './cloudinaryImageUrl.js';
 
 const images = new Map();
 const fonts = new Map();
@@ -26,8 +26,15 @@ export async function prepareWallpaperAssets(template, resolution) {
   const sourcePath = template.deviceImages?.[resolution?.id || 'mobile'] || template.image;
   // Pixel previews stay lossless and use nearest-neighbor Canvas rendering.
   // Keep unapproved Hunter revisions local during development.
-  const imagePath = import.meta.env?.DEV && template.collection === 'hunter-x-hunter'
-    ? sourcePath : cloudinaryAssetUrl(sourcePath, resolution, { lossless: !!template.pixelArt });
+  let imagePath = sourcePath;
+  const options = { lossless: !!template.pixelArt };
+  if (typeof sourcePath === 'string' && /^https:\/\/res\.cloudinary\.com\/[a-z0-9_-]+\/image\/upload\//i.test(sourcePath)) {
+    imagePath = cloudinaryImageUrl({ url: sourcePath }, resolution, options);
+  } else if (sourcePath && !(import.meta.env?.DEV && template.collection === 'hunter-x-hunter')) {
+    // Legacy local paths need the manifest; published Cloudinary URLs do not.
+    const { cloudinaryAssetUrl } = await import('./cloudinaryAssets.js');
+    imagePath = cloudinaryAssetUrl(sourcePath, resolution, options);
+  }
   // Only the selected font must be ready before measuring canvas text.
   const family = template.fontFamily || 'DM Sans Variable';
   if (family !== 'DM Sans Variable' && typeof window !== 'undefined') {
