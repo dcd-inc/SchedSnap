@@ -6,12 +6,12 @@ export function CatalogProvider({ children }) {
     const controller = new AbortController();
     // Match the static shell's crossorigin fetch preload so the browser can
     // reuse that early response instead of downloading the catalog twice.
-    const load = () => fetch('/api/catalog', { signal: controller.signal, mode: 'cors', credentials: 'same-origin' }).then(async response => {
+    const load = () => fetch('/api/catalog', { signal: AbortSignal.any([controller.signal, AbortSignal.timeout(15000)]), mode: 'cors', credentials: 'same-origin' }).then(async response => {
       if (!response.ok) throw new Error('Could not load designs. Please try again.');
       const data = await response.json();
       if (!Array.isArray(data.templates)) throw new Error('Could not load designs. Please try again.');
       setCatalog({ templates: data.templates, loading: false, error: '' });
-    }).catch(error => { if (!controller.signal.aborted) setCatalog(previous => ({ ...previous, loading: false, error: error.message })); });
+    }).catch(error => { if (!controller.signal.aborted) setCatalog(previous => ({ ...previous, loading: false, error: error.name === 'TimeoutError' ? 'Designs took too long to load. Please reload to try again.' : error.message })); });
     load();
     const refresh = () => { if (!document.hidden) load(); };
     const timer = setInterval(refresh, 60000);

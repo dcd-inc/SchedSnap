@@ -23,7 +23,7 @@ export default function WallpaperLoading() {
         </div>
       </div>
       <div className={`template-grid template-grid-${device}`}>
-        {Array.from({ length: 8 }, (_, index) => <GalleryCardSkeleton key={index} device={device} />)}
+        {Array.from({ length: 10 }, (_, index) => <GalleryCardSkeleton key={index} device={device} />)}
       </div>
     </div>
   </section>;

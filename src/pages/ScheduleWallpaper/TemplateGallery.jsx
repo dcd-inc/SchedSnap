@@ -30,9 +30,9 @@ export default function TemplateGallery({ onUpload, selectedId, settings = {}, s
   const designResolution = () => deviceResolutions[device];
   const category = ['chikawa', 'little-friends'].includes(selectedCategory) ? 'chiikawa' : galleryCategories.some((item) => item.id === selectedCategory) ? selectedCategory : 'all';
   const [preview, setPreview] = useState(null);
-  const { likes, rankingLikes, loading: likesLoading, pending, error: likeError, refresh: refreshLikes, toggle: toggleLike } = useDesignLikes();
+  const { likes, rankingLikes, pending, error: likeError, refresh: refreshLikes, toggle: toggleLike } = useDesignLikes();
   const { downloads, error: downloadError, refresh: refreshDownloads } = useDesignDownloads(device);
-  const loading = catalogLoading || likesLoading;
+  const loading = catalogLoading;
   const isSearching = Boolean(searchQuery && searchQuery.trim());
   const activeCategory = isSearching ? 'all' : category;
 
@@ -78,7 +78,7 @@ export default function TemplateGallery({ onUpload, selectedId, settings = {}, s
         <p className="template-downloads">Upload your own wallpaper.</p>
       </div></div>
       </div>}
-      {loading && Array.from({ length: 8 }, (_, i) => <GalleryCardSkeleton key={`skeleton-${i}`} device={device} />)}
+      {loading && Array.from({ length: 10 }, (_, i) => <GalleryCardSkeleton key={`skeleton-${i}`} device={device} />)}
       {!loading && visibleTemplates.length === 0 && (
         <div className="gallery-empty-state" role="status">
           {isSearching ? (
