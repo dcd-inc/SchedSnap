@@ -1,6 +1,6 @@
 {
   "provider": "built-in image_gen",
-  "createdAt": "2026-10-23T23:33:17.067Z",
+  "createdAt": "2026-10-24T00:13:31.707Z",
   "assets": [
     {
       "id": "naruto-resolute-ink",
@@ -10,21 +10,24 @@
       "height": 2400,
       "sourceWidth": 841,
       "sourceHeight": 1870,
-      "bytes": 973840,
-      "sha256": "3a91f9388c2e147f4ae46ec9b3fcaba1f999254d400f50916d318da481f1e027",
+      "bytes": 1362801,
+      "sha256": "3b2b175601d631017cabd68e02875bc307b5af9a7b78acffd77f1185df1415ac",
       "opaque": true,
       "dimensionsValid": true,
       "inkBounds": {
-        "x": 0.28425925925925927,
-        "y": 0.79125,
-        "right": 0.7231481481481481,
-        "bottom": 0.97
+        "x": 0,
+        "y": 0.76375,
+        "right": 0.41759259259259257,
+        "bottom": 0.9995833333333334
       },
       "prompt": "Use case: illustration-story. ONE opaque full-bleed 1080x2400 tall portrait background for a timetable rendered separately by app. Reference image is the primary composition, character and drawing-style guide. Subject: Naruto Uzumaki leaning his head down and looking intently to the right, white spiky hair, three whisker lines on each cheek, little scratches and fine hatching, solid black high zip collar and jacket, exact reference head angle and youthful face. Match reference black-and-white manga ink art accurately: natural thin imperfect pen outlines, deliberate dense solid black hair/clothes, sparse hand hatch strokes, authentic reference face proportions, sharp but human penwork; no added grey shading, screen tones, gradients or textures beyond the reference's own hatching. Flat very pale grey #f3f3f3 paper ground. Place the COMPLETE scene VERY SMALL at bottom center. ALL illustration pixels strictly within y86%-99%; top84% entirely empty matching paper. MAXIMUM scene height13%, max width42% of canvas. Keep all subject details and accessories within the tiny scene, not scattered across page. Mandatory huge blank schedule area. No timetable, UI, badges, titles, signature, watermark, extra characters, decorative border, 3D or montage. No text.",
-      "repairPrompts": [],
+      "repairPrompts": [
+        "Precise composition edit of attached artwork. Preserve the exact existing manga drawing style and all character likenesses, original pen contours, hatch marks, shadows, clothing, accessories and facial details. User likes the art but wants it a little bigger, anchored to the physical page edge so it no longer appears to be a floating cut-off sticker. Make Naruto about 20% larger and place him FLUSH at the BOTTOM-LEFT CORNER, jacket touching left edge and bottom edge with no floating cutoff. Keep face and hair fully visible. Artwork must be entirely in bottom20%, y80-100%; upper78% blank. Keep current mobile canvas aspect ratio and original uniform paper background. Do not redraw in a different style. Do not add new characters, faces, decorations, text, gradients, frames or schedule. The edge anchoring is mandatory; don't leave a pale margin between cropped artwork and the bottom edge.",
+        "Correct ONLY artwork size and location. Keep exact current drawing style, all face/clothing/accessory details and hatching. Reduce complete existing illustration to 70% of current size, keep original proportions. ANCHOR it FLUSH to BOTTOM-LEFT CORNER. Cropped jacket/torso must touch bottom AND left edge, no floating white gap. Keep face and hair fully visible. ALL artwork strictly in bottom20%, y80-100%; top78% completely blank original flat background. Preserve portrait canvas ratio. No extra figures, text, UI, gradient, borders or different art style. Keep it clearly larger than a tiny sticker, but no part may intrude above y80%."
+      ],
       "originalSource": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-2b09eb84-7efa-4dad-9eab-d936a222224c.png",
       "reference": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\codex-clipboard-474cc712-6d2c-4e28-a0f1-c2b21881fc58.png",
-      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-2b09eb84-7efa-4dad-9eab-d936a222224c.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-88381d60-c827-4688-b70a-862d4fc35247.png",
       "visuallyReviewed": true
     },
     {
@@ -35,23 +38,26 @@
       "height": 2560,
       "sourceWidth": 992,
       "sourceHeight": 1586,
-      "bytes": 1639468,
-      "sha256": "abed95a3097426aab081bda2eeaa2a5f3b59fad930dd431c39db2a6d501423fa",
+      "bytes": 1685515,
+      "sha256": "1ee75c793f5f3f890de7331d4a7d34471fec38af302aa70b0847cd8366a97471",
       "opaque": true,
       "dimensionsValid": true,
       "inkBounds": {
-        "x": 0.379375,
-        "y": 0.83515625,
-        "right": 0.62,
-        "bottom": 0.979296875
+        "x": 0,
+        "y": 0.8078125,
+        "right": 0.245,
+        "bottom": 0.99921875
       },
       "prompt": "Use case: illustration-story. ONE opaque full-bleed 1600x2560 portrait background for a timetable rendered separately by app. Reference image is the primary composition, character and drawing-style guide. Subject: Naruto Uzumaki leaning his head down and looking intently to the right, white spiky hair, three whisker lines on each cheek, little scratches and fine hatching, solid black high zip collar and jacket, exact reference head angle and youthful face. Match reference black-and-white manga ink art accurately: natural thin imperfect pen outlines, deliberate dense solid black hair/clothes, sparse hand hatch strokes, authentic reference face proportions, sharp but human penwork; no added grey shading, screen tones, gradients or textures beyond the reference's own hatching. Flat very pale grey #f3f3f3 paper ground. Place the COMPLETE scene VERY SMALL at bottom center. ALL illustration pixels strictly within y86%-99%; top84% entirely empty matching paper. MAXIMUM scene height13%, max width42% of canvas. Keep all subject details and accessories within the tiny scene, not scattered across page. Mandatory huge blank schedule area. No timetable, UI, badges, titles, signature, watermark, extra characters, decorative border, 3D or montage. No text.",
       "repairPrompts": [
-        "Placement-only correction to this attached manga wallpaper. Keep ALL artwork, identity, facial features, clothing, sword, rope belt, any hatched shadow and original fine pen linework unchanged. Shrink ENTIRE illustrated scene to 50% of its current size, with original proportions. Place it centered at bottom with bottom at y98%. ALL illustration must be strictly below y85%, top83% entirely empty original flat paper background. Keep exact original portrait canvas aspect ratio. Extend original background into newly empty areas. No zooming back in, no added details, no schedule, text, gradient or border. Preserve the artwork's existing natural human ink style."
+        "Placement-only correction to this attached manga wallpaper. Keep ALL artwork, identity, facial features, clothing, sword, rope belt, any hatched shadow and original fine pen linework unchanged. Shrink ENTIRE illustrated scene to 50% of its current size, with original proportions. Place it centered at bottom with bottom at y98%. ALL illustration must be strictly below y85%, top83% entirely empty original flat paper background. Keep exact original portrait canvas aspect ratio. Extend original background into newly empty areas. No zooming back in, no added details, no schedule, text, gradient or border. Preserve the artwork's existing natural human ink style.",
+        "Precise composition edit of attached artwork. Preserve the exact existing manga drawing style and all character likenesses, original pen contours, hatch marks, shadows, clothing, accessories and facial details. User likes the art but wants it a little bigger, anchored to the physical page edge so it no longer appears to be a floating cut-off sticker. Make Naruto about 20% larger and place him FLUSH at the BOTTOM-LEFT CORNER, jacket touching left edge and bottom edge with no floating cutoff. Keep face and hair fully visible. Artwork must be entirely in bottom20%, y80-100%; upper78% blank. Keep current tablet canvas aspect ratio and original uniform paper background. Do not redraw in a different style. Do not add new characters, faces, decorations, text, gradients, frames or schedule. The edge anchoring is mandatory; don't leave a pale margin between cropped artwork and the bottom edge.",
+        "Correct ONLY artwork size and location. Keep exact current drawing style, all face/clothing/accessory details and hatching. Reduce complete existing illustration to 60% of current size, keep original proportions. ANCHOR it FLUSH to BOTTOM-LEFT CORNER. Cropped jacket/torso must touch bottom AND left edge, no floating white gap. Keep face and hair fully visible. ALL artwork strictly in bottom20%, y80-100%; top78% completely blank original flat background. Preserve portrait canvas ratio. No extra figures, text, UI, gradient, borders or different art style. Keep it clearly larger than a tiny sticker, but no part may intrude above y80%.",
+        "Pure zoom-out/placement correction, no redraw. Treat the ENTIRE attached wallpaper as one image. Reduce it to 85% of its current width AND height, then anchor it exactly at the bottom-left corner of a canvas of the ORIGINAL dimensions; fill newly empty area with its identical original flat background. This shrinks the manga artwork while preserving its existing exact proportions, ink linework and face/lettering details. The illustration must remain touching BOTTOM and LEFT edge, with no margin there. Keep all ink below y80%, leave upper78% blank. No new characters, accessories, lettering, frame, gradient, texture or schedule. Do not zoom back in after resizing. Keep all original ink details and original human-drawn aesthetics."
       ],
       "originalSource": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-61c8263d-5e86-42de-82ff-755c2686aa9d.png",
       "reference": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\codex-clipboard-474cc712-6d2c-4e28-a0f1-c2b21881fc58.png",
-      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-0ab6fcd9-88e2-47e8-9734-8a4a844263c9.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-731a5c18-b5a3-4445-a631-1b7cde476dfd.png",
       "visuallyReviewed": true
     },
     {
@@ -62,21 +68,23 @@
       "height": 1080,
       "sourceWidth": 1672,
       "sourceHeight": 941,
-      "bytes": 825331,
-      "sha256": "68a01157eee72de1e4e836bf2971836b9a490becb7b5fe3198a69cdf5b2a62fb",
+      "bytes": 1180210,
+      "sha256": "075e4946c6305f027e7be4790f5549755d5c60183f9f3b308bbb884b0f8f0d6e",
       "opaque": true,
       "dimensionsValid": true,
       "inkBounds": {
-        "x": 0.7119791666666667,
-        "y": 0.5212962962962963,
-        "right": 0.9729166666666667,
+        "x": 0,
+        "y": 0.30833333333333335,
+        "right": 0.35052083333333334,
         "bottom": 0.9990740740740741
       },
       "prompt": "Use case: illustration-story. ONE opaque full-bleed 1920x1080 wide landscape background for a timetable rendered separately by app. Reference image is the primary composition, character and drawing-style guide. Subject: Naruto Uzumaki leaning his head down and looking intently to the right, white spiky hair, three whisker lines on each cheek, little scratches and fine hatching, solid black high zip collar and jacket, exact reference head angle and youthful face. Match reference black-and-white manga ink art accurately: natural thin imperfect pen outlines, deliberate dense solid black hair/clothes, sparse hand hatch strokes, authentic reference face proportions, sharp but human penwork; no added grey shading, screen tones, gradients or textures beyond the reference's own hatching. Flat very pale grey #f3f3f3 paper ground. Place the COMPLETE scene SMALL at bottom-right. ALL illustration pixels strictly within x79%-98% and y50%-98%; left77% entirely empty matching paper. MAXIMUM scene width19% of canvas. Keep all subject details and accessories within the tiny scene, not scattered across page. Mandatory huge blank schedule area. No timetable, UI, badges, titles, signature, watermark, extra characters, decorative border, 3D or montage. No text.",
-      "repairPrompts": [],
+      "repairPrompts": [
+        "Precise composition edit of attached artwork. Preserve the exact existing manga drawing style and all character likenesses, original pen contours, hatch marks, shadows, clothing, accessories and facial details. User likes the art but wants it a little bigger, anchored to the physical page edge so it no longer appears to be a floating cut-off sticker. Enlarge Naruto modestly, about 20%, and ANCHOR him flush to the LEFT and BOTTOM canvas edges, not right. Black jacket continues seamlessly beyond bottom and left edge. Face and hair fully visible. All artwork confined to leftmost30%, x0-30%; right66% entirely blank. Keep current laptop canvas aspect ratio and original uniform paper background. Do not redraw in a different style. Do not add new characters, faces, decorations, text, gradients, frames or schedule. The edge anchoring is mandatory; don't leave a pale margin between cropped artwork and the bottom edge."
+      ],
       "originalSource": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-a5a91aff-abdf-4bb3-b6a0-f061bf343c48.png",
       "reference": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\codex-clipboard-474cc712-6d2c-4e28-a0f1-c2b21881fc58.png",
-      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-a5a91aff-abdf-4bb3-b6a0-f061bf343c48.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-e77a742b-cce6-4f59-810a-4bad5beb6d1c.png",
       "visuallyReviewed": true
     },
     {
@@ -87,23 +95,26 @@
       "height": 2400,
       "sourceWidth": 841,
       "sourceHeight": 1870,
-      "bytes": 1323336,
-      "sha256": "c732095148bd8544402d40f8181df827f1c8483136c88b2ae13260103a6cfc50",
+      "bytes": 1338802,
+      "sha256": "3326f3ed60941debd0f8c01eec609c91633600aabc4d699092399592e5a2b858",
       "opaque": true,
       "dimensionsValid": true,
       "inkBounds": {
-        "x": 0.3962962962962963,
-        "y": 0.7879166666666667,
-        "right": 0.6129629629629629,
-        "bottom": 0.9645833333333333
+        "x": 0.6851851851851852,
+        "y": 0.7579166666666667,
+        "right": 0.9981481481481481,
+        "bottom": 0.9995833333333334
       },
       "prompt": "Use case: illustration-story. ONE opaque full-bleed 1080x2400 tall portrait background for a timetable rendered separately by app. Reference image is the primary composition, character and drawing-style guide. Subject: Sasuke Uchiha standing in three-quarter profile, serious gaze left, spiky black hair and long bangs, white high-collared open shirt, dark forearm guards, wide dark waist sash, chunky rope belt, right hand resting on vertical sword; behind him a matching silhouette built with fine diagonal pen hatching, exactly as reference. Match reference black-and-white manga ink art accurately: natural thin imperfect pen outlines, deliberate dense solid black hair/clothes, sparse hand hatch strokes, authentic reference face proportions, sharp but human penwork; no added grey shading, screen tones, gradients or textures beyond the reference's own hatching. Flat white #ffffff paper ground. Place the COMPLETE scene VERY SMALL at bottom center. ALL illustration pixels strictly within y86%-99%; top84% entirely empty matching paper. MAXIMUM scene height13%, max width42% of canvas. Keep all subject details and accessories within the tiny scene, not scattered across page. Mandatory huge blank schedule area. No timetable, UI, badges, titles, signature, watermark, extra characters, decorative border, 3D or montage. No text.",
       "repairPrompts": [
-        "Placement-only correction to this attached manga wallpaper. Keep ALL artwork, identity, facial features, clothing, sword, rope belt, any hatched shadow and original fine pen linework unchanged. Shrink ENTIRE illustrated scene to 50% of its current size, with original proportions. Place it centered at bottom with bottom at y98%. ALL illustration must be strictly below y85%, top83% entirely empty original flat paper background. Keep exact original portrait canvas aspect ratio. Extend original background into newly empty areas. No zooming back in, no added details, no schedule, text, gradient or border. Preserve the artwork's existing natural human ink style."
+        "Placement-only correction to this attached manga wallpaper. Keep ALL artwork, identity, facial features, clothing, sword, rope belt, any hatched shadow and original fine pen linework unchanged. Shrink ENTIRE illustrated scene to 50% of its current size, with original proportions. Place it centered at bottom with bottom at y98%. ALL illustration must be strictly below y85%, top83% entirely empty original flat paper background. Keep exact original portrait canvas aspect ratio. Extend original background into newly empty areas. No zooming back in, no added details, no schedule, text, gradient or border. Preserve the artwork's existing natural human ink style.",
+        "Precise composition edit of attached artwork. Preserve the exact existing manga drawing style and all character likenesses, original pen contours, hatch marks, shadows, clothing, accessories and facial details. User likes the art but wants it a little bigger, anchored to the physical page edge so it no longer appears to be a floating cut-off sticker. Make existing scene noticeably but modestly larger, and anchor FLUSH at the BOTTOM-RIGHT CORNER. Cropped clothing/torso must meet bottom and right canvas edges, with no empty white gap beneath the crop. Do not clip faces, hair, lettering or key accessories. Entire artwork strictly in bottom20%, y80-100%; top78% blank. Keep current mobile canvas aspect ratio and original uniform paper background. Do not redraw in a different style. Do not add new characters, faces, decorations, text, gradients, frames or schedule. The edge anchoring is mandatory; don't leave a pale margin between cropped artwork and the bottom edge.",
+        "Correct ONLY artwork size and location. Keep exact current drawing style, all face/clothing/accessory details and hatching. Reduce complete existing illustration to 40% of current size, keep original proportions. ANCHOR it FLUSH to BOTTOM-RIGHT CORNER. Cropped jacket/torso must touch bottom AND right edge, no floating white gap. Keep face and hair fully visible. ALL artwork strictly in bottom20%, y80-100%; top78% completely blank original flat background. Preserve portrait canvas ratio. No extra figures, text, UI, gradient, borders or different art style. Keep it clearly larger than a tiny sticker, but no part may intrude above y80%.",
+        "Pure zoom-out/placement correction, no redraw. Treat the ENTIRE attached wallpaper as one image. Reduce it to 70% of its current width AND height, then anchor it exactly at the bottom-right corner of a canvas of the ORIGINAL dimensions; fill newly empty area with its identical original flat background. This shrinks the manga artwork while preserving its existing exact proportions, ink linework and face/lettering details. The illustration must remain touching BOTTOM and RIGHT edge, with no margin there. Keep all ink below y80%, leave upper78% blank. No new characters, accessories, lettering, frame, gradient, texture or schedule. Do not zoom back in after resizing. Keep all original ink details and original human-drawn aesthetics."
       ],
       "originalSource": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-4362177a-15a8-44e2-baae-170a4650d5cd.png",
       "reference": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\codex-clipboard-ad7e9361-ecda-4b7f-9496-151eb3be1807.png",
-      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-d8a31108-2d55-4203-ade1-889ae33251c5.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-9d8e4bb7-cc65-4191-b129-20b42293374d.png",
       "visuallyReviewed": true
     },
     {
@@ -114,24 +125,28 @@
       "height": 2560,
       "sourceWidth": 992,
       "sourceHeight": 1586,
-      "bytes": 1649253,
-      "sha256": "c95ebeef75c40740f0f51d0a6e10824d934da627f49b0cae47261f4cf56aa2c3",
+      "bytes": 1671540,
+      "sha256": "c9c70f87d4acaddedcfc13587090663ca4228e99161b93fd1299033574dae211",
       "opaque": true,
       "dimensionsValid": true,
       "inkBounds": {
-        "x": 0.453125,
-        "y": 0.853515625,
-        "right": 0.545625,
-        "bottom": 0.95859375
+        "x": 0.86375,
+        "y": 0.833984375,
+        "right": 0.999375,
+        "bottom": 0.99921875
       },
       "prompt": "Use case: illustration-story. ONE opaque full-bleed 1600x2560 portrait background for a timetable rendered separately by app. Reference image is the primary composition, character and drawing-style guide. Subject: Sasuke Uchiha standing in three-quarter profile, serious gaze left, spiky black hair and long bangs, white high-collared open shirt, dark forearm guards, wide dark waist sash, chunky rope belt, right hand resting on vertical sword; behind him a matching silhouette built with fine diagonal pen hatching, exactly as reference. Match reference black-and-white manga ink art accurately: natural thin imperfect pen outlines, deliberate dense solid black hair/clothes, sparse hand hatch strokes, authentic reference face proportions, sharp but human penwork; no added grey shading, screen tones, gradients or textures beyond the reference's own hatching. Flat white #ffffff paper ground. Place the COMPLETE scene VERY SMALL at bottom center. ALL illustration pixels strictly within y86%-99%; top84% entirely empty matching paper. MAXIMUM scene height13%, max width42% of canvas. Keep all subject details and accessories within the tiny scene, not scattered across page. Mandatory huge blank schedule area. No timetable, UI, badges, titles, signature, watermark, extra characters, decorative border, 3D or montage. No text.",
       "repairPrompts": [
         "Placement-only correction to this attached manga wallpaper. Keep ALL artwork, identity, facial features, clothing, sword, rope belt, any hatched shadow and original fine pen linework unchanged. Shrink ENTIRE illustrated scene to 50% of its current size, with original proportions. Place it centered at bottom with bottom at y98%. ALL illustration must be strictly below y85%, top83% entirely empty original flat paper background. Keep exact original portrait canvas aspect ratio. Extend original background into newly empty areas. No zooming back in, no added details, no schedule, text, gradient or border. Preserve the artwork's existing natural human ink style.",
-        "Placement-only correction. Preserve the ENTIRE attached manga illustration exactly, including every line, hatch, shadow, clothing fold, accessory and both Sasuke and the hatched silhouette. Reduce the complete scene to 35% of current size. Center this very small scene near bottom with its bottom at y98%. All artwork MUST be contained below y86%, top84% entirely empty matching original white paper background. Keep current canvas aspect ratio, no cropping, distortion, zooming in, extra faces, text, schedule, gradient, borders or decorative elements. The huge empty top area is mandatory; change only artwork scale and placement."
+        "Placement-only correction. Preserve the ENTIRE attached manga illustration exactly, including every line, hatch, shadow, clothing fold, accessory and both Sasuke and the hatched silhouette. Reduce the complete scene to 35% of current size. Center this very small scene near bottom with its bottom at y98%. All artwork MUST be contained below y86%, top84% entirely empty matching original white paper background. Keep current canvas aspect ratio, no cropping, distortion, zooming in, extra faces, text, schedule, gradient, borders or decorative elements. The huge empty top area is mandatory; change only artwork scale and placement.",
+        "Precise composition edit of attached artwork. Preserve the exact existing manga drawing style and all character likenesses, original pen contours, hatch marks, shadows, clothing, accessories and facial details. User likes the art but wants it a little bigger, anchored to the physical page edge so it no longer appears to be a floating cut-off sticker. Make existing scene noticeably but modestly larger, and anchor FLUSH at the BOTTOM-RIGHT CORNER. Cropped clothing/torso must meet bottom and right canvas edges, with no empty white gap beneath the crop. Do not clip faces, hair, lettering or key accessories. Entire artwork strictly in bottom20%, y80-100%; top78% blank. Keep current tablet canvas aspect ratio and original uniform paper background. Do not redraw in a different style. Do not add new characters, faces, decorations, text, gradients, frames or schedule. The edge anchoring is mandatory; don't leave a pale margin between cropped artwork and the bottom edge.",
+        "Correct ONLY artwork size and location. Keep exact current drawing style, all face/clothing/accessory details and hatching. Reduce complete existing illustration to 30% of current size, keep original proportions. ANCHOR it FLUSH to BOTTOM-RIGHT CORNER. Cropped jacket/torso must touch bottom AND right edge, no floating white gap. Keep face and hair fully visible. ALL artwork strictly in bottom20%, y80-100%; top78% completely blank original flat background. Preserve portrait canvas ratio. No extra figures, text, UI, gradient, borders or different art style. Keep it clearly larger than a tiny sticker, but no part may intrude above y80%.",
+        "Pure zoom-out/placement correction, no redraw. Treat the ENTIRE attached wallpaper as one image. Reduce it to 65% of its current width AND height, then anchor it exactly at the bottom-right corner of a canvas of the ORIGINAL dimensions; fill newly empty area with its identical original flat background. This shrinks the manga artwork while preserving its existing exact proportions, ink linework and face/lettering details. The illustration must remain touching BOTTOM and RIGHT edge, with no margin there. Keep all ink below y80%, leave upper78% blank. No new characters, accessories, lettering, frame, gradient, texture or schedule. Do not zoom back in after resizing. Keep all original ink details and original human-drawn aesthetics.",
+        "Zoom out the ENTIRE attached wallpaper to exactly 35% of its current width and height. Place that scaled wallpaper flush at the bottom-right corner of an ORIGINAL-SIZE portrait canvas, extending the same white background everywhere else. Do not redraw, enlarge, reframe or change any character details. Sasuke and his shadow must remain attached to the RIGHT and BOTTOM canvas edges with no white gap. All ink must be confined below y83%. Keep original drawing, sword, rope belt, shadow hatching, face and white ground. No additions, text, borders, gradients or schedule. This is a strict zoom-out operation."
       ],
       "originalSource": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-812bddec-4357-42ca-bcfe-269420de56b0.png",
       "reference": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\codex-clipboard-ad7e9361-ecda-4b7f-9496-151eb3be1807.png",
-      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-21b78a21-5f5b-4a65-a978-105b808f7dc9.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-cb1a37b5-6f06-4f10-a914-2f466986c437.png",
       "visuallyReviewed": true
     },
     {
@@ -141,22 +156,24 @@
       "width": 1920,
       "height": 1080,
       "sourceWidth": 1672,
-      "sourceHeight": 940,
-      "bytes": 788844,
-      "sha256": "f6e9522144bbe5e15ce0a3c91440901b030caf97ea081e2ba2fb82ab2b38989c",
+      "sourceHeight": 941,
+      "bytes": 1494032,
+      "sha256": "a9b98d2c53d57c33ba8aa2d89b5b5b7abff71ea57261120ab206663b99ab60bd",
       "opaque": true,
       "dimensionsValid": true,
       "inkBounds": {
-        "x": 0.7864583333333334,
-        "y": 0.4222222222222222,
-        "right": 0.9838541666666667,
-        "bottom": 0.9898148148148148
+        "x": 0.6958333333333333,
+        "y": 0.07962962962962963,
+        "right": 0.9989583333333333,
+        "bottom": 0.9990740740740741
       },
       "prompt": "Use case: illustration-story. ONE opaque full-bleed 1920x1080 wide landscape background for a timetable rendered separately by app. Reference image is the primary composition, character and drawing-style guide. Subject: Sasuke Uchiha standing in three-quarter profile, serious gaze left, spiky black hair and long bangs, white high-collared open shirt, dark forearm guards, wide dark waist sash, chunky rope belt, right hand resting on vertical sword; behind him a matching silhouette built with fine diagonal pen hatching, exactly as reference. Match reference black-and-white manga ink art accurately: natural thin imperfect pen outlines, deliberate dense solid black hair/clothes, sparse hand hatch strokes, authentic reference face proportions, sharp but human penwork; no added grey shading, screen tones, gradients or textures beyond the reference's own hatching. Flat white #ffffff paper ground. Place the COMPLETE scene SMALL at bottom-right. ALL illustration pixels strictly within x79%-98% and y50%-98%; left77% entirely empty matching paper. MAXIMUM scene width19% of canvas. Keep all subject details and accessories within the tiny scene, not scattered across page. Mandatory huge blank schedule area. No timetable, UI, badges, titles, signature, watermark, extra characters, decorative border, 3D or montage. No text.",
-      "repairPrompts": [],
+      "repairPrompts": [
+        "Precise composition edit of attached artwork. Preserve the exact existing manga drawing style and all character likenesses, original pen contours, hatch marks, shadows, clothing, accessories and facial details. User likes the art but wants it a little bigger, anchored to the physical page edge so it no longer appears to be a floating cut-off sticker. Enlarge the existing illustration about 20-30%, and anchor FLUSH to RIGHT and BOTTOM edges. No gap of white under the cropped torso, clothing, or artwork. Keep faces, hair, letters and key accessories fully visible. All artwork within rightmost30%, x70-100%; left66% entirely blank. Keep current laptop canvas aspect ratio and original uniform paper background. Do not redraw in a different style. Do not add new characters, faces, decorations, text, gradients, frames or schedule. The edge anchoring is mandatory; don't leave a pale margin between cropped artwork and the bottom edge."
+      ],
       "originalSource": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-36412732-dc54-4909-bb54-909c3b329c85.png",
       "reference": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\codex-clipboard-ad7e9361-ecda-4b7f-9496-151eb3be1807.png",
-      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-36412732-dc54-4909-bb54-909c3b329c85.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-5652bb0e-176c-450f-87f5-dc80f92a2f9d.png",
       "visuallyReviewed": true
     },
     {
@@ -167,23 +184,24 @@
       "height": 2400,
       "sourceWidth": 841,
       "sourceHeight": 1870,
-      "bytes": 1188745,
-      "sha256": "b6e4f7c5e24601d05af44cb2cc7d415d6b5e2beceb1a873b37ea06c1a76fe480",
+      "bytes": 1298049,
+      "sha256": "df830127f537836ae4f2944d01df50a518bfdffa34ee0290895c5c21210ae114",
       "opaque": true,
       "dimensionsValid": true,
       "inkBounds": {
-        "x": 0.17592592592592593,
-        "y": 0.8,
-        "right": 0.8231481481481482,
-        "bottom": 0.9216666666666666
+        "x": 0,
+        "y": 0.7854166666666667,
+        "right": 0.9981481481481481,
+        "bottom": 0.9995833333333334
       },
       "prompt": "Use case: illustration-story. ONE opaque full-bleed 1080x2400 tall portrait background for a timetable rendered separately by app. Reference image is the primary composition, character and drawing-style guide. Subject: The EXACT reference's panoramic extreme close-up of Sasuke Uchiha's two intense Sharingan eyes, angular solid black fringe descending between eyes, sharp eyelids and eyebrows, sparse rough under-eye hatching and face scratches. Preserve eye symbols faithfully, both eyes visible, no extra eyes or invented face parts. A wide cropped face strip, not a full bust. Match reference black-and-white manga ink art accurately: natural thin imperfect pen outlines, deliberate dense solid black hair/clothes, sparse hand hatch strokes, authentic reference face proportions, sharp but human penwork; no added grey shading, screen tones, gradients or textures beyond the reference's own hatching. Flat white #ffffff paper ground. Place complete wide eye strip at bottom center: width65% of canvas, preserve original panoramic ratio. ALL ink below y85%, top83% entirely blank. Do not enlarge to fill page. Keep all subject details and accessories within the tiny scene, not scattered across page. Mandatory huge blank schedule area. No timetable, UI, badges, titles, signature, watermark, extra characters, decorative border, 3D or montage. No text.",
       "repairPrompts": [
-        "Precise placement-only edit of this attached manga wallpaper. Preserve ALL current ink drawing details exactly, including face features, black fill shapes, fine hatch marks, and BOTH eyes and their exact eye symbols, full original panoramic eye-strip aspect ratio. Reduce the COMPLETE illustration to 50% of its current size without distortion. Center it along bottom with bottom edge at y98%. ALL illustrated pixels must be strictly below y85%, and top83% completely empty original flat white background. Keep original portrait canvas aspect ratio. Keep reference's hand-inked aesthetics; change only size and placement. No new text, accessories, schedule, border, gradient or extra faces. Do not enlarge to fill blank space."
+        "Precise placement-only edit of this attached manga wallpaper. Preserve ALL current ink drawing details exactly, including face features, black fill shapes, fine hatch marks, and BOTH eyes and their exact eye symbols, full original panoramic eye-strip aspect ratio. Reduce the COMPLETE illustration to 50% of its current size without distortion. Center it along bottom with bottom edge at y98%. ALL illustrated pixels must be strictly below y85%, and top83% completely empty original flat white background. Keep original portrait canvas aspect ratio. Keep reference's hand-inked aesthetics; change only size and placement. No new text, accessories, schedule, border, gradient or extra faces. Do not enlarge to fill blank space.",
+        "Precise composition edit of attached artwork. Preserve the exact existing manga drawing style and all character likenesses, original pen contours, hatch marks, shadows, clothing, accessories and facial details. User likes the art but wants it a little bigger, anchored to the physical page edge so it no longer appears to be a floating cut-off sticker. Enlarge the wide eye strip about20%, preserving panoramic ratio. Anchor it FLUSH to BOTTOM and RIGHT canvas edges so the cropped face meets the page edges naturally. Both eyes and eye symbols fully visible. All ink strictly in bottom19%, y81-100%, upper79% blank. Keep current mobile canvas aspect ratio and original uniform paper background. Do not redraw in a different style. Do not add new characters, faces, decorations, text, gradients, frames or schedule. The edge anchoring is mandatory; don't leave a pale margin between cropped artwork and the bottom edge."
       ],
       "originalSource": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-9bf34dda-f2f9-49cc-86c3-be60e6e0dcc8.png",
       "reference": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\codex-clipboard-1fdfa925-ee24-408c-a227-c513a6474fd0.png",
-      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-ee9e7295-db15-4a1a-af1c-ea9d9424cd4b.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-e7f83588-8920-4c71-b350-ed4106300bdc.png",
       "visuallyReviewed": true
     },
     {
@@ -194,23 +212,25 @@
       "height": 2560,
       "sourceWidth": 992,
       "sourceHeight": 1586,
-      "bytes": 1613222,
-      "sha256": "9c59f87b60fd128c3c5f78d5610c26468ab945a0150b08c2ad5f09eea9cf58de",
+      "bytes": 1517126,
+      "sha256": "100fb450b2c655e65ed5636c598ad60cb482798c379adc193fa009982d57e28a",
       "opaque": true,
       "dimensionsValid": true,
       "inkBounds": {
-        "x": 0.1175,
-        "y": 0.781640625,
-        "right": 0.883125,
-        "bottom": 0.944921875
+        "x": 0.255625,
+        "y": 0.784765625,
+        "right": 0.999375,
+        "bottom": 0.99921875
       },
       "prompt": "Use case: illustration-story. ONE opaque full-bleed 1600x2560 portrait background for a timetable rendered separately by app. Reference image is the primary composition, character and drawing-style guide. Subject: The EXACT reference's panoramic extreme close-up of Sasuke Uchiha's two intense Sharingan eyes, angular solid black fringe descending between eyes, sharp eyelids and eyebrows, sparse rough under-eye hatching and face scratches. Preserve eye symbols faithfully, both eyes visible, no extra eyes or invented face parts. A wide cropped face strip, not a full bust. Match reference black-and-white manga ink art accurately: natural thin imperfect pen outlines, deliberate dense solid black hair/clothes, sparse hand hatch strokes, authentic reference face proportions, sharp but human penwork; no added grey shading, screen tones, gradients or textures beyond the reference's own hatching. Flat white #ffffff paper ground. Place complete wide eye strip at bottom center: width65% of canvas, preserve original panoramic ratio. ALL ink below y85%, top83% entirely blank. Do not enlarge to fill page. Keep all subject details and accessories within the tiny scene, not scattered across page. Mandatory huge blank schedule area. No timetable, UI, badges, titles, signature, watermark, extra characters, decorative border, 3D or montage. No text.",
       "repairPrompts": [
-        "Precise placement-only edit of this attached manga wallpaper. Preserve ALL current ink drawing details exactly, including face features, black fill shapes, fine hatch marks, and BOTH eyes and their exact eye symbols, full original panoramic eye-strip aspect ratio. Reduce the COMPLETE illustration to 50% of its current size without distortion. Center it along bottom with bottom edge at y98%. ALL illustrated pixels must be strictly below y85%, and top83% completely empty original flat white background. Keep original portrait canvas aspect ratio. Keep reference's hand-inked aesthetics; change only size and placement. No new text, accessories, schedule, border, gradient or extra faces. Do not enlarge to fill blank space."
+        "Precise placement-only edit of this attached manga wallpaper. Preserve ALL current ink drawing details exactly, including face features, black fill shapes, fine hatch marks, and BOTH eyes and their exact eye symbols, full original panoramic eye-strip aspect ratio. Reduce the COMPLETE illustration to 50% of its current size without distortion. Center it along bottom with bottom edge at y98%. ALL illustrated pixels must be strictly below y85%, and top83% completely empty original flat white background. Keep original portrait canvas aspect ratio. Keep reference's hand-inked aesthetics; change only size and placement. No new text, accessories, schedule, border, gradient or extra faces. Do not enlarge to fill blank space.",
+        "Precise composition edit of attached artwork. Preserve the exact existing manga drawing style and all character likenesses, original pen contours, hatch marks, shadows, clothing, accessories and facial details. User likes the art but wants it a little bigger, anchored to the physical page edge so it no longer appears to be a floating cut-off sticker. Enlarge the wide eye strip about20%, preserving panoramic ratio. Anchor it FLUSH to BOTTOM and RIGHT canvas edges so the cropped face meets the page edges naturally. Both eyes and eye symbols fully visible. All ink strictly in bottom19%, y81-100%, upper79% blank. Keep current tablet canvas aspect ratio and original uniform paper background. Do not redraw in a different style. Do not add new characters, faces, decorations, text, gradients, frames or schedule. The edge anchoring is mandatory; don't leave a pale margin between cropped artwork and the bottom edge.",
+        "Adjust only scale and anchoring of this existing manga drawing. Preserve every existing ink detail, face, eye symbol, clothing, hatching, accessories . Reduce the complete current illustration to 80% of current size. Anchor FLUSH to BOTTOM AND RIGHT physical canvas edges; no pale margin under cropped clothing or face. ALL artwork must stay strictly below y80%, upper78% entirely blank. Keep original canvas aspect ratio and original uniform white paper. Face and hair fully visible. Keep the edge-connected illustration visually substantial, not a tiny floating sticker. No new characters, text, schedule, gradients, borders or changed drawing style."
       ],
       "originalSource": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-7cfa8646-b2ec-426d-a836-65854d8b9966.png",
       "reference": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\codex-clipboard-1fdfa925-ee24-408c-a227-c513a6474fd0.png",
-      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-93310f49-2504-4f5c-b11a-3697fd6a79f2.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-aac6c25b-2472-4f20-924c-ea3f6fd13fdf.png",
       "visuallyReviewed": true
     },
     {
@@ -221,21 +241,25 @@
       "height": 1080,
       "sourceWidth": 1672,
       "sourceHeight": 941,
-      "bytes": 780053,
-      "sha256": "021bda997562f0133c542b448a4fa1b2d6b99afe30db78ea102ef13cf0f4427f",
+      "bytes": 1247981,
+      "sha256": "276317346e23b415f283a5c7f9c73850574f658a84272346e34fecaf11555bfb",
       "opaque": true,
       "dimensionsValid": true,
       "inkBounds": {
-        "x": 0.6098958333333333,
-        "y": 0.6055555555555555,
-        "right": 0.9927083333333333,
-        "bottom": 0.9305555555555556
+        "x": 0.6541666666666667,
+        "y": 0.6231481481481481,
+        "right": 0.9989583333333333,
+        "bottom": 0.9990740740740741
       },
       "prompt": "Use case: illustration-story. ONE opaque full-bleed 1920x1080 wide landscape background for a timetable rendered separately by app. Reference image is the primary composition, character and drawing-style guide. Subject: The EXACT reference's panoramic extreme close-up of Sasuke Uchiha's two intense Sharingan eyes, angular solid black fringe descending between eyes, sharp eyelids and eyebrows, sparse rough under-eye hatching and face scratches. Preserve eye symbols faithfully, both eyes visible, no extra eyes or invented face parts. A wide cropped face strip, not a full bust. Match reference black-and-white manga ink art accurately: natural thin imperfect pen outlines, deliberate dense solid black hair/clothes, sparse hand hatch strokes, authentic reference face proportions, sharp but human penwork; no added grey shading, screen tones, gradients or textures beyond the reference's own hatching. Flat white #ffffff paper ground. Place the complete WIDE eye strip SMALL at lower right: width22% of canvas, preserve original panoramic ratio. ALL ink within x76%-98% and y72%-97%. Left74% completely blank. Keep all subject details and accessories within the tiny scene, not scattered across page. Mandatory huge blank schedule area. No timetable, UI, badges, titles, signature, watermark, extra characters, decorative border, 3D or montage. No text.",
-      "repairPrompts": [],
+      "repairPrompts": [
+        "Precise composition edit of attached artwork. Preserve the exact existing manga drawing style and all character likenesses, original pen contours, hatch marks, shadows, clothing, accessories and facial details. User likes the art but wants it a little bigger, anchored to the physical page edge so it no longer appears to be a floating cut-off sticker. Enlarge the wide eye strip about20%, preserving panoramic ratio, and anchor it FLUSH to right AND bottom canvas edges. Both eyes visible; no floating rectangle separated from canvas edges. Keep all ink within rightmost30%, left66% blank. Keep current laptop canvas aspect ratio and original uniform paper background. Do not redraw in a different style. Do not add new characters, faces, decorations, text, gradients, frames or schedule. The edge anchoring is mandatory; don't leave a pale margin between cropped artwork and the bottom edge.",
+        "Adjust only scale and anchoring of this existing manga drawing. Preserve every existing ink detail, face, eye symbol, clothing, hatching, accessories . Reduce the complete current illustration to 70% of current size. Anchor FLUSH to BOTTOM AND RIGHT physical canvas edges; no pale margin under cropped clothing or face. ALL artwork must stay strictly right of x62%, left60% entirely blank. Keep original canvas aspect ratio and original uniform white paper. Face and hair fully visible. Keep the edge-connected illustration visually substantial, not a tiny floating sticker. No new characters, text, schedule, gradients, borders or changed drawing style.",
+        "Pure zoom-out/placement correction, no redraw. Treat the ENTIRE attached wallpaper as one image. Reduce it to 90% of its current width AND height, then anchor it exactly at the bottom-right corner of a canvas of the ORIGINAL dimensions; fill newly empty area with its identical original flat background. This shrinks the manga artwork while preserving its existing exact proportions, ink linework and face/lettering details. The illustration must remain touching BOTTOM and RIGHT edge, with no margin there. Keep all ink right of x62%, leave left60% blank. No new characters, accessories, lettering, frame, gradient, texture or schedule. Do not zoom back in after resizing. Keep all original ink details and original human-drawn aesthetics."
+      ],
       "originalSource": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-536f6771-b1ca-4982-998d-fbd5f2d11d41.png",
       "reference": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\codex-clipboard-1fdfa925-ee24-408c-a227-c513a6474fd0.png",
-      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-536f6771-b1ca-4982-998d-fbd5f2d11d41.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-45575a65-5a2d-48e0-a492-0010dffcdabc.png",
       "visuallyReviewed": true
     },
     {
@@ -246,21 +270,24 @@
       "height": 2400,
       "sourceWidth": 841,
       "sourceHeight": 1870,
-      "bytes": 743120,
-      "sha256": "91b4888243b7bc1e82165f9dbf2f9d3bc9f05c14aa33b503e7304ef36185c621",
+      "bytes": 1428548,
+      "sha256": "9379161468a1c528505adf9ca72fb10f4597d5c5ab783f6e347090780e566466",
       "opaque": true,
       "dimensionsValid": true,
       "inkBounds": {
-        "x": 0.3175925925925926,
-        "y": 0.7804166666666666,
-        "right": 0.6898148148148148,
-        "bottom": 0.9716666666666667
+        "x": 0.49722222222222223,
+        "y": 0.7520833333333333,
+        "right": 0.9981481481481481,
+        "bottom": 0.9995833333333334
       },
       "prompt": "Use case: illustration-story. ONE opaque full-bleed 1080x2400 tall portrait background for a timetable rendered separately by app. Reference image is the primary composition, character and drawing-style guide. Subject: Itachi Uchiha leaning in from the side, calm upward gaze, long straight black hair around a scratched Hidden Leaf forehead protector, distinctive under-eye creases, high black cloak collar open around neck, fishnet shirt and small necklace, reference's exact pose and spare thin line anatomy. Match reference black-and-white manga ink art accurately: natural thin imperfect pen outlines, deliberate dense solid black hair/clothes, sparse hand hatch strokes, authentic reference face proportions, sharp but human penwork; no added grey shading, screen tones, gradients or textures beyond the reference's own hatching. Flat white #ffffff paper ground. Place the COMPLETE scene VERY SMALL at bottom center. ALL illustration pixels strictly within y86%-99%; top84% entirely empty matching paper. MAXIMUM scene height13%, max width42% of canvas. Keep all subject details and accessories within the tiny scene, not scattered across page. Mandatory huge blank schedule area. No timetable, UI, badges, titles, signature, watermark, extra characters, decorative border, 3D or montage. No text.",
-      "repairPrompts": [],
+      "repairPrompts": [
+        "Precise composition edit of attached artwork. Preserve the exact existing manga drawing style and all character likenesses, original pen contours, hatch marks, shadows, clothing, accessories and facial details. User likes the art but wants it a little bigger, anchored to the physical page edge so it no longer appears to be a floating cut-off sticker. Make existing scene noticeably but modestly larger, and anchor FLUSH at the BOTTOM-RIGHT CORNER. Cropped clothing/torso must meet bottom and right canvas edges, with no empty white gap beneath the crop. Do not clip faces, hair, lettering or key accessories. Entire artwork strictly in bottom20%, y80-100%; top78% blank. Keep current mobile canvas aspect ratio and original uniform paper background. Do not redraw in a different style. Do not add new characters, faces, decorations, text, gradients, frames or schedule. The edge anchoring is mandatory; don't leave a pale margin between cropped artwork and the bottom edge.",
+        "Adjust only scale and anchoring of this existing manga drawing. Preserve every existing ink detail, face, eye symbol, clothing, hatching, accessories . Reduce the complete current illustration to 45% of current size. Anchor FLUSH to BOTTOM AND RIGHT physical canvas edges; no pale margin under cropped clothing or face. ALL artwork must stay strictly below y80%, upper78% entirely blank. Keep original canvas aspect ratio and original uniform white paper. Face and hair fully visible. Keep the edge-connected illustration visually substantial, not a tiny floating sticker. No new characters, text, schedule, gradients, borders or changed drawing style."
+      ],
       "originalSource": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-d255e641-8202-43e7-82ab-936ad01c7d06.png",
       "reference": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\codex-clipboard-dbdb2d32-f100-4670-a165-1fa91e1c8d44.png",
-      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-d255e641-8202-43e7-82ab-936ad01c7d06.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-efa75936-c556-468a-89b9-19068d50541b.png",
       "visuallyReviewed": true
     },
     {
@@ -271,23 +298,26 @@
       "height": 2560,
       "sourceWidth": 992,
       "sourceHeight": 1586,
-      "bytes": 1570128,
-      "sha256": "dd5ccbd50355ad3270261946a6e09d3437b8977ca01c2b51b8ad70d8c05a4efb",
+      "bytes": 1610672,
+      "sha256": "b013d60ef45c81dc587b016a4e2d228e808fcc4be3e5a83a9e477080a9f91115",
       "opaque": true,
       "dimensionsValid": true,
       "inkBounds": {
-        "x": 0.386875,
-        "y": 0.7859375,
-        "right": 0.645625,
-        "bottom": 0.951953125
+        "x": 0.705625,
+        "y": 0.79453125,
+        "right": 0.999375,
+        "bottom": 0.99921875
       },
       "prompt": "Use case: illustration-story. ONE opaque full-bleed 1600x2560 portrait background for a timetable rendered separately by app. Reference image is the primary composition, character and drawing-style guide. Subject: Itachi Uchiha leaning in from the side, calm upward gaze, long straight black hair around a scratched Hidden Leaf forehead protector, distinctive under-eye creases, high black cloak collar open around neck, fishnet shirt and small necklace, reference's exact pose and spare thin line anatomy. Match reference black-and-white manga ink art accurately: natural thin imperfect pen outlines, deliberate dense solid black hair/clothes, sparse hand hatch strokes, authentic reference face proportions, sharp but human penwork; no added grey shading, screen tones, gradients or textures beyond the reference's own hatching. Flat white #ffffff paper ground. Place the COMPLETE scene VERY SMALL at bottom center. ALL illustration pixels strictly within y86%-99%; top84% entirely empty matching paper. MAXIMUM scene height13%, max width42% of canvas. Keep all subject details and accessories within the tiny scene, not scattered across page. Mandatory huge blank schedule area. No timetable, UI, badges, titles, signature, watermark, extra characters, decorative border, 3D or montage. No text.",
       "repairPrompts": [
-        "Precise placement-only edit of this attached manga wallpaper. Preserve ALL current ink drawing details exactly, including face features, black fill shapes, fine hatch marks, and Itachi's headband, high cloak collar, necklace and net shirt. Reduce the COMPLETE illustration to 50% of its current size without distortion. Center it along bottom with bottom edge at y98%. ALL illustrated pixels must be strictly below y85%, and top83% completely empty original flat white background. Keep original portrait canvas aspect ratio. Keep reference's hand-inked aesthetics; change only size and placement. No new text, accessories, schedule, border, gradient or extra faces. Do not enlarge to fill blank space."
+        "Precise placement-only edit of this attached manga wallpaper. Preserve ALL current ink drawing details exactly, including face features, black fill shapes, fine hatch marks, and Itachi's headband, high cloak collar, necklace and net shirt. Reduce the COMPLETE illustration to 50% of its current size without distortion. Center it along bottom with bottom edge at y98%. ALL illustrated pixels must be strictly below y85%, and top83% completely empty original flat white background. Keep original portrait canvas aspect ratio. Keep reference's hand-inked aesthetics; change only size and placement. No new text, accessories, schedule, border, gradient or extra faces. Do not enlarge to fill blank space.",
+        "Precise composition edit of attached artwork. Preserve the exact existing manga drawing style and all character likenesses, original pen contours, hatch marks, shadows, clothing, accessories and facial details. User likes the art but wants it a little bigger, anchored to the physical page edge so it no longer appears to be a floating cut-off sticker. Make existing scene noticeably but modestly larger, and anchor FLUSH at the BOTTOM-RIGHT CORNER. Cropped clothing/torso must meet bottom and right canvas edges, with no empty white gap beneath the crop. Do not clip faces, hair, lettering or key accessories. Entire artwork strictly in bottom20%, y80-100%; top78% blank. Keep current tablet canvas aspect ratio and original uniform paper background. Do not redraw in a different style. Do not add new characters, faces, decorations, text, gradients, frames or schedule. The edge anchoring is mandatory; don't leave a pale margin between cropped artwork and the bottom edge.",
+        "Adjust only scale and anchoring of this existing manga drawing. Preserve every existing ink detail, face, eye symbol, clothing, hatching, accessories . Reduce the complete current illustration to 45% of current size. Anchor FLUSH to BOTTOM AND RIGHT physical canvas edges; no pale margin under cropped clothing or face. ALL artwork must stay strictly below y80%, upper78% entirely blank. Keep original canvas aspect ratio and original uniform white paper. Face and hair fully visible. Keep the edge-connected illustration visually substantial, not a tiny floating sticker. No new characters, text, schedule, gradients, borders or changed drawing style.",
+        "Pure zoom-out/placement correction, no redraw. Treat the ENTIRE attached wallpaper as one image. Reduce it to 75% of its current width AND height, then anchor it exactly at the bottom-right corner of a canvas of the ORIGINAL dimensions; fill newly empty area with its identical original flat background. This shrinks the manga artwork while preserving its existing exact proportions, ink linework and face/lettering details. The illustration must remain touching BOTTOM and RIGHT edge, with no margin there. Keep all ink below y80%, leave upper78% blank. No new characters, accessories, lettering, frame, gradient, texture or schedule. Do not zoom back in after resizing. Keep all original ink details and original human-drawn aesthetics."
       ],
       "originalSource": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-b3101251-838f-4cbb-974a-44b3c4b97e5b.png",
       "reference": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\codex-clipboard-dbdb2d32-f100-4670-a165-1fa91e1c8d44.png",
-      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-68398189-608f-42d3-ba80-e2f70b9c4920.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-b95ec6f1-f6c8-41b4-b8a4-bd5b64bfbd42.png",
       "visuallyReviewed": true
     },
     {
@@ -298,21 +328,23 @@
       "height": 1080,
       "sourceWidth": 1672,
       "sourceHeight": 941,
-      "bytes": 722290,
-      "sha256": "ce1da65328ef424a179a874c06db639c3044599c3869f7338fab6630a68c75fa",
+      "bytes": 1237080,
+      "sha256": "3aac5bd7ff5bec2c852648754bf41a885f029cacdcbd7df724afc9a828225319",
       "opaque": true,
       "dimensionsValid": true,
       "inkBounds": {
-        "x": 0.7864583333333334,
-        "y": 0.5064814814814815,
+        "x": 0.6708333333333333,
+        "y": 0.2074074074074074,
         "right": 0.9989583333333333,
         "bottom": 0.9990740740740741
       },
       "prompt": "Use case: illustration-story. ONE opaque full-bleed 1920x1080 wide landscape background for a timetable rendered separately by app. Reference image is the primary composition, character and drawing-style guide. Subject: Itachi Uchiha leaning in from the side, calm upward gaze, long straight black hair around a scratched Hidden Leaf forehead protector, distinctive under-eye creases, high black cloak collar open around neck, fishnet shirt and small necklace, reference's exact pose and spare thin line anatomy. Match reference black-and-white manga ink art accurately: natural thin imperfect pen outlines, deliberate dense solid black hair/clothes, sparse hand hatch strokes, authentic reference face proportions, sharp but human penwork; no added grey shading, screen tones, gradients or textures beyond the reference's own hatching. Flat white #ffffff paper ground. Place the COMPLETE scene SMALL at bottom-right. ALL illustration pixels strictly within x79%-98% and y50%-98%; left77% entirely empty matching paper. MAXIMUM scene width19% of canvas. Keep all subject details and accessories within the tiny scene, not scattered across page. Mandatory huge blank schedule area. No timetable, UI, badges, titles, signature, watermark, extra characters, decorative border, 3D or montage. No text.",
-      "repairPrompts": [],
+      "repairPrompts": [
+        "Precise composition edit of attached artwork. Preserve the exact existing manga drawing style and all character likenesses, original pen contours, hatch marks, shadows, clothing, accessories and facial details. User likes the art but wants it a little bigger, anchored to the physical page edge so it no longer appears to be a floating cut-off sticker. Enlarge the existing illustration about 20-30%, and anchor FLUSH to RIGHT and BOTTOM edges. No gap of white under the cropped torso, clothing, or artwork. Keep faces, hair, letters and key accessories fully visible. All artwork within rightmost30%, x70-100%; left66% entirely blank. Keep current laptop canvas aspect ratio and original uniform paper background. Do not redraw in a different style. Do not add new characters, faces, decorations, text, gradients, frames or schedule. The edge anchoring is mandatory; don't leave a pale margin between cropped artwork and the bottom edge."
+      ],
       "originalSource": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-78f7c380-60a6-494e-a47a-73aa8430ae7f.png",
       "reference": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\codex-clipboard-dbdb2d32-f100-4670-a165-1fa91e1c8d44.png",
-      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-78f7c380-60a6-494e-a47a-73aa8430ae7f.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-3bae5d1f-c943-4de7-bc83-39eafd440aa0.png",
       "visuallyReviewed": true
     },
     {
@@ -323,23 +355,26 @@
       "height": 2400,
       "sourceWidth": 841,
       "sourceHeight": 1870,
-      "bytes": 1285704,
-      "sha256": "7f776a474d18d14f765756377f224f39edc32918c6aab058b21129de8bb86ad9",
+      "bytes": 1366082,
+      "sha256": "8a3c1ae25ac426831a06d05c43059afec9e38c894cff88678d05a9827edd40a7",
       "opaque": true,
       "dimensionsValid": true,
       "inkBounds": {
-        "x": 0.34814814814814815,
-        "y": 0.83125,
-        "right": 0.6046296296296296,
-        "bottom": 0.9691666666666666
+        "x": 0.5972222222222222,
+        "y": 0.7554166666666666,
+        "right": 0.9981481481481481,
+        "bottom": 0.9991666666666666
       },
       "prompt": "Use case: illustration-story. ONE opaque full-bleed 1080x2400 tall portrait background for a timetable rendered separately by app. Reference image is the primary composition, character and drawing-style guide. Subject: Minato Namikaze seen from behind in a turning pose, spiky pale hair, headband tails, one arm extended left, flowing pale Hokage cloak with fine manga screentone dots, black undersleeves and dramatic black flame motifs at hem. Retain the EXACT five kanji vertically down cloak back: 四代目火影, arranged top-to-bottom 四 then 代 then 目 then 火 then 影. Faithfully preserve the reference's lettering, pose and folds. Match reference black-and-white manga ink art accurately: natural thin imperfect pen outlines, deliberate dense solid black hair/clothes, sparse hand hatch strokes, authentic reference face proportions, sharp but human penwork; preserve reference's restrained screentone on the cloak. Flat white #ffffff paper ground. Place the COMPLETE scene VERY SMALL at bottom center. ALL illustration pixels strictly within y86%-99%; top84% entirely empty matching paper. MAXIMUM scene height13%, max width42% of canvas. Keep all subject details and accessories within the tiny scene, not scattered across page. Mandatory huge blank schedule area. No timetable, UI, badges, titles, signature, watermark, extra characters, decorative border, 3D or montage. Only the original cloak kanji are allowed; no additional text.",
       "repairPrompts": [
-        "Placement-only correction. Preserve the ENTIRE attached manga illustration exactly, including every line, hatch, shadow, clothing fold, accessory and the EXACT vertical five-kanji cloak text 四代目火影. Reduce the complete scene to 35% of current size. Center this very small scene near bottom with its bottom at y98%. All artwork MUST be contained below y86%, top84% entirely empty matching original white paper background. Keep current canvas aspect ratio, no cropping, distortion, zooming in, extra faces, text, schedule, gradient, borders or decorative elements. The huge empty top area is mandatory; change only artwork scale and placement."
+        "Placement-only correction. Preserve the ENTIRE attached manga illustration exactly, including every line, hatch, shadow, clothing fold, accessory and the EXACT vertical five-kanji cloak text 四代目火影. Reduce the complete scene to 35% of current size. Center this very small scene near bottom with its bottom at y98%. All artwork MUST be contained below y86%, top84% entirely empty matching original white paper background. Keep current canvas aspect ratio, no cropping, distortion, zooming in, extra faces, text, schedule, gradient, borders or decorative elements. The huge empty top area is mandatory; change only artwork scale and placement.",
+        "Precise composition edit of attached artwork. Preserve the exact existing manga drawing style and all character likenesses, original pen contours, hatch marks, shadows, clothing, accessories and the exact five original cloak kanji 四代目火影. User likes the art but wants it a little bigger, anchored to the physical page edge so it no longer appears to be a floating cut-off sticker. Make existing scene noticeably but modestly larger, and anchor FLUSH at the BOTTOM-RIGHT CORNER. Cropped clothing/torso must meet bottom and right canvas edges, with no empty white gap beneath the crop. Do not clip faces, hair, lettering or key accessories. Entire artwork strictly in bottom20%, y80-100%; top78% blank. Keep current mobile canvas aspect ratio and original uniform paper background. Do not redraw in a different style. Do not add new characters, faces, decorations, text, gradients, frames or schedule. The edge anchoring is mandatory; don't leave a pale margin between cropped artwork and the bottom edge.",
+        "Adjust only scale and anchoring of this existing manga drawing. Preserve every existing ink detail, face, eye symbol, clothing, hatching, accessories and the EXACT cloak lettering 四代目火影. Reduce the complete current illustration to 50% of current size. Anchor FLUSH to BOTTOM AND RIGHT physical canvas edges; no pale margin under cropped clothing or face. ALL artwork must stay strictly below y80%, upper78% entirely blank. Keep original canvas aspect ratio and original uniform white paper. Face and hair fully visible. Keep the edge-connected illustration visually substantial, not a tiny floating sticker. No new characters, text, schedule, gradients, borders or changed drawing style.",
+        "Pure zoom-out/placement correction, no redraw. Treat the ENTIRE attached wallpaper as one image. Reduce it to 80% of its current width AND height, then anchor it exactly at the bottom-right corner of a canvas of the ORIGINAL dimensions; fill newly empty area with its identical original flat background. This shrinks the manga artwork while preserving its existing exact proportions, ink linework and face/lettering details. The illustration must remain touching BOTTOM and RIGHT edge, with no margin there. Keep all ink below y80%, leave upper78% blank. No new characters, accessories, lettering, frame, gradient, texture or schedule. Do not zoom back in after resizing. Keep all original ink details and original human-drawn aesthetics."
       ],
       "originalSource": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-274dad96-5a03-4dec-96f5-232b9586137e.png",
       "reference": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\codex-clipboard-02b651ef-686f-4636-8d41-f832a0ae7f7c.png",
-      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-7553bba7-d931-4d4d-99e0-965f3d0aa884.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-c790f010-5a29-4187-a0a3-95387cd7787f.png",
       "visuallyReviewed": true
     },
     {
@@ -350,23 +385,28 @@
       "height": 2560,
       "sourceWidth": 992,
       "sourceHeight": 1586,
-      "bytes": 1618711,
-      "sha256": "0c2d5f6eb51700b8c5308cf08757a7542b2e723c54c213497468130e1af492fd",
+      "bytes": 927039,
+      "sha256": "7a03ee96919b39b6ec1438ac8aa867510173bacc1d7200c2ed8d80c585649353",
       "opaque": true,
       "dimensionsValid": true,
       "inkBounds": {
-        "x": 0.369375,
-        "y": 0.787890625,
-        "right": 0.593125,
-        "bottom": 0.962109375
+        "x": 0.70375,
+        "y": 0.735546875,
+        "right": 0.999375,
+        "bottom": 0.99921875
       },
       "prompt": "Use case: illustration-story. ONE opaque full-bleed 1600x2560 portrait background for a timetable rendered separately by app. Reference image is the primary composition, character and drawing-style guide. Subject: Minato Namikaze seen from behind in a turning pose, spiky pale hair, headband tails, one arm extended left, flowing pale Hokage cloak with fine manga screentone dots, black undersleeves and dramatic black flame motifs at hem. Retain the EXACT five kanji vertically down cloak back: 四代目火影, arranged top-to-bottom 四 then 代 then 目 then 火 then 影. Faithfully preserve the reference's lettering, pose and folds. Match reference black-and-white manga ink art accurately: natural thin imperfect pen outlines, deliberate dense solid black hair/clothes, sparse hand hatch strokes, authentic reference face proportions, sharp but human penwork; preserve reference's restrained screentone on the cloak. Flat white #ffffff paper ground. Place the COMPLETE scene VERY SMALL at bottom center. ALL illustration pixels strictly within y86%-99%; top84% entirely empty matching paper. MAXIMUM scene height13%, max width42% of canvas. Keep all subject details and accessories within the tiny scene, not scattered across page. Mandatory huge blank schedule area. No timetable, UI, badges, titles, signature, watermark, extra characters, decorative border, 3D or montage. Only the original cloak kanji are allowed; no additional text.",
       "repairPrompts": [
-        "Placement-only correction. Preserve the ENTIRE attached manga illustration exactly, including every line, hatch, shadow, clothing fold, accessory and the EXACT vertical five-kanji cloak text 四代目火影. Reduce the complete scene to 35% of current size. Center this very small scene near bottom with its bottom at y98%. All artwork MUST be contained below y86%, top84% entirely empty matching original white paper background. Keep current canvas aspect ratio, no cropping, distortion, zooming in, extra faces, text, schedule, gradient, borders or decorative elements. The huge empty top area is mandatory; change only artwork scale and placement."
+        "Placement-only correction. Preserve the ENTIRE attached manga illustration exactly, including every line, hatch, shadow, clothing fold, accessory and the EXACT vertical five-kanji cloak text 四代目火影. Reduce the complete scene to 35% of current size. Center this very small scene near bottom with its bottom at y98%. All artwork MUST be contained below y86%, top84% entirely empty matching original white paper background. Keep current canvas aspect ratio, no cropping, distortion, zooming in, extra faces, text, schedule, gradient, borders or decorative elements. The huge empty top area is mandatory; change only artwork scale and placement.",
+        "Precise composition edit of attached artwork. Preserve the exact existing manga drawing style and all character likenesses, original pen contours, hatch marks, shadows, clothing, accessories and the exact five original cloak kanji 四代目火影. User likes the art but wants it a little bigger, anchored to the physical page edge so it no longer appears to be a floating cut-off sticker. Make existing scene noticeably but modestly larger, and anchor FLUSH at the BOTTOM-RIGHT CORNER. Cropped clothing/torso must meet bottom and right canvas edges, with no empty white gap beneath the crop. Do not clip faces, hair, lettering or key accessories. Entire artwork strictly in bottom20%, y80-100%; top78% blank. Keep current tablet canvas aspect ratio and original uniform paper background. Do not redraw in a different style. Do not add new characters, faces, decorations, text, gradients, frames or schedule. The edge anchoring is mandatory; don't leave a pale margin between cropped artwork and the bottom edge.",
+        "Adjust only scale and anchoring of this existing manga drawing. Preserve every existing ink detail, face, eye symbol, clothing, hatching, accessories and the EXACT cloak lettering 四代目火影. Reduce the complete current illustration to 35% of current size. Anchor FLUSH to BOTTOM AND RIGHT physical canvas edges; no pale margin under cropped clothing or face. ALL artwork must stay strictly below y80%, upper78% entirely blank. Keep original canvas aspect ratio and original uniform white paper. Face and hair fully visible. Keep the edge-connected illustration visually substantial, not a tiny floating sticker. No new characters, text, schedule, gradients, borders or changed drawing style.",
+        "Pure zoom-out/placement correction, no redraw. Treat the ENTIRE attached wallpaper as one image. Reduce it to 45% of its current width AND height, then anchor it exactly at the bottom-right corner of a canvas of the ORIGINAL dimensions; fill newly empty area with its identical original flat background. This shrinks the manga artwork while preserving its existing exact proportions, ink linework and face/lettering details. The illustration must remain touching BOTTOM and RIGHT edge, with no margin there. Keep all ink below y80%, leave upper78% blank. No new characters, accessories, lettering, frame, gradient, texture or schedule. Do not zoom back in after resizing. Keep all original ink details and original human-drawn aesthetics.",
+        "Strict zoom out: take this ENTIRE attached portrait wallpaper, reduce its width and height to 55% of current dimensions, and place it exactly at bottom-right of a canvas of the ORIGINAL dimensions. Fill all remaining canvas with identical white. Do not redraw or reframe Minato. His cloak must remain flush with BOTTOM and RIGHT edge, no white gap. Preserve all original pen linework, hair, hand, cloak flames and EXACT kanji 四代目火影. The COMPLETE illustration must be below y81%; top79% entirely blank. Keep original aspect ratio and natural ink aesthetics. No other changes, additions or text.",
+        "Scale the entire attached wallpaper down to 75% width and 75% height, anchor at BOTTOM-RIGHT of original-size white canvas. Pure resize only; keep ALL Minato drawing details, kanji 四代目火影, cloak flames, fine ink hatching and original proportions. Keep cloak touching bottom AND right edges with no white gap. Hair top must be at or BELOW y82% of canvas; upper80% completely blank white. Do not enlarge after resizing. No new text, figures, textures, borders, gradients, schedule or accessories."
       ],
       "originalSource": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-6e1486e3-f82a-4cca-a3ed-bc1a333bb80e.png",
       "reference": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\codex-clipboard-02b651ef-686f-4636-8d41-f832a0ae7f7c.png",
-      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-e923fbed-1cd5-44a8-875c-0bdcfb947f4e.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-a7b7a367-436f-4628-b2fe-2a2ad081150b.png",
       "visuallyReviewed": true
     },
     {
@@ -377,21 +417,24 @@
       "height": 1080,
       "sourceWidth": 1672,
       "sourceHeight": 941,
-      "bytes": 876436,
-      "sha256": "8be1b621411f5786d1a11153a8913bfbf3a42a8caac1283cb34a554f2f1a9cef",
+      "bytes": 1294707,
+      "sha256": "a82adf67680d77d9bedec723f450cb21a848ab26cfe52e50d86e0ffdb041e0f4",
       "opaque": true,
       "dimensionsValid": true,
       "inkBounds": {
-        "x": 0.690625,
-        "y": 0.39166666666666666,
-        "right": 0.9880208333333333,
+        "x": 0.6510416666666666,
+        "y": 0.3194444444444444,
+        "right": 0.9989583333333333,
         "bottom": 0.9990740740740741
       },
       "prompt": "Use case: illustration-story. ONE opaque full-bleed 1920x1080 wide landscape background for a timetable rendered separately by app. Reference image is the primary composition, character and drawing-style guide. Subject: Minato Namikaze seen from behind in a turning pose, spiky pale hair, headband tails, one arm extended left, flowing pale Hokage cloak with fine manga screentone dots, black undersleeves and dramatic black flame motifs at hem. Retain the EXACT five kanji vertically down cloak back: 四代目火影, arranged top-to-bottom 四 then 代 then 目 then 火 then 影. Faithfully preserve the reference's lettering, pose and folds. Match reference black-and-white manga ink art accurately: natural thin imperfect pen outlines, deliberate dense solid black hair/clothes, sparse hand hatch strokes, authentic reference face proportions, sharp but human penwork; preserve reference's restrained screentone on the cloak. Flat white #ffffff paper ground. Place the COMPLETE scene SMALL at bottom-right. ALL illustration pixels strictly within x79%-98% and y50%-98%; left77% entirely empty matching paper. MAXIMUM scene width19% of canvas. Keep all subject details and accessories within the tiny scene, not scattered across page. Mandatory huge blank schedule area. No timetable, UI, badges, titles, signature, watermark, extra characters, decorative border, 3D or montage. Only the original cloak kanji are allowed; no additional text.",
-      "repairPrompts": [],
+      "repairPrompts": [
+        "Precise composition edit of attached artwork. Preserve the exact existing manga drawing style and all character likenesses, original pen contours, hatch marks, shadows, clothing, accessories and the exact five original cloak kanji 四代目火影. User likes the art but wants it a little bigger, anchored to the physical page edge so it no longer appears to be a floating cut-off sticker. Enlarge the existing illustration about 20-30%, and anchor FLUSH to RIGHT and BOTTOM edges. No gap of white under the cropped torso, clothing, or artwork. Keep faces, hair, letters and key accessories fully visible. All artwork within rightmost30%, x70-100%; left66% entirely blank. Keep current laptop canvas aspect ratio and original uniform paper background. Do not redraw in a different style. Do not add new characters, faces, decorations, text, gradients, frames or schedule. The edge anchoring is mandatory; don't leave a pale margin between cropped artwork and the bottom edge.",
+        "Adjust only scale and anchoring of this existing manga drawing. Preserve every existing ink detail, face, eye symbol, clothing, hatching, accessories and the EXACT cloak lettering 四代目火影. Reduce the complete current illustration to 75% of current size. Anchor FLUSH to BOTTOM AND RIGHT physical canvas edges; no pale margin under cropped clothing or face. ALL artwork must stay strictly right of x62%, left60% entirely blank. Keep original canvas aspect ratio and original uniform white paper. Face and hair fully visible. Keep the edge-connected illustration visually substantial, not a tiny floating sticker. No new characters, text, schedule, gradients, borders or changed drawing style."
+      ],
       "originalSource": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-3f92a57b-ea42-455a-93e7-b640e4bc1300.png",
       "reference": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\codex-clipboard-02b651ef-686f-4636-8d41-f832a0ae7f7c.png",
-      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-3f92a57b-ea42-455a-93e7-b640e4bc1300.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-9b5ce8a3-3a3e-47fb-a734-99e3cd80529d.png",
       "visuallyReviewed": true
     }
   ]

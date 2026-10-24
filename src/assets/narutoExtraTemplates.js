@@ -13,7 +13,8 @@ export const narutoExtraTemplates = designs.map(([id, name, description, keyword
   keywords: `Naruto, anime, manga, black, white, monochrome, hand drawn, ink, ${keywords}`,
   background, ink: '#202020', muted: '#4b4b4b', surface: '#ffffff', line: '#a5a5a5',
   containerStyle: 'glass', containerShape: 'pill', containerFill: true,
-  particleStyle: 'none', schedulePosition: 'left',
+  particleStyle: 'none', schedulePosition: id === 'naruto-resolute-ink' ? 'right' : 'left',
+  ...(id === 'naruto-fourth-hokage' ? { artworkFooter: true } : {}),
   image: `/wallpapers/scenic/${id}/mobile.png`,
   deviceImages: Object.fromEntries(['mobile', 'tablet', 'laptop'].map(device => [device, `/wallpapers/scenic/${id}/${device}.png`])),
 }));

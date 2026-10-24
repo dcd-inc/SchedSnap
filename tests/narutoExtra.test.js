@@ -6,6 +6,7 @@ import { narutoTemplates } from '../src/assets/narutoTemplates.js';
 import { matchesGalleryCategory } from '../src/config/collections.js';
 import { templateSchema } from '../shared/templateSchema.js';
 import manifest from '../src/assets/cloudinaryManifest.js';
+import { schedulePosition } from '../src/utils/canvasHelpers.js';
 
 test('all five references appear once in Naruto with separate device artwork', () => {
   assert.equal(narutoExtraTemplates.length, 5);
@@ -27,6 +28,19 @@ test('all five references appear once in Naruto with separate device artwork', (
   }
 });
 
+test('Naruto uses the left edge and the other revisions meet the right and bottom edges', () => {
+  const review = JSON.parse(readFileSync(new URL('../documentation/naruto-extra/artwork-manifest.json', import.meta.url)));
+  for (const template of narutoExtraTemplates) {
+    const left = template.id === 'naruto-resolute-ink';
+    assert.equal(schedulePosition({ ...template, device: 'laptop' }), left ? 'right' : 'left');
+    for (const asset of review.assets.filter(a => a.id === template.id)) {
+      assert.ok(asset.inkBounds.bottom >= 0.98, `${asset.id}/${asset.device}: bottom edge`);
+      assert.ok(left ? asset.inkBounds.x <= 0.02 : asset.inkBounds.right >= 0.98,
+        `${asset.id}/${asset.device}: side edge`);
+    }
+  }
+});
+
 test('browser Canvas checks keep sample and dense schedules clear of all fifteen drawings', () => {
   const review = JSON.parse(readFileSync(new URL('../documentation/naruto-extra/schedule-review.json', import.meta.url)));
   assert.equal(review.length, 30);
@@ -34,9 +48,10 @@ test('browser Canvas checks keep sample and dense schedules clear of all fifteen
     assert.equal(item.overflow, false, `${item.id}/${item.device}/${item.schedule}`);
     assert.equal(item.meetings, item.schedule === 'dense' ? 15 : 5);
     const b = item.scheduleBounds;
-    assert.ok(item.device === 'laptop'
-      ? (b.x + b.width) / item.coordinateWidth < item.inkBounds.x
-      : (b.y + b.height) / item.coordinateHeight < item.inkBounds.y,
+    assert.ok((b.x + b.width) / item.coordinateWidth < item.inkBounds.x
+      || b.x / item.coordinateWidth > item.inkBounds.right
+      || (b.y + b.height) / item.coordinateHeight < item.inkBounds.y
+      || b.y / item.coordinateHeight > item.inkBounds.bottom,
     `${item.id}/${item.device}/${item.schedule}: artwork stays clear`);
   }
 });

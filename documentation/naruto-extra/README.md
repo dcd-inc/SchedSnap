@@ -14,4 +14,10 @@ Final PNGs are saved locally in `public/wallpapers/scenic/<id>/` (ignored by Git
 
 The five templates in `src/assets/narutoExtraTemplates.js` join `narutoTemplates.js` and the existing Naruto category. Existing templates and their creation/publication dates are preserved; Anime continues to include Naruto.
 
+## Edge-aligned revision
+
+The user requested larger artwork that meets the canvas edges instead of floating above a visible torso crop. Resolute Ink now meets the bottom-left corner on every device; its laptop timetable moves to the right. The other four compositions meet the bottom-right corner. Minato uses the existing `artworkFooter` flag to reserve a taller tablet footer while retaining every meeting. Size is checked against the previous artwork in the local `output/naruto-edge-layout-review.json` report, and schedule clearance is checked again with sample and dense schedules.
+
+After uploading the revised sources, `scripts/revise-naruto-artwork.mjs` updates only the five existing records' image URLs, schedule positions, and the explicit protected-footer setting. It preserves IDs, other administrator metadata, visibility, creation/publication dates, and all unrelated records. Review the dry run before passing `--publish --expect-revision <reviewed-revision>`. Local review/result reports under `output/` retain previous and replacement delivery URLs. Old Cloudinary images are retained.
+
 Scoped upload: `node scripts/upload-cloudinary.mjs --artwork-manifest documentation/naruto-extra/artwork-manifest.json` (append `--dry-run` to inspect). Use the existing `scripts/publish-naruto.mjs` to review missing records, then supply `--publish --expect-revision <reviewed-revision>`. It appends only missing IDs and checks the catalog again before writing.
