@@ -1,6 +1,7 @@
 import { cloudinaryImageUrl } from './cloudinaryImageUrl.js';
 
 const images = new Map();
+const imageCacheLimit = 24;
 const fonts = new Map();
 let fontStyles;
 
@@ -46,17 +47,26 @@ export async function prepareWallpaperAssets(template, resolution) {
   )).catch(error => { fonts.delete(family); throw error; }));
   await fonts.get(family);
   if (!imagePath) return undefined;
-  if (!images.has(imagePath)) images.set(imagePath, new Promise((resolve, reject) => {
+  if (images.has(imagePath)) {
+    const cached = images.get(imagePath);
+    images.delete(imagePath);
+    images.set(imagePath, cached);
+    return cached;
+  }
+  const pendingImage = new Promise((resolve, reject) => {
     const image = new Image();
     image.crossOrigin = 'anonymous';
     image.onload = () => {
       try {
         if (template.layout === 'mascot') image.mascotBounds = mascotBounds(image);
         resolve(image);
-      } catch { images.delete(imagePath); reject(new Error('The mascot artwork could not load. Retry or choose another template.')); }
+      } catch { if (images.get(imagePath) === pendingImage) images.delete(imagePath); reject(new Error('The mascot artwork could not load. Retry or choose another template.')); }
     };
-    image.onerror = () => { images.delete(imagePath); reject(new Error('The template artwork could not load. Retry or choose another template.')); };
+    image.onerror = () => { if (images.get(imagePath) === pendingImage) images.delete(imagePath); reject(new Error('The template artwork could not load. Retry or choose another template.')); };
     image.src = imagePath;
-  }));
-  return images.get(imagePath);
+  });
+  images.set(imagePath, pendingImage);
+  // Eviction drops our reference; active previews and exports keep their own image.
+  while (images.size > imageCacheLimit) images.delete(images.keys().next().value);
+  return pendingImage;
 }

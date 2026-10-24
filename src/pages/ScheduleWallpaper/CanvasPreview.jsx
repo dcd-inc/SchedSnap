@@ -10,6 +10,7 @@ export function WallpaperCanvas({ schedule, template, resolution, className = ''
   const canvas = useRef(null);
   const [failure, setFailure] = useState('');
   const [readyKey, setReadyKey] = useState('');
+  const [nearby, setNearby] = useState(!lazy);
   const renderResolution = useMemo(() => {
     const scale = Math.min(1, 960 / resolution.width, 1200 / resolution.height);
     return { ...resolution, width: Math.round(resolution.width * scale), height: Math.round(resolution.height * scale) };
@@ -20,28 +21,44 @@ export function WallpaperCanvas({ schedule, template, resolution, className = ''
   const [drawSchedule, drawTemplate, drawResolution] = useMemo(() => JSON.parse(renderKey), [renderKey]);
   const pending = readyKey !== renderKey;
   useEffect(() => {
-    let cancelled = false;
-    const render = () => prepareWallpaperAssets(drawTemplate, drawResolution).then(async (backgroundImage) => {
-      // Give input and painting a turn between gallery canvases that become ready together.
-      if (lazy) await new Promise(resolve => setTimeout(resolve, 0));
-      if (cancelled) return;
-      try {
-        const layout = drawWallpaper(canvas.current, { schedule: drawSchedule, template: drawTemplate, resolution: drawResolution, backgroundImage });
-        setReadyKey(renderKey);
-        setFailure('');
-        onLayout?.({ overflow: layout.overflow, positionOffset: layout.positionOffset, error: '', ready: true });
-      } catch (error) { setReadyKey(renderKey); setFailure(error.message); onLayout?.({ overflow: true, error: error.message, ready: true }); }
-    }).catch((error) => { if (!cancelled) { setReadyKey(renderKey); setFailure(error.message); onLayout?.({ overflow: true, error: error.message, ready: true }); } });
+    const node = canvas.current;
+    let version = 0;
+    let visible = false;
+    const render = () => {
+      const currentVersion = ++version;
+      return prepareWallpaperAssets(drawTemplate, drawResolution).then(async (backgroundImage) => {
+        // Give input and painting a turn between gallery canvases that become ready together.
+        if (lazy) await new Promise(resolve => setTimeout(resolve, 0));
+        if (version !== currentVersion) return;
+        try {
+          const layout = drawWallpaper(node, { schedule: drawSchedule, template: drawTemplate, resolution: drawResolution, backgroundImage });
+          setReadyKey(renderKey);
+          setFailure('');
+          onLayout?.({ overflow: layout.overflow, positionOffset: layout.positionOffset, error: '', ready: true });
+        } catch (error) { setReadyKey(renderKey); setFailure(error.message); onLayout?.({ overflow: true, error: error.message, ready: true }); }
+      }).catch((error) => { if (version === currentVersion) { setReadyKey(renderKey); setFailure(error.message); onLayout?.({ overflow: true, error: error.message, ready: true }); } });
+    };
     let observer;
     if (lazy && typeof IntersectionObserver !== 'undefined') {
       observer = new IntersectionObserver((entries) => {
-        if (entries.some((entry) => entry.isIntersecting)) { observer.disconnect(); render(); }
-      }, { rootMargin: '300px 0px' });
-      observer.observe(canvas.current);
+        const nearby = entries.some((entry) => entry.isIntersecting);
+        if (nearby === visible) return;
+        visible = nearby;
+        setNearby(nearby);
+        if (nearby) render();
+        else {
+          ++version;
+          // Release pixels without changing the card's CSS aspect ratio or scroll position.
+          node.width = 1; node.height = 1;
+          setReadyKey('');
+          setFailure('');
+        }
+      }, { rootMargin: '600px 0px' });
+      observer.observe(node);
     } else render();
-    return () => { cancelled = true; observer?.disconnect(); };
+    return () => { ++version; observer?.disconnect(); if (lazy) { node.width = 1; node.height = 1; } };
   }, [drawSchedule, drawTemplate, drawResolution, renderKey, onLayout, lazy]);
-  return <><canvas ref={canvas} width={renderResolution.width} height={renderResolution.height} role="img" aria-label={pending ? `Loading ${label}` : label} aria-busy={pending} className={`${className} ${pending ? 'wallpaper-skeleton' : ''}`} style={{ backgroundColor: template.background }} />{!pending && failure && <span role="alert" className="text-xs text-muted">{failure}</span>}</>;
+  return <><canvas ref={canvas} width={lazy ? 1 : renderResolution.width} height={lazy ? 1 : renderResolution.height} role="img" aria-label={pending ? `Loading ${label}` : label} aria-busy={pending} className={`${className} ${pending && nearby ? 'wallpaper-skeleton' : ''}`} style={{ backgroundColor: template.background, aspectRatio: `${renderResolution.width} / ${renderResolution.height}` }} />{!pending && failure && <span role="alert" className="text-xs text-muted">{failure}</span>}</>;
 }
 
 export default function CanvasPreview({ schedule, template, resolution, confirmed, issues, onChangeTemplate }) {
