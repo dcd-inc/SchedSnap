@@ -7,7 +7,7 @@ import { generativePatternIds, generativePatternMap } from '../../assets/generat
 import { patternScale, patternOpacity } from '../../utils/patternBackground.js';
 import { scheduleMovement, tabletBoxSpacing, scheduleLayout } from '../../utils/canvasHelpers.js';
 import { AlignLeft, AlignCenter, AlignRight, ChevronDown, LayoutTemplate, Image, PanelsTopLeft, Type, Sparkles } from 'lucide-react';
-import { colorInputValue, wallpaperFonts, mascotPosition, wallpaperTextOpacity, wallpaperFontScale, wallpaperCornerRadius, wallpaperFillOpacity, snapSchedulePosition, timelineLineWidth, wallpaperColorIntensity } from '../../utils/wallpaperTheme.js';
+import { colorInputValue, wallpaperFonts, mascotPosition, wallpaperTextOpacity, wallpaperFontScale, wallpaperContainerWidth, wallpaperContainerHeight, wallpaperCornerRadius, wallpaperFillOpacity, snapSchedulePosition, timelineLineWidth, wallpaperColorIntensity } from '../../utils/wallpaperTheme.js';
 
 const colorFields = {
   background: { label: 'Background', colors: ['#dce8cb', '#f5daca', '#d8cbef', '#192f4b'] },
@@ -52,11 +52,15 @@ export default function TemplateControls({ template, onChange, defaultTemplate =
     const stickyTop = parseFloat(getComputedStyle(tabs).top) || 0;
     window.scrollTo({ top: Math.max(0, window.scrollY + section.getBoundingClientRect().top - stickyTop - tabs.offsetHeight), behavior: 'instant' });
   }, [category]);
-  const sectionKeys = { layout: ['horizontalPosition', 'verticalPosition', 'schedulePosition'], wallpaper: ['background', 'patternColor', 'patternAccent', 'patternScale', 'patternOpacity', 'mascotPosition'], cards: ['tabletBoxSpacing', 'containerStyle', 'colorIntensity', 'containerRadius', 'surface', 'containerFill', 'containerOpacity', 'line', 'containerBorder', 'timelineLineWidth'], text: ['textOpacity', 'titleAlignment', 'showTitle', 'showScheduleTitle', 'fontScale', 'fontFamily', 'ink'], decorations: ['particleStyle'] };
+  const sectionKeys = { layout: ['horizontalPosition', 'verticalPosition', 'schedulePosition'], wallpaper: ['background', 'patternColor', 'patternAccent', 'patternScale', 'patternOpacity', 'mascotPosition'], cards: ['tabletBoxSpacing', 'containerStyle', 'colorIntensity', 'containerWidth', 'containerHeight', 'containerRadius', 'surface', 'containerFill', 'containerOpacity', 'line', 'containerBorder', 'timelineLineWidth'], text: ['textOpacity', 'titleAlignment', 'showTitle', 'showScheduleTitle', 'fontScale', 'fontFamily', 'ink'], decorations: ['particleStyle'] };
   const resetSection = key => { sectionKeys[key].forEach(field => onChange(field, undefined)); if (key === 'layout' && layoutPicker) onChange('scheduleLayout', 'stacked'); };
   const fixedBackground = Boolean(template.image && template.layout !== 'mascot');
   const timeline = ['timeline', 'grouped-list', 'day-columns'].includes(scheduleLayout(template));
   const radius = wallpaperCornerRadius(template);
+  const containerWidth = wallpaperContainerWidth(template);
+  const containerHeight = wallpaperContainerHeight(template);
+  const defaultContainerWidth = wallpaperContainerWidth(defaultTemplate);
+  const defaultContainerHeight = wallpaperContainerHeight(defaultTemplate);
   const fontSize = Math.round(wallpaperFontScale(template) * 1000) / 10;
   const defaultRadius = wallpaperCornerRadius({ ...template, containerRadius: undefined });
   const defaultColorIntensity = wallpaperColorIntensity({ ...defaultTemplate, containerStyle: template.containerStyle });
@@ -121,6 +125,14 @@ export default function TemplateControls({ template, onChange, defaultTemplate =
         <div className="top-margin-label"><label htmlFor="color-intensity">Color intensity</label><span className="position-value"><output htmlFor="color-intensity">{wallpaperColorIntensity(template)}%</output><button type="button" className="position-reset" disabled={!(wallpaperColorIntensity(template) !== defaultColorIntensity)} aria-label="Reset color intensity" onClick={() => onChange('colorIntensity', defaultColorIntensity)}>Reset</button></span></div>
         <FineSlider id="color-intensity" min="0" max="100" step="1" value={wallpaperColorIntensity(template)} onValueChange={value => onChange('colorIntensity', value)} />
       </div>}
+      <div className="top-margin-control">
+        <div className="top-margin-label"><label htmlFor="container-width">Container width</label><span className="position-value"><output htmlFor="container-width">{containerWidth}%</output><button type="button" className="position-reset" disabled={containerWidth === defaultContainerWidth} aria-label="Reset container width" onClick={() => onChange('containerWidth', undefined)}>Reset</button></span></div>
+        <FineSlider id="container-width" min="60" max="120" step="1" value={containerWidth} aria-valuetext={`${containerWidth}% container width`} onValueChange={value => onChange('containerWidth', value)} />
+      </div>
+      <div className="top-margin-control">
+        <div className="top-margin-label"><label htmlFor="container-height">Container height</label><span className="position-value"><output htmlFor="container-height">{containerHeight}%</output><button type="button" className="position-reset" disabled={containerHeight === defaultContainerHeight} aria-label="Reset container height" onClick={() => onChange('containerHeight', undefined)}>Reset</button></span></div>
+        <FineSlider id="container-height" min="70" max="140" step="1" value={containerHeight} aria-valuetext={`${containerHeight}% container height`} onValueChange={value => onChange('containerHeight', value)} />
+      </div>
       <div className="top-margin-control">
         <div className="top-margin-label"><label htmlFor="appearance-shape">Corner radius</label><span className="position-value"><output htmlFor="appearance-shape">{radius}%</output><button type="button" className="position-reset" disabled={!(radius !== defaultRadius)} aria-label="Reset corner radius" onClick={() => onChange('containerRadius', undefined)}>Reset</button></span></div>
         <FineSlider id="appearance-shape" min="0" max="50" step="1" value={radius} aria-valuetext={`${radius}% corner radius`} onValueChange={value => onChange('containerRadius', value)} />

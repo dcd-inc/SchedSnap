@@ -61,7 +61,13 @@ export default function ScheduleWallpaper() {
     setSearch(previous => { const params = new URLSearchParams(previous); params.set('style', next); return params; });
   }
   function changeLayout(next) {
-    if (templateId && !uploadingBackground) setTemplateSettings(previous => ({ ...previous, [templateId]: { ...previous[templateId], scheduleLayout: next } }));
+    if (templateId && !uploadingBackground) {
+      setTemplateSettings(previous => {
+        const current = { ...previous[templateId] };
+        delete current.fontScale;
+        return { ...previous, [templateId]: { ...current, scheduleLayout: next } };
+      });
+    }
     setSearch(previous => { const params = new URLSearchParams(previous); params.set('layout', next); return params; });
   }
   const [schedule, setSchedule] = useState({ classes: [], warnings: [] });

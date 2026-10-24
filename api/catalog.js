@@ -7,8 +7,14 @@ const plainPlacements = new Map(hunterTemplates.filter(t => t.id.startsWith('hxh
 const legacyPlainPositions = { 'hxh-plain-pakunoda': -100, 'hxh-plain-machi': -90, 'hxh-plain-ging': -90, 'hxh-plain-uvogin': -80, 'hxh-plain-illumi': -80, 'hxh-plain-nobunaga': -75, 'hxh-plain-hisoka': -75 };
 function currentPlacement(template) {
   // Upgrade the shipped placement even when the catalog still contains its original preset.
-  if (plainPlacements.has(template.id) && template.verticalPosition === (legacyPlainPositions[template.id] ?? -70)) return { ...template, verticalPosition: plainPlacements.get(template.id) };
-  return template;
+  let updated = template;
+  if (plainPlacements.has(updated.id) && updated.verticalPosition === (legacyPlainPositions[updated.id] ?? -70)) {
+    updated = { ...updated, verticalPosition: plainPlacements.get(updated.id) };
+  }
+  if (updated.id?.startsWith('hxh-') && (updated.showTitle === false || updated.showScheduleTitle === false)) {
+    updated = { ...updated, showTitle: true, showScheduleTitle: true };
+  }
+  return updated;
 }
 export function createPublicCatalogHandler({ env = process.env, store = createCatalogStore(env), previewTemplates = [] } = {}) {
   return async (request, response) => {

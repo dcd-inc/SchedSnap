@@ -99,7 +99,7 @@ test('reference layout font choices scale sparse schedules and grouped lists fit
   const dense = { classes: sampleSchedule.classes.map(course => ({ ...course, meetings: [0, 1, 2].map(index => ({ ...course.meetings[0], startTime: `${8 + index * 2}:00`.padStart(5, '0'), endTime: `${9 + index * 2}:00`.padStart(5, '0') })) })) };
   for (const resolution of resolutions) {
     for (const kind of ['grouped-list', 'day-columns']) {
-      const standard = render(kind, resolution, {}, sparse).layout;
+      const standard = render(kind, resolution, { fontScale: 1 }, sparse).layout;
       for (const fontScale of [0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6]) {
         const layout = render(kind, resolution, { fontScale }, sparse).layout;
         assert.equal(layout.overflow, false);

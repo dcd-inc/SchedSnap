@@ -26,7 +26,8 @@ test('Hunter manga and plain use consistent reference-style presets per variant'
       for (const item of designs) {
         assert.equal(item.containerStyle, 'glass');
         assert.equal(item.containerShape, 'pill');
-        assert.equal(item.showTitle, family === 'manga');
+        assert.equal(item.showTitle, true);
+        assert.equal(item.showScheduleTitle, true);
         assert.equal(item.verticalPosition, family === 'manga' ? -20 : -30);
         const ctx = new Proxy({ measureText(value) { return { width: value.length * 20 }; }, createLinearGradient: () => ({ addColorStop() {} }) }, {
           get: (target, key) => key in target ? target[key] : ['canvas', 'getTransform'].includes(key) ? undefined : () => {},
@@ -62,7 +63,8 @@ test('Hunter chibi schedules fit below the character and match gallery and edito
   for (const item of hunterTemplates.filter(item => item.family === 'chibi')) {
     assert.equal(item.containerOpacity, 85);
     assert.equal(item.fontScale, 0.9);
-    assert.equal(item.showTitle, false);
+    assert.equal(item.showTitle, true);
+    assert.equal(item.showScheduleTitle, true);
     const ctx = new Proxy({ measureText(value) { return { width: value.length * 20 }; }, createLinearGradient: () => ({ addColorStop() {} }) }, {
       get: (target, key) => key in target ? target[key] : ['canvas', 'getTransform'].includes(key) ? undefined : () => {},
     });

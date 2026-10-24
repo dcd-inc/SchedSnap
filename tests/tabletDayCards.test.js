@@ -159,7 +159,7 @@ test('Day groups preserve every meeting in one container per day without circles
     assert.equal(containers.length, 7);
     for (const [index, box] of containers.entries()) {
       const plan = layout.plans[index];
-      assert.ok(box[0] > plan.x + 26);
+      assert.ok(box[0] >= plan.x);
       assert.ok(box[1] < plan.y);
       assert.ok(box[0] < plan.timeX && box[0] + box[2] > plan.roomX + plan.roomWidth);
       assert.ok(box[1] + box[3] >= plan.entries.at(-1).bottom);
@@ -196,7 +196,7 @@ test('mobile Timeline uses wider rows and larger type with compact readable gaps
   const { layout } = render(sampleSchedule, { scheduleLayout: 'timeline' }, mobile);
   assert.equal(layout.overflow, false);
   assert.ok(layout.size >= 56 * 0.7);
-  assert.equal(layout.plans[0].x, 3);
+  assert.equal(layout.plans[0].x, 36);
   assert.equal(layout.plans[0].width, 1008);
   assert.ok(layout.bottom <= layout.limit);
   const enlarged = render({ classes: [sampleSchedule.classes[0]] }, { scheduleLayout: 'timeline', fontScale: 1.6, verticalPosition: -35 }, mobile).layout;

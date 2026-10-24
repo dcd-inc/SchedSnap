@@ -134,7 +134,7 @@ export default function TemplateGallery({ onUpload, selectedId, settings = {}, s
     {loading && <p role="status" className="sr-only">Loading designs…</p>}
     {!loading && error && <p role="alert">{error}</p>}
     {!loading && visibleTemplates.length > 0 && hasMore && <div ref={sentinel} className="gallery-load-more"><button type="button" className="button-secondary" onClick={loadMore}>Load more designs</button></div>}
-    {preview && <DesignPreview template={preview} schedule={schedule} resolution={designResolution(preview)} onClose={() => setPreview(null)} onSelect={() => onSelect(preview.id)} onLayoutChange={layout => { setPreview({ ...customizeWallpaperTemplate(galleryPreviewTemplate(wallpaperTemplates.find(item => item.id === preview.id)), { ...settings[preview.id], scheduleLayout: layout, containerStyle: previewStyle }, device), scheduleTitle, device }); onLayoutChange(layout); }} />}
+    {preview && <DesignPreview template={preview} schedule={schedule} resolution={designResolution(preview)} onClose={() => setPreview(null)} onSelect={() => onSelect(preview.id)} onLayoutChange={layout => { const current = { ...settings[preview.id] }; delete current.fontScale; setPreview({ ...customizeWallpaperTemplate(galleryPreviewTemplate(wallpaperTemplates.find(item => item.id === preview.id)), { ...current, scheduleLayout: layout, containerStyle: previewStyle }, device), scheduleTitle, device }); onLayoutChange(layout); }} />}
   </div>;
 }
 

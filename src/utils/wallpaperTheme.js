@@ -18,8 +18,19 @@ export const wallpaperFonts = [
 ];
 
 export function wallpaperFontScale(template) {
-  const value = Number(template.fontScale ?? 1);
-  return Number.isFinite(value) ? Math.min(1.6, Math.max(0.7, value)) : 1;
+  const defaultValue = template?.scheduleLayout === 'day-columns' ? 1.305 : 1;
+  const value = Number(template?.fontScale ?? defaultValue);
+  return Number.isFinite(value) ? Math.min(1.6, Math.max(0.7, value)) : defaultValue;
+}
+
+export function wallpaperContainerWidth(template) {
+  const value = Number(template?.containerWidth ?? 100);
+  return Number.isFinite(value) ? Math.max(50, Math.min(150, value)) : 100;
+}
+
+export function wallpaperContainerHeight(template) {
+  const value = Number(template?.containerHeight ?? 100);
+  return Number.isFinite(value) ? Math.max(50, Math.min(150, value)) : 100;
 }
 
 export function wallpaperFillOpacity(template) {
