@@ -170,7 +170,7 @@ test('every template fits a typical fifteen-meeting week without dropping rows',
   const schedule = { classes: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'].map((day) => ({ subject: 'Subject name', courseCode: 'CS 101', meetings: ['08:00', '10:00', '13:00'].map((time) => ({ day, startTime: time, endTime: '15:00', room: 'Lab 2', dateLabel: null })) })), warnings: [] };
   for (const template of wallpaperTemplates) {
     const layout = layoutSchedule(measurementContext, schedule, template);
-    assert.equal(layout.overflow, Boolean(template.artworkFooter), template.name);
+    assert.equal(layout.overflow, false, template.name);
     assert.equal(layout.plans.reduce((sum, plan) => sum + plan.entries.length, 0), 15);
   }
 });

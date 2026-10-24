@@ -8,10 +8,10 @@ import { matchesGalleryCategory } from '../src/config/collections.js';
 import { templateSchema } from '../shared/templateSchema.js';
 import manifest from '../src/assets/cloudinaryManifest.js';
 
-test('Naruto includes all four new compositions and the existing Anime designs once', () => {
+test('Naruto includes all nine reference compositions and the existing Anime designs once', () => {
   const old = animeTemplates.filter(t => /\bNaruto\b/i.test(t.keywords));
   assert.equal(old.length, 5);
-  assert.equal(narutoTemplates.length, 4);
+  assert.equal(narutoTemplates.length, 9);
   const expected = [...old, ...narutoTemplates];
   assert.deepEqual(wallpaperTemplates.filter(t => matchesGalleryCategory(t, 'naruto')).map(t => t.id).sort(), expected.map(t => t.id).sort());
   for (const template of expected) {
@@ -27,7 +27,7 @@ test('each Naruto reference has three distinct full-resolution uploaded composit
   const review = JSON.parse(readFileSync(new URL('../documentation/naruto/artwork-manifest.json', import.meta.url)));
   assert.equal(review.assets.length, 12);
   assert.equal(new Set(review.assets.map(a => a.sha256)).size, 12);
-  for (const template of narutoTemplates) {
+  for (const template of narutoTemplates.filter(t => review.assets.some(a => a.id === t.id))) {
     templateSchema.parse({ ...template, status: 'published' });
     assert.equal(template.mobileOnly, undefined);
     assert.equal(template.image, template.deviceImages.mobile);

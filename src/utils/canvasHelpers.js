@@ -875,7 +875,8 @@ function drawDeviceWallpaper(canvas, { schedule, template, resolution, backgroun
   // their meetings while fitting above the character stamps and faces.
   const availableHeight = Math.min(height * (landscape ? footerCharacter ? 0.6 : 0.88 : hasCharacter ? 0.62 : 0.82), height * 0.965 - baseTop,
     flowLayout && !landscape ? height * 0.68 : weekly ? height * 0.86 : Infinity,
-    hasIllustratedFooter(template) && !landscape && selectedLayout === 'stacked' ? height * 0.77 - baseTop : Infinity);
+    // Explicitly reserved artwork needs a taller footer for larger edge compositions.
+    hasIllustratedFooter(template) && !landscape && selectedLayout === 'stacked' ? height * (template.artworkFooter === true ? 0.70 : 0.77) - baseTop : Infinity);
   const count = dayCards ? Math.ceil(groupSchedule(schedule).length / 2) : groupSchedule(schedule).length;
   const designWidth = weekly ? 2500 : dayCards || selectedLayout === 'day-columns' ? 1900 : 1400;
   const groupGap = resolution.id === 'tablet' ? tabletBoxSpacing(template) : 16;
