@@ -82,7 +82,7 @@ export default function Navbar() {
             navigateTo('top');
           }
         }}>
-          <BrandMark /> SchedCanvas
+          <BrandMark /> SchedSnap
         </Link>
         {isHome && <nav className="landing-nav" aria-label="Main navigation">
           {sectionLinks}

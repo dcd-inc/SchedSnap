@@ -10,7 +10,7 @@ export default function AdminSignIn({ checking = false, password = '', onPasswor
   return <div className="admin-signin-shell">
     <section className="admin-signin-panel" aria-labelledby="admin-signin-title" aria-busy={disabled}>
       <header className="admin-signin-nav">
-        <Link to="/" className="site-brand admin-signin-brand"><BrandMark />SchedCanvas</Link>
+        <Link to="/" className="site-brand admin-signin-brand"><BrandMark />SchedSnap</Link>
         <Link to="/" className="admin-signin-back"><ArrowLeft size={16} aria-hidden="true" />Back to website</Link>
       </header>
       <div className="admin-signin-form">

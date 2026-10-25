@@ -7,7 +7,7 @@ const questions = [
     answer: 'No. You can create and download your class schedule wallpaper without signing up.',
   },
   {
-    question: 'Is SchedCanvas free to use?',
+    question: 'Is SchedSnap free to use?',
     answer: 'Yes. You can create, customize, and download a class schedule wallpaper for free. AI schedule imports have a daily allowance, shown before you upload. You can also enter your classes manually.',
   },
   {

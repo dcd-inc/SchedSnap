@@ -46,8 +46,8 @@ export default function App() {
             <Route path="*" element={
               <section className="page-wrap py-24">
                 <h1 className="text-4xl font-semibold">Page not found</h1>
-                <p className="mt-4 text-muted">Head back to SchedCanvas to create your schedule wallpaper.</p>
-                <Link to="/" className="button-primary mt-8">Back to SchedCanvas</Link>
+                <p className="mt-4 text-muted">Head back to SchedSnap to create your schedule wallpaper.</p>
+                <Link to="/" className="button-primary mt-8">Back to SchedSnap</Link>
               </section>
             } />
           </Routes>

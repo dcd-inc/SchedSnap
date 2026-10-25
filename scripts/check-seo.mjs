@@ -17,7 +17,7 @@ for (const path of Object.keys(SEO_PAGES)) {
   if (path !== CREATOR_PATH) assert.ok(html.includes('<h1'), path);
   if (path === '/') {
     const schema = JSON.parse(html.match(/id="page-schema" type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
-    assert.equal(schema.alternateName, 'Sched Canvas');
+    assert.equal(schema.alternateName, 'Sched Snap');
     assert.ok(html.includes('A free class schedule wallpaper maker for your phone, tablet, or laptop.'));
     assert.ok(html.includes('Frequently asked questions'));
     assert.ok(html.includes('Can I turn a timetable screenshot into a wallpaper?'));

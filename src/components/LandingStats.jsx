@@ -83,7 +83,7 @@ export default function LandingStats() {
   const displayedProgress = reducedMotion ? 1 : progress;
 
   return (
-    <section ref={sectionRef} className="landing-stats" aria-label="SchedCanvas in numbers">
+    <section ref={sectionRef} className="landing-stats" aria-label="SchedSnap in numbers">
       <dl className="page-wrap">
         <div className="landing-stat">
           <dt>Total pageviews</dt>

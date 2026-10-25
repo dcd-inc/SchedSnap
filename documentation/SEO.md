@@ -18,12 +18,12 @@ The canonical site is `https://schedsnap.chrbuilds.dev`. Change `SITE_URL` in `s
 2. In the verified Search Console property, open **Sitemaps**, submit `sitemap.xml`, and check its status.
 3. Inspect the homepage and creator URL. Use **Test live URL** and review the rendered HTML before requesting indexing.
 4. Monitor the Pages report for crawl/indexing problems and the Performance report for impressions, queries, and clicks.
-5. After favicon or site-name updates, request homepage indexing and allow Google time to recrawl. Browser tabs can show the new icon before Google Search updates its stored presentation. The existing homepage WebSite schema and og:site_name identify the site as SchedCanvas; Google chooses the displayed site name automatically.
+5. After favicon or site-name updates, request homepage indexing and allow Google time to recrawl. Browser tabs can show the new icon before Google Search updates its stored presentation. The existing homepage WebSite schema and og:site_name identify the site as SchedSnap; Google chooses the displayed site name automatically.
 6. Submit the sitemap and indexing requests in the `https://schedsnap.chrbuilds.dev/` URL-prefix property. Keep the old Vercel property for monitoring, keep its permanent redirects, and use Settings > Change of address to report the move if the tool is available for that property.
 
 ## AI search visibility
 
-The homepage identifies SchedCanvas as a class schedule wallpaper maker for students in its visible text, title, description, and WebSite schema. Keep the brand name and product description consistent in any guides and relevant external references to distinguish this product from similarly named tools.
+The homepage identifies SchedSnap as a class schedule wallpaper maker for students in its visible text, title, description, and WebSite schema. Keep the brand name and product description consistent in any guides and relevant external references to distinguish this product from similarly named tools.
 
 Google AI Overviews/AI Mode require ordinary search eligibility: indexed, crawlable pages eligible for snippets and helpful original content. Google does not require a special AI file or additional schema, and eligibility does not guarantee selection or a recommendation. Useful next content includes a class-schedule-to-wallpaper guide with real exports, manual-entry instructions, device-specific dimensions, and a direct link to the creator. Relevant independent links from student resources can help users discover the site; no outreach or submissions were performed by this change.
 
