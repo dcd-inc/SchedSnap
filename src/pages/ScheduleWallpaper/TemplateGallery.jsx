@@ -30,9 +30,9 @@ export default function TemplateGallery({ onUpload, selectedId, settings = {}, s
   const designResolution = () => deviceResolutions[device];
   const category = ['chikawa', 'little-friends'].includes(selectedCategory) ? 'chiikawa' : galleryCategories.some((item) => item.id === selectedCategory) ? selectedCategory : 'all';
   const [preview, setPreview] = useState(null);
-  const { likes, rankingLikes, pending, error: likeError, refresh: refreshLikes, toggle: toggleLike } = useDesignLikes();
-  const { downloads, error: downloadError, refresh: refreshDownloads } = useDesignDownloads(device);
-  const loading = catalogLoading;
+  const { likes, rankingLikes, loading: likesLoading, pending, error: likeError, refresh: refreshLikes, toggle: toggleLike } = useDesignLikes();
+  const { downloads, loading: downloadsLoading, error: downloadError, refresh: refreshDownloads } = useDesignDownloads(device);
+  const loading = catalogLoading || (sort === 'likes' && likesLoading) || (sort === 'downloads' && downloadsLoading);
   const isSearching = Boolean(searchQuery && searchQuery.trim());
   const activeCategory = isSearching ? 'all' : category;
 

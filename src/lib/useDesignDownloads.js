@@ -7,15 +7,15 @@ export function recordDesignDownload(id, device) {
 }
 
 export default function useDesignDownloads(device) {
-  const [result, setResult] = useState({ device, downloads: {} });
-  const [error, setError] = useState('');
+  const [result, setResult] = useState({ device, downloads: null, error: '' });
   const [revision, setRevision] = useState(0);
   const refresh = useCallback(() => setRevision(value => value + 1), []);
   useEffect(() => {
     let active = true;
-    api.get('/downloads', { params: { device }, timeout: 15000 }).then(({ data }) => { if (active) { setResult({ device, downloads: data.downloads }); setError(''); } }).catch(() => { if (active) setError('Download counts could not load.'); });
+    api.get('/downloads', { params: { device }, timeout: 15000 }).then(({ data }) => { if (active) setResult({ device, downloads: data.downloads, error: '' }); }).catch(() => { if (active) setResult(previous => ({ device, downloads: previous.device === device ? previous.downloads : null, error: 'Download counts could not load.' })); });
     window.addEventListener('focus', refresh);
     return () => { active = false; window.removeEventListener('focus', refresh); };
   }, [refresh, revision, device]);
-  return { downloads: result.device === device ? result.downloads : {}, error, refresh };
+  const current = result.device === device;
+  return { downloads: current ? result.downloads ?? {} : {}, loading: !current || (result.downloads === null && !result.error), error: current ? result.error : '', refresh };
 }
