@@ -10,7 +10,7 @@ for (const path of Object.keys(SEO_PAGES)) {
   assert.equal((html.match(/rel="canonical"/g) || []).length, 1, path);
   assert.ok(html.includes(`href="${SITE_URL}${path}"`), path);
   assert.ok(html.includes('content="index, follow"'), path);
-  assert.ok(!html.includes('https://schedsnap.chrbuilds.dev'), path);
+  assert.ok(!html.includes('https://schedcanvas.chrbuilds.dev'), path);
   assert.ok(!html.includes('https://schedcanvas.vercel.app'), path);
   assert.ok(html.includes('type="image/png" sizes="96x96" href="/favicon.png"'), path);
   assert.ok(!html.includes('rel="icon" type="image/webp"'), path);
@@ -44,7 +44,7 @@ for (const file of ['admin.html', 'app.html']) {
   assert.ok(!html.includes('Your schedule.'), file);
 }
 const sitemap = await readFile('dist/sitemap.xml', 'utf8');
-assert.ok(!sitemap.includes('schedsnap.chrbuilds.dev'));
+assert.ok(!sitemap.includes('schedcanvas.chrbuilds.dev'));
 assert.ok(!sitemap.includes('schedcanvas.vercel.app'));
 assert.equal((sitemap.match(/<loc>/g) || []).length, Object.keys(SEO_PAGES).length);
 assert.ok(!sitemap.includes('/admin'));

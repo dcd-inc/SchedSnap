@@ -1,4 +1,4 @@
-export const SITE_URL = 'https://schedcanvas.chrbuilds.dev';
+export const SITE_URL = 'https://schedsnap.chrbuilds.dev';
 export const CREATOR_PATH = '/services/schedule-wallpaper';
 export const SOCIAL_IMAGE_PATH = '/images/hero/hero-phones-refreshed.png';
 export const SEO_PAGES = {

@@ -1,6 +1,6 @@
 # Search visibility
 
-The canonical site is `https://schedcanvas.chrbuilds.dev`. Change `SITE_URL` in `shared/seo.js` when moving to a custom domain, and redirect the old domain to the new one.
+The canonical site is `https://schedsnap.chrbuilds.dev`. Change `SITE_URL` in `shared/seo.js` when moving to a custom domain, and redirect the old domain to the new one.
 
 ## Implemented
 
@@ -14,12 +14,12 @@ The canonical site is `https://schedcanvas.chrbuilds.dev`. Change `SITE_URL` in 
 
 ## After deployment
 
-1. Open `https://schedcanvas.chrbuilds.dev/sitemap.xml` and confirm XML appears.
+1. Open `https://schedsnap.chrbuilds.dev/sitemap.xml` and confirm XML appears.
 2. In the verified Search Console property, open **Sitemaps**, submit `sitemap.xml`, and check its status.
 3. Inspect the homepage and creator URL. Use **Test live URL** and review the rendered HTML before requesting indexing.
 4. Monitor the Pages report for crawl/indexing problems and the Performance report for impressions, queries, and clicks.
 5. After favicon or site-name updates, request homepage indexing and allow Google time to recrawl. Browser tabs can show the new icon before Google Search updates its stored presentation. The existing homepage WebSite schema and og:site_name identify the site as SchedCanvas; Google chooses the displayed site name automatically.
-6. Submit the sitemap and indexing requests in the `https://schedcanvas.chrbuilds.dev/` URL-prefix property. Keep the old Vercel property for monitoring, keep its permanent redirects, and use Settings > Change of address to report the move if the tool is available for that property.
+6. Submit the sitemap and indexing requests in the `https://schedsnap.chrbuilds.dev/` URL-prefix property. Keep the old Vercel property for monitoring, keep its permanent redirects, and use Settings > Change of address to report the move if the tool is available for that property.
 
 ## AI search visibility
 
