@@ -10,12 +10,13 @@ for (const path of Object.keys(SEO_PAGES)) {
   assert.equal((html.match(/rel="canonical"/g) || []).length, 1, path);
   assert.ok(html.includes(`href="${SITE_URL}${path}"`), path);
   assert.ok(html.includes('content="index, follow"'), path);
+  assert.ok(!html.includes('https://schedsnap.chrbuilds.dev'), path);
   assert.ok(html.includes('type="image/png" sizes="96x96" href="/favicon.png"'), path);
   assert.ok(!html.includes('rel="icon" type="image/webp"'), path);
   if (path !== CREATOR_PATH) assert.ok(html.includes('<h1'), path);
   if (path === '/') {
     const schema = JSON.parse(html.match(/id="page-schema" type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
-    assert.equal(schema.alternateName, 'Sched Snap');
+    assert.equal(schema.alternateName, 'Sched Canvas');
     assert.ok(html.includes('A free class schedule wallpaper maker for your phone, tablet, or laptop.'));
     assert.ok(html.includes('Frequently asked questions'));
     assert.ok(html.includes('Can I turn a timetable screenshot into a wallpaper?'));
@@ -42,6 +43,7 @@ for (const file of ['admin.html', 'app.html']) {
   assert.ok(!html.includes('Your schedule.'), file);
 }
 const sitemap = await readFile('dist/sitemap.xml', 'utf8');
+assert.ok(!sitemap.includes('schedsnap.chrbuilds.dev'));
 assert.equal((sitemap.match(/<loc>/g) || []).length, Object.keys(SEO_PAGES).length);
 assert.ok(!sitemap.includes('/admin'));
 for (const [, url] of sitemap.matchAll(/<loc>(.*?)<\/loc>/g)) assert.ok(!url.includes('?'));
@@ -57,5 +59,6 @@ for (const file of ['favicon.png', 'favicon.ico', 'apple-touch-icon.png']) {
   assert.deepEqual(await readFile(resolve('dist', file)), await readFile(resolve('public', file)));
 }
 assert.ok(robots.includes(`Sitemap: ${SITE_URL}/sitemap.xml`));
-assert.equal(await readFile('dist/google82dfedb9e6c18663.html', 'utf8'), await readFile('public/google82dfedb9e6c18663.html', 'utf8'));
+assert.equal(await readFile('dist/googlea9a57c4ee9eb8005.html', 'utf8'), await readFile('public/googlea9a57c4ee9eb8005.html', 'utf8'));
+assert.equal((await readFile('dist/googlea9a57c4ee9eb8005.html', 'utf8')).trim(), 'google-site-verification: googlea9a57c4ee9eb8005.html');
 console.log('SEO checks passed: public HTML, links/assets, canonical URLs, sitemap, robots, noindex shells, and Google verification.');

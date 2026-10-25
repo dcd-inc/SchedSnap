@@ -182,7 +182,7 @@ export default function ScheduleWallpaper() {
   }
   useEffect(() => () => request.current?.abort(), []);
   useEffect(() => {
-    if (template) document.title = `${template.name} — SchedSnap`;
+    if (template) document.title = `${template.name} — SchedCanvas`;
   }, [template]);
 
   async function analyze() {

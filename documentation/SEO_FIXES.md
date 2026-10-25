@@ -21,10 +21,10 @@ A local commit does not update the public site. Wait until this commit is deploy
 
 In Search Console, use URL Inspection, Test live URL, then Request indexing once for:
 
-- `https://schedsnap.chrbuilds.dev/`
-- `https://schedsnap.chrbuilds.dev/services/schedule-wallpaper`
-- `https://schedsnap.chrbuilds.dev/guides/class-schedule-wallpaper`
+- `https://schedcanvas.vercel.app/`
+- `https://schedcanvas.vercel.app/services/schedule-wallpaper`
+- `https://schedcanvas.vercel.app/guides/class-schedule-wallpaper`
 
-The request is optional but useful for these few changed/discoverable URLs. If the sitemap is already submitted and successful, it does not need to be removed or repeatedly resubmitted. If it has never been submitted, add `https://schedsnap.chrbuilds.dev/sitemap.xml` under Sitemaps. Do not request indexing for admin, private editor sessions or filter URLs.
+The request is optional but useful for these few changed/discoverable URLs. If the sitemap is already submitted and successful, it does not need to be removed or repeatedly resubmitted. If it has never been submitted, add `https://schedcanvas.vercel.app/sitemap.xml` under Sitemaps. Do not request indexing for admin, private editor sessions or filter URLs.
 
 Google may take days to weeks to recrawl. Requesting the same URL repeatedly does not speed it up, and requesting indexing does not guarantee inclusion. See [Google's recrawl guidance](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl).

@@ -12,7 +12,7 @@ export function seoHead(path) {
     <meta name="robots" content="${page.index ? 'index, follow' : 'noindex, follow'}" />
     ${page.canonical ? `<link rel="canonical" href="${page.canonical}" />` : ''}
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="SchedSnap" />
+    <meta property="og:site_name" content="SchedCanvas" />
     <meta property="og:title" content="${escapeHtml(page.title)}" />
     <meta property="og:description" content="${escapeHtml(page.description)}" />
     <meta property="og:url" content="${page.canonical || `${SITE_URL}${path}`}" />
@@ -20,7 +20,7 @@ export function seoHead(path) {
     <meta property="og:image:width" content="1448" />
     <meta property="og:image:height" content="1086" />
     <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:alt" content="SchedSnap class schedule wallpaper previews" />
+    <meta property="og:image:alt" content="SchedCanvas class schedule wallpaper previews" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${escapeHtml(page.title)}" />
     <meta name="twitter:description" content="${escapeHtml(page.description)}" />

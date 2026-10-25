@@ -1,4 +1,4 @@
-# SchedSnap
+# SchedCanvas
 
 Redis reads, writes, command counts and the latest reductions are documented in [the Redis usage audit](documentation/REDIS_USAGE.md).
 
