@@ -8,7 +8,7 @@ export const SEO_PAGES = {
     description: 'Learn how to choose a wallpaper design, enter or import classes, check your timetable, and download a schedule wallpaper for your phone, tablet, or laptop.',
   },
   '/': {
-    lastModified: '2026-10-23',
+    lastModified: '2026-10-25',
     title: 'SchedSnap — Class Schedule Wallpaper Maker',
     description: 'SchedSnap is a class schedule wallpaper maker for students. Choose a design, add classes, and download a PNG for your phone, tablet, or laptop.',
   },
