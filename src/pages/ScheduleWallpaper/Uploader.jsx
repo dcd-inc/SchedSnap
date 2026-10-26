@@ -2,7 +2,7 @@ import useMobileSheetDismiss from '../../lib/useMobileSheetDismiss.js';
 import { Link } from 'react-router';
 import { createPortal } from 'react-dom';
 import { useCallback, useEffect, useImperativeHandle, useRef, useState } from 'react';
-import { Ban, CircleAlert, ImageUp, ListChecks, LoaderCircle, Maximize2, Pencil, X } from 'lucide-react';
+import { Ban, CircleAlert, ImageUp, ListChecks, Maximize2, Pencil, X } from 'lucide-react';
 import { inspectImage, prepareImage } from '../../utils/imageHelpers.js';
 import ImageCropDialog from './ImageCropDialog.jsx';
 import { trackEvent } from '../../lib/analytics.js';
@@ -57,13 +57,20 @@ function ReplaceConfirmDialog({ onConfirm, onClose }) {
   </dialog>;
 }
 
-function ImportProgress() {
+function ImportProgress({ image }) {
   const [stage, setStage] = useState(0);
   useEffect(() => {
     const timer = setInterval(() => setStage(current => Math.min(current + 1, importStages.length - 1)), 2400);
     return () => clearInterval(timer);
   }, []);
-  return <div className="import-loading" role="status" aria-live="polite" aria-busy="true"><LoaderCircle size={32} strokeWidth={1.5} className="motion-safe:animate-spin" aria-hidden="true" /><p className="import-loading-label">{importStages[stage]}</p><p className="import-loading-hint">This can take a few seconds. You can cancel anytime.</p></div>;
+  return <div className="import-loading" role="status" aria-live="polite" aria-busy="true">
+    <div className="import-scan-preview" aria-hidden="true">
+      <img src={image.preview} alt="" />
+      <div className="import-scan-track"><span className="import-scan-beam" /></div>
+    </div>
+    <p className="import-loading-label">{importStages[stage]}</p>
+    <p className="import-loading-hint">Finding subjects, days, times and rooms</p>
+  </div>;
 }
 
 export default function Uploader({ image, onImage, onAnalyze, busy, error, importUsage, usageUnavailable, onError, onManual, onSample, hasSchedule, pickerRef, onPreparing, onCancel, onOpen }) {
@@ -151,7 +158,7 @@ export default function Uploader({ image, onImage, onAnalyze, busy, error, impor
     </div>
     <input ref={input} type="file" accept="image/jpeg,image/png,image/webp" className="sr-only" tabIndex={-1} aria-label="Schedule image" onChange={(event) => { choose(event.target.files[0]); event.target.value = ''; }} disabled={busy || preparing} />
     {image ? <>
-      {busy ? <ImportProgress /> : <div className="uploaded-image-frame"><button type="button" className={`schedule-image-preview ${dragging ? 'is-dragging' : ''}`} aria-label="Enlarge uploaded schedule" aria-haspopup="dialog" onClick={() => setEnlarged(true)} {...dropEvents}><img src={image.preview} alt="Selected schedule" onLoad={(event) => setImageSize({ width: event.currentTarget.naturalWidth, height: event.currentTarget.naturalHeight })} /><span className="preview-enlarge" aria-hidden="true"><Maximize2 size={16} /></span></button>
+      {busy ? <ImportProgress image={image} /> : <div className="uploaded-image-frame"><button type="button" className={`schedule-image-preview ${dragging ? 'is-dragging' : ''}`} aria-label="Enlarge uploaded schedule" aria-haspopup="dialog" onClick={() => setEnlarged(true)} {...dropEvents}><img src={image.preview} alt="Selected schedule" onLoad={(event) => setImageSize({ width: event.currentTarget.naturalWidth, height: event.currentTarget.naturalHeight })} /><span className="preview-enlarge" aria-hidden="true"><Maximize2 size={16} /></span></button>
       <button type="button" className="button-secondary upload-change-mobile" disabled={preparing || importBlocked} onClick={() => { setTipsOpen(true); }}><ImageUp size={16} aria-hidden="true" />Change image</button></div>}
       <div className="import-footer-row"><p id="upload-data-disclosure" className="upload-privacy">Processed by AI. Not stored here. <Link to="/terms" target="_blank" rel="noopener noreferrer">Terms</Link> · <Link to="/privacy" target="_blank" rel="noopener noreferrer">Privacy</Link></p><div className="import-footer"><div className="import-submit-actions"><button type="button" className="button-secondary import-cancel" disabled={preparing} onClick={onCancel}>Cancel</button><button type="button" disabled={busy || preparing || importBlocked} aria-describedby="daily-import-usage upload-data-disclosure" onClick={() => hasSchedule ? setConfirmOpen(true) : onAnalyze()} className="button-primary">Import classes</button></div></div></div>
     </> : <>
