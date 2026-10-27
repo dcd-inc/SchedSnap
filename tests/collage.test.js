@@ -8,9 +8,9 @@ import { withTemplateKeywords } from '../shared/templateKeywords.js';
 import { searchWallpaperTemplates } from '../src/utils/wallpaperSearch.js';
 import { matchesGalleryCategory } from '../src/config/collections.js';
 
-test('Collage publishes ten unique mobile-only backgrounds with validated uploads', () => {
-  assert.equal(collageTemplates.length, 10);
-  assert.equal(new Set(collageTemplates.map(t => t.id)).size, 10);
+test('Collage publishes thirty unique mobile-only backgrounds with validated uploads', () => {
+  assert.equal(collageTemplates.length, 30);
+  assert.equal(new Set(collageTemplates.map(t => t.id)).size, 30);
   for (const design of collageTemplates) {
     const asset = manifest[design.image];
     assert.equal(asset?.width, 1080, design.id);
@@ -27,8 +27,8 @@ test('Collage publishes ten unique mobile-only backgrounds with validated upload
 
 test('Collage keywords find the collection and individual subjects', () => {
   const designs = collageTemplates.map(withTemplateKeywords);
-  assert.equal(searchWallpaperTemplates(designs, 'collage').length, 10);
-  assert.equal(searchWallpaperTemplates(designs, 'scrapbook').length, 10);
+  assert.equal(searchWallpaperTemplates(designs, 'collage').length, 30);
+  assert.equal(searchWallpaperTemplates(designs, 'scrapbook').length, 30);
   for (const [query, id] of [['Arctic Monkeys', 'crimson-indie-rock'], ['Saturn', 'celestial-art-journal'], ['My Chemical Romance', 'gothic-guitarist'], ['Harley Davidson', 'rock-and-roll-archive']]) {
     assert.deepEqual(searchWallpaperTemplates(designs, query).map(t => t.id), [`collage-${id}`]);
   }

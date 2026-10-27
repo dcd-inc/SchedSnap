@@ -5123,5 +5123,145 @@ export default {
     "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098789/schedsnap/wallpapers/scenic/cars-scarlet-hibiscus/mobile-8afd32befc1cef9a.png",
     "width": 1080,
     "height": 2400
+  },
+  "/wallpapers/scenic/collage-crimson-vinyl-guitar-stickers/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-crimson-vinyl-guitar-stickers/mobile-7daa0c92808e6a88",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102500/schedsnap/wallpapers/scenic/collage-crimson-vinyl-guitar-stickers/mobile-7daa0c92808e6a88.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-chrome-fashion-lips/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-chrome-fashion-lips/mobile-56aa7d7d7a9018ff",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102500/schedsnap/wallpapers/scenic/collage-chrome-fashion-lips/mobile-56aa7d7d7a9018ff.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-analog-browser-manga/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-analog-browser-manga/mobile-c3f7435c97b0197c",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102500/schedsnap/wallpapers/scenic/collage-analog-browser-manga/mobile-c3f7435c97b0197c.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-dusty-rose-grunge-records/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-dusty-rose-grunge-records/mobile-8ef346864034dd75",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102500/schedsnap/wallpapers/scenic/collage-dusty-rose-grunge-records/mobile-8ef346864034dd75.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-kitten-vinyl-snapshots/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-kitten-vinyl-snapshots/mobile-8de0f465ee6db501",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102503/schedsnap/wallpapers/scenic/collage-kitten-vinyl-snapshots/mobile-8de0f465ee6db501.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-hot-pink-drift-posters/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-hot-pink-drift-posters/mobile-6c0e653f8907820e",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102503/schedsnap/wallpapers/scenic/collage-hot-pink-drift-posters/mobile-6c0e653f8907820e.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-icy-blue-manga-mix/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-icy-blue-manga-mix/mobile-7e36c9a918ff1ee3",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102503/schedsnap/wallpapers/scenic/collage-icy-blue-manga-mix/mobile-7e36c9a918ff1ee3.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-mocha-chrome-star-journal/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-mocha-chrome-star-journal/mobile-9ab738b97de7032f",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102506/schedsnap/wallpapers/scenic/collage-mocha-chrome-star-journal/mobile-9ab738b97de7032f.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-kitty-torn-paper/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-kitty-torn-paper/mobile-c2abc8b4b78b7857",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102506/schedsnap/wallpapers/scenic/collage-kitty-torn-paper/mobile-c2abc8b4b78b7857.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-monochrome-personal-moodboard/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-monochrome-personal-moodboard/mobile-7cd81353755987e9",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102506/schedsnap/wallpapers/scenic/collage-monochrome-personal-moodboard/mobile-7cd81353755987e9.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-manga-eye-editorial/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-manga-eye-editorial/mobile-ae3089e8a0f5f503",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102506/schedsnap/wallpapers/scenic/collage-manga-eye-editorial/mobile-ae3089e8a0f5f503.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-oxblood-grunge-panels/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-oxblood-grunge-panels/mobile-09467d6f4e64d7e9",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102509/schedsnap/wallpapers/scenic/collage-oxblood-grunge-panels/mobile-09467d6f4e64d7e9.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-pink-graffiti-kitty/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-pink-graffiti-kitty/mobile-06cb5eaea8acaf39",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102510/schedsnap/wallpapers/scenic/collage-pink-graffiti-kitty/mobile-06cb5eaea8acaf39.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-radiohead-cat-scrapbook/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-radiohead-cat-scrapbook/mobile-e72ff25cd0a42b18",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102510/schedsnap/wallpapers/scenic/collage-radiohead-cat-scrapbook/mobile-e72ff25cd0a42b18.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-oxblood-grunge-torn-mix/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-oxblood-grunge-torn-mix/mobile-391528738d091337",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102511/schedsnap/wallpapers/scenic/collage-oxblood-grunge-torn-mix/mobile-391528738d091337.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-scarlet-eyes/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-scarlet-eyes/mobile-829f3aa26fadf53d",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102512/schedsnap/wallpapers/scenic/collage-scarlet-eyes/mobile-829f3aa26fadf53d.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-snoopy-porsche-print/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-snoopy-porsche-print/mobile-c71d652540179b96",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102513/schedsnap/wallpapers/scenic/collage-snoopy-porsche-print/mobile-c71d652540179b96.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-skull-butterfly-newsprint/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-skull-butterfly-newsprint/mobile-aece44879fb894d3",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102512/schedsnap/wallpapers/scenic/collage-skull-butterfly-newsprint/mobile-aece44879fb894d3.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-vinyl-instant-memories/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-vinyl-instant-memories/mobile-1ee27b6dc1a33ff0",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102513/schedsnap/wallpapers/scenic/collage-vinyl-instant-memories/mobile-1ee27b6dc1a33ff0.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-star-girl-keepsakes/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-star-girl-keepsakes/mobile-cdf497dca1bb8e71",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102514/schedsnap/wallpapers/scenic/collage-star-girl-keepsakes/mobile-cdf497dca1bb8e71.png",
+    "width": 1080,
+    "height": 2400
   }
 };
