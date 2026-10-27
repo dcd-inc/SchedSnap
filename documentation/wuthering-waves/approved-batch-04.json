@@ -1,0 +1,152 @@
+{
+  "collection": "Wuthering Waves",
+  "approvedCount": 13,
+  "excludedIds": [
+    "wuwa-equinox-promise"
+  ],
+  "assets": [
+    {
+      "id": "wuwa-blueflame-eclipse",
+      "name": "Blueflame Eclipse",
+      "previewNumber": 1,
+      "path": "output/wuthering-waves/approved-batch-04/01-blueflame-eclipse.png",
+      "sourceGeneratedImage": "exec-dbece2af-b0e9-4356-b013-ccde45358618.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "7dd9858b07167dca4178cc7bc37f645f1363bf5ae72559d13e61dab77f925911",
+      "approvalStatus": "approved"
+    },
+    {
+      "id": "wuwa-emberglass",
+      "name": "Emberglass",
+      "previewNumber": 2,
+      "path": "output/wuthering-waves/approved-batch-04/02-emberglass.png",
+      "sourceGeneratedImage": "exec-5d4f09e2-c5f6-44d3-bb6a-73e601b5235b.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "fb399055ab3008a55d9932d4d37e3112068335e38c88fb3875541301663343ad",
+      "approvalStatus": "approved"
+    },
+    {
+      "id": "wuwa-jade-oath",
+      "name": "Jade Oath",
+      "previewNumber": 3,
+      "path": "output/wuthering-waves/approved-batch-04/03-jade-oath.png",
+      "sourceGeneratedImage": "exec-63f97bb8-990e-4bee-a034-953b21a0348c.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "784dce68127b87751042a12982cc8123ccb5a4ec0790a09dbab1c129f6023c41",
+      "approvalStatus": "approved"
+    },
+    {
+      "id": "wuwa-emerald-resolve",
+      "name": "Emerald Resolve",
+      "previewNumber": 4,
+      "path": "output/wuthering-waves/approved-batch-04/04-emerald-resolve.png",
+      "sourceGeneratedImage": "exec-db563d80-135a-460e-8101-6d02ebff5614.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "1ebbf3eb4bc810c4f200675f8bd27aa237a1adc86a0da4d558ffd6a9b0f25e29",
+      "approvalStatus": "approved"
+    },
+    {
+      "id": "wuwa-bamboo-drizzle",
+      "name": "Bamboo Drizzle",
+      "previewNumber": 5,
+      "path": "output/wuthering-waves/approved-batch-04/05-bamboo-drizzle.png",
+      "sourceGeneratedImage": "exec-81e34437-b500-4db5-87a6-47e147749e7c.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "a421e5e3d276a5e773816ee91c26e5fa4a78720d99ed792a00226f085245b9f1",
+      "approvalStatus": "approved"
+    },
+    {
+      "id": "wuwa-silent-current",
+      "name": "Silent Current",
+      "previewNumber": 6,
+      "path": "output/wuthering-waves/approved-batch-04/06-silent-current.png",
+      "sourceGeneratedImage": "exec-b2c88d7c-1d8d-4af4-bba6-c9d8d21ee56e.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "3a59211aa61fc9d7d11b5fd0d849cc67c7688b4a6bf6fbeb86c42d7c83e1c33f",
+      "approvalStatus": "approved"
+    },
+    {
+      "id": "wuwa-sunforged",
+      "name": "Sunforged",
+      "previewNumber": 7,
+      "path": "output/wuthering-waves/approved-batch-04/07-sunforged.png",
+      "sourceGeneratedImage": "exec-5f9b0148-92ad-45e5-be74-59391559c64c.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "640c2c43ab653fb5d291ecde5af215da5b07583af423b7b1482a495bc2c3a403",
+      "approvalStatus": "approved"
+    },
+    {
+      "id": "wuwa-copper-dawn",
+      "name": "Copper Dawn",
+      "previewNumber": 8,
+      "path": "output/wuthering-waves/approved-batch-04/08-copper-dawn.png",
+      "sourceGeneratedImage": "exec-64d8f706-95e2-4652-a25e-9a860e7ac4ca.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "32af125256bb85f6dff33f3ffe5f75eaf04a047e0065fe182b0e2e717ff679b5",
+      "approvalStatus": "approved"
+    },
+    {
+      "id": "wuwa-lunar-anchor",
+      "name": "Lunar Anchor",
+      "previewNumber": 9,
+      "path": "output/wuthering-waves/approved-batch-04/09-lunar-anchor.png",
+      "sourceGeneratedImage": "exec-1444356a-7a89-4633-a7c2-3fe1ca52c0fb.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "eb00356410d5b600949d403f4e48ddf445691bc711e5428f4ffa8c09d29ed0cc",
+      "approvalStatus": "approved"
+    },
+    {
+      "id": "wuwa-pearl-tides",
+      "name": "Pearl Tides",
+      "previewNumber": 10,
+      "path": "output/wuthering-waves/approved-batch-04/10-pearl-tides.png",
+      "sourceGeneratedImage": "exec-d8e4f799-4fa7-469e-b668-98c40cda6da4.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "11e126f57f3f34365cf8e866d2942db584cc96df0ada289fc3dfa03196d7404e",
+      "approvalStatus": "approved"
+    },
+    {
+      "id": "wuwa-astral-dial",
+      "name": "Astral Dial",
+      "previewNumber": 11,
+      "path": "output/wuthering-waves/approved-batch-04/11-astral-dial.png",
+      "sourceGeneratedImage": "exec-89a3ca6c-fc96-4458-9a84-305bdd9b6c4e.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "fb50736a5efe85aa9fe8a84c637962396f73ceb790589b246bddcd34c91a69a4",
+      "approvalStatus": "approved"
+    },
+    {
+      "id": "wuwa-azure-hourglass",
+      "name": "Azure Hourglass",
+      "previewNumber": 12,
+      "path": "output/wuthering-waves/approved-batch-04/12-azure-hourglass.png",
+      "sourceGeneratedImage": "exec-5a41fad2-8ab2-43be-b0cc-6c465c62e1c1.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "b98d0521c57cf968853e8a866019eb2d7adf1a60db74eebf34fcae04a7421641",
+      "approvalStatus": "approved"
+    },
+    {
+      "id": "wuwa-solstice-mirror",
+      "name": "Solstice Mirror",
+      "previewNumber": 13,
+      "path": "output/wuthering-waves/approved-batch-04/13-solstice-mirror.png",
+      "sourceGeneratedImage": "exec-e29721d5-ce56-4618-8d87-4fcb47e8a9c7.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "bb7540a30117fc2b5857e5e26d7b464e7233461c79602ccc882e55a18ecf2ce9",
+      "approvalStatus": "approved"
+    }
+  ]
+}

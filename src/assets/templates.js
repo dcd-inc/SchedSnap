@@ -15,8 +15,10 @@ import { genshinChibiTemplates } from './genshinChibiTemplates.js';
 import { hunterTemplates } from './hunterTemplates.js';
 import { capybaraTemplates } from './capybaraTemplates.js';
 import { animeTemplates } from './animeTemplates.js';
-import { narutoTemplates } from './narutoTemplates.js';
+import { jinxTemplates } from './jinxTemplates.js';
 import { arcaneTemplates } from './arcaneTemplates.js';
+import { wutheringWavesTemplates } from './wutheringWavesTemplates.js';
+import { narutoTemplates } from './narutoTemplates.js';
 import { collageTemplates } from './collageTemplates.js';
 import { carTemplates } from './carTemplates.js';
 import { withTemplateKeywords } from '../../shared/templateKeywords.js';
@@ -39,8 +41,10 @@ export const wallpaperTemplates = [
   ...hunterTemplates,
   ...capybaraTemplates,
   ...animeTemplates,
-  ...narutoTemplates,
+  ...jinxTemplates,
   ...arcaneTemplates,
+  ...wutheringWavesTemplates,
+  ...narutoTemplates,
   ...collageTemplates,
   ...carTemplates,
 

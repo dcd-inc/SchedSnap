@@ -1,0 +1,81 @@
+{
+  "collection": "Wuthering Waves",
+  "batch": "approved-batch-03",
+  "approvedDate": "2026-10-27",
+  "status": "approved-for-publication",
+  "approvedCount": 6,
+  "assets": [
+    {
+      "id": "wuwa-jade-lantern",
+      "name": "Jade Lantern",
+      "previewNumber": 6,
+      "path": "output/wuthering-waves/approved-batch-03/06-jade-lantern.png",
+      "sourceAttachment": "codex-clipboard-609c582c-56b8-46c0-8267-cff0c1e525c4.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "71691995e5aa154cbf3f054e04abf00c62003f9d882d834dbbc2a2b1b4d42b9b",
+      "approvalStatus": "approved",
+      "publicationStatus": "approved-for-publication"
+    },
+    {
+      "id": "wuwa-digital-ghost",
+      "name": "Digital Ghost",
+      "previewNumber": 9,
+      "path": "output/wuthering-waves/approved-batch-03/09-digital-ghost.png",
+      "sourceAttachment": "codex-clipboard-e704cfc5-ebea-4260-8312-27d76ea1cfaa.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "4637f9104b0f6eaa35e87583199adc86e079508ff57865445c16b1f4784dd0df",
+      "approvalStatus": "approved",
+      "publicationStatus": "approved-for-publication"
+    },
+    {
+      "id": "wuwa-afterhours-lucy",
+      "name": "Afterhours Lucy",
+      "previewNumber": 3,
+      "path": "output/wuthering-waves/approved-batch-03/03-afterhours-lucy.png",
+      "sourceAttachment": "codex-clipboard-c2d46177-9a97-4005-96b9-ae8cf034b588.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "127a0416c7f9c13f4def61f2454c21e8c5771ac47029b956c730f91820b8d6a5",
+      "approvalStatus": "approved",
+      "publicationStatus": "approved-for-publication"
+    },
+    {
+      "id": "wuwa-vermilion-moon",
+      "name": "Vermilion Moon",
+      "previewNumber": 5,
+      "path": "output/wuthering-waves/approved-batch-03/05-vermilion-moon.png",
+      "sourceAttachment": "codex-clipboard-49d45036-edb5-4e78-bdc9-0882d0d53a68.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "f0a0721aa336f72690418a255db133fb8f774f97556a0c89922346552ddd650f",
+      "approvalStatus": "approved",
+      "publicationStatus": "approved-for-publication"
+    },
+    {
+      "id": "wuwa-amber-reverie",
+      "name": "Amber Reverie",
+      "previewNumber": 7,
+      "path": "output/wuthering-waves/approved-batch-03/07-amber-reverie.png",
+      "sourceAttachment": "codex-clipboard-2d24dfe0-b5c5-4489-a355-de93f47be250.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "3e680704da1b1d1d5fd59b2c592322729fa6fad007af94596db7696a67229273",
+      "approvalStatus": "approved",
+      "publicationStatus": "approved-for-publication"
+    },
+    {
+      "id": "wuwa-neon-recoil",
+      "name": "Neon Recoil",
+      "previewNumber": 1,
+      "path": "output/wuthering-waves/approved-batch-03/01-neon-recoil.png",
+      "sourceAttachment": "codex-clipboard-5f03d413-2e05-469a-a189-0266290c0f7e.png",
+      "width": 793,
+      "height": 1983,
+      "sha256": "8c854bba310caa267d1c0c36d98f054a691d08c3dedb11427cb78305ff7cce4e",
+      "approvalStatus": "approved",
+      "publicationStatus": "approved-for-publication"
+    }
+  ]
+}

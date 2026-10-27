@@ -1,0 +1,74 @@
+{
+  "collection": "Wuthering Waves",
+  "batch": "approved-batch-02",
+  "approvedDate": "2026-10-27",
+  "status": "approved-unpublished",
+  "instructions": "User removed Violet Reliquary and approved the remaining five for catalog publication on 2026-10-27.",
+  "processing": "Original bytes preserved without resizing or repainting.",
+  "approvedCount": 5,
+  "assets": [
+    {
+      "id": "wuwa-gilded-tide",
+      "name": "Gilded Tide",
+      "previewNumber": 1,
+      "path": "output/wuthering-waves/approved-batch-02/01-gilded-tide.png",
+      "sourceImage": "exec-b94a6917-9fbd-42bb-92ef-a6858877dda4.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "55a034660eec4aeeffa5fc28388fd1a3947fad3c45d72e776718b7272b088452",
+      "approvalStatus": "approved",
+      "publicationStatus": "unpublished"
+    },
+    {
+      "id": "wuwa-sapphire-covenant",
+      "name": "Sapphire Covenant",
+      "previewNumber": 2,
+      "path": "output/wuthering-waves/approved-batch-02/02-sapphire-covenant.png",
+      "sourceImage": "exec-844590f4-07aa-4bd0-bcf1-5ca7bfffbecf.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "bd6e37fe399078a05389033149cbaa85061eb64553c98318250ef894aff02c4d",
+      "approvalStatus": "approved",
+      "publicationStatus": "unpublished"
+    },
+    {
+      "id": "wuwa-golden-reflection",
+      "name": "Golden Reflection",
+      "previewNumber": 3,
+      "path": "output/wuthering-waves/approved-batch-02/03-golden-reflection.png",
+      "sourceImage": "exec-c7c5284e-c165-434f-8cd5-d8598bd8e09a.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "35c36e4376839d0df208f5eb1bb0a2f2f09424a373e3d00043c6ed9bbd7bb1eb",
+      "approvalStatus": "approved",
+      "publicationStatus": "unpublished"
+    },
+    {
+      "id": "wuwa-midnight-throne",
+      "name": "Midnight Throne",
+      "previewNumber": 7,
+      "path": "output/wuthering-waves/approved-batch-02/07-midnight-throne.png",
+      "sourceImage": "exec-f6b61a7e-f90a-4448-8202-13b6247440d8.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "d27a0c8028ee0eb1f77fb86e65a4f2b96e53d192d1111da14712d4ea3f3958b6",
+      "approvalStatus": "approved",
+      "publicationStatus": "unpublished"
+    },
+    {
+      "id": "wuwa-prismatic-oath",
+      "name": "Prismatic Oath",
+      "previewNumber": 9,
+      "path": "output/wuthering-waves/approved-batch-02/09-prismatic-oath.png",
+      "sourceImage": "exec-90621cae-94cd-4e39-9731-b9eb60186ada.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "aecf42037e3fcbaf15b7f9daeac0b658e68eb65e733771d090235a3fab6b7fe7",
+      "approvalStatus": "approved",
+      "publicationStatus": "unpublished"
+    }
+  ],
+  "excludedIds": [
+    "wuwa-violet-reliquary"
+  ]
+}
