@@ -19,6 +19,7 @@ import { isNewTemplate } from '../../utils/templateFreshness.js';
 import useDesignLikes from '../../lib/useDesignLikes.js';
 import { sortTemplatesByLikes } from '../../utils/sortTemplatesByLikes.js';
 import { scheduleLayoutOptions } from '../../utils/canvasHelpers.js';
+import { supportsTemplateDevice } from '../../utils/templateDevices.js';
 import { searchWallpaperTemplates } from '../../utils/wallpaperSearch.js';
 
 const previewSchedule = galleryScheduleFor;
@@ -40,7 +41,7 @@ export default function TemplateGallery({ onUpload, selectedId, settings = {}, s
     const matching = isSearching
       ? searchWallpaperTemplates(wallpaperTemplates, searchQuery)
       : wallpaperTemplates.filter((item) => matchesGalleryCategory(item, category));
-    return sortTemplatesByLikes(matching.filter(item => !item.mobileOnly || device === 'mobile'), rankingLikes, sort, downloads);
+    return sortTemplatesByLikes(matching.filter(item => supportsTemplateDevice(item, device)), rankingLikes, sort, downloads);
   }, [wallpaperTemplates, searchQuery, isSearching, category, rankingLikes, device, sort, downloads]);
 
   const filterKey = `${sort}:${isSearching ? `search:${searchQuery.trim()}` : category}:${device}`;
