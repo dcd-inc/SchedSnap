@@ -6,7 +6,8 @@ import { MAX_IMAGE_BYTES, MAX_SOURCE_BYTES } from '../shared/uploadLimits.js';
 function browser(t, { sizes = [100], width = 1600, height = 900 } = {}) {
   const formats = [];
   let closed = 0;
-  const canvas = { getContext: () => ({ fillRect() {}, drawImage() {} }), toBlob(callback, type, quality) {
+  const draws = [];
+  const canvas = { getContext: () => ({ fillRect() {}, drawImage(...args) { draws.push(args); } }), toBlob(callback, type, quality) {
     formats.push({ type, quality });
     queueMicrotask(() => callback({ size: sizes.shift(), type }));
   } };
@@ -15,7 +16,7 @@ function browser(t, { sizes = [100], width = 1600, height = 900 } = {}) {
   t.mock.property(globalThis, 'FileReader', class {
     readAsDataURL(blob) { this.result = `data:${blob.type};base64,aW1hZ2U=`; queueMicrotask(() => this.onload()); }
   });
-  return { formats, canvas, closed: () => closed };
+  return { formats, canvas, draws, closed: () => closed };
 }
 
 // Node has no createImageBitmap; make a configurable stub for the browser mock.
@@ -49,4 +50,20 @@ test('unusable uploads fail before encoding and release decoded bitmaps on error
   await assert.rejects(prepareImage({ type: 'image/png', size: MAX_SOURCE_BYTES + 1 }), /10 MB/);
   await assert.rejects(prepareImage({ type: 'image/jpeg', size: 100 }), /too large after compression/);
   assert.equal(page.closed(), 1);
+});
+
+test('crops original pixels before resizing so timetable text retains detail', async t => {
+  const page = browser(t, { width: 6000, height: 4000 });
+  await prepareImage({ type: 'image/png', size: 200 }, { x: 0.25, y: 0.25, width: 0.5, height: 0.5 });
+  assert.deepEqual(page.draws[0].slice(1), [1500, 1000, 3000, 2000, 0, 0, 2400, 1600]);
+  assert.equal(page.closed(), 1);
+});
+
+test('invalid crop bounds fail without encoding and release the bitmap', async t => {
+  const page = browser(t);
+  for (const crop of [{ x: -0.1, y: 0, width: 0.5, height: 1 }, { x: 0.8, y: 0, width: 0.5, height: 1 }, { x: 0, y: 0, width: 0, height: 1 }, { x: NaN, y: 0, width: 1, height: 1 }]) {
+    await assert.rejects(prepareImage({ type: 'image/png', size: 200 }, crop), /Select a crop/);
+  }
+  assert.equal(page.draws.length, 0);
+  assert.equal(page.closed(), 4);
 });

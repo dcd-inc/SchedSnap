@@ -1,0 +1,35 @@
+.wallpaper-carousel-section { padding-block: 48px 32px; scroll-margin-top: 100px; background: var(--color-paper); }
+.wallpaper-carousel-heading { text-align: center; }
+.wallpaper-carousel-heading h2 { font-size: clamp(1.75rem, 3vw, 2.25rem); font-weight: 600; line-height: 1.15; letter-spacing: -0.03em; }
+.wallpaper-carousel-stage { height: clamp(560px, 48vw, 640px); min-height: 560px; overflow: hidden; margin-block: clamp(24px, 3vw, 36px) 0; }
+.wallpaper-phone-carousel .circular-carousel__frame { isolation: isolate; }
+.wallpaper-phone-carousel .circular-carousel__photo { box-sizing: border-box; border: 7px solid #202124; border-radius: 30px; background: #202124; }
+.wallpaper-phone-carousel .circular-carousel__frame::after { content: ''; position: absolute; z-index: 2; top: 13px; left: 50%; width: 56px; height: 15px; transform: translateX(-50%); border-radius: 20px; background: #17181a; pointer-events: none; }
+.wallpaper-phone-carousel .circular-carousel__frame::before { content: ''; position: absolute; z-index: 2; bottom: 14px; left: 50%; width: 60px; height: 4px; transform: translateX(-50%); border-radius: 4px; background: rgb(255 255 255 / 85%); pointer-events: none; }
+.wallpaper-phone-carousel .circular-carousel__caption { gap: 8px; }
+.wallpaper-phone-carousel .circular-carousel__title { font-size: clamp(20px, 1.8vw, 24px); font-weight: 600; line-height: 1.25; letter-spacing: -0.02em; }
+.wallpaper-phone-carousel .circular-carousel__count { font-size: 14px; font-weight: 500; opacity: 1; color: var(--color-muted); }
+.wallpaper-phone-carousel:focus-visible { outline: 2px solid var(--color-ink); outline-offset: -4px; }
+@media (max-width: 640px) {
+  .wallpaper-carousel-stage { width: calc(100% - 16px); height: 480px; min-height: 480px; margin-top: 24px; }
+  .wallpaper-phone-carousel .circular-carousel__caption { bottom: 16px; }
+}
+
+
+/* Orbit cards face the viewer; keep Chrome from culling their nested 3D tiles. */
+.wallpaper-phone-carousel[data-shape="orbit"] .circular-carousel__tile { backface-visibility: visible; -webkit-backface-visibility: visible; }
+
+.wallpaper-phone-carousel .circular-carousel__tile { filter: drop-shadow(3px 1px 0 #555b64) drop-shadow(2px 1px 0 #15171b); }
+
+.wallpaper-phone-carousel .circular-carousel__photo { border-color: #51545b #17191d #0b0d10 #41454c; }
+
+@media (min-width: 1024px) {
+  .wallpaper-carousel-section { padding-block: 40px 24px; }
+  .wallpaper-carousel-stage { max-width: 1000px; height: clamp(480px, 40vw, 560px); min-height: 480px; }
+}
+
+@media (max-width: 640px) {
+  .wallpaper-phone-carousel { contain: layout paint; }
+  .wallpaper-phone-carousel .circular-carousel__tile { filter: none; isolation: isolate; }
+  .wallpaper-phone-carousel .circular-carousel__frame { box-shadow: 3px 1px 0 #555b64, 5px 2px 0 #15171b; }
+}

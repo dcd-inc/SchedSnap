@@ -14,7 +14,10 @@ export function genshinKeywords(template) {
 
 const collectionTags = {
   'wuthering-waves': ['Wuthering Waves', 'WuWa', 'game', 'anime'],
-  arcane: ['Arcane', 'League of Legends', 'animation'],
+  collage: ['collage', 'scrapbook', 'torn paper', 'mobile wallpaper'],
+  cars: ['cars', 'car', 'automotive', 'sports car', 'mobile', 'wallpaper'],
+  arcane: ['Arcane', 'League of Legends', 'Riot Games', 'animated series', 'illustration', 'animation'],
+  naruto: ['Naruto', 'anime', 'manga', 'hand drawn', 'ink'],
   sanrio: ['Sanrio', 'kawaii', 'cute', 'cartoon'],
   snoopy: ['Snoopy', 'Peanuts', 'dog', 'cartoon', 'hand drawn'],
   genshin: ['Genshin Impact', 'anime', 'game'],

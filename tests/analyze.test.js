@@ -90,6 +90,9 @@ test('returns validated extracted data, using the configured model and inline im
   assert.deepEqual(response.body.schedule, sampleSchedule);
   assert.equal(parameters.model, 'configured-model');
   assert.equal(parameters.contents[0].parts[1].inlineData.data, image.image);
+  assert.match(parameters.contents[0].parts[0].text, /at most 12 simple words/);
+  assert.match(parameters.contents[0].parts[0].text, /Do not report overlaps/);
+  assert.match(parameters.contents[0].parts[0].text, /Never substitute a course code/);
   assert.ok(!JSON.stringify(response.body).includes('test-secret'));
 });
 
@@ -187,6 +190,19 @@ test('DeepSeek runs only after every Gemini attempt fails', async () => {
   assert.deepEqual(response.body.schedule, sampleSchedule);
 });
 
+test('DeepSeek-only testing never calls Gemini even when Gemini keys are configured', async () => {
+  let geminiCalls = 0;
+  const response = responseStub();
+  await createAnalyzeHandler({
+    env: { GEMINI_API_KEY: 'gemini', DEEPSEEK_API_KEY: 'deepseek', DEEPSEEK_ONLY: 'true' },
+    generate: async () => { geminiCalls++; throw new Error('Gemini must not run'); },
+    generateDeepseek: async () => ({ text: JSON.stringify(sampleSchedule) }),
+  })({ method: 'POST', body: image }, response);
+  assert.equal(geminiCalls, 0);
+  assert.equal(response.statusCode, 200);
+  assert.equal(response.body.provider, 'deepseek');
+});
+
 test('Gemini success skips DeepSeek, and DeepSeek works without Gemini keys', async () => {
   let deepseekCalls = 0;
   const geminiResponse = responseStub();
@@ -244,6 +260,11 @@ test('DeepSeek fallback sends a strict JSON-mode vision request', async (t) => {
   assert.match(request.body.messages[0].content, /SAME row/);
   assert.match(request.body.messages[0].content, /TTh means Tuesday AND Thursday/);
   assert.match(request.body.messages[0].content, /Never infer AM\/PM/);
+  assert.match(request.body.messages[0].content, /Section-Subject/);
+  assert.match(request.body.messages[0].content, /"SBIT3C-The Contemporary World" => subject "The Contemporary World", courseCode "SOCSCI3"/);
+  assert.match(request.body.messages[0].content, /discard that prefix AND its separating hyphen/);
+  assert.match(request.body.messages[0].content, /TH alone means Thursday/);
+  assert.match(request.body.messages[0].content, /one class containing every separate meeting/);
   assert.equal(request.body.messages[1].content[1].image_url.url, `data:image/png;base64,${image.image}`);
   assert.equal(response.statusCode, 200);
   assert.deepEqual(response.body.schedule, sampleSchedule);

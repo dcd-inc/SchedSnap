@@ -12,7 +12,7 @@ const questions = [
   },
   {
     question: 'How do I turn my class schedule into a wallpaper?',
-    answer: 'Choose your device and a design, then upload an image of your timetable or enter your classes manually. Check your subjects, days, times, and rooms, customize the appearance, and download your wallpaper as a PNG.',
+    answer: 'Choose your device, pick a design or upload your own wallpaper, then upload an image of your timetable or enter your classes manually. Check your subjects, days, times, and rooms, customize the appearance, and download your wallpaper as a PNG.',
   },
   {
     question: 'Can I turn a timetable screenshot into a wallpaper?',
@@ -29,6 +29,7 @@ export default function Faq() {
     <div className="faq-intro">
       <h2 id="faq-heading">Frequently asked questions</h2>
       <p>What to know before making your class schedule wallpaper.</p>
+      <Link to="/guides/class-schedule-wallpaper" className="faq-guide-link underline underline-offset-4">How to make a class schedule wallpaper</Link>
     </div>
     <div className="faq-questions">
       {questions.map(({ question, answer }) => <details key={question} name="landing-faq">
@@ -38,8 +39,8 @@ export default function Faq() {
     </div>
     <div className="faq-cta">
       <div className="faq-cta-copy">
-        <h2>Ready for a personalized schedule wallpaper?</h2>
-        <p>Input your classes, select a style, and instant download—completely free.</p>
+        <h2>Ready to make your schedule wallpaper?</h2>
+        <p>Pick a design, add your classes, and download instantly—100% free.</p>
       </div>
       <Link to="/services/schedule-wallpaper" className="button-primary">Create your wallpaper <ArrowRight size={18} aria-hidden="true" /></Link>
     </div>

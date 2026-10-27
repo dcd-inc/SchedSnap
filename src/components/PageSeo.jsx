@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router';
-import { getPageSeo, SITE_URL, websiteSchema } from '../../shared/seo.js';
+import { getPageSeo, getPageSchema, SITE_URL } from '../../shared/seo.js';
 
 export default function PageSeo() {
   const { pathname } = useLocation();
@@ -32,15 +32,16 @@ export default function PageSeo() {
       }
       canonical.href = page.canonical;
     } else canonical?.remove();
-    let schema = document.getElementById('website-schema');
-    if (pathname === '/') {
+    const data = getPageSchema(pathname);
+    let schema = document.getElementById('page-schema');
+    if (data) {
       if (!schema) {
         schema = document.createElement('script');
-        schema.id = 'website-schema';
+        schema.id = 'page-schema';
         schema.type = 'application/ld+json';
         document.head.appendChild(schema);
       }
-      schema.textContent = JSON.stringify(websiteSchema);
+      schema.textContent = JSON.stringify(data);
     } else schema?.remove();
   }, [pathname]);
   return null;

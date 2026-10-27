@@ -1,0 +1,20 @@
+.class-edit-dialog.image-crop-dialog { width: min(760px, calc(100vw - 32px)); overflow: hidden; }
+.image-crop-dialog > p { margin: 12px 0; color: var(--color-muted); font-size: 14px; line-height: 1.5; }
+.crop-workspace { display: flex; justify-content: center; padding: 24px; background: #e2e8f0; border-radius: 12px; overflow: hidden; }
+.crop-stage { position: relative; max-width: 100%; }
+.crop-selection { position: absolute; border: 2px solid #0f172a; box-shadow: 0 0 0 9999px #0f172a80; cursor: move; touch-action: none; }
+.crop-handle { position: absolute; width: 44px; height: 44px; padding: 0; border: 0; background: transparent; touch-action: none; }
+.crop-handle::after { content: ''; position: absolute; inset: 13px; background: white; border: 2px solid #0f172a; border-radius: 4px; pointer-events: none; }
+.crop-handle:focus-visible { outline: 3px solid #2563eb; outline-offset: 0; border-radius: 8px; }
+.crop-nw { left: -23px; top: -23px; cursor: nwse-resize; }
+.crop-ne { right: -23px; top: -23px; cursor: nesw-resize; }
+.crop-sw { left: -23px; bottom: -23px; cursor: nesw-resize; }
+.crop-se { right: -23px; bottom: -23px; cursor: nwse-resize; }
+.crop-help { margin: 12px 0 16px; padding-left: 20px; list-style: disc; color: var(--color-muted); font-size: 14px; line-height: 1.5; }
+.crop-help li + li { margin-top: 4px; }
+.crop-actions, .crop-actions > div { display: flex; justify-content: space-between; gap: 8px; }
+.crop-actions { margin-top: 16px; }
+.crop-actions button { min-height: 44px; }
+@media (max-width: 640px) { .class-edit-dialog.image-crop-dialog { width: 100%; } .crop-workspace { padding: 22px; } }
+.crop-image-layer { position: absolute; inset: 0; overflow: hidden; }
+.crop-image-layer > img { position: absolute; max-width: none; user-select: none; pointer-events: none; }

@@ -1,5 +1,6 @@
+import useMobileSheetDismiss from '../../lib/useMobileSheetDismiss.js';
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { ArrowRight, ChevronDown, Download, Heart, X } from 'lucide-react';
+import { ArrowRight, ChevronDown, Heart, Plus, X } from 'lucide-react';
 import { deviceResolutions, galleryScheduleFor } from '../../assets/wallpaperPresets.js';
 import useInfiniteGallery from '../../lib/useInfiniteGallery.js';
 import { useCatalogStatus } from '../../lib/catalogContext.js';
@@ -12,15 +13,18 @@ import CategoryFilters from '../../components/CategoryFilters.jsx';
 import DevicePicker from '../../components/DevicePicker.jsx';
 import { layoutIcons, stylePickerOptions } from '../../components/wallpaperOptionIcons.js';
 import SortPicker from '../../components/SortPicker.jsx';
+import ClickSpark from '../../components/ClickSpark.jsx';
+import GalleryCardSkeleton from '../../components/GalleryCardSkeleton.jsx';
 import { isNewTemplate } from '../../utils/templateFreshness.js';
 import useDesignLikes from '../../lib/useDesignLikes.js';
 import { sortTemplatesByLikes } from '../../utils/sortTemplatesByLikes.js';
 import { scheduleLayoutOptions } from '../../utils/canvasHelpers.js';
+import { supportsTemplateDevice } from '../../utils/templateDevices.js';
 import { searchWallpaperTemplates } from '../../utils/wallpaperSearch.js';
 
 const previewSchedule = galleryScheduleFor;
 
-export default function TemplateGallery({ selectedId, settings = {}, schedule: enteredSchedule, scheduleTitle = 'Class Schedule', onSelect, category: selectedCategory = 'all', onCategoryChange, device = 'mobile', onDeviceChange, sort = 'likes', onSortChange, previewLayout = 'stacked', onLayoutChange, previewStyle = 'glass', onStyleChange, searchQuery = '', onClearSearch }) {
+export default function TemplateGallery({ onUpload, selectedId, settings = {}, schedule: enteredSchedule, scheduleTitle = 'Class Schedule', onSelect, category: selectedCategory = 'all', onCategoryChange, device = 'mobile', onDeviceChange, sort = 'likes', onSortChange, previewLayout = 'stacked', onLayoutChange, previewStyle = 'glass', onStyleChange, searchQuery = '', onClearSearch }) {
   const schedule = enteredSchedule;
   const { templates: wallpaperTemplates, loading: catalogLoading, error } = useCatalogStatus();
   const thumbnailWidth = device === 'laptop' ? 480 : device === 'tablet' ? 384 : 270;
@@ -28,8 +32,8 @@ export default function TemplateGallery({ selectedId, settings = {}, schedule: e
   const category = ['chikawa', 'little-friends'].includes(selectedCategory) ? 'chiikawa' : galleryCategories.some((item) => item.id === selectedCategory) ? selectedCategory : 'all';
   const [preview, setPreview] = useState(null);
   const { likes, rankingLikes, loading: likesLoading, pending, error: likeError, refresh: refreshLikes, toggle: toggleLike } = useDesignLikes();
-  const { downloads, error: downloadError, refresh: refreshDownloads } = useDesignDownloads(device);
-  const loading = catalogLoading || likesLoading;
+  const { downloads, loading: downloadsLoading, error: downloadError, refresh: refreshDownloads } = useDesignDownloads(device);
+  const loading = catalogLoading || (sort === 'likes' && likesLoading) || (sort === 'downloads' && downloadsLoading);
   const isSearching = Boolean(searchQuery && searchQuery.trim());
   const activeCategory = isSearching ? 'all' : category;
 
@@ -37,11 +41,11 @@ export default function TemplateGallery({ selectedId, settings = {}, schedule: e
     const matching = isSearching
       ? searchWallpaperTemplates(wallpaperTemplates, searchQuery)
       : wallpaperTemplates.filter((item) => matchesGalleryCategory(item, category));
-    return sortTemplatesByLikes(matching.filter(item => !item.mobileOnly || device === 'mobile'), rankingLikes, sort, downloads);
+    return sortTemplatesByLikes(matching.filter(item => supportsTemplateDevice(item, device)), rankingLikes, sort, downloads);
   }, [wallpaperTemplates, searchQuery, isSearching, category, rankingLikes, device, sort, downloads]);
 
   const filterKey = `${sort}:${isSearching ? `search:${searchQuery.trim()}` : category}:${device}`;
-  const { count: galleryCount, hasMore, sentinel, loadMore } = useInfiniteGallery(visibleTemplates.length, filterKey);
+  const { count: galleryCount, hasMore, sentinel, loadMore } = useInfiniteGallery(visibleTemplates.length, filterKey, 8);
 
   const activeCategoryName = galleryCategories.find((collection) => collection.id === activeCategory)?.name || 'Design';
   return <div>
@@ -65,7 +69,17 @@ export default function TemplateGallery({ selectedId, settings = {}, schedule: e
     {downloadError && <div className="gallery-like-error" role="alert"><span>{downloadError}</span><button type="button" className="text-link" onClick={refreshDownloads}>Retry</button></div>}
     {likeError && <div className="gallery-like-error" role="alert"><span>{likeError}</span><button type="button" className="text-link" onClick={() => refreshLikes(true)} disabled={!!pending}>Retry</button></div>}
     <div id="template-gallery" role="group" aria-label={`${activeCategoryName} gallery`} aria-busy={loading} className={`template-grid template-grid-${device}`}>
-      {loading && Array.from({ length: 10 }, (_, i) => <div key={`skeleton-${i}`} className="gallery-card-skeleton wallpaper-skeleton" aria-hidden="true" />)}
+      {onUpload && activeCategory === 'all' && !isSearching && <div className="template-card min-w-0">
+      <button type="button" className="gallery-upload-card" onClick={onUpload}>
+        <span className="gallery-upload-card-icon"><Plus size={28} aria-hidden="true" /></span>
+        <strong>Upload Background</strong>
+      </button>
+      <div className="template-card-caption"><div className="template-card-details">
+        <button type="button" className="template-card-name" onClick={onUpload}>Blank / Custom</button>
+        <p className="template-downloads">Upload your own wallpaper.</p>
+      </div></div>
+      </div>}
+      {loading && Array.from({ length: 10 }, (_, i) => <GalleryCardSkeleton key={`skeleton-${i}`} device={device} />)}
       {!loading && visibleTemplates.length === 0 && (
         <div className="gallery-empty-state" role="status">
           {isSearching ? (
@@ -106,23 +120,28 @@ export default function TemplateGallery({ selectedId, settings = {}, schedule: e
         </div>
         </button>
         <div className="template-card-caption">
-          <button type="button" className="template-card-name" aria-haspopup="dialog" onClick={openPreview}>{item.name}</button>
-          <div className="template-card-stats"><span className="template-downloads" role="img" aria-label={`${downloads[item.id] === undefined ? "Unavailable" : downloads[item.id].toLocaleString()} downloads`} title="Downloads"><Download size={16} aria-hidden="true" /><span aria-hidden="true">{downloads[item.id]?.toLocaleString() ?? "—"}</span></span>
+          <div className="template-card-details">
+            <button type="button" className="template-card-name" aria-haspopup="dialog" onClick={openPreview}>{item.name}</button>
+            <p className="template-downloads">{downloads[item.id] === undefined ? 'Downloads unavailable' : `${downloads[item.id].toLocaleString()} ${downloads[item.id] === 1 ? 'download' : 'downloads'}`}</p>
+          </div>
+          <ClickSpark sparkColor="#be123c" sparkSize={14} sparkRadius={30} sparkCount={8} duration={500} disabled={!vote} style={{ width: 'auto', height: 'auto', flexShrink: 0 }}>
           <button type="button" className="template-heart" aria-pressed={vote?.liked || false} aria-label={`${vote?.liked ? 'Unlike' : 'Like'} ${item.name}${vote ? `, ${vote.count} ${vote.count === 1 ? 'like' : 'likes'}` : ', likes unavailable'}`} disabled={!vote} onClick={() => toggleLike(item.id)}>
-            <Heart size={18} fill={vote?.liked ? 'currentColor' : 'none'} aria-hidden="true" /><span aria-hidden="true">{vote ? vote.count.toLocaleString() : '—'}</span>
-          </button></div>
+            <Heart size={20} fill={vote?.liked ? 'currentColor' : 'none'} aria-hidden="true" /><span aria-hidden="true">{vote ? vote.count.toLocaleString() : '—'}</span>
+          </button>
+          </ClickSpark>
         </div>
       </div>; })}
     </div>
     {loading && <p role="status" className="sr-only">Loading designs…</p>}
     {!loading && error && <p role="alert">{error}</p>}
     {!loading && visibleTemplates.length > 0 && hasMore && <div ref={sentinel} className="gallery-load-more"><button type="button" className="button-secondary" onClick={loadMore}>Load more designs</button></div>}
-    {preview && <DesignPreview template={preview} schedule={schedule} resolution={designResolution(preview)} onClose={() => setPreview(null)} onSelect={() => onSelect(preview.id)} onLayoutChange={layout => { setPreview({ ...customizeWallpaperTemplate(galleryPreviewTemplate(wallpaperTemplates.find(item => item.id === preview.id)), { ...settings[preview.id], scheduleLayout: layout, containerStyle: previewStyle }, device), scheduleTitle, device }); onLayoutChange(layout); }} />}
+    {preview && <DesignPreview template={preview} schedule={schedule} resolution={designResolution(preview)} onClose={() => setPreview(null)} onSelect={() => onSelect(preview.id)} onLayoutChange={layout => { const current = { ...settings[preview.id] }; delete current.fontScale; setPreview({ ...customizeWallpaperTemplate(galleryPreviewTemplate(wallpaperTemplates.find(item => item.id === preview.id)), { ...current, scheduleLayout: layout, containerStyle: previewStyle }, device), scheduleTitle, device }); onLayoutChange(layout); }} />}
   </div>;
 }
 
-function DesignPreview({ template, schedule, resolution, onClose, onSelect, onLayoutChange }) {
+export function DesignPreview({ template, schedule, resolution, onClose, onSelect, onLayoutChange, selectLabel = 'Use this design' }) {
   const dialog = useRef(null);
+  useMobileSheetDismiss(dialog, onClose);
   const layoutPicker = useRef(null);
   const selectedLayout = scheduleLayoutOptions(resolution.id).find(option => option.value === template.scheduleLayout) || scheduleLayoutOptions(resolution.id)[0];
   const SelectedLayoutIcon = layoutIcons[selectedLayout.value];
@@ -155,7 +174,7 @@ function DesignPreview({ template, schedule, resolution, onClose, onSelect, onLa
       document.removeEventListener('keydown', escape, true);
     };
   }, []);
-  return <dialog ref={dialog} className="design-preview-dialog" data-device={resolution.id} data-orientation={resolution.width > resolution.height ? 'landscape' : 'portrait'} style={{ '--design-preview-ratio': resolution.width / resolution.height }} aria-labelledby="design-preview-title" onCancel={onClose} onClick={(event) => { if (event.target === event.currentTarget) onClose(); }}>
+  return <dialog ref={dialog} className="design-preview-dialog" data-custom-background={template.customBackground || undefined} data-device={resolution.id} data-orientation={resolution.width > resolution.height ? 'landscape' : 'portrait'} style={{ '--design-preview-ratio': resolution.width / resolution.height }} aria-labelledby="design-preview-title" onCancel={onClose} onClick={(event) => { if (event.target === event.currentTarget) onClose(); }}>
     <header><h2 id="design-preview-title">{template.name}</h2><button type="button" className="template-modal-control" aria-label="Close design preview" onClick={onClose}><X size={20} aria-hidden="true" /></button></header>
     <div className="design-preview-body"><WallpaperCanvas schedule={schedule?.classes.length ? schedule : previewSchedule(template)} template={template} resolution={resolution} className="block h-auto w-full" label={`${template.name} with ${schedule?.classes.length ? 'your' : 'sample'} classes`} /></div>
     <footer>
@@ -165,7 +184,7 @@ function DesignPreview({ template, schedule, resolution, onClose, onSelect, onLa
           {scheduleLayoutOptions(resolution.id).map(option => { const Icon = layoutIcons[option.value]; return <button key={option.value} type="button" aria-pressed={template.scheduleLayout === option.value} onClick={event => { onLayoutChange(option.value); event.currentTarget.closest('details').open = false; }}><Icon aria-hidden="true" /><span>{option.label}</span></button>; })}
         </div>
       </details>
-      <button type="button" className="button-primary" onClick={onSelect}>Use this design<ArrowRight size={16} aria-hidden="true" /></button>
+      <button type="button" className="button-primary" onClick={onSelect}>{selectLabel}<ArrowRight size={16} aria-hidden="true" /></button>
     </footer>
   </dialog>;
 }

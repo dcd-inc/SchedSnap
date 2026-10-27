@@ -1,10 +1,11 @@
-import { SITE_URL, getPageSeo, websiteSchema } from '../shared/seo.js';
+import { SITE_URL, SOCIAL_IMAGE_PATH, getPageSeo, getPageSchema } from '../shared/seo.js';
 
 const escapeHtml = value => value.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
 
 export function seoHead(path) {
   const page = getPageSeo(path);
-  const image = `${SITE_URL}/images/hero/hero-phones-refreshed.png`;
+  const image = `${SITE_URL}${SOCIAL_IMAGE_PATH}`;
+  const schema = getPageSchema(path);
   return `<!--seo-start-->
     <title>${escapeHtml(page.title)}</title>
     <meta name="description" content="${escapeHtml(page.description)}" />
@@ -16,12 +17,15 @@ export function seoHead(path) {
     <meta property="og:description" content="${escapeHtml(page.description)}" />
     <meta property="og:url" content="${page.canonical || `${SITE_URL}${path}`}" />
     <meta property="og:image" content="${image}" />
+    <meta property="og:image:width" content="1448" />
+    <meta property="og:image:height" content="1086" />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:alt" content="SchedSnap class schedule wallpaper previews" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${escapeHtml(page.title)}" />
     <meta name="twitter:description" content="${escapeHtml(page.description)}" />
     <meta name="twitter:image" content="${image}" />
-    ${path === '/' ? `<script id="website-schema" type="application/ld+json">${JSON.stringify(websiteSchema).replaceAll('<', '\\u003c')}</script>` : ''}
+    ${schema ? `<script id="page-schema" type="application/ld+json">${JSON.stringify(schema).replaceAll('<', '\\u003c')}</script>` : ''}
     <!--seo-end-->`;
 }
 

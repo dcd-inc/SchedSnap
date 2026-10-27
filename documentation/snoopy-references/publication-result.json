@@ -1,0 +1,128 @@
+{
+  "revision": "fcad133e-a5f7-4a2d-a075-4af3fdf37f5b",
+  "catalogRecords": 274,
+  "snoopyDesigns": [
+    {
+      "id": "snoopy-lazy-afternoon",
+      "name": "Lazy Afternoon",
+      "createdAt": "2026-10-23T23:14:46.000Z",
+      "publishedAt": "2026-10-23T23:18:20.855Z"
+    },
+    {
+      "id": "snoopy-daisy-pause",
+      "name": "Daisy Pause",
+      "createdAt": "2026-10-23T23:14:46.000Z",
+      "publishedAt": "2026-10-23T23:18:20.855Z"
+    },
+    {
+      "id": "snoopy-cassette-days",
+      "name": "Cassette Days",
+      "createdAt": "2026-10-23T23:14:46.000Z",
+      "publishedAt": "2026-10-23T23:18:20.855Z"
+    },
+    {
+      "id": "snoopy-dotted-peek",
+      "name": "Snoopy Dotted Peek",
+      "createdAt": "2026-10-15T23:30:10.000Z",
+      "publishedAt": "2026-10-16T09:45:11.433Z"
+    },
+    {
+      "id": "snoopy-blue-meadow",
+      "name": "Snoopy Blue Meadow",
+      "createdAt": "2026-10-15T23:30:10.000Z",
+      "publishedAt": "2026-10-16T09:45:11.446Z"
+    },
+    {
+      "id": "snoopy-sleepy-stripes",
+      "name": "Snoopy Sleepy Stripes",
+      "createdAt": "2026-10-15T23:30:10.000Z",
+      "publishedAt": "2026-10-16T09:45:11.453Z"
+    },
+    {
+      "id": "snoopy-quiet-sketch",
+      "name": "Snoopy Quiet Sketch",
+      "createdAt": "2026-10-15T23:30:10.000Z",
+      "publishedAt": "2026-10-16T09:45:11.458Z"
+    },
+    {
+      "id": "snoopy-heart-line",
+      "name": "Snoopy & Woodstock Heart",
+      "createdAt": "2026-10-16T09:14:22.000Z",
+      "publishedAt": "2026-10-16T09:45:11.462Z"
+    },
+    {
+      "id": "snoopy-shark-suit",
+      "name": "Snoopy Shark Suit",
+      "createdAt": "2026-10-16T09:14:22.000Z",
+      "publishedAt": "2026-10-16T09:45:11.466Z"
+    },
+    {
+      "id": "snoopy-navy-cool",
+      "name": "Snoopy Navy Cool",
+      "createdAt": "2026-10-16T09:14:22.000Z",
+      "publishedAt": "2026-10-16T09:45:11.471Z"
+    },
+    {
+      "id": "snoopy-looking-up",
+      "name": "Snoopy Looking Up",
+      "createdAt": "2026-10-16T09:14:22.000Z",
+      "publishedAt": "2026-10-16T09:45:11.476Z"
+    }
+  ],
+  "delivery": [
+    {
+      "id": "snoopy-lazy-afternoon",
+      "device": "mobile",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "id": "snoopy-lazy-afternoon",
+      "device": "tablet",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "id": "snoopy-lazy-afternoon",
+      "device": "laptop",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "id": "snoopy-daisy-pause",
+      "device": "mobile",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "id": "snoopy-daisy-pause",
+      "device": "tablet",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "id": "snoopy-daisy-pause",
+      "device": "laptop",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "id": "snoopy-cassette-days",
+      "device": "mobile",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "id": "snoopy-cassette-days",
+      "device": "tablet",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "id": "snoopy-cassette-days",
+      "device": "laptop",
+      "status": 200,
+      "contentType": "image/png"
+    }
+  ]
+}

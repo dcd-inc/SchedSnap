@@ -1,3 +1,4 @@
+import useMobileSheetDismiss from '../../lib/useMobileSheetDismiss.js';
 import { useEffect, useImperativeHandle, useLayoutEffect, useRef, useState } from 'react';
 import { CalendarDays, ChevronDown, CornerDownLeft, CircleAlert, ImageUp, Pencil, Plus, Trash2, TriangleAlert, X } from 'lucide-react';
 import { days, getScheduleIssues } from '../../../shared/scheduleSchema.js';
@@ -53,6 +54,7 @@ function SuggestedInput({ values, onSelect, ...props }) {
 
 function ClassDialog({ schedule, course, meetingIndex, isNew, onSave, onDelete, onClose }) {
   const dialog = useRef(null);
+  useMobileSheetDismiss(dialog, onClose);
   const [draft, setDraft] = useState(() => ({ subject: course.subject, courseCode: course.courseCode, meeting: { ...(course.meetings[meetingIndex] || newMeeting()) } }));
   const [mode, setMode] = useState(isNew ? 'edit' : 'view');
   const [submitted, setSubmitted] = useState(false);
@@ -106,6 +108,7 @@ function ClassDialog({ schedule, course, meetingIndex, isNew, onSave, onDelete, 
 
 function TitleDialog({ title, onSave, onClose }) {
   const dialog = useRef(null);
+  useMobileSheetDismiss(dialog, onClose);
   const [value, setValue] = useState(title);
   useEffect(() => {
     const node = dialog.current;

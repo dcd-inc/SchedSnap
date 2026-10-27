@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "design-system-font",
+        "value": "georgia",
+        "createdAt": "2026-10-27T10:59:00.813Z",
+        "reason": "Agent triage: existing appearance-settings test fixture tests/wallpaper.test.js exercises the supported Georgia customization option; this is not application typography."
+      }
+    ]
+  }
+}

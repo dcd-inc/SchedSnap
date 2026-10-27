@@ -16,7 +16,7 @@ export default function Footer() {
           <Link to="/cookies">Cookies</Link>
         </nav>
         <SocialLinks />
-        <p className="footer-credit">Â© {new Date().getFullYear()} SchedSnap. All rights reserved. Made by <strong>.dcd</strong></p>
+        <p className="footer-credit"><span>© {new Date().getFullYear()} SchedSnap.<span className="footer-rights"> All rights reserved.</span></span><span>Made by <strong>.dcd</strong></span></p>
       </div>
     </footer>
   );

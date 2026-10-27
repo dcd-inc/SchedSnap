@@ -1,9 +1,11 @@
+import useMobileSheetDismiss from '../lib/useMobileSheetDismiss.js';
 import { useEffect, useRef } from 'react';
 import { X } from 'lucide-react';
 import './restoreClassesDialog.css';
 
 export default function RestoreClassesDialog({ count, onRestore, onDiscard }) {
   const dialog = useRef(null);
+  useMobileSheetDismiss(dialog, onDiscard);
   useEffect(() => {
     const element = dialog.current;
     const previousFocus = document.activeElement;
@@ -16,7 +18,7 @@ export default function RestoreClassesDialog({ count, onRestore, onDiscard }) {
       <h2 id="restore-classes-title" tabIndex={-1}>Restore your classes?</h2>
       <button type="button" className="icon-button" aria-label="Close restore classes dialog" onClick={onDiscard}><X size={20} aria-hidden="true" /></button>
     </header>
-    <img className="restore-classes-visual" src="/restore-classes-example.png" width="1774" height="887" alt="" />
+    <img className="restore-classes-visual" src="/restore-classes-example-960.webp" srcSet="/restore-classes-example-480.webp 480w, /restore-classes-example-960.webp 960w" sizes="(max-width: 640px) calc(100vw - 40px), 420px" width="960" height="480" fetchPriority="high" decoding="async" alt="" />
     <p id="restore-classes-description">{count} {count === 1 ? 'class is' : 'classes are'} saved in this tab.</p>
     <ul className="restore-classes-notes">
       <li><strong>Restore</strong> to keep editing.</li>

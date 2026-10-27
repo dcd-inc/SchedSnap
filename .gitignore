@@ -53,3 +53,18 @@ coverage/
 # Python caches from artwork utilities.
 __pycache__/
 *.py[cod]
+
+# Local launch-video projects, design reviews, and site audit captures.
+/brag-output/
+/brag-output-*/
+/.taste-skill/
+/*-audit/
+
+# One-off browser checks and generated performance/storyboard reports.
+/output/check-*.mjs
+/output/reproduce-*.mjs
+/output/prepare-phone-carousel.mjs
+/output/phone-carousel-items.json
+/output/mobile-performance-*.json
+/output/overlap-test/
+/output/storyboard-*/

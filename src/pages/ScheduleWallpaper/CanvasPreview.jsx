@@ -1,43 +1,64 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Download, LayoutTemplate, Maximize2 } from 'lucide-react';
-import { canvasBlob, drawWallpaper, drawSampleClock } from '../../utils/canvasHelpers.js';
+import { canvasBlob, drawWallpaper } from '../../utils/canvasHelpers.js';
 import { prepareWallpaperAssets } from '../../utils/wallpaperAssets.js';
 import { downloadBlob } from '../../utils/downloadBlob.js';
 import WallpaperViewer from './WallpaperViewer.jsx';
 import Toast from '../../components/Toast.jsx';
 
-export function WallpaperCanvas({ schedule, template, resolution, className = '', label = 'Schedule wallpaper preview', onLayout, lazy = false, showClock = false }) {
+export function WallpaperCanvas({ schedule, template, resolution, className = '', label = 'Schedule wallpaper preview', onLayout, lazy = false }) {
   const canvas = useRef(null);
   const [failure, setFailure] = useState('');
   const [readyKey, setReadyKey] = useState('');
+  const [nearby, setNearby] = useState(!lazy);
   const renderResolution = useMemo(() => {
     const scale = Math.min(1, 960 / resolution.width, 1200 / resolution.height);
     return { ...resolution, width: Math.round(resolution.width * scale), height: Math.round(resolution.height * scale) };
   }, [resolution]);
-  const renderKey = JSON.stringify([schedule, template, renderResolution, showClock]);
+  const renderKey = JSON.stringify([schedule, template, renderResolution]);
+  // Gallery parents recreate these objects on likes, downloads and catalog refreshes.
+  // Keep drawing inputs stable until their values actually change.
+  const [drawSchedule, drawTemplate, drawResolution] = useMemo(() => JSON.parse(renderKey), [renderKey]);
   const pending = readyKey !== renderKey;
   useEffect(() => {
-    let cancelled = false;
-    const render = () => prepareWallpaperAssets(template, renderResolution).then((backgroundImage) => {
-      if (cancelled) return;
-      try {
-        const layout = drawWallpaper(canvas.current, { schedule, template, resolution: renderResolution, backgroundImage });
-        if (showClock && resolution.id !== 'laptop') drawSampleClock(canvas.current);
-        setReadyKey(renderKey);
-        setFailure('');
-        onLayout?.({ overflow: layout.overflow, error: '', ready: true });
-      } catch (error) { setReadyKey(renderKey); setFailure(error.message); onLayout?.({ overflow: true, error: error.message, ready: true }); }
-    }).catch((error) => { if (!cancelled) { setReadyKey(renderKey); setFailure(error.message); onLayout?.({ overflow: true, error: error.message, ready: true }); } });
+    const node = canvas.current;
+    let version = 0;
+    let visible = false;
+    const render = () => {
+      const currentVersion = ++version;
+      return prepareWallpaperAssets(drawTemplate, drawResolution).then(async (backgroundImage) => {
+        // Give input and painting a turn between gallery canvases that become ready together.
+        if (lazy) await new Promise(resolve => setTimeout(resolve, 0));
+        if (version !== currentVersion) return;
+        try {
+          const layout = drawWallpaper(node, { schedule: drawSchedule, template: drawTemplate, resolution: drawResolution, backgroundImage });
+          setReadyKey(renderKey);
+          setFailure('');
+          onLayout?.({ overflow: layout.overflow, positionOffset: layout.positionOffset, error: '', ready: true });
+        } catch (error) { setReadyKey(renderKey); setFailure(error.message); onLayout?.({ overflow: true, error: error.message, ready: true }); }
+      }).catch((error) => { if (version === currentVersion) { setReadyKey(renderKey); setFailure(error.message); onLayout?.({ overflow: true, error: error.message, ready: true }); } });
+    };
     let observer;
     if (lazy && typeof IntersectionObserver !== 'undefined') {
       observer = new IntersectionObserver((entries) => {
-        if (entries.some((entry) => entry.isIntersecting)) { observer.disconnect(); render(); }
-      }, { rootMargin: '800px 0px' });
-      observer.observe(canvas.current);
+        const nearby = entries.some((entry) => entry.isIntersecting);
+        if (nearby === visible) return;
+        visible = nearby;
+        setNearby(nearby);
+        if (nearby) render();
+        else {
+          ++version;
+          // Release pixels without changing the card's CSS aspect ratio or scroll position.
+          node.width = 1; node.height = 1;
+          setReadyKey('');
+          setFailure('');
+        }
+      }, { rootMargin: '600px 0px' });
+      observer.observe(node);
     } else render();
-    return () => { cancelled = true; observer?.disconnect(); };
-  }, [schedule, template, renderResolution, renderKey, onLayout, lazy, showClock, resolution.id]);
-  return <><canvas ref={canvas} width={renderResolution.width} height={renderResolution.height} role="img" aria-label={pending ? `Loading ${label}` : label} aria-busy={pending} className={`${className} ${pending ? 'wallpaper-skeleton' : ''}`} style={{ backgroundColor: template.background }} />{!pending && failure && <span role="alert" className="text-xs text-muted">{failure}</span>}</>;
+    return () => { ++version; observer?.disconnect(); if (lazy) { node.width = 1; node.height = 1; } };
+  }, [drawSchedule, drawTemplate, drawResolution, renderKey, onLayout, lazy]);
+  return <><canvas ref={canvas} width={lazy ? 1 : renderResolution.width} height={lazy ? 1 : renderResolution.height} role="img" aria-label={pending ? `Loading ${label}` : label} aria-busy={pending} className={`${className} ${pending && nearby ? 'wallpaper-skeleton' : ''}`} style={{ backgroundColor: template.background, aspectRatio: `${renderResolution.width} / ${renderResolution.height}` }} />{!pending && failure && <span role="alert" className="text-xs text-muted">{failure}</span>}</>;
 }
 
 export default function CanvasPreview({ schedule, template, resolution, confirmed, issues, onChangeTemplate }) {

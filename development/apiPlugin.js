@@ -14,10 +14,12 @@ import { genshinChibiTemplates } from '../src/assets/genshinChibiTemplates.js';
 import { genshinElementalTemplates } from '../src/assets/genshinElementalTemplates.js';
 import { hunterTemplates } from '../src/assets/hunterTemplates.js';
 import { generativePatternTemplates } from '../src/assets/generativePatterns.js';
+import { narutoTemplates } from '../src/assets/narutoTemplates.js';
 import { animeTemplates } from '../src/assets/animeTemplates.js';
 import { jinxTemplates } from '../src/assets/jinxTemplates.js';
 import { arcaneTemplates } from '../src/assets/arcaneTemplates.js';
 import { wutheringWavesTemplates } from '../src/assets/wutheringWavesTemplates.js';
+import { collageTemplates } from '../src/assets/collageTemplates.js';
 
 
 // Runs only inside Vite's Node process. No credentials enter the browser bundle.
@@ -28,7 +30,7 @@ export function localApiPlugin(env) {
       const analyze = createAnalyzeHandler({ env });
       const visits = createVisitsHandler({ env });
       const admin = createAdminHandler({ env });
-      const catalog = createPublicCatalogHandler({ env, previewTemplates: [...wutheringWavesTemplates, ...arcaneTemplates, ...jinxTemplates, ...animeTemplates, ...generativePatternTemplates, ...hunterTemplates, ...snoopyTemplates, ...genshinElementalTemplates, ...genshinChibiTemplates, ...genshinTemplates, ...genshinBackgroundTemplates, ...ghibliTemplates, ...meepTemplates] });
+      const catalog = createPublicCatalogHandler({ env, previewTemplates: [...collageTemplates, ...narutoTemplates, ...wutheringWavesTemplates, ...arcaneTemplates, ...jinxTemplates, ...animeTemplates, ...generativePatternTemplates, ...hunterTemplates, ...snoopyTemplates, ...genshinElementalTemplates, ...genshinChibiTemplates, ...genshinTemplates, ...genshinBackgroundTemplates, ...ghibliTemplates, ...meepTemplates] });
       const likes = createLikesHandler({ env });
       const downloads = createDownloadsHandler({ env });
       server.middlewares.use(async (request, response, next) => {

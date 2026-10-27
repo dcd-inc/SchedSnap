@@ -4606,31 +4606,661 @@ export default {
     "width": 1080,
     "height": 2400
   },
-  "/wallpapers/scenic/jinx-electric-afterhours/mobile.png": {
+  "/wallpapers/scenic/naruto-kakashi-obito/mobile.png": {
     "cloud": "djfyq0jyz",
-    "publicId": "schedsnap/wallpapers/scenic/jinx-electric-afterhours/mobile-95c4197c7d1acb53",
-    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094519/schedsnap/wallpapers/scenic/jinx-electric-afterhours/mobile-95c4197c7d1acb53.png",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-kakashi-obito/mobile-fc836ff4ac0eaec6",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792663472/schedsnap/wallpapers/scenic/naruto-kakashi-obito/mobile-fc836ff4ac0eaec6.png",
     "width": 1080,
     "height": 2400
   },
-  "/wallpapers/scenic/jinx-blue-hour/mobile.png": {
+  "/wallpapers/scenic/naruto-leaf-ink-lineup/laptop.png": {
     "cloud": "djfyq0jyz",
-    "publicId": "schedsnap/wallpapers/scenic/jinx-blue-hour/mobile-953da60b62751ed3",
-    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094520/schedsnap/wallpapers/scenic/jinx-blue-hour/mobile-953da60b62751ed3.png",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-leaf-ink-lineup/laptop-88587f98d7e5dece",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792663472/schedsnap/wallpapers/scenic/naruto-leaf-ink-lineup/laptop-88587f98d7e5dece.png",
+    "width": 1920,
+    "height": 1080
+  },
+  "/wallpapers/scenic/naruto-kakashi-obito/laptop.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-kakashi-obito/laptop-b81b64ae511ad2de",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792663472/schedsnap/wallpapers/scenic/naruto-kakashi-obito/laptop-b81b64ae511ad2de.png",
+    "width": 1920,
+    "height": 1080
+  },
+  "/wallpapers/scenic/naruto-kakashi-obito/tablet.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-kakashi-obito/tablet-38b619d4fa806583",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792663473/schedsnap/wallpapers/scenic/naruto-kakashi-obito/tablet-38b619d4fa806583.png",
+    "width": 1600,
+    "height": 2560
+  },
+  "/wallpapers/scenic/naruto-leaf-ink-lineup/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-leaf-ink-lineup/mobile-5e4bf387a365e716",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792663476/schedsnap/wallpapers/scenic/naruto-leaf-ink-lineup/mobile-5e4bf387a365e716.png",
     "width": 1080,
     "height": 2400
   },
-  "/wallpapers/scenic/jinx-pink-riot/mobile.png": {
+  "/wallpapers/scenic/naruto-retrieval-squad/laptop.png": {
     "cloud": "djfyq0jyz",
-    "publicId": "schedsnap/wallpapers/scenic/jinx-pink-riot/mobile-e2ea6deff769da37",
-    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094520/schedsnap/wallpapers/scenic/jinx-pink-riot/mobile-e2ea6deff769da37.png",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-retrieval-squad/laptop-e7fec2300fb0bbb5",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792663477/schedsnap/wallpapers/scenic/naruto-retrieval-squad/laptop-e7fec2300fb0bbb5.png",
+    "width": 1920,
+    "height": 1080
+  },
+  "/wallpapers/scenic/naruto-leaf-ink-lineup/tablet.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-leaf-ink-lineup/tablet-e8abe1a3eb2c7ef1",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792663477/schedsnap/wallpapers/scenic/naruto-leaf-ink-lineup/tablet-e8abe1a3eb2c7ef1.png",
+    "width": 1600,
+    "height": 2560
+  },
+  "/wallpapers/scenic/naruto-retrieval-squad/tablet.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-retrieval-squad/tablet-1f6e58915fb0c0a2",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792663481/schedsnap/wallpapers/scenic/naruto-retrieval-squad/tablet-1f6e58915fb0c0a2.png",
+    "width": 1600,
+    "height": 2560
+  },
+  "/wallpapers/scenic/naruto-sasuke-quiet-ink/laptop.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-sasuke-quiet-ink/laptop-f7ea6b81c13422c1",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792663481/schedsnap/wallpapers/scenic/naruto-sasuke-quiet-ink/laptop-f7ea6b81c13422c1.png",
+    "width": 1920,
+    "height": 1080
+  },
+  "/wallpapers/scenic/naruto-sasuke-quiet-ink/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-sasuke-quiet-ink/mobile-ebdc1caf57d10a12",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792663482/schedsnap/wallpapers/scenic/naruto-sasuke-quiet-ink/mobile-ebdc1caf57d10a12.png",
     "width": 1080,
     "height": 2400
   },
-  "/wallpapers/scenic/jinx-cream-mischief/mobile.png": {
+  "/wallpapers/scenic/naruto-sasuke-quiet-ink/tablet.png": {
     "cloud": "djfyq0jyz",
-    "publicId": "schedsnap/wallpapers/scenic/jinx-cream-mischief/mobile-b13c3f7846cb26b5",
-    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094522/schedsnap/wallpapers/scenic/jinx-cream-mischief/mobile-b13c3f7846cb26b5.png",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-sasuke-quiet-ink/tablet-09bbf7888e1e9fb6",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792663483/schedsnap/wallpapers/scenic/naruto-sasuke-quiet-ink/tablet-09bbf7888e1e9fb6.png",
+    "width": 1600,
+    "height": 2560
+  },
+  "/wallpapers/scenic/naruto-retrieval-squad/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-retrieval-squad/mobile-ed6b17e2651e0002",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792663484/schedsnap/wallpapers/scenic/naruto-retrieval-squad/mobile-ed6b17e2651e0002.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/snoopy-cassette-days/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/snoopy-cassette-days/mobile-6f71012a0731ac10",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792797483/schedsnap/wallpapers/scenic/snoopy-cassette-days/mobile-6f71012a0731ac10.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/snoopy-cassette-days/laptop.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/snoopy-cassette-days/laptop-f7d110caa356abb6",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792797483/schedsnap/wallpapers/scenic/snoopy-cassette-days/laptop-f7d110caa356abb6.png",
+    "width": 1920,
+    "height": 1080
+  },
+  "/wallpapers/scenic/snoopy-daisy-pause/laptop.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/snoopy-daisy-pause/laptop-718b9a30c540f37c",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792797483/schedsnap/wallpapers/scenic/snoopy-daisy-pause/laptop-718b9a30c540f37c.png",
+    "width": 1920,
+    "height": 1080
+  },
+  "/wallpapers/scenic/snoopy-cassette-days/tablet.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/snoopy-cassette-days/tablet-456a71391a1890a1",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792797484/schedsnap/wallpapers/scenic/snoopy-cassette-days/tablet-456a71391a1890a1.png",
+    "width": 1600,
+    "height": 2560
+  },
+  "/wallpapers/scenic/snoopy-daisy-pause/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/snoopy-daisy-pause/mobile-e5716b819747c1eb",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792797485/schedsnap/wallpapers/scenic/snoopy-daisy-pause/mobile-e5716b819747c1eb.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/snoopy-lazy-afternoon/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/snoopy-lazy-afternoon/mobile-ef19f0996124a7bc",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792797487/schedsnap/wallpapers/scenic/snoopy-lazy-afternoon/mobile-ef19f0996124a7bc.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/snoopy-daisy-pause/tablet.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/snoopy-daisy-pause/tablet-c70d79a4902a08d1",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792797487/schedsnap/wallpapers/scenic/snoopy-daisy-pause/tablet-c70d79a4902a08d1.png",
+    "width": 1600,
+    "height": 2560
+  },
+  "/wallpapers/scenic/snoopy-lazy-afternoon/tablet.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/snoopy-lazy-afternoon/tablet-5eee8c0a5f63416d",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792797487/schedsnap/wallpapers/scenic/snoopy-lazy-afternoon/tablet-5eee8c0a5f63416d.png",
+    "width": 1600,
+    "height": 2560
+  },
+  "/wallpapers/scenic/snoopy-lazy-afternoon/laptop.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/snoopy-lazy-afternoon/laptop-f0b4e8b5e126d0ba",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792797486/schedsnap/wallpapers/scenic/snoopy-lazy-afternoon/laptop-f0b4e8b5e126d0ba.png",
+    "width": 1920,
+    "height": 1080
+  },
+  "/wallpapers/scenic/naruto-fourth-hokage/laptop.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-fourth-hokage/laptop-a82adf67680d77d9",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792801071/schedsnap/wallpapers/scenic/naruto-fourth-hokage/laptop-a82adf67680d77d9.png",
+    "width": 1920,
+    "height": 1080
+  },
+  "/wallpapers/scenic/naruto-fourth-hokage/tablet.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-fourth-hokage/tablet-7a03ee96919b39b6",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792801071/schedsnap/wallpapers/scenic/naruto-fourth-hokage/tablet-7a03ee96919b39b6.png",
+    "width": 1600,
+    "height": 2560
+  },
+  "/wallpapers/scenic/naruto-fourth-hokage/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-fourth-hokage/mobile-8a3c1ae25ac42683",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792801070/schedsnap/wallpapers/scenic/naruto-fourth-hokage/mobile-8a3c1ae25ac42683.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/naruto-itachi-stillness/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-itachi-stillness/mobile-9379161468a1c528",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792801073/schedsnap/wallpapers/scenic/naruto-itachi-stillness/mobile-9379161468a1c528.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/naruto-itachi-stillness/tablet.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-itachi-stillness/tablet-b013d60ef45c81dc",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792801081/schedsnap/wallpapers/scenic/naruto-itachi-stillness/tablet-b013d60ef45c81dc.png",
+    "width": 1600,
+    "height": 2560
+  },
+  "/wallpapers/scenic/naruto-resolute-ink/laptop.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-resolute-ink/laptop-075e4946c6305f02",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792801078/schedsnap/wallpapers/scenic/naruto-resolute-ink/laptop-075e4946c6305f02.png",
+    "width": 1920,
+    "height": 1080
+  },
+  "/wallpapers/scenic/naruto-resolute-ink/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-resolute-ink/mobile-3b2b175601d63101",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792801076/schedsnap/wallpapers/scenic/naruto-resolute-ink/mobile-3b2b175601d63101.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/naruto-resolute-ink/tablet.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-resolute-ink/tablet-1ee75c793f5f3f89",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792801077/schedsnap/wallpapers/scenic/naruto-resolute-ink/tablet-1ee75c793f5f3f89.png",
+    "width": 1600,
+    "height": 2560
+  },
+  "/wallpapers/scenic/naruto-sasuke-shadow/tablet.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-sasuke-shadow/tablet-c9c70f87d4acadde",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792801085/schedsnap/wallpapers/scenic/naruto-sasuke-shadow/tablet-c9c70f87d4acadde.png",
+    "width": 1600,
+    "height": 2560
+  },
+  "/wallpapers/scenic/naruto-sasuke-shadow/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-sasuke-shadow/mobile-3326f3ed60941deb",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792801081/schedsnap/wallpapers/scenic/naruto-sasuke-shadow/mobile-3326f3ed60941deb.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/naruto-sharingan-gaze/laptop.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-sharingan-gaze/laptop-276317346e23b415",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792801082/schedsnap/wallpapers/scenic/naruto-sharingan-gaze/laptop-276317346e23b415.png",
+    "width": 1920,
+    "height": 1080
+  },
+  "/wallpapers/scenic/naruto-sharingan-gaze/tablet.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-sharingan-gaze/tablet-100fb450b2c655e6",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792801087/schedsnap/wallpapers/scenic/naruto-sharingan-gaze/tablet-100fb450b2c655e6.png",
+    "width": 1600,
+    "height": 2560
+  },
+  "/wallpapers/scenic/naruto-sharingan-gaze/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-sharingan-gaze/mobile-df830127f537836a",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792801084/schedsnap/wallpapers/scenic/naruto-sharingan-gaze/mobile-df830127f537836a.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/naruto-sasuke-shadow/laptop.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-sasuke-shadow/laptop-a9b98d2c53d57c33",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792801079/schedsnap/wallpapers/scenic/naruto-sasuke-shadow/laptop-a9b98d2c53d57c33.png",
+    "width": 1920,
+    "height": 1080
+  },
+  "/wallpapers/scenic/naruto-itachi-stillness/laptop.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/naruto-itachi-stillness/laptop-3aac5bd7ff5bec2c",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792801071/schedsnap/wallpapers/scenic/naruto-itachi-stillness/laptop-3aac5bd7ff5bec2c.png",
+    "width": 1920,
+    "height": 1080
+  },
+  "/wallpapers/scenic/arcane-jinx-cyan-flare/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/arcane-jinx-cyan-flare/mobile-464963eb985a0200",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094477/schedsnap/wallpapers/scenic/arcane-jinx-cyan-flare/mobile-464963eb985a0200.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/arcane-electric-graffiti/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/arcane-electric-graffiti/mobile-5f347014ea97953b",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094478/schedsnap/wallpapers/scenic/arcane-electric-graffiti/mobile-5f347014ea97953b.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/arcane-caitlyn-rose-newsprint/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/arcane-caitlyn-rose-newsprint/mobile-71b2cbdbbf7de4fa",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094478/schedsnap/wallpapers/scenic/arcane-caitlyn-rose-newsprint/mobile-71b2cbdbbf7de4fa.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/arcane-ekko-mint-newsprint/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/arcane-ekko-mint-newsprint/mobile-e1f52e3c46e3812c",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094478/schedsnap/wallpapers/scenic/arcane-ekko-mint-newsprint/mobile-e1f52e3c46e3812c.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/arcane-jinx-cyan-newsprint/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/arcane-jinx-cyan-newsprint/mobile-339714a6fd302e63",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094479/schedsnap/wallpapers/scenic/arcane-jinx-cyan-newsprint/mobile-339714a6fd302e63.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/arcane-jinx-neon-phantom/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/arcane-jinx-neon-phantom/mobile-7285b5bf0392233a",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094479/schedsnap/wallpapers/scenic/arcane-jinx-neon-phantom/mobile-7285b5bf0392233a.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/arcane-jinx-magenta-bridge/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/arcane-jinx-magenta-bridge/mobile-ce7a12c373a624b0",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094479/schedsnap/wallpapers/scenic/arcane-jinx-magenta-bridge/mobile-ce7a12c373a624b0.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/arcane-jinx-pink-rebellion/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/arcane-jinx-pink-rebellion/mobile-5a5b2b272dc949b1",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094480/schedsnap/wallpapers/scenic/arcane-jinx-pink-rebellion/mobile-5a5b2b272dc949b1.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/arcane-sisters-embrace/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/arcane-sisters-embrace/mobile-6103d94f7e7ff839",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094480/schedsnap/wallpapers/scenic/arcane-sisters-embrace/mobile-6103d94f7e7ff839.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/arcane-vi-crimson/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/arcane-vi-crimson/mobile-d8a1f1ae24d0058b",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094481/schedsnap/wallpapers/scenic/arcane-vi-crimson/mobile-d8a1f1ae24d0058b.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/arcane-vi-red-portrait/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/arcane-vi-red-portrait/mobile-10336fb0a139ef8e",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094482/schedsnap/wallpapers/scenic/arcane-vi-red-portrait/mobile-10336fb0a139ef8e.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/arcane-viktor-violet-newsprint/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/arcane-viktor-violet-newsprint/mobile-7a5b95b95e3bb317",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094482/schedsnap/wallpapers/scenic/arcane-viktor-violet-newsprint/mobile-7a5b95b95e3bb317.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-celestial-art-journal/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-celestial-art-journal/mobile-16578c800a123f07",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098636/schedsnap/wallpapers/scenic/collage-celestial-art-journal/mobile-16578c800a123f07.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-gothic-guitarist/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-gothic-guitarist/mobile-f0e0cf99a7b1974a",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098637/schedsnap/wallpapers/scenic/collage-gothic-guitarist/mobile-f0e0cf99a7b1974a.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-crimson-indie-rock/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-crimson-indie-rock/mobile-4674d845fda9b2ed",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098640/schedsnap/wallpapers/scenic/collage-crimson-indie-rock/mobile-4674d845fda9b2ed.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-gothic-vampire/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-gothic-vampire/mobile-8d7906177f40e892",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098637/schedsnap/wallpapers/scenic/collage-gothic-vampire/mobile-8d7906177f40e892.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-headphone-daydream/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-headphone-daydream/mobile-375c5d298dc78557",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098640/schedsnap/wallpapers/scenic/collage-headphone-daydream/mobile-375c5d298dc78557.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-punk-telephone/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-punk-telephone/mobile-4e5de17da997d696",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098644/schedsnap/wallpapers/scenic/collage-punk-telephone/mobile-4e5de17da997d696.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-rock-and-roll-archive/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-rock-and-roll-archive/mobile-ec6d2b0be4ad883c",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098644/schedsnap/wallpapers/scenic/collage-rock-and-roll-archive/mobile-ec6d2b0be4ad883c.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-vinyl-music/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-vinyl-music/mobile-ee150a3af3e8e422",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098647/schedsnap/wallpapers/scenic/collage-vinyl-music/mobile-ee150a3af3e8e422.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-manga-newsprint/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-manga-newsprint/mobile-0e14df3a757adbb5",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098649/schedsnap/wallpapers/scenic/collage-manga-newsprint/mobile-0e14df3a757adbb5.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-nocturne-manga/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-nocturne-manga/mobile-b9a57405cfc9af09",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098664/schedsnap/wallpapers/scenic/collage-nocturne-manga/mobile-b9a57405cfc9af09.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-black-porsche-type/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-black-porsche-type/mobile-724758b9b0909bbd",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098781/schedsnap/wallpapers/scenic/cars-black-porsche-type/mobile-724758b9b0909bbd.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-blush-hibiscus/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-blush-hibiscus/mobile-d7cd562617d88bd2",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098781/schedsnap/wallpapers/scenic/cars-blush-hibiscus/mobile-d7cd562617d88bd2.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-black-mclaren-type/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-black-mclaren-type/mobile-a31e0df05006dbb2",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098781/schedsnap/wallpapers/scenic/cars-black-mclaren-type/mobile-a31e0df05006dbb2.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-blue-type/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-blue-type/mobile-6e44c258890f7e41",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098781/schedsnap/wallpapers/scenic/cars-blue-type/mobile-6e44c258890f7e41.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-burgundy-type/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-burgundy-type/mobile-453c9df05cfbb54f",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098782/schedsnap/wallpapers/scenic/cars-burgundy-type/mobile-453c9df05cfbb54f.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-carbon-shadow/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-carbon-shadow/mobile-e71aba23d09b3292",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098783/schedsnap/wallpapers/scenic/cars-carbon-shadow/mobile-e71aba23d09b3292.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-champagne-type/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-champagne-type/mobile-44ba9b5969b8655e",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098783/schedsnap/wallpapers/scenic/cars-champagne-type/mobile-44ba9b5969b8655e.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-champagne-lily/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-champagne-lily/mobile-2af5aa85a2e4c5e1",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098784/schedsnap/wallpapers/scenic/cars-champagne-lily/mobile-2af5aa85a2e4c5e1.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-crimson-type/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-crimson-type/mobile-3d71738b93d4c43b",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098784/schedsnap/wallpapers/scenic/cars-crimson-type/mobile-3d71738b93d4c43b.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-oxblood-hibiscus/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-oxblood-hibiscus/mobile-a67a90ce8fc03b6d",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098786/schedsnap/wallpapers/scenic/cars-oxblood-hibiscus/mobile-a67a90ce8fc03b6d.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-crimson-gt3/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-crimson-gt3/mobile-e87080b9d40bab3f",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098785/schedsnap/wallpapers/scenic/cars-crimson-gt3/mobile-e87080b9d40bab3f.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-graphite-rain/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-graphite-rain/mobile-4a3d0ba3e57c1543",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098785/schedsnap/wallpapers/scenic/cars-graphite-rain/mobile-4a3d0ba3e57c1543.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-ice-blue-lily/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-ice-blue-lily/mobile-764aaa74b138dda1",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098787/schedsnap/wallpapers/scenic/cars-ice-blue-lily/mobile-764aaa74b138dda1.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-pink-type/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-pink-type/mobile-cc7d217537c9d085",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098787/schedsnap/wallpapers/scenic/cars-pink-type/mobile-cc7d217537c9d085.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-scarlet-ivory-type/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-scarlet-ivory-type/mobile-161d3aeae2c4280d",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098788/schedsnap/wallpapers/scenic/cars-scarlet-ivory-type/mobile-161d3aeae2c4280d.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-scarlet-hibiscus/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-scarlet-hibiscus/mobile-8afd32befc1cef9a",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098789/schedsnap/wallpapers/scenic/cars-scarlet-hibiscus/mobile-8afd32befc1cef9a.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-crimson-vinyl-guitar-stickers/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-crimson-vinyl-guitar-stickers/mobile-7daa0c92808e6a88",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102500/schedsnap/wallpapers/scenic/collage-crimson-vinyl-guitar-stickers/mobile-7daa0c92808e6a88.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-chrome-fashion-lips/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-chrome-fashion-lips/mobile-56aa7d7d7a9018ff",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102500/schedsnap/wallpapers/scenic/collage-chrome-fashion-lips/mobile-56aa7d7d7a9018ff.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-analog-browser-manga/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-analog-browser-manga/mobile-c3f7435c97b0197c",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102500/schedsnap/wallpapers/scenic/collage-analog-browser-manga/mobile-c3f7435c97b0197c.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-dusty-rose-grunge-records/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-dusty-rose-grunge-records/mobile-8ef346864034dd75",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102500/schedsnap/wallpapers/scenic/collage-dusty-rose-grunge-records/mobile-8ef346864034dd75.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-kitten-vinyl-snapshots/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-kitten-vinyl-snapshots/mobile-8de0f465ee6db501",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102503/schedsnap/wallpapers/scenic/collage-kitten-vinyl-snapshots/mobile-8de0f465ee6db501.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-hot-pink-drift-posters/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-hot-pink-drift-posters/mobile-6c0e653f8907820e",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102503/schedsnap/wallpapers/scenic/collage-hot-pink-drift-posters/mobile-6c0e653f8907820e.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-icy-blue-manga-mix/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-icy-blue-manga-mix/mobile-7e36c9a918ff1ee3",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102503/schedsnap/wallpapers/scenic/collage-icy-blue-manga-mix/mobile-7e36c9a918ff1ee3.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-mocha-chrome-star-journal/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-mocha-chrome-star-journal/mobile-9ab738b97de7032f",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102506/schedsnap/wallpapers/scenic/collage-mocha-chrome-star-journal/mobile-9ab738b97de7032f.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-kitty-torn-paper/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-kitty-torn-paper/mobile-c2abc8b4b78b7857",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102506/schedsnap/wallpapers/scenic/collage-kitty-torn-paper/mobile-c2abc8b4b78b7857.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-monochrome-personal-moodboard/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-monochrome-personal-moodboard/mobile-7cd81353755987e9",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102506/schedsnap/wallpapers/scenic/collage-monochrome-personal-moodboard/mobile-7cd81353755987e9.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-manga-eye-editorial/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-manga-eye-editorial/mobile-ae3089e8a0f5f503",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102506/schedsnap/wallpapers/scenic/collage-manga-eye-editorial/mobile-ae3089e8a0f5f503.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-oxblood-grunge-panels/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-oxblood-grunge-panels/mobile-09467d6f4e64d7e9",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102509/schedsnap/wallpapers/scenic/collage-oxblood-grunge-panels/mobile-09467d6f4e64d7e9.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-pink-graffiti-kitty/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-pink-graffiti-kitty/mobile-06cb5eaea8acaf39",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102510/schedsnap/wallpapers/scenic/collage-pink-graffiti-kitty/mobile-06cb5eaea8acaf39.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-radiohead-cat-scrapbook/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-radiohead-cat-scrapbook/mobile-e72ff25cd0a42b18",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102510/schedsnap/wallpapers/scenic/collage-radiohead-cat-scrapbook/mobile-e72ff25cd0a42b18.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-oxblood-grunge-torn-mix/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-oxblood-grunge-torn-mix/mobile-391528738d091337",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102511/schedsnap/wallpapers/scenic/collage-oxblood-grunge-torn-mix/mobile-391528738d091337.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-scarlet-eyes/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-scarlet-eyes/mobile-829f3aa26fadf53d",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102512/schedsnap/wallpapers/scenic/collage-scarlet-eyes/mobile-829f3aa26fadf53d.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-snoopy-porsche-print/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-snoopy-porsche-print/mobile-c71d652540179b96",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102513/schedsnap/wallpapers/scenic/collage-snoopy-porsche-print/mobile-c71d652540179b96.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-skull-butterfly-newsprint/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-skull-butterfly-newsprint/mobile-aece44879fb894d3",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102512/schedsnap/wallpapers/scenic/collage-skull-butterfly-newsprint/mobile-aece44879fb894d3.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-vinyl-instant-memories/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-vinyl-instant-memories/mobile-1ee27b6dc1a33ff0",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102513/schedsnap/wallpapers/scenic/collage-vinyl-instant-memories/mobile-1ee27b6dc1a33ff0.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-star-girl-keepsakes/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-star-girl-keepsakes/mobile-cdf497dca1bb8e71",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793102514/schedsnap/wallpapers/scenic/collage-star-girl-keepsakes/mobile-cdf497dca1bb8e71.png",
     "width": 1080,
     "height": 2400
   },
@@ -4641,17 +5271,17 @@ export default {
     "width": 1080,
     "height": 2400
   },
-  "/wallpapers/scenic/arcane-goggle-girl/mobile.png": {
-    "cloud": "djfyq0jyz",
-    "publicId": "schedsnap/wallpapers/scenic/arcane-goggle-girl/mobile-a280358c6067c2c3",
-    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793095935/schedsnap/wallpapers/scenic/arcane-goggle-girl/mobile-a280358c6067c2c3.png",
-    "width": 1080,
-    "height": 2400
-  },
   "/wallpapers/scenic/arcane-gilded-divide/mobile.png": {
     "cloud": "djfyq0jyz",
     "publicId": "schedsnap/wallpapers/scenic/arcane-gilded-divide/mobile-8a42dc8b8abab10d",
     "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793095935/schedsnap/wallpapers/scenic/arcane-gilded-divide/mobile-8a42dc8b8abab10d.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/arcane-goggle-girl/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/arcane-goggle-girl/mobile-a280358c6067c2c3",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793095935/schedsnap/wallpapers/scenic/arcane-goggle-girl/mobile-a280358c6067c2c3.png",
     "width": 1080,
     "height": 2400
   },
@@ -4669,13 +5299,6 @@ export default {
     "width": 1080,
     "height": 2400
   },
-  "/wallpapers/scenic/arcane-violet-tear/mobile.png": {
-    "cloud": "djfyq0jyz",
-    "publicId": "schedsnap/wallpapers/scenic/arcane-violet-tear/mobile-5ea46657b420ac22",
-    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793095937/schedsnap/wallpapers/scenic/arcane-violet-tear/mobile-5ea46657b420ac22.png",
-    "width": 1080,
-    "height": 2400
-  },
   "/wallpapers/scenic/arcane-sisters-in-ink/mobile.png": {
     "cloud": "djfyq0jyz",
     "publicId": "schedsnap/wallpapers/scenic/arcane-sisters-in-ink/mobile-4bbcf473ecd2410f",
@@ -4683,10 +5306,38 @@ export default {
     "width": 1080,
     "height": 2400
   },
-  "/wallpapers/scenic/wuwa-amber-reverie/mobile.png": {
+  "/wallpapers/scenic/arcane-violet-tear/mobile.png": {
     "cloud": "djfyq0jyz",
-    "publicId": "schedsnap/wallpapers/scenic/wuwa-amber-reverie/mobile-ee7368d042c4f571",
-    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115081/schedsnap/wallpapers/scenic/wuwa-amber-reverie/mobile-ee7368d042c4f571.png",
+    "publicId": "schedsnap/wallpapers/scenic/arcane-violet-tear/mobile-5ea46657b420ac22",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793095937/schedsnap/wallpapers/scenic/arcane-violet-tear/mobile-5ea46657b420ac22.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/jinx-blue-hour/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/jinx-blue-hour/mobile-953da60b62751ed3",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094520/schedsnap/wallpapers/scenic/jinx-blue-hour/mobile-953da60b62751ed3.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/jinx-cream-mischief/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/jinx-cream-mischief/mobile-b13c3f7846cb26b5",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094522/schedsnap/wallpapers/scenic/jinx-cream-mischief/mobile-b13c3f7846cb26b5.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/jinx-electric-afterhours/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/jinx-electric-afterhours/mobile-95c4197c7d1acb53",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094519/schedsnap/wallpapers/scenic/jinx-electric-afterhours/mobile-95c4197c7d1acb53.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/jinx-pink-riot/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/jinx-pink-riot/mobile-e2ea6deff769da37",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094520/schedsnap/wallpapers/scenic/jinx-pink-riot/mobile-e2ea6deff769da37.png",
     "width": 1080,
     "height": 2400
   },
@@ -4697,10 +5348,38 @@ export default {
     "width": 1080,
     "height": 2400
   },
-  "/wallpapers/scenic/wuwa-digital-ghost/mobile.png": {
+  "/wallpapers/scenic/wuwa-amber-reverie/mobile.png": {
     "cloud": "djfyq0jyz",
-    "publicId": "schedsnap/wallpapers/scenic/wuwa-digital-ghost/mobile-9f01c63559fa8bdc",
-    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115082/schedsnap/wallpapers/scenic/wuwa-digital-ghost/mobile-9f01c63559fa8bdc.png",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-amber-reverie/mobile-ee7368d042c4f571",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115081/schedsnap/wallpapers/scenic/wuwa-amber-reverie/mobile-ee7368d042c4f571.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-astral-dial/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-astral-dial/mobile-a17c1d514ce6cb07",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793118223/schedsnap/wallpapers/scenic/wuwa-astral-dial/mobile-a17c1d514ce6cb07.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-azure-hourglass/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-azure-hourglass/mobile-09ca58e906ba2c3f",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793118225/schedsnap/wallpapers/scenic/wuwa-azure-hourglass/mobile-09ca58e906ba2c3f.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-bamboo-drizzle/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-bamboo-drizzle/mobile-52d24b5530680596",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793118224/schedsnap/wallpapers/scenic/wuwa-bamboo-drizzle/mobile-52d24b5530680596.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-blueflame-eclipse/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-blueflame-eclipse/mobile-6fe4aa7a61854fa7",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793118224/schedsnap/wallpapers/scenic/wuwa-blueflame-eclipse/mobile-6fe4aa7a61854fa7.png",
     "width": 1080,
     "height": 2400
   },
@@ -4708,6 +5387,34 @@ export default {
     "cloud": "djfyq0jyz",
     "publicId": "schedsnap/wallpapers/scenic/wuwa-celestial-encore/mobile-df9874057a0c9528",
     "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115082/schedsnap/wallpapers/scenic/wuwa-celestial-encore/mobile-df9874057a0c9528.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-copper-dawn/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-copper-dawn/mobile-b21c111bb577b6ba",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793118225/schedsnap/wallpapers/scenic/wuwa-copper-dawn/mobile-b21c111bb577b6ba.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-digital-ghost/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-digital-ghost/mobile-9f01c63559fa8bdc",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115082/schedsnap/wallpapers/scenic/wuwa-digital-ghost/mobile-9f01c63559fa8bdc.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-emberglass/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-emberglass/mobile-54cee8083dd65d2d",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793118227/schedsnap/wallpapers/scenic/wuwa-emberglass/mobile-54cee8083dd65d2d.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-emerald-resolve/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-emerald-resolve/mobile-138275cdd0f360f6",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793118227/schedsnap/wallpapers/scenic/wuwa-emerald-resolve/mobile-138275cdd0f360f6.png",
     "width": 1080,
     "height": 2400
   },
@@ -4739,101 +5446,10 @@ export default {
     "width": 1080,
     "height": 2400
   },
-  "/wallpapers/scenic/wuwa-moonlit-companion/mobile.png": {
-    "cloud": "djfyq0jyz",
-    "publicId": "schedsnap/wallpapers/scenic/wuwa-moonlit-companion/mobile-cba499ff61ec0ea7",
-    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115085/schedsnap/wallpapers/scenic/wuwa-moonlit-companion/mobile-cba499ff61ec0ea7.png",
-    "width": 1080,
-    "height": 2400
-  },
-  "/wallpapers/scenic/wuwa-midnight-throne/mobile.png": {
-    "cloud": "djfyq0jyz",
-    "publicId": "schedsnap/wallpapers/scenic/wuwa-midnight-throne/mobile-59661eb0dad84be2",
-    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115085/schedsnap/wallpapers/scenic/wuwa-midnight-throne/mobile-59661eb0dad84be2.png",
-    "width": 1080,
-    "height": 2400
-  },
   "/wallpapers/scenic/wuwa-jade-lantern/mobile.png": {
     "cloud": "djfyq0jyz",
     "publicId": "schedsnap/wallpapers/scenic/wuwa-jade-lantern/mobile-0a7c9a192a09ef6c",
     "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115085/schedsnap/wallpapers/scenic/wuwa-jade-lantern/mobile-0a7c9a192a09ef6c.png",
-    "width": 1080,
-    "height": 2400
-  },
-  "/wallpapers/scenic/wuwa-neon-recoil/mobile.png": {
-    "cloud": "djfyq0jyz",
-    "publicId": "schedsnap/wallpapers/scenic/wuwa-neon-recoil/mobile-dded750105c57e80",
-    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115087/schedsnap/wallpapers/scenic/wuwa-neon-recoil/mobile-dded750105c57e80.png",
-    "width": 1080,
-    "height": 2400
-  },
-  "/wallpapers/scenic/wuwa-sapphire-covenant/mobile.png": {
-    "cloud": "djfyq0jyz",
-    "publicId": "schedsnap/wallpapers/scenic/wuwa-sapphire-covenant/mobile-17dd788686698018",
-    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115087/schedsnap/wallpapers/scenic/wuwa-sapphire-covenant/mobile-17dd788686698018.png",
-    "width": 1080,
-    "height": 2400
-  },
-  "/wallpapers/scenic/wuwa-prismatic-oath/mobile.png": {
-    "cloud": "djfyq0jyz",
-    "publicId": "schedsnap/wallpapers/scenic/wuwa-prismatic-oath/mobile-cc1104ef7609ff7d",
-    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115087/schedsnap/wallpapers/scenic/wuwa-prismatic-oath/mobile-cc1104ef7609ff7d.png",
-    "width": 1080,
-    "height": 2400
-  },
-  "/wallpapers/scenic/wuwa-silver-resonance/mobile.png": {
-    "cloud": "djfyq0jyz",
-    "publicId": "schedsnap/wallpapers/scenic/wuwa-silver-resonance/mobile-10fea6678189c9b3",
-    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115088/schedsnap/wallpapers/scenic/wuwa-silver-resonance/mobile-10fea6678189c9b3.png",
-    "width": 1080,
-    "height": 2400
-  },
-  "/wallpapers/scenic/wuwa-starlit-shore/mobile.png": {
-    "cloud": "djfyq0jyz",
-    "publicId": "schedsnap/wallpapers/scenic/wuwa-starlit-shore/mobile-a55beb3edc4c90da",
-    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115089/schedsnap/wallpapers/scenic/wuwa-starlit-shore/mobile-a55beb3edc4c90da.png",
-    "width": 1080,
-    "height": 2400
-  },
-  "/wallpapers/scenic/wuwa-vermilion-moon/mobile.png": {
-    "cloud": "djfyq0jyz",
-    "publicId": "schedsnap/wallpapers/scenic/wuwa-vermilion-moon/mobile-daf9495ca36c128a",
-    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115089/schedsnap/wallpapers/scenic/wuwa-vermilion-moon/mobile-daf9495ca36c128a.png",
-    "width": 1080,
-    "height": 2400
-  },
-  "/wallpapers/scenic/wuwa-astral-dial/mobile.png": {
-    "cloud": "djfyq0jyz",
-    "publicId": "schedsnap/wallpapers/scenic/wuwa-astral-dial/mobile-a17c1d514ce6cb07",
-    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793118223/schedsnap/wallpapers/scenic/wuwa-astral-dial/mobile-a17c1d514ce6cb07.png",
-    "width": 1080,
-    "height": 2400
-  },
-  "/wallpapers/scenic/wuwa-bamboo-drizzle/mobile.png": {
-    "cloud": "djfyq0jyz",
-    "publicId": "schedsnap/wallpapers/scenic/wuwa-bamboo-drizzle/mobile-52d24b5530680596",
-    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793118224/schedsnap/wallpapers/scenic/wuwa-bamboo-drizzle/mobile-52d24b5530680596.png",
-    "width": 1080,
-    "height": 2400
-  },
-  "/wallpapers/scenic/wuwa-blueflame-eclipse/mobile.png": {
-    "cloud": "djfyq0jyz",
-    "publicId": "schedsnap/wallpapers/scenic/wuwa-blueflame-eclipse/mobile-6fe4aa7a61854fa7",
-    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793118224/schedsnap/wallpapers/scenic/wuwa-blueflame-eclipse/mobile-6fe4aa7a61854fa7.png",
-    "width": 1080,
-    "height": 2400
-  },
-  "/wallpapers/scenic/wuwa-copper-dawn/mobile.png": {
-    "cloud": "djfyq0jyz",
-    "publicId": "schedsnap/wallpapers/scenic/wuwa-copper-dawn/mobile-b21c111bb577b6ba",
-    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793118225/schedsnap/wallpapers/scenic/wuwa-copper-dawn/mobile-b21c111bb577b6ba.png",
-    "width": 1080,
-    "height": 2400
-  },
-  "/wallpapers/scenic/wuwa-azure-hourglass/mobile.png": {
-    "cloud": "djfyq0jyz",
-    "publicId": "schedsnap/wallpapers/scenic/wuwa-azure-hourglass/mobile-09ca58e906ba2c3f",
-    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793118225/schedsnap/wallpapers/scenic/wuwa-azure-hourglass/mobile-09ca58e906ba2c3f.png",
     "width": 1080,
     "height": 2400
   },
@@ -4844,17 +5460,31 @@ export default {
     "width": 1080,
     "height": 2400
   },
-  "/wallpapers/scenic/wuwa-emberglass/mobile.png": {
+  "/wallpapers/scenic/wuwa-lunar-anchor/mobile.png": {
     "cloud": "djfyq0jyz",
-    "publicId": "schedsnap/wallpapers/scenic/wuwa-emberglass/mobile-54cee8083dd65d2d",
-    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793118227/schedsnap/wallpapers/scenic/wuwa-emberglass/mobile-54cee8083dd65d2d.png",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-lunar-anchor/mobile-9c502345447dad63",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793118230/schedsnap/wallpapers/scenic/wuwa-lunar-anchor/mobile-9c502345447dad63.png",
     "width": 1080,
     "height": 2400
   },
-  "/wallpapers/scenic/wuwa-emerald-resolve/mobile.png": {
+  "/wallpapers/scenic/wuwa-midnight-throne/mobile.png": {
     "cloud": "djfyq0jyz",
-    "publicId": "schedsnap/wallpapers/scenic/wuwa-emerald-resolve/mobile-138275cdd0f360f6",
-    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793118227/schedsnap/wallpapers/scenic/wuwa-emerald-resolve/mobile-138275cdd0f360f6.png",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-midnight-throne/mobile-59661eb0dad84be2",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115085/schedsnap/wallpapers/scenic/wuwa-midnight-throne/mobile-59661eb0dad84be2.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-moonlit-companion/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-moonlit-companion/mobile-cba499ff61ec0ea7",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115085/schedsnap/wallpapers/scenic/wuwa-moonlit-companion/mobile-cba499ff61ec0ea7.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-neon-recoil/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-neon-recoil/mobile-dded750105c57e80",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115087/schedsnap/wallpapers/scenic/wuwa-neon-recoil/mobile-dded750105c57e80.png",
     "width": 1080,
     "height": 2400
   },
@@ -4865,6 +5495,20 @@ export default {
     "width": 1080,
     "height": 2400
   },
+  "/wallpapers/scenic/wuwa-prismatic-oath/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-prismatic-oath/mobile-cc1104ef7609ff7d",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115087/schedsnap/wallpapers/scenic/wuwa-prismatic-oath/mobile-cc1104ef7609ff7d.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-sapphire-covenant/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-sapphire-covenant/mobile-17dd788686698018",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115087/schedsnap/wallpapers/scenic/wuwa-sapphire-covenant/mobile-17dd788686698018.png",
+    "width": 1080,
+    "height": 2400
+  },
   "/wallpapers/scenic/wuwa-silent-current/mobile.png": {
     "cloud": "djfyq0jyz",
     "publicId": "schedsnap/wallpapers/scenic/wuwa-silent-current/mobile-4e86df0a81f19420",
@@ -4872,10 +5516,24 @@ export default {
     "width": 1080,
     "height": 2400
   },
-  "/wallpapers/scenic/wuwa-lunar-anchor/mobile.png": {
+  "/wallpapers/scenic/wuwa-silver-resonance/mobile.png": {
     "cloud": "djfyq0jyz",
-    "publicId": "schedsnap/wallpapers/scenic/wuwa-lunar-anchor/mobile-9c502345447dad63",
-    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793118230/schedsnap/wallpapers/scenic/wuwa-lunar-anchor/mobile-9c502345447dad63.png",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-silver-resonance/mobile-10fea6678189c9b3",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115088/schedsnap/wallpapers/scenic/wuwa-silver-resonance/mobile-10fea6678189c9b3.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-solstice-mirror/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-solstice-mirror/mobile-8ebb371dcd231401",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793118230/schedsnap/wallpapers/scenic/wuwa-solstice-mirror/mobile-8ebb371dcd231401.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-starlit-shore/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-starlit-shore/mobile-a55beb3edc4c90da",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115089/schedsnap/wallpapers/scenic/wuwa-starlit-shore/mobile-a55beb3edc4c90da.png",
     "width": 1080,
     "height": 2400
   },
@@ -4886,10 +5544,10 @@ export default {
     "width": 1080,
     "height": 2400
   },
-  "/wallpapers/scenic/wuwa-solstice-mirror/mobile.png": {
+  "/wallpapers/scenic/wuwa-vermilion-moon/mobile.png": {
     "cloud": "djfyq0jyz",
-    "publicId": "schedsnap/wallpapers/scenic/wuwa-solstice-mirror/mobile-8ebb371dcd231401",
-    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793118230/schedsnap/wallpapers/scenic/wuwa-solstice-mirror/mobile-8ebb371dcd231401.png",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-vermilion-moon/mobile-daf9495ca36c128a",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115089/schedsnap/wallpapers/scenic/wuwa-vermilion-moon/mobile-daf9495ca36c128a.png",
     "width": 1080,
     "height": 2400
   }

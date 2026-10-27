@@ -1,0 +1,398 @@
+[
+  {
+    "id": "snoopy-lazy-afternoon",
+    "device": "mobile",
+    "schedule": "sample",
+    "overflow": false,
+    "meetings": 5,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 124.19999999999999,
+      "y": 696,
+      "width": 831.6,
+      "height": 1000.8000000000002
+    },
+    "coordinateWidth": 1080,
+    "coordinateHeight": 2400,
+    "inkBounds": {
+      "x": 0.24444444444444444,
+      "y": 0.8208333333333333,
+      "right": 0.7694444444444445,
+      "bottom": 0.9366666666666666
+    }
+  },
+  {
+    "id": "snoopy-lazy-afternoon",
+    "device": "mobile",
+    "schedule": "dense",
+    "overflow": false,
+    "meetings": 15,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 124.19999999999999,
+      "y": 696,
+      "width": 831.6,
+      "height": 1104.1425
+    },
+    "coordinateWidth": 1080,
+    "coordinateHeight": 2400,
+    "inkBounds": {
+      "x": 0.24444444444444444,
+      "y": 0.8208333333333333,
+      "right": 0.7694444444444445,
+      "bottom": 0.9366666666666666
+    }
+  },
+  {
+    "id": "snoopy-lazy-afternoon",
+    "device": "tablet",
+    "schedule": "sample",
+    "overflow": false,
+    "meetings": 5,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 238.3378285714286,
+      "y": 890.8799999999999,
+      "width": 1443.3243428571427,
+      "height": 1318.019657142857
+    },
+    "coordinateWidth": 1920,
+    "coordinateHeight": 3072,
+    "inkBounds": {
+      "x": 0.29125,
+      "y": 0.81796875,
+      "right": 0.72875,
+      "bottom": 0.948046875
+    }
+  },
+  {
+    "id": "snoopy-lazy-afternoon",
+    "device": "tablet",
+    "schedule": "dense",
+    "overflow": false,
+    "meetings": 15,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 238.3378285714286,
+      "y": 890.8799999999999,
+      "width": 1443.3243428571427,
+      "height": 1509.2543314285715
+    },
+    "coordinateWidth": 1920,
+    "coordinateHeight": 3072,
+    "inkBounds": {
+      "x": 0.29125,
+      "y": 0.81796875,
+      "right": 0.72875,
+      "bottom": 0.948046875
+    }
+  },
+  {
+    "id": "snoopy-lazy-afternoon",
+    "device": "laptop",
+    "schedule": "sample",
+    "overflow": false,
+    "meetings": 5,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 269.34339622641505,
+      "y": 313.2,
+      "width": 901.3132075471699,
+      "height": 691.2
+    },
+    "coordinateWidth": 1920,
+    "coordinateHeight": 1080,
+    "inkBounds": {
+      "x": 0.7046875,
+      "y": 0.7157407407407408,
+      "right": 0.9598958333333333,
+      "bottom": 0.937962962962963
+    }
+  },
+  {
+    "id": "snoopy-lazy-afternoon",
+    "device": "laptop",
+    "schedule": "dense",
+    "overflow": false,
+    "meetings": 15,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 443.4764319780287,
+      "y": 313.2,
+      "width": 553.0471360439426,
+      "height": 691.2
+    },
+    "coordinateWidth": 1920,
+    "coordinateHeight": 1080,
+    "inkBounds": {
+      "x": 0.7046875,
+      "y": 0.7157407407407408,
+      "right": 0.9598958333333333,
+      "bottom": 0.937962962962963
+    }
+  },
+  {
+    "id": "snoopy-daisy-pause",
+    "device": "mobile",
+    "schedule": "sample",
+    "overflow": false,
+    "meetings": 5,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 124.19999999999999,
+      "y": 696,
+      "width": 831.6,
+      "height": 1000.8000000000002
+    },
+    "coordinateWidth": 1080,
+    "coordinateHeight": 2400,
+    "inkBounds": {
+      "x": 0.31296296296296294,
+      "y": 0.83875,
+      "right": 0.6796296296296296,
+      "bottom": 0.95125
+    }
+  },
+  {
+    "id": "snoopy-daisy-pause",
+    "device": "mobile",
+    "schedule": "dense",
+    "overflow": false,
+    "meetings": 15,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 124.19999999999999,
+      "y": 696,
+      "width": 831.6,
+      "height": 1104.1425
+    },
+    "coordinateWidth": 1080,
+    "coordinateHeight": 2400,
+    "inkBounds": {
+      "x": 0.31296296296296294,
+      "y": 0.83875,
+      "right": 0.6796296296296296,
+      "bottom": 0.95125
+    }
+  },
+  {
+    "id": "snoopy-daisy-pause",
+    "device": "tablet",
+    "schedule": "sample",
+    "overflow": false,
+    "meetings": 5,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 238.3378285714286,
+      "y": 890.8799999999999,
+      "width": 1443.3243428571427,
+      "height": 1318.019657142857
+    },
+    "coordinateWidth": 1920,
+    "coordinateHeight": 3072,
+    "inkBounds": {
+      "x": 0.3025,
+      "y": 0.790234375,
+      "right": 0.69125,
+      "bottom": 0.94765625
+    }
+  },
+  {
+    "id": "snoopy-daisy-pause",
+    "device": "tablet",
+    "schedule": "dense",
+    "overflow": false,
+    "meetings": 15,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 238.3378285714286,
+      "y": 890.8799999999999,
+      "width": 1443.3243428571427,
+      "height": 1509.2543314285715
+    },
+    "coordinateWidth": 1920,
+    "coordinateHeight": 3072,
+    "inkBounds": {
+      "x": 0.3025,
+      "y": 0.790234375,
+      "right": 0.69125,
+      "bottom": 0.94765625
+    }
+  },
+  {
+    "id": "snoopy-daisy-pause",
+    "device": "laptop",
+    "schedule": "sample",
+    "overflow": false,
+    "meetings": 5,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 269.34339622641505,
+      "y": 313.2,
+      "width": 901.3132075471699,
+      "height": 691.2
+    },
+    "coordinateWidth": 1920,
+    "coordinateHeight": 1080,
+    "inkBounds": {
+      "x": 0.7333333333333333,
+      "y": 0.6453703703703704,
+      "right": 0.9583333333333334,
+      "bottom": 0.9222222222222223
+    }
+  },
+  {
+    "id": "snoopy-daisy-pause",
+    "device": "laptop",
+    "schedule": "dense",
+    "overflow": false,
+    "meetings": 15,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 443.4764319780287,
+      "y": 313.2,
+      "width": 553.0471360439426,
+      "height": 691.2
+    },
+    "coordinateWidth": 1920,
+    "coordinateHeight": 1080,
+    "inkBounds": {
+      "x": 0.7333333333333333,
+      "y": 0.6453703703703704,
+      "right": 0.9583333333333334,
+      "bottom": 0.9222222222222223
+    }
+  },
+  {
+    "id": "snoopy-cassette-days",
+    "device": "mobile",
+    "schedule": "sample",
+    "overflow": false,
+    "meetings": 5,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 124.19999999999999,
+      "y": 696,
+      "width": 831.6,
+      "height": 1000.8000000000002
+    },
+    "coordinateWidth": 1080,
+    "coordinateHeight": 2400,
+    "inkBounds": {
+      "x": 0.32592592592592595,
+      "y": 0.79875,
+      "right": 0.725925925925926,
+      "bottom": 0.9608333333333333
+    }
+  },
+  {
+    "id": "snoopy-cassette-days",
+    "device": "mobile",
+    "schedule": "dense",
+    "overflow": false,
+    "meetings": 15,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 124.19999999999999,
+      "y": 696,
+      "width": 831.6,
+      "height": 1104.1425
+    },
+    "coordinateWidth": 1080,
+    "coordinateHeight": 2400,
+    "inkBounds": {
+      "x": 0.32592592592592595,
+      "y": 0.79875,
+      "right": 0.725925925925926,
+      "bottom": 0.9608333333333333
+    }
+  },
+  {
+    "id": "snoopy-cassette-days",
+    "device": "tablet",
+    "schedule": "sample",
+    "overflow": false,
+    "meetings": 5,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 238.3378285714286,
+      "y": 890.8799999999999,
+      "width": 1443.3243428571427,
+      "height": 1318.019657142857
+    },
+    "coordinateWidth": 1920,
+    "coordinateHeight": 3072,
+    "inkBounds": {
+      "x": 0.354375,
+      "y": 0.7828125,
+      "right": 0.656875,
+      "bottom": 0.94140625
+    }
+  },
+  {
+    "id": "snoopy-cassette-days",
+    "device": "tablet",
+    "schedule": "dense",
+    "overflow": false,
+    "meetings": 15,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 238.3378285714286,
+      "y": 890.8799999999999,
+      "width": 1443.3243428571427,
+      "height": 1509.2543314285715
+    },
+    "coordinateWidth": 1920,
+    "coordinateHeight": 3072,
+    "inkBounds": {
+      "x": 0.354375,
+      "y": 0.7828125,
+      "right": 0.656875,
+      "bottom": 0.94140625
+    }
+  },
+  {
+    "id": "snoopy-cassette-days",
+    "device": "laptop",
+    "schedule": "sample",
+    "overflow": false,
+    "meetings": 5,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 269.34339622641505,
+      "y": 313.2,
+      "width": 901.3132075471699,
+      "height": 691.2
+    },
+    "coordinateWidth": 1920,
+    "coordinateHeight": 1080,
+    "inkBounds": {
+      "x": 0.7359375,
+      "y": 0.6203703703703703,
+      "right": 0.9541666666666667,
+      "bottom": 0.9333333333333333
+    }
+  },
+  {
+    "id": "snoopy-cassette-days",
+    "device": "laptop",
+    "schedule": "dense",
+    "overflow": false,
+    "meetings": 15,
+    "overlap": false,
+    "scheduleBounds": {
+      "x": 443.4764319780287,
+      "y": 313.2,
+      "width": 553.0471360439426,
+      "height": 691.2
+    },
+    "coordinateWidth": 1920,
+    "coordinateHeight": 1080,
+    "inkBounds": {
+      "x": 0.7359375,
+      "y": 0.6203703703703703,
+      "right": 0.9541666666666667,
+      "bottom": 0.9333333333333333
+    }
+  }
+]

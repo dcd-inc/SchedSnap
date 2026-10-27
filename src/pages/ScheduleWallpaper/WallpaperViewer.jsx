@@ -1,9 +1,11 @@
+import useMobileSheetDismiss from '../../lib/useMobileSheetDismiss.js';
 import { useEffect, useRef, useState } from 'react';
 import { Minus, Plus, X } from 'lucide-react';
 import { zoomViewerWithWheel } from '../../utils/viewerZoom.js';
 
 export default function WallpaperViewer({ children, resolution, onClose, title = 'Preview' }) {
   const dialog = useRef(null);
+  useMobileSheetDismiss(dialog, onClose);
   const pane = useRef(null);
   const [fitWidth, setFitWidth] = useState(240);
   const [zoom, setZoom] = useState(100);

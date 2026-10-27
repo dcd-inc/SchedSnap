@@ -1,0 +1,90 @@
+[
+  {
+    "id": "ref06-pink-rebellion",
+    "ref": "30481c3d-7496-4f52-8653-cba1dd16f914",
+    "prompt": "Use case: stylized-concept. Asset type: premium mobile wallpaper, portrait 1080 x 2400 pixels, exact 9:20 tall aspect ratio. Create a new Arcane Jinx wallpaper inspired by the reference image. Reference is mood, palette, character identity and placement guidance, not an edit target. Brilliant solid hot pink full bleed backdrop. Adult Jinx with blue braids, expressive angular face, self-assured mischievous gaze, worn black punk outfit and strapped gloves leans over a sculptural dark chair in the bottom 38% of the canvas. Rich painterly cel illustration, detailed controlled brushwork and sharp silhouette, cyan and deep plum accents. Restrained white chalk monkey and scratch doodles clustered near her shoulders and bottom corners, no letters or words. Top 58% is calm uninterrupted hot pink negative space for a future schedule. Thoughtfully balanced stylish wallpaper composition, no phone mockup, no UI, no timetable, no text, no logos, no signature or watermark.",
+    "provider": "built-in image_gen",
+    "source": "C:/Users/picar/.codex/generated_images/01a17cb0-e219-7450-8fc3-35268d52e107/exec-e323b96e-7014-4a7f-9944-0e2e40d4c867.png",
+    "output": "output/arcane-mobile-review/neon/ref06-pink-rebellion.png",
+    "actualDimensions": [
+      841,
+      1870
+    ],
+    "targetDimensions": [
+      1080,
+      2400
+    ],
+    "status": "review-only, not uploaded",
+    "deliveryDimensions": [
+      1080,
+      2400
+    ],
+    "exportProcessing": "Lanczos normalization from generator native size; source retained"
+  },
+  {
+    "id": "ref07-sisters-embrace",
+    "ref": "db110d2f-35cc-4d41-979c-d96e143c8742",
+    "prompt": "Use case: stylized-concept. Asset type: premium mobile wallpaper, portrait 1080 x 2400 pixels, exact 9:20 tall aspect ratio. Create a new emotionally resonant Arcane sisters wallpaper using reference as subject, palette and composition guidance. In the upper 32% a close painterly portrait of young blue-haired Powder nestled safely within red-haired Vi's bandaged arms; one luminous cyan eye visible beneath her blue fringe. Natural believable arms and hands embracing, tenderness and protectiveness. Deep indigo shadows, small warm rim light and cyan highlights, sophisticated cinematic painted animation finish. The portrait naturally dissolves into true black around its lower edge. Lower 62% of the canvas remains completely plain black with generous negative space for a future schedule. Opaque full bleed image, no frames, no panel border, no words, no logos, no signature, no watermark, no timetable or UI.",
+    "provider": "built-in image_gen",
+    "source": "C:/Users/picar/.codex/generated_images/01a17cb0-e219-7450-8fc3-35268d52e107/exec-cafb37ca-4cb1-4e31-9019-5c8f562ad494.png",
+    "output": "output/arcane-mobile-review/neon/ref07-sisters-embrace.png",
+    "actualDimensions": [
+      841,
+      1870
+    ],
+    "targetDimensions": [
+      1080,
+      2400
+    ],
+    "status": "review-only, not uploaded",
+    "deliveryDimensions": [
+      1080,
+      2400
+    ],
+    "exportProcessing": "Lanczos normalization from generator native size; source retained"
+  },
+  {
+    "id": "ref09-neon-phantom",
+    "ref": "925ab97a-7d17-40c1-a9ad-8a986b4f271a",
+    "prompt": "Use case: stylized-concept. Asset type: premium mobile wallpaper, portrait 1080 x 2400 pixels, exact 9:20 tall aspect ratio. New Arcane Jinx wallpaper using reference as style, palette and subject guidance. True black full bleed background with restrained vivid cyan and electric violet paint spatters, scratchy monkey-face chalk doodles and street-art streaks along the outer edges, strongest at bottom corners and upper right. An adult Jinx half-length portrait rises from the bottom 36%, blue braided hair, angular expressive face, charcoal punk top, gaze slightly upward, one small luminous magenta eye. Silhouette is nearly black but face and hair remain legible through delicate cobalt and cyan rim light. Center and upper-middle 55% are quiet pure black for a future schedule. Elegant selective graffiti rather than visual clutter, high craft painterly animation, dynamic asymmetrical balance. No text or letters, no logos, watermark, signature, UI, phone frame or timetable.",
+    "provider": "built-in image_gen",
+    "source": "C:/Users/picar/.codex/generated_images/01a17cb0-e219-7450-8fc3-35268d52e107/exec-125b7327-a33a-4db7-9988-79919a2d2db3.png",
+    "output": "output/arcane-mobile-review/neon/ref09-neon-phantom.png",
+    "actualDimensions": [
+      841,
+      1870
+    ],
+    "targetDimensions": [
+      1080,
+      2400
+    ],
+    "status": "review-only, not uploaded",
+    "deliveryDimensions": [
+      1080,
+      2400
+    ],
+    "exportProcessing": "Lanczos normalization from generator native size; source retained"
+  },
+  {
+    "id": "ref10-electric-graffiti",
+    "ref": "4e09bd1e-e8ee-4951-993a-e2506456ad8d",
+    "prompt": "Use case: stylized-concept. Asset type: premium mobile wallpaper, portrait 1080 x 2400 pixels, exact 9:20 tall aspect ratio. Create a fresh abstract Arcane-inspired underground graffiti wallpaper using reference as style and palette guidance. Opaque full bleed deep true black. Electric violet and luminous turquoise spray-paint drips, energetic fine splashes and hand-drawn mischievous monkey faces mostly clustered along the right edge and bottom edge. Small fuchsia accents. Bold irregular paint strokes at corners, beautiful authentic physical ink and neon chalk texture. No human portrait. Leave the middle 65% and most of upper left pure uninterrupted black for a future schedule; art should frame this area without forming a literal rectangular border. Refined rhythmic composition, strong wallpaper-worthy restraint. No words, lettering, tags, numbers, logos, signature or watermark. No UI, timetable or device frame.",
+    "provider": "built-in image_gen",
+    "source": "C:/Users/picar/.codex/generated_images/01a17cb0-e219-7450-8fc3-35268d52e107/exec-59b822c7-ea76-4282-9d96-01d6b5f7c740.png",
+    "output": "output/arcane-mobile-review/neon/ref10-electric-graffiti.png",
+    "actualDimensions": [
+      841,
+      1870
+    ],
+    "targetDimensions": [
+      1080,
+      2400
+    ],
+    "status": "review-only, not uploaded",
+    "deliveryDimensions": [
+      1080,
+      2400
+    ],
+    "exportProcessing": "Lanczos normalization from generator native size; source retained"
+  }
+]

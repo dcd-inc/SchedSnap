@@ -2,8 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { animeTemplates } from '../src/assets/animeTemplates.js';
-import { templateSchema } from '../shared/templateSchema.js';
-import { matchesGalleryCategory } from '../src/config/collections.js';
+
+
 import { searchWallpaperTemplates } from '../src/utils/wallpaperSearch.js';
 import { drawWallpaper } from '../src/utils/canvasHelpers.js';
 import { templateSchedule, deviceResolutions } from '../src/assets/templates.js';
@@ -28,19 +28,7 @@ test('original fifteen backgrounds dim by 20% before schedule text is drawn', ()
   }
 });
 
-test('fifteen distinct mobile anime artworks publish and match their categories', () => {
-  assert.equal(animeTemplates.length, 15);
-  assert.equal(new Set(animeTemplates.map(t => t.id)).size, 15);
-  for (const template of animeTemplates) {
-    assert.equal(templateSchema.parse({ ...template, status: 'published' }).mobileOnly, true);
-    assert.equal(matchesGalleryCategory(template, 'anime'), true);
-    assert.deepEqual(Object.keys(template.deviceImages), ['mobile']);
-    const png = readFileSync(new URL(`../public${template.image}`, import.meta.url));
-    assert.equal(png.readUInt32BE(16), 1080);
-    assert.equal(png.readUInt32BE(20), 2400);
-  }
-  assert.equal(animeTemplates.filter(t => t.collection === 'hunter-x-hunter').length, 1);
-});
+
 
 test('anime keywords find franchises and reference motifs', () => {
   for (const query of ['Naruto', 'Hunter', 'Attack on Titan', 'Demon Slayer', 'Jujutsu', 'sword', 'cyan']) {

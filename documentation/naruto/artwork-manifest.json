@@ -1,0 +1,322 @@
+{
+  "provider": "built-in image_gen",
+  "createdAt": "2026-10-22T10:03:36.316Z",
+  "assets": [
+    {
+      "id": "naruto-leaf-ink-lineup",
+      "device": "mobile",
+      "path": "public/wallpapers/scenic/naruto-leaf-ink-lineup/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "sourceWidth": 841,
+      "sourceHeight": 1870,
+      "bytes": 1235136,
+      "sha256": "5e4bf387a365e71686cda13dd8f96ffafab773176e1822e1aa30fd144a7bf5f9",
+      "opaque": true,
+      "dimensionsValid": true,
+      "inkBounds": {
+        "x": 0.2361111111111111,
+        "y": 0.8183333333333334,
+        "right": 0.8046296296296296,
+        "bottom": 0.9995833333333334
+      },
+      "prompt": "Reference 1: young Hidden Leaf profile lineup, fine black manga ink; mobile 1080x2400; artwork in bottom22%, blank pale #f4f3f8 top76%; no schedule, text, watermark or gradients.",
+      "repairPrompts": [
+        "Precise placement-only edit of this attached manga wallpaper. Preserve ALL existing character identities, face details, original fine black pen linework, hair, clothing, hatching and poses without redrawing stylistically. Shrink the ENTIRE existing illustrated group to 43% of its current size, preserving proportions and ALL artwork pixels. Anchor the reduced artwork at bottom center. Entire illustration must be STRICTLY within bottom 18% of canvas, y82%-100%. Top80% must be completely empty uniform original paper background. Extend original flat paper background into all newly empty areas. Preserve original canvas aspect ratio. No extra characters, patterns, gradient, shadows, text, schedule, frame or UI. This is a scale-and-placement correction only. The huge blank area is mandatory; do not enlarge subject to fill it."
+      ],
+      "originalSource": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-564a68dc-4034-4767-b8ae-7dd3ca97282d.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-633b2660-955f-46ec-82e0-35f6a33c4c71.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": "naruto-leaf-ink-lineup",
+      "device": "tablet",
+      "path": "public/wallpapers/scenic/naruto-leaf-ink-lineup/tablet.png",
+      "width": 1600,
+      "height": 2560,
+      "sourceWidth": 992,
+      "sourceHeight": 1586,
+      "bytes": 1782188,
+      "sha256": "e8abe1a3eb2c7ef1ae81030eccd92ff3980ab66a5fa285730e052e44cf20991d",
+      "opaque": true,
+      "dimensionsValid": true,
+      "inkBounds": {
+        "x": 0.308125,
+        "y": 0.816015625,
+        "right": 0.71,
+        "bottom": 0.97890625
+      },
+      "prompt": "Use case: illustration-story. ONE opaque wallpaper for editable schedule app. Reference image is visual guide: Naruto young ninja side-profile lineup, Naruto, Sasuke, Kiba with Akamaru, Choji and Shikamaru foreground. Faithfully reproduce the reference's human black ink manga aesthetic, authentic character anatomy and distinctive clothes, fine imperfect pen contours, deliberate solid black hair/clothes and restrained hand hatching. White paper ground, no added grey shading, gradients or texture. 1600x2560 portrait. Small character lineup footer strictly within bottom 22%; upper 76% completely empty. Recompose for this device, preserve character likeness and natural proportions, respect all empty-space boundaries. No schedule, UI, badges, watermark, signatures or decorative text. Artwork only, no montage.",
+      "repairPrompts": [
+        "Precise placement-only edit of this attached manga wallpaper. Preserve ALL existing character identities, face details, original fine black pen linework, hair, clothing, hatching and poses without redrawing stylistically. Shrink the ENTIRE existing illustrated group to 43% of its current size, preserving proportions and ALL artwork pixels. Anchor the reduced artwork at bottom center. Entire illustration must be STRICTLY within bottom 18% of canvas, y82%-100%. Top80% must be completely empty uniform original paper background. Extend original flat paper background into all newly empty areas. Preserve original canvas aspect ratio. No extra characters, patterns, gradient, shadows, text, schedule, frame or UI. This is a scale-and-placement correction only. The huge blank area is mandatory; do not enlarge subject to fill it.",
+        "PLACEMENT ONLY correction. Keep all existing manga illustration faces, fine ink linework, clothing and poses EXACTLY the same. Reduce the entire illustrated group to 65% of current size. Put its bottom edge exactly at canvas bottom, centered horizontally. All black artwork must lie below y85% of canvas, top 83% absolutely empty matching original white paper. Do not move it upward. Do not zoom. Preserve full portrait canvas aspect ratio and uniform original paper background. No new details or text, no gradients, no schedule. The small footer illustration and huge blank upper area are essential."
+      ],
+      "originalSource": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-b4625c5f-8d45-4588-9d3c-0e64ebd3df6f.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-639f292a-c59e-4b01-8063-6660dd27feb5.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": "naruto-leaf-ink-lineup",
+      "device": "laptop",
+      "path": "public/wallpapers/scenic/naruto-leaf-ink-lineup/laptop.png",
+      "width": 1920,
+      "height": 1080,
+      "sourceWidth": 1672,
+      "sourceHeight": 941,
+      "bytes": 1238188,
+      "sha256": "88587f98d7e5dece3d041ebd22209e23d27b5c3583952740415b9de6c9eab5a9",
+      "opaque": true,
+      "dimensionsValid": true,
+      "inkBounds": {
+        "x": 0.7567708333333333,
+        "y": 0.4740740740740741,
+        "right": 0.9989583333333333,
+        "bottom": 0.9990740740740741
+      },
+      "prompt": "Use case: illustration-story. ONE opaque wallpaper for editable schedule app. Reference image is visual guide: Naruto young ninja side-profile lineup, Naruto, Sasuke, Kiba with Akamaru, Choji and Shikamaru foreground. Faithfully reproduce the reference's human black ink manga aesthetic, authentic character anatomy and distinctive clothes, fine imperfect pen contours, deliberate solid black hair/clothes and restrained hand hatching. White paper ground, no added grey shading, gradients or texture. 1920x1080 landscape. Character lineup clustered at far right, ALL ink strictly within rightmost 26%, x74-100%, bottom aligned. Left 70% entirely empty. Recompose for this device, preserve character likeness and natural proportions, respect all empty-space boundaries. No schedule, UI, badges, watermark, signatures or decorative text. Artwork only, no montage.",
+      "repairPrompts": [
+        "Precise placement-only edit of this attached manga wallpaper. Preserve ALL existing character identities, face details, original fine black pen linework, hair, clothing, hatching and poses without redrawing stylistically. Shrink the ENTIRE existing illustrated group to 55% of its current size, preserving proportions and ALL artwork pixels. Anchor reduced artwork at bottom right. Entire illustration must be STRICTLY within rightmost 23% x77%-100%. Left75% must be completely empty uniform original paper background. Extend original flat paper background into all newly empty areas. Preserve original canvas aspect ratio. No extra characters, patterns, gradient, shadows, text, schedule, frame or UI. This is a scale-and-placement correction only. The huge blank area is mandatory; do not enlarge subject to fill it."
+      ],
+      "originalSource": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-a96b12d4-e905-4723-aaab-a0d2a97ec830.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-8dbc39a5-4ae4-4853-af66-09a7348c4d3f.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": "naruto-retrieval-squad",
+      "device": "mobile",
+      "path": "public/wallpapers/scenic/naruto-retrieval-squad/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "sourceWidth": 841,
+      "sourceHeight": 1870,
+      "bytes": 1466420,
+      "sha256": "ed6b17e2651e0002bc99b9ab4fe438b496d0c3fe5d8023b9fbd223fa90cd62f1",
+      "opaque": true,
+      "dimensionsValid": true,
+      "inkBounds": {
+        "x": 0.16574074074074074,
+        "y": 0.8079166666666666,
+        "right": 0.8296296296296296,
+        "bottom": 0.9995833333333334
+      },
+      "prompt": "Use case: illustration-story. ONE opaque wallpaper for editable schedule app. Reference image is visual guide: Sasuke retrieval squad: Naruto smiling, long-haired Neji, ponytailed Shikamaru, Rock Lee and Choji, reference diagonal ensemble. Faithfully reproduce the reference's human black ink manga aesthetic, authentic character anatomy and distinctive clothes, fine imperfect pen contours, deliberate solid black hair/clothes and restrained hand hatching. White paper ground, no added grey shading, gradients or texture. 1080x2400 portrait. Reference's diagonal group reduced to small footer strictly within bottom 24%; upper 74% entirely blank. Recompose for this device, preserve character likeness and natural proportions, respect all empty-space boundaries. No schedule, UI, badges, watermark, signatures or decorative text. Artwork only, no montage.",
+      "repairPrompts": [
+        "Precise placement-only edit of this attached manga wallpaper. Preserve ALL existing character identities, face details, original fine black pen linework, hair, clothing, hatching and poses without redrawing stylistically. Shrink the ENTIRE existing illustrated group to 43% of its current size, preserving proportions and ALL artwork pixels. Anchor the reduced artwork at bottom center. Entire illustration must be STRICTLY within bottom 18% of canvas, y82%-100%. Top80% must be completely empty uniform original paper background. Extend original flat paper background into all newly empty areas. Preserve original canvas aspect ratio. No extra characters, patterns, gradient, shadows, text, schedule, frame or UI. This is a scale-and-placement correction only. The huge blank area is mandatory; do not enlarge subject to fill it."
+      ],
+      "originalSource": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-f3cf808e-71bc-4635-a09a-4fd9ea8b2d6f.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-3a72f80b-a8f4-472b-a40c-8f9c7068281d.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": "naruto-retrieval-squad",
+      "device": "tablet",
+      "path": "public/wallpapers/scenic/naruto-retrieval-squad/tablet.png",
+      "width": 1600,
+      "height": 2560,
+      "sourceWidth": 992,
+      "sourceHeight": 1586,
+      "bytes": 2070929,
+      "sha256": "1f6e58915fb0c0a2bafce118aa988b348939c9960ccb8e5db6bb4ff747a1c43c",
+      "opaque": true,
+      "dimensionsValid": true,
+      "inkBounds": {
+        "x": 0.245,
+        "y": 0.795703125,
+        "right": 0.72875,
+        "bottom": 0.99921875
+      },
+      "prompt": "Use case: illustration-story. ONE opaque wallpaper for a timetable app. Attached reference is primary guide. Subject: Sasuke retrieval squad, young Naruto, Neji, Shikamaru, Rock Lee and Choji in reference clothing and poses, retain Choji's original shirt emblem. Accurately match reference's black-and-white human drawn manga art: thin organic ink contours, solid flat black shapes, subtle natural variation, faithful face anatomy, sparse precise hand hatching only where reference uses it. No grey shading or added texture. Clean white background. 1600x2560 portrait. Diagonal squad grouped small at bottom, ALL artwork below y77%; upper 75% entirely empty. Preserve reference character likeness, do not invent accessories or extra characters. No timetable, text, titles, watermark, signature, badges, frames, gradients, UI, 3D, halftone, montage. Mandatory large clear area for real schedule rendered by app.",
+      "repairPrompts": [
+        "Precise placement-only edit of this attached manga wallpaper. Preserve ALL existing character identities, face details, original fine black pen linework, hair, clothing, hatching and poses without redrawing stylistically. Shrink the ENTIRE existing illustrated group to 43% of its current size, preserving proportions and ALL artwork pixels. Anchor the reduced artwork at bottom center. Entire illustration must be STRICTLY within bottom 18% of canvas, y82%-100%. Top80% must be completely empty uniform original paper background. Extend original flat paper background into all newly empty areas. Preserve original canvas aspect ratio. No extra characters, patterns, gradient, shadows, text, schedule, frame or UI. This is a scale-and-placement correction only. The huge blank area is mandatory; do not enlarge subject to fill it.",
+        "PLACEMENT ONLY correction. Keep all existing manga illustration faces, fine ink linework, clothing and poses EXACTLY the same. Reduce the entire illustrated group to 65% of current size. Put its bottom edge exactly at canvas bottom, centered horizontally. All black artwork must lie below y85% of canvas, top 83% absolutely empty matching original white paper. Do not move it upward. Do not zoom. Preserve full portrait canvas aspect ratio and uniform original paper background. No new details or text, no gradients, no schedule. The small footer illustration and huge blank upper area are essential."
+      ],
+      "originalSource": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-42ce50bb-ae2e-4fd0-b085-871543df28e6.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-4e1b190d-88fc-4ebc-b552-94223c6bc5c3.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": "naruto-retrieval-squad",
+      "device": "laptop",
+      "path": "public/wallpapers/scenic/naruto-retrieval-squad/laptop.png",
+      "width": 1920,
+      "height": 1080,
+      "sourceWidth": 1672,
+      "sourceHeight": 941,
+      "bytes": 1309972,
+      "sha256": "e7fec2300fb0bbb51da28653938e09993a214d1551c74f1e5df441d077651126",
+      "opaque": true,
+      "dimensionsValid": true,
+      "inkBounds": {
+        "x": 0.7109375,
+        "y": 0.31574074074074077,
+        "right": 0.9989583333333333,
+        "bottom": 0.9990740740740741
+      },
+      "prompt": "Use case: illustration-story. ONE opaque wallpaper for a timetable app. Attached reference is primary guide. Subject: Sasuke retrieval squad, young Naruto, Neji, Shikamaru, Rock Lee and Choji in reference clothing and poses, retain Choji's original shirt emblem. Accurately match reference's black-and-white human drawn manga art: thin organic ink contours, solid flat black shapes, subtle natural variation, faithful face anatomy, sparse precise hand hatching only where reference uses it. No grey shading or added texture. Clean white background. 1920x1080 landscape. Squad as diagonal ensemble along far right edge, ALL artwork in x76-100%; left 72% entirely empty. Preserve reference character likeness, do not invent accessories or extra characters. No timetable, text, titles, watermark, signature, badges, frames, gradients, UI, 3D, halftone, montage. Mandatory large clear area for real schedule rendered by app.",
+      "repairPrompts": [
+        "Precise placement-only edit of this attached manga wallpaper. Preserve ALL existing character identities, face details, original fine black pen linework, hair, clothing, hatching and poses without redrawing stylistically. Shrink the ENTIRE existing illustrated group to 55% of its current size, preserving proportions and ALL artwork pixels. Anchor reduced artwork at bottom right. Entire illustration must be STRICTLY within rightmost 23% x77%-100%. Left75% must be completely empty uniform original paper background. Extend original flat paper background into all newly empty areas. Preserve original canvas aspect ratio. No extra characters, patterns, gradient, shadows, text, schedule, frame or UI. This is a scale-and-placement correction only. The huge blank area is mandatory; do not enlarge subject to fill it."
+      ],
+      "originalSource": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-e54f011b-c97c-4737-a9ae-896597d44410.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-0e5b2361-d355-4119-bd68-c509067ff119.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": "naruto-sasuke-quiet-ink",
+      "device": "mobile",
+      "path": "public/wallpapers/scenic/naruto-sasuke-quiet-ink/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "sourceWidth": 841,
+      "sourceHeight": 1870,
+      "bytes": 1258205,
+      "sha256": "ebdc1caf57d10a12706d2cdfc6872fc86947e240d048928b645220c37b68b971",
+      "opaque": true,
+      "dimensionsValid": true,
+      "inkBounds": {
+        "x": 0.34814814814814815,
+        "y": 0.775,
+        "right": 0.6388888888888888,
+        "bottom": 0.9995833333333334
+      },
+      "prompt": "Use case: illustration-story. ONE opaque wallpaper for a timetable app. Attached reference is primary guide. Subject: Sasuke Uchiha, exactly reference's simple relaxed frontal bust, plain oversized black T-shirt, narrow serious face, asymmetric spiky black hair, slim neck. Accurately match reference's black-and-white human drawn manga art: thin organic ink contours, solid flat black shapes, subtle natural variation, faithful face anatomy, sparse precise hand hatching only where reference uses it. No grey shading or added texture. Clean white background. 1080x2400 portrait. Small Sasuke bust centered along bottom, occupies bottom 22% only, width at most 45%; top 76% completely empty. Preserve reference character likeness, do not invent accessories or extra characters. No timetable, text, titles, watermark, signature, badges, frames, gradients, UI, 3D, halftone, montage. Mandatory large clear area for real schedule rendered by app.",
+      "repairPrompts": [
+        "Precise placement-only edit of this attached manga wallpaper. Preserve ALL existing character identities, face details, original fine black pen linework, hair, clothing, hatching and poses without redrawing stylistically. Shrink the ENTIRE existing illustrated group to 43% of its current size, preserving proportions and ALL artwork pixels. Anchor the reduced artwork at bottom center. Entire illustration must be STRICTLY within bottom 18% of canvas, y82%-100%. Top80% must be completely empty uniform original paper background. Extend original flat paper background into all newly empty areas. Preserve original canvas aspect ratio. No extra characters, patterns, gradient, shadows, text, schedule, frame or UI. This is a scale-and-placement correction only. The huge blank area is mandatory; do not enlarge subject to fill it."
+      ],
+      "originalSource": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-3a82c2ea-dcbd-4e69-84e0-6e251581d41a.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-45713112-046f-4e4e-8bf4-e2a80e8bf435.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": "naruto-sasuke-quiet-ink",
+      "device": "tablet",
+      "path": "public/wallpapers/scenic/naruto-sasuke-quiet-ink/tablet.png",
+      "width": 1600,
+      "height": 2560,
+      "sourceWidth": 992,
+      "sourceHeight": 1586,
+      "bytes": 1586846,
+      "sha256": "09bbf7888e1e9fb689d7c715debfe9b8377509ee7978b7b1b7a8cf61fcd3544d",
+      "opaque": true,
+      "dimensionsValid": true,
+      "inkBounds": {
+        "x": 0.4,
+        "y": 0.785546875,
+        "right": 0.595,
+        "bottom": 0.99921875
+      },
+      "prompt": "Use case: illustration-story. One opaque timetable wallpaper, not a montage. Faithfully adapt attached reference image. Subject: Sasuke Uchiha's relaxed front-facing bust in plain black oversized short sleeve T-shirt, thin long neck, serious neutral face, asymmetrical spiky solid black hair and long side bangs. No accessories. Match the reference's hand inked black and white manga aesthetic accurately: fine irregular pen outlines, natural hand drafted eyes and features, large deep black fill areas, sparse fine hatch marks and subtly imperfect ink. Flat pure white paper ground, no added texture, no grey shading or gradients. 1600x2560 portrait, Sasuke small bust centered at bottom, entirely below y78%, max width 40%; upper 76% completely blank. Keep exact recognizable faces, proportions and wardrobe; faithfully translate original artwork to the new aspect ratio with broad negative space for a real timetable. No schedule, titles, logos, UI, badges, watermark, signatures, borders or extra characters.",
+      "repairPrompts": [
+        "Precise placement-only edit of this attached manga wallpaper. Preserve ALL existing character identities, face details, original fine black pen linework, hair, clothing, hatching and poses without redrawing stylistically. Shrink the ENTIRE existing illustrated group to 43% of its current size, preserving proportions and ALL artwork pixels. Anchor the reduced artwork at bottom center. Entire illustration must be STRICTLY within bottom 18% of canvas, y82%-100%. Top80% must be completely empty uniform original paper background. Extend original flat paper background into all newly empty areas. Preserve original canvas aspect ratio. No extra characters, patterns, gradient, shadows, text, schedule, frame or UI. This is a scale-and-placement correction only. The huge blank area is mandatory; do not enlarge subject to fill it.",
+        "PLACEMENT ONLY correction. Keep all existing manga illustration faces, fine ink linework, clothing and poses EXACTLY the same. Reduce the entire illustrated group to 65% of current size. Put its bottom edge exactly at canvas bottom, centered horizontally. All black artwork must lie below y85% of canvas, top 83% absolutely empty matching original white paper. Do not move it upward. Do not zoom. Preserve full portrait canvas aspect ratio and uniform original paper background. No new details or text, no gradients, no schedule. The small footer illustration and huge blank upper area are essential."
+      ],
+      "originalSource": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-7639a5fd-51ac-43a7-89fa-5f9fba587009.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-d730df97-a69a-4198-8e2b-5eada114fd80.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": "naruto-sasuke-quiet-ink",
+      "device": "laptop",
+      "path": "public/wallpapers/scenic/naruto-sasuke-quiet-ink/laptop.png",
+      "width": 1920,
+      "height": 1080,
+      "sourceWidth": 1672,
+      "sourceHeight": 940,
+      "bytes": 1076938,
+      "sha256": "f7ea6b81c13422c167b8e4fd26cf64a724e1ecdb7770d3200c60e45da0db3401",
+      "opaque": true,
+      "dimensionsValid": true,
+      "inkBounds": {
+        "x": 0.7984375,
+        "y": 0.42314814814814816,
+        "right": 0.9875,
+        "bottom": 0.9583333333333334
+      },
+      "prompt": "Use case: illustration-story. One opaque timetable wallpaper, not a montage. Faithfully adapt attached reference image. Subject: Sasuke Uchiha's relaxed front-facing bust in plain black oversized short sleeve T-shirt, thin long neck, serious neutral face, asymmetrical spiky solid black hair and long side bangs. No accessories. Match the reference's hand inked black and white manga aesthetic accurately: fine irregular pen outlines, natural hand drafted eyes and features, large deep black fill areas, sparse fine hatch marks and subtly imperfect ink. Flat pure white paper ground, no added texture, no grey shading or gradients. 1920x1080 landscape, Sasuke bust at lower right, ALL ink strictly x78-100% and y40-100%. Left 73% entirely blank. Keep exact recognizable faces, proportions and wardrobe; faithfully translate original artwork to the new aspect ratio with broad negative space for a real timetable. No schedule, titles, logos, UI, badges, watermark, signatures, borders or extra characters.",
+      "repairPrompts": [
+        "Precise placement-only edit of this attached manga wallpaper. Preserve ALL existing character identities, face details, original fine black pen linework, hair, clothing, hatching and poses without redrawing stylistically. Shrink the ENTIRE existing illustrated group to 55% of its current size, preserving proportions and ALL artwork pixels. Anchor reduced artwork at bottom right. Entire illustration must be STRICTLY within rightmost 23% x77%-100%. Left75% must be completely empty uniform original paper background. Extend original flat paper background into all newly empty areas. Preserve original canvas aspect ratio. No extra characters, patterns, gradient, shadows, text, schedule, frame or UI. This is a scale-and-placement correction only. The huge blank area is mandatory; do not enlarge subject to fill it."
+      ],
+      "originalSource": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-a8236fb9-1375-466f-9beb-87d1ca3292ae.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-8252de40-548f-4dab-bc6d-86eab711477a.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": "naruto-kakashi-obito",
+      "device": "mobile",
+      "path": "public/wallpapers/scenic/naruto-kakashi-obito/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "sourceWidth": 841,
+      "sourceHeight": 1870,
+      "bytes": 1348688,
+      "sha256": "fc836ff4ac0eaec6517b28acbdf1ff90188c6b628a132b190c268d8b565893f9",
+      "opaque": true,
+      "dimensionsValid": true,
+      "inkBounds": {
+        "x": 0.33055555555555555,
+        "y": 0.7933333333333333,
+        "right": 0.6861111111111111,
+        "bottom": 0.9854166666666667
+      },
+      "prompt": "Use case: illustration-story. One opaque timetable wallpaper, not a montage. Faithfully adapt attached reference image. Subject: Young Obito Uchiha and young Kakashi Hatake standing back-to-back in side profile, Obito at left facing left with distinctive large goggles, black spiky hair and tall pale collar; Kakashi at right facing right, white spiky hair, headband tied behind his head, black face mask and sleeveless dark top; preserve original reference poses, period clothing and anatomy. Match the reference's hand inked black and white manga aesthetic accurately: fine irregular pen outlines, natural hand drafted eyes and features, large deep black fill areas, sparse fine hatch marks and subtly imperfect ink. Flat pure white paper ground, no added texture, no grey shading or gradients. 1080x2400 portrait, the back-to-back pair small at bottom, ALL artwork strictly below y77%; top 75% completely empty. Keep exact recognizable faces, proportions and wardrobe; faithfully translate original artwork to the new aspect ratio with broad negative space for a real timetable. No schedule, titles, logos, UI, badges, watermark, signatures, borders or extra characters.",
+      "repairPrompts": [
+        "Precise placement-only edit of this attached manga wallpaper. Preserve ALL existing character identities, face details, original fine black pen linework, hair, clothing, hatching and poses without redrawing stylistically. Shrink the ENTIRE existing illustrated group to 43% of its current size, preserving proportions and ALL artwork pixels. Anchor the reduced artwork at bottom center. Entire illustration must be STRICTLY within bottom 18% of canvas, y82%-100%. Top80% must be completely empty uniform original paper background. Extend original flat paper background into all newly empty areas. Preserve original canvas aspect ratio. No extra characters, patterns, gradient, shadows, text, schedule, frame or UI. This is a scale-and-placement correction only. The huge blank area is mandatory; do not enlarge subject to fill it."
+      ],
+      "originalSource": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-078416f0-8d82-4f5d-877e-ed09ad13f767.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-e3cbc13f-23e8-4d51-9d66-8e78685a0e3e.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": "naruto-kakashi-obito",
+      "device": "tablet",
+      "path": "public/wallpapers/scenic/naruto-kakashi-obito/tablet.png",
+      "width": 1600,
+      "height": 2560,
+      "sourceWidth": 992,
+      "sourceHeight": 1586,
+      "bytes": 1622028,
+      "sha256": "38b619d4fa8065832c1a4e33881eb5138a612e619ec5c7e65f6bd2caf0565a2b",
+      "opaque": true,
+      "dimensionsValid": true,
+      "inkBounds": {
+        "x": 0.391875,
+        "y": 0.83828125,
+        "right": 0.606875,
+        "bottom": 0.99921875
+      },
+      "prompt": "Use case: illustration-story. One opaque timetable wallpaper, not a montage. Faithfully adapt attached reference image. Subject: Young Obito Uchiha and young Kakashi Hatake standing back-to-back in side profile, Obito at left facing left with distinctive large goggles, black spiky hair and tall pale collar; Kakashi at right facing right, white spiky hair, headband tied behind his head, black face mask and sleeveless dark top; preserve original reference poses, period clothing and anatomy. Match the reference's hand inked black and white manga aesthetic accurately: fine irregular pen outlines, natural hand drafted eyes and features, large deep black fill areas, sparse fine hatch marks and subtly imperfect ink. Flat pure white paper ground, no added texture, no grey shading or gradients. 1600x2560 portrait, the back-to-back pair small centered at bottom, ALL artwork below y77%; top 75% completely empty. Keep exact recognizable faces, proportions and wardrobe; faithfully translate original artwork to the new aspect ratio with broad negative space for a real timetable. No schedule, titles, logos, UI, badges, watermark, signatures, borders or extra characters.",
+      "repairPrompts": [
+        "Precise placement-only edit of this attached manga wallpaper. Preserve ALL existing character identities, face details, original fine black pen linework, hair, clothing, hatching and poses without redrawing stylistically. Shrink the ENTIRE existing illustrated group to 43% of its current size, preserving proportions and ALL artwork pixels. Anchor the reduced artwork at bottom center. Entire illustration must be STRICTLY within bottom 18% of canvas, y82%-100%. Top80% must be completely empty uniform original paper background. Extend original flat paper background into all newly empty areas. Preserve original canvas aspect ratio. No extra characters, patterns, gradient, shadows, text, schedule, frame or UI. This is a scale-and-placement correction only. The huge blank area is mandatory; do not enlarge subject to fill it.",
+        "PLACEMENT ONLY correction. Keep all existing manga illustration faces, fine ink linework, clothing and poses EXACTLY the same. Reduce the entire illustrated group to 65% of current size. Put its bottom edge exactly at canvas bottom, centered horizontally. All black artwork must lie below y85% of canvas, top 83% absolutely empty matching original white paper. Do not move it upward. Do not zoom. Preserve full portrait canvas aspect ratio and uniform original paper background. No new details or text, no gradients, no schedule. The small footer illustration and huge blank upper area are essential."
+      ],
+      "originalSource": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-a1b50f02-2b44-4c42-9d9b-c00f9b874762.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-7487a395-07d4-478c-a311-ee0cc768448a.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": "naruto-kakashi-obito",
+      "device": "laptop",
+      "path": "public/wallpapers/scenic/naruto-kakashi-obito/laptop.png",
+      "width": 1920,
+      "height": 1080,
+      "sourceWidth": 1672,
+      "sourceHeight": 940,
+      "bytes": 1223288,
+      "sha256": "b81b64ae511ad2de62dad3225a7a6722692cf240ff95882c7fe646c5b92105e1",
+      "opaque": true,
+      "dimensionsValid": true,
+      "inkBounds": {
+        "x": 0.7755208333333333,
+        "y": 0.562962962962963,
+        "right": 0.9848958333333333,
+        "bottom": 0.9981481481481481
+      },
+      "prompt": "Use case: illustration-story. One opaque timetable wallpaper, not a montage. Faithfully adapt attached reference image. Subject: Young Obito Uchiha and young Kakashi Hatake standing back-to-back in side profile, Obito at left facing left with distinctive large goggles, black spiky hair and tall pale collar; Kakashi at right facing right, white spiky hair, headband tied behind his head, black face mask and sleeveless dark top; preserve original reference poses, period clothing and anatomy. Match the reference's hand inked black and white manga aesthetic accurately: fine irregular pen outlines, natural hand drafted eyes and features, large deep black fill areas, sparse fine hatch marks and subtly imperfect ink. Flat pure white paper ground, no added texture, no grey shading or gradients. 1920x1080 landscape, the back-to-back pair at far right, ALL artwork within x75-100% and y35-100%; left 71% entirely empty. Keep exact recognizable faces, proportions and wardrobe; faithfully translate original artwork to the new aspect ratio with broad negative space for a real timetable. No schedule, titles, logos, UI, badges, watermark, signatures, borders or extra characters.",
+      "repairPrompts": [
+        "Precise placement-only edit of this attached manga wallpaper. Preserve ALL existing character identities, face details, original fine black pen linework, hair, clothing, hatching and poses without redrawing stylistically. Shrink the ENTIRE existing illustrated group to 55% of its current size, preserving proportions and ALL artwork pixels. Anchor reduced artwork at bottom right. Entire illustration must be STRICTLY within rightmost 23% x77%-100%. Left75% must be completely empty uniform original paper background. Extend original flat paper background into all newly empty areas. Preserve original canvas aspect ratio. No extra characters, patterns, gradient, shadows, text, schedule, frame or UI. This is a scale-and-placement correction only. The huge blank area is mandatory; do not enlarge subject to fill it."
+      ],
+      "originalSource": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-73169890-2a76-4053-9ad2-174a88c0ee67.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1590b-4ae6-7210-8c1f-ef4a92b11dae\\exec-78221a5f-5b92-497f-a61a-55a792e6d5da.png",
+      "visuallyReviewed": true
+    }
+  ]
+}

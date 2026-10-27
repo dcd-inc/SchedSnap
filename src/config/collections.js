@@ -2,8 +2,11 @@
 export const designCollections = [
   { id: 'all', name: 'All designs' },
   { id: 'wuthering-waves', name: 'Wuthering Waves', searchTerms: ['WuWa', 'Wuthering'] },
-  { id: 'arcane', name: 'Arcane', searchTerms: ['Jinx', 'League of Legends', 'LoL', 'Zaun'] },
+  { id: 'cars', name: 'Cars', searchTerms: ['car wallpaper', 'automotive', 'sports car', 'Porsche', 'Ferrari', 'McLaren'] },
   { id: 'anime', name: 'Anime', searchTerms: ['anime wallpaper', 'manga'] },
+  { id: 'naruto', name: 'Naruto', searchTerms: ['Naruto Shippuden', 'Hidden Leaf', 'Akatsuki'] },
+  { id: 'arcane', name: 'Arcane', searchTerms: ['League of Legends', 'Jinx', 'Vi', 'Ekko', 'Caitlyn', 'Viktor', 'LoL', 'Zaun'] },
+  { id: 'collage', name: 'Collage', searchTerms: ['scrapbook', 'grunge', 'music collage', 'gothic collage'] },
   { id: 'sanrio', name: 'Sanrio' },
   { id: 'snoopy', name: 'Snoopy', searchTerms: ['Peanuts', 'Woodstock'] },
   { id: 'genshin', name: 'Genshin', searchTerms: ['Genshin Impact'] },
@@ -18,7 +21,8 @@ export const designCollections = [
   { id: 'pattern', name: 'Patterns & prints' },
 ];
 
-export const getTemplateCollection = (template) => (['chikawa', 'little-friends'].includes(template.collection) ? 'chiikawa' : template.collection) || 'original';
+const legacyNarutoIds = new Set(['anime-akatsuki-crimson-assembly', 'anime-naruto-neon-dojutsu', 'anime-naruto-ink-quartet', 'anime-crimson-sharingan', 'anime-crimson-manga-eye']);
+export const getTemplateCollection = (template) => legacyNarutoIds.has(template.id) ? 'naruto' : (['chikawa', 'little-friends'].includes(template.collection) ? 'chiikawa' : template.collection) || 'original';
 
 export const scenicFamilies = [
   { id: 'tropical-botanical', name: 'Tropical botanicals' },
@@ -40,6 +44,6 @@ export const scenicFamilies = [
 export const galleryCategories = [...designCollections];
 
 export function matchesGalleryCategory(template, category) {
-  if (category === 'anime') return ['anime', 'hunter-x-hunter', 'ghibli', 'onepiece'].includes(getTemplateCollection(template));
+  if (category === 'anime') return ['anime', 'naruto', 'hunter-x-hunter', 'ghibli', 'onepiece'].includes(getTemplateCollection(template));
   return category === 'all' || getTemplateCollection(template) === (['chikawa', 'little-friends'].includes(category) ? 'chiikawa' : category);
 }

@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import '../../wallpaper-fonts.css';
-import { ArrowLeft, ImageUp } from 'lucide-react';
+import { ArrowLeft, ImageUp, SlidersHorizontal } from 'lucide-react';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router';
 import Toast from '../../components/Toast.jsx';
 import BackToTop from '../../components/BackToTop.jsx';
@@ -10,6 +9,7 @@ import { api, getAnalysisErrorMessage } from '../../lib/api.js';
 import { loadImportUsage, rememberImportUsage } from '../../lib/importUsage.js';
 import { templateProperties, trackEvent } from '../../lib/analytics.js';
 import { deviceResolutions } from '../../assets/wallpaperPresets.js';
+import { supportsTemplateDevice } from '../../utils/templateDevices.js';
 import { useTemplates, useCatalogStatus } from '../../lib/catalogContext.js';
 import { scheduleLayoutOptions } from '../../utils/canvasHelpers.js';
 import { sampleSchedule } from '../../assets/sampleSchedule.js';
@@ -21,21 +21,31 @@ import WallpaperSearch from '../../components/WallpaperSearch.jsx';
 import WallpaperLoading from '../../components/WallpaperLoading.jsx';
 import ImportSuccessDialog from './ImportSuccessDialog.jsx';
 import { useDebouncedSearch } from '../../lib/useWallpaperSearch.js';
+import { clearCustomBackground, customBackgroundId, readCustomBackground, saveCustomBackground } from '../../lib/customBackground.js';
+import CustomBackgroundUpload, { BackgroundDeviceDialog } from './CustomBackgroundUpload.jsx';
 
 export default function ScheduleWallpaper() {
-  const wallpaperTemplates = useTemplates();
+  const catalogTemplates = useTemplates();
+  const [customTemplate, setCustomTemplate] = useState(() => {
+    try { return readCustomBackground(window.sessionStorage); } catch { return null; }
+  });
+  const [backgroundSaved, setBackgroundSaved] = useState(true);
+  const wallpaperTemplates = useMemo(() => customTemplate ? [...catalogTemplates, customTemplate] : catalogTemplates, [catalogTemplates, customTemplate]);
   const catalogStatus = useCatalogStatus();
   const { '*': templateId } = useParams();
   const navigate = useNavigate();
   const [search, setSearch] = useSearchParams();
-  const device = ['mobile', 'tablet', 'laptop'].includes(search.get('device')) ? search.get('device') : 'mobile';
+  const uploadingBackground = templateId === 'upload';
+  const requestedDevice = ['mobile', 'tablet', 'laptop'].includes(search.get('device')) ? search.get('device') : 'mobile';
+  const device = templateId === customBackgroundId && customTemplate ? customTemplate.device : requestedDevice;
+  const [choosingBackgroundDevice, setChoosingBackgroundDevice] = useState(false);
   function changeDevice(next) {
     setSearch((previous) => { const params = new URLSearchParams(previous); params.set('device', next); return params; });
   }
-  function devicePath(path) {
+  function devicePath(path, targetDevice = device) {
     const [pathname, query = ''] = path.split('?');
     const params = new URLSearchParams(query);
-    params.set('device', device);
+    params.set('device', targetDevice);
     if (search.get('sort')) params.set('sort', search.get('sort'));
     params.set('layout', previewLayout);
     params.set('style', previewStyle);
@@ -44,6 +54,7 @@ export default function ScheduleWallpaper() {
   }
   const [templateSettings, setTemplateSettings] = useState({});
   const [appearanceUndo, setAppearanceUndo] = useState(null);
+  const [customizeRequest, setCustomizeRequest] = useState(0);
   const resolution = deviceResolutions[device];
   const previewLayout = scheduleLayoutOptions(device).some(option => option.value === search.get('layout')) ? search.get('layout') : 'stacked';
   const previewStyle = ['glass', 'solid', 'colored', 'colored-glass', 'outline'].includes(search.get('style')) ? search.get('style') : 'glass';
@@ -51,7 +62,13 @@ export default function ScheduleWallpaper() {
     setSearch(previous => { const params = new URLSearchParams(previous); params.set('style', next); return params; });
   }
   function changeLayout(next) {
-    if (templateId) setTemplateSettings(previous => ({ ...previous, [templateId]: { ...previous[templateId], scheduleLayout: next } }));
+    if (templateId && !uploadingBackground) {
+      setTemplateSettings(previous => {
+        const current = { ...previous[templateId] };
+        delete current.fontScale;
+        return { ...previous, [templateId]: { ...current, scheduleLayout: next } };
+      });
+    }
     setSearch(previous => { const params = new URLSearchParams(previous); params.set('layout', next); return params; });
   }
   const [schedule, setSchedule] = useState({ classes: [], warnings: [] });
@@ -89,13 +106,13 @@ export default function ScheduleWallpaper() {
   const imagePicker = useRef(null);
   const lastTrackedStep = useRef(null);
   const template = useMemo(() => {
-    const preset = customizeWallpaperTemplate(galleryPreviewTemplate(wallpaperTemplates.find((item) => item.id === templateId && (!item.mobileOnly || device === 'mobile'))), { ...(search.has('layout') ? { scheduleLayout: previewLayout } : {}), ...(search.has('style') ? { containerStyle: previewStyle } : {}), ...templateSettings[templateId] }, device);
+    const preset = customizeWallpaperTemplate(galleryPreviewTemplate(wallpaperTemplates.find((item) => item.id === templateId && supportsTemplateDevice(item, device))), { ...(search.has('layout') ? { scheduleLayout: previewLayout } : {}), ...(search.has('style') ? { containerStyle: previewStyle } : {}), ...templateSettings[templateId] }, device);
     return preset ? { ...preset, scheduleTitle, device } : undefined;
   }, [templateId, templateSettings, scheduleTitle, device, wallpaperTemplates, previewLayout, previewStyle, search]);
   const returnId = search.get('return');
-  const previousTemplate = wallpaperTemplates.find((item) => item.id === returnId && (!item.mobileOnly || device === 'mobile'));
+  const previousTemplate = wallpaperTemplates.find((item) => item.id === returnId && supportsTemplateDevice(item, device));
   const selectedId = template?.id || previousTemplate?.id;
-  const step = template ? search.get('step') === 'preview' ? 'preview' : 'classes' : 'design';
+  const step = uploadingBackground ? 'upload' : template ? search.get('step') === 'preview' ? 'preview' : 'classes' : 'design';
   const basePath = '/services/schedule-wallpaper';
   const choosingImage = step === 'classes' && !!image && (importOpen || !schedule.classes.length);
   const showingImport = step === 'classes' && (importOpen || (!schedule.classes.length && !(scheduleSource === 'manual' && canCancelEntry)));
@@ -121,29 +138,29 @@ export default function ScheduleWallpaper() {
     window.addEventListener('focus', refreshUsage);
     return () => { active = false; window.clearTimeout(resetTimer); window.removeEventListener('focus', refreshUsage); };
   }, [showingImport]);
-  const hasUnsavedChanges = schedule.classes.length > 0 || !!image || scheduleTitle !== 'Class Schedule' || Object.values(templateSettings).some((settings) => Object.keys(settings).length > 0);
+  const hasUnsavedChanges = !backgroundSaved || schedule.classes.length > 0 || !!image || scheduleTitle !== 'Class Schedule' || Object.values(templateSettings).some((settings) => Object.keys(settings).length > 0);
   useEffect(() => {
-    if (templateId && !template) return;
+    if (templateId && !template && !uploadingBackground) return;
     const key = `${step}:${templateId || ''}`;
     if (lastTrackedStep.current === key) return;
     lastTrackedStep.current = key;
     const properties = { step, ...(template ? templateProperties(template) : {}), schedule_source: scheduleSource, class_count: schedule.classes.length };
     trackEvent('wallpaper_step_viewed', properties);
     if (step === 'preview') trackEvent('schedule_previewed', properties);
-  }, [step, templateId, template, scheduleSource, schedule.classes.length]);
+  }, [step, templateId, template, scheduleSource, schedule.classes.length, uploadingBackground]);
   useEffect(() => {
     const unsavedAppearance = Object.values(templateSettings).some(settings => Object.keys(settings).length > 0);
     if (!hasUnsavedChanges) return;
     function confirmRefresh(event) {
       try {
-        if (!pendingDraft && saveDraft(window.sessionStorage, schedule, scheduleTitle, scheduleSource) && (schedule.classes.length > 0 || (!image && !unsavedAppearance && scheduleTitle === 'Class Schedule'))) return;
+        if (backgroundSaved && !pendingDraft && saveDraft(window.sessionStorage, schedule, scheduleTitle, scheduleSource) && (schedule.classes.length > 0 || (!image && !unsavedAppearance && scheduleTitle === 'Class Schedule'))) return;
       } catch { /* Warn before losing edits when storage is unavailable. */ }
       event.preventDefault();
       event.returnValue = '';
     }
     window.addEventListener('beforeunload', confirmRefresh);
     return () => window.removeEventListener('beforeunload', confirmRefresh);
-  }, [hasUnsavedChanges, pendingDraft, image, templateSettings, schedule, scheduleTitle, scheduleSource]);
+  }, [hasUnsavedChanges, pendingDraft, image, templateSettings, schedule, scheduleTitle, scheduleSource, backgroundSaved]);
   useEffect(() => {
     heading.current?.focus({ preventScroll: true });
     window.scrollTo({ top: 0, behavior: 'instant' });
@@ -186,6 +203,7 @@ export default function ScheduleWallpaper() {
       const checked = scheduleSchema.safeParse(data.schedule);
       if (!checked.success) throw new Error('The schedule response was incomplete. Try another image.');
       setSchedule(checked.data);
+      setImage(null);
       setScheduleSource('image');
       trackEvent('schedule_import_succeeded', { ...properties, class_count: checked.data.classes.length, warning_count: checked.data.warnings.length, duration_ms: Math.round(performance.now() - started) });
       setImportResult({ provider: data.provider === 'deepseek' ? 'deepseek' : 'gemini', classCount: checked.data.classes.length });
@@ -211,16 +229,19 @@ export default function ScheduleWallpaper() {
     requestAnimationFrame(() => heading.current?.closest('.wallpaper-flow')?.querySelector(schedule.classes.length ? '[data-import-trigger]' : '.schedule-dropzone')?.focus());
   }
   function goBack() {
+    if (step === 'upload') {
+      navigate(devicePath(`${basePath}${selectedId ? `?return=${selectedId}&step=${search.get('step') === 'preview' ? 'preview' : 'classes'}` : ''}`));
+      return;
+    }
     if (step === 'classes' && importOpen && schedule.classes.length) {
       cancelImport();
     } else openStep(step === 'classes' ? 'design' : 'classes');
   }
 
-  if (catalogStatus.loading && templateId) return <WallpaperLoading />;
-  if (catalogStatus.error && !wallpaperTemplates.length) return <section className="page-wrap py-12"><p role="alert">{catalogStatus.error}</p><button className="button-primary mt-6" onClick={() => window.location.reload()}>Try again</button></section>;
-  if (templateId && !template) return <section className="page-wrap py-12">
-    <h1 className="text-2xl font-semibold">Template not found</h1>
-    <p className="mt-3 text-muted">Choose a template from the collection to start editing.</p>
+  if (catalogStatus.loading && templateId && templateId !== customBackgroundId && !uploadingBackground) return <WallpaperLoading />;
+  if (templateId && !template && !uploadingBackground) return <section className="page-wrap py-12">
+    <h1 className="text-2xl font-semibold">{templateId === customBackgroundId ? 'Upload your background again' : 'Template not found'}</h1>
+    <p className="mt-3 text-muted">{templateId === customBackgroundId ? 'Your image is saved only in this browser tab. Choose a design to upload it again.' : 'Choose a template from the collection to start editing.'}</p>
     <Link to="/services/schedule-wallpaper" className="button-primary mt-6">Choose template</Link>
   </section>;
 
@@ -235,15 +256,20 @@ export default function ScheduleWallpaper() {
       requestAnimationFrame(() => heading.current?.focus());
     }} onDiscard={() => { setPendingDraft(null); if (step === 'preview' && template) navigate(devicePath(`${basePath}/${template.id}`), { replace: true }); requestAnimationFrame(() => heading.current?.focus()); }} />}
     {step === 'design' ? <Link to="/" className="tool-back"><ArrowLeft className="size-4" aria-hidden="true" />Back</Link> : <button type="button" className="tool-back" onClick={goBack}><ArrowLeft className="size-4" aria-hidden="true" />{step === 'classes' && importOpen && schedule.classes.length ? 'Back to classes' : 'Back'}</button>}
+    {choosingBackgroundDevice && <BackgroundDeviceDialog device={device} onClose={() => setChoosingBackgroundDevice(false)} onContinue={next => {
+      setChoosingBackgroundDevice(false);
+      navigate(devicePath(`${basePath}/upload${selectedId ? `?return=${selectedId}&step=${step === 'preview' || search.get('step') === 'preview' ? 'preview' : 'classes'}` : ''}`, next));
+    }} />}
     <header className="wallpaper-flow-header" data-importing={choosingImage}>
-      <h1 tabIndex={-1} ref={heading}>{step === 'design' ? 'Choose a design' : step === 'classes' ? 'Add your classes' : 'Wallpaper preview'}</h1>
-      <div className="wallpaper-flow-header-actions">
+      <h1 tabIndex={-1} ref={heading}>{step === 'upload' ? 'Upload your background' : step === 'design' ? 'Choose a design' : step === 'classes' ? 'Add your classes' : 'Live Preview'}</h1>
+      <div id="wallpaper-flow-header-actions" className="wallpaper-flow-header-actions">
+        {step === 'preview' && <button type="button" className="button-secondary preview-customize" aria-controls="wallpaper-customization" onClick={() => setCustomizeRequest(value => value + 1)}><SlidersHorizontal size={16} aria-hidden="true" />Customize</button>}
         {step === 'design' && <WallpaperSearch value={searchQuery} onChange={setSearchQuery} />}
         {choosingImage && <button type="button" className="button-secondary import-change" aria-label={preparingImage ? 'Preparing image' : 'Change image'} disabled={busy || preparingImage} onClick={() => imagePicker.current?.openPicker()}><ImageUp size={16} aria-hidden="true" />{preparingImage ? 'Preparing…' : <><span className="import-change-desktop">Change image</span><span className="import-change-mobile">Change</span></>}</button>}
       </div>
     </header>
     {template ? <TemplateWorkspace defaultTemplate={customizeWallpaperTemplate(galleryPreviewTemplate(wallpaperTemplates.find(item => item.id === templateId)), { scheduleLayout: template.scheduleLayout }, device)}
-      step={step} onStep={openStep}
+      step={step} onStep={openStep} customizeRequest={customizeRequest}
       template={template} schedule={schedule} resolution={resolution} onScheduleChange={changeSchedule}
       scheduleSource={scheduleSource} onScheduleSourceChange={setScheduleSource}
       onAppearanceChange={(key, value) => { if (key === 'scheduleLayout') changeLayout(value); else setTemplateSettings(previous => { const settings = { ...previous[templateId] }; if (value === undefined) delete settings[key]; else settings[key] = value; return { ...previous, [templateId]: settings }; }); setAppearanceUndo(null); trackEvent('wallpaper_appearance_changed', { ...templateProperties(template), setting: key }); }}
@@ -264,11 +290,23 @@ export default function ScheduleWallpaper() {
         trackEvent('sample_schedule_loaded', templateProperties(template));
         dismissNotification();
       }}
-    /> : <>
-      <TemplateGallery previewStyle={previewStyle} onStyleChange={changeStyle} previewLayout={previewLayout} onLayoutChange={changeLayout} sort={sort} onSortChange={changeSort} device={device} onDeviceChange={changeDevice} category={search.get('collection')} onCategoryChange={changeCategory} selectedId={selectedId} settings={templateSettings} schedule={schedule} scheduleTitle={scheduleTitle} resolution={resolution} onSelect={selectTemplate} searchQuery={debouncedSearchQuery} onClearSearch={() => setSearchQuery('')} />
+    /> : uploadingBackground ? <CustomBackgroundUpload customTemplate={customTemplate} device={device} onDeviceChange={changeDevice} schedule={schedule} scheduleTitle={scheduleTitle} previewLayout={previewLayout} previewStyle={previewStyle} onLayoutChange={changeLayout} onDiscardSaved={() => {
+      setCustomTemplate(null); setBackgroundSaved(true);
+      try { clearCustomBackground(window.sessionStorage); } catch { /* Storage may be disabled. */ }
+    }} onSelect={next => {
+      setCustomTemplate(next);
+      let saved = false;
+      try { saved = saveCustomBackground(window.sessionStorage, next); } catch { /* Continue with the in-memory image. */ }
+      setBackgroundSaved(saved);
+      setTemplateSettings(previous => ({ ...previous, [next.id]: { ...previous[next.id], scheduleLayout: previewLayout, containerStyle: previewStyle } }));
+      if (!saved) setError('Your image is ready, but browser storage is full. Keep this page open until you download.');
+      navigate(devicePath(`${basePath}/${next.id}${step === 'preview' || (previousTemplate && search.get('step') === 'preview') ? '?step=preview' : ''}`, next.device));
+    }} /> : <>
+      <TemplateGallery onUpload={() => setChoosingBackgroundDevice(true)} previewStyle={previewStyle} onStyleChange={changeStyle} previewLayout={previewLayout} onLayoutChange={changeLayout} sort={sort} onSortChange={changeSort} device={device} onDeviceChange={changeDevice} category={search.get('collection')} onCategoryChange={changeCategory} selectedId={selectedId} settings={templateSettings} schedule={schedule} scheduleTitle={scheduleTitle} resolution={resolution} onSelect={selectTemplate} searchQuery={debouncedSearchQuery} onClearSearch={() => setSearchQuery('')} />
     </>}
     {step === 'design' && <BackToTop />}
     {importResult && <ImportSuccessDialog provider={importResult.provider} classCount={importResult.classCount} onClose={() => setImportResult(null)} onView={() => { setImportResult(null); requestAnimationFrame(() => document.querySelector('.flow-class-editor')?.scrollIntoView({ behavior: 'smooth', block: 'start' })); }} />}
     <Toast message={success} kind="success" onClose={dismissNotification} />
+    {!showingImport && <Toast message={error} kind="error" onClose={dismissNotification} />}
   </section>;
 }

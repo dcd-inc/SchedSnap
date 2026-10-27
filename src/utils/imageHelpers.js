@@ -1,21 +1,32 @@
 import { MAX_IMAGE_BYTES, MAX_SOURCE_BYTES, imageMimeTypes } from '../../shared/uploadLimits.js';
 
-export async function prepareImage(file) {
+export async function inspectImage(file) {
   if (!imageMimeTypes.includes(file.type)) throw new Error('Choose a JPG, PNG, or WebP image.');
   if (file.size > MAX_SOURCE_BYTES) throw new Error('Choose an image smaller than 10 MB.');
   let bitmap;
   try { bitmap = await createImageBitmap(file); }
   catch { throw new Error('This image could not be opened. Export it as JPG or PNG and try again.'); }
+  if (bitmap.width * bitmap.height > 40_000_000) { bitmap.close(); throw new Error('This image is too large to process. Try a smaller copy.'); }
+  return bitmap;
+}
+
+export async function prepareImage(file, crop) {
+  const bitmap = await inspectImage(file);
   try {
     if (bitmap.width * bitmap.height > 40_000_000) throw new Error('This image is too large to process. Try a smaller copy.');
-    const scale = Math.min(1, 2400 / Math.max(bitmap.width, bitmap.height));
+    const region = crop ?? { x: 0, y: 0, width: 1, height: 1 };
+    if (![region.x, region.y, region.width, region.height].every(Number.isFinite) || region.x < 0 || region.y < 0 || region.width <= 0 || region.height <= 0 || region.x + region.width > 1.000001 || region.y + region.height > 1.000001) throw new Error('Select a crop inside the image.');
+    const sx = Math.round(region.x * bitmap.width), sy = Math.round(region.y * bitmap.height);
+    const sw = Math.max(1, Math.min(bitmap.width - sx, Math.round(region.width * bitmap.width)));
+    const sh = Math.max(1, Math.min(bitmap.height - sy, Math.round(region.height * bitmap.height)));
+    const scale = Math.min(1, 2400 / Math.max(sw, sh));
     const canvas = document.createElement('canvas');
-    canvas.width = Math.max(1, Math.round(bitmap.width * scale));
-    canvas.height = Math.max(1, Math.round(bitmap.height * scale));
+    canvas.width = Math.max(1, Math.round(sw * scale));
+    canvas.height = Math.max(1, Math.round(sh * scale));
     const ctx = canvas.getContext('2d');
     ctx.fillStyle = '#ffffff';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+    ctx.drawImage(bitmap, sx, sy, sw, sh, 0, 0, canvas.width, canvas.height);
     // Keep screenshot text lossless when it fits; re-encoding still strips file metadata.
     const formats = file.type === 'image/png' && file.size <= MAX_IMAGE_BYTES
       ? [['image/png'], ['image/jpeg', 0.92], ['image/jpeg', 0.82], ['image/jpeg', 0.68]]

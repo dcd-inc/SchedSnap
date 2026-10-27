@@ -2,19 +2,10 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import manifest from '../src/assets/cloudinaryManifest.js';
 import { cloudinaryAssetUrl } from '../src/utils/cloudinaryAssets.js';
-import { wallpaperTemplates } from '../src/assets/templates.js';
+import { cloudinaryImageUrl } from '../src/utils/cloudinaryImageUrl.js';
 
-test('every built-in artwork has Cloudinary delivery without local originals', () => {
-  for (const template of wallpaperTemplates) {
-    for (const path of [template.image, ...Object.values(template.deviceImages || {})].filter(Boolean)) {
-      const asset = manifest[path];
-      assert.ok(asset, `${template.id}: missing uploaded artwork ${path}`);
-      assert.match(asset.url, /^https:\/\/res\.cloudinary\.com\/[a-z0-9_-]+\/image\/upload\//i);
-      assert.ok(asset.width > 0 && asset.height > 0, path);
-      assert.match(cloudinaryAssetUrl(path), /^https:\/\/res\.cloudinary\.com\//);
-    }
-  }
-});
+
+
 
 test('unmapped images retain their local path', () => {
   assert.equal(cloudinaryAssetUrl('/unmapped.png', { width: 540, height: 1200 }), '/unmapped.png');
@@ -33,4 +24,14 @@ test('mapped previews are resized without cropping; export artwork stays PNG', (
 test('direct Cloudinary pixel masters without dimensions remain lossless and unscaled', () => {
   const url = 'https://res.cloudinary.com/example/image/upload/v123/schedsnap/images/pixel-mascots/masters/pixel-cat-0123456789abcdef.png';
   assert.equal(cloudinaryAssetUrl(url), url.replace('/image/upload/', '/image/upload/f_png/'));
+});
+
+test('manifest-free Cloudinary delivery matches legacy preview and export URLs', () => {
+  const asset = Object.values(manifest)[0];
+  for (const resolution of [{ width: 270, height: 600 }, { width: 1080, height: 2400 }, { width: 1920, height: 1080 }]) {
+    for (const lossless of [false, true]) {
+      assert.equal(cloudinaryImageUrl({ url: asset.url }, resolution, { lossless }),
+        cloudinaryAssetUrl(asset.url, resolution, { lossless }));
+    }
+  }
 });

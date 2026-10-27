@@ -1,8 +1,10 @@
+import useMobileSheetDismiss from '../lib/useMobileSheetDismiss.js';
 import { useEffect, useRef } from 'react';
 import { Heart, X } from 'lucide-react';
 
 export default function DownloadThanksDialog({ name, vote, pending, error, onHeart, onRetry, onClose }) {
   const dialog = useRef(null);
+  useMobileSheetDismiss(dialog, onClose);
   const loved = !!vote?.liked;
   useEffect(() => {
     const node = dialog.current;

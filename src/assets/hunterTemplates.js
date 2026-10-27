@@ -43,19 +43,19 @@ export const hunterTemplates = designs.map(([suffix, name, family, background, k
     background, ink, muted: ink, line: `${ink}55`,
     surface: family === 'chibi' || family === 'group' ? '#fffdf5ed' : '#181925ed',
     containerStyle: 'solid', containerShape: 'rounded', containerFill: true,
-    schedulePosition: 'center', particleStyle: 'none', showScheduleTitle: true,
+    schedulePosition: 'center', particleStyle: 'none', showScheduleTitle: true, showTitle: true,
     artworkFooter: false,
     ...(['plain', 'manga'].includes(family) ? {
       containerStyle: 'glass', containerShape: 'pill', fontScale: 0.9,
       surface: ({ 'gon-manga': '#3e221a', 'leorio-manga': '#49351f', 'hisoka-plain': '#7a1648' })[suffix] || background,
       containerOpacity: family === 'manga' ? 80 : 85,
-      verticalPosition: family === 'manga' ? -20 : -30, showTitle: family === 'manga',
+      verticalPosition: family === 'manga' ? -20 : -30,
     } : {}),
     ...(family === 'chibi' ? {
       containerStyle: 'glass', containerShape: 'pill', fontScale: 0.9, containerOpacity: 85,
       surface: ({ 'gon-chibi': '#374c32', 'killua-chibi': '#25354b', 'kurapika-chibi': '#482c32', 'leorio-chibi': '#183b4b' })[suffix],
       ink: '#fff8ed', muted: '#fff8ed', line: '#fff8ed55',
-      topMargin: 20, verticalPosition: 0, showTitle: false,
+      topMargin: 20, verticalPosition: 0,
     } : {}),
     ...(id === 'hxh-gon-chibi' ? { headingInk: '#fff8ed' } : {}),
     ...(suffix.startsWith('plain-') ? {
