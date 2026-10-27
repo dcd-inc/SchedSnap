@@ -1,0 +1,104 @@
+{
+  "approval": "User explicitly approved these seven attached designs for the Arcane catalog, individual keywords, publication through the existing workflow, and GitHub push on 2026-10-27.",
+  "processing": "Resize only to 1080 x 2400; no cropping or artwork changes.",
+  "assets": [
+    {
+      "id": "arcane-gilded-divide",
+      "path": "public/wallpapers/scenic/arcane-gilded-divide/mobile.png",
+      "sourceAttachment": "codex-clipboard-d5f5a8fa-b121-461f-8379-100fe662f79c.png",
+      "sourceDimensions": [
+        841,
+        1870
+      ],
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "8a42dc8b8abab10d8196128882754fba4f2eec4be4d79efc02b26e220dea0749"
+    },
+    {
+      "id": "arcane-sisters-in-ink",
+      "path": "public/wallpapers/scenic/arcane-sisters-in-ink/mobile.png",
+      "sourceAttachment": "codex-clipboard-84faed52-368d-415b-89d7-e37989425d11.png",
+      "sourceDimensions": [
+        841,
+        1870
+      ],
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "4bbcf473ecd2410f57c76acc7dc4458f7ff721699d815b9e0e80c51a8264a2e9"
+    },
+    {
+      "id": "arcane-piltover-blue",
+      "path": "public/wallpapers/scenic/arcane-piltover-blue/mobile.png",
+      "sourceAttachment": "codex-clipboard-8fde0011-386b-4363-ab10-c87ed4d1f245.png",
+      "sourceDimensions": [
+        841,
+        1870
+      ],
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "05f70791c61721529ab24ada4fd5dd55b60c870809768a5222dd402ee3180977"
+    },
+    {
+      "id": "arcane-goggle-girl",
+      "path": "public/wallpapers/scenic/arcane-goggle-girl/mobile.png",
+      "sourceAttachment": "codex-clipboard-4633d3a9-0ac8-44b7-bc15-38394a3813eb.png",
+      "sourceDimensions": [
+        841,
+        1870
+      ],
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "a280358c6067c2c324e65dfe3b991a49a3896e36f427a730f6e44610efa55890"
+    },
+    {
+      "id": "arcane-chalk-mischief",
+      "path": "public/wallpapers/scenic/arcane-chalk-mischief/mobile.png",
+      "sourceAttachment": "codex-clipboard-97a0c192-a8c8-42bb-b7f2-5a8486e9e32a.png",
+      "sourceDimensions": [
+        841,
+        1870
+      ],
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "c8ed585c4b480e0fe478df632f93e8efa2e7e4651ead6d9b4b7c81f28c0cf084"
+    },
+    {
+      "id": "arcane-violet-tear",
+      "path": "public/wallpapers/scenic/arcane-violet-tear/mobile.png",
+      "sourceAttachment": "codex-clipboard-585f4c42-43fc-469d-abaa-92ddd24ff9d7.png",
+      "sourceDimensions": [
+        841,
+        1870
+      ],
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "5ea46657b420ac22dc93c26f78c6e4d6ce515c85894480eeb962610eca155c66"
+    },
+    {
+      "id": "arcane-paper-peek",
+      "path": "public/wallpapers/scenic/arcane-paper-peek/mobile.png",
+      "sourceAttachment": "codex-clipboard-b0986387-72af-4537-92d0-40401bf24b93.png",
+      "sourceDimensions": [
+        841,
+        1870
+      ],
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "35e1d55d150891971b4114a8d3c9bb382d73acedf4f9e80ec7ec9fc7115aff70"
+    }
+  ]
+}

@@ -4605,5 +4605,82 @@ export default {
     "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792425810/schedsnap/wallpapers/scenic/hxh-plain-uvogin/mobile-b432282f715374d5.png",
     "width": 1080,
     "height": 2400
+  },
+  "/wallpapers/scenic/jinx-electric-afterhours/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/jinx-electric-afterhours/mobile-95c4197c7d1acb53",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094519/schedsnap/wallpapers/scenic/jinx-electric-afterhours/mobile-95c4197c7d1acb53.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/jinx-blue-hour/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/jinx-blue-hour/mobile-953da60b62751ed3",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094520/schedsnap/wallpapers/scenic/jinx-blue-hour/mobile-953da60b62751ed3.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/jinx-pink-riot/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/jinx-pink-riot/mobile-e2ea6deff769da37",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094520/schedsnap/wallpapers/scenic/jinx-pink-riot/mobile-e2ea6deff769da37.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/jinx-cream-mischief/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/jinx-cream-mischief/mobile-b13c3f7846cb26b5",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094522/schedsnap/wallpapers/scenic/jinx-cream-mischief/mobile-b13c3f7846cb26b5.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/arcane-chalk-mischief/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/arcane-chalk-mischief/mobile-c8ed585c4b480e0f",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793095935/schedsnap/wallpapers/scenic/arcane-chalk-mischief/mobile-c8ed585c4b480e0f.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/arcane-goggle-girl/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/arcane-goggle-girl/mobile-a280358c6067c2c3",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793095935/schedsnap/wallpapers/scenic/arcane-goggle-girl/mobile-a280358c6067c2c3.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/arcane-gilded-divide/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/arcane-gilded-divide/mobile-8a42dc8b8abab10d",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793095935/schedsnap/wallpapers/scenic/arcane-gilded-divide/mobile-8a42dc8b8abab10d.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/arcane-paper-peek/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/arcane-paper-peek/mobile-35e1d55d15089197",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793095935/schedsnap/wallpapers/scenic/arcane-paper-peek/mobile-35e1d55d15089197.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/arcane-piltover-blue/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/arcane-piltover-blue/mobile-05f70791c6172152",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793095936/schedsnap/wallpapers/scenic/arcane-piltover-blue/mobile-05f70791c6172152.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/arcane-violet-tear/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/arcane-violet-tear/mobile-5ea46657b420ac22",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793095937/schedsnap/wallpapers/scenic/arcane-violet-tear/mobile-5ea46657b420ac22.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/arcane-sisters-in-ink/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/arcane-sisters-in-ink/mobile-4bbcf473ecd2410f",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793095937/schedsnap/wallpapers/scenic/arcane-sisters-in-ink/mobile-4bbcf473ecd2410f.png",
+    "width": 1080,
+    "height": 2400
   }
 };

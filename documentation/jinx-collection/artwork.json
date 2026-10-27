@@ -1,0 +1,62 @@
+{
+  "approval": "User selected only designs 1, 2, 4, and 5 on 2026-10-27; explicitly approved upload to SchedSnap Cloudinary and publication in Arcane catalog.",
+  "processing": "Full image preserved; resize only to 1080 x 2400, no crop, no repaint, no dimming.",
+  "assets": [
+    {
+      "id": "jinx-cream-mischief",
+      "path": "public/wallpapers/scenic/jinx-cream-mischief/mobile.png",
+      "source": "C:\\Users\\arlan\\.codex\\generated_images\\01a17cb1-3236-70e3-b95a-4618f7daf6a1\\exec-b9253e2d-4dfd-4522-9a14-7bbe31aec720.png",
+      "sourceDimensions": [
+        841,
+        1870
+      ],
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "b13c3f7846cb26b58fef5a3c1373710312352ed06506e5f161ca019a02fbc29d"
+    },
+    {
+      "id": "jinx-electric-afterhours",
+      "path": "public/wallpapers/scenic/jinx-electric-afterhours/mobile.png",
+      "source": "C:\\Users\\arlan\\.codex\\generated_images\\01a17cb1-3236-70e3-b95a-4618f7daf6a1\\exec-b0c13e71-51f6-41aa-ba13-48066dfc2b40.png",
+      "sourceDimensions": [
+        841,
+        1870
+      ],
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "95c4197c7d1acb53c1f1393dc52d13fe0845055f0a2ed263b6093b5766d6e8e5"
+    },
+    {
+      "id": "jinx-pink-riot",
+      "path": "public/wallpapers/scenic/jinx-pink-riot/mobile.png",
+      "source": "C:\\Users\\arlan\\.codex\\generated_images\\01a17cb1-3236-70e3-b95a-4618f7daf6a1\\exec-56f5b480-47d1-4555-81d5-2e766262bcf7.png",
+      "sourceDimensions": [
+        841,
+        1870
+      ],
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "e2ea6deff769da37926349aad23aed79c931fb9b4cbf1c493c4db55c1dad5bae"
+    },
+    {
+      "id": "jinx-blue-hour",
+      "path": "public/wallpapers/scenic/jinx-blue-hour/mobile.png",
+      "source": "C:\\Users\\arlan\\.codex\\generated_images\\01a17cb1-3236-70e3-b95a-4618f7daf6a1\\exec-01d975f1-78cf-4672-a112-72e47cdeebc8.png",
+      "sourceDimensions": [
+        841,
+        1870
+      ],
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "953da60b62751ed331f12fd6a1f688301d42392a1d83ab6d1b38e4073498781c"
+    }
+  ]
+}

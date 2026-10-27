@@ -13,6 +13,7 @@ export function genshinKeywords(template) {
 }
 
 const collectionTags = {
+  arcane: ['Arcane', 'League of Legends', 'animation'],
   sanrio: ['Sanrio', 'kawaii', 'cute', 'cartoon'],
   snoopy: ['Snoopy', 'Peanuts', 'dog', 'cartoon', 'hand drawn'],
   genshin: ['Genshin Impact', 'anime', 'game'],
