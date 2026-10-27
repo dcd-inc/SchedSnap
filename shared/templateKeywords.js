@@ -13,6 +13,7 @@ export function genshinKeywords(template) {
 }
 
 const collectionTags = {
+  collage: ['collage', 'scrapbook', 'torn paper', 'mobile wallpaper'],
   arcane: ['Arcane', 'League of Legends', 'Riot Games', 'animated series', 'illustration'],
   naruto: ['Naruto', 'anime', 'manga', 'hand drawn', 'ink'],
   sanrio: ['Sanrio', 'kawaii', 'cute', 'cartoon'],

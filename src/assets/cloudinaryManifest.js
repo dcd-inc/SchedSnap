@@ -4941,5 +4941,75 @@ export default {
     "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094482/schedsnap/wallpapers/scenic/arcane-viktor-violet-newsprint/mobile-7a5b95b95e3bb317.png",
     "width": 1080,
     "height": 2400
+  },
+  "/wallpapers/scenic/collage-celestial-art-journal/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-celestial-art-journal/mobile-16578c800a123f07",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098636/schedsnap/wallpapers/scenic/collage-celestial-art-journal/mobile-16578c800a123f07.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-gothic-guitarist/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-gothic-guitarist/mobile-f0e0cf99a7b1974a",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098637/schedsnap/wallpapers/scenic/collage-gothic-guitarist/mobile-f0e0cf99a7b1974a.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-crimson-indie-rock/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-crimson-indie-rock/mobile-4674d845fda9b2ed",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098640/schedsnap/wallpapers/scenic/collage-crimson-indie-rock/mobile-4674d845fda9b2ed.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-gothic-vampire/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-gothic-vampire/mobile-8d7906177f40e892",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098637/schedsnap/wallpapers/scenic/collage-gothic-vampire/mobile-8d7906177f40e892.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-headphone-daydream/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-headphone-daydream/mobile-375c5d298dc78557",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098640/schedsnap/wallpapers/scenic/collage-headphone-daydream/mobile-375c5d298dc78557.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-punk-telephone/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-punk-telephone/mobile-4e5de17da997d696",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098644/schedsnap/wallpapers/scenic/collage-punk-telephone/mobile-4e5de17da997d696.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-rock-and-roll-archive/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-rock-and-roll-archive/mobile-ec6d2b0be4ad883c",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098644/schedsnap/wallpapers/scenic/collage-rock-and-roll-archive/mobile-ec6d2b0be4ad883c.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-vinyl-music/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-vinyl-music/mobile-ee150a3af3e8e422",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098647/schedsnap/wallpapers/scenic/collage-vinyl-music/mobile-ee150a3af3e8e422.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-manga-newsprint/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-manga-newsprint/mobile-0e14df3a757adbb5",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098649/schedsnap/wallpapers/scenic/collage-manga-newsprint/mobile-0e14df3a757adbb5.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/collage-nocturne-manga/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/collage-nocturne-manga/mobile-b9a57405cfc9af09",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098664/schedsnap/wallpapers/scenic/collage-nocturne-manga/mobile-b9a57405cfc9af09.png",
+    "width": 1080,
+    "height": 2400
   }
 };
