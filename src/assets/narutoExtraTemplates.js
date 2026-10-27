@@ -2,7 +2,6 @@
 const designs = [
   ['naruto-resolute-ink', 'Resolute Ink', 'Naruto in a black zip jacket, with a focused downward glance and fine manga hatching.', 'Naruto Uzumaki, jacket, portrait', '#f3f3f3'],
   ['naruto-sasuke-shadow', 'Sasuke Shadow', 'Sasuke rests a hand on his sword, beside a lightly hatched silhouette.', 'Sasuke Uchiha, sword, rope belt, shadow', '#ffffff'],
-  ['naruto-sharingan-gaze', 'Sharingan Gaze', 'An intense panoramic close-up of Sasuke’s eyes, framed by solid black hair and spare ink strokes.', 'Sasuke Uchiha, Sharingan, eyes, close up', '#ffffff'],
   ['naruto-itachi-stillness', 'Itachi Stillness', 'Itachi looks up from a high black cloak collar in a quiet manga portrait.', 'Itachi Uchiha, Akatsuki, headband, necklace', '#ffffff'],
   ['naruto-fourth-hokage', 'Fourth Hokage', 'Minato’s flowing cloak carries its original vertical kanji, fine screentone and black flame hem.', 'Minato Namikaze, Fourth Hokage, cloak, flames, kanji', '#ffffff'],
 ];

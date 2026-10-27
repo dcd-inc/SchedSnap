@@ -8,10 +8,10 @@ import { matchesGalleryCategory } from '../src/config/collections.js';
 import { templateSchema } from '../shared/templateSchema.js';
 import manifest from '../src/assets/cloudinaryManifest.js';
 
-test('Naruto includes all nine reference compositions and the existing Anime designs once', () => {
+test('Naruto includes the six retained reference compositions and the existing Anime designs once', () => {
   const old = animeTemplates.filter(t => /\bNaruto\b/i.test(t.keywords));
   assert.equal(old.length, 5);
-  assert.equal(narutoTemplates.length, 9);
+  assert.equal(narutoTemplates.length, 6);
   const expected = [...old, ...narutoTemplates];
   assert.deepEqual(wallpaperTemplates.filter(t => matchesGalleryCategory(t, 'naruto')).map(t => t.id).sort(), expected.map(t => t.id).sort());
   for (const template of expected) {

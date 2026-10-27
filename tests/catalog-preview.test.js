@@ -15,7 +15,7 @@ const response = () => ({ setHeader() {}, status(code) { this.code = code; retur
 const expose = template => Object.fromEntries(Object.entries(withTemplateKeywords(template)).filter(([key]) => key !== 'status'));
 
 test('retired designs are excluded from seeded, remote, and preview catalogs', async () => {
-  const retiredIds = ['adventure-bmo', 'wbb-paper-pals', 'wbb-dusk-book-club'];
+  const retiredIds = ['adventure-bmo', 'wbb-paper-pals', 'wbb-dusk-book-club', 'naruto-retrieval-squad', 'naruto-leaf-ink-lineup', 'naruto-sharingan-gaze'];
   assert.ok(seedCatalog().templates.every(t => !retiredIds.includes(t.id)));
   for (const templates of [[], retiredIds.map(id => ({ id, status: 'published' }))]) {
     const result = response();

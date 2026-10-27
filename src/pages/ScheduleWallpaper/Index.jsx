@@ -9,6 +9,7 @@ import { api, getAnalysisErrorMessage } from '../../lib/api.js';
 import { loadImportUsage, rememberImportUsage } from '../../lib/importUsage.js';
 import { templateProperties, trackEvent } from '../../lib/analytics.js';
 import { deviceResolutions } from '../../assets/wallpaperPresets.js';
+import { supportsTemplateDevice } from '../../utils/templateDevices.js';
 import { useTemplates, useCatalogStatus } from '../../lib/catalogContext.js';
 import { scheduleLayoutOptions } from '../../utils/canvasHelpers.js';
 import { sampleSchedule } from '../../assets/sampleSchedule.js';
@@ -105,11 +106,11 @@ export default function ScheduleWallpaper() {
   const imagePicker = useRef(null);
   const lastTrackedStep = useRef(null);
   const template = useMemo(() => {
-    const preset = customizeWallpaperTemplate(galleryPreviewTemplate(wallpaperTemplates.find((item) => item.id === templateId && (!item.mobileOnly || device === 'mobile'))), { ...(search.has('layout') ? { scheduleLayout: previewLayout } : {}), ...(search.has('style') ? { containerStyle: previewStyle } : {}), ...templateSettings[templateId] }, device);
+    const preset = customizeWallpaperTemplate(galleryPreviewTemplate(wallpaperTemplates.find((item) => item.id === templateId && supportsTemplateDevice(item, device))), { ...(search.has('layout') ? { scheduleLayout: previewLayout } : {}), ...(search.has('style') ? { containerStyle: previewStyle } : {}), ...templateSettings[templateId] }, device);
     return preset ? { ...preset, scheduleTitle, device } : undefined;
   }, [templateId, templateSettings, scheduleTitle, device, wallpaperTemplates, previewLayout, previewStyle, search]);
   const returnId = search.get('return');
-  const previousTemplate = wallpaperTemplates.find((item) => item.id === returnId && (!item.mobileOnly || device === 'mobile'));
+  const previousTemplate = wallpaperTemplates.find((item) => item.id === returnId && supportsTemplateDevice(item, device));
   const selectedId = template?.id || previousTemplate?.id;
   const step = uploadingBackground ? 'upload' : template ? search.get('step') === 'preview' ? 'preview' : 'classes' : 'design';
   const basePath = '/services/schedule-wallpaper';
