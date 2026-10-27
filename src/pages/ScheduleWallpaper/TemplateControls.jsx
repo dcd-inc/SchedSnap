@@ -7,7 +7,7 @@ import { generativePatternIds, generativePatternMap } from '../../assets/generat
 import { patternScale, patternOpacity } from '../../utils/patternBackground.js';
 import { scheduleMovement, tabletBoxSpacing, scheduleLayout } from '../../utils/canvasHelpers.js';
 import { AlignLeft, AlignCenter, AlignRight, ChevronDown, LayoutTemplate, Image, PanelsTopLeft, Type, Sparkles } from 'lucide-react';
-import { colorInputValue, wallpaperFonts, mascotPosition, wallpaperTextOpacity, wallpaperFontScale, wallpaperContainerWidth, wallpaperContainerHeight, wallpaperCornerRadius, wallpaperFillOpacity, snapSchedulePosition, timelineLineWidth, wallpaperColorIntensity } from '../../utils/wallpaperTheme.js';
+import { colorInputValue, wallpaperFonts, mascotPosition, wallpaperTextOpacity, wallpaperFontScale, wallpaperContainerWidth, wallpaperContainerHeight, wallpaperCornerRadius, wallpaperFillOpacity, timelineLineWidth, wallpaperColorIntensity } from '../../utils/wallpaperTheme.js';
 
 const colorFields = {
   background: { label: 'Background', colors: ['#dce8cb', '#f5daca', '#d8cbef', '#192f4b'] },
@@ -64,19 +64,17 @@ export default function TemplateControls({ template, onChange, defaultTemplate =
   const fontSize = Math.round(wallpaperFontScale(template) * 1000) / 10;
   const defaultRadius = wallpaperCornerRadius({ ...template, containerRadius: undefined });
   const defaultColorIntensity = wallpaperColorIntensity({ ...defaultTemplate, containerStyle: template.containerStyle });
-  const dragging = useRef({});
   const categories = [['layout', 'Layout'], ...(!fixedBackground || editablePatterns.has(template.pattern) ? [['wallpaper', 'Wallpaper']] : []), ['cards', 'Container'], ['text', 'Text'], ...(template.layout === 'mascot' ? [['decorations', 'Decorations']] : [])];
   return <aside ref={settingsRef} aria-label="Template appearance" className="template-settings" data-category={category}>
     <nav className="appearance-categories" aria-label="Appearance categories" style={{ '--category-count': categories.length, '--category-index': Math.max(0, categories.findIndex(([key]) => key === category)) }}><span className="category-indicator" aria-hidden="true" />{categories.map(([key, label]) => { const Icon = categoryIcons[key]; return <button key={key} type="button" aria-pressed={category === key} onClick={() => { if (key === category) return; scrollTabToStart.current = window.matchMedia('(max-width: 640px)').matches; setCategory(key); }}><Icon size={16} aria-hidden="true" /><span>{label}</span></button>; })}</nav>
     {(enablePlacement || (template.device && template.device !== 'mobile')) && <section className="appearance-section" data-section="layout" hidden={category !== 'layout'}><fieldset className="appearance-group">
       <legend className="sr-only">Layout</legend>{layoutPicker}
       <div className="position-offset">
-        <div className="top-margin-label"><span>Position</span><span className="position-value"><button type="button" className="position-reset" disabled={['horizontal', 'vertical'].every(axis => scheduleMovement(template, axis) === scheduleMovement(defaultTemplate, axis))} onClick={() => { onChange('horizontalPosition', undefined); onChange('verticalPosition', undefined); }}>Reset</button><output>{scheduleMovement(template, 'horizontal')}%, {scheduleMovement(template, 'vertical')}%</output></span></div>
+        <div className="top-margin-label"><span>Position</span><span className="position-value"><button type="button" className="position-reset" disabled={['horizontal', 'vertical'].every(axis => scheduleMovement(template, axis) === scheduleMovement(defaultTemplate, axis))} onClick={() => { onChange('horizontalPosition', undefined); onChange('verticalPosition', undefined); }}>Reset</button><output>{scheduleMovement(template, 'horizontal')}%, {-scheduleMovement(template, 'vertical') || 0}%</output></span></div>
         {['horizontal', 'vertical'].map(axis => {
-          const value = scheduleMovement(template, axis);
-          const defaultValue = scheduleMovement(defaultTemplate, axis);
+          const value = scheduleMovement(template, axis) * (axis === 'vertical' ? -1 : 1) || 0;
           const id = `schedule-${axis}-position`;
-          return <div className="position-axis" key={axis}><label htmlFor={id}>{axis === 'horizontal' ? 'Left / Right' : 'Up / Down'}</label><FineSlider id={id} min="-100" max="100" step="1" value={value} aria-label={`${axis === 'horizontal' ? 'Horizontal' : 'Vertical'} position`} aria-valuetext={`${value}%`} onDragStart={() => { dragging.current[axis] = true; }} onDragEnd={() => { dragging.current[axis] = false; }} onValueChange={value => onChange(`${axis}Position`, snapSchedulePosition(value, dragging.current[axis], defaultValue))} /><output htmlFor={id}>{value}%</output></div>;
+          return <div className="position-axis" key={axis}><label htmlFor={id}>{axis === 'horizontal' ? 'Left / Right' : 'Down / Up'}</label><FineSlider id={id} min="-100" max="100" step="1" value={value} aria-label={`${axis === 'horizontal' ? 'Horizontal' : 'Vertical'} position`} aria-valuetext={`${value}%`} onValueChange={value => onChange(`${axis}Position`, axis === 'vertical' ? -value : value)} /><output htmlFor={id}>{value}%</output></div>;
         })}
       </div>
     </fieldset><button type="button" className="button-secondary section-reset layout-default-reset" onClick={() => resetSection('layout')}>Reset layout to default</button></section>}
@@ -169,7 +167,7 @@ export default function TemplateControls({ template, onChange, defaultTemplate =
       </div>
       <div className="top-margin-control">
         <div className="top-margin-label"><label htmlFor="appearance-font-size">Font size</label><span className="position-value"><button type="button" className="position-reset" disabled={wallpaperFontScale(template) === wallpaperFontScale(defaultTemplate)} aria-label="Reset font size" onClick={() => onChange('fontScale', undefined)}>Reset</button><output htmlFor="appearance-font-size">{fontSize}%</output></span></div>
-        <FineSlider id="appearance-font-size" min="70" max="160" step="0.5" value={fontSize} aria-valuetext={`${fontSize}% font size`} onValueChange={value => onChange('fontScale', value / 100)} />
+        <FineSlider id="appearance-font-size" min="70" max="160" step="0.5" value={fontSize} aria-valuetext={`${fontSize}% font size`} onValueChange={value => onChange('fontScale', value === Math.round(wallpaperFontScale({ ...template, fontScale: undefined }) * 1000) / 10 ? undefined : value / 100)} />
       </div>
       <AppearanceColor colorKey="ink" template={template} defaultTemplate={defaultTemplate} onChange={onChange} />
       <div className="top-margin-control">

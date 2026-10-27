@@ -988,16 +988,15 @@ function renderWallpaper(canvas, { schedule, template, resolution = mobileResolu
     width: layoutWidth,
     x: layoutX,
     containerHeight: heightScale,
-    limit: template.layout === 'mascot' ? 1740 : hasIllustratedFooter(template) ? 2400 * 0.77 : 2340, ...(flowLayout ? { timeline: true, compactTimeline: true, timeWidth: 240, roomWidth: 210, top: timelineTop + verticalOffset } : verticalOffset ? { top: 760 + verticalOffset } : {})
+    limit: 2340, ...(flowLayout ? { timeline: true, compactTimeline: true, timeWidth: 240, roomWidth: 210, top: timelineTop + verticalOffset } : verticalOffset ? { top: 760 + verticalOffset } : {})
   });
   const headingY = 650 + verticalOffset;
   const sideSpace = 540 + (baseX - 540) * 0.9;
   const moveX = movementShift(scheduleMovement(template, 'horizontal'), sideSpace, sideSpace);
-  const limit = template.layout === 'mascot' ? 1740 : timeline ? layout.limit : hasIllustratedFooter(template) ? 2400 * 0.77 : 2250;
   const showTitle = template.showTitle !== false && template.showScheduleTitle !== false;
   const visibleTop = showTitle ? headingY - 88 : (layout.plans[0]?.y ?? timelineTop) - (flowLayout ? 14 : 0);
   const visibleBottom = visibleTop + (layout.bottom + (flowLayout ? 2 : 0) - visibleTop) * 0.9;
-  const movementLimit = flowLayout && template.layout !== 'mascot' ? 2340 : limit;
+  const movementLimit = 2340;
   const baselineShift = 2400 * 0.29 - visibleTop;
   const moveY = movementShift(scheduleMovement(template, 'vertical'), 2400 * (0.29 - 0.025), movementLimit - visibleBottom - baselineShift);
   ctx.save();

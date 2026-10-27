@@ -9,9 +9,9 @@
 .fine-slider > input::-moz-range-thumb { width: 16px; height: 16px; border: 0; border-radius: 50%; background: var(--color-ink); box-shadow: none; }
 .fine-slider > input:focus-visible { outline: 2px solid var(--color-ink); outline-offset: 2px; border-radius: 4px; }
 .fine-slider-stops { position: absolute; top: 22px; left: 8px; right: 8px; height: 0; pointer-events: none; }
-.fine-slider-stop { position: absolute; top: -12px; width: 24px; height: 48px; padding: 0; transform: translateX(-50%); border: 0; background: transparent; border-radius: 4px; touch-action: pan-y; pointer-events: auto; color: var(--color-muted); }
-.fine-slider-dot { position: absolute; top: 9px; left: 9px; width: 6px; height: 6px; border: 0; border-radius: 50%; background: var(--color-muted); pointer-events: none; }
-.fine-slider-number { position: absolute; top: 28px; left: 50%; transform: translateX(-50%); font-size: 12px; line-height: 16px; font-variant-numeric: tabular-nums; pointer-events: none; }
+.fine-slider-stop { position: absolute; top: 8px; width: 24px; height: 28px; padding: 0; transform: translateX(-50%); border: 0; background: transparent; border-radius: 4px; touch-action: pan-y; pointer-events: auto; color: var(--color-muted); }
+.fine-slider-dot { position: absolute; top: -11px; left: 9px; width: 6px; height: 6px; border: 0; border-radius: 50%; background: var(--color-muted); pointer-events: none; }
+.fine-slider-number { position: absolute; top: 8px; left: 50%; transform: translateX(-50%); font-size: 12px; line-height: 16px; font-variant-numeric: tabular-nums; pointer-events: none; }
 .fine-slider-stop:first-child .fine-slider-number { left: 4px; transform: none; }
 .fine-slider-stop:last-child .fine-slider-number { left: auto; right: 4px; transform: none; }
 .fine-slider-stop[data-filled='true'] .fine-slider-dot { background: var(--color-ink); }
