@@ -68,7 +68,7 @@ test('public catalog responses are briefly cacheable while failures are not', as
 });
 
 test('partial background drafts save while publishing requires three distinct variants', () => {
-  const base = seedCatalog().templates.find(template => template.deviceImages && template.layout !== 'mascot');
+  const base = seedCatalog().templates.find(template => template.deviceImages && !template.mobileOnly && template.layout !== 'mascot');
   assert.ok(base, 'The fixture needs a background with device variants');
   const partial = { ...base, status: 'draft', deviceImages: { mobile: base.image } };
   assert.ok(templateSchema.safeParse(partial).success);

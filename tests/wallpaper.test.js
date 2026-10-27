@@ -1,5 +1,6 @@
 import { arcaneTemplates } from '../src/assets/arcaneTemplates.js';
 import { collageTemplates } from '../src/assets/collageTemplates.js';
+import { carTemplates } from '../src/assets/carTemplates.js';
 import { narutoTemplates } from '../src/assets/narutoTemplates.js';
 import { capybaraTemplates } from '../src/assets/capybaraTemplates.js';
 import { snoopyTemplates } from '../src/assets/snoopyTemplates.js';
@@ -99,7 +100,7 @@ test('all templates fit sample data and dense data is explicitly rejected', () =
 });
 
 test('the existing collections are preserved alongside device-specific illustrated designs', () => {
-  assert.equal(wallpaperTemplates.length, collageTemplates.length + arcaneTemplates.length + narutoTemplates.length + snoopyTemplates.length + adventureTimeTemplates.length + littleFriendsTemplates.length + weBareBearsTemplates.length + generativePatternTemplates.length + chikawaReferenceTemplates.length + chikawaTemplates.filter(t => !chikawaReferenceTemplates.some(r => r.id === t.id)).length + sanrioTemplates.length + domoTemplates.length + meepTemplates.length + ghibliTemplates.length + genshinTemplates.length + genshinBackgroundTemplates.length + genshinChibiTemplates.length + hunterTemplates.length + capybaraTemplates.length + animeTemplates.length);
+  assert.equal(wallpaperTemplates.length, collageTemplates.length + carTemplates.length + arcaneTemplates.length + narutoTemplates.length + snoopyTemplates.length + adventureTimeTemplates.length + littleFriendsTemplates.length + weBareBearsTemplates.length + generativePatternTemplates.length + chikawaReferenceTemplates.length + chikawaTemplates.filter(t => !chikawaReferenceTemplates.some(r => r.id === t.id)).length + sanrioTemplates.length + domoTemplates.length + meepTemplates.length + ghibliTemplates.length + genshinTemplates.length + genshinBackgroundTemplates.length + genshinChibiTemplates.length + hunterTemplates.length + capybaraTemplates.length + animeTemplates.length);
   assert.ok(wallpaperTemplates.filter(template => template.image && template.layout !== 'mascot')
     .every(template => (template.mobileOnly ? ['mobile'] : ['mobile', 'tablet', 'laptop']).every(device => template.deviceImages?.[device])));
   assert.equal(new Set(wallpaperTemplates.map((template) => template.id)).size, wallpaperTemplates.length);

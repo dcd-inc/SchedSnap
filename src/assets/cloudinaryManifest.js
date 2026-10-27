@@ -5011,5 +5011,117 @@ export default {
     "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098664/schedsnap/wallpapers/scenic/collage-nocturne-manga/mobile-b9a57405cfc9af09.png",
     "width": 1080,
     "height": 2400
+  },
+  "/wallpapers/scenic/cars-black-porsche-type/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-black-porsche-type/mobile-724758b9b0909bbd",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098781/schedsnap/wallpapers/scenic/cars-black-porsche-type/mobile-724758b9b0909bbd.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-blush-hibiscus/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-blush-hibiscus/mobile-d7cd562617d88bd2",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098781/schedsnap/wallpapers/scenic/cars-blush-hibiscus/mobile-d7cd562617d88bd2.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-black-mclaren-type/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-black-mclaren-type/mobile-a31e0df05006dbb2",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098781/schedsnap/wallpapers/scenic/cars-black-mclaren-type/mobile-a31e0df05006dbb2.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-blue-type/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-blue-type/mobile-6e44c258890f7e41",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098781/schedsnap/wallpapers/scenic/cars-blue-type/mobile-6e44c258890f7e41.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-burgundy-type/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-burgundy-type/mobile-453c9df05cfbb54f",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098782/schedsnap/wallpapers/scenic/cars-burgundy-type/mobile-453c9df05cfbb54f.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-carbon-shadow/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-carbon-shadow/mobile-e71aba23d09b3292",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098783/schedsnap/wallpapers/scenic/cars-carbon-shadow/mobile-e71aba23d09b3292.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-champagne-type/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-champagne-type/mobile-44ba9b5969b8655e",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098783/schedsnap/wallpapers/scenic/cars-champagne-type/mobile-44ba9b5969b8655e.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-champagne-lily/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-champagne-lily/mobile-2af5aa85a2e4c5e1",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098784/schedsnap/wallpapers/scenic/cars-champagne-lily/mobile-2af5aa85a2e4c5e1.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-crimson-type/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-crimson-type/mobile-3d71738b93d4c43b",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098784/schedsnap/wallpapers/scenic/cars-crimson-type/mobile-3d71738b93d4c43b.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-oxblood-hibiscus/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-oxblood-hibiscus/mobile-a67a90ce8fc03b6d",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098786/schedsnap/wallpapers/scenic/cars-oxblood-hibiscus/mobile-a67a90ce8fc03b6d.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-crimson-gt3/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-crimson-gt3/mobile-e87080b9d40bab3f",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098785/schedsnap/wallpapers/scenic/cars-crimson-gt3/mobile-e87080b9d40bab3f.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-graphite-rain/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-graphite-rain/mobile-4a3d0ba3e57c1543",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098785/schedsnap/wallpapers/scenic/cars-graphite-rain/mobile-4a3d0ba3e57c1543.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-ice-blue-lily/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-ice-blue-lily/mobile-764aaa74b138dda1",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098787/schedsnap/wallpapers/scenic/cars-ice-blue-lily/mobile-764aaa74b138dda1.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-pink-type/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-pink-type/mobile-cc7d217537c9d085",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098787/schedsnap/wallpapers/scenic/cars-pink-type/mobile-cc7d217537c9d085.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-scarlet-ivory-type/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-scarlet-ivory-type/mobile-161d3aeae2c4280d",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098788/schedsnap/wallpapers/scenic/cars-scarlet-ivory-type/mobile-161d3aeae2c4280d.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-scarlet-hibiscus/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-scarlet-hibiscus/mobile-8afd32befc1cef9a",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793098789/schedsnap/wallpapers/scenic/cars-scarlet-hibiscus/mobile-8afd32befc1cef9a.png",
+    "width": 1080,
+    "height": 2400
   }
 };

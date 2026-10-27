@@ -18,6 +18,7 @@ import { animeTemplates } from './animeTemplates.js';
 import { narutoTemplates } from './narutoTemplates.js';
 import { arcaneTemplates } from './arcaneTemplates.js';
 import { collageTemplates } from './collageTemplates.js';
+import { carTemplates } from './carTemplates.js';
 import { withTemplateKeywords } from '../../shared/templateKeywords.js';
 
 
@@ -41,6 +42,7 @@ export const wallpaperTemplates = [
   ...narutoTemplates,
   ...arcaneTemplates,
   ...collageTemplates,
+  ...carTemplates,
 
   ...sanrioTemplates,
   ...chikawaReferenceTemplates,
