@@ -2,8 +2,6 @@ import { narutoExtraTemplates } from './narutoExtraTemplates.js';
 
 // Reference compositions, independently drawn for each device aspect ratio.
 const designs = [
-  ['naruto-leaf-ink-lineup', 'Leaf Ink Lineup', 'Young Hidden Leaf friends and Akamaru in a fine black-ink profile lineup.', 'Naruto, Sasuke, Neji, Shikamaru, Akamaru, Choji', '#f4f3f8'],
-  ['naruto-retrieval-squad', 'Retrieval Squad', 'Naruto, Neji, Shikamaru, Rock Lee and Choji in a diagonal manga ensemble.', 'Naruto, Neji, Shikamaru, Rock Lee, Choji', '#ffffff'],
   ['naruto-sasuke-quiet-ink', 'Sasuke Quiet Ink', 'Sasuke in a plain black T-shirt, with spare pen contours and a quiet white field.', 'Sasuke Uchiha, black T-shirt, portrait', '#ffffff'],
   ['naruto-kakashi-obito', 'Back to Back', 'Young Kakashi and Obito stand back to back in monochrome pen and ink.', 'Kakashi Hatake, Obito Uchiha, goggles, mask', '#ffffff'],
 ];

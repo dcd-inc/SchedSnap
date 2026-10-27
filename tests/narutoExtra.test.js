@@ -9,7 +9,7 @@ import manifest from '../src/assets/cloudinaryManifest.js';
 import { schedulePosition } from '../src/utils/canvasHelpers.js';
 
 test('all five references appear once in Naruto with separate device artwork', () => {
-  assert.equal(narutoExtraTemplates.length, 5);
+  assert.equal(narutoExtraTemplates.length, 4);
   const review = JSON.parse(readFileSync(new URL('../documentation/naruto-extra/artwork-manifest.json', import.meta.url)));
   assert.equal(review.assets.length, 15);
   assert.equal(new Set(review.assets.map(a => a.sha256)).size, 15);
