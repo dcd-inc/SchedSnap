@@ -1,0 +1,83 @@
+{
+  "collection": "Wuthering Waves",
+  "batch": "approved-batch-01",
+  "approvedDate": "2026-10-27",
+  "status": "held-local-awaiting-more-designs",
+  "instructions": "Store and compile only. Do not upload, publish, add to the application catalog, or push until the user requests it.",
+  "processing": "Original approved attachment bytes preserved; no resize, crop, repaint, or recompression.",
+  "approvedCount": 6,
+  "assets": [
+    {
+      "id": "wuwa-starlit-shore",
+      "name": "Starlit Shore",
+      "previewNumber": 1,
+      "path": "output/wuthering-waves/approved-batch-01/01-starlit-shore.png",
+      "sourceAttachment": "codex-clipboard-2a32eb26-fa08-4070-b680-b735fc421117.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "172f522ef042f4b5420d5574ea2200b573ccb431a6612bc8e60c999b102f7f8a",
+      "approvalStatus": "approved",
+      "publicationStatus": "held-local"
+    },
+    {
+      "id": "wuwa-celestial-encore",
+      "name": "Celestial Encore",
+      "previewNumber": 5,
+      "path": "output/wuthering-waves/approved-batch-01/02-celestial-encore.png",
+      "sourceAttachment": "codex-clipboard-d5e40ffa-1145-4b81-b575-d1c66687c76a.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "76555d8bdd38735cf967e16bc8e4947e43525111bdb0415ddbef14ec78fea399",
+      "approvalStatus": "approved",
+      "publicationStatus": "held-local"
+    },
+    {
+      "id": "wuwa-silver-resonance",
+      "name": "Silver Resonance",
+      "previewNumber": 6,
+      "path": "output/wuthering-waves/approved-batch-01/03-silver-resonance.png",
+      "sourceAttachment": "codex-clipboard-eef32c37-642d-4526-96df-fa15034e4695.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "24e6da930f8a7a364b87de99cf44d2d9913dbb8f9f1a18e9757c58f8d5f39623",
+      "approvalStatus": "approved",
+      "publicationStatus": "held-local"
+    },
+    {
+      "id": "wuwa-golden-reunion",
+      "name": "Golden Reunion",
+      "previewNumber": 3,
+      "path": "output/wuthering-waves/approved-batch-01/04-golden-reunion.png",
+      "sourceAttachment": "codex-clipboard-9b5355fb-cd9c-4b91-a06d-fb39220990bc.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "2d0106f229fc43343603cd2b8a98b66c1e77b9d0797dae58469e5fe4b1d0c0ad",
+      "approvalStatus": "approved",
+      "publicationStatus": "held-local"
+    },
+    {
+      "id": "wuwa-ivory-companion",
+      "name": "Ivory Companion",
+      "previewNumber": 9,
+      "path": "output/wuthering-waves/approved-batch-01/05-ivory-companion.png",
+      "sourceAttachment": "codex-clipboard-269e2982-b952-47ca-99c1-d73403d1b7cb.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "852f180aaf37f6285b260d8749ab053a3d1ac298ec222c0d7101460832e7c1e1",
+      "approvalStatus": "approved",
+      "publicationStatus": "held-local"
+    },
+    {
+      "id": "wuwa-moonlit-companion",
+      "name": "Moonlit Companion",
+      "previewNumber": 10,
+      "path": "output/wuthering-waves/approved-batch-01/06-moonlit-companion.png",
+      "sourceAttachment": "codex-clipboard-cc24f94a-5d60-4443-a8c4-044b7455e2f9.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "0169aec27a15f71e7d2bc41cc1615fbb4fb60046fe76d348b23016312dfacb65",
+      "approvalStatus": "approved",
+      "publicationStatus": "held-local"
+    }
+  ]
+}

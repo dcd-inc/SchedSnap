@@ -1,0 +1,162 @@
+{
+  "approval": "User approved these 30 designs for Cloudinary upload, catalog publication, and GitHub push; Violet Reliquary and Equinox Promise excluded.",
+  "processing": "Full-image resize to 1080x2400; no crop or repaint.",
+  "assets": [
+    {
+      "id": "wuwa-blueflame-eclipse",
+      "name": "Blueflame Eclipse",
+      "path": "public/wallpapers/scenic/wuwa-blueflame-eclipse/mobile.png",
+      "sourcePath": "output/wuthering-waves/approved-batch-04/01-blueflame-eclipse.png",
+      "sourceSha256": "7dd9858b07167dca4178cc7bc37f645f1363bf5ae72559d13e61dab77f925911",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "6fe4aa7a61854fa7482441ab4b4e145455b82dce1b02c76f79f6364b08a6c32f"
+    },
+    {
+      "id": "wuwa-emberglass",
+      "name": "Emberglass",
+      "path": "public/wallpapers/scenic/wuwa-emberglass/mobile.png",
+      "sourcePath": "output/wuthering-waves/approved-batch-04/02-emberglass.png",
+      "sourceSha256": "fb399055ab3008a55d9932d4d37e3112068335e38c88fb3875541301663343ad",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "54cee8083dd65d2d3f99d01719f8d8f84e5d6394b6492ce00db6f12572193576"
+    },
+    {
+      "id": "wuwa-jade-oath",
+      "name": "Jade Oath",
+      "path": "public/wallpapers/scenic/wuwa-jade-oath/mobile.png",
+      "sourcePath": "output/wuthering-waves/approved-batch-04/03-jade-oath.png",
+      "sourceSha256": "784dce68127b87751042a12982cc8123ccb5a4ec0790a09dbab1c129f6023c41",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "9a05d7df574c3264894feca54e00876730a40d3c3312d87cfe06c4ed6108a591"
+    },
+    {
+      "id": "wuwa-emerald-resolve",
+      "name": "Emerald Resolve",
+      "path": "public/wallpapers/scenic/wuwa-emerald-resolve/mobile.png",
+      "sourcePath": "output/wuthering-waves/approved-batch-04/04-emerald-resolve.png",
+      "sourceSha256": "1ebbf3eb4bc810c4f200675f8bd27aa237a1adc86a0da4d558ffd6a9b0f25e29",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "138275cdd0f360f6a7b7b022f378db5e13408d3809d9b6379527685b0020371c"
+    },
+    {
+      "id": "wuwa-bamboo-drizzle",
+      "name": "Bamboo Drizzle",
+      "path": "public/wallpapers/scenic/wuwa-bamboo-drizzle/mobile.png",
+      "sourcePath": "output/wuthering-waves/approved-batch-04/05-bamboo-drizzle.png",
+      "sourceSha256": "a421e5e3d276a5e773816ee91c26e5fa4a78720d99ed792a00226f085245b9f1",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "52d24b55306805965ebb418f69cba8af250ef9d219c300709e40de14b340e6de"
+    },
+    {
+      "id": "wuwa-silent-current",
+      "name": "Silent Current",
+      "path": "public/wallpapers/scenic/wuwa-silent-current/mobile.png",
+      "sourcePath": "output/wuthering-waves/approved-batch-04/06-silent-current.png",
+      "sourceSha256": "3a59211aa61fc9d7d11b5fd0d849cc67c7688b4a6bf6fbeb86c42d7c83e1c33f",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "4e86df0a81f19420fb01b6b52700b7a7576977058586b8f3e5697c9c8c0b1bbe"
+    },
+    {
+      "id": "wuwa-sunforged",
+      "name": "Sunforged",
+      "path": "public/wallpapers/scenic/wuwa-sunforged/mobile.png",
+      "sourcePath": "output/wuthering-waves/approved-batch-04/07-sunforged.png",
+      "sourceSha256": "640c2c43ab653fb5d291ecde5af215da5b07583af423b7b1482a495bc2c3a403",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "8d446194fafa8173244ccd19188d044fa53c4ef089bf47af7eb6c572875bf10d"
+    },
+    {
+      "id": "wuwa-copper-dawn",
+      "name": "Copper Dawn",
+      "path": "public/wallpapers/scenic/wuwa-copper-dawn/mobile.png",
+      "sourcePath": "output/wuthering-waves/approved-batch-04/08-copper-dawn.png",
+      "sourceSha256": "32af125256bb85f6dff33f3ffe5f75eaf04a047e0065fe182b0e2e717ff679b5",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "b21c111bb577b6ba80527f1e4d7d8358aa9ebbea954d4644596dfb5a7868890d"
+    },
+    {
+      "id": "wuwa-lunar-anchor",
+      "name": "Lunar Anchor",
+      "path": "public/wallpapers/scenic/wuwa-lunar-anchor/mobile.png",
+      "sourcePath": "output/wuthering-waves/approved-batch-04/09-lunar-anchor.png",
+      "sourceSha256": "eb00356410d5b600949d403f4e48ddf445691bc711e5428f4ffa8c09d29ed0cc",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "9c502345447dad63ee769a732d4d48cb504fe277916069d0b6d5c91c18612857"
+    },
+    {
+      "id": "wuwa-pearl-tides",
+      "name": "Pearl Tides",
+      "path": "public/wallpapers/scenic/wuwa-pearl-tides/mobile.png",
+      "sourcePath": "output/wuthering-waves/approved-batch-04/10-pearl-tides.png",
+      "sourceSha256": "11e126f57f3f34365cf8e866d2942db584cc96df0ada289fc3dfa03196d7404e",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "153f50d82f643de69f0e237e9a215d9b48d123d19589c9c29d0bc5eb1e620e3a"
+    },
+    {
+      "id": "wuwa-astral-dial",
+      "name": "Astral Dial",
+      "path": "public/wallpapers/scenic/wuwa-astral-dial/mobile.png",
+      "sourcePath": "output/wuthering-waves/approved-batch-04/11-astral-dial.png",
+      "sourceSha256": "fb50736a5efe85aa9fe8a84c637962396f73ceb790589b246bddcd34c91a69a4",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "a17c1d514ce6cb07214b4ab987c294cc1eb8d9a84c55043eeffcfe48b116566a"
+    },
+    {
+      "id": "wuwa-azure-hourglass",
+      "name": "Azure Hourglass",
+      "path": "public/wallpapers/scenic/wuwa-azure-hourglass/mobile.png",
+      "sourcePath": "output/wuthering-waves/approved-batch-04/12-azure-hourglass.png",
+      "sourceSha256": "b98d0521c57cf968853e8a866019eb2d7adf1a60db74eebf34fcae04a7421641",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "09ca58e906ba2c3f555913fbae8ffe3a65c7ec7a813aaff1dddc2417df9ea31e"
+    },
+    {
+      "id": "wuwa-solstice-mirror",
+      "name": "Solstice Mirror",
+      "path": "public/wallpapers/scenic/wuwa-solstice-mirror/mobile.png",
+      "sourcePath": "output/wuthering-waves/approved-batch-04/13-solstice-mirror.png",
+      "sourceSha256": "bb7540a30117fc2b5857e5e26d7b464e7233461c79602ccc882e55a18ecf2ce9",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "8ebb371dcd2314011141b92f6c04c3862eb7d175a99813ff47e630983675f1ad"
+    }
+  ]
+}

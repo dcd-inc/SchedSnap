@@ -4682,5 +4682,215 @@ export default {
     "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793095937/schedsnap/wallpapers/scenic/arcane-sisters-in-ink/mobile-4bbcf473ecd2410f.png",
     "width": 1080,
     "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-amber-reverie/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-amber-reverie/mobile-ee7368d042c4f571",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115081/schedsnap/wallpapers/scenic/wuwa-amber-reverie/mobile-ee7368d042c4f571.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-afterhours-lucy/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-afterhours-lucy/mobile-c8bcddfb821d149b",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115081/schedsnap/wallpapers/scenic/wuwa-afterhours-lucy/mobile-c8bcddfb821d149b.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-digital-ghost/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-digital-ghost/mobile-9f01c63559fa8bdc",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115082/schedsnap/wallpapers/scenic/wuwa-digital-ghost/mobile-9f01c63559fa8bdc.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-celestial-encore/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-celestial-encore/mobile-df9874057a0c9528",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115082/schedsnap/wallpapers/scenic/wuwa-celestial-encore/mobile-df9874057a0c9528.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-gilded-tide/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-gilded-tide/mobile-f7697c5afb212342",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115083/schedsnap/wallpapers/scenic/wuwa-gilded-tide/mobile-f7697c5afb212342.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-golden-reflection/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-golden-reflection/mobile-1db593feccbe486c",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115083/schedsnap/wallpapers/scenic/wuwa-golden-reflection/mobile-1db593feccbe486c.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-golden-reunion/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-golden-reunion/mobile-27b21a6837cebc59",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115083/schedsnap/wallpapers/scenic/wuwa-golden-reunion/mobile-27b21a6837cebc59.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-ivory-companion/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-ivory-companion/mobile-59f9bb213a7fbbbf",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115084/schedsnap/wallpapers/scenic/wuwa-ivory-companion/mobile-59f9bb213a7fbbbf.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-moonlit-companion/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-moonlit-companion/mobile-cba499ff61ec0ea7",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115085/schedsnap/wallpapers/scenic/wuwa-moonlit-companion/mobile-cba499ff61ec0ea7.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-midnight-throne/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-midnight-throne/mobile-59661eb0dad84be2",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115085/schedsnap/wallpapers/scenic/wuwa-midnight-throne/mobile-59661eb0dad84be2.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-jade-lantern/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-jade-lantern/mobile-0a7c9a192a09ef6c",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115085/schedsnap/wallpapers/scenic/wuwa-jade-lantern/mobile-0a7c9a192a09ef6c.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-neon-recoil/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-neon-recoil/mobile-dded750105c57e80",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115087/schedsnap/wallpapers/scenic/wuwa-neon-recoil/mobile-dded750105c57e80.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-sapphire-covenant/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-sapphire-covenant/mobile-17dd788686698018",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115087/schedsnap/wallpapers/scenic/wuwa-sapphire-covenant/mobile-17dd788686698018.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-prismatic-oath/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-prismatic-oath/mobile-cc1104ef7609ff7d",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115087/schedsnap/wallpapers/scenic/wuwa-prismatic-oath/mobile-cc1104ef7609ff7d.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-silver-resonance/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-silver-resonance/mobile-10fea6678189c9b3",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115088/schedsnap/wallpapers/scenic/wuwa-silver-resonance/mobile-10fea6678189c9b3.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-starlit-shore/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-starlit-shore/mobile-a55beb3edc4c90da",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115089/schedsnap/wallpapers/scenic/wuwa-starlit-shore/mobile-a55beb3edc4c90da.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-vermilion-moon/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-vermilion-moon/mobile-daf9495ca36c128a",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115089/schedsnap/wallpapers/scenic/wuwa-vermilion-moon/mobile-daf9495ca36c128a.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-astral-dial/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-astral-dial/mobile-a17c1d514ce6cb07",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793118223/schedsnap/wallpapers/scenic/wuwa-astral-dial/mobile-a17c1d514ce6cb07.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-bamboo-drizzle/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-bamboo-drizzle/mobile-52d24b5530680596",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793118224/schedsnap/wallpapers/scenic/wuwa-bamboo-drizzle/mobile-52d24b5530680596.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-blueflame-eclipse/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-blueflame-eclipse/mobile-6fe4aa7a61854fa7",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793118224/schedsnap/wallpapers/scenic/wuwa-blueflame-eclipse/mobile-6fe4aa7a61854fa7.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-copper-dawn/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-copper-dawn/mobile-b21c111bb577b6ba",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793118225/schedsnap/wallpapers/scenic/wuwa-copper-dawn/mobile-b21c111bb577b6ba.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-azure-hourglass/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-azure-hourglass/mobile-09ca58e906ba2c3f",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793118225/schedsnap/wallpapers/scenic/wuwa-azure-hourglass/mobile-09ca58e906ba2c3f.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-jade-oath/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-jade-oath/mobile-9a05d7df574c3264",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793118227/schedsnap/wallpapers/scenic/wuwa-jade-oath/mobile-9a05d7df574c3264.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-emberglass/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-emberglass/mobile-54cee8083dd65d2d",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793118227/schedsnap/wallpapers/scenic/wuwa-emberglass/mobile-54cee8083dd65d2d.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-emerald-resolve/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-emerald-resolve/mobile-138275cdd0f360f6",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793118227/schedsnap/wallpapers/scenic/wuwa-emerald-resolve/mobile-138275cdd0f360f6.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-pearl-tides/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-pearl-tides/mobile-153f50d82f643de6",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793118228/schedsnap/wallpapers/scenic/wuwa-pearl-tides/mobile-153f50d82f643de6.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-silent-current/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-silent-current/mobile-4e86df0a81f19420",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793118230/schedsnap/wallpapers/scenic/wuwa-silent-current/mobile-4e86df0a81f19420.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-lunar-anchor/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-lunar-anchor/mobile-9c502345447dad63",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793118230/schedsnap/wallpapers/scenic/wuwa-lunar-anchor/mobile-9c502345447dad63.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-sunforged/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-sunforged/mobile-8d446194fafa8173",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793118230/schedsnap/wallpapers/scenic/wuwa-sunforged/mobile-8d446194fafa8173.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/wuwa-solstice-mirror/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/wuwa-solstice-mirror/mobile-8ebb371dcd231401",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793118230/schedsnap/wallpapers/scenic/wuwa-solstice-mirror/mobile-8ebb371dcd231401.png",
+    "width": 1080,
+    "height": 2400
   }
 };

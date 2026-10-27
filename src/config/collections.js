@@ -1,6 +1,7 @@
 
 export const designCollections = [
   { id: 'all', name: 'All designs' },
+  { id: 'wuthering-waves', name: 'Wuthering Waves', searchTerms: ['WuWa', 'Wuthering'] },
   { id: 'arcane', name: 'Arcane', searchTerms: ['Jinx', 'League of Legends', 'LoL', 'Zaun'] },
   { id: 'anime', name: 'Anime', searchTerms: ['anime wallpaper', 'manga'] },
   { id: 'sanrio', name: 'Sanrio' },

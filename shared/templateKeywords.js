@@ -13,6 +13,7 @@ export function genshinKeywords(template) {
 }
 
 const collectionTags = {
+  'wuthering-waves': ['Wuthering Waves', 'WuWa', 'game', 'anime'],
   arcane: ['Arcane', 'League of Legends', 'animation'],
   sanrio: ['Sanrio', 'kawaii', 'cute', 'cartoon'],
   snoopy: ['Snoopy', 'Peanuts', 'dog', 'cartoon', 'hand drawn'],
