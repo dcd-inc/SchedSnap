@@ -1,0 +1,111 @@
+{
+  "approvedCount": 12,
+  "excludedGridPositions": [
+    5,
+    6,
+    7
+  ],
+  "excludedDesigns": [
+    "11-jinx-torn-newsprint",
+    "12-jinx-sepia-panels",
+    "13-arcane-contour-cast"
+  ],
+  "selectionOrder": "left to right, top to bottom",
+  "assets": [
+    {
+      "path": "public/wallpapers/scenic/arcane-jinx-pink-rebellion/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "5a5b2b272dc949b1ffd436043d64b0eb9a23914e2b5b9bad8372804a570b8f8d",
+      "bytes": 2897769
+    },
+    {
+      "path": "public/wallpapers/scenic/arcane-sisters-embrace/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "6103d94f7e7ff83939ab818d650d6472c2a223d6ad3476d0a8de2b46579c06be",
+      "bytes": 1761297
+    },
+    {
+      "path": "public/wallpapers/scenic/arcane-jinx-neon-phantom/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "7285b5bf0392233a8626c912acf4d70e07815b7263347d0df639442be7aac71a",
+      "bytes": 2504121
+    },
+    {
+      "path": "public/wallpapers/scenic/arcane-electric-graffiti/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "5f347014ea97953bcf6adc07698757932b36d914e4ea7f20fd10ab6b781b4e71",
+      "bytes": 2482184
+    },
+    {
+      "path": "public/wallpapers/scenic/arcane-jinx-cyan-newsprint/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "339714a6fd302e632c173630e63c25d0a5d0e8611289689e6604e1c6577364c2",
+      "bytes": 4881773
+    },
+    {
+      "path": "public/wallpapers/scenic/arcane-ekko-mint-newsprint/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "e1f52e3c46e3812cc1898c953512abbf53baac889f46f120bad152645e540a5d",
+      "bytes": 4636430
+    },
+    {
+      "path": "public/wallpapers/scenic/arcane-caitlyn-rose-newsprint/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "71b2cbdbbf7de4fad415ffcb3f9d760e636c35295342668bb54ebc437b2ab022",
+      "bytes": 4394362
+    },
+    {
+      "path": "public/wallpapers/scenic/arcane-viktor-violet-newsprint/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "7a5b95b95e3bb31726990fc67eb3e1b2fbe4aa51bdd06a5c78ded8c2362c07f4",
+      "bytes": 4690068
+    },
+    {
+      "path": "public/wallpapers/scenic/arcane-vi-crimson/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "d8a1f1ae24d0058b02fdd506187eb1a8425ec55241b617d0770c3ca01c36c7a7",
+      "bytes": 1609507
+    },
+    {
+      "path": "public/wallpapers/scenic/arcane-vi-red-portrait/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "10336fb0a139ef8eabb3675e6be7a44375f9b7a1aecc9a8cac56c6f84f99ff5f",
+      "bytes": 1725154
+    },
+    {
+      "path": "public/wallpapers/scenic/arcane-jinx-cyan-flare/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "464963eb985a020024e706f03b619177312deba6559834b0a53a73b6924c1f42",
+      "bytes": 3029747
+    },
+    {
+      "path": "public/wallpapers/scenic/arcane-jinx-magenta-bridge/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "ce7a12c373a624b0273ebc4761bbdf3397c17cf20d9242fb0a692c2bd44e2282",
+      "bytes": 1884530
+    }
+  ],
+  "cloudinary": "12 uploaded; repeat dry run reports zero pending",
+  "catalog": "12 additions published and read back; 283 existing records preserved, including 4 pre-existing Arcane designs",
+  "frontend": "Source and production build updated locally; no frontend deployment performed",
+  "validation": {
+    "focusedTests": "17 passed",
+    "suite": "326 passed, 2 failures in existing Hunter layout tests; new two Arcane tests passed separately",
+    "build": "passed",
+    "lint": "passed",
+    "designDetector": "no findings",
+    "browser": "12 sample and dense schedules rendered; desktop and mobile gallery captures saved"
+  }
+}

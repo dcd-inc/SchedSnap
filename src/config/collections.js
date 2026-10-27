@@ -3,6 +3,7 @@ export const designCollections = [
   { id: 'all', name: 'All designs' },
   { id: 'anime', name: 'Anime', searchTerms: ['anime wallpaper', 'manga'] },
   { id: 'naruto', name: 'Naruto', searchTerms: ['Naruto Shippuden', 'Hidden Leaf', 'Akatsuki'] },
+  { id: 'arcane', name: 'Arcane', searchTerms: ['League of Legends', 'Jinx', 'Vi', 'Ekko', 'Caitlyn', 'Viktor'] },
   { id: 'sanrio', name: 'Sanrio' },
   { id: 'snoopy', name: 'Snoopy', searchTerms: ['Peanuts', 'Woodstock'] },
   { id: 'genshin', name: 'Genshin', searchTerms: ['Genshin Impact'] },

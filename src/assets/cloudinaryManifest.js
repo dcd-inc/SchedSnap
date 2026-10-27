@@ -4857,5 +4857,89 @@ export default {
     "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1792801071/schedsnap/wallpapers/scenic/naruto-itachi-stillness/laptop-3aac5bd7ff5bec2c.png",
     "width": 1920,
     "height": 1080
+  },
+  "/wallpapers/scenic/arcane-jinx-cyan-flare/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/arcane-jinx-cyan-flare/mobile-464963eb985a0200",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094477/schedsnap/wallpapers/scenic/arcane-jinx-cyan-flare/mobile-464963eb985a0200.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/arcane-electric-graffiti/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/arcane-electric-graffiti/mobile-5f347014ea97953b",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094478/schedsnap/wallpapers/scenic/arcane-electric-graffiti/mobile-5f347014ea97953b.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/arcane-caitlyn-rose-newsprint/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/arcane-caitlyn-rose-newsprint/mobile-71b2cbdbbf7de4fa",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094478/schedsnap/wallpapers/scenic/arcane-caitlyn-rose-newsprint/mobile-71b2cbdbbf7de4fa.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/arcane-ekko-mint-newsprint/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/arcane-ekko-mint-newsprint/mobile-e1f52e3c46e3812c",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094478/schedsnap/wallpapers/scenic/arcane-ekko-mint-newsprint/mobile-e1f52e3c46e3812c.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/arcane-jinx-cyan-newsprint/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/arcane-jinx-cyan-newsprint/mobile-339714a6fd302e63",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094479/schedsnap/wallpapers/scenic/arcane-jinx-cyan-newsprint/mobile-339714a6fd302e63.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/arcane-jinx-neon-phantom/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/arcane-jinx-neon-phantom/mobile-7285b5bf0392233a",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094479/schedsnap/wallpapers/scenic/arcane-jinx-neon-phantom/mobile-7285b5bf0392233a.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/arcane-jinx-magenta-bridge/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/arcane-jinx-magenta-bridge/mobile-ce7a12c373a624b0",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094479/schedsnap/wallpapers/scenic/arcane-jinx-magenta-bridge/mobile-ce7a12c373a624b0.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/arcane-jinx-pink-rebellion/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/arcane-jinx-pink-rebellion/mobile-5a5b2b272dc949b1",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094480/schedsnap/wallpapers/scenic/arcane-jinx-pink-rebellion/mobile-5a5b2b272dc949b1.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/arcane-sisters-embrace/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/arcane-sisters-embrace/mobile-6103d94f7e7ff839",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094480/schedsnap/wallpapers/scenic/arcane-sisters-embrace/mobile-6103d94f7e7ff839.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/arcane-vi-crimson/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/arcane-vi-crimson/mobile-d8a1f1ae24d0058b",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094481/schedsnap/wallpapers/scenic/arcane-vi-crimson/mobile-d8a1f1ae24d0058b.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/arcane-vi-red-portrait/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/arcane-vi-red-portrait/mobile-10336fb0a139ef8e",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094482/schedsnap/wallpapers/scenic/arcane-vi-red-portrait/mobile-10336fb0a139ef8e.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/arcane-viktor-violet-newsprint/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/arcane-viktor-violet-newsprint/mobile-7a5b95b95e3bb317",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793094482/schedsnap/wallpapers/scenic/arcane-viktor-violet-newsprint/mobile-7a5b95b95e3bb317.png",
+    "width": 1080,
+    "height": 2400
   }
 };

@@ -16,6 +16,7 @@ import { hunterTemplates } from './hunterTemplates.js';
 import { capybaraTemplates } from './capybaraTemplates.js';
 import { animeTemplates } from './animeTemplates.js';
 import { narutoTemplates } from './narutoTemplates.js';
+import { arcaneTemplates } from './arcaneTemplates.js';
 import { withTemplateKeywords } from '../../shared/templateKeywords.js';
 
 
@@ -37,6 +38,7 @@ export const wallpaperTemplates = [
   ...capybaraTemplates,
   ...animeTemplates,
   ...narutoTemplates,
+  ...arcaneTemplates,
 
   ...sanrioTemplates,
   ...chikawaReferenceTemplates,
