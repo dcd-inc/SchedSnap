@@ -4,7 +4,8 @@ const VISITS_QUERY = `SELECT count() AS visits
 FROM events
 WHERE event = '$pageview'
   AND properties.site_name = 'schedsnap'
-  AND properties.environment = 'production'`;
+  AND properties.environment = 'production'
+  AND properties.$host = 'schedsnap.chrbuilds.dev'`;
 
 // The public endpoint returns only one aggregate; it never accepts a client query.
 export function createVisitsHandler({ env = process.env, fetcher = fetch, now = () => Date.now() } = {}) {

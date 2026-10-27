@@ -148,7 +148,7 @@ export default function TemplateWorkspace({ customizeRequest = 0, step, onStep, 
     setExporting(true);
     setMessage('');
     const started = performance.now();
-    const properties = { ...templateProperties(template), schedule_source: scheduleSource, class_count: schedule.classes.length, width: resolution.width, height: resolution.height };
+    const properties = { ...templateProperties(template), device: resolution.id, schedule_source: scheduleSource, class_count: schedule.classes.length, width: resolution.width, height: resolution.height };
     trackEvent('wallpaper_download_requested', properties);
     let stage = 'render';
     try {
@@ -164,6 +164,7 @@ export default function TemplateWorkspace({ customizeRequest = 0, step, onStep, 
       const { inApp } = downloadBlob(blob, filename);
       void recordDownload();
       trackEvent('wallpaper_download_started', { ...properties, download_method: inApp ? 'new_tab' : 'download_link', duration_ms: Math.round(performance.now() - started) });
+      if (exportResult?.key === exportKey) trackEvent('wallpaper_download_repeated', properties);
       setExportResult({ key: exportKey });
       if (!template.customBackground && !vote?.liked) setThankYouDesign(template.id);
       setMessageKind('success');

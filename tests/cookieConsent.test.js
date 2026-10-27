@@ -8,7 +8,7 @@ const analyticsSource = readFileSync(new URL('../src/lib/analytics.js', import.m
 const key = 'schedsnap-cookie-consent-v1';
 
 // Run the actual browser modules with storage and the external SDK replaced.
-function browser({ stored, blocked = false, token = 'test-token', deferAnalytics = false } = {}) {
+function browser({ stored, blocked = false, token = 'test-token', deferAnalytics = false, deferLoaded = false } = {}) {
   const data = new Map(stored ? [[key, stored]] : []);
   const window = new EventTarget();
   window.localStorage = {
@@ -16,16 +16,17 @@ function browser({ stored, blocked = false, token = 'test-token', deferAnalytics
     setItem(name, value) { if (blocked) throw new Error('Blocked'); data.set(name, value); },
   };
   const events = [];
+  const captured = [];
   let optedOut = true;
   let config;
   let initializations = 0;
   const posthog = {
-    init(_token, options) { initializations++; config = options; options.loaded(this); },
+    init(_token, options) { initializations++; config = options; if (!deferLoaded) options.loaded(this); },
     opt_in_capturing() { optedOut = false; },
     opt_out_capturing() { optedOut = true; },
     has_opted_out_capturing() { return optedOut; },
     register() {},
-    capture(event, properties) { if (!optedOut && config.before_send({ event, properties })) events.push(event); },
+    capture(event, properties) { if (!optedOut && config.before_send({ event, properties })) { events.push(event); captured.push({ event, properties }); } },
   };
   let imports = 0;
   let resolveAnalytics;
@@ -35,8 +36,8 @@ function browser({ stored, blocked = false, token = 'test-token', deferAnalytics
   }, env: { VITE_POSTHOG_TOKEN: token, MODE: 'test' } };
   runInNewContext(consentSource.replaceAll('export ', '') + '\nglobalThis.consent = { getCookieConsent, setCookieConsent };', context);
   runInNewContext(analyticsSource.replace(/^import .*;\r?$/gm, '').replaceAll("import('posthog-js')", 'importPosthog()').replaceAll('export ', '').replaceAll('import.meta.env', 'env') + '\nglobalThis.track = trackEvent;', context);
-  return { ...context, data, events, initializations: () => initializations, optedOut: () => optedOut, config: () => config,
-    imports: () => imports, resolveAnalytics: () => resolveAnalytics({ default: posthog }), settle: () => new Promise(setImmediate) };
+  return { ...context, data, events, captured, initializations: () => initializations, optedOut: () => optedOut, config: () => config,
+    imports: () => imports, resolveAnalytics: () => resolveAnalytics({ default: posthog }), finishLoading: () => config.loaded(posthog), settle: () => new Promise(setImmediate) };
 }
 
 test('no consent, rejection, and invalid stored choices never initialize analytics', () => {
@@ -113,4 +114,52 @@ test('revoking consent during the SDK download prevents initialization and share
   assert.equal(page.initializations(), 0);
   page.track('download');
   assert.deepEqual(page.events, []);
+});
+
+test('consented creator actions wait for SDK import and its loaded callback in order', async () => {
+  const page = browser({ stored: 'granted', deferAnalytics: true, deferLoaded: true });
+  page.track('wallpaper_step_viewed', { step: 'design' });
+  page.resolveAnalytics();
+  await page.settle();
+  page.track('template_selected', { template_id: 'test' });
+  assert.deepEqual(page.events, []);
+  page.finishLoading();
+  assert.deepEqual(page.events, ['wallpaper_step_viewed', 'template_selected']);
+  assert.equal(page.captured[0].properties.step, 'design');
+  assert.equal(page.captured[0].properties.site_name, 'schedsnap');
+  assert.equal(page.captured[0].properties.environment, 'test');
+});
+
+test('withdrawing consent discards pending actions, including when consent is later granted again', async () => {
+  for (const when of ['import', 'loaded']) {
+    const page = browser({ stored: 'granted', deferAnalytics: true, deferLoaded: true });
+    page.track('before_withdrawal');
+    if (when === 'loaded') { page.resolveAnalytics(); await page.settle(); }
+    page.consent.setCookieConsent('denied');
+    page.track('while_denied');
+    page.consent.setCookieConsent('granted');
+    page.track('after_reacceptance');
+    if (when === 'import') { page.resolveAnalytics(); await page.settle(); }
+    page.finishLoading();
+    assert.deepEqual(page.events, ['after_reacceptance']);
+  }
+});
+
+test('startup event buffer is bounded and never buffers without consent or a token', async () => {
+  const page = browser({ stored: 'granted', deferAnalytics: true });
+  for (let i = 0; i < 55; i++) page.track(`event_${i}`);
+  page.resolveAnalytics();
+  await page.settle();
+  assert.equal(page.events.length, 50);
+  assert.equal(page.events[0], 'event_0');
+  assert.equal(page.events[49], 'event_49');
+  const denied = browser({ deferAnalytics: true });
+  denied.track('without_consent');
+  denied.consent.setCookieConsent('granted');
+  denied.resolveAnalytics();
+  await denied.settle();
+  assert.deepEqual(denied.events, []);
+  const unconfigured = browser({ stored: 'granted', token: '' });
+  unconfigured.track('without_token');
+  assert.deepEqual(unconfigured.events, []);
 });

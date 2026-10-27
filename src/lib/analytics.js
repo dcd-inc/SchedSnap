@@ -4,13 +4,16 @@ const token = import.meta.env?.VITE_POSTHOG_TOKEN;
 export const analyticsEnabled = Boolean(token);
 const siteProperties = { site_name: 'schedsnap', environment: import.meta.env?.MODE || 'development' };
 let initialized = false;
+let ready = false;
 let posthog;
 let loading;
+const pendingEvents = [];
 
 async function applyCookieConsent() {
   if (!token) return;
   try {
     if (getCookieConsent() !== 'granted') {
+      pendingEvents.length = 0;
       if (initialized) posthog.opt_out_capturing();
       return;
     }
@@ -21,6 +24,7 @@ async function applyCookieConsent() {
       if (getCookieConsent() !== 'granted') return;
     }
     if (initialized) {
+      if (!ready) return;
       if (posthog.has_opted_out_capturing()) {
         posthog.opt_in_capturing({ captureEventName: false });
         posthog.register(siteProperties);
@@ -39,9 +43,14 @@ async function applyCookieConsent() {
       mask_all_text: true,
       mask_all_element_attributes: true,
       loaded: (client) => {
+        ready = true;
         if (getCookieConsent() !== 'granted') return;
         client.opt_in_capturing({ captureEventName: false });
         client.register(siteProperties);
+        for (const { event, properties } of pendingEvents.splice(0)) {
+          if (getCookieConsent() !== 'granted') break;
+          try { client.capture(event, properties); } catch { /* Tracking must not interrupt startup. */ }
+        }
       },
       before_send: (event) => {
         if (getCookieConsent() !== 'granted') return null;
@@ -59,12 +68,23 @@ if (typeof window !== 'undefined') {
 }
 
 export function trackEvent(event, properties = {}) {
-  if (!analyticsEnabled || !initialized || getCookieConsent() !== 'granted') return;
+  if (!analyticsEnabled || getCookieConsent() !== 'granted') return;
+  if (!initialized || !ready) {
+    if (pendingEvents.length < 50) pendingEvents.push({ event, properties: { ...properties, ...siteProperties } });
+    return;
+  }
   try {
     if (!posthog.has_opted_out_capturing()) posthog.capture(event, { ...properties, ...siteProperties });
   } catch { /* Tracking is best effort, including in restricted browsers. */ }
 }
 
 export function templateProperties(template) {
-  return { template_id: template.id, collection: template.collection || 'original' };
+  return {
+    template_id: template.id,
+    collection: template.collection || 'original',
+    background_type: template.customBackground ? 'custom' : 'preset',
+    ...(template.device ? { device: template.device } : {}),
+    schedule_layout: template.scheduleLayout || 'stacked',
+    container_style: template.containerStyle || 'glass',
+  };
 }

@@ -37,7 +37,7 @@ test('missing or invalid PostHog configuration returns unavailable without makin
   }
 });
 
-test('counts every SchedSnap production pageview without deduplicating sessions', async () => {
+test('counts all-time pageviews only on the live production hostname without deduplicating sessions', async () => {
   const response = await read(createVisitsHandler({ env, fetcher: async (url, options) => {
     assert.equal(url, 'https://us.posthog.com/api/projects/643035/query/');
     assert.equal(options.headers.Authorization, 'Bearer server-secret');
@@ -49,6 +49,8 @@ test('counts every SchedSnap production pageview without deduplicating sessions'
     assert.match(query.query, /event = '\$pageview'/);
     assert.match(query.query, /properties\.site_name = 'schedsnap'/);
     assert.match(query.query, /properties\.environment = 'production'/);
+    assert.match(query.query, /properties\.\$host = 'schedsnap\.chrbuilds\.dev'/);
+    assert.doesNotMatch(query.query, /timestamp|INTERVAL|\$pathname/);
     assert.ok(!query.query.includes('$session_id'));
     assert.ok(!query.query.includes('DISTINCT'));
     return payloadResponse([['42']]);
@@ -183,4 +185,23 @@ test('cached pageviews survive reloads, refresh successfully, and remain availab
   stored = '-1';
   const fresh = await import('../src/lib/visits.js?test=invalid-cache');
   assert.equal(fresh.getCachedVisitCount(), null);
+});
+
+test('the main-site total never reuses a cached count from the older broader query', async t => {
+  const stored = new Map([['schedsnap:pageviews', '999']]);
+  const descriptor = Object.getOwnPropertyDescriptor(globalThis, 'localStorage');
+  Object.defineProperty(globalThis, 'localStorage', { configurable: true, value: {
+    getItem: key => stored.get(key) ?? null,
+    setItem: (key, value) => stored.set(key, value),
+  } });
+  t.after(() => {
+    if (descriptor) Object.defineProperty(globalThis, 'localStorage', descriptor);
+    else delete globalThis.localStorage;
+  });
+  t.mock.method(globalThis, 'fetch', async () => ({ ok: true, json: async () => ({ visits: 100 }) }));
+  const page = await import('../src/lib/visits.js?test=main-host-cache');
+  assert.equal(page.getCachedVisitCount(), null);
+  assert.equal(await page.loadVisitCount(), 100);
+  assert.equal(stored.get('schedsnap:pageviews:production-main-site'), '100');
+  assert.equal(stored.get('schedsnap:pageviews'), '999');
 });

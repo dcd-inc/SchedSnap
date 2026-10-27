@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from 'react';
 import { ArrowLeft, ImageUp, SlidersHorizontal } from 'lucide-react';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router';
 import Toast from '../../components/Toast.jsx';
@@ -8,6 +8,7 @@ import { readDraft, saveDraft } from '../../lib/scheduleDraft.js';
 import { api, getAnalysisErrorMessage } from '../../lib/api.js';
 import { loadImportUsage, rememberImportUsage } from '../../lib/importUsage.js';
 import { templateProperties, trackEvent } from '../../lib/analytics.js';
+import { getCookieConsent, getServerCookieConsent, subscribeCookieConsent } from '../../lib/cookieConsent.js';
 import { deviceResolutions } from '../../assets/wallpaperPresets.js';
 import { supportsTemplateDevice } from '../../utils/templateDevices.js';
 import { useTemplates, useCatalogStatus } from '../../lib/catalogContext.js';
@@ -25,6 +26,7 @@ import { clearCustomBackground, customBackgroundId, readCustomBackground, saveCu
 import CustomBackgroundUpload, { BackgroundDeviceDialog } from './CustomBackgroundUpload.jsx';
 
 export default function ScheduleWallpaper() {
+  const analyticsConsent = useSyncExternalStore(subscribeCookieConsent, getCookieConsent, getServerCookieConsent);
   const catalogTemplates = useTemplates();
   const [customTemplate, setCustomTemplate] = useState(() => {
     try { return readCustomBackground(window.sessionStorage); } catch { return null; }
@@ -40,6 +42,7 @@ export default function ScheduleWallpaper() {
   const device = templateId === customBackgroundId && customTemplate ? customTemplate.device : requestedDevice;
   const [choosingBackgroundDevice, setChoosingBackgroundDevice] = useState(false);
   function changeDevice(next) {
+    trackEvent('gallery_device_changed', { device: next });
     setSearch((previous) => { const params = new URLSearchParams(previous); params.set('device', next); return params; });
   }
   function devicePath(path, targetDevice = device) {
@@ -57,11 +60,13 @@ export default function ScheduleWallpaper() {
   const [customizeRequest, setCustomizeRequest] = useState(0);
   const resolution = deviceResolutions[device];
   const previewLayout = scheduleLayoutOptions(device).some(option => option.value === search.get('layout')) ? search.get('layout') : 'stacked';
-  const previewStyle = ['glass', 'solid', 'colored', 'colored-glass', 'outline'].includes(search.get('style')) ? search.get('style') : 'glass';
+  const previewStyle = ['glass', 'solid', 'colored', 'colored-glass', 'outline', 'none'].includes(search.get('style')) ? search.get('style') : 'glass';
   function changeStyle(next) {
+    trackEvent('gallery_style_changed', { container_style: next, device });
     setSearch(previous => { const params = new URLSearchParams(previous); params.set('style', next); return params; });
   }
   function changeLayout(next) {
+    trackEvent('wallpaper_layout_changed', { schedule_layout: next, device, background_type: uploadingBackground || templateId === customBackgroundId ? 'custom' : 'preset' });
     if (templateId && !uploadingBackground) {
       setTemplateSettings(previous => {
         const current = { ...previous[templateId] };
@@ -79,6 +84,7 @@ export default function ScheduleWallpaper() {
   const [searchQuery, setSearchQuery] = useState('');
   const sort = ['likes', 'downloads', 'newest', 'oldest'].includes(search.get('sort')) ? search.get('sort') : 'likes';
   function changeSort(next) {
+    trackEvent('gallery_sort_changed', { sort: next, device });
     setSearch(previous => { const params = new URLSearchParams(previous); params.set('sort', next); return params; });
   }
   function changeCategory(next) {
@@ -140,14 +146,15 @@ export default function ScheduleWallpaper() {
   }, [showingImport]);
   const hasUnsavedChanges = !backgroundSaved || schedule.classes.length > 0 || !!image || scheduleTitle !== 'Class Schedule' || Object.values(templateSettings).some((settings) => Object.keys(settings).length > 0);
   useEffect(() => {
+    if (analyticsConsent !== 'granted') { lastTrackedStep.current = null; return; }
     if (templateId && !template && !uploadingBackground) return;
     const key = `${step}:${templateId || ''}`;
     if (lastTrackedStep.current === key) return;
     lastTrackedStep.current = key;
-    const properties = { step, ...(template ? templateProperties(template) : {}), schedule_source: scheduleSource, class_count: schedule.classes.length };
+    const properties = { step, device, ...(template ? templateProperties(template) : {}), schedule_source: scheduleSource, class_count: schedule.classes.length };
     trackEvent('wallpaper_step_viewed', properties);
     if (step === 'preview') trackEvent('schedule_previewed', properties);
-  }, [step, templateId, template, scheduleSource, schedule.classes.length, uploadingBackground]);
+  }, [analyticsConsent, step, templateId, template, scheduleSource, schedule.classes.length, uploadingBackground, device]);
   useEffect(() => {
     const unsavedAppearance = Object.values(templateSettings).some(settings => Object.keys(settings).length > 0);
     if (!hasUnsavedChanges) return;
@@ -178,7 +185,7 @@ export default function ScheduleWallpaper() {
     if (busy) return;
     setTemplateSettings(previous => ({ ...previous, [id]: { ...previous[id], scheduleLayout: previewLayout, containerStyle: previewStyle } }));
     const selected = wallpaperTemplates.find((item) => item.id === id);
-    if (selected) trackEvent('template_selected', templateProperties(selected));
+    if (selected) trackEvent('template_selected', { ...templateProperties(selected), device, schedule_layout: previewLayout, container_style: previewStyle });
     navigate(devicePath(`${basePath}/${id}${previousTemplate && search.get('step') === 'preview' ? '?step=preview' : ''}`));
   }
   useEffect(() => () => request.current?.abort(), []);
@@ -205,7 +212,7 @@ export default function ScheduleWallpaper() {
       setSchedule(checked.data);
       setImage(null);
       setScheduleSource('image');
-      trackEvent('schedule_import_succeeded', { ...properties, class_count: checked.data.classes.length, warning_count: checked.data.warnings.length, duration_ms: Math.round(performance.now() - started) });
+      trackEvent('schedule_import_succeeded', { ...properties, ai_provider: data.provider === 'deepseek' ? 'deepseek' : data.provider === 'gemini' ? 'gemini' : 'unknown', ai_model: typeof data.model === 'string' && /^[a-z0-9][a-z0-9._/-]{0,99}$/i.test(data.model) ? data.model : 'unknown', class_count: checked.data.classes.length, warning_count: checked.data.warnings.length, duration_ms: Math.round(performance.now() - started) });
       setImportResult({ provider: data.provider === 'deepseek' ? 'deepseek' : 'gemini', classCount: checked.data.classes.length });
       return true;
     } catch (failure) {
@@ -272,7 +279,7 @@ export default function ScheduleWallpaper() {
       step={step} onStep={openStep} customizeRequest={customizeRequest}
       template={template} schedule={schedule} resolution={resolution} onScheduleChange={changeSchedule}
       scheduleSource={scheduleSource} onScheduleSourceChange={setScheduleSource}
-      onAppearanceChange={(key, value) => { if (key === 'scheduleLayout') changeLayout(value); else setTemplateSettings(previous => { const settings = { ...previous[templateId] }; if (value === undefined) delete settings[key]; else settings[key] = value; return { ...previous, [templateId]: settings }; }); setAppearanceUndo(null); trackEvent('wallpaper_appearance_changed', { ...templateProperties(template), setting: key }); }}
+      onAppearanceChange={(key, value) => { if (key === 'scheduleLayout') changeLayout(value); else setTemplateSettings(previous => { const settings = { ...previous[templateId] }; if (value === undefined) delete settings[key]; else settings[key] = value; return { ...previous, [templateId]: settings }; }); setAppearanceUndo(null); trackEvent('wallpaper_appearance_changed', { ...templateProperties({ ...template, [key]: value }), setting: key }); }}
       canUndoAppearance={appearanceUndo?.id === templateId} onUndoAppearance={() => { if (appearanceUndo?.id === templateId) { setTemplateSettings(previous => ({ ...previous, [templateId]: appearanceUndo.settings })); setAppearanceUndo(null); } }}
       onResetAppearance={() => { setAppearanceUndo({ id: templateId, settings: templateSettings[templateId] || {} }); setTemplateSettings((previous) => ({ ...previous, [templateId]: {} })); trackEvent('wallpaper_appearance_reset', templateProperties(template)); }}
       image={image} busy={busy}
@@ -294,6 +301,7 @@ export default function ScheduleWallpaper() {
       setCustomTemplate(null); setBackgroundSaved(true);
       try { clearCustomBackground(window.sessionStorage); } catch { /* Storage may be disabled. */ }
     }} onSelect={next => {
+      trackEvent('custom_background_selected', { ...templateProperties(next), schedule_layout: previewLayout, container_style: previewStyle });
       setCustomTemplate(next);
       let saved = false;
       try { saved = saveCustomBackground(window.sessionStorage, next); } catch { /* Continue with the in-memory image. */ }

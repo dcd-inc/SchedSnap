@@ -43,12 +43,24 @@ Create these insights:
     initiation, not confirmed saving or wallpaper installation.
 12. Customization: wallpaper_appearance_changed by setting and collection,
     plus wallpaper_appearance_reset and wallpaper_preview_enlarged counts.
+13. Input usage: manual_schedule_started, sample_schedule_loaded,
+    schedule_upload_succeeded, schedule_import_succeeded counts and unique users.
+    Label these as starts, loads, prepared uploads and successful imports; they overlap.
+14. Final preferences: wallpaper_download_started by device, schedule_layout,
+    container_style and background_type in separate charts. device is the target
+    wallpaper size, distinct from the visitor's $device_type. glass is Frosted glass.
+    Keep missing historical preference values visible as Unknown.
+15. Custom photo workflow: custom_background_upload_started,
+    custom_background_upload_succeeded and custom_background_selected counts.
+16. Successful AI models: schedule_import_succeeded count and average duration_ms
+    by ai_model. ai_provider is gemini/deepseek; ai_model is the actual successful
+    server model, including fallback. Older imports are Unknown; do not infer a model.
 
 Use event properties rather than person-profile properties because visitors
 are anonymous. Exclude other site_name values and development events.
 Do not enable session recording or request precise location. If an event or
 property is not yet available, list the missing items for a real-site test;
-do not invent data or substitute unrelated events.
+do not invent data or substitute unrelated events. Do not add preview-problem tracking.
 ```
 
 SDK configuration reference: https://posthog.com/docs/libraries/js/config

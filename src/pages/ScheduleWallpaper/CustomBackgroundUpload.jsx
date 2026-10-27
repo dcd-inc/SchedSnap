@@ -8,6 +8,7 @@ import { scheduleLayoutOptions } from '../../utils/canvasHelpers.js';
 import { inspectImage, prepareImage } from '../../utils/imageHelpers.js';
 import { clearBackgroundDraft, createCustomBackground, readSavedBackgroundForDevice, saveBackgroundDraft } from '../../lib/customBackground.js';
 import { customizeWallpaperTemplate } from '../../utils/wallpaperTheme.js';
+import { trackEvent } from '../../lib/analytics.js';
 import ImageCropDialog from './ImageCropDialog.jsx';
 import { DesignPreview } from './TemplateGallery.jsx';
 import WallpaperViewer from './WallpaperViewer.jsx';
@@ -185,6 +186,7 @@ export default function CustomBackgroundUpload({ customTemplate, device, schedul
     setError('');
     if (files.length !== 1) { setError('Choose one background image at a time.'); return; }
     const file = files[0];
+    trackEvent('custom_background_upload_started', { device: uploadDevice });
     locked.current = true;
     setBusy(true);
     try {
@@ -192,7 +194,7 @@ export default function CustomBackgroundUpload({ customTemplate, device, schedul
       const dimensions = { width: bitmap.width, height: bitmap.height };
       bitmap.close();
       if (active.current) setSource({ file, url: URL.createObjectURL(file), ...dimensions });
-    } catch (failure) { if (active.current) setError(failure.message); }
+    } catch (failure) { if (active.current) { setError(failure.message); trackEvent('custom_background_upload_failed', { device: uploadDevice, stage: 'inspect' }); } }
     finally { locked.current = false; if (active.current) setBusy(false); }
   }
   async function confirmCrop(crop) {
@@ -202,8 +204,8 @@ export default function CustomBackgroundUpload({ customTemplate, device, schedul
     setError('');
     try {
       const prepared = await prepareImage(source.file, crop);
-      if (active.current) { updateCandidate(createCustomBackground(prepared.preview, uploadDevice)); setSource(null); focusUpload(); }
-    } catch (failure) { if (active.current) setError(failure.message); }
+      if (active.current) { updateCandidate(createCustomBackground(prepared.preview, uploadDevice)); trackEvent('custom_background_upload_succeeded', { device: uploadDevice }); setSource(null); focusUpload(); }
+    } catch (failure) { if (active.current) { setError(failure.message); trackEvent('custom_background_upload_failed', { device: uploadDevice, stage: 'crop' }); } }
     finally { locked.current = false; if (active.current) setBusy(false); }
   }
   function cancelImage() {

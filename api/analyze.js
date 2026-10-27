@@ -215,7 +215,7 @@ export function createAnalyzeHandler({ env = process.env, generate, generateDeep
         schedule = readSchedule(await callDeepseek({ model: deepseekModel, image, timeout }, deepseekKey));
         provider = 'deepseek';
       }
-      return response.status(200).json({ schedule, provider });
+      return response.status(200).json({ schedule, provider, model: provider === 'deepseek' ? deepseekModel : model });
     } catch (error) {
       if (error.code === 'NO_SCHEDULE') return failRefunded(422, 'NO_SCHEDULE', 'No class schedule was found. Upload a clearer image showing subjects, days, and times.');
       if (error.code === 'INVALID_AI_RESPONSE') return failRefunded(502, 'INVALID_AI_RESPONSE', 'The schedule could not be read reliably. Try a clearer image or enter your classes manually.');

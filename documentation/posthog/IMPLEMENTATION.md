@@ -36,7 +36,7 @@ flowchart LR
 
 Automatic events use the SDK directly after acceptance. UI handlers call `trackEvent(event, properties)`, which skips capture if analytics is disabled, not initialized, or consent is absent. Delivery uses the browser SDK; this application has no PostHog server-side endpoint or backend analytics SDK.
 
-`templateProperties(template)` returns only the design's `template_id` and `collection`. It defaults a missing collection to `original`; it does not serialize the full template or schedule.
+`templateProperties(template)` returns `template_id`, `collection`, `background_type` (custom/preset), `device` when present, `schedule_layout`, and `container_style`. It does not serialize images, titles, or schedules. `glass` means Frosted glass; `colored-glass` means Colored glass. Download metadata describes the final selected preferences, while gallery and appearance events describe experimentation.
 
 ## Source Map
 
@@ -85,6 +85,14 @@ All events include `site_name` and `environment`, plus standard PostHog browser/
 | `designs_explored` | Hero Explore click | `source` |
 | `wallpaper_step_viewed` | Creator enters design, classes or preview | `step`, optional template properties, `schedule_source`, `class_count` |
 | `collection_filtered` | Gallery filter changes | `collection` |
+| `gallery_device_changed` | Target wallpaper device changes | `device`: mobile/tablet/laptop (different from the visitor's `$device_type`) |
+| `gallery_sort_changed` | Gallery sorting changes | `sort`, `device` |
+| `gallery_style_changed` | Gallery style changes | `container_style`, `device` |
+| `wallpaper_layout_changed` | Layout picker changes | `schedule_layout`, `device`, `background_type` |
+| `custom_background_upload_started` | A custom photo is chosen for inspection | `device` |
+| `custom_background_upload_succeeded` | Custom photo crop is successfully prepared | `device` |
+| `custom_background_upload_failed` | Photo inspection or cropping fails | `device`, `stage`: inspect/crop |
+| `custom_background_selected` | Custom photo is accepted for the creator | Template properties |
 | `template_previewed` | Gallery design preview opens | Template properties |
 | `template_selected` | Use this design click | Template properties |
 | `manual_schedule_started` | Enter manually click | Template properties |
@@ -93,7 +101,7 @@ All events include `site_name` and `environment`, plus standard PostHog browser/
 | `schedule_upload_succeeded` | Image is ready for import | `file_type`, `file_size_bytes` |
 | `schedule_upload_failed` | Image preparation fails | File metadata, `error_type` |
 | `schedule_import_started` | Import classes request starts | Template properties |
-| `schedule_import_succeeded` | Validated extraction is accepted | Template properties, `class_count`, `warning_count`, `duration_ms` |
+| `schedule_import_succeeded` | Validated extraction is accepted | Template properties, `ai_provider`, `ai_model`, `class_count`, `warning_count`, `duration_ms`; model comes from the actual successful server provider, including fallback |
 | `schedule_import_failed` | API/network/validation failure | Template properties, `http_status`, `error_type`, `duration_ms` |
 | `schedule_import_cancelled` | An in-flight import is aborted | Template properties |
 | `schedule_previewed` | Creator enters preview | Template properties, `step`, `schedule_source`, `class_count` |
@@ -103,11 +111,15 @@ All events include `site_name` and `environment`, plus standard PostHog browser/
 | `wallpaper_download_requested` | Enabled Download wallpaper click | Template properties, `schedule_source`, `class_count`, `width`, `height` |
 | `wallpaper_download_started` | PNG is rendered and browser download/open is requested | Download properties, `download_method`, `duration_ms` |
 | `wallpaper_download_failed` | Rendering or download initiation throws | Download properties, `stage` |
-| `wallpaper_download_repeated` | Save PNG again link click | Template properties, `schedule_source` |
+| `wallpaper_download_repeated` | Another successful download initiation of the unchanged export in this workspace | Download properties |
 
 `schedule_source` is `manual`, `image`, `sample`, or `unknown`. Edits retain the source used to create the schedule. Step views are deduplicated against React StrictMode and changes to the current step's form state; returning to a step records a new view. SPA pageviews track pathname changes; the custom step events cover the query-based transition from classes to preview.
 
-`wallpaper_download_started` means the browser was asked to download/open a generated PNG. It does not prove that the user saved it to disk or set it as their wallpaper. `download_method` is `download_link` or `new_tab` for the in-app-browser fallback. The repeat link has its own event and should not inflate first-download totals. `duration_ms` is measured in milliseconds. Color inputs may generate multiple appearance-change events while dragging.
+`wallpaper_download_started` means the browser was asked to download/open a generated PNG. It does not prove that the user saved it to disk or set it as their wallpaper. `download_method` is `download_link` or `new_tab` for the in-app-browser fallback. Repeats also emit started; use unique downloaders for reach and repeated events to understand retries. `duration_ms` is measured in milliseconds. Color inputs may generate multiple appearance-change events while dragging.
+
+PostHog insights count consented activity in the selected period. Old events lack newly added dimensions; keep unknown values visible rather than guessing. AI model usage covers successful imports, not failed internal provider attempts. Manual starts, sample loads, image uploads, and successful AI imports overlap within a session and are not mutually exclusive users.
+
+`tests/analyticsWorkflow.test.js` executes actual component handlers with mocked browser/image/AI services, covering preference combinations, manual/sample/uploads/imports, both AI providers, cancellation/failure, custom photos, download success/failure/repeats and payload privacy. Consent has separate tests. These tests do not send synthetic events to production PostHog.
 
 ## Dashboard
 

@@ -89,6 +89,7 @@ test('returns validated extracted data, using the configured model and inline im
   assert.equal(response.statusCode, 200);
   assert.deepEqual(response.body.schedule, sampleSchedule);
   assert.equal(parameters.model, 'configured-model');
+  assert.equal(response.body.model, 'configured-model');
   assert.equal(parameters.contents[0].parts[1].inlineData.data, image.image);
   assert.match(parameters.contents[0].parts[0].text, /at most 12 simple words/);
   assert.match(parameters.contents[0].parts[0].text, /Do not report overlaps/);
@@ -252,6 +253,7 @@ test('DeepSeek fallback sends a strict JSON-mode vision request', async (t) => {
   assert.equal(request.url, 'https://api.deepseek.com/chat/completions');
   assert.equal(request.headers.get('authorization'), 'Bearer deepseek-secret');
   assert.equal(request.body.model, 'deepseek-v4-flash');
+  assert.equal(response.body.model, 'deepseek-v4-flash');
   assert.equal(request.body.response_format.type, 'json_object');
   assert.equal(request.body.thinking.type, 'disabled');
   assert.equal(request.body.messages[1].content[1].image_url.detail, 'original');

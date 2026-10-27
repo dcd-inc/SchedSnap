@@ -2,7 +2,7 @@ let visitRequest;
 let pending = false;
 let expires = 0;
 let lastVisitCount = null;
-const CACHE_KEY = 'schedsnap:pageviews';
+const CACHE_KEY = 'schedsnap:pageviews:production-main-site';
 
 export function getCachedVisitCount() {
   try {
