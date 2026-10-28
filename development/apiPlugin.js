@@ -4,6 +4,8 @@ import { createAdminHandler } from '../api/admin.js';
 import { createPublicCatalogHandler } from '../api/catalog.js';
 import { createDownloadsHandler } from '../api/downloads.js';
 import { createLikesHandler } from '../api/likes.js';
+import { createFeedbackHandler } from '../api/feedback.js';
+import { createFeedbackStore } from '../server/feedbackStore.js';
 import { MAX_BODY_BYTES } from '../shared/uploadLimits.js';
 import { snoopyTemplates } from '../src/assets/snoopyTemplates.js';
 import { meepTemplates } from '../src/assets/meepTemplates.js';
@@ -27,6 +29,7 @@ export function localApiPlugin(env) {
   return {
     name: 'unitoolbox-local-api',
     configureServer(server) {
+      const feedback = createFeedbackHandler({ store: createFeedbackStore({ env }) });
       const analyze = createAnalyzeHandler({ env });
       const visits = createVisitsHandler({ env });
       const admin = createAdminHandler({ env });
@@ -35,7 +38,7 @@ export function localApiPlugin(env) {
       const downloads = createDownloadsHandler({ env });
       server.middlewares.use(async (request, response, next) => {
         const path = request.url?.split('?')[0];
-        if (!['/api/analyze', '/api/visits', '/api/admin', '/api/catalog', '/api/likes', '/api/downloads'].includes(path)) return next();
+        if (!['/api/analyze', '/api/visits', '/api/admin', '/api/catalog', '/api/likes', '/api/downloads', '/api/feedback'].includes(path)) return next();
         response.setHeader('Cache-Control', 'no-store');
         response.status = (code) => { response.statusCode = code; return response; };
         response.json = (body) => { response.setHeader('Content-Type', 'application/json'); response.end(JSON.stringify(body)); return response; };
@@ -43,7 +46,7 @@ export function localApiPlugin(env) {
         if (path === '/api/catalog') return catalog(request, response);
         try {
           if (request.method === 'POST') {
-            const limit = ['/api/likes', '/api/downloads'].includes(path) ? 1024 : path === '/api/admin' ? 100000 : MAX_BODY_BYTES;
+            const limit = path === '/api/feedback' ? 6000 : ['/api/likes', '/api/downloads'].includes(path) ? 1024 : path === '/api/admin' ? 100000 : MAX_BODY_BYTES;
             const chunks = [];
             let size = 0;
             for await (const chunk of request) {
@@ -53,7 +56,7 @@ export function localApiPlugin(env) {
             if (size > limit) return response.status(413).json({ error: { code: 'IMAGE_TOO_LARGE', message: 'The request is too large.' } });
             request.body = JSON.parse(Buffer.concat(chunks).toString());
           }
-          await (path === '/api/downloads' ? downloads : path === '/api/likes' ? likes : path === '/api/admin' ? admin : analyze)(request, response);
+          await (path === '/api/feedback' ? feedback : path === '/api/downloads' ? downloads : path === '/api/likes' ? likes : path === '/api/admin' ? admin : analyze)(request, response);
         } catch {
           response.status(400).json({ error: { code: path === '/api/likes' ? 'INVALID_REQUEST' : 'INVALID_IMAGE', message: path === '/api/likes' ? 'Invalid like request.' : 'Upload a valid schedule image.' } });
         }

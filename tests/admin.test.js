@@ -261,3 +261,39 @@ test('save draft and publish actions preserve scheduleLayout and showTitle, and 
   assert.equal(catalog.templates[0].showTitle, false);
   assert.equal(catalog.templates[0].scheduleLayout, 'timeline');
 });
+
+test('feedback inbox and status updates require admin authentication', async () => {
+  let resolved = false;
+  const feedback = { read: async () => [{ id: 'one', resolved }], setResolved: async (id, value) => { if (id !== 'one') return false; resolved = value; return true; } };
+  const handler = createAdminHandler({ env, feedback });
+  let result = response(); await handler(req('feedback'), result); assert.equal(result.code, 401);
+  result = response(); await handler(req('feedback-status', { id: 'one', resolved: true }), result); assert.equal(result.code, 401);
+  result = response(); await handler(req('feedback-status', { id: 'one', resolved: true }, cookie()), result); assert.equal(result.code, 200);
+  result = response(); await handler(req('feedback', undefined, cookie()), result); assert.equal(result.body.feedback[0].resolved, true);
+  result = response(); await handler(req('feedback-status', { id: 'missing', resolved: false }, cookie()), result); assert.equal(result.code, 404);
+  result = response(); await handler(req('feedback-status', { id: 'one', resolved: 'yes' }, cookie()), result); assert.equal(result.code, 400);
+});
+
+test('feedback bulk actions validate requests, require login, and invalidate cached pages', async () => {
+  const messages = [{ id: 'one', status: 'open', starred: false, read: false, category: 'Feature request', message: 'Suggestion', createdAt: '2026-10-28T00:00:00.000Z' }];
+  let reads = 0, writes = 0;
+  const feedback = { read: async () => { reads++; return structuredClone(messages); }, updateMany: async (ids, changes) => { writes++; if (ids.some(id => id !== 'one')) return false; Object.assign(messages[0], changes); return true; }, deleteMany: async ids => { if (ids.some(id => id !== 'one')) return false; messages.length = 0; return true; } };
+  const handler = createAdminHandler({ env, feedback });
+  let result = response(); await handler(req('feedback-bulk', { ids: ['one'], status: 'trash' }), result); assert.equal(result.code, 401);
+  for (const body of [{ ids: [], status: 'trash' }, { ids: ['one', 'one'], status: 'trash' }, { ids: ['one'], status: 'invalid' }, { ids: ['one'], starred: 'yes' }, { ids: ['one'], read: true, status: 'trash' }]) {
+    result = response(); await handler(req('feedback-bulk', body, cookie()), result); assert.equal(result.code, 400);
+  }
+  assert.equal(writes, 0);
+  result = response(); await handler(req('feedback&limit=20', undefined, cookie()), result); assert.equal(result.body.feedback.length, 1);
+  result = response(); await handler(req('feedback&limit=20', undefined, cookie()), result); assert.equal(reads, 1);
+  result = response(); await handler(req('feedback-bulk', { ids: ['one'], status: 'archived' }, cookie()), result); assert.equal(result.code, 200);
+  result = response(); await handler(req('feedback&limit=20&folder=archived', undefined, cookie()), result); assert.equal(reads, 2); assert.equal(result.body.feedback[0].status, 'archived');
+  for (const changes of [{ starred: true }, { read: true }, { status: 'open' }]) {
+    result = response(); await handler(req('feedback-bulk', { ids: ['one'], ...changes }, cookie()), result); assert.equal(result.code, 200);
+  }
+  assert.equal(messages[0].starred, true); assert.equal(messages[0].read, true); assert.equal(messages[0].status, 'open');
+  result = response(); await handler(req('feedback-bulk', { ids: ['one'], deleted: true }), result); assert.equal(result.code, 401);
+  result = response(); await handler(req('feedback-bulk', { ids: ['one'], deleted: false }, cookie()), result); assert.equal(result.code, 400);
+  result = response(); await handler(req('feedback-bulk', { ids: ['one'], deleted: true }, cookie()), result); assert.equal(result.code, 200);
+  result = response(); await handler(req('feedback&limit=20', undefined, cookie()), result); assert.equal(result.body.feedback.length, 0);
+});

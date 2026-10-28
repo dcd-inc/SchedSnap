@@ -1,5 +1,6 @@
-import { ArrowRight, ChevronDown } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import { Link } from 'react-router';
+import FeedbackDialog from './FeedbackDialog.jsx';
 
 const questions = [
   {
@@ -39,10 +40,10 @@ export default function Faq() {
     </div>
     <div className="faq-cta">
       <div className="faq-cta-copy">
-        <h2>Ready to make your schedule wallpaper?</h2>
-        <p>Pick a design, add your classes, and download instantly—100% free.</p>
+        <h2>Have a suggestion?</h2>
+        <p>Got a new design idea, a feature request, or spotted something broken? Help us make things better.</p>
       </div>
-      <Link to="/services/schedule-wallpaper" className="button-primary">Create your wallpaper <ArrowRight size={18} aria-hidden="true" /></Link>
+      <FeedbackDialog />
     </div>
   </section>;
 }

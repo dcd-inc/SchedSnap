@@ -1,4 +1,6 @@
 import { randomUUID } from 'node:crypto';
+import { createFeedbackStore } from '../server/feedbackStore.js';
+import { feedbackPageOptions, paginateFeedback } from '../server/feedbackPagination.js';
 import { authConfigured, createSession, isAuthenticated, sameOrigin, sessionCookie, verifyAdminPassword } from '../server/adminAuth.js';
 import { cloudConfigured, createCatalogStore, signCloud } from '../server/catalogStore.js';
 import { templateSchema } from '../shared/templateSchema.js';
@@ -10,8 +12,11 @@ import { createDesignDownloads } from '../server/designDownloads.js';
 import { createDesignLikes } from '../server/designLikes.js';
 import { withTemplateKeywords } from '../shared/templateKeywords.js';
 
-export function createAdminHandler({ env = process.env, store = createCatalogStore(env), now = () => Date.now(), destroyArtwork = createArtworkDeleter(env), resolveArtworkIds = template => artworkIds(template, env), downloads = createDesignDownloads({ env }), likes = createDesignLikes({ env }) } = {}) {
+export function createAdminHandler({ env = process.env, store = createCatalogStore(env), now = () => Date.now(), destroyArtwork = createArtworkDeleter(env), resolveArtworkIds = template => artworkIds(template, env), downloads = createDesignDownloads({ env }), likes = createDesignLikes({ env }), feedback = createFeedbackStore({ env }) } = {}) {
   const attempts = new Map();
+  let feedbackSnapshot;
+  let feedbackSnapshotUntil = 0;
+  function clearFeedbackSnapshot() { feedbackSnapshot = undefined; feedbackSnapshotUntil = 0; }
   let saving = false;
   return async function admin(request, response) {
     response.setHeader('Cache-Control', 'no-store');
@@ -24,6 +29,24 @@ export function createAdminHandler({ env = process.env, store = createCatalogSto
       const authenticated = isAuthenticated(request, env, now());
       if (action === 'session') return response.status(200).json({ authenticated });
       if (!authenticated) return fail(401, 'Sign in to manage designs.');
+      if (action === 'feedback') {
+        let options;
+        const params = new URL(request.url, 'http://localhost').searchParams;
+        if (params.has('limit')) {
+          try { options = feedbackPageOptions(params); }
+          catch { return fail(400, 'Invalid feedback filters.'); }
+        }
+        try {
+          // Reuse one short-lived read across scrolling requests; writes invalidate it immediately.
+          if (!feedbackSnapshot || now() >= feedbackSnapshotUntil) {
+            feedbackSnapshotUntil = now() + 5000;
+            feedbackSnapshot = feedback.read();
+          }
+          const messages = await feedbackSnapshot;
+          return response.status(200).json(options ? paginateFeedback(messages, options) : { feedback: messages });
+        }
+        catch { clearFeedbackSnapshot(); return fail(503, 'Feedback could not load. Please retry.'); }
+      }
       if (action === 'metrics') {
         try {
           const catalog = await store.read();
@@ -67,6 +90,35 @@ export function createAdminHandler({ env = process.env, store = createCatalogSto
     }
     if (!isAuthenticated(request, env, now())) return fail(401, 'Your session ended. Sign in again.');
     if (action === 'logout') { response.setHeader('Set-Cookie', sessionCookie('', env)); return response.status(200).json({ authenticated: false }); }
+    if (action === 'feedback-bulk') {
+      const validIds = Array.isArray(body.ids) && body.ids.length > 0 && body.ids.length <= 100 && body.ids.every(id => typeof id === 'string' && id.length > 0 && id.length <= 100) && new Set(body.ids).size === body.ids.length;
+      const changeKeys = ['status', 'starred', 'read', 'deleted'].filter(key => body[key] !== undefined);
+      const validChange = changeKeys.length === 1 && (body.status !== undefined ? ['open', 'resolved', 'archived'].includes(body.status) : body.deleted !== undefined ? body.deleted === true : typeof body[changeKeys[0]] === 'boolean');
+      if (!validIds || !validChange) return fail(400, 'Select up to 100 messages and choose a valid action.');
+      try {
+        const updated = body.deleted ? await feedback.deleteMany(body.ids) : await feedback.updateMany(body.ids, { [changeKeys[0]]: body[changeKeys[0]] });
+        if (!updated) return fail(409, 'Feedback changed. Refresh and try again.');
+        clearFeedbackSnapshot();
+        return response.status(200).json({ ok: true });
+      } catch { return fail(503, 'Feedback could not be updated. Please retry.'); }
+    }
+    if (action === 'feedback-star') {
+      if (typeof body.id !== 'string' || !body.id || body.id.length > 100 || typeof body.starred !== 'boolean') return fail(400, 'Invalid feedback star.');
+      try {
+        if (!await feedback.setStarred(body.id, body.starred)) return fail(404, 'Feedback not found.');
+        clearFeedbackSnapshot();
+        return response.status(200).json({ ok: true });
+      } catch { return fail(503, 'Feedback could not be updated. Please retry.'); }
+    }
+    if (action === 'feedback-status') {
+      if (typeof body.id !== 'string' || !body.id || body.id.length > 100 || (body.status !== undefined ? !['open', 'resolved', 'archived'].includes(body.status) : typeof body.resolved !== 'boolean')) return fail(400, 'Invalid feedback status.');
+      try {
+        const updated = body.status !== undefined ? await feedback.setStatus(body.id, body.status) : await feedback.setResolved(body.id, body.resolved);
+        if (!updated) return fail(404, 'Feedback not found.');
+        clearFeedbackSnapshot();
+        return response.status(200).json({ ok: true });
+      } catch { return fail(503, 'Feedback could not be updated. Please retry.'); }
+    }
     if (!cloudConfigured(env)) return fail(503, 'Configure Cloudinary before managing designs.');
     if (action === 'upload') {
       const parameters = { public_id: `schedsnap/admin/artwork/${randomUUID()}`, overwrite: 'false', allowed_formats: 'png,jpg,webp', timestamp: String(Math.floor(now() / 1000)) };

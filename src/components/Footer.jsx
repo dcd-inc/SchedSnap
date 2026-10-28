@@ -2,6 +2,7 @@ import { Link } from 'react-router';
 import BrandMark from './BrandMark.jsx';
 import MakerBanner from './MakerBanner.jsx';
 import SocialLinks from './SocialLinks.jsx';
+import FeedbackDialog from './FeedbackDialog.jsx';
 
 export default function Footer() {
   return (
@@ -11,6 +12,7 @@ export default function Footer() {
       <div className="page-wrap footer-content">
         <Link to="/" className="site-brand"><BrandMark /> SchedSnap</Link>
         <nav className="footer-links footer-policies" aria-label="Footer">
+          <FeedbackDialog footer />
           <Link to="/terms">Terms of use</Link>
           <Link to="/privacy">Privacy policy</Link>
           <Link to="/cookies">Cookies</Link>
