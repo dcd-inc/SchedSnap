@@ -2,7 +2,7 @@ import { hunterTemplates } from '../src/assets/hunterTemplates.js';
 import { cloudConfigured, createCatalogStore, seedCatalog } from '../server/catalogStore.js';
 import { withTemplateKeywords } from '../shared/templateKeywords.js';
 import { withBuiltInPatterns } from '../shared/patternCatalog.js';
-const retiredDesignIds = new Set(['adventure-bmo', 'wbb-paper-pals', 'wbb-dusk-book-club', 'naruto-retrieval-squad', 'naruto-leaf-ink-lineup', 'naruto-sharingan-gaze']);
+const retiredDesignIds = new Set(['adventure-bmo', 'wbb-paper-pals', 'wbb-dusk-book-club', 'naruto-retrieval-squad', 'naruto-leaf-ink-lineup', 'naruto-sharingan-gaze', 'naruto-sasuke-quiet-ink', 'naruto-kakashi-obito']);
 const plainPlacements = new Map(hunterTemplates.filter(t => t.id.startsWith('hxh-plain-')).map(t => [t.id, t.verticalPosition]));
 const legacyPlainPositions = { 'hxh-plain-pakunoda': -100, 'hxh-plain-machi': -90, 'hxh-plain-ging': -90, 'hxh-plain-uvogin': -80, 'hxh-plain-illumi': -80, 'hxh-plain-nobunaga': -75, 'hxh-plain-hisoka': -75 };
 function currentPlacement(template) {
