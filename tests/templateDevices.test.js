@@ -3,8 +3,8 @@ import assert from 'node:assert/strict';
 import { narutoTemplates } from '../src/assets/narutoTemplates.js';
 import { supportsTemplateDevice } from '../src/utils/templateDevices.js';
 
-test('the six retained Naruto references are available only on laptops, including remote records', () => {
-  assert.equal(narutoTemplates.length, 6);
+test('the four retained Naruto references are available only on laptops, including remote records', () => {
+  assert.equal(narutoTemplates.length, 4);
   for (const template of narutoTemplates) {
     for (const record of [template, { id: template.id }]) {
       assert.equal(supportsTemplateDevice(record, 'mobile'), false, template.id);
