@@ -1,6 +1,7 @@
 
 export const designCollections = [
   { id: 'all', name: 'All designs' },
+  { id: 'transformers', name: 'Transformers', searchTerms: ['Autobots', 'Decepticons', 'Cybertron'] },
   { id: 'wuthering-waves', name: 'Wuthering Waves', searchTerms: ['WuWa', 'Wuthering'] },
   { id: 'cars', name: 'Cars', searchTerms: ['car wallpaper', 'automotive', 'sports car', 'Porsche', 'Ferrari', 'McLaren'] },
   { id: 'anime', name: 'Anime', searchTerms: ['anime wallpaper', 'manga'] },

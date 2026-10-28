@@ -1,0 +1,66 @@
+{
+  "approval": "User authorized publishing only the five previously approved Transformers designs, individual keywords, Cloudinary delivery, and push to GitHub main. All six batch-02 previews are rejected.",
+  "processing": "Full-image resize to 1080x2400; no crop or repaint.",
+  "assets": [
+    {
+      "id": "transformers-golden-visor",
+      "name": "Golden Visor",
+      "path": "public/wallpapers/scenic/transformers-golden-visor/mobile.png",
+      "sourcePath": "output/transformers/approved-batch-01/01-golden-visor.png",
+      "sourceSha256": "497f02566671c71f21bccf6641a9662a39a4740cd3cbefc5b6b18bb963250029",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "cb1d7a569eb747671483d042d1819b213b7cf638c2293516fc93983ed1b7a691"
+    },
+    {
+      "id": "transformers-stellar-frontline",
+      "name": "Stellar Frontline",
+      "path": "public/wallpapers/scenic/transformers-stellar-frontline/mobile.png",
+      "sourcePath": "output/transformers/approved-batch-01/02-stellar-frontline.png",
+      "sourceSha256": "5c692c6eb02f92fc7863523323af586d6924b292aaa680031a821561048dcd5b",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "522077f3691042559940d7ed382b3296d4b1e21d223934a3c44509297da28bd2"
+    },
+    {
+      "id": "transformers-scarlet-command",
+      "name": "Scarlet Command",
+      "path": "public/wallpapers/scenic/transformers-scarlet-command/mobile.png",
+      "sourcePath": "output/transformers/approved-batch-01/03-scarlet-command.png",
+      "sourceSha256": "401813100a04cba79fdce19a4f358111c553dbb628cf3421598338c4ef21bdf3",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "76134d76059db535692ef057cdb2627a15b9bc7999bf5526ec752d1185d31a8d"
+    },
+    {
+      "id": "transformers-sunlit-vanguard",
+      "name": "Sunlit Vanguard",
+      "path": "public/wallpapers/scenic/transformers-sunlit-vanguard/mobile.png",
+      "sourcePath": "output/transformers/approved-batch-01/04-sunlit-vanguard.png",
+      "sourceSha256": "a2c6334dc5d8adaf06d5cedc8df9c6f8a6b720ac111f13f6e31558b4f810763c",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "cbbef227d80b45bbfcc4ae4313c7372095ba6fac2d080aa50e39c62e44e5befd"
+    },
+    {
+      "id": "transformers-steel-and-scarlet",
+      "name": "Steel and Scarlet",
+      "path": "public/wallpapers/scenic/transformers-steel-and-scarlet/mobile.png",
+      "sourcePath": "output/transformers/approved-batch-01/05-steel-and-scarlet.png",
+      "sourceSha256": "e53b668be08ccbafa3dc298636cd2ae2e67c70dd9384f263470618043ef759f3",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "ada60b9716c514fec18f0997fbfe97fa5c088446c712282a284eb60b71391efb"
+    }
+  ]
+}

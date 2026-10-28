@@ -1,0 +1,78 @@
+{
+  "collection": "Transformers",
+  "approvedCount": 5,
+  "status": "published",
+  "instruction": "User authorized publishing only the five previously approved Transformers designs, individual keywords, Cloudinary delivery, and push to GitHub main. All six batch-02 previews are rejected.",
+  "assets": [
+    {
+      "id": "transformers-golden-visor",
+      "name": "Golden Visor",
+      "previewNumber": 9,
+      "selectionNumber": 1,
+      "path": "output/transformers/approved-batch-01/01-golden-visor.png",
+      "sourceAttachment": "codex-clipboard-133cee02-4b3b-441f-89a6-430c845bb75f.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "497f02566671c71f21bccf6641a9662a39a4740cd3cbefc5b6b18bb963250029",
+      "approvalStatus": "approved",
+      "publicationStatus": "published",
+      "deliveryUrl": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793181892/schedsnap/wallpapers/scenic/transformers-golden-visor/mobile-cb1d7a569eb74767.png"
+    },
+    {
+      "id": "transformers-stellar-frontline",
+      "name": "Stellar Frontline",
+      "previewNumber": 7,
+      "selectionNumber": 2,
+      "path": "output/transformers/approved-batch-01/02-stellar-frontline.png",
+      "sourceAttachment": "codex-clipboard-5c471fb3-dbfc-4def-a90e-17776031a797.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "5c692c6eb02f92fc7863523323af586d6924b292aaa680031a821561048dcd5b",
+      "approvalStatus": "approved",
+      "publicationStatus": "published",
+      "deliveryUrl": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793181893/schedsnap/wallpapers/scenic/transformers-stellar-frontline/mobile-522077f369104255.png"
+    },
+    {
+      "id": "transformers-scarlet-command",
+      "name": "Scarlet Command",
+      "previewNumber": 2,
+      "selectionNumber": 3,
+      "path": "output/transformers/approved-batch-01/03-scarlet-command.png",
+      "sourceAttachment": "codex-clipboard-6561041a-4b2b-49a4-a1a0-c3a388c17a03.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "401813100a04cba79fdce19a4f358111c553dbb628cf3421598338c4ef21bdf3",
+      "approvalStatus": "approved",
+      "publicationStatus": "published",
+      "deliveryUrl": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793181892/schedsnap/wallpapers/scenic/transformers-scarlet-command/mobile-76134d76059db535.png"
+    },
+    {
+      "id": "transformers-sunlit-vanguard",
+      "name": "Sunlit Vanguard",
+      "previewNumber": 6,
+      "selectionNumber": 4,
+      "path": "output/transformers/approved-batch-01/04-sunlit-vanguard.png",
+      "sourceAttachment": "codex-clipboard-26130fab-a231-4752-aa77-d2552554f157.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "a2c6334dc5d8adaf06d5cedc8df9c6f8a6b720ac111f13f6e31558b4f810763c",
+      "approvalStatus": "approved",
+      "publicationStatus": "published",
+      "deliveryUrl": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793181894/schedsnap/wallpapers/scenic/transformers-sunlit-vanguard/mobile-cbbef227d80b45bb.png"
+    },
+    {
+      "id": "transformers-steel-and-scarlet",
+      "name": "Steel and Scarlet",
+      "previewNumber": 4,
+      "selectionNumber": 5,
+      "path": "output/transformers/approved-batch-01/05-steel-and-scarlet.png",
+      "sourceAttachment": "codex-clipboard-d0da1434-12c4-4236-b52f-1bc864092101.png",
+      "width": 841,
+      "height": 1870,
+      "sha256": "e53b668be08ccbafa3dc298636cd2ae2e67c70dd9384f263470618043ef759f3",
+      "approvalStatus": "approved",
+      "publicationStatus": "published",
+      "deliveryUrl": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793181893/schedsnap/wallpapers/scenic/transformers-steel-and-scarlet/mobile-ada60b9716c514fe.png"
+    }
+  ]
+}

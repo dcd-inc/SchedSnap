@@ -17,6 +17,7 @@ import { capybaraTemplates } from './capybaraTemplates.js';
 import { animeTemplates } from './animeTemplates.js';
 import { jinxTemplates } from './jinxTemplates.js';
 import { arcaneTemplates } from './arcaneTemplates.js';
+import { transformersTemplates } from './transformersTemplates.js';
 import { wutheringWavesTemplates } from './wutheringWavesTemplates.js';
 import { narutoTemplates } from './narutoTemplates.js';
 import { collageTemplates } from './collageTemplates.js';
@@ -44,6 +45,7 @@ export const wallpaperTemplates = [
   ...jinxTemplates,
   ...arcaneTemplates,
   ...wutheringWavesTemplates,
+  ...transformersTemplates,
   ...narutoTemplates,
   ...collageTemplates,
   ...carTemplates,

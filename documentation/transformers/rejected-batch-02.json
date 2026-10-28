@@ -1,0 +1,41 @@
+{
+  "status": "All six rejected by user; do not upload or publish.",
+  "assets": [
+    {
+      "number": 1,
+      "name": "Golden Gate Guardian",
+      "slug": "01-golden-gate-guardian",
+      "approvalStatus": "rejected"
+    },
+    {
+      "number": 2,
+      "name": "Ochre Momentum",
+      "slug": "02-ochre-momentum",
+      "approvalStatus": "rejected"
+    },
+    {
+      "number": 3,
+      "name": "Pacific Watch",
+      "slug": "03-pacific-watch",
+      "approvalStatus": "rejected"
+    },
+    {
+      "number": 4,
+      "name": "Titans At Dusk",
+      "slug": "04-titans-at-dusk",
+      "approvalStatus": "rejected"
+    },
+    {
+      "number": 5,
+      "name": "Gold And Cyan",
+      "slug": "05-gold-and-cyan",
+      "approvalStatus": "rejected"
+    },
+    {
+      "number": 6,
+      "name": "Azure Optic",
+      "slug": "06-azure-optic",
+      "approvalStatus": "rejected"
+    }
+  ]
+}
