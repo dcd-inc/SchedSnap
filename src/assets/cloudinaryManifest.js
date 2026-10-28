@@ -5550,5 +5550,40 @@ export default {
     "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793115089/schedsnap/wallpapers/scenic/wuwa-vermilion-moon/mobile-daf9495ca36c128a.png",
     "width": 1080,
     "height": 2400
+  },
+  "/wallpapers/scenic/transformers-scarlet-command/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/transformers-scarlet-command/mobile-76134d76059db535",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793181892/schedsnap/wallpapers/scenic/transformers-scarlet-command/mobile-76134d76059db535.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/transformers-golden-visor/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/transformers-golden-visor/mobile-cb1d7a569eb74767",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793181892/schedsnap/wallpapers/scenic/transformers-golden-visor/mobile-cb1d7a569eb74767.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/transformers-steel-and-scarlet/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/transformers-steel-and-scarlet/mobile-ada60b9716c514fe",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793181893/schedsnap/wallpapers/scenic/transformers-steel-and-scarlet/mobile-ada60b9716c514fe.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/transformers-stellar-frontline/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/transformers-stellar-frontline/mobile-522077f369104255",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793181893/schedsnap/wallpapers/scenic/transformers-stellar-frontline/mobile-522077f369104255.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/transformers-sunlit-vanguard/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/transformers-sunlit-vanguard/mobile-cbbef227d80b45bb",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793181894/schedsnap/wallpapers/scenic/transformers-sunlit-vanguard/mobile-cbbef227d80b45bb.png",
+    "width": 1080,
+    "height": 2400
   }
 };
