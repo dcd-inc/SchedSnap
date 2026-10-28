@@ -8,6 +8,7 @@ export const designCollections = [
   { id: 'naruto', name: 'Naruto', searchTerms: ['Naruto Shippuden', 'Hidden Leaf', 'Akatsuki'] },
   { id: 'arcane', name: 'Arcane', searchTerms: ['League of Legends', 'Jinx', 'Vi', 'Ekko', 'Caitlyn', 'Viktor', 'LoL', 'Zaun'] },
   { id: 'collage', name: 'Collage', searchTerms: ['scrapbook', 'grunge', 'music collage', 'gothic collage'] },
+  { id: 'doodle', name: 'Doodle', searchTerms: ['doodles', 'cute characters', 'cartoon crowd'] },
   { id: 'sanrio', name: 'Sanrio' },
   { id: 'snoopy', name: 'Snoopy', searchTerms: ['Peanuts', 'Woodstock'] },
   { id: 'genshin', name: 'Genshin', searchTerms: ['Genshin Impact'] },

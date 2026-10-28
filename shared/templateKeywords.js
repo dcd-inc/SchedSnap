@@ -13,6 +13,7 @@ export function genshinKeywords(template) {
 }
 
 const collectionTags = {
+  doodle: ['doodle', 'cute', 'cartoon', 'character crowd'],
   transformers: ['Transformers', 'robots', 'science fiction'],
   'wuthering-waves': ['Wuthering Waves', 'WuWa', 'game', 'anime'],
   collage: ['collage', 'scrapbook', 'torn paper', 'mobile wallpaper'],

@@ -5585,5 +5585,145 @@ export default {
     "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793181894/schedsnap/wallpapers/scenic/transformers-sunlit-vanguard/mobile-cbbef227d80b45bb.png",
     "width": 1080,
     "height": 2400
+  },
+  "/wallpapers/scenic/doodle-confetti-cat-crowd/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/doodle-confetti-cat-crowd/mobile-9512e21226b1a7f5",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793188633/schedsnap/wallpapers/scenic/doodle-confetti-cat-crowd/mobile-9512e21226b1a7f5.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/doodle-cool-duck-club/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/doodle-cool-duck-club/mobile-747ed089995fc584",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793188633/schedsnap/wallpapers/scenic/doodle-cool-duck-club/mobile-747ed089995fc584.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/doodle-cactus-garden/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/doodle-cactus-garden/mobile-da2cd453aacafaec",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793188634/schedsnap/wallpapers/scenic/doodle-cactus-garden/mobile-da2cd453aacafaec.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/doodle-cozy-cat-club/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/doodle-cozy-cat-club/mobile-bf50e3ec8b6cf5b5",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793188635/schedsnap/wallpapers/scenic/doodle-cozy-cat-club/mobile-bf50e3ec8b6cf5b5.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/doodle-bt21-party/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/doodle-bt21-party/mobile-c5d101d189277725",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793188635/schedsnap/wallpapers/scenic/doodle-bt21-party/mobile-c5d101d189277725.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/doodle-duck-parade/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/doodle-duck-parade/mobile-437f76dd290b84c4",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793188635/schedsnap/wallpapers/scenic/doodle-duck-parade/mobile-437f76dd290b84c4.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/doodle-ink-creature-jam/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/doodle-ink-creature-jam/mobile-5fd930ff3f3e9851",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793188637/schedsnap/wallpapers/scenic/doodle-ink-creature-jam/mobile-5fd930ff3f3e9851.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/doodle-mood-blob-party/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/doodle-mood-blob-party/mobile-cc42080b971525a9",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793188637/schedsnap/wallpapers/scenic/doodle-mood-blob-party/mobile-cc42080b971525a9.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/doodle-pastel-doodle-town/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/doodle-pastel-doodle-town/mobile-802b161573f3015e",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793188638/schedsnap/wallpapers/scenic/doodle-pastel-doodle-town/mobile-802b161573f3015e.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/doodle-flower-bear-huddle/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/doodle-flower-bear-huddle/mobile-e06156696e27ec7d",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793188638/schedsnap/wallpapers/scenic/doodle-flower-bear-huddle/mobile-e06156696e27ec7d.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/doodle-neon-monster-jam/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/doodle-neon-monster-jam/mobile-c0c8412ec0dab802",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793188637/schedsnap/wallpapers/scenic/doodle-neon-monster-jam/mobile-c0c8412ec0dab802.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/doodle-pastel-monsters/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/doodle-pastel-monsters/mobile-c76918a7c9b86858",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793188638/schedsnap/wallpapers/scenic/doodle-pastel-monsters/mobile-c76918a7c9b86858.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/doodle-peach-cat-parade/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/doodle-peach-cat-parade/mobile-6c015b7a4bb71745",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793188639/schedsnap/wallpapers/scenic/doodle-peach-cat-parade/mobile-6c015b7a4bb71745.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/doodle-silly-safari/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/doodle-silly-safari/mobile-de7c9ef15829be8d",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793188640/schedsnap/wallpapers/scenic/doodle-silly-safari/mobile-de7c9ef15829be8d.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/doodle-rainbow-doodle-crowd/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/doodle-rainbow-doodle-crowd/mobile-7cbbd0c92f55c11a",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793188640/schedsnap/wallpapers/scenic/doodle-rainbow-doodle-crowd/mobile-7cbbd0c92f55c11a.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/doodle-snack-monsters/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/doodle-snack-monsters/mobile-f2af05fa5d057e8e",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793188640/schedsnap/wallpapers/scenic/doodle-snack-monsters/mobile-f2af05fa5d057e8e.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/doodle-soft-animal-huddle/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/doodle-soft-animal-huddle/mobile-641a420110089d25",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793188640/schedsnap/wallpapers/scenic/doodle-soft-animal-huddle/mobile-641a420110089d25.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/doodle-zoo-buddies/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/doodle-zoo-buddies/mobile-91d184d2cedcbc10",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793188641/schedsnap/wallpapers/scenic/doodle-zoo-buddies/mobile-91d184d2cedcbc10.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/doodle-veggie-crowd/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/doodle-veggie-crowd/mobile-d45717970a346bd7",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793188641/schedsnap/wallpapers/scenic/doodle-veggie-crowd/mobile-d45717970a346bd7.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/doodle-watermelon-cats/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/doodle-watermelon-cats/mobile-4e5dfb6b83b2a25c",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793188642/schedsnap/wallpapers/scenic/doodle-watermelon-cats/mobile-4e5dfb6b83b2a25c.png",
+    "width": 1080,
+    "height": 2400
   }
 };

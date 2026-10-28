@@ -20,6 +20,7 @@ import { arcaneTemplates } from './arcaneTemplates.js';
 import { transformersTemplates } from './transformersTemplates.js';
 import { wutheringWavesTemplates } from './wutheringWavesTemplates.js';
 import { narutoTemplates } from './narutoTemplates.js';
+import { doodleTemplates } from './doodleTemplates.js';
 import { collageTemplates } from './collageTemplates.js';
 import { carTemplates } from './carTemplates.js';
 import { withTemplateKeywords } from '../../shared/templateKeywords.js';
@@ -48,6 +49,7 @@ export const wallpaperTemplates = [
   ...transformersTemplates,
   ...narutoTemplates,
   ...collageTemplates,
+  ...doodleTemplates,
   ...carTemplates,
 
   ...sanrioTemplates,
