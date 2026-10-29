@@ -6131,5 +6131,425 @@ export default {
     "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236939/schedsnap/wallpapers/scenic/flowers-vintage-sepia-florals/mobile-e6ac053e5e6c45e1.png",
     "width": 1080,
     "height": 2400
+  },
+  "/wallpapers/scenic/cars-bmw-midnight-coupe/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-bmw-midnight-coupe/mobile-67ee6e6a0a977c55",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286523/schedsnap/wallpapers/scenic/cars-bmw-midnight-coupe/mobile-67ee6e6a0a977c55.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-gtr-crimson-rear-poster/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-gtr-crimson-rear-poster/mobile-7a2aad849f1807ae",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286524/schedsnap/wallpapers/scenic/cars-gtr-crimson-rear-poster/mobile-7a2aad849f1807ae.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-crimson-muscle-poster/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-crimson-muscle-poster/mobile-098894203ac46d3a",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286524/schedsnap/wallpapers/scenic/cars-crimson-muscle-poster/mobile-098894203ac46d3a.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-formula-one-crimson-ink/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-formula-one-crimson-ink/mobile-c859311cb5db2828",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286524/schedsnap/wallpapers/scenic/cars-formula-one-crimson-ink/mobile-c859311cb5db2828.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-gtr-snoopy-wing/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-gtr-snoopy-wing/mobile-3b1c8516c35c1893",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286526/schedsnap/wallpapers/scenic/cars-gtr-snoopy-wing/mobile-3b1c8516c35c1893.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-ivory-red-racing-poster/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-ivory-red-racing-poster/mobile-27abf0224b3141cb",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286528/schedsnap/wallpapers/scenic/cars-ivory-red-racing-poster/mobile-27abf0224b3141cb.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-manga-drift-lineup/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-manga-drift-lineup/mobile-be807adce2e37d7e",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286530/schedsnap/wallpapers/scenic/cars-manga-drift-lineup/mobile-be807adce2e37d7e.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-porsche-ink-hood/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-porsche-ink-hood/mobile-29e058dfa9815623",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286534/schedsnap/wallpapers/scenic/cars-porsche-ink-hood/mobile-29e058dfa9815623.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-porsche-weathered-olive/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-porsche-weathered-olive/mobile-b2a54fad20606895",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286534/schedsnap/wallpapers/scenic/cars-porsche-weathered-olive/mobile-b2a54fad20606895.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-porsche-911-editorial-collage/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-porsche-911-editorial-collage/mobile-27f8197f0de8daed",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286534/schedsnap/wallpapers/scenic/cars-porsche-911-editorial-collage/mobile-27f8197f0de8daed.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-porsche-silver-studio/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-porsche-silver-studio/mobile-aea586c744243eae",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286531/schedsnap/wallpapers/scenic/cars-porsche-silver-studio/mobile-aea586c744243eae.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-scarlet-sideways-coupe/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-scarlet-sideways-coupe/mobile-da85faf1cf6bd0ab",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286535/schedsnap/wallpapers/scenic/cars-scarlet-sideways-coupe/mobile-da85faf1cf6bd0ab.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-rx7-snoopy-city/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-rx7-snoopy-city/mobile-b9a0b9945be74212",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286535/schedsnap/wallpapers/scenic/cars-rx7-snoopy-city/mobile-b9a0b9945be74212.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-skyline-engine-scrapbook/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-skyline-engine-scrapbook/mobile-ac121ed99c987bb4",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286538/schedsnap/wallpapers/scenic/cars-skyline-engine-scrapbook/mobile-ac121ed99c987bb4.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-skyline-blueprint-stripes/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-skyline-blueprint-stripes/mobile-c4a1e03432db3503",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286539/schedsnap/wallpapers/scenic/cars-skyline-blueprint-stripes/mobile-c4a1e03432db3503.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-skyline-crimson-rear/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-skyline-crimson-rear/mobile-063d15b8070a7114",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286539/schedsnap/wallpapers/scenic/cars-skyline-crimson-rear/mobile-063d15b8070a7114.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-skyline-neon-type/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-skyline-neon-type/mobile-2e6114111544e7d5",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286539/schedsnap/wallpapers/scenic/cars-skyline-neon-type/mobile-2e6114111544e7d5.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-sunset-snoopy-porsche/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-sunset-snoopy-porsche/mobile-bf4bc540be8c04aa",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286540/schedsnap/wallpapers/scenic/cars-sunset-snoopy-porsche/mobile-bf4bc540be8c04aa.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-supra-smoke-red/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-supra-smoke-red/mobile-449b9e0c782a30d2",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286541/schedsnap/wallpapers/scenic/cars-supra-smoke-red/mobile-449b9e0c782a30d2.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-supra-warm-garage/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-supra-warm-garage/mobile-7adb2f37475dc21c",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286542/schedsnap/wallpapers/scenic/cars-supra-warm-garage/mobile-7adb2f37475dc21c.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-tokyo-skyline-supra-collage/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-tokyo-skyline-supra-collage/mobile-ab817f2e91406043",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286542/schedsnap/wallpapers/scenic/cars-tokyo-skyline-supra-collage/mobile-ab817f2e91406043.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-turquoise-mercedes/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-turquoise-mercedes/mobile-a1628e732a98cbaa",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286543/schedsnap/wallpapers/scenic/cars-turquoise-mercedes/mobile-a1628e732a98cbaa.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/cars-supra-orange-editorial/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/cars-supra-orange-editorial/mobile-5816583e086020d5",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286543/schedsnap/wallpapers/scenic/cars-supra-orange-editorial/mobile-5816583e086020d5.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-avocado-green-minimal/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-avocado-green-minimal/mobile-6be4f1b8a123c9a1",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286544/schedsnap/wallpapers/scenic/fruits-avocado-green-minimal/mobile-6be4f1b8a123c9a1.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-blush-strawberry-fig/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-blush-strawberry-fig/mobile-923d7dbd1c0d5290",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286544/schedsnap/wallpapers/scenic/fruits-blush-strawberry-fig/mobile-923d7dbd1c0d5290.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-coconut-palm-sketch/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-coconut-palm-sketch/mobile-a0ff85d552b6508c",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286547/schedsnap/wallpapers/scenic/fruits-coconut-palm-sketch/mobile-a0ff85d552b6508c.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-cyan-lemon-sketch/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-cyan-lemon-sketch/mobile-49812c2fd8c31604",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286548/schedsnap/wallpapers/scenic/fruits-cyan-lemon-sketch/mobile-49812c2fd8c31604.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-citrus-watercolor-medley/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-citrus-watercolor-medley/mobile-7c8c7e393a3c9e09",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286549/schedsnap/wallpapers/scenic/fruits-citrus-watercolor-medley/mobile-7c8c7e393a3c9e09.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-aqua-watermelon-confetti/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-aqua-watermelon-confetti/mobile-576a48efc988a37c",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286550/schedsnap/wallpapers/scenic/fruits-aqua-watermelon-confetti/mobile-576a48efc988a37c.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-fresh-lime-watercolor/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-fresh-lime-watercolor/mobile-2472ca8f9cbbe876",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286551/schedsnap/wallpapers/scenic/fruits-fresh-lime-watercolor/mobile-2472ca8f9cbbe876.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-fruit-picnic-patchwork/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-fruit-picnic-patchwork/mobile-39d57bedddec1c9b",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286551/schedsnap/wallpapers/scenic/fruits-fruit-picnic-patchwork/mobile-39d57bedddec1c9b.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-golden-pineapple-rings/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-golden-pineapple-rings/mobile-de8dcf379b3794b0",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286552/schedsnap/wallpapers/scenic/fruits-golden-pineapple-rings/mobile-de8dcf379b3794b0.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-hot-pink-watermelon/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-hot-pink-watermelon/mobile-ec8a810ed01a2ff8",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286553/schedsnap/wallpapers/scenic/fruits-hot-pink-watermelon/mobile-ec8a810ed01a2ff8.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-happy-market-friends/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-happy-market-friends/mobile-48f0024fcfd82b9f",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286554/schedsnap/wallpapers/scenic/fruits-happy-market-friends/mobile-48f0024fcfd82b9f.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-kiwi-cream-scatter/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-kiwi-cream-scatter/mobile-2f6eaf4e44a87340",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286554/schedsnap/wallpapers/scenic/fruits-kiwi-cream-scatter/mobile-2f6eaf4e44a87340.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-kiwi-slice-mosaic/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-kiwi-slice-mosaic/mobile-efd204a6a8d815d3",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286558/schedsnap/wallpapers/scenic/fruits-kiwi-slice-mosaic/mobile-efd204a6a8d815d3.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-lemon-line-repeat/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-lemon-line-repeat/mobile-56e7744944367a08",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286559/schedsnap/wallpapers/scenic/fruits-lemon-line-repeat/mobile-56e7744944367a08.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-lemon-blueberry-watercolor/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-lemon-blueberry-watercolor/mobile-2b5dffc545ad683a",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286559/schedsnap/wallpapers/scenic/fruits-lemon-blueberry-watercolor/mobile-2b5dffc545ad683a.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-lemon-watercolor-layers/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-lemon-watercolor-layers/mobile-265061c259c73058",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286560/schedsnap/wallpapers/scenic/fruits-lemon-watercolor-layers/mobile-265061c259c73058.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-kiwi-meadow-stripes/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-kiwi-meadow-stripes/mobile-e0e36da41ace3626",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286561/schedsnap/wallpapers/scenic/fruits-kiwi-meadow-stripes/mobile-e0e36da41ace3626.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-market-garden-lines/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-market-garden-lines/mobile-4b3d5b4c9df5c054",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286562/schedsnap/wallpapers/scenic/fruits-market-garden-lines/mobile-4b3d5b4c9df5c054.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-mint-lemon-blossom/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-mint-lemon-blossom/mobile-f701283248676abe",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286562/schedsnap/wallpapers/scenic/fruits-mint-lemon-blossom/mobile-f701283248676abe.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-mint-avocado-sprinkles/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-mint-avocado-sprinkles/mobile-35e9cd151b7d2c7a",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286563/schedsnap/wallpapers/scenic/fruits-mint-avocado-sprinkles/mobile-35e9cd151b7d2c7a.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-orange-grove-graphics/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-orange-grove-graphics/mobile-11c9f1db67dd3a20",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286565/schedsnap/wallpapers/scenic/fruits-orange-grove-graphics/mobile-11c9f1db67dd3a20.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-orange-blossom-orchard/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-orange-blossom-orchard/mobile-26a806dc3399e2fc",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286566/schedsnap/wallpapers/scenic/fruits-orange-blossom-orchard/mobile-26a806dc3399e2fc.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-pineapple-color-splash/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-pineapple-color-splash/mobile-6ffa046cefa78fbe",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286567/schedsnap/wallpapers/scenic/fruits-pineapple-color-splash/mobile-6ffa046cefa78fbe.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-orange-ink-slices/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-orange-ink-slices/mobile-aa9041565e527fda",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286568/schedsnap/wallpapers/scenic/fruits-orange-ink-slices/mobile-aa9041565e527fda.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-pink-watermelon-wedges/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-pink-watermelon-wedges/mobile-e61d740ccdfb2bf9",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286569/schedsnap/wallpapers/scenic/fruits-pink-watermelon-wedges/mobile-e61d740ccdfb2bf9.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-neon-fruit-party/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-neon-fruit-party/mobile-caf5be0c51010254",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286569/schedsnap/wallpapers/scenic/fruits-neon-fruit-party/mobile-caf5be0c51010254.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-pink-banana-pop/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-pink-banana-pop/mobile-b13014d04eb21b38",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286568/schedsnap/wallpapers/scenic/fruits-pink-banana-pop/mobile-b13014d04eb21b38.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-smiling-summer-fruit/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-smiling-summer-fruit/mobile-0f681f99aa03e4fe",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286571/schedsnap/wallpapers/scenic/fruits-smiling-summer-fruit/mobile-0f681f99aa03e4fe.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-strawberry-cream/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-strawberry-cream/mobile-e2d19a9461351cd0",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286572/schedsnap/wallpapers/scenic/fruits-strawberry-cream/mobile-e2d19a9461351cd0.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-rainbow-citrus-rounds/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-rainbow-citrus-rounds/mobile-63be9c5c74a10858",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286572/schedsnap/wallpapers/scenic/fruits-rainbow-citrus-rounds/mobile-63be9c5c74a10858.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-teal-banana-pop/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-teal-banana-pop/mobile-0ee4ff015cfff1ff",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286573/schedsnap/wallpapers/scenic/fruits-teal-banana-pop/mobile-0ee4ff015cfff1ff.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-tropical-harvest-shapes/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-tropical-harvest-shapes/mobile-2195f40d2ef75c58",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286574/schedsnap/wallpapers/scenic/fruits-tropical-harvest-shapes/mobile-2195f40d2ef75c58.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-turquoise-grapefruit/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-turquoise-grapefruit/mobile-c7f03fd221a93ed1",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286576/schedsnap/wallpapers/scenic/fruits-turquoise-grapefruit/mobile-c7f03fd221a93ed1.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-watermelon-candy-stripes/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-watermelon-candy-stripes/mobile-e5e70c3e43292959",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286578/schedsnap/wallpapers/scenic/fruits-watermelon-candy-stripes/mobile-e5e70c3e43292959.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-turquoise-lemon-drop/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-turquoise-lemon-drop/mobile-87f096b3a26edf16",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286578/schedsnap/wallpapers/scenic/fruits-turquoise-lemon-drop/mobile-87f096b3a26edf16.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-soft-citrus-botanicals/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-soft-citrus-botanicals/mobile-a209fd79b12b023f",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286578/schedsnap/wallpapers/scenic/fruits-soft-citrus-botanicals/mobile-a209fd79b12b023f.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/fruits-tropical-slice-collage/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/fruits-tropical-slice-collage/mobile-38ef2f03960591bf",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286579/schedsnap/wallpapers/scenic/fruits-tropical-slice-collage/mobile-38ef2f03960591bf.png",
+    "width": 1080,
+    "height": 2400
   }
 };

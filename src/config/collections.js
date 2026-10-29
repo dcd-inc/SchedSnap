@@ -9,6 +9,7 @@ export const designCollections = [
   { id: 'arcane', name: 'Arcane', searchTerms: ['League of Legends', 'Jinx', 'Vi', 'Ekko', 'Caitlyn', 'Viktor', 'LoL', 'Zaun'] },
   { id: 'collage', name: 'Collage', searchTerms: ['scrapbook', 'grunge', 'music collage', 'gothic collage'] },
   { id: 'graffiti', name: 'Graffiti', searchTerms: ['street art', 'spray paint', 'urban art'] },
+  { id: 'fruits', name: 'Fruits', searchTerms: ['fruit', 'citrus', 'tropical fruit', 'food patterns'] },
   { id: 'flowers', name: 'Flowers', searchTerms: ['flower', 'floral', 'botanical', 'blooms'] },
   { id: 'doodle', name: 'Doodle', searchTerms: ['doodles', 'cute characters', 'cartoon crowd'] },
   { id: 'sanrio', name: 'Sanrio' },

@@ -14,6 +14,7 @@ export function genshinKeywords(template) {
 
 const collectionTags = {
   graffiti: ['graffiti', 'street art', 'urban', 'mobile wallpaper'],
+  fruits: ['fruits', 'fruit', 'food', 'pattern', 'mobile wallpaper'],
   flowers: ['flowers', 'flower', 'floral', 'botanical', 'mobile wallpaper'],
   doodle: ['doodle', 'cute', 'cartoon', 'character crowd'],
   transformers: ['Transformers', 'robots', 'science fiction'],

@@ -43,10 +43,10 @@ if(process.argv.includes('--publish')&&additions.length){
 }
 if(!additions.length){
  const cars=catalog.templates.filter(t=>carTemplates.some(definition=>definition.id===t.id));
- if(cars.length!==16||!catalog.categories?.some(c=>c.id==='cars'))throw new Error('Cars catalog verification failed.');
+ if(cars.length!==carTemplates.length||!catalog.categories?.some(c=>c.id==='cars'))throw new Error('Cars catalog verification failed.');
  for(const car of cars){
   templateSchema.parse(car);
   if(car.status!=='published'||car.collection!=='cars'||!car.mobileOnly||!car.keywords?.includes('automotive'))throw new Error(`Incomplete published Cars record: ${car.id}`);
  }
- console.log('Verified all 16 published Cars records, keywords and Cars category.');
+ console.log(`Verified all ${carTemplates.length} published Cars records, keywords and Cars category.`);
 }
