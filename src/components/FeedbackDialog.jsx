@@ -21,9 +21,6 @@ export default function FeedbackDialog({ footer = false }) {
   const [category, setCategory] = useState('Feature request');
   const [message, setMessage] = useState('');
   const [limitReset, setLimitReset] = useState(0);
-  const [dailyLimit, setDailyLimit] = useState(10);
-  const [checking, setChecking] = useState(false);
-  const [checkFailed, setCheckFailed] = useState(false);
   useEffect(() => {
     if (!limitReset) return;
     const timer = window.setTimeout(() => setLimitReset(0), Math.max(0, limitReset - Date.now()));
@@ -45,7 +42,7 @@ export default function FeedbackDialog({ footer = false }) {
   }, [sent]);
   async function submit(event) {
     event.preventDefault();
-    if (checking || busy || limitReset || !message.trim()) return;
+    if (busy || limitReset || !message.trim()) return;
     const form = event.currentTarget;
     const data = new FormData(form);
     setBusy(true); setError('');
@@ -62,31 +59,22 @@ export default function FeedbackDialog({ footer = false }) {
     } catch (failure) { setError(failure.message || 'Could not send feedback. Please try again.'); }
     finally { setBusy(false); }
   }
-  async function open() {
-    setError(''); setSent(false); setChecking(true); setCheckFailed(false); dialog.current?.showModal();
-    try {
-      const response = await fetch('/api/feedback', { cache: 'no-store', signal: AbortSignal.timeout(10000) });
-      const result = await response.json();
-      if (!response.ok) throw new Error(result.error?.message || 'Could not check your daily allowance. Please try again.');
-      setDailyLimit(result.limit);
-      setLimitReset(result.remaining === 0 ? result.reset : 0);
-    } catch (failure) { setCheckFailed(true); setError(failure.message || 'Could not check your daily allowance. Please try again.'); }
-    finally { setChecking(false); }
+  function open() {
+    setError(''); setSent(false); dialog.current?.showModal();
   }
   return <>
     <button type="button" className={footer ? 'feedback-footer-link' : 'button-primary'} onClick={open}>{footer ? 'Feedback' : <>Share feedback <ArrowRight size={18} aria-hidden="true" /></>}</button>
     {typeof document !== 'undefined' && createPortal(<dialog ref={dialog} className="feedback-dialog" aria-labelledby={titleId} onClose={() => setSent(false)} onClick={event => { if (event.target === event.currentTarget) event.currentTarget.close(); }}>
-      <div className="feedback-dialog-header"><h2 id={titleId} tabIndex={-1} autoFocus>{sent ? 'Feedback sent' : limitReset && !checking ? 'We’ve received your feedback' : 'Share your feedback'}</h2><button type="button" className="feedback-close" aria-label="Close feedback" onClick={() => dialog.current.close()}><X size={20} /></button></div>
-      {checkFailed && !checking ? <div className="feedback-success"><p role="alert">{error}</p><div className="feedback-dialog-actions"><button type="button" className="button-primary" onClick={open}>Try again</button></div></div> : limitReset > 0 && !sent && !checking ? <div className="feedback-success"><div className="feedback-success-message" role="status"><img className="feedback-success-mascot" src="/images/maker/maker-capybara-static-320.webp" alt="" width="320" height="320" /><p>You’ve already sent {dailyLimit} feedback messages today. We’ll review them and look into what you’ve shared. You can send more tomorrow.</p><p>Need help or have more to share? Email us at <a className="underline underline-offset-4" href="mailto:dcd.inc.mail@gmail.com">dcd.inc.mail@gmail.com</a>.</p></div><div className="feedback-dialog-actions"><button type="button" className="button-primary" onClick={() => dialog.current.close()}>Close</button></div></div> : <>
+      <div className="feedback-dialog-header"><h2 id={titleId} tabIndex={-1} autoFocus>{sent ? 'Feedback sent' : limitReset ? 'We’ve received your feedback' : 'Share your feedback'}</h2><button type="button" className="feedback-close" aria-label="Close feedback" onClick={() => dialog.current.close()}><X size={20} /></button></div>
+      {limitReset > 0 && !sent ? <div className="feedback-success"><div className="feedback-success-message" role="status"><img className="feedback-success-mascot" src="/images/maker/maker-capybara-static-320.webp" alt="" width="320" height="320" /><p>You’ve reached today’s feedback limit. We’ll review them and look into what you’ve shared. You can send more tomorrow.</p><p>Need help or have more to share? Email us at <a className="underline underline-offset-4" href="mailto:dcd.inc.mail@gmail.com">dcd.inc.mail@gmail.com</a>.</p></div><div className="feedback-dialog-actions"><button type="button" className="button-primary" onClick={() => dialog.current.close()}>Close</button></div></div> : <>
       {sent ? <div className="feedback-success"><div role="status" className="feedback-success-message"><img className="feedback-success-mascot" src="/images/maker/maker-capybara-static-320.webp" alt="" width="320" height="320" /><p>Thank you for taking the time to write to us! We’ll review your message and look into it.</p></div><div className="feedback-dialog-actions"><button type="button" className="button-primary" onClick={() => dialog.current.close()}>Close</button></div></div> : <>
         <p>Tell us what’s on your mind. Leave out personal or sensitive details.</p>
-        {checking && <span className="sr-only" role="status">Loading feedback form…</span>}
-        <form className={`feedback-form${checking ? ' feedback-skeleton' : ''}`} aria-busy={checking} onSubmit={submit}>
-          <label>What’s this about?<span className="feedback-select"><select disabled={checking} name="category" value={category} onChange={event => setCategory(event.target.value)}><option value="Feature request">Request a feature</option><option value="Design suggestion">Request a new design</option><option value="Report a problem">Report a problem</option><option value="Other feedback">Other feedback</option></select><ChevronDown size={18} aria-hidden="true" /></span></label>
-          <label>Your message<textarea disabled={checking} name="message" required maxLength={500} placeholder={examples[category]} value={message} onChange={event => setMessage(event.target.value)} aria-describedby={countId} /></label>
+        <form className="feedback-form" onSubmit={submit}>
+          <label>What’s this about?<span className="feedback-select"><select name="category" value={category} onChange={event => setCategory(event.target.value)}><option value="Feature request">Request a feature</option><option value="Design suggestion">Request a new design</option><option value="Report a problem">Report a problem</option><option value="Other feedback">Other feedback</option></select><ChevronDown size={18} aria-hidden="true" /></span></label>
+          <label>Your message<textarea name="message" required maxLength={500} placeholder={examples[category]} value={message} onChange={event => setMessage(event.target.value)} aria-describedby={countId} /></label>
           <p className="feedback-note feedback-count" id={countId}>{message.length} / 500</p>
           {error && <p role="alert" className="feedback-error">{error}</p>}
-          <div className="feedback-dialog-actions"><button className="button-primary" type="submit" disabled={checking || busy || limitReset > 0 || !message.trim()}>{busy ? 'Sending…' : limitReset > 0 ? 'Daily limit reached' : 'Send feedback'}</button></div>
+          <div className="feedback-dialog-actions"><button className="button-primary" type="submit" disabled={busy || limitReset > 0 || !message.trim()}>{busy ? 'Sending…' : limitReset > 0 ? 'Daily limit reached' : 'Send feedback'}</button></div>
         </form>
       </>}
       </>}

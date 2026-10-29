@@ -98,10 +98,6 @@
   .feedback-form select:focus, .feedback-form textarea:focus { outline: none; border-color: var(--color-ink); box-shadow: 0 0 0 2px rgb(15 23 42 / 15%); }
   .feedback-dialog h2:focus { outline: none; }
   .feedback-form textarea { min-height: 150px; resize: vertical; }
-  .feedback-skeleton select, .feedback-skeleton textarea, .feedback-skeleton button:disabled { background-image: linear-gradient(100deg, #e8edf0 25%, #f5f7f8 45%, #e8edf0 65%); background-size: 200% 100%; animation: wallpaper-loading 1.4s ease-in-out infinite; color: transparent; border-color: transparent; opacity: 1; }
-  .feedback-skeleton textarea::placeholder { color: transparent; }
-  .feedback-skeleton .feedback-select svg { visibility: hidden; }
-  @media (prefers-reduced-motion: reduce) { .feedback-skeleton select, .feedback-skeleton textarea, .feedback-skeleton button:disabled { animation: none; } }
   .feedback-form button, .feedback-success button { width: 100%; min-height: 48px; cursor: pointer; }
   .feedback-form button:disabled { opacity: .6; cursor: not-allowed; }
   .feedback-note { color: var(--color-muted); font-size: 14px; line-height: 1.5; }
