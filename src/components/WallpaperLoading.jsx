@@ -1,5 +1,11 @@
 import GalleryCardSkeleton from './GalleryCardSkeleton.jsx';
 import { useSearchParams } from 'react-router';
+import { ChevronDown, LayoutGrid, LayoutTemplate } from 'lucide-react';
+import DevicePicker from './DevicePicker.jsx';
+import SortPicker from './SortPicker.jsx';
+import { stylePickerOptions } from './wallpaperOptionIcons.js';
+import { galleryCategories } from '../config/collections.js';
+import './collectionFilters.css';
 
 export default function WallpaperLoading() {
   const [search] = useSearchParams();
@@ -15,11 +21,16 @@ export default function WallpaperLoading() {
         </div>
       </header>
       <div className="template-filters gallery-filter-row">
-        <div className="gallery-skeleton-quick-filters">
-          {[120, 156, 164, 130].map((width, index) => <div key={index} className="wallpaper-skeleton rounded-full" style={{ width }} />)}
+        <div className="gallery-quick-filters gallery-filter-skeleton" inert>
+          <DevicePicker value={device} disabled />
+          <SortPicker value={search.get('sort') || 'likes'} />
+          <details className="device-picker"><summary><LayoutTemplate /><span>{{ stacked: 'Stacked days', timeline: 'Day groups', 'day-cards': 'Day cards', 'grouped-list': 'Grouped list', 'day-columns': 'Day columns', weekly: 'Weekly timetable' }[search.get('layout')] || 'Stacked days'}</span><ChevronDown className="device-picker-chevron" /></summary></details>
+          <DevicePicker value={search.get('style') || 'glass'} options={stylePickerOptions} disabled />
         </div>
-        <div className="category-filters gallery-skeleton-categories">
-          {[80, 60, 64, 72, 96, 88, 104, 76, 92, 84, 68, 100].map((width, index) => <div key={index} className={`wallpaper-skeleton h-10 rounded-full${index >= 4 ? ' gallery-skeleton-extra' : ''}`} style={{ width }} />)}
+        <div className="collection-filters gallery-filter-skeleton">
+          <div className="collection-filter-strip">
+            {galleryCategories.map(category => <span key={category.id} className={`collection-chip wallpaper-skeleton${category.id === 'all' ? ' collection-chip-all' : ''}`}><span className="collection-chip-art">{category.id === 'all' && <LayoutGrid size={18} />}</span><span className="collection-chip-name">{category.name}</span></span>)}
+          </div>
         </div>
       </div>
       <div className={`template-grid template-grid-${device}`}>

@@ -71,7 +71,7 @@ export default function Navbar() {
     event.preventDefault();
     navigateTo(event.currentTarget.hash.slice(1));
   }
-  const sectionLinks = [['how-it-works', 'How it works'], ['designs', 'Designs'], ['faq', 'FAQs']].map(([id, label]) => <a key={id} href={`#${id}`} onClick={handleSectionClick}>{label}</a>);
+  const sectionLinks = [['how-it-works', 'How it works'], ['collections', 'Collections'], ['faq', 'FAQs']].map(([id, label]) => <a key={id} href={isHome ? `#${id}` : `/#${id}`} onClick={isHome ? handleSectionClick : () => setMenuOpen(false)}>{label}</a>);
   return (
     <header className={`site-header${menuOpen ? ' mobile-menu-open' : ''}${isHome ? ` site-header-home${!scrolled ? ' is-at-top' : ''}` : ''}`}>
       <div className="page-wrap site-header-inner">
@@ -84,10 +84,10 @@ export default function Navbar() {
         }}>
           <BrandMark /> SchedSnap
         </Link>
-        {isHome && <nav className="landing-nav" aria-label="Main navigation">
-          {sectionLinks}
-        </nav>}
-        {isHome && <div className="mobile-navigation" ref={menuRef} onBlur={event => {
+        <nav className="landing-nav" aria-label="Main navigation">
+          {isHome ? sectionLinks : <Link to="/">Home</Link>}
+        </nav>
+        <div className="mobile-navigation" ref={menuRef} onBlur={event => {
           if (event.relatedTarget && !event.currentTarget.contains(event.relatedTarget)) setMenuOpen(false);
         }}>
           <button ref={toggleRef} type="button" className="mobile-nav-toggle" aria-expanded={menuOpen} aria-controls="mobile-section-nav" aria-label={menuOpen ? 'Close navigation' : 'Open navigation'} onClick={() => {
@@ -97,10 +97,13 @@ export default function Navbar() {
             <span className="menu-toggle-lines" aria-hidden="true"><span /><span /></span>
           </button>
           <div id="mobile-section-nav" className="mobile-nav-panel" data-open={menuOpen} inert={!menuOpen}>
-            <nav className="mobile-section-links" aria-label="Mobile navigation">{sectionLinks}</nav>
+            <nav className="mobile-section-links" aria-label="Mobile navigation">
+              <Link to="/" onClick={event => { setMenuOpen(false); if (isHome) { event.preventDefault(); navigateTo('top'); } }}>Home</Link>
+              {sectionLinks}
+            </nav>
             <div className="mobile-menu-footer"><p className="mobile-social-label">Find us on</p><SocialLinks /><MakerBanner /></div>
           </div>
-        </div>}
+        </div>
       </div>
     </header>
   );

@@ -37,7 +37,7 @@ const collectionColors = {
   snoopy: '#e0eaf2', genshin: '#e2ecd8', 'hunter-x-hunter': '#d9e8dd',
   'we-bare-bears': '#eadfce', domo: '#dfd0c5', 'adventure-time': '#f4e6b8',
   chiikawa: '#e4e0f1', ghibli: '#dce5d2', meep: '#f7edc9',
-  capybara: '#e5dccf', pattern: '#e4e8ec',
+  capybara: '#e5dccf', pattern: '#f2dce7',
 };
 
 function PatternThumbnail({ template }) {

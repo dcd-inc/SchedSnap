@@ -29,6 +29,7 @@ export default function TemplateWorkspace({ customizeRequest = 0, step, onStep, 
   const [reviewVersion, setReviewVersion] = useState(0);
   const [layout, setLayout] = useState(null);
   const [exporting, setExporting] = useState(false);
+  const [exportError, setExportError] = useState('');
   const [exportResult, setExportResult] = useState(null);
   const [thankYouDesign, setThankYouDesign] = useState(null);
   const { likes, pending: pendingLikes, error: likeError, refresh: refreshLikes, toggle: toggleLike } = useDesignLikes();
@@ -147,14 +148,16 @@ export default function TemplateWorkspace({ customizeRequest = 0, step, onStep, 
 
   async function download(wallpaperOnly = false) {
     if (!canDownload) return;
-    setDownloadOptions(false);
     setExporting(true);
+    setExportError('');
     setMessage('');
     const started = performance.now();
     const properties = { ...templateProperties(template), device: resolution.id, schedule_source: scheduleSource, class_count: schedule.classes.length, width: resolution.width, height: resolution.height };
     trackEvent('wallpaper_download_requested', properties);
     let stage = 'render';
     try {
+      // Let the popup paint its pending state before synchronous canvas rendering.
+      await new Promise(resolve => requestAnimationFrame(() => setTimeout(resolve, 0)));
       const backgroundImage = await prepareWallpaperAssets(template, resolution);
       if (!active.current) return;
       const output = document.createElement('canvas');
@@ -165,6 +168,7 @@ export default function TemplateWorkspace({ customizeRequest = 0, step, onStep, 
       const filename = `schedsnap-${template.id}${wallpaperOnly ? '-wallpaper-only' : ''}-${resolution.width}x${resolution.height}.png`;
       stage = 'download';
       const { inApp } = downloadBlob(blob, filename);
+      setDownloadOptions(false);
       void recordDownload();
       trackEvent('wallpaper_download_started', { ...properties, download_method: inApp ? 'new_tab' : 'download_link', duration_ms: Math.round(performance.now() - started) });
       if (exportResult?.key === exportKey) trackEvent('wallpaper_download_repeated', properties);
@@ -176,7 +180,7 @@ export default function TemplateWorkspace({ customizeRequest = 0, step, onStep, 
           ? 'Image opened in a new tab — long-press it and tap Save to Photos / Download.'
           : 'Download started.'
       );
-    } catch (failure) { trackEvent('wallpaper_download_failed', { ...properties, stage }); setMessageKind('error'); setMessage(failure.message); }
+    } catch (failure) { trackEvent('wallpaper_download_failed', { ...properties, stage }); setExportError(failure.message); }
     finally { setExporting(false); }
   }
 
@@ -224,7 +228,7 @@ export default function TemplateWorkspace({ customizeRequest = 0, step, onStep, 
       </section>
     </div>}
     {enlarged && <WallpaperViewer resolution={resolution} onClose={() => setEnlarged(false)}><WallpaperCanvas schedule={shownSchedule} template={template} resolution={resolution} className="block h-auto w-full" label={`${template.name} enlarged wallpaper`} /></WallpaperViewer>}
-    {downloadOptions && <DownloadOptionsDialog template={template} schedule={schedule} resolution={resolution} onDownload={download} onClose={() => setDownloadOptions(false)} />}
+    {downloadOptions && <DownloadOptionsDialog template={template} schedule={schedule} resolution={resolution} busy={exporting} error={exportError} onDownload={download} onClose={() => { if (!exporting) { setDownloadOptions(false); setExportError(''); } }} />}
     {thankYouDesign === template.id && <DownloadThanksDialog name={template.name} vote={vote} pending={pendingLikes} error={likeError} onHeart={() => toggleLike(template.id)} onRetry={() => refreshLikes(true)} onClose={() => setThankYouDesign(null)} />}
     <Toast message={message} kind={messageKind} onClose={dismissNotification} />
   </>;

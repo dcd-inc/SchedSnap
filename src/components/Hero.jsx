@@ -3,9 +3,9 @@ import { ArrowRight } from 'lucide-react';
 import { trackEvent } from '../lib/analytics.js';
 
 export default function Hero() {
-  function exploreDesigns() {
+  function exploreCollections() {
     trackEvent('designs_explored', { source: 'hero' });
-    document.getElementById('designs')?.scrollIntoView({
+    document.getElementById('collections')?.scrollIntoView({
       behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',
       block: 'start',
     });
@@ -20,7 +20,7 @@ export default function Hero() {
           <p className="hero-description">A free class schedule wallpaper maker for your phone, tablet, or laptop.</p>
           <div className="hero-actions">
             <Link to="/services/schedule-wallpaper" className="button-primary hero-action" onClick={() => trackEvent('wallpaper_creation_started', { source: 'hero' })}>Create wallpaper <ArrowRight size={18} aria-hidden="true" /></Link>
-            <button type="button" className="hero-browse" onClick={exploreDesigns}>Explore</button>
+            <button type="button" className="hero-browse" onClick={exploreCollections}>Explore</button>
           </div>
         </div>
         <div className="hero-art">
