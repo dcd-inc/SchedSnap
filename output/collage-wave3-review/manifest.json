@@ -1,0 +1,162 @@
+[
+  {
+    "reference": 1,
+    "file": "21-scarlet-eyes.png",
+    "nativeSize": [
+      841,
+      1870
+    ],
+    "exportSize": [
+      1080,
+      2400
+    ],
+    "master": "output\\collage-wave3-review\\masters\\21-scarlet-eyes.png",
+    "export": "output\\collage-wave3-review\\mobile-1080x2400\\21-scarlet-eyes.png",
+    "sha256": "829f3aa26fadf53d640e1b3be46b9fcc8f8a3860d5203096768894ab631b95e4",
+    "note": "Technical portrait resize with minimal center crop if needed; native original preserved."
+  },
+  {
+    "reference": 2,
+    "file": "22-oxblood-grunge-panels.png",
+    "nativeSize": [
+      841,
+      1870
+    ],
+    "exportSize": [
+      1080,
+      2400
+    ],
+    "master": "output\\collage-wave3-review\\masters\\22-oxblood-grunge-panels.png",
+    "export": "output\\collage-wave3-review\\mobile-1080x2400\\22-oxblood-grunge-panels.png",
+    "sha256": "09467d6f4e64d7e94581578c56a740d1c948960584912537284d6e6343736ca4",
+    "note": "Technical portrait resize with minimal center crop if needed; native original preserved."
+  },
+  {
+    "reference": 3,
+    "file": "23-radiohead-cat-scrapbook.png",
+    "nativeSize": [
+      841,
+      1870
+    ],
+    "exportSize": [
+      1080,
+      2400
+    ],
+    "master": "output\\collage-wave3-review\\masters\\23-radiohead-cat-scrapbook.png",
+    "export": "output\\collage-wave3-review\\mobile-1080x2400\\23-radiohead-cat-scrapbook.png",
+    "sha256": "e72ff25cd0a42b188a6aa5c02a4362fb3cd0acbb09915244db8fad3ad50099cc",
+    "note": "Technical portrait resize with minimal center crop if needed; native original preserved."
+  },
+  {
+    "reference": 4,
+    "file": "24-dusty-rose-grunge-records.png",
+    "nativeSize": [
+      841,
+      1870
+    ],
+    "exportSize": [
+      1080,
+      2400
+    ],
+    "master": "output\\collage-wave3-review\\masters\\24-dusty-rose-grunge-records.png",
+    "export": "output\\collage-wave3-review\\mobile-1080x2400\\24-dusty-rose-grunge-records.png",
+    "sha256": "8ef346864034dd75ff3b12e82060a8d11db2f7d7c84422c9cd232d5868de0ed4",
+    "note": "Technical portrait resize with minimal center crop if needed; native original preserved."
+  },
+  {
+    "reference": 5,
+    "file": "25-hot-pink-drift-posters.png",
+    "nativeSize": [
+      841,
+      1870
+    ],
+    "exportSize": [
+      1080,
+      2400
+    ],
+    "master": "output\\collage-wave3-review\\masters\\25-hot-pink-drift-posters.png",
+    "export": "output\\collage-wave3-review\\mobile-1080x2400\\25-hot-pink-drift-posters.png",
+    "sha256": "6c0e653f8907820eee4ca30ebfe6d3cc40bb77a4cf7b29b0a91acbbff6010a92",
+    "note": "Technical portrait resize with minimal center crop if needed; native original preserved."
+  },
+  {
+    "reference": 6,
+    "file": "26-pink-graffiti-kitty.png",
+    "nativeSize": [
+      841,
+      1870
+    ],
+    "exportSize": [
+      1080,
+      2400
+    ],
+    "master": "output\\collage-wave3-review\\masters\\26-pink-graffiti-kitty.png",
+    "export": "output\\collage-wave3-review\\mobile-1080x2400\\26-pink-graffiti-kitty.png",
+    "sha256": "06cb5eaea8acaf39c3502629928aeb6f8df0dfb33ed19fd686e54b718f4481ae",
+    "note": "Technical portrait resize with minimal center crop if needed; native original preserved."
+  },
+  {
+    "reference": 7,
+    "file": "27-chrome-fashion-lips.png",
+    "nativeSize": [
+      819,
+      1920
+    ],
+    "exportSize": [
+      1080,
+      2400
+    ],
+    "master": "output\\collage-wave3-review\\masters\\27-chrome-fashion-lips.png",
+    "export": "output\\collage-wave3-review\\mobile-1080x2400\\27-chrome-fashion-lips.png",
+    "sha256": "56aa7d7d7a9018ff3ef3254f5de9bd72fd6c36a9fb5d363389169d3dd5900923",
+    "note": "Technical portrait resize with minimal center crop if needed; native original preserved."
+  },
+  {
+    "reference": 8,
+    "file": "28-crimson-vinyl-guitar-stickers.png",
+    "nativeSize": [
+      841,
+      1870
+    ],
+    "exportSize": [
+      1080,
+      2400
+    ],
+    "master": "output\\collage-wave3-review\\masters\\28-crimson-vinyl-guitar-stickers.png",
+    "export": "output\\collage-wave3-review\\mobile-1080x2400\\28-crimson-vinyl-guitar-stickers.png",
+    "sha256": "7daa0c92808e6a8806a5d27803c3894fdea51ca2d9fcc7d60096f0660c1d5a99",
+    "note": "Technical portrait resize with minimal center crop if needed; native original preserved."
+  },
+  {
+    "reference": 9,
+    "file": "29-snoopy-porsche-print.png",
+    "nativeSize": [
+      841,
+      1870
+    ],
+    "exportSize": [
+      1080,
+      2400
+    ],
+    "master": "output\\collage-wave3-review\\masters\\29-snoopy-porsche-print.png",
+    "export": "output\\collage-wave3-review\\mobile-1080x2400\\29-snoopy-porsche-print.png",
+    "sha256": "c71d652540179b96d330e5ace67862162a8d994dfe6d4bad185215dc0e3b6394",
+    "note": "Technical portrait resize with minimal center crop if needed; native original preserved."
+  },
+  {
+    "reference": 10,
+    "file": "30-oxblood-grunge-torn-mix.png",
+    "nativeSize": [
+      841,
+      1870
+    ],
+    "exportSize": [
+      1080,
+      2400
+    ],
+    "master": "output\\collage-wave3-review\\masters\\30-oxblood-grunge-torn-mix.png",
+    "export": "output\\collage-wave3-review\\mobile-1080x2400\\30-oxblood-grunge-torn-mix.png",
+    "sha256": "391528738d0913376588f1f30d9e7b825d482b33072afab7bbd8a4558362a1f5",
+    "note": "Technical portrait resize with minimal center crop if needed; native original preserved."
+  }
+]

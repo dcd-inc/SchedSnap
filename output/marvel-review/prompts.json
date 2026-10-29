@@ -1,0 +1,56 @@
+{
+  "provider": "built-in image_gen",
+  "stage": "image approval only",
+  "jobs": [
+    {
+      "n": 1,
+      "ref": "da3870e7-9675-4a36-88b1-a1ff76200181",
+      "prompt": "Use case: stylized-concept. Generate ONE premium finished smartphone wallpaper, opaque full bleed tall portrait 1080 × 2400 (9:20). Use the attached reference as the actual source for subject, composition, palette and medium. Retain character identity accurately and recompose naturally for the phone shape without stretching. Crisp deliberate drawing, polished cohesive composition. No phone frame, app UI, watermark, artist signature, schedule or contact sheet. No new slogans or branding except explicitly specified reference lettering. Spider-Man extreme close-up mask on right against coral red, huge ivory lens, fine black web lines and stippled comic shading. Keep the strong clean red negative space left."
+    },
+    {
+      "n": 2,
+      "ref": "46bd046c-fd81-4b76-b03d-528802b87f18",
+      "prompt": "Use case: stylized-concept. Generate ONE premium finished smartphone wallpaper, opaque full bleed tall portrait 1080 × 2400 (9:20). Use the attached reference as the actual source for subject, composition, palette and medium. Retain character identity accurately and recompose naturally for the phone shape without stretching. Crisp deliberate drawing, polished cohesive composition. No phone frame, app UI, watermark, artist signature, schedule or contact sheet. No new slogans or branding except explicitly specified reference lettering. Spider-Man three-quarter head and shoulder on right, red and navy crosshatched pen drawing on warm ivory, diagonal ink scratches and splatter. Preserve detailed mesh eye."
+    },
+    {
+      "n": 3,
+      "ref": "079dbcd6-ee5d-458b-9d8c-2a99a8b72ac6",
+      "prompt": "Use case: stylized-concept. Generate ONE premium finished smartphone wallpaper, opaque full bleed tall portrait 1080 × 2400 (9:20). Use the attached reference as the actual source for subject, composition, palette and medium. Retain character identity accurately and recompose naturally for the phone shape without stretching. Crisp deliberate drawing, polished cohesive composition. No phone frame, app UI, watermark, artist signature, schedule or contact sheet. No new slogans or branding except explicitly specified reference lettering. Black and ivory Marvel comic panels rendered as tactile embroidered cloth: recognizable Spider-Man, Hulk, Thor and other heroes, raised threads and stitched panel borders. Retain central embroidered MARVEL patch with exact spelling, no other readable copy or speech text required."
+    },
+    {
+      "n": 4,
+      "ref": "e57b21de-f5d3-450b-a459-b9ec84d41396",
+      "prompt": "Use case: stylized-concept. Generate ONE premium finished smartphone wallpaper, opaque full bleed tall portrait 1080 × 2400 (9:20). Use the attached reference as the actual source for subject, composition, palette and medium. Retain character identity accurately and recompose naturally for the phone shape without stretching. Crisp deliberate drawing, polished cohesive composition. No phone frame, app UI, watermark, artist signature, schedule or contact sheet. No new slogans or branding except explicitly specified reference lettering. Miles Morales in black-red Spider-Man suit, green jacket and sneakers falling upward toward an inverted futuristic New York skyline. Deep midnight navy at top, luminous cyan below, red emblem accents, dramatic tall cinematic perspective and halftone animation finish."
+    },
+    {
+      "n": 5,
+      "ref": "97101ca0-6530-4dcb-bf4a-90e78b882d30",
+      "prompt": "Use case: stylized-concept. Generate ONE premium finished smartphone wallpaper, opaque full bleed tall portrait 1080 × 2400 (9:20). Use the attached reference as the actual source for subject, composition, palette and medium. Retain character identity accurately and recompose naturally for the phone shape without stretching. Crisp deliberate drawing, polished cohesive composition. No phone frame, app UI, watermark, artist signature, schedule or contact sheet. No new slogans or branding except explicitly specified reference lettering. Dynamic Spider-Man lunging diagonally toward viewer with foreshortened web-shooting hand at bottom, red mask and navy suit, bold red-orange and ivory abstract paint strokes. Graphic poster with sharp ink silhouettes and energetic splashes."
+    },
+    {
+      "n": 6,
+      "ref": "50e862a6-2905-447b-87b6-6a49f5eb53fd",
+      "prompt": "Use case: stylized-concept. Generate ONE premium finished smartphone wallpaper, opaque full bleed tall portrait 1080 × 2400 (9:20). Use the attached reference as the actual source for subject, composition, palette and medium. Retain character identity accurately and recompose naturally for the phone shape without stretching. Crisp deliberate drawing, polished cohesive composition. No phone frame, app UI, watermark, artist signature, schedule or contact sheet. No new slogans or branding except explicitly specified reference lettering. Venom lunging toward viewer, detailed black crosshatched muscular symbiote, ivory eyes and white chest symbol, enormous jagged grin and long curling crimson tongue. Warm ivory background with red diagonal distressed print strokes. Non-graphic comic action, no blood."
+    },
+    {
+      "n": 7,
+      "ref": "38e56df3-840b-4adc-8454-5b18fbacdbbd",
+      "prompt": "Use case: stylized-concept. Generate ONE premium finished smartphone wallpaper, opaque full bleed tall portrait 1080 × 2400 (9:20). Use the attached reference as the actual source for subject, composition, palette and medium. Retain character identity accurately and recompose naturally for the phone shape without stretching. Crisp deliberate drawing, polished cohesive composition. No phone frame, app UI, watermark, artist signature, schedule or contact sheet. No new slogans or branding except explicitly specified reference lettering. Minimal Venom close-up entering from right edge, enormous glossy ivory eye and sharp grin, charcoal symbiote texture and thin silver ink highlights against uniform cool gray. Preserve ample gray space left."
+    },
+    {
+      "n": 8,
+      "ref": "fa209c1a-0ee3-4edc-a456-2b6eb73eba89",
+      "prompt": "Use case: stylized-concept. Generate ONE premium finished smartphone wallpaper, opaque full bleed tall portrait 1080 × 2400 (9:20). Use the attached reference as the actual source for subject, composition, palette and medium. Retain character identity accurately and recompose naturally for the phone shape without stretching. Crisp deliberate drawing, polished cohesive composition. No phone frame, app UI, watermark, artist signature, schedule or contact sheet. No new slogans or branding except explicitly specified reference lettering. Iron Man head and upper torso in red and gold weathered armor, pale glowing eyes, delicate pen crosshatching and watercolor washes on warm ivory paper. Preserve handsome mechanical construction, worn paint and subtle flecks."
+    },
+    {
+      "n": 9,
+      "ref": "1ec6fd15-4d36-4a5a-a9c5-0b8f2fd08b7f",
+      "prompt": "Use case: stylized-concept. Generate ONE premium finished smartphone wallpaper, opaque full bleed tall portrait 1080 × 2400 (9:20). Use the attached reference as the actual source for subject, composition, palette and medium. Retain character identity accurately and recompose naturally for the phone shape without stretching. Crisp deliberate drawing, polished cohesive composition. No phone frame, app UI, watermark, artist signature, schedule or contact sheet. No new slogans or branding except explicitly specified reference lettering. Spider-Man crouching in lower half on a ground of comic-page fragments, exaggerated radiating skyscraper canyon overhead, swirling red sky and navy buildings, ivory comic panels forming dramatic vanishing point. Detailed hand-inked editorial illustration, no legible small copy required."
+    },
+    {
+      "n": 10,
+      "ref": "277c1313-311b-483e-89d2-802b86c1364b",
+      "prompt": "Use case: stylized-concept. Generate ONE premium finished smartphone wallpaper, opaque full bleed tall portrait 1080 × 2400 (9:20). Use the attached reference as the actual source for subject, composition, palette and medium. Retain character identity accurately and recompose naturally for the phone shape without stretching. Crisp deliberate drawing, polished cohesive composition. No phone frame, app UI, watermark, artist signature, schedule or contact sheet. No new slogans or branding except explicitly specified reference lettering. Upside-down Spider-Man head and upper torso cropped from top-left, huge dark silhouette and cream highlights, red web-pattern mask against flat vivid crimson field. Rough confident black crosshatching, preserve intentional upside-down orientation and large red negative space below."
+    }
+  ]
+}

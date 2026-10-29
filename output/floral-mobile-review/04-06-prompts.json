@@ -1,0 +1,56 @@
+[
+  {
+    "reference": "C:\\Users\\picar\\AppData\\Local\\Temp\\codex-clipboard-94dc0cd5-06f8-4ddf-8a28-a7e5ffa647ad.png",
+    "file": "output/floral-mobile-review/04-plum-ink.png",
+    "raw": "C:\\Users\\picar\\.codex\\generated_images\\01a17cd5-46d5-7651-8bde-e2bc1144db6d\\exec-240f2a48-52dd-47c1-9200-9fa36c522033.png",
+    "prompt": "Use case: stylized-concept. Asset type: premium mobile wallpaper preview, opaque full bleed 1080 × 2400 portrait, exact tall 9:20 composition. Input image: style and subject reference only, create original artwork. Traditional Chinese red plum blossom ink painting on aged warm golden ivory rice paper. Ancient twisting charcoal ink plum trunk rises from the lower right, with expressive dry brush bark, delicate branchlets carrying vivid cinnabar red blossoms and tiny buds, secondary misty gray branches recede softly. Fine handmade paper fibers and restrained antiqued texture, sophisticated masterful brush rhythm. Strong floral detail concentrated along the lower third and outer right edge, graceful fine branches extend into upper side; top 18% and center retain natural soft pale paper breathing room for clock and future timetable, but make a complete beautiful painting rather than an empty UI background. Keep warm ochre palette and brilliant red flowers from reference, avoid photorealism and vector clipart. Artwork only. Absolutely no text, Chinese characters, calligraphy, pseudo-writing, signatures, seals, stamps, logos, watermarks, timetable, dates, UI, phone mockup or border.",
+    "provider": "built-in image_gen",
+    "nativeDimensions": [
+      841,
+      1870
+    ],
+    "requestedDimensions": [
+      1080,
+      2400
+    ],
+    "mode": "RGB",
+    "resized": false,
+    "visualQA": "Inspected: opaque portrait fine-art composition, no text/seals/watermarks, top clock clearance and central breathing room retained."
+  },
+  {
+    "reference": "C:\\Users\\picar\\AppData\\Local\\Temp\\codex-clipboard-c83763a9-2913-4c1e-b948-a1fc3fc771f9.png",
+    "file": "output/floral-mobile-review/05-vermilion-sun.png",
+    "raw": "C:\\Users\\picar\\.codex\\generated_images\\01a17cd5-46d5-7651-8bde-e2bc1144db6d\\exec-0dd5950f-8595-400d-b4c1-fc3f85a5f114.png",
+    "prompt": "Use case: stylized-concept. Asset type: premium mobile wallpaper preview, opaque full bleed, 1080 × 2400 portrait, tall 9:20. Input image is a style and subject reference, create a new original composition. Elegant vermilion plum blossom woodblock and ink painting on warm ivory handmade paper. A large simple faded orange-red sun disk sits in upper-middle background, quietly textured with worn pigment, with NO rays. A sinuous black-brown plum branch grows from bottom right, travels up the right side and sends delicate branchlets across the sun. Rich scarlet blossoms with fine black stamens, scattered unopened red buds, a few pale peach ghost blossoms printed into the sun. Vintage woodblock registration imperfections, vertical paper fibers, subtle scraped ink, painterly controlled edges, not vector art. Leave top 18% comparatively quiet cream for phone clock; center maintains a calm plane through restrained flat sun color for future schedule, flowers strongest along right and bottom edges, artistic asymmetric balance and complete wallpaper-worthy composition. Absolutely no typography, calligraphy, Chinese characters, pseudoletters, red seals, stamps, signatures, logos, watermarks, timetable, dates, UI, device mockup, border or rising-sun rays.",
+    "provider": "built-in image_gen",
+    "nativeDimensions": [
+      841,
+      1870
+    ],
+    "requestedDimensions": [
+      1080,
+      2400
+    ],
+    "mode": "RGB",
+    "resized": false,
+    "visualQA": "Inspected: opaque portrait fine-art composition, no text/seals/watermarks, top clock clearance and central breathing room retained."
+  },
+  {
+    "reference": "C:\\Users\\picar\\AppData\\Local\\Temp\\codex-clipboard-7dff55e9-fc80-43f3-adbb-3cd068c68a0c.png",
+    "file": "output/floral-mobile-review/06-crimson-plum.png",
+    "raw": "C:\\Users\\picar\\.codex\\generated_images\\01a17cd5-46d5-7651-8bde-e2bc1144db6d\\exec-d79a0f49-b605-4d15-92e1-0caf21e34e58.png",
+    "prompt": "Use case: stylized-concept. Asset type: fine-art mobile wallpaper preview, opaque full bleed 1080 × 2400 portrait, tall exact 9:20 composition. Input image is style and botanical reference only. Paint an original dramatic crimson plum blossom branch on antique cream parchment with muted sage ink wash in lower background. Rich layered red petals, delicate golden stamens, crimson unopened buds, rough umber bark and expressive black dry-brush strokes. The botanical painting has hand-painted tonal depth and rich detail like the reference, with softened receding blossoms and subtle red pigment flecks kept sparse. Main tree emerges from lower right and curves along the right and lower edges, several luscious red flowers face viewer in lower half, lighter thinner twig tips near upper sides. Top 18% and central column retain softly mottled pale parchment breathing space for a phone clock and eventual schedule, integrated naturally into painting, no empty rectangular panel. A few weathered creases near edges, tactile rice paper, sophisticated painterly contrast, not photorealistic or flat vector. No lettering, calligraphy, pseudo-writing, Chinese characters, stamps, seals, signatures, logos, watermarks, text, UI, timetable, dates, phone mockup or border.",
+    "provider": "built-in image_gen",
+    "nativeDimensions": [
+      841,
+      1870
+    ],
+    "requestedDimensions": [
+      1080,
+      2400
+    ],
+    "mode": "RGB",
+    "resized": false,
+    "visualQA": "Inspected: opaque portrait fine-art composition, no text/seals/watermarks, top clock clearance and central breathing room retained."
+  }
+]

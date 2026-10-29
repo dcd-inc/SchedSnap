@@ -1,0 +1,98 @@
+[
+  {
+    "file": "01-pink-porsche.png",
+    "nativeWidth": 841,
+    "nativeHeight": 1870,
+    "exportWidth": 1080,
+    "exportHeight": 2400,
+    "exportBytes": 2453102,
+    "sha256": "CC7D217537C9D08593486332FF58A46E7335E50620BF10BB490B3D837AEF48E7",
+    "mode": "built-in image_gen reference edit",
+    "preparation": "Aspect-preserving resampled export with matching edge padding; native original preserved",
+    "status": "local-review-only"
+  },
+  {
+    "file": "02-burgundy-porsche.png",
+    "nativeWidth": 841,
+    "nativeHeight": 1870,
+    "exportWidth": 1080,
+    "exportHeight": 2400,
+    "exportBytes": 2838852,
+    "sha256": "453C9DF05CFBB54F459B6FA7ABE9AB74EA437DA49B85CA685B0CC5860725A23A",
+    "mode": "built-in image_gen reference edit",
+    "preparation": "Aspect-preserving resampled export with matching edge padding; native original preserved",
+    "status": "local-review-only"
+  },
+  {
+    "file": "03-crimson-porsche.png",
+    "nativeWidth": 841,
+    "nativeHeight": 1870,
+    "exportWidth": 1080,
+    "exportHeight": 2400,
+    "exportBytes": 3893764,
+    "sha256": "3D71738B93D4C43BC0F6ABA82EF85576078CC298B4C3F5DE9B906BCCA98C831E",
+    "mode": "built-in image_gen reference edit",
+    "preparation": "Aspect-preserving resampled export with matching edge padding; native original preserved",
+    "status": "local-review-only"
+  },
+  {
+    "file": "04-scarlet-ivory.png",
+    "nativeWidth": 848,
+    "nativeHeight": 1855,
+    "exportWidth": 1080,
+    "exportHeight": 2400,
+    "exportBytes": 3694251,
+    "sha256": "161D3AEAE2C4280DC182F18D82D936D0758585FABFCFC64D643D72B6E069A3D9",
+    "mode": "built-in image_gen reference edit",
+    "preparation": "Aspect-preserving resampled export with matching edge padding; native original preserved",
+    "status": "local-review-only"
+  },
+  {
+    "file": "05-champagne-porsche.png",
+    "nativeWidth": 819,
+    "nativeHeight": 1920,
+    "exportWidth": 1080,
+    "exportHeight": 2400,
+    "exportBytes": 2613055,
+    "sha256": "44BA9B5969B8655E25FC7EE894CFAB4BA89071CC6AF89FF445AB9116DEAEB330",
+    "mode": "built-in image_gen reference edit",
+    "preparation": "Aspect-preserving resampled export with matching edge padding; native original preserved",
+    "status": "local-review-only"
+  },
+  {
+    "file": "06-blue-porsche.png",
+    "nativeWidth": 840,
+    "nativeHeight": 1871,
+    "exportWidth": 1080,
+    "exportHeight": 2400,
+    "exportBytes": 2625192,
+    "sha256": "6E44C258890F7E4120C4C52B7524FE2F5650A74BD46351F90AA6925E61EC5720",
+    "mode": "built-in image_gen reference edit",
+    "preparation": "Aspect-preserving resampled export with matching edge padding; native original preserved",
+    "status": "local-review-only"
+  },
+  {
+    "file": "07-black-mclaren.png",
+    "nativeWidth": 841,
+    "nativeHeight": 1870,
+    "exportWidth": 1080,
+    "exportHeight": 2400,
+    "exportBytes": 3787346,
+    "sha256": "A31E0DF05006DBB2F981C1A5D3CFF0273F453F4109C343CB44B3EB60DB2911D5",
+    "mode": "built-in image_gen reference edit",
+    "preparation": "Aspect-preserving resampled export with matching edge padding; native original preserved",
+    "status": "local-review-only"
+  },
+  {
+    "file": "08-black-porsche.png",
+    "nativeWidth": 841,
+    "nativeHeight": 1870,
+    "exportWidth": 1080,
+    "exportHeight": 2400,
+    "exportBytes": 2399972,
+    "sha256": "724758B9B0909BBD74B5C82DEF4E8D219E4CFEB8ADA5B0EAA9291AAB6FB76711",
+    "mode": "built-in image_gen reference edit",
+    "preparation": "Aspect-preserving resampled export with matching edge padding; native original preserved",
+    "status": "local-review-only"
+  }
+]

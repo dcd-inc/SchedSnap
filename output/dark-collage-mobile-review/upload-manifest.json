@@ -1,0 +1,64 @@
+{
+  "assets": [
+    {
+      "path": "public/wallpapers/scenic/collage-vinyl-music/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "ee150a3af3e8e422f36af885347095615ce7593843dfb61649d8dca528e80457"
+    },
+    {
+      "path": "public/wallpapers/scenic/collage-punk-telephone/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "4e5de17da997d696c2ac8569ce6fbf6bcc31cd9fb64cf7da2a776e074e2b6790"
+    },
+    {
+      "path": "public/wallpapers/scenic/collage-manga-newsprint/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "0e14df3a757adbb58d9626a515924279957ab43e652225e8fdbd7d9f556e226a"
+    },
+    {
+      "path": "public/wallpapers/scenic/collage-crimson-indie-rock/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "4674d845fda9b2edd130db55c7eecb0a7b44deffdbeed8aee61b7083638280aa"
+    },
+    {
+      "path": "public/wallpapers/scenic/collage-gothic-vampire/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "8d7906177f40e892c6548bab5dc3a50bb5a8536de8fc8de87dc7565b385b59cb"
+    },
+    {
+      "path": "public/wallpapers/scenic/collage-gothic-guitarist/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "f0e0cf99a7b1974aeb1a6ee8f7e2b8a8718e98be113f3d2449d662419897bc91"
+    },
+    {
+      "path": "public/wallpapers/scenic/collage-celestial-art-journal/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "16578c800a123f079e2b6e08786f18df05fbcad0e64b3802dc9e81bc61817a6c"
+    },
+    {
+      "path": "public/wallpapers/scenic/collage-nocturne-manga/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "b9a57405cfc9af0960a7f8480873d543f7d2eac6c9771faa29bfe3916728a4bb"
+    },
+    {
+      "path": "public/wallpapers/scenic/collage-headphone-daydream/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "375c5d298dc78557cb70f3ce7e3ceec8b3aeb76069f545bae5ad08d5f1040df1"
+    },
+    {
+      "path": "public/wallpapers/scenic/collage-rock-and-roll-archive/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "ec6d2b0be4ad883c92fa7f08cf595e989cbf7123c54b216f63cd2c31fe9a2916"
+    }
+  ]
+}

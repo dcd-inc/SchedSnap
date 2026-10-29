@@ -1,0 +1,112 @@
+{
+  "assets": [
+    {
+      "path": "public/wallpapers/scenic/graffiti-neon-letter-jam/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "0f2aefa32012dc3c94198fa6fda66386bba742bb2f2435f80a32a45bc2111786"
+    },
+    {
+      "path": "public/wallpapers/scenic/graffiti-orange-character-crew/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "43d7fdfa4e5225922d5b1898b8cff8390b78513361368a61a84eb6be89d6d143"
+    },
+    {
+      "path": "public/wallpapers/scenic/graffiti-neon-monster-wall/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "a4de28864c07f630a90ef9492d2aaed5d4b7b49128a5a1d967c11af238372405"
+    },
+    {
+      "path": "public/wallpapers/scenic/graffiti-blue-robot-crowd/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "817bb28c6a6f3cb52d01b553f7e6c37466be1407f5d91e7f0a14688ad710fbb5"
+    },
+    {
+      "path": "public/wallpapers/scenic/graffiti-electric-love-tags/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "42e15bf40c7293475d6d35a38b84429c4374d2938af7b764bcff892052528052"
+    },
+    {
+      "path": "public/wallpapers/scenic/graffiti-rainbow-street-tags/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "daa86dfe5641ba46d8bfeb1c38b3c18ffd9e4acb82e4a0a2ae900a835902cee7"
+    },
+    {
+      "path": "public/wallpapers/scenic/graffiti-midnight-doodle-maze/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "b14f96df665eb7cb3cbd0493a3cc1c18d6b63066aaf9463a56147a31c02a099d"
+    },
+    {
+      "path": "public/wallpapers/scenic/graffiti-underground-sticker-wall/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "e4b64c38c56971703376e0dfd548e56fc5012f71deb65027c686adc01151b440"
+    },
+    {
+      "path": "public/wallpapers/scenic/graffiti-street-character-mashup/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "6527a752ec2e5f08654e17ed52249e8edf6ba6f9b9f1ae302a41dfba9303a39e"
+    },
+    {
+      "path": "public/wallpapers/scenic/graffiti-retro-hip-hop-mix/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "77826f06519e86704b2d33394633c3450bd8ab4ffcf959665f078bc9972ffcb4"
+    },
+    {
+      "path": "public/wallpapers/scenic/graffiti-soul-skate-zine/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "09838a455c4faca777d5b1fef692cd7e2a834c85f617f9a96e23eb38014ac0c4"
+    },
+    {
+      "path": "public/wallpapers/scenic/graffiti-neon-tag-layers/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "08eeaf215e159eb9e0c765fe84831a8ac4c0ba286f9a590927e8bfa47bfd8cc0"
+    },
+    {
+      "path": "public/wallpapers/scenic/graffiti-steel-ink-wall/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "54be7293a25c44e0b0118b201466f86876e474c93478312efa8a52c8b506f7eb"
+    },
+    {
+      "path": "public/wallpapers/scenic/graffiti-black-ink-comic-jam/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "9ff3945c0273f6640c1924a9e6c7c67245193d1090d8a466178cfea03ddaf10b"
+    },
+    {
+      "path": "public/wallpapers/scenic/graffiti-acid-brush-strokes/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "06e7634a2a10e455f502aac0bbb4682fd93b47d6abb80dced581feefe9778e96"
+    },
+    {
+      "path": "public/wallpapers/scenic/graffiti-yellow-chaos/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "5b52c673e714035a35b8b5e3a4f5e2aa181e41271577ff531bf48131572c83d9"
+    },
+    {
+      "path": "public/wallpapers/scenic/graffiti-red-letter-riot/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "ea0db725254f5d45ef5ec8797da4ae7776d374c22c212ace1344698fe4fc20e8"
+    },
+    {
+      "path": "public/wallpapers/scenic/graffiti-red-skate-collision/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "1da013d6cf8684a1664117910fc2a0902247dc50a22163d95c3b78158086607e"
+    }
+  ]
+}

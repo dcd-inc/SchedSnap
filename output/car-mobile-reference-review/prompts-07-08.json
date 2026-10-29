@@ -1,0 +1,15 @@
+{
+  "mode": "built-in image_gen reference edits",
+  "assets": [
+    {
+      "file": "07-black-mclaren.png",
+      "reference": "C:/Users/picar/AppData/Local/Temp/codex-clipboard-51464367-65f9-4d31-8e47-37383d421cdd.png",
+      "prompt": "Use case: precise-object-edit. Edit the attached actual wallpaper, do not create a different design. Preserve this exact McLaren car photograph, angle, bottom-left crop, dark carbon textured background, restrained monochrome palette, large vertical MCLAREN typography down the right edge and small McLaren name and emblem at upper left. Refine this actual supplied design into a polished high-quality tall phone wallpaper. Improve clarity of existing car edges and carbon detail gently, sophisticated tonal contrast, do not replace the car or invent parts. Retain all text with correct spelling MCLAREN and original serif visual style and placement. Keep quiet central space. No flowers, no extra objects or copy. Requested canvas1080x2400 portrait9:20; extend matching background naturally if extra vertical space needed, never stretch car or letters. Full bleed opaque artwork only, no phone frame/UI/watermark. Preserve original composition closely."
+    },
+    {
+      "file": "08-black-porsche.png",
+      "reference": "C:/Users/picar/AppData/Local/Temp/codex-clipboard-f492049e-b760-42e0-a57f-ffbdb90f3dd5.png",
+      "prompt": "Use case: precise-object-edit. Edit the actual supplied Porsche wallpaper, preserve this specific design rather than inventing another. Keep exact graphite Porsche rear-quarter photograph at bottom-right, its pose, crop, wing, highlights and black backdrop. Keep silver Porsche shield at upper-left and existing large gray cursive 'Porsche' running vertically down the left side. Refine edge clarity, crisp detailed car and emblem, polished tonal separation while preserving the minimalist dark original mood. Correct any garbled lettering on car to PORSCHE where readable; don't invent extra typography. Keep original script style and its placement. No flowers. No new objects, no new slogans. Requested1080x2400 tall portrait9:20, extend matching black backdrop vertically if needed to fit phone shape without stretching car, crest or lettering. Full bleed opaque final wallpaper only, no device frame or UI."
+    }
+  ]
+}

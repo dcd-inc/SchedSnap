@@ -1,0 +1,132 @@
+{
+  "assets": [
+    {
+      "path": "public/wallpapers/scenic/cars-blush-hibiscus/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "d7cd562617d88bd2c6a2ca6e32f10849e5188d8dfe75a1176f3103dae96e3865",
+      "reviewNumber": 1,
+      "source": "C:\\Users\\picar\\Desktop\\random_project\\SchedSnap\\output\\car-mobile-review\\mobile-1080x2400\\01-blush-hibiscus.png"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-oxblood-hibiscus/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "a67a90ce8fc03b6d33365383ba0b9f2d4c65a07089a76d1b7fdf5aada1b1b7f5",
+      "reviewNumber": 2,
+      "source": "C:\\Users\\picar\\Desktop\\random_project\\SchedSnap\\output\\car-mobile-review\\mobile-1080x2400\\02-oxblood-hibiscus.png"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-crimson-gt3/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "e87080b9d40bab3fa9d05991df5fb7e93e0b763364d396a8222029473974fc99",
+      "reviewNumber": 3,
+      "source": "C:\\Users\\picar\\Desktop\\random_project\\SchedSnap\\output\\car-mobile-review\\mobile-1080x2400\\03-crimson-gt3.png"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-scarlet-hibiscus/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "8afd32befc1cef9ac06ca0a5c825eb2480827db8aa1f46bfe5ee83057d5dbf05",
+      "reviewNumber": 4,
+      "source": "C:\\Users\\picar\\Desktop\\random_project\\SchedSnap\\output\\car-mobile-review\\mobile-1080x2400\\04-scarlet-ivory.png"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-champagne-lily/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "2af5aa85a2e4c5e16294e583ec7cbd32e3fc43fc533e905cc08c618a1222c958",
+      "reviewNumber": 5,
+      "source": "C:\\Users\\picar\\Desktop\\random_project\\SchedSnap\\output\\car-mobile-review\\mobile-1080x2400\\05-champagne-lily.png"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-ice-blue-lily/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "764aaa74b138dda1e3044b8a169700953c1360b8934017a6410b1768bb21bc02",
+      "reviewNumber": 6,
+      "source": "C:\\Users\\picar\\Desktop\\random_project\\SchedSnap\\output\\car-mobile-review\\mobile-1080x2400\\06-ice-blue-lily.png"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-carbon-shadow/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "e71aba23d09b32923d8effd9ecc11b6aac3f78e09acce57f50ea2b2ed09744be",
+      "reviewNumber": 7,
+      "source": "C:\\Users\\picar\\Desktop\\random_project\\SchedSnap\\output\\car-mobile-review\\mobile-1080x2400\\07-carbon-shadow.png"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-graphite-rain/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "4a3d0ba3e57c15437fa9d076e13d30bdde59390508ee3f553c1a140625df5919",
+      "reviewNumber": 8,
+      "source": "C:\\Users\\picar\\Desktop\\random_project\\SchedSnap\\output\\car-mobile-review\\mobile-1080x2400\\08-graphite-rain.png"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-pink-type/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "cc7d217537c9d08593486332ff58a46e7335e50620bf10bb490b3d837aef48e7",
+      "reviewNumber": 9,
+      "source": "C:\\Users\\picar\\Desktop\\random_project\\SchedSnap\\output\\car-mobile-reference-review\\mobile-1080x2400\\01-pink-porsche.png"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-burgundy-type/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "453c9df05cfbb54f459b6fa7abe9ab74ea437da49b85ca685b0cc5860725a23a",
+      "reviewNumber": 10,
+      "source": "C:\\Users\\picar\\Desktop\\random_project\\SchedSnap\\output\\car-mobile-reference-review\\mobile-1080x2400\\02-burgundy-porsche.png"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-crimson-type/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "3d71738b93d4c43bc0f6aba82ef85576078cc298b4c3f5de9b906bcca98c831e",
+      "reviewNumber": 11,
+      "source": "C:\\Users\\picar\\Desktop\\random_project\\SchedSnap\\output\\car-mobile-reference-review\\mobile-1080x2400\\03-crimson-porsche.png"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-scarlet-ivory-type/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "161d3aeae2c4280dc182f18d82d936d0758585fabfcfc64d643d72b6e069a3d9",
+      "reviewNumber": 12,
+      "source": "C:\\Users\\picar\\Desktop\\random_project\\SchedSnap\\output\\car-mobile-reference-review\\mobile-1080x2400\\04-scarlet-ivory.png"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-champagne-type/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "44ba9b5969b8655e25fc7ee894cfab4ba89071cc6af89ff445ab9116deaeb330",
+      "reviewNumber": 13,
+      "source": "C:\\Users\\picar\\Desktop\\random_project\\SchedSnap\\output\\car-mobile-reference-review\\mobile-1080x2400\\05-champagne-porsche.png"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-blue-type/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "6e44c258890f7e4120c4c52b7524fe2f5650a74bd46351f90aa6925e61ec5720",
+      "reviewNumber": 14,
+      "source": "C:\\Users\\picar\\Desktop\\random_project\\SchedSnap\\output\\car-mobile-reference-review\\mobile-1080x2400\\06-blue-porsche.png"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-black-mclaren-type/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "a31e0df05006dbb2f981c1a5d3cff0273f453f4109c343cb44b3eb60db2911d5",
+      "reviewNumber": 15,
+      "source": "C:\\Users\\picar\\Desktop\\random_project\\SchedSnap\\output\\car-mobile-reference-review\\mobile-1080x2400\\07-black-mclaren.png"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-black-porsche-type/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "724758b9b0909bbd74b5c82def4e8d219e4cfeb8ada5b0eaa9291aab6fb76711",
+      "reviewNumber": 16,
+      "source": "C:\\Users\\picar\\Desktop\\random_project\\SchedSnap\\output\\car-mobile-reference-review\\mobile-1080x2400\\08-black-porsche.png"
+    }
+  ]
+}

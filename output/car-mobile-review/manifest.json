@@ -1,0 +1,98 @@
+[
+  {
+    "file": "01-blush-hibiscus.png",
+    "nativeWidth": 841,
+    "nativeHeight": 1870,
+    "exportWidth": 1080,
+    "exportHeight": 2400,
+    "exportBytes": 4315286,
+    "sha256": "D7CD562617D88BD2C6A2CA6E32F10849E5188D8DFE75A1176F3103DAE96E3865",
+    "mode": "built-in image_gen",
+    "preparation": "High-quality resampled technical export; native original preserved",
+    "status": "local-review-only"
+  },
+  {
+    "file": "02-oxblood-hibiscus.png",
+    "nativeWidth": 841,
+    "nativeHeight": 1870,
+    "exportWidth": 1080,
+    "exportHeight": 2400,
+    "exportBytes": 3824583,
+    "sha256": "A67A90CE8FC03B6D33365383BA0B9F2D4C65A07089A76D1B7FDF5AADA1B1B7F5",
+    "mode": "built-in image_gen",
+    "preparation": "High-quality resampled technical export; native original preserved",
+    "status": "local-review-only"
+  },
+  {
+    "file": "03-crimson-gt3.png",
+    "nativeWidth": 841,
+    "nativeHeight": 1870,
+    "exportWidth": 1080,
+    "exportHeight": 2400,
+    "exportBytes": 4013247,
+    "sha256": "E87080B9D40BAB3FA9D05991DF5FB7E93E0B763364D396A8222029473974FC99",
+    "mode": "built-in image_gen",
+    "preparation": "High-quality resampled technical export; native original preserved",
+    "status": "local-review-only"
+  },
+  {
+    "file": "04-scarlet-ivory.png",
+    "nativeWidth": 841,
+    "nativeHeight": 1870,
+    "exportWidth": 1080,
+    "exportHeight": 2400,
+    "exportBytes": 5009589,
+    "sha256": "8AFD32BEFC1CEF9AC06CA0A5C825EB2480827DB8AA1F46BFE5EE83057D5DBF05",
+    "mode": "built-in image_gen",
+    "preparation": "High-quality resampled technical export; native original preserved",
+    "status": "local-review-only"
+  },
+  {
+    "file": "05-champagne-lily.png",
+    "nativeWidth": 841,
+    "nativeHeight": 1870,
+    "exportWidth": 1080,
+    "exportHeight": 2400,
+    "exportBytes": 4707050,
+    "sha256": "2AF5AA85A2E4C5E16294E583EC7CBD32E3FC43FC533E905CC08C618A1222C958",
+    "mode": "built-in image_gen",
+    "preparation": "High-quality resampled technical export; native original preserved",
+    "status": "local-review-only"
+  },
+  {
+    "file": "06-ice-blue-lily.png",
+    "nativeWidth": 841,
+    "nativeHeight": 1870,
+    "exportWidth": 1080,
+    "exportHeight": 2400,
+    "exportBytes": 4489736,
+    "sha256": "764AAA74B138DDA1E3044B8A169700953C1360B8934017A6410B1768BB21BC02",
+    "mode": "built-in image_gen",
+    "preparation": "High-quality resampled technical export; native original preserved",
+    "status": "local-review-only"
+  },
+  {
+    "file": "07-carbon-shadow.png",
+    "nativeWidth": 841,
+    "nativeHeight": 1870,
+    "exportWidth": 1080,
+    "exportHeight": 2400,
+    "exportBytes": 3449834,
+    "sha256": "E71ABA23D09B32923D8EFFD9ECC11B6AAC3F78E09ACCE57F50EA2B2ED09744BE",
+    "mode": "built-in image_gen",
+    "preparation": "High-quality resampled technical export; native original preserved",
+    "status": "local-review-only"
+  },
+  {
+    "file": "08-graphite-rain.png",
+    "nativeWidth": 841,
+    "nativeHeight": 1870,
+    "exportWidth": 1080,
+    "exportHeight": 2400,
+    "exportBytes": 3979120,
+    "sha256": "4A3D0BA3E57C15437FA9D076E13D30BDDE59390508EE3F553C1A140625DF5919",
+    "mode": "built-in image_gen",
+    "preparation": "High-quality resampled technical export; native original preserved",
+    "status": "local-review-only"
+  }
+]

@@ -1,0 +1,162 @@
+[
+  {
+    "reference": 1,
+    "file": "11-kitty-torn-paper.png",
+    "nativeSize": [
+      841,
+      1870
+    ],
+    "exportSize": [
+      1080,
+      2400
+    ],
+    "master": "output\\collage-wave2-review\\masters\\11-kitty-torn-paper.png",
+    "export": "output\\collage-wave2-review\\mobile-1080x2400\\11-kitty-torn-paper.png",
+    "sha256": "c2abc8b4b78b785792c951a2b80c137668e7229b7dc84e635c2e743462a88d16",
+    "note": "Technical resampled portrait export; native original preserved."
+  },
+  {
+    "reference": 2,
+    "file": "12-manga-eye-editorial.png",
+    "nativeSize": [
+      841,
+      1870
+    ],
+    "exportSize": [
+      1080,
+      2400
+    ],
+    "master": "output\\collage-wave2-review\\masters\\12-manga-eye-editorial.png",
+    "export": "output\\collage-wave2-review\\mobile-1080x2400\\12-manga-eye-editorial.png",
+    "sha256": "ae3089e8a0f5f5038fd5bfa5e15aaab322314ac8b0e6c295843eb83794ddfc46",
+    "note": "Technical resampled portrait export; native original preserved."
+  },
+  {
+    "reference": 3,
+    "file": "13-star-girl-keepsakes.png",
+    "nativeSize": [
+      841,
+      1870
+    ],
+    "exportSize": [
+      1080,
+      2400
+    ],
+    "master": "output\\collage-wave2-review\\masters\\13-star-girl-keepsakes.png",
+    "export": "output\\collage-wave2-review\\mobile-1080x2400\\13-star-girl-keepsakes.png",
+    "sha256": "cdf497dca1bb8e7130b36add2bb16c1f2fca0b8b38a7c79680c5970924e37685",
+    "note": "Technical resampled portrait export; native original preserved."
+  },
+  {
+    "reference": 4,
+    "file": "14-icy-blue-manga-mix.png",
+    "nativeSize": [
+      841,
+      1870
+    ],
+    "exportSize": [
+      1080,
+      2400
+    ],
+    "master": "output\\collage-wave2-review\\masters\\14-icy-blue-manga-mix.png",
+    "export": "output\\collage-wave2-review\\mobile-1080x2400\\14-icy-blue-manga-mix.png",
+    "sha256": "7e36c9a918ff1ee30b19a43169b2ea71ab6503476cb9aa0ecbe9f52a13d18132",
+    "note": "Technical resampled portrait export; native original preserved."
+  },
+  {
+    "reference": 5,
+    "file": "15-monochrome-personal-moodboard.png",
+    "nativeSize": [
+      841,
+      1870
+    ],
+    "exportSize": [
+      1080,
+      2400
+    ],
+    "master": "output\\collage-wave2-review\\masters\\15-monochrome-personal-moodboard.png",
+    "export": "output\\collage-wave2-review\\mobile-1080x2400\\15-monochrome-personal-moodboard.png",
+    "sha256": "7cd81353755987e99b5dd974bb2a551506024c09b340c607746ca6832b23d25d",
+    "note": "Technical resampled portrait export; native original preserved."
+  },
+  {
+    "reference": 6,
+    "file": "16-skull-butterfly-newsprint.png",
+    "nativeSize": [
+      841,
+      1870
+    ],
+    "exportSize": [
+      1080,
+      2400
+    ],
+    "master": "output\\collage-wave2-review\\masters\\16-skull-butterfly-newsprint.png",
+    "export": "output\\collage-wave2-review\\mobile-1080x2400\\16-skull-butterfly-newsprint.png",
+    "sha256": "aece44879fb894d34740de7a6de2a8d70cc5457e96de3cea6e0719ae60300a40",
+    "note": "Technical resampled portrait export; native original preserved."
+  },
+  {
+    "reference": 7,
+    "file": "17-analog-browser-manga.png",
+    "nativeSize": [
+      841,
+      1870
+    ],
+    "exportSize": [
+      1080,
+      2400
+    ],
+    "master": "output\\collage-wave2-review\\masters\\17-analog-browser-manga.png",
+    "export": "output\\collage-wave2-review\\mobile-1080x2400\\17-analog-browser-manga.png",
+    "sha256": "c3f7435c97b0197c60e061b9032a43ed699e67e6655ff879e2634577e2defba1",
+    "note": "Technical resampled portrait export; native original preserved."
+  },
+  {
+    "reference": 8,
+    "file": "18-vinyl-instant-memories.png",
+    "nativeSize": [
+      841,
+      1870
+    ],
+    "exportSize": [
+      1080,
+      2400
+    ],
+    "master": "output\\collage-wave2-review\\masters\\18-vinyl-instant-memories.png",
+    "export": "output\\collage-wave2-review\\mobile-1080x2400\\18-vinyl-instant-memories.png",
+    "sha256": "1ee27b6dc1a33ff0d95ecafe88b55c64b4291f1366bf8855e97030f857a20a04",
+    "note": "Technical resampled portrait export; native original preserved."
+  },
+  {
+    "reference": 9,
+    "file": "19-kitten-vinyl-snapshots.png",
+    "nativeSize": [
+      841,
+      1870
+    ],
+    "exportSize": [
+      1080,
+      2400
+    ],
+    "master": "output\\collage-wave2-review\\masters\\19-kitten-vinyl-snapshots.png",
+    "export": "output\\collage-wave2-review\\mobile-1080x2400\\19-kitten-vinyl-snapshots.png",
+    "sha256": "8de0f465ee6db501a05019e82dfd0a87180b285c2e18f43f29e3cf87fde02269",
+    "note": "Technical resampled portrait export; native original preserved."
+  },
+  {
+    "reference": 10,
+    "file": "20-mocha-chrome-star-journal.png",
+    "nativeSize": [
+      841,
+      1870
+    ],
+    "exportSize": [
+      1080,
+      2400
+    ],
+    "master": "output\\collage-wave2-review\\masters\\20-mocha-chrome-star-journal.png",
+    "export": "output\\collage-wave2-review\\mobile-1080x2400\\20-mocha-chrome-star-journal.png",
+    "sha256": "9ab738b97de7032f11ae1681df2dfa68edb1b10190a25405805dc89ee28805ec",
+    "note": "Technical resampled portrait export; native original preserved."
+  }
+]

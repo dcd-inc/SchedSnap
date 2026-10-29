@@ -1,0 +1,92 @@
+[
+  {
+    "reference": 1,
+    "master": "output\\dark-collage-mobile-review\\masters\\01-vinyl-music.png",
+    "nativeSize": [
+      841,
+      1870
+    ],
+    "export": "output\\dark-collage-mobile-review\\mobile-1080x2400\\01-vinyl-music.png",
+    "exportSize": [
+      1080,
+      2400
+    ],
+    "note": "Technical resampled export; original preserved",
+    "sha256": "ee150a3af3e8e422f36af885347095615ce7593843dfb61649d8dca528e80457"
+  },
+  {
+    "reference": 2,
+    "master": "output\\dark-collage-mobile-review\\masters\\02-punk-telephone.png",
+    "nativeSize": [
+      841,
+      1870
+    ],
+    "export": "output\\dark-collage-mobile-review\\mobile-1080x2400\\02-punk-telephone.png",
+    "exportSize": [
+      1080,
+      2400
+    ],
+    "note": "Technical resampled export; original preserved",
+    "sha256": "4e5de17da997d696c2ac8569ce6fbf6bcc31cd9fb64cf7da2a776e074e2b6790"
+  },
+  {
+    "reference": 3,
+    "master": "output\\dark-collage-mobile-review\\masters\\03-manga-newsprint.png",
+    "nativeSize": [
+      841,
+      1870
+    ],
+    "export": "output\\dark-collage-mobile-review\\mobile-1080x2400\\03-manga-newsprint.png",
+    "exportSize": [
+      1080,
+      2400
+    ],
+    "note": "Technical resampled export; original preserved",
+    "sha256": "0e14df3a757adbb58d9626a515924279957ab43e652225e8fdbd7d9f556e226a"
+  },
+  {
+    "reference": 4,
+    "master": "output\\dark-collage-mobile-review\\masters\\04-crimson-indie-rock.png",
+    "nativeSize": [
+      841,
+      1870
+    ],
+    "export": "output\\dark-collage-mobile-review\\mobile-1080x2400\\04-crimson-indie-rock.png",
+    "exportSize": [
+      1080,
+      2400
+    ],
+    "note": "Technical resampled export; original preserved",
+    "sha256": "4674d845fda9b2edd130db55c7eecb0a7b44deffdbeed8aee61b7083638280aa"
+  },
+  {
+    "reference": 5,
+    "master": "output\\dark-collage-mobile-review\\masters\\05-gothic-vampire.png",
+    "nativeSize": [
+      841,
+      1870
+    ],
+    "export": "output\\dark-collage-mobile-review\\mobile-1080x2400\\05-gothic-vampire.png",
+    "exportSize": [
+      1080,
+      2400
+    ],
+    "note": "Technical resampled export; original preserved",
+    "sha256": "8d7906177f40e892c6548bab5dc3a50bb5a8536de8fc8de87dc7565b385b59cb"
+  },
+  {
+    "reference": 6,
+    "master": "output\\dark-collage-mobile-review\\masters\\06-gothic-guitarist.png",
+    "nativeSize": [
+      841,
+      1870
+    ],
+    "export": "output\\dark-collage-mobile-review\\mobile-1080x2400\\06-gothic-guitarist.png",
+    "exportSize": [
+      1080,
+      2400
+    ],
+    "note": "Technical resampled export; original preserved",
+    "sha256": "f0e0cf99a7b1974aeb1a6ee8f7e2b8a8718e98be113f3d2449d662419897bc91"
+  }
+]

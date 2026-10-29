@@ -1,0 +1,244 @@
+{
+  "assets": [
+    {
+      "path": "public/wallpapers/scenic/flowers-blue-sky-daisies/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "fc46294ed372d6f1547a74f09cb7c64e56c4f32c274cefc5abdbedfbcca2d3b2"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-blush-cosmos/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "3871239cf3f3ac15fd240553a2cce661ce67dcd9afb654dc772dd8d663741833"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-rose-hibiscus/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "2278dd5524516c7440a7fca430dc693c9806c43dc219b769eb664a6d573a45a1"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-pastel-flower-lines/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "e3c41914607691a539347f7111d9ea080e1426ec949ff25da4ba5f6eebb63382"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-midnight-orange-leaves/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "c3b5967062382f9b81415126dc6fd05b362b4c65fc717df410ebeb92c2e7f294"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-mauve-midnight-peonies/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "fcbfcb8e1e611a59734def888a1f4f04f987c9d4502447a64b64877ece8c56ad"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-autumn-rose-garden/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "783f9eee5b3a9d610d3e69129240cb47f39bde24b95ab53c926768ef87fb9a2e"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-blue-daisy-hearts/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "71d039c9197c09330d7aa70a73b1c20767cc5713c1aed2e4d5ef70df8272f846"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-pink-tulip-collage/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "46449614ddfbca036622e4c874d7084c80f32a0443aae9943235085781926769"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-pastel-painted-blooms/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "8fb00aba59649b6be91c4e845ad7eceac48ddce2db1527545ebd02989028aaea"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-tropical-color-burst/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "dd4a36abe250dc69b788869441d3b7df5cfb2b1d5d4aec57230990c8102e357b"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-dark-daisy-meadow/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "53770cfb625dc0bc41b17f5bf3d303322b4e8103d2f3ce0fdcbde29d371047c1"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-blue-and-blush-blossoms/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "a84e5ad5612f8e4e7ddc7eeddcf0ac179433139fccde3fb19b2430c75561f40f"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-black-botanical-silhouette/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "6a0bf5a9c1ba19ccea5aa87d92891c0b3c6a7c6aa777273c4c4c855095ce92b3"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-pink-glass-blossoms/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "82a8215d654c6313f2db3ebf5ab2dd8cc6e50a8dc633690660a1aa72308b3b0e"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-twilight-rose-bouquet/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "00fb691b31969436e9f62e3e5dceba0e62b5b96cbb7be0ddc6f53ed2686bc648"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-soft-blush-botanicals/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "2a5281ad5edd2a36dd69280f06f50f58a539feaa608386c15a310dc292405e4f"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-red-ink-florals/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "a0862fcd72acc900b1d743ac64606de56de791257c37f5f2c27ab6b7f0699b95"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-crimson-peony-branches/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "efbc7f670762f9564c3f0386cff082367ed11d6c07887f3932d9c5f04855d834"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-jewel-tone-blooms/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "0b45883721ea880b56a811a2b7acdeaacb3effcc5bb9bad60c59b97ca4637ae5"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-wild-daisy-field/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "5147b5a34b29a0f6499b1c4d0de7b51c48e3014493692d3fa512a2d8ce275f33"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-dusky-daisy-garden/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "93310772a1a9a94d7ee0c3cf64d3be6195743361d46f4dab75c64b764f326931"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-pink-orchid-petals/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "41e36925c71158537d16171b246775d4c01934cda83b684c133c39c46b5275ad"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-pastel-retro-petals/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "f280ee86002f7ca69789dc6e70e1d177a819446885ba6311db23d74454f78eb7"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-amber-garden-doodles/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "7bb15f8626019566d693a3005a3574878e2b41816368fb4db13238881ccca3f0"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-pink-blossom-confetti/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "cb2d513a2cebe23db76299e35836655fe073a825f74ea0295b82e27e61cf3210"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-cream-daisy-minimal/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "00f2fcc29339d33200a63a5be527995009171979946aa9ac7a983e77d209d7f3"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-vintage-sepia-florals/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "e6ac053e5e6c45e149483eab4aef250ae9093d673746decd50d19b8324b58b64"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-sage-daisy-pop/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "840085d081d4b22e82015c89f5d3c225e03ecddeb921b7167f1f89c2642a1502"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-teal-daisy-repeat/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "43de1bf23328e12a442b6aef00c1dd7cdf53a80ee43e0c6a43cd6a5bffb20639"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-midnight-daisy-doodles/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "2733da9f9cff87fe7ea3f6a8579f381178601d6968e5aa46df344d31574b0488"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-lavender-watercolor-flowers/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "f813e57a506c4988ff745c79efd5220f4636db13e89af145553696264b4da930"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-pastel-paper-petals/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "9f7b8294f66e21bd7ae2887c8e0ff445d5969f159f55436ba095de52b586461c"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-strawberry-ribbon-garden/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "b52880fbd6ede76663a4cb3b1c72f9a2f4144974b3b70e43a3dc34ce63329256"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-pressed-wildflower-collection/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "9337c66660535f207fe5ab84b7991409206105b345664b4b3eece43d94e2699d"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-botanical-garden-study/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "21dcd8acab7e2d23fe054513fc7d4ca6284b3e27b08ecc867be020b038a34298"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-bougainvillea-wall/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "bc72e7b7232c62c33699cde3264e0e4b634b1eb7b8a6eef6b9684b78d8c4f161"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-lavender-brush-meadow/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "fe694d7f661c87f80bd3257927f451c10bdb1a6af789b114eb864dd1d3905eb3"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-daisies-after-dark/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "a4218858e0a743f0a56a406ed16b1268991d33419aa9a7be7182bbbda0559791"
+    },
+    {
+      "path": "public/wallpapers/scenic/flowers-kitten-rose-garden/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "e4a49b45e31f9ae00a8131d7c97d80ec54d3147453c88bdb35f91e4c007eeed2"
+    }
+  ]
+}

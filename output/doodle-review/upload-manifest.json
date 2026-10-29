@@ -1,0 +1,124 @@
+{
+  "assets": [
+    {
+      "path": "public/wallpapers/scenic/doodle-duck-parade/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "437f76dd290b84c4c843510b5c27c94cb763e1daa4f3472c98f31713155795f9"
+    },
+    {
+      "path": "public/wallpapers/scenic/doodle-veggie-crowd/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "d45717970a346bd7c8c6517fdba82edb045e8866d886909b4c561570975ba14a"
+    },
+    {
+      "path": "public/wallpapers/scenic/doodle-pastel-monsters/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "c76918a7c9b86858726026370f70e28596447cdb6424898f6d70774601dd7bc9"
+    },
+    {
+      "path": "public/wallpapers/scenic/doodle-zoo-buddies/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "91d184d2cedcbc10a1f61839479eb97643fa5218c2e6147908fda07737eafd2c"
+    },
+    {
+      "path": "public/wallpapers/scenic/doodle-silly-safari/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "de7c9ef15829be8df0097855d2c3e3d28978da49a36a25d1412d69fb1a8d8c83"
+    },
+    {
+      "path": "public/wallpapers/scenic/doodle-soft-animal-huddle/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "641a420110089d25e1b7b920504d1602ace994ddb6694d21b7b9e55d39d55b84"
+    },
+    {
+      "path": "public/wallpapers/scenic/doodle-ink-creature-jam/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "5fd930ff3f3e9851d63cd6c8fecf3748a2d5d1a70356aae28c855eb4604f0496"
+    },
+    {
+      "path": "public/wallpapers/scenic/doodle-bt21-party/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "c5d101d189277725e8ed8bf14c0d53340e08c7e4aecc51842c75849384f90652"
+    },
+    {
+      "path": "public/wallpapers/scenic/doodle-neon-monster-jam/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "c0c8412ec0dab802c87cd84dbd9a1fb91795d6765ee9dafd9b0412b8c7cf21af"
+    },
+    {
+      "path": "public/wallpapers/scenic/doodle-rainbow-doodle-crowd/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "7cbbd0c92f55c11aa6088239438dca2dd8a2202c019ad008338d7e54af46afe7"
+    },
+    {
+      "path": "public/wallpapers/scenic/doodle-cool-duck-club/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "747ed089995fc5842985fa7da4915765d3595caae7a25716a35fe60c817e89bb"
+    },
+    {
+      "path": "public/wallpapers/scenic/doodle-mood-blob-party/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "cc42080b971525a95a8090cf7a92df4898cf90dc39e9c6ab107277e95128683f"
+    },
+    {
+      "path": "public/wallpapers/scenic/doodle-snack-monsters/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "f2af05fa5d057e8eba513c212b97f571ca41b0a41236a29af01c63c9ccc7f519"
+    },
+    {
+      "path": "public/wallpapers/scenic/doodle-watermelon-cats/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "4e5dfb6b83b2a25c0f05d5ecda767913364270046f04cb8207525739f6203219"
+    },
+    {
+      "path": "public/wallpapers/scenic/doodle-confetti-cat-crowd/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "9512e21226b1a7f56b65c317a5cddcc14e8dfd0ba9bfc42ed61f8efe31ce3acb"
+    },
+    {
+      "path": "public/wallpapers/scenic/doodle-pastel-doodle-town/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "802b161573f3015e302e9fa62c11dd8a6bc8f722cdf19953016ae175b204ca0e"
+    },
+    {
+      "path": "public/wallpapers/scenic/doodle-flower-bear-huddle/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "e06156696e27ec7d9b2b61dd4b8f62335b06c729957b637dd49108bb7c5277af"
+    },
+    {
+      "path": "public/wallpapers/scenic/doodle-cozy-cat-club/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "bf50e3ec8b6cf5b57d97130f6cf51e8b6856f2de28166a861494ebe1ffd09d9b"
+    },
+    {
+      "path": "public/wallpapers/scenic/doodle-cactus-garden/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "da2cd453aacafaec225d7f28f9f7fc853645ba707f1aa7edc9799b32613cbc59"
+    },
+    {
+      "path": "public/wallpapers/scenic/doodle-peach-cat-parade/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "6c015b7a4bb717452c49cfb1b7ccfc032aeeab2e8ad568b4a77399ceb188f2fe"
+    }
+  ]
+}

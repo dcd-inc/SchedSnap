@@ -1,0 +1,127 @@
+{
+  "status": "Review only; no upload or catalog publication",
+  "generation": "Built-in Imagegen; native sources retained alongside delivery exports",
+  "eyeCorrection": "02-vi-red-portrait corrected to one iris and one pupil",
+  "assets": [
+    {
+      "file": "neon\\ref06-pink-rebellion.png",
+      "dimensions": [
+        1080,
+        2400
+      ],
+      "bytes": 2897769
+    },
+    {
+      "file": "neon\\ref07-sisters-embrace.png",
+      "dimensions": [
+        1080,
+        2400
+      ],
+      "bytes": 1761297
+    },
+    {
+      "file": "neon\\ref09-neon-phantom.png",
+      "dimensions": [
+        1080,
+        2400
+      ],
+      "bytes": 2504121
+    },
+    {
+      "file": "neon\\ref10-electric-graffiti.png",
+      "dimensions": [
+        1080,
+        2400
+      ],
+      "bytes": 2482184
+    },
+    {
+      "file": "paper\\11-jinx-torn-newsprint.png",
+      "dimensions": [
+        1080,
+        2400
+      ],
+      "bytes": 4395842
+    },
+    {
+      "file": "paper\\12-jinx-sepia-panels.png",
+      "dimensions": [
+        1080,
+        2400
+      ],
+      "bytes": 4495192
+    },
+    {
+      "file": "paper\\13-arcane-contour-cast.png",
+      "dimensions": [
+        1080,
+        2400
+      ],
+      "bytes": 2402099
+    },
+    {
+      "file": "paper\\14-jinx-cyan-newsprint.png",
+      "dimensions": [
+        1080,
+        2400
+      ],
+      "bytes": 4881773
+    },
+    {
+      "file": "paper\\15-ekko-mint-newsprint.png",
+      "dimensions": [
+        1080,
+        2400
+      ],
+      "bytes": 4636430
+    },
+    {
+      "file": "paper\\16-caitlyn-rose-newsprint.png",
+      "dimensions": [
+        1080,
+        2400
+      ],
+      "bytes": 4394362
+    },
+    {
+      "file": "paper\\17-viktor-violet-newsprint.png",
+      "dimensions": [
+        1080,
+        2400
+      ],
+      "bytes": 4690068
+    },
+    {
+      "file": "red\\01-vi-crimson.png",
+      "dimensions": [
+        1080,
+        2400
+      ],
+      "bytes": 1609507
+    },
+    {
+      "file": "red\\02-vi-red-portrait.png",
+      "dimensions": [
+        1080,
+        2400
+      ],
+      "bytes": 1725154
+    },
+    {
+      "file": "red\\03-jinx-cyan-flare.png",
+      "dimensions": [
+        1080,
+        2400
+      ],
+      "bytes": 3029747
+    },
+    {
+      "file": "red\\05-jinx-magenta-bridge.png",
+      "dimensions": [
+        1080,
+        2400
+      ],
+      "bytes": 1884530
+    }
+  ]
+}

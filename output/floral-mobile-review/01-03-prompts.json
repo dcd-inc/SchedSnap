@@ -1,0 +1,59 @@
+[
+  {
+    "reference": 1,
+    "sourcePath": "C:/Users/picar/AppData/Local/Temp/codex-clipboard-132d3a08-6527-463c-bdbe-e000181d5ea3.png",
+    "prompt": "Use case: stylized-concept. Asset type: premium mobile wallpaper preview, opaque full bleed portrait 1080 by 2400 pixels, strict 9:20 aspect ratio. Create NEW original artwork inspired by the supplied reference's botanical style and palette, not a copy. Art must be wallpaper worthy, richly tactile and masterfully composed. Keep upper 18 percent quieter and middle moderately low contrast for a future timetable, but integrate natural painterly texture throughout rather than leaving a dead blank rectangle. No text of any kind, cursive, calligraphy, lettering, numbers, seals, logos, watermarks, schedule, UI, borders or phone frame. Three electric cobalt-blue lilies with elegant curling petals, fine luminous veins, soft muted sage stems and long sinuous leaves, staggered vertically on a deep midnight navy painted ground. Preserve the reference's antique botanical oil-painted feeling and dramatic blue-on-blue mood. Main blooms arranged in an organic rising diagonal mostly in the lower two thirds, one smaller flower at the side of the upper third. Chiaroscuro, delicate drybrush grain, subtle weathered canvas edges, restrained contrast behind the central future schedule area. Absolutely omit the handwriting and watermark present in the reference.",
+    "provider": "built-in image_gen",
+    "requestedDimensions": [
+      1080,
+      2400
+    ],
+    "nativeDimensions": [
+      841,
+      1870
+    ],
+    "nativeMode": "RGB",
+    "generatedPath": "C:/Users/picar/.codex/generated_images/01a17cd3-f9b3-7c01-b300-d243cf9d9f36/exec-c35a72d9-e863-4a29-bd28-495bf14b571f.png",
+    "outputPath": "output/floral-mobile-review/01-blue-lilies.png",
+    "modified": false,
+    "qa": "Inspected visually. Opaque portrait; no text, seal, logo, watermark, schedule or frame. Reference botanical style preserved; quiet upper band; no resize/crop performed."
+  },
+  {
+    "reference": 2,
+    "sourcePath": "C:/Users/picar/AppData/Local/Temp/codex-clipboard-a71cf78e-add3-4f01-8408-df81ab7ed133.png",
+    "prompt": "Use case: stylized-concept. Asset type: premium mobile wallpaper preview, opaque full bleed portrait 1080 by 2400 pixels, strict 9:20 aspect ratio. Create NEW original artwork inspired by the supplied reference's botanical style and palette, not a copy. Art must be wallpaper worthy, richly tactile and masterfully composed. Keep upper 18 percent quieter and middle moderately low contrast for a future timetable, but integrate natural painterly texture throughout rather than leaving a dead blank rectangle. No text of any kind, cursive, calligraphy, lettering, numbers, seals, logos, watermarks, schedule, UI, borders or phone frame. A single magnificent purple lily, violet and pale lavender engraved petals with dark plum curling tips, fine dark botanical hatching, charcoal-black elegant stem and long narrow leaves. Antique torn ivory paper occupies much of the lower two thirds, surrounded by smoky charcoal and purple watercolor pools. The blossom sits below the upper quiet band, leaning subtly toward an edge, with organic asymmetry. Rich Victorian botanical engraving meets gothic watercolor collage, beautifully imperfect fibrous parchment, lavender washes and detailed petal veins. Absolutely omit handwriting and any other lettering.",
+    "provider": "built-in image_gen",
+    "requestedDimensions": [
+      1080,
+      2400
+    ],
+    "nativeDimensions": [
+      841,
+      1870
+    ],
+    "nativeMode": "RGB",
+    "generatedPath": "C:/Users/picar/.codex/generated_images/01a17cd3-f9b3-7c01-b300-d243cf9d9f36/exec-81aafbd7-01e1-487f-8ef2-178d07c21657.png",
+    "outputPath": "output/floral-mobile-review/02-purple-lily.png",
+    "modified": false,
+    "qa": "Inspected visually. Opaque portrait; no text, seal, logo, watermark, schedule or frame. Reference botanical style preserved; quiet upper band; no resize/crop performed."
+  },
+  {
+    "reference": 3,
+    "sourcePath": "C:/Users/picar/AppData/Local/Temp/codex-clipboard-d9e5f44b-ffc0-466b-90c0-c422f8abad88.png",
+    "prompt": "Use case: stylized-concept. Asset type: premium mobile wallpaper preview, opaque full bleed portrait 1080 by 2400 pixels, strict 9:20 aspect ratio. Create NEW original artwork inspired by the supplied reference's botanical style and palette, not a copy. Art must be wallpaper worthy, richly tactile and masterfully composed. Keep upper 18 percent quieter and middle moderately low contrast for a future timetable, but integrate natural painterly texture throughout rather than leaving a dead blank rectangle. No text of any kind, cursive, calligraphy, lettering, numbers, seals, logos, watermarks, schedule, UI, borders or phone frame. A single sumptuous burgundy lily, wine-red and oxblood curled petals with near-black engraved shadows, subtle dusty-rose highlights and fine botanical hatching, elegant almost-black stem and lance-shaped leaves. Antique torn ivory parchment with delicately weathered edges sits on a charcoal and wine watercolor ground. Place bloom in the lower middle to side, leaving the upper band quieter, composed as a dramatic tall original botanical print rather than a centered poster. Museum-quality gothic botanical collage with rich ink texture, subtle parchment mottling, dramatic petal curl and gorgeous red-black tonal depth. Absolutely omit all handwriting and text.",
+    "provider": "built-in image_gen",
+    "requestedDimensions": [
+      1080,
+      2400
+    ],
+    "nativeDimensions": [
+      841,
+      1870
+    ],
+    "nativeMode": "RGB",
+    "generatedPath": "C:/Users/picar/.codex/generated_images/01a17cd3-f9b3-7c01-b300-d243cf9d9f36/exec-f37b3f36-56d7-45d3-96ad-910831443561.png",
+    "outputPath": "output/floral-mobile-review/03-burgundy-lily.png",
+    "modified": false,
+    "qa": "Inspected visually. Opaque portrait; no text, seal, logo, watermark, schedule or frame. Reference botanical style preserved; quiet upper band; no resize/crop performed."
+  }
+]

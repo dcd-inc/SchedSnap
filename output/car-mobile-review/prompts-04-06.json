@@ -1,0 +1,29 @@
+[
+  {
+    "id": "04",
+    "prompt": "Use case: stylized-concept\nAsset type: premium mobile wallpaper artwork, 1080 x 2400 portrait, 9:20 aspect ratio.\nPrimary request: an elegant editorial automotive and botanical collage on warm ivory with a faint natural paper grain. One photorealistic deep crimson hibiscus bloom at the upper-left edge, beautifully detailed velvety petals, restrained size occupying the upper left quarter. A stunning polished scarlet Ferrari-inspired low exotic supercar in front three-quarter view anchors the bottom quarter, nose pointing left, partially cropped by the bottom and side edges, correct refined automotive proportions, black carbon aerodynamic details, immaculate curved reflections, sharp realistic wheels.\nComposition: opaque full bleed portrait wallpaper; broad uninterrupted quiet warm ivory negative space through the center and upper center for a future phone clock and timetable. The flower and car feel deliberately balanced, luxurious and collectible. Coherent soft studio lighting, crisp refined photographic cutout contours, subtly grounded car. Artwork only. No typography, words, lettering, logos, badges, slogans, license-plate text, watermark, clock, schedule, interface, device mockup or frame. Create fresh artwork rather than reproducing a reference.",
+    "provider": "built-in image_gen",
+    "requestedDimensions": [
+      1080,
+      2400
+    ]
+  },
+  {
+    "id": "05",
+    "prompt": "Use case: stylized-concept\nAsset type: premium mobile wallpaper artwork, 1080 x 2400 portrait, 9:20 aspect ratio.\nPrimary request: a refined editorial automotive botanical wallpaper on a luminous warm cream background with very subtle natural paper texture. One photorealistic elegant ivory white lily bloom gently cropped at the upper-left corner, with finely veined softly curled petals and natural dark brown stamens, no dense surrounding foliage. A gorgeous champagne beige Porsche 911-inspired widebody sports car seen close from the rear three-quarter anchors the bottom-left and bottom edge; large rear wing, gold multi-spoke wheel, sculpted rear body, slim dark red taillight, black diffuser, immaculate pearl champagne paint with coherent soft studio reflections, anatomically convincing automotive geometry.\nComposition: opaque full bleed tall portrait; car primarily in bottom quarter, gracefully cropped on left and bottom; flower confined to upper-left perimeter; broad clean warm cream quiet center and upper center for a future schedule and phone clock. Photographic luxury editorial collage, crisp contours, delicate realistic textures, warm understated sophisticated mood. Artwork only. No text, words, lettering, brand marks, logos, badges, slogans, plate text, watermark, schedule, clock, interface, mockup or device frame. Create fresh artwork.",
+    "provider": "built-in image_gen",
+    "requestedDimensions": [
+      1080,
+      2400
+    ]
+  },
+  {
+    "id": "06",
+    "prompt": "Use case: stylized-concept\nAsset type: premium mobile wallpaper artwork, 1080 x 2400 portrait, 9:20 aspect ratio.\nPrimary request: a beautiful cool editorial automotive botanical collage on a clean pale powder-blue background. A single photorealistic blue lily blossom with soft periwinkle shadows, finely veined petals and natural dark stamens, gently cropped at the upper-left edge. Along the bottom-left and bottom edge a gorgeous pearl-white Porsche 911-inspired modern widebody sports car shown close in rear three-quarter view, brilliant cobalt-blue multi-spoke rear wheel with realistic drilled brake disc, silver wing supports and cobalt blue rear-wing endplates, dark rear diffuser and thin red taillight. Immaculate car proportions, cool studio reflections that define every curve, realistic precision automotive photography.\nComposition: tall opaque full-bleed portrait wallpaper. Car occupies bottom quarter to lower third, flower remains at upper-left perimeter; large uninterrupted softly textured pale-blue quiet central and upper-center area suitable for a future phone clock and timetable. Crisp clean photographic collage contours, restrained luxury, coherent soft cool light, no busy scenery. Artwork only. No typography, words, lettering, logos, brand marks, badges, slogans, plate text, watermark, clock, schedule, interface, device mockup or frame. Create fresh artwork.",
+    "provider": "built-in image_gen",
+    "requestedDimensions": [
+      1080,
+      2400
+    ]
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 4,
+    "file": "04-scarlet-ivory.png",
+    "provider": "built-in image_gen",
+    "intent": "precise-object-edit",
+    "prompt": "Use case: precise-object-edit\nAsset type: mobile wallpaper, portrait 9:20 requested1080x2400.\nEdit this ACTUAL supplied wallpaper, do not reinterpret or recreate it. Remove only the large dark-red hibiscus flower in the upper-left area and heal that region with matching warm ivory subtly textured background. Preserve the exact actual red Ferrari supercar at the bottom including model, color, pose, reflections, crop, wheels, proportions, and badges. Preserve the supplied large right-side vertical red and black PORSCHE typography, its exact shape, layout and overlap; keep the black script on the left and the small red bow. The supplied graphic intentionally mixes Ferrari car and PORSCHE lettering: do not correct this. Preserve all remaining colors, image elements and composition. Modestly refine image quality/cutout edges without changing content. Produce tall portrait9:20 by extending matching background if necessary, never stretch the car or text. No flowers anywhere. No new objects or new lettering, no extra decorations, no device frame or interface.",
+    "sourceGenerated": "exec-e2d6522a-2989-4b38-ba8d-c8a7fb076efb.png"
+  },
+  {
+    "id": 5,
+    "file": "05-champagne-porsche.png",
+    "provider": "built-in image_gen",
+    "intent": "precise-object-edit",
+    "prompt": "Use case: precise-object-edit\nAsset type: mobile wallpaper, portrait9:20 requested1080x2400.\nEdit the ACTUAL attached wallpaper. Remove only the large ivory lily flower at upper left, heal that whole flower region seamlessly using the existing flat warm cream background. Preserve the exact actual champagne beige Porsche rear-quarter car at bottom including model, body shape, paint color, wheel, wing, all decals, lettering, license plate, reflection, angle and original crop. Preserve the existing enormous grey vertical PORSCHE lettering on the right, its exact typographic shape and composition behind the car; preserve the small grey handwritten Porsche script on the left. Keep the same background color and overall photographic collage style. Do not create a different car, new typography or reinterpretation. Modest quality and cutout edge polish only. Output tall9:20 portrait by extending matching cream background if needed, without stretching car/text. No flowers or botanical elements, no new objects, no new lettering, no device frame or interface.",
+    "sourceGenerated": "exec-bc7f1012-b7d7-413b-81c0-0486b0c1895d.png"
+  },
+  {
+    "id": 6,
+    "file": "06-blue-porsche.png",
+    "provider": "built-in image_gen",
+    "intent": "precise-object-edit",
+    "prompt": "Use case: precise-object-edit\nAsset type: mobile wallpaper, portrait9:20 requested1080x2400.\nEdit the actual supplied image. Remove only the blue lily flower at the upper-left/top edge and heal its area with the same pale powder-blue flat background. Preserve the actual original pearl-white Porsche rear-quarter sports car, cobalt blue wheel, exact body shape, crop, wing supports and blue endplate, proportions, reflections and all car details. Preserve the existing huge dark muted-blue right-side vertical PORSCHE serif lettering exactly in its original orientation and layering behind the car, plus the existing small dark-blue Porsche script on left. Keep the original colors and overall layout. Modestly polish source image quality and cutout edges without changing content. Make portrait9:20 by extending matching pale-blue background if necessary without stretching the car or text. No flowers anywhere, no new objects, new lettering or decoration, no scene reinterpretation, no device frame or interface.",
+    "sourceGenerated": "exec-779fd3cc-3904-4ece-b0e8-281ee81664e1.png"
+  }
+]

@@ -1,0 +1,106 @@
+{
+  "provider": "built-in image_gen",
+  "prompt": "Use case: stylized-concept. Generate ONE finished opaque full-bleed smartphone wallpaper in tall portrait 1080 × 2400 (9:20). Use the supplied reference as the actual visual source: closely preserve its specific character species, expressions, recognizable faces, palette, line weight, texture and packed overlapping arrangement. Make it crisp and wallpaper-worthy, naturally recomposing into the tall format without stretching. Retain the distinctive reference style rather than replacing it with generic characters. Clean deliberate edges, charming readable faces, balanced crowd density, consistent materials. Remove screenshot margins, rounded preview frame, watermark, signature, phone UI and any stray text. No schedule, lettering, logo, blank panel, contact sheet, or device mockup. One cohesive wallpaper only.",
+  "entries": [
+    {
+      "reference": 1,
+      "ref": "9281de2b-b218-44cd-b972-cce24adcf0e0",
+      "source": "C:\\Users\\picar\\.codex\\generated_images\\01a17ce6-5bfa-71c3-ad18-eb73a3f671ef\\exec-04c59913-349a-40e3-972e-3751a837d1ab.png"
+    },
+    {
+      "reference": 2,
+      "ref": "1e98c3a1-ab7b-489d-ab86-63f04bdbb6f8",
+      "source": "C:\\Users\\picar\\.codex\\generated_images\\01a17ce6-5bfa-71c3-ad18-eb73a3f671ef\\exec-5e5e1038-60c5-4a7d-ad86-af8cd6ea32c5.png"
+    },
+    {
+      "reference": 3,
+      "ref": "a5636bac-b262-4eb2-a0ef-2c9ac33a4e09",
+      "source": "C:\\Users\\picar\\.codex\\generated_images\\01a17ce6-5bfa-71c3-ad18-eb73a3f671ef\\exec-9609ae45-5d2a-4770-bd9b-dc01e9ec2069.png"
+    },
+    {
+      "reference": 4,
+      "ref": "c5eb3861-c13a-4359-90ac-cf01ee1ad196",
+      "source": "C:\\Users\\picar\\.codex\\generated_images\\01a17ce6-5bfa-71c3-ad18-eb73a3f671ef\\exec-04fa96ba-90a8-4ec1-8951-e733d94e7212.png"
+    },
+    {
+      "reference": 5,
+      "ref": "d75855c3-ed2d-42ff-b399-065052372db2",
+      "source": "C:\\Users\\picar\\.codex\\generated_images\\01a17ce6-5bfa-71c3-ad18-eb73a3f671ef\\exec-4850c15a-bb61-4c5f-88e9-7dae6fe6e24d.png"
+    },
+    {
+      "reference": 6,
+      "ref": "b26ea15a-d434-43f8-9d3a-e2de417ca0f3",
+      "source": "C:\\Users\\picar\\.codex\\generated_images\\01a17ce6-5bfa-71c3-ad18-eb73a3f671ef\\exec-2653a584-05c8-4a97-a4bf-870d82a062ec.png"
+    },
+    {
+      "reference": 7,
+      "ref": "80cd7754-3765-4195-a3c4-1011caf31df5",
+      "source": "C:\\Users\\picar\\.codex\\generated_images\\01a17ce6-5bfa-71c3-ad18-eb73a3f671ef\\exec-1a5e1b82-0478-4593-bcd7-0127ddbc41e7.png"
+    },
+    {
+      "reference": 8,
+      "ref": "0122a27e-e49c-4736-95ea-a9462862aabc",
+      "source": "C:\\Users\\picar\\.codex\\generated_images\\01a17ce6-5bfa-71c3-ad18-eb73a3f671ef\\exec-df8c69e5-3519-4285-bcc2-2071e7c99644.png"
+    },
+    {
+      "reference": 9,
+      "ref": "6b82b21d-455f-4cee-afc4-a13fb645c8c0",
+      "source": "C:\\Users\\picar\\.codex\\generated_images\\01a17ce6-5bfa-71c3-ad18-eb73a3f671ef\\exec-2223db35-5076-465e-8b2c-004606a15fba.png"
+    },
+    {
+      "reference": 10,
+      "ref": "abf96eca-d332-4074-92a8-4fbe88bcc6e6",
+      "source": "C:\\Users\\picar\\.codex\\generated_images\\01a17ce6-5bfa-71c3-ad18-eb73a3f671ef\\exec-a10d1045-6502-4a4f-8821-39af2fae7ece.png"
+    },
+    {
+      "reference": 11,
+      "ref": "2f73279a-dee6-4017-be48-2c68427e3c99",
+      "source": "C:\\Users\\picar\\.codex\\generated_images\\01a17ce6-5bfa-71c3-ad18-eb73a3f671ef\\exec-8069f94a-60b0-49cd-b9ba-0020694b1f3b.png"
+    },
+    {
+      "reference": 12,
+      "ref": "2beb2304-d50e-4066-a5d5-5d7b891ae9c7",
+      "source": "C:\\Users\\picar\\.codex\\generated_images\\01a17ce6-5bfa-71c3-ad18-eb73a3f671ef\\exec-684a2fa2-6b0b-43f0-a6df-113d86e33bb0.png"
+    },
+    {
+      "reference": 13,
+      "ref": "84fc9682-9e43-4826-8f28-bcda919b58bf",
+      "source": "C:\\Users\\picar\\.codex\\generated_images\\01a17ce6-5bfa-71c3-ad18-eb73a3f671ef\\exec-ee3b3e17-3e93-403c-accf-5ade8616df96.png"
+    },
+    {
+      "reference": 14,
+      "ref": "8bb1cfb0-0af5-449c-a2fc-b095e91b73e7",
+      "source": "C:\\Users\\picar\\.codex\\generated_images\\01a17ce6-5bfa-71c3-ad18-eb73a3f671ef\\exec-f82f64d7-b2ff-449b-8401-3a6149e7d201.png"
+    },
+    {
+      "reference": 15,
+      "ref": "2c696a8d-dcc2-4a84-b86e-afd761cd597a",
+      "source": "C:\\Users\\picar\\.codex\\generated_images\\01a17ce6-5bfa-71c3-ad18-eb73a3f671ef\\exec-a741b1b2-f002-4986-9e31-9b193e86a8b0.png"
+    },
+    {
+      "reference": 16,
+      "ref": "2a26249f-4e10-4b5a-806b-4c56e13f5912",
+      "source": "C:\\Users\\picar\\.codex\\generated_images\\01a17ce6-5bfa-71c3-ad18-eb73a3f671ef\\exec-6e3a7558-7b39-48f5-8bac-95054005e514.png"
+    },
+    {
+      "reference": 17,
+      "ref": "c57d19ef-ced5-4c05-8854-6672166fd682",
+      "source": "C:\\Users\\picar\\.codex\\generated_images\\01a17ce6-5bfa-71c3-ad18-eb73a3f671ef\\exec-80736cf9-a5bc-44e4-8d0e-8ad64e4ccce8.png"
+    },
+    {
+      "reference": 18,
+      "ref": "26f2794a-f7c4-421a-93ae-a8c6d97f4e3b",
+      "source": "C:\\Users\\picar\\.codex\\generated_images\\01a17ce6-5bfa-71c3-ad18-eb73a3f671ef\\exec-5e85d381-7650-46af-a38a-278f34e551c5.png"
+    },
+    {
+      "reference": 19,
+      "ref": "7edb722e-96c9-42a8-9103-6e5d6e0b98d3",
+      "source": "C:\\Users\\picar\\.codex\\generated_images\\01a17ce6-5bfa-71c3-ad18-eb73a3f671ef\\exec-3513c60d-4301-4d9d-9c7a-f3262749a9c3.png"
+    },
+    {
+      "reference": 20,
+      "ref": "97b58f17-0734-4392-ba8f-d429975ad8dd",
+      "source": "C:\\Users\\picar\\.codex\\generated_images\\01a17ce6-5bfa-71c3-ad18-eb73a3f671ef\\exec-5ea09878-45e6-4d5b-8bb3-e918f8378669.png"
+    }
+  ]
+}

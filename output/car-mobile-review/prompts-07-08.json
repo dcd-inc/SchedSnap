@@ -1,0 +1,13 @@
+{
+  "mode": "built-in image_gen",
+  "assets": [
+    {
+      "file": "07-carbon-shadow.png",
+      "prompt": "Use case: stylized-concept\nAsset type: premium mobile wallpaper preview, requested 1080 x 2400 pixels, tall 9:20 PORTRAIT orientation.\nPrimary request: Create an original wallpaper-worthy monochrome automotive editorial composition inspired by a dark McLaren rear-quarter poster. Opaque full bleed canvas in near-black charcoal, restrained tactile fine carbon-paper texture. A photorealistic black McLaren-inspired supercar rear three-quarter corner fills the lower 32 percent, dramatically cropped through the left and bottom edges, sculptural rear wing, sophisticated carbon surfaces, beautifully precise realistic taillight and curved bodywork. Elegant controlled silver rim lighting reveals silhouette without making the whole image gray. Preserve deep blacks and subtle detail. The upper two thirds and broad center must remain quiet and uncluttered for a phone clock and timetable overlay. This is a beautifully composed finished phone background, not a car advertisement or phone mockup. No flower in this design. No text, lettering, brand marks, badges, logos, numbers, watermark, border, UI, schedule or device frame. Do not rotate the canvas or place a landscape image inside a portrait canvas."
+    },
+    {
+      "file": "08-graphite-rain.png",
+      "prompt": "Use case: stylized-concept\nAsset type: premium mobile wallpaper, 1080 x 2400 pixels requested, tall portrait 9:20.\nPrimary request: Create an original black-and-silver Porsche 911 GT3 RS-inspired phone wallpaper. Opaque full bleed pitch charcoal backdrop with very subtle photographic grain. A beautifully photorealistic metallic graphite rear three-quarter sports car with large racing wing fills the bottom 36 percent, cropped confidently at the right and bottom edges. Sculptural wide rear fenders, precise vent geometry, elegant silver-white reflections, dark wheels and understated clear taillight design; no brand badges. Fine rain droplets on graphite bodywork add tactile detail. Editorial minimalist composition, car aligned toward lower right with its near rear wheel and rear bumper clearly resolved. Keep upper two thirds very dark, quiet and mostly flat for phone clock and timetable readability. Clean studio-cutout editorial feel, no city, no road, no flowers, no floating emblems. Refined and cinematic rather than overprocessed. No text or lettering anywhere, no logo, no number plate text, no slogans, no watermark, UI, timetable, border or phone frame. Portrait composition, do not rotate."
+    }
+  ]
+}

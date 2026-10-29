@@ -1,0 +1,32 @@
+{
+  "mode": "built-in image_gen",
+  "status": "local review only; no uploads or catalog edits",
+  "assets": [
+    {
+      "id": "01-vi-crimson",
+      "prompt": "Use case: stylized-concept. Create ONE premium full-bleed MOBILE WALLPAPER, tall portrait 9:20, target 1080x2400. Artwork only, no text, lettering, logos, watermarks, UI, phone frame, cards or timetable. Use reference for subject and visual language, create a new composition. Reserve quiet low-detail upper and central 65% for future schedule overlays; character focal point in bottom third, enough scale to feel intentional, beautifully resolved silhouette. Black and vermilion two-ink screenprint Vi from Arcane, powerful crouching boxer with enormous mechanical gauntlets, asymmetric angular silhouette anchored across bottom 35%, subtle ink-cut details, flat vivid coral-red field, fierce expression. Match reference's sculptural flat blacks, no grey rendering.",
+      "reference": "C:/Users/picar/AppData/Local/Temp/codex-clipboard-bd506c27-5380-46cb-8c3a-608be3d25468.png",
+      "source": "C:\\Users\\picar\\.codex\\generated_images\\01a17cad-f3ae-7003-9c89-61a554c63e1e\\exec-b573f32b-08ca-477c-b40e-bd469b0dc1c9.png"
+    },
+    {
+      "id": "02-vi-red-portrait",
+      "prompt": "Use case: stylized-concept. Create ONE premium full-bleed MOBILE WALLPAPER, tall portrait 9:20, target 1080x2400. Artwork only, no text, lettering, logos, watermarks, UI, phone frame, cards or timetable. Use reference for subject and visual language, create a new composition. Reserve quiet low-detail upper and central 65% for future schedule overlays; character focal point in bottom third, enough scale to feel intentional, beautifully resolved silhouette. A severe close-up of Vi from Arcane as a red-and-black woodcut poster. Her side-swept hair and one intense eye resolve from angular black ink, cropped face occupies lower 40% emerging from bottom and right edge; top 60% uninterrupted deep scarlet. Elegant hard edges, rebellious dramatic graphic design. No cheek lettering.",
+      "reference": "C:/Users/picar/AppData/Local/Temp/codex-clipboard-bb265a68-85f4-44de-827d-1685a1b78599.png",
+      "source": "C:\\Users\\picar\\.codex\\generated_images\\01a17cad-f3ae-7003-9c89-61a554c63e1e\\exec-423f17ae-237a-434d-96c6-b4f5469a77ee.png",
+      "originalSource": "C:\\Users\\picar\\.codex\\generated_images\\01a17cad-f3ae-7003-9c89-61a554c63e1e\\exec-01440e14-7251-44c8-a7fe-85b558acac8c.png",
+      "correctionPrompt": "Use case: precise-object-edit. Correct ONLY the visible eye anatomy in this red-and-black Vi portrait wallpaper. The single exposed eye currently has TWO round iris/pupil shapes side by side within one eye socket. Remove both mistaken marks and redraw ONE anatomically coherent almond-shaped eye with exactly ONE iris containing ONE pupil, focused gaze to viewer, matching the black ink-cut rendering. Hair hides the other eye completely. Preserve the same expression, eyebrow, nose, lips, hair, silhouette, red field, colors, all framing and tall portrait dimensions. No other edits, no text."
+    },
+    {
+      "id": "03-jinx-cyan-flare",
+      "prompt": "Use case: stylized-concept. Create ONE premium full-bleed MOBILE WALLPAPER, tall portrait 9:20, target 1080x2400. Artwork only, no text, lettering, logos, watermarks, UI, phone frame, cards or timetable. Use reference for subject and visual language, create a new composition. Reserve quiet low-detail upper and central 65% for future schedule overlays; character focal point in bottom third, enough scale to feel intentional, beautifully resolved silhouette. Painterly cinematic Jinx from Arcane seen from behind at bottom, very long blue braids, raises one cyan flare over a vast red industrial gothic city. Small compelling full-body figure lower 28%, detailed distant spires low on horizon. Turquoise smoke travels up far-right edge then dissipates near top. Main middle-left 65% subdued burgundy atmosphere with subtle tonal depth, no busy smoke across central area. Rich crimson/cyan lighting, painted texture.",
+      "reference": "C:/Users/picar/AppData/Local/Temp/codex-clipboard-8a87190d-b617-4fb0-9b9c-a8055d58f1ff.png",
+      "source": "C:\\Users\\picar\\.codex\\generated_images\\01a17cad-f3ae-7003-9c89-61a554c63e1e\\exec-d5248247-db03-4cea-8881-b99c64c16e25.png"
+    },
+    {
+      "id": "05-jinx-magenta-bridge",
+      "prompt": "Use case: stylized-concept. Create ONE premium full-bleed MOBILE WALLPAPER, tall portrait 9:20, target 1080x2400. Artwork only, no text, lettering, logos, watermarks, UI, phone frame, cards or timetable. Use reference for subject and visual language, create a new composition. Reserve quiet low-detail upper and central 65% for future schedule overlays; character focal point in bottom third, enough scale to feel intentional, beautifully resolved silhouette. Minimal cinematic Jinx from Arcane walking away along a monumental bridge into hot carmine magenta fog. Small black full-body silhouette at lower 70% with luminous blue braids, long dramatic shadow running toward bottom. Tower arches recede at outer edges, softened by fog, center and upper 65% almost uniform saturated pink-red haze. Painterly architectural depth, polished atmospheric wallpaper.",
+      "reference": "C:/Users/picar/AppData/Local/Temp/codex-clipboard-dae947ed-c64b-4ef8-84d0-87534961fb97.png",
+      "source": "C:\\Users\\picar\\.codex\\generated_images\\01a17cad-f3ae-7003-9c89-61a554c63e1e\\exec-dc55dcf9-f88b-4211-ae0c-96af26bcb9f9.png"
+    }
+  ]
+}
