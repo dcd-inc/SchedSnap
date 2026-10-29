@@ -5,6 +5,7 @@ import { deviceResolutions, galleryScheduleFor } from '../../assets/wallpaperPre
 import useInfiniteGallery from '../../lib/useInfiniteGallery.js';
 import { useCatalogStatus } from '../../lib/catalogContext.js';
 import { WallpaperCanvas } from './CanvasPreview.jsx';
+import WallpaperViewer from './WallpaperViewer.jsx';
 import { customizeWallpaperTemplate, galleryPreviewTemplate } from '../../utils/wallpaperTheme.js';
 import { designGalleryCategories as galleryCategories, matchesDesignGalleryCategory as matchesGalleryCategory } from '../../utils/galleryCategories.js';
 import { templateProperties, trackEvent } from '../../lib/analytics.js';
@@ -141,6 +142,7 @@ export default function TemplateGallery({ onUpload, selectedId, settings = {}, s
 
 export function DesignPreview({ template, schedule, resolution, onClose, onSelect, onLayoutChange, selectLabel = 'Use this design' }) {
   const dialog = useRef(null);
+  const [enlarged, setEnlarged] = useState(false);
   useMobileSheetDismiss(dialog, onClose);
   const layoutPicker = useRef(null);
   const selectedLayout = scheduleLayoutOptions(resolution.id).find(option => option.value === template.scheduleLayout) || scheduleLayoutOptions(resolution.id)[0];
@@ -176,7 +178,7 @@ export function DesignPreview({ template, schedule, resolution, onClose, onSelec
   }, []);
   return <dialog ref={dialog} className="design-preview-dialog" data-custom-background={template.customBackground || undefined} data-device={resolution.id} data-orientation={resolution.width > resolution.height ? 'landscape' : 'portrait'} style={{ '--design-preview-ratio': resolution.width / resolution.height }} aria-labelledby="design-preview-title" onCancel={onClose} onClick={(event) => { if (event.target === event.currentTarget) onClose(); }}>
     <header><h2 id="design-preview-title">{template.name}</h2><button type="button" className="template-modal-control" aria-label="Close design preview" onClick={onClose}><X size={20} aria-hidden="true" /></button></header>
-    <div className="design-preview-body"><WallpaperCanvas schedule={schedule?.classes.length ? schedule : previewSchedule(template)} template={template} resolution={resolution} className="block h-auto w-full" label={`${template.name} with ${schedule?.classes.length ? 'your' : 'sample'} classes`} /></div>
+    <div className="design-preview-body"><button type="button" className="design-preview-enlarge" aria-label={`Enlarge ${template.name} preview`} aria-haspopup="dialog" onClick={() => setEnlarged(true)}><WallpaperCanvas schedule={schedule?.classes.length ? schedule : previewSchedule(template)} template={template} resolution={resolution} className="block h-auto w-full" label={`${template.name} with ${schedule?.classes.length ? 'your' : 'sample'} classes`} /></button></div>
     <footer>
       <details ref={layoutPicker} className="device-picker preview-layout-picker">
         <summary className="button-secondary" aria-label={`Schedule layout: ${selectedLayout.label}`}><SelectedLayoutIcon aria-hidden="true" /><span>{selectedLayout.label}</span><ChevronDown aria-hidden="true" /></summary>
@@ -186,5 +188,6 @@ export function DesignPreview({ template, schedule, resolution, onClose, onSelec
       </details>
       <button type="button" className="button-primary" onClick={onSelect}>{selectLabel}<ArrowRight size={16} aria-hidden="true" /></button>
     </footer>
+    {enlarged && <WallpaperViewer title={template.name} resolution={resolution} onClose={() => setEnlarged(false)}><WallpaperCanvas schedule={schedule?.classes.length ? schedule : previewSchedule(template)} template={template} resolution={resolution} className="block h-auto w-full" /></WallpaperViewer>}
   </dialog>;
 }

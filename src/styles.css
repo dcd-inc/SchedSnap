@@ -212,6 +212,7 @@ dialog.background-device-dialog footer > button, dialog.background-upload-guide 
 .design-preview-dialog header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 16px; border-bottom: 1px solid var(--color-line); }
 .design-preview-dialog h2 { font-size: 18px; font-weight: 650; }
 .design-preview-body { display: flex; justify-content: center; padding: 16px; background: var(--color-soft); }
+.design-preview-enlarge { display: flex; justify-content: center; min-width: 0; max-width: 100%; padding: 0; border: 0; background: transparent; cursor: zoom-in; }
 .design-preview-body canvas { width: auto; max-width: 100%; max-height: calc(100dvh - 220px); object-fit: contain; }
 .design-preview-dialog[data-device='mobile'] .design-preview-body canvas { max-height: min(66dvh, calc(100dvh - 220px)); }
 .design-preview-dialog footer { position: sticky; bottom: 0; display: flex; flex-wrap: wrap; gap: 12px; padding: 16px; border-top: 1px solid var(--color-line); background: white; }
