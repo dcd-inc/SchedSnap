@@ -5725,5 +5725,131 @@ export default {
     "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793188642/schedsnap/wallpapers/scenic/doodle-watermelon-cats/mobile-4e5dfb6b83b2a25c.png",
     "width": 1080,
     "height": 2400
+  },
+  "/wallpapers/scenic/graffiti-black-ink-comic-jam/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/graffiti-black-ink-comic-jam/mobile-9ff3945c0273f664",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793232451/schedsnap/wallpapers/scenic/graffiti-black-ink-comic-jam/mobile-9ff3945c0273f664.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/graffiti-blue-robot-crowd/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/graffiti-blue-robot-crowd/mobile-817bb28c6a6f3cb5",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793232451/schedsnap/wallpapers/scenic/graffiti-blue-robot-crowd/mobile-817bb28c6a6f3cb5.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/graffiti-electric-love-tags/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/graffiti-electric-love-tags/mobile-42e15bf40c729347",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793232451/schedsnap/wallpapers/scenic/graffiti-electric-love-tags/mobile-42e15bf40c729347.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/graffiti-midnight-doodle-maze/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/graffiti-midnight-doodle-maze/mobile-b14f96df665eb7cb",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793232453/schedsnap/wallpapers/scenic/graffiti-midnight-doodle-maze/mobile-b14f96df665eb7cb.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/graffiti-neon-letter-jam/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/graffiti-neon-letter-jam/mobile-0f2aefa32012dc3c",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793232453/schedsnap/wallpapers/scenic/graffiti-neon-letter-jam/mobile-0f2aefa32012dc3c.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/graffiti-neon-monster-wall/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/graffiti-neon-monster-wall/mobile-a4de28864c07f630",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793232454/schedsnap/wallpapers/scenic/graffiti-neon-monster-wall/mobile-a4de28864c07f630.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/graffiti-orange-character-crew/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/graffiti-orange-character-crew/mobile-43d7fdfa4e522592",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793232455/schedsnap/wallpapers/scenic/graffiti-orange-character-crew/mobile-43d7fdfa4e522592.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/graffiti-neon-tag-layers/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/graffiti-neon-tag-layers/mobile-08eeaf215e159eb9",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793232454/schedsnap/wallpapers/scenic/graffiti-neon-tag-layers/mobile-08eeaf215e159eb9.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/graffiti-red-letter-riot/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/graffiti-red-letter-riot/mobile-ea0db725254f5d45",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793232457/schedsnap/wallpapers/scenic/graffiti-red-letter-riot/mobile-ea0db725254f5d45.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/graffiti-rainbow-street-tags/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/graffiti-rainbow-street-tags/mobile-daa86dfe5641ba46",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793232457/schedsnap/wallpapers/scenic/graffiti-rainbow-street-tags/mobile-daa86dfe5641ba46.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/graffiti-red-skate-collision/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/graffiti-red-skate-collision/mobile-1da013d6cf8684a1",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793232457/schedsnap/wallpapers/scenic/graffiti-red-skate-collision/mobile-1da013d6cf8684a1.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/graffiti-acid-brush-strokes/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/graffiti-acid-brush-strokes/mobile-06e7634a2a10e455",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793232458/schedsnap/wallpapers/scenic/graffiti-acid-brush-strokes/mobile-06e7634a2a10e455.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/graffiti-retro-hip-hop-mix/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/graffiti-retro-hip-hop-mix/mobile-77826f06519e8670",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793232460/schedsnap/wallpapers/scenic/graffiti-retro-hip-hop-mix/mobile-77826f06519e8670.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/graffiti-steel-ink-wall/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/graffiti-steel-ink-wall/mobile-54be7293a25c44e0",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793232461/schedsnap/wallpapers/scenic/graffiti-steel-ink-wall/mobile-54be7293a25c44e0.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/graffiti-soul-skate-zine/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/graffiti-soul-skate-zine/mobile-09838a455c4faca7",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793232462/schedsnap/wallpapers/scenic/graffiti-soul-skate-zine/mobile-09838a455c4faca7.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/graffiti-yellow-chaos/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/graffiti-yellow-chaos/mobile-5b52c673e714035a",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793232463/schedsnap/wallpapers/scenic/graffiti-yellow-chaos/mobile-5b52c673e714035a.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/graffiti-underground-sticker-wall/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/graffiti-underground-sticker-wall/mobile-e4b64c38c5697170",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793232465/schedsnap/wallpapers/scenic/graffiti-underground-sticker-wall/mobile-e4b64c38c5697170.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/graffiti-street-character-mashup/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/graffiti-street-character-mashup/mobile-6527a752ec2e5f08",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793232474/schedsnap/wallpapers/scenic/graffiti-street-character-mashup/mobile-6527a752ec2e5f08.png",
+    "width": 1080,
+    "height": 2400
   }
 };
