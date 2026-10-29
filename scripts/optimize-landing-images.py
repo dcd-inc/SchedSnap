@@ -36,7 +36,8 @@ for source, widths in sources.items():
                 avif = destination.with_suffix('.avif')
                 resized.save(avif, 'AVIF', quality=55, speed=6)
                 with Image.open(avif) as result:
-                    assert result.size == (width, height) and 'A' in result.getbands(), avif
+                    assert result.size == (width, height), avif
+                    assert ('A' in result.getbands()) == ('A' in original.getbands()), avif
                 delivery_bytes += avif.stat().st_size
                 print(f'{avif.relative_to(ROOT)}: {avif.stat().st_size:,} bytes')
 print(f'{original_bytes:,} source bytes -> {delivery_bytes:,} bytes across all delivery sizes')

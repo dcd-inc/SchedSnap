@@ -81,6 +81,9 @@
   .feedback-footer-link { cursor: pointer; }
   .feedback-dialog { position: fixed; inset: 0; width: min(560px, calc(100% - 32px)); max-height: calc(100dvh - 32px); margin: auto; padding: clamp(24px, 4vw, 36px); overflow: auto; border: 1px solid #ebe3d7; border-radius: 16px; background: #fff; color: var(--color-ink); text-align: left; overscroll-behavior: contain; }
   .feedback-dialog::backdrop { background: rgb(20 24 30 / 55%); }
+  /* Keep the sticky header in view while the modal makes the page inert. */
+  body:has(.feedback-dialog[open]) .site-header { position: fixed; left: 0; right: 0; }
+  body:has(.feedback-dialog[open]) .site-header:not(.site-header-home) + main { margin-top: 77px; }
   .feedback-dialog-header { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-bottom: 16px; border-bottom: 1px solid var(--color-line); }
   .feedback-dialog-actions { padding-top: 20px; border-top: 1px solid var(--color-line); }
   .feedback-dialog h2 { font-size: 1.5rem; font-weight: 600; letter-spacing: -0.03em; }
@@ -95,6 +98,10 @@
   .feedback-form select:focus, .feedback-form textarea:focus { outline: none; border-color: var(--color-ink); box-shadow: 0 0 0 2px rgb(15 23 42 / 15%); }
   .feedback-dialog h2:focus { outline: none; }
   .feedback-form textarea { min-height: 150px; resize: vertical; }
+  .feedback-skeleton select, .feedback-skeleton textarea, .feedback-skeleton button:disabled { background-image: linear-gradient(100deg, #e8edf0 25%, #f5f7f8 45%, #e8edf0 65%); background-size: 200% 100%; animation: wallpaper-loading 1.4s ease-in-out infinite; color: transparent; border-color: transparent; opacity: 1; }
+  .feedback-skeleton textarea::placeholder { color: transparent; }
+  .feedback-skeleton .feedback-select svg { visibility: hidden; }
+  @media (prefers-reduced-motion: reduce) { .feedback-skeleton select, .feedback-skeleton textarea, .feedback-skeleton button:disabled { animation: none; } }
   .feedback-form button, .feedback-success button { width: 100%; min-height: 48px; cursor: pointer; }
   .feedback-form button:disabled { opacity: .6; cursor: not-allowed; }
   .feedback-note { color: var(--color-muted); font-size: 14px; line-height: 1.5; }
@@ -105,7 +112,17 @@
   .feedback-success-message p { width: 100%; }
   .feedback-success-message p { animation: feedback-thanks-reveal 450ms cubic-bezier(0.16, 1, 0.3, 1) both; }
   .feedback-success-mascot { width: 128px; height: 128px; object-fit: contain; }
+  @media (min-width: 641px) {
+    .feedback-dialog { width: min(520px, calc(100% - 32px)); padding: 24px; }
+    .feedback-dialog-header { padding-bottom: 12px; }
+    .feedback-dialog h2 { font-size: 1.25rem; }
+    .feedback-form { gap: 16px; margin-top: 20px; }
+    .feedback-form select, .feedback-form textarea { padding: 12px; }
+    .feedback-form textarea { min-height: 120px; }
+    .feedback-dialog-actions { padding-top: 16px; }
+  }
   @media (max-width: 640px) {
+    body:has(.feedback-dialog[open]) .site-header:not(.site-header-home) + main { margin-top: 57px; }
     dialog.feedback-dialog { inset: auto 0 0; width: 100%; max-width: 100%; max-height: calc(100dvh - 16px); margin: 0; padding: 12px 20px var(--mobile-action-bottom, calc(12px + env(safe-area-inset-bottom, 0px))); border: 0; border-radius: 20px 20px 0 0; overscroll-behavior: contain; }
     .feedback-dialog::backdrop { background: rgb(15 23 42 / 45%); }
     .feedback-dialog-header { padding-bottom: 12px; }
