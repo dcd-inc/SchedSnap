@@ -12,6 +12,8 @@ const examples = {
 
 export default function FeedbackDialog({ footer = false }) {
   const dialog = useRef(null);
+  const trigger = useRef(null);
+  const allowance = useRef(null);
   const canvas = useRef(null);
   const titleId = useId();
   const countId = useId();
@@ -21,6 +23,20 @@ export default function FeedbackDialog({ footer = false }) {
   const [category, setCategory] = useState('Feature request');
   const [message, setMessage] = useState('');
   const [limitReset, setLimitReset] = useState(0);
+  useEffect(() => {
+    const controller = new AbortController();
+    const observer = new IntersectionObserver(entries => {
+      if (!entries.some(entry => entry.isIntersecting)) return;
+      observer.disconnect();
+      void fetch('/api/feedback', { cache: 'no-store', signal: AbortSignal.any([controller.signal, AbortSignal.timeout(10000)]) })
+        .then(response => response.ok ? response.json() : null)
+        .then(result => { allowance.current = result; })
+        // A failed preload must never prevent opening or sending feedback.
+        .catch(() => {});
+    }, { rootMargin: '600px' });
+    observer.observe(trigger.current);
+    return () => { observer.disconnect(); controller.abort(); };
+  }, []);
   useEffect(() => {
     if (!limitReset) return;
     const timer = window.setTimeout(() => setLimitReset(0), Math.max(0, limitReset - Date.now()));
@@ -60,10 +76,12 @@ export default function FeedbackDialog({ footer = false }) {
     finally { setBusy(false); }
   }
   function open() {
+    const status = allowance.current;
+    if (status?.remaining === 0 && status.reset > Date.now()) setLimitReset(status.reset);
     setError(''); setSent(false); dialog.current?.showModal();
   }
   return <>
-    <button type="button" className={footer ? 'feedback-footer-link' : 'button-primary'} onClick={open}>{footer ? 'Feedback' : <>Share feedback <ArrowRight size={18} aria-hidden="true" /></>}</button>
+    <button ref={trigger} type="button" className={footer ? 'feedback-footer-link' : 'button-primary'} onClick={open}>{footer ? 'Feedback' : <>Share feedback <ArrowRight size={18} aria-hidden="true" /></>}</button>
     {typeof document !== 'undefined' && createPortal(<dialog ref={dialog} className="feedback-dialog" aria-labelledby={titleId} onClose={() => setSent(false)} onClick={event => { if (event.target === event.currentTarget) event.currentTarget.close(); }}>
       <div className="feedback-dialog-header"><h2 id={titleId} tabIndex={-1} autoFocus>{sent ? 'Feedback sent' : limitReset ? 'We’ve received your feedback' : 'Share your feedback'}</h2><button type="button" className="feedback-close" aria-label="Close feedback" onClick={() => dialog.current.close()}><X size={20} /></button></div>
       {limitReset > 0 && !sent ? <div className="feedback-success"><div className="feedback-success-message" role="status"><img className="feedback-success-mascot" src="/images/maker/maker-capybara-static-320.webp" alt="" width="320" height="320" /><p>You’ve reached today’s feedback limit. We’ll review them and look into what you’ve shared. You can send more tomorrow.</p><p>Need help or have more to share? Email us at <a className="underline underline-offset-4" href="mailto:dcd.inc.mail@gmail.com">dcd.inc.mail@gmail.com</a>.</p></div><div className="feedback-dialog-actions"><button type="button" className="button-primary" onClick={() => dialog.current.close()}>Close</button></div></div> : <>
