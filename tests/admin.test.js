@@ -29,6 +29,50 @@ test('admin metrics require authentication and include hidden and draft designs'
 function response() { return { headers: {}, setHeader(key, value) { this.headers[key] = value; }, status(code) { this.code = code; return this; }, json(body) { this.body = body; return this; } }; }
 function req(action, body, cookie) { return { method: body ? 'POST' : 'GET', url: `/api/admin?action=${action}`, headers: { host: 'localhost:5173', origin: 'http://localhost:5173', 'content-type': 'application/json', cookie }, body }; }
 const cookie = () => `schedsnap_admin=${createSession(env)}`;
+
+test('device visibility persists through save, public delivery, hide-all and restore', async () => {
+  const first = seedCatalog().templates.find(t => !t.mobileOnly && !t.deviceImages);
+  assert.ok(first);
+  let catalog = { revision: 'seed', templates: [first] };
+  const store = { read: async () => structuredClone(catalog), write: async next => { catalog = next; return next; } };
+  const handler = createAdminHandler({ env, store });
+  async function visibility(visibleDevices) {
+    const result = response();
+    await handler(req('visibility', { revision: catalog.revision, id: first.id, visibleDevices }, cookie()), result);
+    assert.equal(result.code, 200);
+  }
+  await visibility(['mobile', 'laptop']);
+  assert.equal(catalog.templates[0].status, 'published');
+  assert.deepEqual(catalog.templates[0].hiddenDevices, ['tablet']);
+  let result = response();
+  await handler(req('save', { revision: catalog.revision, template: catalog.templates[0] }, cookie()), result);
+  assert.equal(result.code, 200);
+  assert.deepEqual(catalog.templates[0].hiddenDevices, ['tablet']);
+  result = response();
+  await createPublicCatalogHandler({ env, store })({ method: 'GET' }, result);
+  assert.deepEqual(result.body.templates.find(t => t.id === first.id).hiddenDevices, ['tablet']);
+  await visibility([]);
+  assert.equal(catalog.templates[0].status, 'hidden');
+  result = response();
+  await createPublicCatalogHandler({ env, store })({ method: 'GET' }, result);
+  assert.equal(result.body.templates.some(t => t.id === first.id), false);
+  await visibility(['tablet']);
+  assert.equal(catalog.templates[0].status, 'published');
+  assert.deepEqual(catalog.templates[0].hiddenDevices, ['mobile', 'laptop']);
+});
+
+test('visibility rejects unsupported devices, duplicate choices, and malformed payloads', async () => {
+  const first = { ...seedCatalog().templates[0], mobileOnly: true };
+  const catalog = { revision: 'seed', templates: [first] };
+  let writes = 0;
+  const handler = createAdminHandler({ env, store: { read: async () => structuredClone(catalog), write: async next => { writes++; return next; } } });
+  for (const visibleDevices of [['tablet'], ['mobile', 'mobile'], ['desktop'], 'mobile', null]) {
+    const result = response();
+    await handler(req('visibility', { revision: 'seed', id: first.id, visibleDevices }, cookie()), result);
+    assert.equal(result.code, 400);
+  }
+  assert.equal(writes, 0);
+});
 test('direct environment password supports login and rotation without a setup command', async () => {
   const direct = { ...env, ADMIN_PASSWORD: 'a-direct-password-123', ADMIN_PASSWORD_HASH: undefined, ADMIN_SESSION_SECRET: undefined };
   const handler = createAdminHandler({ env: direct });

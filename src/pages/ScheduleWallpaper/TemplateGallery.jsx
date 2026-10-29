@@ -9,7 +9,7 @@ import { customizeWallpaperTemplate, galleryPreviewTemplate } from '../../utils/
 import { designGalleryCategories as galleryCategories, matchesDesignGalleryCategory as matchesGalleryCategory } from '../../utils/galleryCategories.js';
 import { templateProperties, trackEvent } from '../../lib/analytics.js';
 import useDesignDownloads from '../../lib/useDesignDownloads.js';
-import CategoryFilters from '../../components/CategoryFilters.jsx';
+import CollectionFilters from '../../components/CollectionFilters.jsx';
 import DevicePicker from '../../components/DevicePicker.jsx';
 import { layoutIcons, stylePickerOptions } from '../../components/wallpaperOptionIcons.js';
 import SortPicker from '../../components/SortPicker.jsx';
@@ -56,7 +56,7 @@ export default function TemplateGallery({ onUpload, selectedId, settings = {}, s
       <DevicePicker value={previewLayout} onChange={onLayoutChange} label="Preview schedule layout" options={scheduleLayoutOptions(device).map(option => [option.value, option.label, layoutIcons[option.value]])} />
       <DevicePicker value={previewStyle} onChange={onStyleChange} label="Preview style" options={stylePickerOptions} />
       </div>
-      <CategoryFilters categories={galleryCategories} value={activeCategory} controls="template-gallery" onChange={id => {
+      <CollectionFilters categories={galleryCategories} templates={wallpaperTemplates} device={device} value={activeCategory} controls="template-gallery" onChange={id => {
         if (isSearching && onClearSearch) {
           onClearSearch();
         }

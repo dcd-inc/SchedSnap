@@ -4,6 +4,7 @@ import { feedbackPageOptions, paginateFeedback } from '../server/feedbackPaginat
 import { authConfigured, createSession, isAuthenticated, sameOrigin, sessionCookie, verifyAdminPassword } from '../server/adminAuth.js';
 import { cloudConfigured, createCatalogStore, signCloud } from '../server/catalogStore.js';
 import { templateSchema } from '../shared/templateSchema.js';
+import { availableTemplateDevices, templateDevices } from '../shared/templateVisibility.js';
 import { wallpaperTemplates } from '../src/assets/templates.js';
 import { genshinElementalTemplates } from '../src/assets/genshinElementalTemplates.js';
 import { generateDesignId } from '../shared/designId.js';
@@ -153,13 +154,23 @@ export function createAdminHandler({ env = process.env, store = createCatalogSto
         const template = catalog.templates.find(t => t.id === body.id);
         if (!template) return fail(404, 'Design not found.');
         if (template.deletionPending) return fail(409, 'Finish deleting this design before publishing.');
-        if (body.status !== 'hidden' && body.status !== 'published') return fail(400, 'Invalid visibility.');
-        if (body.status === 'published') {
+        let status = body.status;
+        let hiddenDevices;
+        if (body.visibleDevices !== undefined) {
+          const available = availableTemplateDevices(template);
+          if (!Array.isArray(body.visibleDevices) || body.visibleDevices.some(device => !available.includes(device)) || new Set(body.visibleDevices).size !== body.visibleDevices.length) return fail(400, 'Choose only available device sizes.');
+          status = body.visibleDevices.length ? 'published' : 'hidden';
+          hiddenDevices = templateDevices.filter(device => !body.visibleDevices.includes(device));
+        }
+        if (status !== 'hidden' && status !== 'published') return fail(400, 'Invalid visibility.');
+        if (status === 'published') {
           const parsed = templateSchema.safeParse({ ...template, status: 'published' });
           if (!parsed.success) return fail(422, 'This design needs artwork before publishing. Open Edit to add the missing device images.');
         }
-        if (body.status === 'published' && template.status === 'draft' && template.createdAt && !template.publishedAt) template.publishedAt = new Date(now()).toISOString();
-        template.status = body.status;
+        if (status === 'published' && template.status === 'draft' && template.createdAt && !template.publishedAt) template.publishedAt = new Date(now()).toISOString();
+        template.status = status;
+        if (hiddenDevices) template.hiddenDevices = hiddenDevices;
+        else delete template.hiddenDevices;
       } else if (action === 'delete') {
         const template = catalog.templates.find(t => t.id === body.id);
         if (!template) return fail(404, 'Design not found.');

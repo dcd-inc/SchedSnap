@@ -18,6 +18,7 @@ import { WallpaperCanvas } from './ScheduleWallpaper/CanvasPreview.jsx';
 import TemplateControls from './ScheduleWallpaper/TemplateControls.jsx';
 import WallpaperViewer from './ScheduleWallpaper/WallpaperViewer.jsx';
 import { templateSchema } from '../../shared/templateSchema.js';
+import { availableTemplateDevices, visibleTemplateDevices, templateDevices, deviceLabels, templateDeviceStatus, matchesTemplateDeviceStatus } from '../../shared/templateVisibility.js';
 import { generateDesignId } from '../../shared/designId.js';
 import './admin.css';
 import BrandMark from '../components/BrandMark.jsx';
@@ -148,7 +149,7 @@ export default function Admin() {
     finally { setBusy(false); }
   }
   const normalizedSearch = searchQuery.trim().toLowerCase();
-  const filtered = sortTemplatesByLikes(searchWallpaperTemplates(catalog?.templates, searchQuery).filter(t => matchesGalleryCategory(t, collection)).filter(t => statusFilter === 'all' || t.status === statusFilter), metrics.likes, sort, downloads);
+  const filtered = sortTemplatesByLikes(searchWallpaperTemplates(catalog?.templates, searchQuery).filter(t => matchesGalleryCategory(t, collection)).filter(t => matchesTemplateDeviceStatus(t, device, statusFilter)), metrics.likes, sort, downloads);
   const { count: galleryCount, hasMore, sentinel, loadMore } = useInfiniteGallery(filtered.length, `${collection}:${device}:${statusFilter}:${sort}:${normalizedSearch}:${Boolean(editor)}`);
   if (authenticated === null || !authenticated) return <AdminSignIn checking={authenticated === null} password={password} onPasswordChange={setPassword} onSubmit={login} busy={busy} error={error} />;
   const visible = filtered.slice(0, galleryCount);
@@ -222,23 +223,19 @@ export default function Admin() {
         return <article key={template.id} className="admin-design">
           <div className="admin-design-artwork">
           <button className={`admin-design-preview admin-art-${device}`} aria-label={`Edit ${template.name}`} disabled={busy} onClick={() => setEditor({ key: template.id, template, isNew: false })}><WallpaperCanvas lazy schedule={sampleSchedule} template={{ ...template, device, scheduleLayout: previewLayout }} resolution={{ id: device, width: device === 'laptop' ? 480 : 270, height: Math.round((device === 'laptop' ? 480 : 270) * (device === 'tablet' && template.orientation === 'landscape' ? tabletLandscapeResolution : deviceResolutions[device]).height / (device === 'tablet' && template.orientation === 'landscape' ? tabletLandscapeResolution : deviceResolutions[device]).width) }} className="block w-full h-auto" label={`${template.name} preview`} /></button>
-          <span className={`admin-status admin-status-${template.status}`}>{template.status}</span>
+          <span className={`admin-status admin-status-${templateDeviceStatus(template, device)}`}>{templateDeviceStatus(template, device)}</span>
           </div>
           <div className="admin-design-footer">
-          <div className="admin-design-info"><h2 title={template.name}>{template.name}</h2><div className="admin-design-meta"><span className="text-muted">{designCollections.find(c => c.id === (template.collection || 'original'))?.name}</span></div></div>
+          <div className="admin-design-info"><h2 title={template.name}>{template.name}</h2><div className="admin-design-meta"><span className="text-muted">{designCollections.find(c => c.id === (template.collection || 'original'))?.name}</span><span className="admin-visible-devices">{visibleTemplateDevices(template).length ? `Visible: ${visibleTemplateDevices(template).map(device => deviceLabels[device]).join(', ')}` : 'Not visible in gallery'}</span></div></div>
           <span className="admin-design-stats"><span title="Downloads" aria-label={`${downloads[template.id] ?? 'Unavailable'} downloads`}><Download size={16} aria-hidden="true" /><span aria-hidden="true">{downloads[template.id]?.toLocaleString() ?? '—'}</span></span><span title="Hearts" aria-label={`${metrics.likes[template.id]?.count ?? 'Unavailable'} hearts`}><Heart className="admin-stat-heart" size={16} fill="currentColor" aria-hidden="true" /><span aria-hidden="true">{metrics.likes[template.id]?.count.toLocaleString() ?? '—'}</span></span></span>
-          <div className="admin-design-actions"><button id={`actions-${template.id}`} className="admin-icon-action" aria-label={`Actions for ${template.name}`} title="Actions" aria-expanded={actionMenu === template.id} aria-controls={`action-list-${template.id}`} onClick={() => setActionMenu(actionMenu === template.id ? null : template.id)}><MoreVertical size={20} aria-hidden="true" /></button>{actionMenu === template.id && <div id={`action-list-${template.id}`} className="admin-action-menu" onClick={() => setActionMenu(null)}><button className="admin-icon-action" aria-label={`Edit ${template.name}`} title="Edit" disabled={busy || template.deletionPending} onClick={() => { setError(''); setEditor({ key: template.id, template, isNew: false }); }}><Pencil size={16} aria-hidden="true" />Edit</button><button className="admin-icon-action" aria-label={`${template.status === 'published' ? 'Hide' : 'Publish'} ${template.name}`} title={template.status === 'published' ? 'Hide' : 'Publish'} disabled={busy || template.deletionPending} onClick={async () => {
-            if (template.status === 'published') { setError(''); setHiding(template); return; }
-            if (template.status !== 'published' && !templateSchema.safeParse({ ...template, status: 'published' }).success) { setError(''); setEditor({ key: template.id, template, isNew: false }); return; }
-            if (await mutate('visibility', { id: template.id, status: template.status === 'published' ? 'hidden' : 'published' })) setNotice(template.status === 'published' ? 'Design hidden.' : 'Design published.');
-          }}>{template.status === 'published' ? <EyeOff size={16} aria-hidden="true" /> : <Eye size={16} aria-hidden="true" />}{template.status === 'published' ? 'Hide' : 'Publish'}</button><button className="admin-icon-action admin-delete" aria-label={`${template.deletionPending ? 'Retry delete' : 'Delete'} ${template.name}`} title={template.deletionPending ? 'Retry delete' : 'Delete'} disabled={busy} onClick={() => { setError(''); setDeleting(template); }}>{template.deletionPending ? <RotateCcw size={18} aria-hidden="true" /> : <Trash2 size={16} aria-hidden="true" />}{template.deletionPending ? 'Retry delete' : 'Delete'}</button></div>}</div>
+          <div className="admin-design-actions"><button id={`actions-${template.id}`} className="admin-icon-action" aria-label={`Actions for ${template.name}`} title="Actions" aria-expanded={actionMenu === template.id} aria-controls={`action-list-${template.id}`} onClick={() => setActionMenu(actionMenu === template.id ? null : template.id)}><MoreVertical size={20} aria-hidden="true" /></button>{actionMenu === template.id && <div id={`action-list-${template.id}`} className="admin-action-menu" onClick={() => setActionMenu(null)}><button className="admin-icon-action" aria-label={`Edit ${template.name}`} title="Edit" disabled={busy || template.deletionPending} onClick={() => { setError(''); setEditor({ key: template.id, template, isNew: false }); }}><Pencil size={16} aria-hidden="true" />Edit</button><button className="admin-icon-action" aria-label={`Manage visibility for ${template.name}`} title="Manage visibility" disabled={busy || template.deletionPending} onClick={() => { setError(''); setHiding(template); }}><Eye size={16} aria-hidden="true" />Manage visibility</button><button className="admin-icon-action admin-delete" aria-label={`${template.deletionPending ? 'Retry delete' : 'Delete'} ${template.name}`} title={template.deletionPending ? 'Retry delete' : 'Delete'} disabled={busy} onClick={() => { setError(''); setDeleting(template); }}>{template.deletionPending ? <RotateCcw size={18} aria-hidden="true" /> : <Trash2 size={16} aria-hidden="true" />}{template.deletionPending ? 'Retry delete' : 'Delete'}</button></div>}</div>
           </div>
         </article>;
       })}</div>}
       {hasMore && <div ref={sentinel} className="gallery-load-more"><button className="button-secondary" onClick={loadMore}>Load more designs</button></div>}
     </>}
     {deleting && <DeleteDesignDialog template={deleting} busy={busy} onClose={() => setDeleting(null)} onDelete={async confirmation => { if (await mutate('delete', { id: deleting.id, confirmation })) { setDeleting(null); setNotice('Design and its unused Cloudinary artwork permanently deleted.'); } else setDeleting(null); }} />}
-    {hiding && <HideDesignDialog template={hiding} busy={busy} onClose={() => setHiding(null)} onConfirm={async () => { const saved = await mutate('visibility', { id: hiding.id, status: 'hidden' }); setHiding(null); if (saved) setNotice('Design hidden.'); }} />}
+    {hiding && <DesignVisibilityDialog template={hiding} busy={busy} error={error} onClose={() => setHiding(null)} onConfirm={async visibleDevices => { const saved = await mutate('visibility', { id: hiding.id, visibleDevices }); if (saved) { setHiding(null); setNotice(visibleDevices.length ? 'Visibility saved. Allow a few minutes for the public gallery to refresh.' : 'Design hidden on all devices.'); } return saved; }} />}
     </div>
   </div>;
 }
@@ -283,18 +280,32 @@ function AnalyticsSkeleton() {
   </div>;
 }
 
-function HideDesignDialog({ template, busy, onClose, onConfirm }) {
+function DesignVisibilityDialog({ template, busy, error, onClose, onConfirm }) {
   const dialog = useRef(null);
+  const available = availableTemplateDevices(template);
+  const [selected, setSelected] = useState(() => visibleTemplateDevices(template));
   useEffect(() => {
     const node = dialog.current;
     const trigger = document.activeElement;
     node.showModal();
     return () => { node.close(); if (trigger?.isConnected) trigger.focus(); };
   }, []);
-  return <dialog ref={dialog} className="admin-delete-dialog" aria-labelledby="hide-design-title" aria-describedby="hide-design-description" onCancel={event => { event.preventDefault(); if (!busy) onClose(); }}>
-    <header><h2 id="hide-design-title">Hide this design?</h2><button type="button" aria-label="Close hide confirmation" disabled={busy} onClick={onClose}><X size={20} aria-hidden="true" /></button></header>
-    <p id="hide-design-description">“{template.name}” will be removed from the public gallery. Its artwork will be kept, and you can publish it again anytime.</p>
-    <footer><button className="button-secondary" type="button" disabled={busy} onClick={onClose} autoFocus>Cancel</button><button className="button-primary" type="button" disabled={busy} onClick={onConfirm}>{busy ? 'Hiding…' : 'Hide design'}</button></footer>
+  return <dialog ref={dialog} className="admin-delete-dialog admin-visibility-dialog" aria-labelledby="visibility-title" aria-describedby="visibility-description" onCancel={event => { event.preventDefault(); if (!busy) onClose(); }}>
+    <header><h2 id="visibility-title">Manage visibility</h2><button type="button" aria-label="Close visibility settings" disabled={busy} onClick={onClose}><X size={20} aria-hidden="true" /></button></header>
+    <p id="visibility-description">Choose where “{template.name}” appears in the public gallery. Unavailable sizes cannot be selected.</p>
+    <form onSubmit={async event => { event.preventDefault(); if (!busy) await onConfirm(selected); }}>
+      <fieldset disabled={busy}>
+        <legend>Show this design on</legend>
+        <div className="admin-visibility-shortcuts"><button type="button" className="text-link" onClick={() => setSelected([...available])}>Select all</button><button type="button" className="text-link" onClick={() => setSelected([])}>Hide all</button></div>
+        {templateDevices.map(device => <label key={device} className={`admin-visibility-option ${!available.includes(device) ? 'admin-visibility-unavailable' : ''}`}>
+          <input type="checkbox" disabled={!available.includes(device)} checked={selected.includes(device)} onChange={event => setSelected(current => event.target.checked ? [...current, device] : current.filter(value => value !== device))} />
+          <span>{deviceLabels[device]}</span><small>{available.includes(device) ? selected.includes(device) ? 'Visible' : 'Hidden' : 'Not available'}</small>
+        </label>)}
+      </fieldset>
+      <p className="admin-visibility-summary" role="status">{selected.length ? `Visible on ${selected.map(device => deviceLabels[device]).join(', ')}.` : 'Hidden on all devices. Artwork will be kept.'}</p>
+      {error && <p className="admin-error" role="alert">{error}</p>}
+      <footer><button className="button-secondary" type="button" disabled={busy} onClick={onClose} autoFocus>Cancel</button><button className="button-primary" type="submit" disabled={busy}>{busy ? 'Saving…' : 'Save changes'}</button></footer>
+    </form>
   </dialog>;
 }
 

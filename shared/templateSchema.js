@@ -11,6 +11,7 @@ export const templateSchema = z.object({
   createdAt: z.iso.datetime().optional(), publishedAt: z.iso.datetime().optional(),
   collection: z.enum(['transformers', 'wuthering-waves', 'cars', 'scenic', 'anime', 'naruto', 'arcane', 'collage', 'graffiti', 'flowers', 'doodle', 'sanrio', 'snoopy', 'genshin', 'hunter-x-hunter', 'we-bare-bears', 'domo', 'adventure-time', 'chiikawa', 'chikawa', 'ghibli', 'mascot', 'meep', 'capybara', 'little-friends', 'pattern', 'original']).optional(),
   mobileOnly: z.boolean().optional(),
+  hiddenDevices: z.array(z.enum(['mobile', 'tablet', 'laptop'])).max(3).optional(),
   family: z.string().max(80).optional(),
   background: color, ink: color, muted: color, surface: color, line: color,
   headingInk: color.optional(),
