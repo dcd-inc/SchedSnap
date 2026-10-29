@@ -21,8 +21,12 @@ export default function App() {
   const isAdmin = pathname === '/admin' || pathname.startsWith('/admin/');
 
   useEffect(() => {
-    const section = hash === '#designs' ? document.getElementById('designs') : null;
-    if (section) section.scrollIntoView({ behavior: 'instant' });
+    const section = hash ? document.getElementById(hash.slice(1)) : null;
+    if (section) {
+      section.scrollIntoView({ behavior: 'instant', block: 'start' });
+      section.setAttribute('tabindex', '-1');
+      section.focus({ preventScroll: true });
+    }
     else window.scrollTo({ top: 0, behavior: 'instant' });
   }, [pathname, hash]);
 
