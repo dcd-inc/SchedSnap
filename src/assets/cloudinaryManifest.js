@@ -5851,5 +5851,285 @@ export default {
     "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793232474/schedsnap/wallpapers/scenic/graffiti-street-character-mashup/mobile-6527a752ec2e5f08.png",
     "width": 1080,
     "height": 2400
+  },
+  "/wallpapers/scenic/flowers-autumn-rose-garden/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-autumn-rose-garden/mobile-783f9eee5b3a9d61",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236890/schedsnap/wallpapers/scenic/flowers-autumn-rose-garden/mobile-783f9eee5b3a9d61.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-black-botanical-silhouette/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-black-botanical-silhouette/mobile-6a0bf5a9c1ba19cc",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236891/schedsnap/wallpapers/scenic/flowers-black-botanical-silhouette/mobile-6a0bf5a9c1ba19cc.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-blue-daisy-hearts/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-blue-daisy-hearts/mobile-71d039c9197c0933",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236892/schedsnap/wallpapers/scenic/flowers-blue-daisy-hearts/mobile-71d039c9197c0933.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-blue-sky-daisies/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-blue-sky-daisies/mobile-fc46294ed372d6f1",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236892/schedsnap/wallpapers/scenic/flowers-blue-sky-daisies/mobile-fc46294ed372d6f1.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-amber-garden-doodles/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-amber-garden-doodles/mobile-7bb15f8626019566",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236891/schedsnap/wallpapers/scenic/flowers-amber-garden-doodles/mobile-7bb15f8626019566.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-blue-and-blush-blossoms/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-blue-and-blush-blossoms/mobile-a84e5ad5612f8e4e",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236894/schedsnap/wallpapers/scenic/flowers-blue-and-blush-blossoms/mobile-a84e5ad5612f8e4e.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-botanical-garden-study/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-botanical-garden-study/mobile-21dcd8acab7e2d23",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236896/schedsnap/wallpapers/scenic/flowers-botanical-garden-study/mobile-21dcd8acab7e2d23.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-bougainvillea-wall/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-bougainvillea-wall/mobile-bc72e7b7232c62c3",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236895/schedsnap/wallpapers/scenic/flowers-bougainvillea-wall/mobile-bc72e7b7232c62c3.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-crimson-peony-branches/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-crimson-peony-branches/mobile-efbc7f670762f956",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236897/schedsnap/wallpapers/scenic/flowers-crimson-peony-branches/mobile-efbc7f670762f956.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-blush-cosmos/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-blush-cosmos/mobile-3871239cf3f3ac15",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236896/schedsnap/wallpapers/scenic/flowers-blush-cosmos/mobile-3871239cf3f3ac15.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-cream-daisy-minimal/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-cream-daisy-minimal/mobile-00f2fcc29339d332",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236898/schedsnap/wallpapers/scenic/flowers-cream-daisy-minimal/mobile-00f2fcc29339d332.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-daisies-after-dark/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-daisies-after-dark/mobile-a4218858e0a743f0",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236898/schedsnap/wallpapers/scenic/flowers-daisies-after-dark/mobile-a4218858e0a743f0.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-dark-daisy-meadow/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-dark-daisy-meadow/mobile-53770cfb625dc0bc",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236899/schedsnap/wallpapers/scenic/flowers-dark-daisy-meadow/mobile-53770cfb625dc0bc.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-dusky-daisy-garden/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-dusky-daisy-garden/mobile-93310772a1a9a94d",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236900/schedsnap/wallpapers/scenic/flowers-dusky-daisy-garden/mobile-93310772a1a9a94d.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-lavender-watercolor-flowers/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-lavender-watercolor-flowers/mobile-f813e57a506c4988",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236904/schedsnap/wallpapers/scenic/flowers-lavender-watercolor-flowers/mobile-f813e57a506c4988.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-mauve-midnight-peonies/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-mauve-midnight-peonies/mobile-fcbfcb8e1e611a59",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236907/schedsnap/wallpapers/scenic/flowers-mauve-midnight-peonies/mobile-fcbfcb8e1e611a59.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-kitten-rose-garden/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-kitten-rose-garden/mobile-e4a49b45e31f9ae0",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236907/schedsnap/wallpapers/scenic/flowers-kitten-rose-garden/mobile-e4a49b45e31f9ae0.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-midnight-daisy-doodles/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-midnight-daisy-doodles/mobile-2733da9f9cff87fe",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236911/schedsnap/wallpapers/scenic/flowers-midnight-daisy-doodles/mobile-2733da9f9cff87fe.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-pastel-flower-lines/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-pastel-flower-lines/mobile-e3c41914607691a5",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236913/schedsnap/wallpapers/scenic/flowers-pastel-flower-lines/mobile-e3c41914607691a5.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-lavender-brush-meadow/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-lavender-brush-meadow/mobile-fe694d7f661c87f8",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236914/schedsnap/wallpapers/scenic/flowers-lavender-brush-meadow/mobile-fe694d7f661c87f8.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-jewel-tone-blooms/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-jewel-tone-blooms/mobile-0b45883721ea880b",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236916/schedsnap/wallpapers/scenic/flowers-jewel-tone-blooms/mobile-0b45883721ea880b.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-midnight-orange-leaves/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-midnight-orange-leaves/mobile-c3b5967062382f9b",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236917/schedsnap/wallpapers/scenic/flowers-midnight-orange-leaves/mobile-c3b5967062382f9b.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-pastel-painted-blooms/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-pastel-painted-blooms/mobile-8fb00aba59649b6b",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236917/schedsnap/wallpapers/scenic/flowers-pastel-painted-blooms/mobile-8fb00aba59649b6b.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-pastel-retro-petals/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-pastel-retro-petals/mobile-f280ee86002f7ca6",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236919/schedsnap/wallpapers/scenic/flowers-pastel-retro-petals/mobile-f280ee86002f7ca6.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-pink-glass-blossoms/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-pink-glass-blossoms/mobile-82a8215d654c6313",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236922/schedsnap/wallpapers/scenic/flowers-pink-glass-blossoms/mobile-82a8215d654c6313.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-pink-orchid-petals/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-pink-orchid-petals/mobile-41e36925c7115853",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236922/schedsnap/wallpapers/scenic/flowers-pink-orchid-petals/mobile-41e36925c7115853.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-pink-blossom-confetti/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-pink-blossom-confetti/mobile-cb2d513a2cebe23d",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236923/schedsnap/wallpapers/scenic/flowers-pink-blossom-confetti/mobile-cb2d513a2cebe23d.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-pastel-paper-petals/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-pastel-paper-petals/mobile-9f7b8294f66e21bd",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236924/schedsnap/wallpapers/scenic/flowers-pastel-paper-petals/mobile-9f7b8294f66e21bd.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-pressed-wildflower-collection/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-pressed-wildflower-collection/mobile-9337c66660535f20",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236926/schedsnap/wallpapers/scenic/flowers-pressed-wildflower-collection/mobile-9337c66660535f20.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-pink-tulip-collage/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-pink-tulip-collage/mobile-46449614ddfbca03",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236927/schedsnap/wallpapers/scenic/flowers-pink-tulip-collage/mobile-46449614ddfbca03.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-red-ink-florals/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-red-ink-florals/mobile-a0862fcd72acc900",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236928/schedsnap/wallpapers/scenic/flowers-red-ink-florals/mobile-a0862fcd72acc900.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-sage-daisy-pop/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-sage-daisy-pop/mobile-840085d081d4b22e",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236930/schedsnap/wallpapers/scenic/flowers-sage-daisy-pop/mobile-840085d081d4b22e.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-soft-blush-botanicals/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-soft-blush-botanicals/mobile-2a5281ad5edd2a36",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236931/schedsnap/wallpapers/scenic/flowers-soft-blush-botanicals/mobile-2a5281ad5edd2a36.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-strawberry-ribbon-garden/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-strawberry-ribbon-garden/mobile-b52880fbd6ede766",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236932/schedsnap/wallpapers/scenic/flowers-strawberry-ribbon-garden/mobile-b52880fbd6ede766.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-teal-daisy-repeat/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-teal-daisy-repeat/mobile-43de1bf23328e12a",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236933/schedsnap/wallpapers/scenic/flowers-teal-daisy-repeat/mobile-43de1bf23328e12a.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-rose-hibiscus/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-rose-hibiscus/mobile-2278dd5524516c74",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236933/schedsnap/wallpapers/scenic/flowers-rose-hibiscus/mobile-2278dd5524516c74.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-tropical-color-burst/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-tropical-color-burst/mobile-dd4a36abe250dc69",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236934/schedsnap/wallpapers/scenic/flowers-tropical-color-burst/mobile-dd4a36abe250dc69.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-twilight-rose-bouquet/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-twilight-rose-bouquet/mobile-00fb691b31969436",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236936/schedsnap/wallpapers/scenic/flowers-twilight-rose-bouquet/mobile-00fb691b31969436.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-wild-daisy-field/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-wild-daisy-field/mobile-5147b5a34b29a0f6",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236938/schedsnap/wallpapers/scenic/flowers-wild-daisy-field/mobile-5147b5a34b29a0f6.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/flowers-vintage-sepia-florals/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/flowers-vintage-sepia-florals/mobile-e6ac053e5e6c45e1",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793236939/schedsnap/wallpapers/scenic/flowers-vintage-sepia-florals/mobile-e6ac053e5e6c45e1.png",
+    "width": 1080,
+    "height": 2400
   }
 };
