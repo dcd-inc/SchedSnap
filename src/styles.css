@@ -348,6 +348,16 @@ dialog.background-device-dialog footer > button, dialog.background-upload-guide 
 .download-options { padding-top: 24px; }
 .download-options h2 { font-size: 26px; line-height: 1.25; font-weight: 650; letter-spacing: -0.02em; }
 .download-meta { margin-top: 8px; color: var(--color-muted); font-size: 15px; line-height: 1.5; }
+.download-options-dialog { width: min(440px, calc(100% - 24px)); max-height: calc(100dvh - 24px); margin: auto; padding: 0; border: 0; border-radius: 16px; color: var(--color-ink); background: white; overflow: auto; }
+.download-options-dialog::backdrop { background: rgb(15 23 42 / 45%); }
+.download-options-dialog header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px; border-bottom: 1px solid var(--color-line); }
+.download-options-dialog h2 { font-size: 18px; font-weight: 650; }
+.download-version-preview { display: flex; justify-content: center; padding: 16px; background: var(--color-soft); }
+.download-version-preview canvas { width: auto; max-width: 100%; max-height: calc(100dvh - 220px); object-fit: contain; }
+.download-options-dialog[data-device='mobile'] .download-version-preview canvas { max-height: min(66dvh, calc(100dvh - 220px)); }
+.download-options-dialog[data-device='tablet'], .download-options-dialog[data-device='laptop'] { width: min(1100px, calc(100vw - 24px), max(280px, calc((100dvh - 220px) * var(--design-preview-ratio) + 32px))); }
+.download-options-dialog footer { position: sticky; bottom: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; padding: 16px; background: white; border-top: 1px solid var(--color-line); }
+.download-options-dialog footer button { width: 100%; min-height: 44px; padding-inline: 8px; font-size: 14px; }
 .download-wallpaper { width: 100%; margin-top: 24px; }
 .export-status { margin-top: 12px; font-size: 14px; line-height: 1.6; color: #783c2e; }
 .export-status .text-link { display: inline-flex; align-items: center; min-height: 44px; }

@@ -17,9 +17,11 @@ import Toast from '../../components/Toast.jsx';
 import useDesignDownloads, { recordDesignDownload } from '../../lib/useDesignDownloads.js';
 import useDesignLikes from '../../lib/useDesignLikes.js';
 import DownloadThanksDialog from '../../components/DownloadThanksDialog.jsx';
+import DownloadOptionsDialog from './DownloadOptionsDialog.jsx';
 
 export default function TemplateWorkspace({ customizeRequest = 0, step, onStep, template, defaultTemplate, schedule, resolution, scheduleSource, onScheduleSourceChange, onScheduleChange, onAppearanceChange, onResetAppearance, onUndoAppearance, canUndoAppearance, image, onImage, busy, onError, onAnalyze, importUsage, usageUnavailable, importError, onSample, importOpen, onImportOpenChange: setImportOpen, onTitleChange, canCancelEntry, onCancelEntryChange: setCanCancelEntry, onCancelImport, imagePickerRef: imagePicker, preparingImage, onPreparingImageChange: setPreparingImage }) {
   const [enlarged, setEnlarged] = useState(false);
+  const [downloadOptions, setDownloadOptions] = useState(false);
   const [customizing, setCustomizing] = useState(false);
   const [previewStuck, setPreviewStuck] = useState(false);
   const [previewAtHeader, setPreviewAtHeader] = useState(false);
@@ -143,8 +145,9 @@ export default function TemplateWorkspace({ customizeRequest = 0, step, onStep, 
     if (saved && active.current) refreshDownloads();
   }
 
-  async function download() {
+  async function download(wallpaperOnly = false) {
     if (!canDownload) return;
+    setDownloadOptions(false);
     setExporting(true);
     setMessage('');
     const started = performance.now();
@@ -155,11 +158,11 @@ export default function TemplateWorkspace({ customizeRequest = 0, step, onStep, 
       const backgroundImage = await prepareWallpaperAssets(template, resolution);
       if (!active.current) return;
       const output = document.createElement('canvas');
-      const rendered = drawWallpaper(output, { schedule, template, resolution, backgroundImage });
+      const rendered = drawWallpaper(output, { schedule, template: { ...template, wallpaperOnly }, resolution, backgroundImage });
       if (rendered.overflow) throw new Error('Classes don’t fit. Shorten names or choose another design.');
       const blob = await canvasBlob(output);
       if (!active.current) return;
-      const filename = `schedsnap-${template.id}-${resolution.width}x${resolution.height}.png`;
+      const filename = `schedsnap-${template.id}${wallpaperOnly ? '-wallpaper-only' : ''}-${resolution.width}x${resolution.height}.png`;
       stage = 'download';
       const { inApp } = downloadBlob(blob, filename);
       void recordDownload();
@@ -214,13 +217,14 @@ export default function TemplateWorkspace({ customizeRequest = 0, step, onStep, 
           {downloadError && <button type="button" className="text-link" onClick={refreshDownloads}>Retry downloads</button>}
           {likeError && <button type="button" className="text-link" disabled={!!pendingLikes} onClick={() => refreshLikes(true)}>Retry hearts</button>}
         </div>}
-        <button type="button" onClick={download} disabled={!canDownload} aria-describedby={exportStatus ? 'wallpaper-export-status' : undefined} className="button-primary download-wallpaper"><Download size={18} aria-hidden="true" />{exporting ? 'Creating PNG…' : exportResult?.key === exportKey ? 'Download again' : 'Download wallpaper'}</button>
+        <button type="button" onClick={() => setDownloadOptions(true)} disabled={!canDownload} aria-describedby={exportStatus ? 'wallpaper-export-status' : undefined} className="button-primary download-wallpaper"><Download size={18} aria-hidden="true" />{exporting ? 'Creating PNG…' : exportResult?.key === exportKey ? 'Download again' : 'Download wallpaper'}</button>
         {exportStatus && <div className={`export-status${issues.length || warnings.length || previewFeedback?.overflow ? ' class-dialog-incomplete export-warning' : ''}`} role="status" id="wallpaper-export-status">{(issues.length > 0 || warnings.length > 0 || previewFeedback?.overflow) && <TriangleAlert size={20} aria-hidden="true" />}<div><p>{exportStatus}</p>{(issues.length > 0 || warnings.length > 0 || previewFeedback?.overflow) && <button type="button" className="text-link" onClick={() => onStep('classes')}>{schedule.classes.length ? 'Fix class details' : 'Add classes'}</button>}{previewFeedback?.error && <button type="button" className="text-link" onClick={() => onStep('design')}>Change design</button>}</div></div>}
         <div className="wallpaper-edit-actions"><button type="button" className="button-secondary" onClick={() => onStep('classes')}><Pencil size={16} aria-hidden="true" />Edit classes</button><button type="button" className="button-secondary" onClick={() => onStep('design')}><Images size={16} aria-hidden="true" />Change design</button></div>
         <div ref={customization} id="wallpaper-customization"><ResponsiveDisclosure title="Customize wallpaper" description="Adjust colors, fonts and layout" icon={SlidersHorizontal} className="flow-customize customize-appearance" open={customizing} onOpenChange={changeCustomizing} inlineMobile><TemplateControls onTitleChange={onTitleChange} layoutPicker={<ScheduleLayoutPicker template={template} onChange={onAppearanceChange} inline />} onUndo={onUndoAppearance} canUndo={canUndoAppearance} template={template} defaultTemplate={defaultTemplate} enablePlacement onChange={onAppearanceChange} onReset={onResetAppearance} /></ResponsiveDisclosure></div>
       </section>
     </div>}
     {enlarged && <WallpaperViewer resolution={resolution} onClose={() => setEnlarged(false)}><WallpaperCanvas schedule={shownSchedule} template={template} resolution={resolution} className="block h-auto w-full" label={`${template.name} enlarged wallpaper`} /></WallpaperViewer>}
+    {downloadOptions && <DownloadOptionsDialog template={template} schedule={schedule} resolution={resolution} onDownload={download} onClose={() => setDownloadOptions(false)} />}
     {thankYouDesign === template.id && <DownloadThanksDialog name={template.name} vote={vote} pending={pendingLikes} error={likeError} onHeart={() => toggleLike(template.id)} onRetry={() => refreshLikes(true)} onClose={() => setThankYouDesign(null)} />}
     <Toast message={message} kind={messageKind} onClose={dismissNotification} />
   </>;

@@ -37,7 +37,7 @@ export const templateSchema = z.object({
   containerHeight: z.number().min(50).max(150).optional(),
   containerRadius: z.number().min(0).max(50).optional(),
   containerOpacity: z.number().min(0).max(100).optional(),
-  timelineLineWidth: z.number().min(0.5).max(6).optional(),
+  timelineLineWidth: z.number().min(0.5).max(24).optional(),
   colorIntensity: z.number().min(0).max(100).optional(),
   containerFill: z.boolean().optional(), containerBorder: z.boolean().optional(), showSeparators: z.boolean().optional(),
   tabletBoxSpacing: z.number().min(0).max(300).optional(),

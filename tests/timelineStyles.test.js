@@ -20,7 +20,9 @@ test('Timeline presets alternate opacity, color days, and retain appearance sett
 test('Timeline line thickness defaults and bounds are consistent', () => {
   assert.equal(timelineLineWidth({}), 2);
   assert.equal(timelineLineWidth({ timelineLineWidth: -1 }), 0.5);
-  assert.equal(timelineLineWidth({ timelineLineWidth: 10 }), 6);
+  assert.equal(timelineLineWidth({ timelineLineWidth: 10 }), 10);
+  assert.equal(timelineLineWidth({ timelineLineWidth: 24 }), 24);
+  assert.equal(timelineLineWidth({ timelineLineWidth: 30 }), 24);
 });
 
 test('custom text colors apply to headings and all colored card text', () => {

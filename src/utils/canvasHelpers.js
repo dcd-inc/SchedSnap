@@ -924,8 +924,9 @@ function drawDeviceWallpaper(canvas, { schedule, template, resolution, backgroun
   layout.overflow ||= y + visibleBottom > bottomEdge + 0.001;
   const scheduleBounds = { x: x + contentLeft * scale, y: y + visibleTop, width: contentWidth * scale, height: visibleBottom - visibleTop };
   ctx.save(); ctx.translate(x, y); ctx.scale(scale, scale);
-  drawHeading(ctx, template, 100, designWidth);
-  if (layout.overflow) { ctx.fillStyle = template.ink; font(ctx, 32, 600, template.fontFamily); ctx.fillText('Your schedule needs more room.', 90, 400); }
+  if (!template.wallpaperOnly) drawHeading(ctx, template, 100, designWidth);
+  if (template.wallpaperOnly) layout.overflow = false;
+  else if (layout.overflow) { ctx.fillStyle = template.ink; font(ctx, 32, 600, template.fontFamily); ctx.fillText('Your schedule needs more room.', 90, 400); }
   else if (dayCards) drawDayCards(ctx, template, layout);
   else if (reference) drawReferenceSchedule(ctx, template, layout);
   else if (timeline) drawTimeline(ctx, template, layout);
@@ -1003,14 +1004,16 @@ function renderWallpaper(canvas, { schedule, template, resolution = mobileResolu
   ctx.translate(moveX, moveY + baselineShift);
   ctx.translate(54, visibleTop * 0.1);
   ctx.scale(0.9, 0.9);
-  drawHeading(ctx, template, headingY);
+  if (!template.wallpaperOnly) drawHeading(ctx, template, headingY);
+  if (template.wallpaperOnly) layout.overflow = false;
   if (layout.overflow) {
     ctx.fillStyle = template.ink; textFont(38, 600); ctx.fillText('Your schedule needs more room.', 90, 1060);
     textFont(28); ctx.fillText('Shorten subject names or reduce the details.', 90, 1120);
     ctx.restore();
     return layout;
   }
-  if (reference) drawReferenceSchedule(ctx, template, layout);
+  if (template.wallpaperOnly) { /* Keep artwork while omitting schedule containers and text. */ }
+  else if (reference) drawReferenceSchedule(ctx, template, layout);
   else if (timeline) drawTimeline(ctx, template, layout);
   else drawScheduleCards(ctx, template, layout);
   ctx.restore();

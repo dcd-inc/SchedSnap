@@ -40,7 +40,7 @@ export function wallpaperFillOpacity(template) {
 
 export function timelineLineWidth(template) {
   const value = Number(template.timelineLineWidth ?? 2);
-  return Number.isFinite(value) ? Math.max(0.5, Math.min(6, value)) : 2;
+  return Number.isFinite(value) ? Math.max(0.5, Math.min(24, value)) : 2;
 }
 
 export function wallpaperColorIntensity(template) {

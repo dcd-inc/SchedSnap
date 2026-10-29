@@ -54,3 +54,16 @@ test('fill opacity survives catalog validation and rejects invalid percentages',
   for (const containerOpacity of [0, 25, 100]) assert.equal(templateSchema.parse({ ...base, containerOpacity }).containerOpacity, containerOpacity);
   for (const containerOpacity of [-1, 101, NaN]) assert.equal(templateSchema.safeParse({ ...base, containerOpacity }).success, false);
 });
+
+test('wallpaper-only exports omit title, schedule text and containers on every device', () => {
+  for (const [device, scheduleLayout] of [
+    ['mobile', 'stacked'], ['mobile', 'timeline'], ['mobile', 'day-columns'],
+    ['tablet', 'day-cards'], ['tablet', 'grouped-list'], ['laptop', 'weekly'],
+  ]) {
+    const result = render({ wallpaperOnly: true, device, scheduleLayout, containerStyle: 'glass' });
+    assert.equal(result.text.length, 0, `${device} ${scheduleLayout} text`);
+    assert.ok(!result.fills.some(fill => fill.color === '#123456'), `${device} ${scheduleLayout} containers`);
+    assert.equal(result.stops.length, 0, `${device} ${scheduleLayout} glass`);
+    assert.ok(result.fills.some(fill => fill.color === '#223344'), `${device} ${scheduleLayout} background`);
+  }
+});

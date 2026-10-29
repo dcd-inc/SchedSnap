@@ -20,7 +20,7 @@ const colorFields = {
 const categoryIcons = { layout: LayoutTemplate, wallpaper: Image, cards: PanelsTopLeft, text: Type, decorations: Sparkles };
 const editablePatterns = new Set(['checker', 'grid', 'ruled', 'circle', 'dots', 'stripes', 'diamonds', 'waves', 'frame', ...generativePatternIds]);
 
-function AppearanceColor({ colorKey, template, defaultTemplate = {}, onChange, toggleKey, label: labelOverride, stacked = false, trailing }) {
+function AppearanceColor({ colorKey, template, defaultTemplate = {}, onChange, toggleKey, label: labelOverride, stacked = false, trailing, hidePalette = false }) {
   const { label: defaultLabel, colors: defaultColors } = colorFields[colorKey];
   const label = labelOverride || defaultLabel;
   const rawValue = template[colorKey] || generativePatternMap.get(template.pattern)?.[colorKey] || (colorKey === 'patternColor' ? (template.pattern === 'circle' ? '#ad5b45' : template.line) : '#ffffff');
@@ -31,10 +31,10 @@ function AppearanceColor({ colorKey, template, defaultTemplate = {}, onChange, t
   return <div data-color-field={colorKey} className={`appearance-row${stacked ? ' appearance-color-stacked' : ''}`}>
     {toggleKey ? <label className="appearance-label appearance-switch"><input type="checkbox" checked={enabled} onChange={(event) => onChange(toggleKey, event.target.checked)} />{label}</label> : <span className="appearance-label">{label}</span>}
     {trailing}
-    <fieldset className="appearance-palette" aria-label={`${label} choices`} disabled={!enabled}>
+    {!hidePalette && <fieldset className="appearance-palette" aria-label={`${label} choices`} disabled={!enabled}>
       {colors.map((color, index) => <button key={color} type="button" aria-label={index === 0 ? `Default ${label.toLowerCase()}` : `${label} ${color}`} title={index === 0 ? `Default ${label.toLowerCase()}` : color} aria-pressed={normalizedValue === colorInputValue(color)} onClick={() => onChange(colorKey, index === 0 ? undefined : color)} className="color-swatch" style={{ '--swatch': color }} />)}
       <label className="custom-color" data-active={!colors.some(color => colorInputValue(color) === normalizedValue)} title={`Custom ${label.toLowerCase()}`}><span className="sr-only">Custom {label.toLowerCase()}</span><input type="color" aria-label={`Custom ${label.toLowerCase()}${!colors.some(color => colorInputValue(color) === normalizedValue) ? ', selected' : ''}`} value={normalizedValue} onChange={(event) => onChange(colorKey, event.target.value)} /></label>
-    </fieldset>
+    </fieldset>}
   </div>;
 }
 
@@ -119,7 +119,7 @@ export default function TemplateControls({ template, onChange, defaultTemplate =
         </div>
       </fieldset>
       <div hidden={template.containerStyle === 'none'}>
-      {template.containerStyle?.startsWith('colored') && <div className="top-margin-control">
+      {template.containerStyle?.startsWith('colored') && template.containerFill !== false && <div className="top-margin-control">
         <div className="top-margin-label"><label htmlFor="color-intensity">Color intensity</label><span className="position-value"><output htmlFor="color-intensity">{wallpaperColorIntensity(template)}%</output><button type="button" className="position-reset" disabled={!(wallpaperColorIntensity(template) !== defaultColorIntensity)} aria-label="Reset color intensity" onClick={() => onChange('colorIntensity', defaultColorIntensity)}>Reset</button></span></div>
         <FineSlider id="color-intensity" min="0" max="100" step="1" value={wallpaperColorIntensity(template)} onValueChange={value => onChange('colorIntensity', value)} />
       </div>}
@@ -137,16 +137,15 @@ export default function TemplateControls({ template, onChange, defaultTemplate =
       </div>
 
 
-      <AppearanceColor colorKey="surface" template={template} defaultTemplate={defaultTemplate} onChange={onChange} toggleKey="containerFill" />
-      {(template.containerFill !== false) && <div className="top-margin-control">
+      {template.containerStyle !== 'outline' && <AppearanceColor colorKey="surface" template={template} defaultTemplate={defaultTemplate} onChange={onChange} toggleKey="containerFill" hidePalette={template.containerStyle?.startsWith('colored')} />}
+      {template.containerStyle !== 'outline' && template.containerFill !== false && <div className="top-margin-control">
         <div className="top-margin-label"><label htmlFor="fill-opacity">Fill opacity</label><span className="position-value"><output htmlFor="fill-opacity">{wallpaperFillOpacity(template)}%</output><button type="button" className="position-reset" disabled={!(wallpaperFillOpacity(template) !== wallpaperFillOpacity(defaultTemplate))} aria-label="Reset fill opacity" onClick={() => onChange('containerOpacity', wallpaperFillOpacity(defaultTemplate))}>Reset</button></span></div>
         <FineSlider id="fill-opacity" min="0" max="100" step="1" value={wallpaperFillOpacity(template)} disabled={template.containerFill === false} aria-valuetext={`${wallpaperFillOpacity(template)}% fill opacity`} onValueChange={value => onChange('containerOpacity', value)} />
       </div>}
-      {!timeline && <AppearanceColor colorKey="line" template={template} defaultTemplate={defaultTemplate} onChange={onChange} toggleKey="containerBorder" />}
-      {timeline && <AppearanceColor colorKey="line" label="Day outline" template={template} defaultTemplate={defaultTemplate} onChange={onChange} toggleKey="containerBorder" />}
-      {(timeline || template.containerBorder !== false) && <div className="top-margin-control">
-        <div className="top-margin-label"><label htmlFor="timeline-line-width">{timeline ? 'Line thickness' : 'Border thickness'}</label><span className="position-value"><output htmlFor="timeline-line-width">{timelineLineWidth(template)} px</output><button type="button" className="position-reset" disabled={!(timelineLineWidth(template) !== timelineLineWidth(defaultTemplate))} aria-label="Reset line thickness" onClick={() => onChange('timelineLineWidth', timelineLineWidth(defaultTemplate))}>Reset</button></span></div>
-        <FineSlider id="timeline-line-width" min="0.5" max="6" step="0.5" value={timelineLineWidth(template)} onValueChange={value => onChange('timelineLineWidth', value)} />
+      <AppearanceColor colorKey="line" template={template} defaultTemplate={defaultTemplate} onChange={onChange} toggleKey="containerBorder" />
+      {template.containerBorder !== false && <div className="top-margin-control">
+        <div className="top-margin-label"><label htmlFor="timeline-line-width">Border thickness</label><span className="position-value"><output htmlFor="timeline-line-width">{timelineLineWidth(template)} px</output><button type="button" className="position-reset" disabled={!(timelineLineWidth(template) !== timelineLineWidth(defaultTemplate))} aria-label="Reset border thickness" onClick={() => onChange('timelineLineWidth', timelineLineWidth(defaultTemplate))}>Reset</button></span></div>
+        <FineSlider id="timeline-line-width" min="0.5" max="24" step="0.5" value={timelineLineWidth(template)} onValueChange={value => onChange('timelineLineWidth', value)} />
       </div>}
 
       </div>
