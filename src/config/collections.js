@@ -1,6 +1,7 @@
 
 export const designCollections = [
   { id: 'all', name: 'All designs' },
+  { id: 'gachiakuta', name: 'Gachiakuta', searchTerms: ['Rudo', 'Enjin', 'Zanka', 'Riyo', 'Cleaners'] },
   { id: 'transformers', name: 'Transformers', searchTerms: ['Autobots', 'Decepticons', 'Cybertron'] },
   { id: 'wuthering-waves', name: 'Wuthering Waves', searchTerms: ['WuWa', 'Wuthering'] },
   { id: 'cars', name: 'Cars', searchTerms: ['car wallpaper', 'automotive', 'sports car', 'Porsche', 'Ferrari', 'McLaren'] },
@@ -49,6 +50,6 @@ export const scenicFamilies = [
 export const galleryCategories = [...designCollections];
 
 export function matchesGalleryCategory(template, category) {
-  if (category === 'anime') return ['anime', 'naruto', 'hunter-x-hunter', 'ghibli', 'onepiece'].includes(getTemplateCollection(template));
+  if (category === 'anime') return ['anime', 'gachiakuta', 'naruto', 'hunter-x-hunter', 'ghibli', 'onepiece'].includes(getTemplateCollection(template));
   return category === 'all' || getTemplateCollection(template) === (['chikawa', 'little-friends'].includes(category) ? 'chiikawa' : category);
 }

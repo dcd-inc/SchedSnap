@@ -17,6 +17,7 @@ const collectionTags = {
   fruits: ['fruits', 'fruit', 'food', 'pattern', 'mobile wallpaper'],
   flowers: ['flowers', 'flower', 'floral', 'botanical', 'mobile wallpaper'],
   doodle: ['doodle', 'cute', 'cartoon', 'character crowd'],
+  gachiakuta: ['Gachiakuta', 'manga', 'anime', 'Cleaners'],
   transformers: ['Transformers', 'robots', 'science fiction'],
   'wuthering-waves': ['Wuthering Waves', 'WuWa', 'game', 'anime'],
   collage: ['collage', 'scrapbook', 'torn paper', 'mobile wallpaper'],

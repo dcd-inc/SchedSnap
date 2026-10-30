@@ -1,0 +1,126 @@
+{
+  "approval": "User approved all 10 generated designs and authorized Cloudinary upload, Gachiakuta catalog publication, individual keywords and push to main.",
+  "processing": "Full-image resize to 1080x2400, no crop or repaint.",
+  "assets": [
+    {
+      "id": "gachiakuta-cleaners-in-ochre",
+      "name": "Cleaners In Ochre",
+      "path": "public/wallpapers/scenic/gachiakuta-cleaners-in-ochre/mobile.png",
+      "sourcePath": "output/gachiakuta/approved-batch-01/01-cleaners-in-ochre.png",
+      "sourceSha256": "c4b0c624830e81f66a4e49a8971927fa90cb6763c98d57881a90c0a5f0c6371e",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "5d1f4101858a821a4b381e414700bca31ddb1f07f1c6317226114bc8b7dbdc29"
+    },
+    {
+      "id": "gachiakuta-rudo-gilded-ink",
+      "name": "Rudo Gilded Ink",
+      "path": "public/wallpapers/scenic/gachiakuta-rudo-gilded-ink/mobile.png",
+      "sourcePath": "output/gachiakuta/approved-batch-01/02-rudo-gilded-ink.png",
+      "sourceSha256": "315f041c786fa408949bb2c6c66b1c95f9bc9df0e5aaecd1eee87d66e57bb98b",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "c61f2e5390b9074a2f49bcb6acfe7ef165dc44a7183de4207810fd516c048d30"
+    },
+    {
+      "id": "gachiakuta-zanka-blue-thread",
+      "name": "Zanka Blue Thread",
+      "path": "public/wallpapers/scenic/gachiakuta-zanka-blue-thread/mobile.png",
+      "sourcePath": "output/gachiakuta/approved-batch-01/03-zanka-blue-thread.png",
+      "sourceSha256": "009c1d1d56cd1ebe719587a1e63410dc3366dd936b4a807db8fb1f11345a1e7f",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "429b4bd1bf8c7e5dbc555b3c07c5f16fc41b18660049e3e660a6ae0b3e09c734"
+    },
+    {
+      "id": "gachiakuta-enjin-crimson-collar",
+      "name": "Enjin Crimson Collar",
+      "path": "public/wallpapers/scenic/gachiakuta-enjin-crimson-collar/mobile.png",
+      "sourcePath": "output/gachiakuta/approved-batch-01/04-enjin-crimson-collar.png",
+      "sourceSha256": "4e4067d240c8688ed2e1dea5376d2e5e2b0fe3131c455feffaed61192a239999",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "a97275029784f92d47383440529796f61cc9583686d5d7cf5ff845cc0b61c492"
+    },
+    {
+      "id": "gachiakuta-rudo-chainflare",
+      "name": "Rudo Chainflare",
+      "path": "public/wallpapers/scenic/gachiakuta-rudo-chainflare/mobile.png",
+      "sourcePath": "output/gachiakuta/approved-batch-01/05-rudo-chainflare.png",
+      "sourceSha256": "e44d61141999f4933c8396b4147f79de8c87422e1c4fac39d8eb4e7ef03dceb2",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "2d60c5f9a2cbbbae97e72108b4b29486cbd6f68f847c02de4d61650d6df0b26c"
+    },
+    {
+      "id": "gachiakuta-cleaners-golden-mural",
+      "name": "Cleaners Golden Mural",
+      "path": "public/wallpapers/scenic/gachiakuta-cleaners-golden-mural/mobile.png",
+      "sourcePath": "output/gachiakuta/approved-batch-01/06-cleaners-golden-mural.png",
+      "sourceSha256": "e500ed6983966f897887dee802baf18aca1cf59aa204894d2dcfa2d4e2fd9ee8",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "5363d0f280a5b3868e745db3bcc6f9a0924584effef40dba6fba7152ce3801ca"
+    },
+    {
+      "id": "gachiakuta-zanka-cobalt-cut",
+      "name": "Zanka Cobalt Cut",
+      "path": "public/wallpapers/scenic/gachiakuta-zanka-cobalt-cut/mobile.png",
+      "sourcePath": "output/gachiakuta/approved-batch-01/07-zanka-cobalt-cut.png",
+      "sourceSha256": "2e4f753f0b4ddd68371118b0b115f75ecf83fdc60800e10984248e068f37ed46",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "082e25ced8f9b9089fe20f5a3f1b98be368535f491440854021d9f5e64bcd74d"
+    },
+    {
+      "id": "gachiakuta-rudo-scarlet-cut",
+      "name": "Rudo Scarlet Cut",
+      "path": "public/wallpapers/scenic/gachiakuta-rudo-scarlet-cut/mobile.png",
+      "sourcePath": "output/gachiakuta/approved-batch-01/08-rudo-scarlet-cut.png",
+      "sourceSha256": "8a7c40109d5670ca6f4919d16a33b33b08a8f5c197437c737804138b7ff32dfc",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "d335d640b4035efd418a8c66f150f8f808ab4386b37491576bafdbdfe8bd056f"
+    },
+    {
+      "id": "gachiakuta-enjin-yellow-signal",
+      "name": "Enjin Yellow Signal",
+      "path": "public/wallpapers/scenic/gachiakuta-enjin-yellow-signal/mobile.png",
+      "sourcePath": "output/gachiakuta/approved-batch-01/09-enjin-yellow-signal.png",
+      "sourceSha256": "fda46e469cd15646af2b588c412d1853f3c26e978b0100712bf737643f1c5e9b",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "cd0d445b5588c95b8bf4a3262a53c6fc9fef3cd4541efb4f15fd6361c4774125"
+    },
+    {
+      "id": "gachiakuta-red-eye-salvage",
+      "name": "Red Eye Salvage",
+      "path": "public/wallpapers/scenic/gachiakuta-red-eye-salvage/mobile.png",
+      "sourcePath": "output/gachiakuta/approved-batch-01/10-red-eye-salvage.png",
+      "sourceSha256": "dab6e1f2fcff6bfbd564274acdb81e324639b3f9e0f635b221c8a12cb65bdf87",
+      "width": 1080,
+      "height": 2400,
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "963421c5737005a81d6fa886ebb1e4390827bbaaf85b28b03f9624c32b7d676c"
+    }
+  ]
+}

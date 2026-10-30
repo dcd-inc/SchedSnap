@@ -6551,5 +6551,75 @@ export default {
     "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793286579/schedsnap/wallpapers/scenic/fruits-tropical-slice-collage/mobile-38ef2f03960591bf.png",
     "width": 1080,
     "height": 2400
+  },
+  "/wallpapers/scenic/gachiakuta-cleaners-golden-mural/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/gachiakuta-cleaners-golden-mural/mobile-5363d0f280a5b386",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793397585/schedsnap/wallpapers/scenic/gachiakuta-cleaners-golden-mural/mobile-5363d0f280a5b386.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/gachiakuta-enjin-crimson-collar/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/gachiakuta-enjin-crimson-collar/mobile-a97275029784f92d",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793397586/schedsnap/wallpapers/scenic/gachiakuta-enjin-crimson-collar/mobile-a97275029784f92d.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/gachiakuta-enjin-yellow-signal/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/gachiakuta-enjin-yellow-signal/mobile-cd0d445b5588c95b",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793397586/schedsnap/wallpapers/scenic/gachiakuta-enjin-yellow-signal/mobile-cd0d445b5588c95b.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/gachiakuta-cleaners-in-ochre/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/gachiakuta-cleaners-in-ochre/mobile-5d1f4101858a821a",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793397586/schedsnap/wallpapers/scenic/gachiakuta-cleaners-in-ochre/mobile-5d1f4101858a821a.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/gachiakuta-red-eye-salvage/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/gachiakuta-red-eye-salvage/mobile-963421c5737005a8",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793397587/schedsnap/wallpapers/scenic/gachiakuta-red-eye-salvage/mobile-963421c5737005a8.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/gachiakuta-rudo-chainflare/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/gachiakuta-rudo-chainflare/mobile-2d60c5f9a2cbbbae",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793397588/schedsnap/wallpapers/scenic/gachiakuta-rudo-chainflare/mobile-2d60c5f9a2cbbbae.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/gachiakuta-rudo-gilded-ink/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/gachiakuta-rudo-gilded-ink/mobile-c61f2e5390b9074a",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793397588/schedsnap/wallpapers/scenic/gachiakuta-rudo-gilded-ink/mobile-c61f2e5390b9074a.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/gachiakuta-rudo-scarlet-cut/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/gachiakuta-rudo-scarlet-cut/mobile-d335d640b4035efd",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793397590/schedsnap/wallpapers/scenic/gachiakuta-rudo-scarlet-cut/mobile-d335d640b4035efd.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/gachiakuta-zanka-blue-thread/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/gachiakuta-zanka-blue-thread/mobile-429b4bd1bf8c7e5d",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793397590/schedsnap/wallpapers/scenic/gachiakuta-zanka-blue-thread/mobile-429b4bd1bf8c7e5d.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/gachiakuta-zanka-cobalt-cut/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/gachiakuta-zanka-cobalt-cut/mobile-082e25ced8f9b908",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793397590/schedsnap/wallpapers/scenic/gachiakuta-zanka-cobalt-cut/mobile-082e25ced8f9b908.png",
+    "width": 1080,
+    "height": 2400
   }
 };
