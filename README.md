@@ -1,33 +1,55 @@
 # SchedSnap
 
-Redis reads, writes, command counts and the latest reductions are documented in [the Redis usage audit](documentation/REDIS_USAGE.md).
+Turn your class schedule into a wallpaper. SchedSnap lets students choose a design, add classes, customize the layout, and download a PNG for their device.
 
-Design gallery hearts show public counts and toggle one like per browser per design. Hearts and counts update optimistically with no disabled saving state; requests stay ordered per design, repeated clicks preserve the latest choice, and failures restore the last confirmed state. `GET /api/likes` reads counts and that browser's liked state without setting a cookie. The first heart click creates a signed, HttpOnly, SameSite voting cookie lasting one year; a second request confirms the cookie was accepted before counting the vote. Likes operate separately from optional PostHog analytics. Votes use persistent Redis sets without expiry; atomic add/remove operations make repeated requests idempotent. A shared counts hash and per-browser liked-design hash replace per-design SCARD/SISMEMBER reads: after initialization, a cache miss uses one HGETALL for all counts and one for an identified browser. Guests need only the counts read. Counts are cached for 60 seconds per server instance, with concurrent reads shared; the browser reuses its personalized response for 60 seconds across focus events and gallery remounts. Confirmed votes update both indexes and the caches immediately. GET responses remain no-store to prevent shared caching of personal liked state. Existing counts are backfilled only for missing designs; legacy browser cookies retain their identity and their votes are indexed once, including hidden designs. New versioned cookies skip legacy scans. Public counts can lag by up to two minutes. Writes and cookie creation share a 60-requests-per-IP-per-minute Redis rate limit with hashed IPs and one-minute counter expiry. Configure the existing `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN`, and `IMPORT_LIMIT_SECRET` in production. Keep the secret stable to preserve browser identity. Missing/unavailable storage shows unavailable counts and prevents voting. Unconfigured local development uses memory, reset on restart. Different browsers, cleared cookies, or expired cookies can vote again; this is casual voting, not one vote per person.
+## Features
 
-AI imports are limited to 10 attempts per public IP per Philippine calendar day. A reserved attempt is released when analysis fails, times out, or the provider is overloaded, so failed reads do not count; cancelled uploads may still count. `GET /api/analyze` returns usage without consuming an attempt. Configure `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN`, and `IMPORT_LIMIT_SECRET` (a private random secret) in Vercel before deploying. Atomic Redis reservations enforce the limit across instances; the restricted Redis user must allow `GET`, `INCR`, and `EXPIREAT` for reservations and `DECR` for refunds inside EVAL scripts. Production blocks AI imports when storage is unavailable. Local development uses memory when Redis is unconfigured. Shared Wi-Fi shares the allowance; changing networks changes the allowance. Manual entry remains unlimited.
+- Browse wallpaper collections for mobile, tablet, and laptop.
+- Choose a template or upload your own background.
+- Import classes from a registration-form image with AI, enter them manually, or try sample data.
+- Review course codes, subjects, meeting days, times, and rooms before exporting.
+- Customize the wallpaper title, fonts, colors, schedule placement, and day containers.
+- Preview and download a Canvas-rendered PNG, with validation for invalid details or schedules that do not fit.
+- Restore class and title drafts from per-tab browser session storage.
 
-A class schedule wallpaper creator for university students. Choose a look, add your classes, and save a phone wallpaper that keeps your week one glance away.
+Student accounts are not required. Uploaded registration images are sent to the configured AI provider for analysis; API credentials stay on the server. Optional PostHog analytics run only after the visitor accepts analytics cookies.
 
-The homepage opens with a static cream hero that fills the first viewport, layering a transparent phone foreground over a separate generated ambient background. Three stats below it show total pageviews, the actual template count and collection count, followed by four pure-white collection showcases: Little Friends, Mascots, Patterns and Originals. Each Create wallpaper action opens that collection in the template picker. The library contains 62 designs: 20 Chiikawa-inspired Little Friends editions, 20 animal mascots, six editable patterns and 16 originals. The existing `/services/schedule-wallpaper` URL remains compatible.
+## Local development
 
-The flow is **Design → Classes → Download**, guided by page headings and actions. Upload a registration-form image for Gemini extraction, enter classes manually, or try sample data. Review subjects, course codes, days, times and rooms before downloading a 1080 × 2400 PNG. Optional appearance controls edit colors, fonts and day-container styling. Missing or invalid details and schedules that cannot fit block export with a recovery action.
-
-Classes, images and per-design settings remain in browser memory until refresh. There is no account or saved schedule history. Uploaded images are sent to Google for analysis and are not stored by the application. The API key stays server-side. The homepage reads its aggregate visit total from PostHog through a server API when query credentials are configured.
-
-## Development
-
-Requires Node.js 22.12+ and npm.
+Requires **Node.js 22.12 or newer** and **npm**.
 
 ```sh
 npm install
+```
+
+Copy `.env.example` to `.env.local`, then configure the integrations you need. Manual class entry works without AI credentials.
+
+```sh
 npm run dev
 ```
 
-Copy `.env.example` to `.env.local` and set `GEMINI_API_KEY` and `GEMINI_MODEL`; an existing `.env` also works. The verified model configuration is `gemini-3.5-flash-lite`. Set server-only `GEMINI_API_KEYS=key1,key2,key3` in development and Vercel to configure any number of keys. Each import starts with the first key and advances on quota/rate-limit (429) and provider capacity (500/503) errors within a shared 45-second request budget. An optional `DEEPSEEK_API_KEY` enables a non-thinking, JSON-mode DeepSeek fallback (model `DEEPSEEK_MODEL`, default `deepseek-v4-flash`); results report which provider was used. When fallback is configured, Gemini gets up to 20 seconds across all keys, reserving 25 seconds for DeepSeek. Failed Gemini calls and malformed or invalid output switch to DeepSeek; capacity errors move directly to fallback after key rotation without a delayed Gemini retry. Without DeepSeek, Gemini can use the full budget and make one delayed retry after capacity errors. A valid empty schedule returns a recoverable error without a second provider call. A malformed model setting for one provider does not block the other. DeepSeek receives original-detail images and table-specific instructions for row alignment, weekday abbreviations, lecture/lab meetings, and AM/PM conversion. Blank entries and duplicate keys are ignored. Existing `GEMINI_API_KEY` and `GEMINI_FALLBACK_API_KEY` remain supported and come before the list when set. All keys use the same model; other errors stop key rotation and use DeepSeek when available. Keys in the same Google Cloud project share quota; the backup project must have available quota and access to the configured model. Failed imports refund the daily allowance; a successful fallback counts as one import. Restart development or redeploy after changing keys. `npm run dev` runs the frontend and local API adapter. `npm run dev:full` uses the Vercel runtime and may require login and project linking. Run servers in the foreground and stop them when finished.
+Open the local URL printed by Vite. This command serves both the frontend and the local API adapter. Keep the server in the foreground and stop it with **Ctrl+C** when finished.
 
-For real pageview totals, set server-only `POSTHOG_PROJECT_ID` (643035), `POSTHOG_PERSONAL_API_KEY`, and optionally `POSTHOG_API_HOST` in development and deployment. Until connected, Total pageviews displays `—`. See [PostHog visit-count setup and counting rules](documentation/VISIT_COUNTER.md).
+To use the Vercel development runtime instead, run `npm run dev:full`; this may require Vercel login and project linking.
 
-PostHog is enabled only when `VITE_POSTHOG_TOKEN` is configured in `.env.local` or the hosting build environment and the visitor accepts analytics in the cookie notice. Either choice is remembered in this browser; The Cookies tab beside Terms of Use and Privacy Policy opens `/cookies` to change it. Rejecting or leaving the notice unanswered keeps analytics off. Use a public project token and `VITE_POSTHOG_HOST` for this application's PostHog project. Events have `site_name: schedsnap` and `environment: production` or `development`; filter both properties on the production dashboard. Pageviews, clicks, design choices, imports, previews and download initiation are tracked after acceptance. Session recording is disabled, DOM text/attributes are masked, and custom events omit schedule contents and image data. Location analytics use PostHog's approximate GeoIP without a browser permission prompt. See the [independent PostHog documentation](documentation/posthog/README.md) for setup, implementation, events and the dashboard prompt. Rebuild after setting deployment variables.
+### Environment configuration
+
+See [`.env.example`](.env.example) for all supported settings and defaults. Never commit real credentials. Only variables prefixed with `VITE_` are public; keep secrets server-only. Restart development or redeploy after changing environment values.
+
+| Integration | Variables | Purpose |
+| --- | --- | --- |
+| Gemini | `GEMINI_API_KEYS`, `GEMINI_MODEL` | Extract classes from registration images. Separate multiple keys with commas. |
+| DeepSeek | `DEEPSEEK_API_KEY`, `DEEPSEEK_MODEL` | Optional fallback when Gemini fails or returns invalid output. |
+| Upstash Redis | `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN`, `IMPORT_LIMIT_SECRET` | Shared import allowances and design voting. Required for production AI imports. Keep the secret stable between deployments. |
+| Import allowance | `IMPORT_DAILY_LIMIT` | Defaults to 15 attempts per public IP per Philippine calendar day. Failed analyses refund their reserved attempt; manual entry is unlimited. |
+| Cloudinary | `CLOUDINARY_CLOUD_NAME`, `CLOUDINARY_API_KEY`, `CLOUDINARY_API_SECRET` | Artwork uploads and catalog administration. |
+| Admin | `ADMIN_PASSWORD`, optional `ADMIN_SESSION_SECRET` | Protect design management at `/admin`. Follow the [admin setup guide](documentation/ADMIN.md) before enabling production login. |
+| Analytics | `VITE_POSTHOG_TOKEN`, `VITE_POSTHOG_HOST` | Optional browser analytics after consent. Use a public project token. |
+| Pageview totals | `POSTHOG_PROJECT_ID`, `POSTHOG_PERSONAL_API_KEY`, `POSTHOG_API_HOST` | Optional server-side aggregate pageview query. Use a private personal API key. |
+
+Without Redis configuration, local development uses in-memory allowances and votes that reset when the server restarts. Production AI imports are blocked when allowance storage is unavailable. People sharing a public IP share the daily import allowance.
+
+### Checks and build
 
 ```sh
 npm run lint
@@ -36,33 +58,41 @@ npm run build
 node scripts/check-seo.mjs
 ```
 
-React + Vite, Tailwind CSS, React Router, Lucide, Axios, GSAP, Zod and the Google Gen AI SDK support the application. HTML5 Canvas renders previews and PNG exports. The public deployment uses Vercel.
+`npm run preview` serves the built frontend locally. Use `npm run dev` or `npm run dev:full` when testing server API behavior.
 
-The production build prerenders homepage and legal content, generates public-page metadata, sitemap.xml, and robots.txt, and keeps admin/editor sessions out of search results. See [search visibility setup and content priorities](documentation/SEO.md).
+## Project structure
 
-Wallpaper originals (`public/wallpapers/`) and mascot master folders stay local and are excluded from Git, CLI uploads, and production build output, including retired and unpublished artwork. Commit template metadata and `src/assets/cloudinaryManifest.js` after uploading artwork to Cloudinary. Keep landing-page delivery images, icons, and fonts in Git. `.gitignore` does not untrack previously committed files; use `git rm --cached` for originals already uploaded, preserving the local files. Old Git history does not need rewriting to reduce future deployment output. Local worktrees, transfer bundles, scratch files, and previous `dist/` builds are also excluded from CLI uploads.
+```text
+api/             Vercel API handlers
+server/          Server-side integrations and storage
+shared/          Shared schemas and application rules
+src/             React pages, components, artwork metadata, and Canvas rendering
+public/          Static delivery assets
+scripts/         Build, SEO, artwork, and administration tools
+tests/           Node test runner suites and fixtures
+documentation/   Setup guides, audits, and artwork provenance
+```
 
-The landing page ships responsive WebP previews and an AVIF hero with a WebP fallback. With the local originals and Pillow (WebP/AVIF support) available, run `python scripts/optimize-landing-images.py` after replacing landing artwork, and commit the generated `*-560.webp`, `*-960.webp`, hero sizes, maker and brand derivatives. Landing PNG sources remain local; the build copies only delivery assets. The editor's full-resolution Cloudinary artwork and PNG downloads are independent of these marketing previews. The optional PostHog SDK downloads only after analytics consent is granted; withdrawing consent during that download prevents initialization.
+Built with React, Vite, Tailwind CSS, React Router, HTML5 Canvas, and Vercel Node.js functions. AI extraction uses Gemini with an optional DeepSeek fallback. Cloudinary delivers artwork; Upstash Redis supports shared counters and voting.
 
-The current automated suite passes all 79 tests. Lint and production build pass. The latest hero and stats geometry check covers ten phone, landscape, tablet and desktop sizes from 320 to 1920px. The final visual review returned ship with no material fixes. The earlier workflow audit also checked template selection, class editing, appearance controls and branded PNG generation. See [completion evidence](documentation/COMPLETION_AUDIT.md).
+## Deployment and artwork
+
+Deploy to Vercel and configure the required server environment variables there. The production build prerenders public content and generates page metadata, `sitemap.xml`, and `robots.txt`. See the [SEO guide](documentation/SEO.md) for details.
+
+Wallpaper originals and mascot master folders stay local and are excluded from Git and deployment output. After uploading artwork to Cloudinary, commit the template metadata and `src/assets/cloudinaryManifest.js`. Keep landing-page delivery images, icons, and fonts in Git. Use the [artwork workflow](documentation/skills/schedsnap-artwork/SKILL.md) and [asset inventory](documentation/IMAGE_ASSETS.md) when updating designs.
 
 ## Documentation
 
-- [Image asset organization and inventory](documentation/IMAGE_ASSETS.md)
-- [Artwork generation and Cloudinary upload skill for contributors and AI agents](documentation/skills/schedsnap-artwork/SKILL.md)
-- [Mobile, tablet and laptop showcases](documentation/DEVICE_SHOWCASES.md)
-- [Mobile, tablet and laptop showcases](documentation/DEVICE_SHOWCASES.md)
-
 - [Product behavior](PRODUCT.md)
 - [Design system](DESIGN.md)
-- [Landing page](documentation/LANDING_PAGE.md)
-- [Project status and completion criteria](documentation/PROJECT_PLAN.md)
 - [Technical setup and extension guide](documentation/TECH_STACK.md)
-- [PostHog analytics setup, implementation and dashboards](documentation/posthog/README.md)
-- [Wallpaper templates, artwork prompts and provenance](documentation/WALLPAPER_TEMPLATES.md)
-- [Hero and generated-asset provenance](documentation/HERO_BACKGROUND.md)
-- [Exact generated asset prompts, history and source paths](output/imagegen/schedsnap/prompts.json)
-- [Image revisions](output/imagegen/schedsnap/revisions.json)
-- [Completion and responsive audit](documentation/COMPLETION_AUDIT.md)
+- [Design administration](documentation/ADMIN.md)
+- [Cloudinary setup](documentation/CLOUDINARY.md)
+- [Redis usage and storage behavior](documentation/REDIS_USAGE.md)
+- [PostHog analytics](documentation/posthog/README.md)
+- [Pageview totals](documentation/VISIT_COUNTER.md)
+- [Wallpaper templates and artwork provenance](documentation/WALLPAPER_TEMPLATES.md)
+- [Device showcases](documentation/DEVICE_SHOWCASES.md)
+- [Search visibility](documentation/SEO.md)
 
-The AI allowance is read only while import controls are visible. There is no per-minute polling on the chooser or preview. Focus refreshes are throttled to one per minute while import controls are visible, with one scheduled check at the daily reset. Actual imports always reserve their allowance atomically on the server and return the authoritative used count.
+Some design notes and audit reports describe earlier versions. For current commands and environment defaults, use `package.json` and `.env.example`.
