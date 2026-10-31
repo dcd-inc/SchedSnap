@@ -85,8 +85,15 @@ export function galleryPreviewTemplate(template) {
 export function customizeWallpaperTemplate(template, settings = {}, device = template?.device) {
   if (!template) return template;
   const tabletPortrait = device === 'tablet';
-  if (!tabletPortrait && (template.collection !== 'genshin' || template.containerStyle === 'glass') && !Object.keys(settings).length) return template;
-  const defaults = { ...(template.collection === 'genshin' ? { containerStyle: 'glass' } : {}), ...(tabletPortrait ? { schedulePosition: 'center', containerStyle: 'glass', tabletBoxSpacing: (settings.scheduleLayout || template.scheduleLayout || 'stacked') === 'stacked' ? 24 : 80 } : {}) };
+  const imageWallpaper = Boolean(template.image || template.deviceImages) && template.layout !== 'mascot' && !template.customBackground;
+  const stacked = (settings.scheduleLayout || template.scheduleLayout || 'stacked') === 'stacked';
+  if (!tabletPortrait && !imageWallpaper && (template.collection !== 'genshin' || template.containerStyle === 'glass') && !Object.keys(settings).length) return template;
+  // Catalog artwork shares the titled pill-row default, including older remote presets.
+  const defaults = {
+    ...(imageWallpaper ? { showTitle: true, showScheduleTitle: true, ...(stacked ? { containerShape: 'pill', containerRadius: 50 } : {}) } : {}),
+    ...(template.collection === 'genshin' ? { containerStyle: 'glass' } : {}),
+    ...(tabletPortrait ? { schedulePosition: 'center', containerStyle: 'glass', tabletBoxSpacing: stacked ? 24 : 80 } : {}),
+  };
   // Device defaults precede the user's explicit appearance choices.
   const customized = { ...template, ...defaults, ...settings };
   if (tabletPortrait) customized.orientation = 'portrait';
