@@ -6621,5 +6621,306 @@ export default {
     "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793397590/schedsnap/wallpapers/scenic/gachiakuta-zanka-cobalt-cut/mobile-082e25ced8f9b908.png",
     "width": 1080,
     "height": 2400
+  },
+  "/wallpapers/scenic/space-amber-rocket-sketches/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-amber-rocket-sketches/mobile-aeb6fa05d1b0d355",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531762/schedsnap/wallpapers/scenic/space-amber-rocket-sketches/mobile-aeb6fa05d1b0d355.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-astronaut-equations/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-astronaut-equations/mobile-4a45fde9c18451fc",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531763/schedsnap/wallpapers/scenic/space-astronaut-equations/mobile-4a45fde9c18451fc.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-antique-moon-atlas/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-antique-moon-atlas/mobile-b5e3749537e9449a",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531762/schedsnap/wallpapers/scenic/space-antique-moon-atlas/mobile-b5e3749537e9449a.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-chalk-planet-scatter/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-chalk-planet-scatter/mobile-8618d350cf0f7f34",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531764/schedsnap/wallpapers/scenic/space-chalk-planet-scatter/mobile-8618d350cf0f7f34.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-blue-sky-space-notes/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-blue-sky-space-notes/mobile-adbf32d5b0206fa3",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531764/schedsnap/wallpapers/scenic/space-blue-sky-space-notes/mobile-adbf32d5b0206fa3.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-blue-planet-orbits/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-blue-planet-orbits/mobile-cd7d39ddd7eb3561",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531764/schedsnap/wallpapers/scenic/space-blue-planet-orbits/mobile-cd7d39ddd7eb3561.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-celestial-astronaut-engraving/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-celestial-astronaut-engraving/mobile-01f11766c2101822",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531766/schedsnap/wallpapers/scenic/space-celestial-astronaut-engraving/mobile-01f11766c2101822.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-coral-skull-explorer/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-coral-skull-explorer/mobile-8f69f0e36e43ba07",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531766/schedsnap/wallpapers/scenic/space-coral-skull-explorer/mobile-8f69f0e36e43ba07.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-cosmic-doodle-jam/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-cosmic-doodle-jam/mobile-e9d03dec43e6f2a2",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531767/schedsnap/wallpapers/scenic/space-cosmic-doodle-jam/mobile-e9d03dec43e6f2a2.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-earth-at-twilight/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-earth-at-twilight/mobile-8332fd6f9c22e992",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531768/schedsnap/wallpapers/scenic/space-earth-at-twilight/mobile-8332fd6f9c22e992.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-deep-starfield/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-deep-starfield/mobile-836c64b49581442b",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531769/schedsnap/wallpapers/scenic/space-deep-starfield/mobile-836c64b49581442b.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-galactic-chalkboard/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-galactic-chalkboard/mobile-e0ab738dc0a09455",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531770/schedsnap/wallpapers/scenic/space-galactic-chalkboard/mobile-e0ab738dc0a09455.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-golden-celestial-map/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-golden-celestial-map/mobile-def2d8231c5b2823",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531771/schedsnap/wallpapers/scenic/space-golden-celestial-map/mobile-def2d8231c5b2823.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-lime-alien-crowd/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-lime-alien-crowd/mobile-33ccba19393eff49",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531772/schedsnap/wallpapers/scenic/space-lime-alien-crowd/mobile-33ccba19393eff49.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-distant-black-hole/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-distant-black-hole/mobile-0a55d83ee1d4e37e",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531772/schedsnap/wallpapers/scenic/space-distant-black-hole/mobile-0a55d83ee1d4e37e.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-little-green-visitors/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-little-green-visitors/mobile-741aab3da1285fd5",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531773/schedsnap/wallpapers/scenic/space-little-green-visitors/mobile-741aab3da1285fd5.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-golden-singularity/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-golden-singularity/mobile-62b05a3e94bc6989",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531774/schedsnap/wallpapers/scenic/space-golden-singularity/mobile-62b05a3e94bc6989.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-looping-space-adventure/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-looping-space-adventure/mobile-6ddd5b9bd6f3f9e6",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531774/schedsnap/wallpapers/scenic/space-looping-space-adventure/mobile-6ddd5b9bd6f3f9e6.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-magenta-galaxy-voyage/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-magenta-galaxy-voyage/mobile-ea8947b9471478a7",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531776/schedsnap/wallpapers/scenic/space-magenta-galaxy-voyage/mobile-ea8947b9471478a7.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-marbled-lunar-edge/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-marbled-lunar-edge/mobile-579e489294a4157f",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531777/schedsnap/wallpapers/scenic/space-marbled-lunar-edge/mobile-579e489294a4157f.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-midnight-planet-sketches/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-midnight-planet-sketches/mobile-7a47a2d05c31a630",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531777/schedsnap/wallpapers/scenic/space-midnight-planet-sketches/mobile-7a47a2d05c31a630.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-minimal-orbit-lines/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-minimal-orbit-lines/mobile-ab3881352eda7931",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531778/schedsnap/wallpapers/scenic/space-minimal-orbit-lines/mobile-ab3881352eda7931.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-monster-orbit-border/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-monster-orbit-border/mobile-8bd2742e1ed612b5",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531779/schedsnap/wallpapers/scenic/space-monster-orbit-border/mobile-8bd2742e1ed612b5.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-midnight-blue-nebula/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-midnight-blue-nebula/mobile-d0c5d5ec18df1092",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531779/schedsnap/wallpapers/scenic/space-midnight-blue-nebula/mobile-d0c5d5ec18df1092.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-moon-hugger/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-moon-hugger/mobile-9656543bfb78151f",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531780/schedsnap/wallpapers/scenic/space-moon-hugger/mobile-9656543bfb78151f.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-orbital-dot-waves/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-orbital-dot-waves/mobile-381f825065a07594",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531782/schedsnap/wallpapers/scenic/space-orbital-dot-waves/mobile-381f825065a07594.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-pastel-cosmic-parade/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-pastel-cosmic-parade/mobile-4598948b9d463558",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531785/schedsnap/wallpapers/scenic/space-pastel-cosmic-parade/mobile-4598948b9d463558.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-pastel-space-drift/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-pastel-space-drift/mobile-a5f8107d78211123",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531784/schedsnap/wallpapers/scenic/space-pastel-space-drift/mobile-a5f8107d78211123.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-pencil-solar-system/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-pencil-solar-system/mobile-04f11f4025c2bea7",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531785/schedsnap/wallpapers/scenic/space-pencil-solar-system/mobile-04f11f4025c2bea7.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-planet-alignment/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-planet-alignment/mobile-f0c0caf9bb4684c6",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531788/schedsnap/wallpapers/scenic/space-planet-alignment/mobile-f0c0caf9bb4684c6.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-rainbow-planet-outlines/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-rainbow-planet-outlines/mobile-2f62e935f06dfb55",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531788/schedsnap/wallpapers/scenic/space-rainbow-planet-outlines/mobile-2f62e935f06dfb55.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-quiet-cosmic-dust/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-quiet-cosmic-dust/mobile-fe5688a959a71163",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531789/schedsnap/wallpapers/scenic/space-quiet-cosmic-dust/mobile-fe5688a959a71163.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-silent-skull-voyager/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-silent-skull-voyager/mobile-2652f13971ae90da",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531790/schedsnap/wallpapers/scenic/space-silent-skull-voyager/mobile-2652f13971ae90da.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-silver-saturn-doodles/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-silver-saturn-doodles/mobile-62b80378d6854e8b",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531792/schedsnap/wallpapers/scenic/space-silver-saturn-doodles/mobile-62b80378d6854e8b.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-saturn-explorer/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-saturn-explorer/mobile-97d29cc666f8edba",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531792/schedsnap/wallpapers/scenic/space-saturn-explorer/mobile-97d29cc666f8edba.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-skull-space-reverie/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-skull-space-reverie/mobile-9c515a62c91956a3",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531795/schedsnap/wallpapers/scenic/space-skull-space-reverie/mobile-9c515a62c91956a3.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-starlight-shaka/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-starlight-shaka/mobile-010cc0353a7d64e2",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531796/schedsnap/wallpapers/scenic/space-starlight-shaka/mobile-010cc0353a7d64e2.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-silver-starry-night/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-silver-starry-night/mobile-d2b297641765b43c",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531796/schedsnap/wallpapers/scenic/space-silver-starry-night/mobile-d2b297641765b43c.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-tiny-planet-night/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-tiny-planet-night/mobile-9d223ea83213ce61",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531798/schedsnap/wallpapers/scenic/space-tiny-planet-night/mobile-9d223ea83213ce61.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-lunar-archive/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-lunar-archive/mobile-bfb2b06534939819",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531798/schedsnap/wallpapers/scenic/space-lunar-archive/mobile-bfb2b06534939819.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-snoopy-moonwatch/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-snoopy-moonwatch/mobile-3a574b26da2847b1",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531798/schedsnap/wallpapers/scenic/space-snoopy-moonwatch/mobile-3a574b26da2847b1.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-teal-alien-signals/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-teal-alien-signals/mobile-b048ddfdaa3cc46b",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531799/schedsnap/wallpapers/scenic/space-teal-alien-signals/mobile-b048ddfdaa3cc46b.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/space-white-event-horizon/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/space-white-event-horizon/mobile-079f10879dd6b8c1",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531801/schedsnap/wallpapers/scenic/space-white-event-horizon/mobile-079f10879dd6b8c1.png",
+    "width": 1080,
+    "height": 2400
   }
 };
