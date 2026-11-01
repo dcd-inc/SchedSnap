@@ -23,6 +23,7 @@ import { wutheringWavesTemplates } from './wutheringWavesTemplates.js';
 import { narutoTemplates } from './narutoTemplates.js';
 import { graffitiTemplates } from './graffitiTemplates.js';
 import { fruitTemplates } from './fruitTemplates.js';
+import { spaceTemplates } from './spaceTemplates.js';
 import { flowerTemplates } from './flowerTemplates.js';
 import { doodleTemplates } from './doodleTemplates.js';
 import { collageTemplates } from './collageTemplates.js';
@@ -58,6 +59,7 @@ export const wallpaperTemplates = [
   ...graffitiTemplates,
   ...flowerTemplates,
   ...fruitTemplates,
+  ...spaceTemplates,
   ...carTemplates,
 
   ...sanrioTemplates,

@@ -25,6 +25,7 @@ import { transformersTemplates } from '../src/assets/transformersTemplates.js';
 import { wutheringWavesTemplates } from '../src/assets/wutheringWavesTemplates.js';
 import { collageTemplates } from '../src/assets/collageTemplates.js';
 import { fruitTemplates } from '../src/assets/fruitTemplates.js';
+import { spaceTemplates } from '../src/assets/spaceTemplates.js';
 import { flowerTemplates } from '../src/assets/flowerTemplates.js';
 
 
@@ -37,7 +38,7 @@ export function localApiPlugin(env) {
       const analyze = createAnalyzeHandler({ env });
       const visits = createVisitsHandler({ env });
       const admin = createAdminHandler({ env });
-      const catalog = createPublicCatalogHandler({ env, previewTemplates: [...gachiakutaTemplates, ...fruitTemplates, ...flowerTemplates, ...transformersTemplates, ...collageTemplates, ...narutoTemplates, ...wutheringWavesTemplates, ...arcaneTemplates, ...jinxTemplates, ...animeTemplates, ...generativePatternTemplates, ...hunterTemplates, ...snoopyTemplates, ...genshinElementalTemplates, ...genshinChibiTemplates, ...genshinTemplates, ...genshinBackgroundTemplates, ...ghibliTemplates, ...meepTemplates] });
+      const catalog = createPublicCatalogHandler({ env, previewTemplates: [...spaceTemplates, ...gachiakutaTemplates, ...fruitTemplates, ...flowerTemplates, ...transformersTemplates, ...collageTemplates, ...narutoTemplates, ...wutheringWavesTemplates, ...arcaneTemplates, ...jinxTemplates, ...animeTemplates, ...generativePatternTemplates, ...hunterTemplates, ...snoopyTemplates, ...genshinElementalTemplates, ...genshinChibiTemplates, ...genshinTemplates, ...genshinBackgroundTemplates, ...ghibliTemplates, ...meepTemplates] });
       const likes = createLikesHandler({ env });
       const downloads = createDownloadsHandler({ env });
       server.middlewares.use(async (request, response, next) => {
