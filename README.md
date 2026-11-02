@@ -1,28 +1,28 @@
 # SchedSnap
 
-Turn your class schedule into a wallpaper. SchedSnap lets students choose a design, add classes, customize the layout, and download a PNG for their device.
+Turn your class schedule into a wallpaper that fits your device. Choose a design, add your classes, customize the layout, and download your finished schedule as a PNG.
 
 ## Features
 
-- Browse wallpaper collections for mobile, tablet, and laptop.
+- Browse wallpaper collections for phones, tablets, and laptops.
 - Choose a template or upload your own background.
 - Import classes from a registration-form image with AI, enter them manually, or try sample data.
-- Review course codes, subjects, meeting days, times, and rooms before exporting.
+- Review course codes, subjects, meeting days, times, and rooms before downloading.
 - Customize the wallpaper title, fonts, colors, schedule placement, and day containers.
-- Preview and download a Canvas-rendered PNG, with validation for invalid details or schedules that do not fit.
-- Restore class and title drafts from per-tab browser session storage.
+- Preview and download a Canvas-rendered PNG, with checks for invalid details and schedules that do not fit.
+- Keep class and title drafts in browser session storage for the current tab.
 
 Student accounts are not required. Uploaded registration images are sent to the configured AI provider for analysis; API credentials stay on the server. Optional PostHog analytics run only after the visitor accepts analytics cookies.
 
 ## Local development
 
-Requires **Node.js 22.12 or newer** and **npm**.
+Install **Node.js 22.12 or newer** and **npm**, then install the project dependencies:
 
 ```sh
 npm install
 ```
 
-Copy `.env.example` to `.env.local`, then configure the integrations you need. Manual class entry works without AI credentials.
+Copy `.env.example` to `.env.local` and configure the integrations you need. Manual class entry works without AI credentials. Start the development server:
 
 ```sh
 npm run dev
@@ -34,7 +34,7 @@ To use the Vercel development runtime instead, run `npm run dev:full`; this may 
 
 ### Environment configuration
 
-See [`.env.example`](.env.example) for all supported settings and defaults. Never commit real credentials. Only variables prefixed with `VITE_` are public; keep secrets server-only. Restart development or redeploy after changing environment values.
+See [`.env.example`](.env.example) for supported settings and defaults. Never commit real credentials. Variables prefixed with `VITE_` are exposed to the browser; keep secrets server-only. Restart the development server or redeploy after changing environment values.
 
 | Integration | Variables | Purpose |
 | --- | --- | --- |
@@ -49,7 +49,9 @@ See [`.env.example`](.env.example) for all supported settings and defaults. Neve
 
 Without Redis configuration, local development uses in-memory allowances and votes that reset when the server restarts. Production AI imports are blocked when allowance storage is unavailable. People sharing a public IP share the daily import allowance.
 
-### Checks and build
+### Validation and production build
+
+Run the lint checks, tests, production build, and SEO checks:
 
 ```sh
 npm run lint
@@ -77,7 +79,7 @@ Built with React, Vite, Tailwind CSS, React Router, HTML5 Canvas, and Vercel Nod
 
 ## Deployment and artwork
 
-Deploy to Vercel and configure the required server environment variables there. The production build prerenders public content and generates page metadata, `sitemap.xml`, and `robots.txt`. See the [SEO guide](documentation/SEO.md) for details.
+Deploy to Vercel and configure the required server environment variables in the project settings. The production build prerenders public content and generates page metadata, `sitemap.xml`, and `robots.txt`. See the [SEO guide](documentation/SEO.md) for details.
 
 Wallpaper originals and mascot master folders stay local and are excluded from Git and deployment output. After uploading artwork to Cloudinary, commit the template metadata and `src/assets/cloudinaryManifest.js`. Keep landing-page delivery images, icons, and fonts in Git. Use the [artwork workflow](documentation/skills/schedsnap-artwork/SKILL.md) and [asset inventory](documentation/IMAGE_ASSETS.md) when updating designs.
 
@@ -95,4 +97,4 @@ Wallpaper originals and mascot master folders stay local and are excluded from G
 - [Device showcases](documentation/DEVICE_SHOWCASES.md)
 - [Search visibility](documentation/SEO.md)
 
-Some design notes and audit reports describe earlier versions. For current commands and environment defaults, use `package.json` and `.env.example`.
+Some design notes and audit reports describe earlier versions. For current commands and environment defaults, refer to [`package.json`](package.json) and [`.env.example`](.env.example).
