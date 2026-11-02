@@ -12,9 +12,13 @@ import { templateSchema } from '../shared/templateSchema.js';
 for (const file of ['.env.local', '.env']) if (existsSync(file)) process.loadEnvFile(file);
 const store = createCatalogStore(process.env);
 const catalog = await store.read(true);
+if (catalog.revision === 'seed') throw new Error('Refusing to replace an uninitialized catalog.');
+const onlyIndex = process.argv.indexOf('--only');
+const onlyIds = onlyIndex < 0 ? null : (process.argv[onlyIndex + 1] || '').split(',');
+if (onlyIds?.some(id => !gachiakutaTemplates.some(template => template.id === id))) throw new Error('Unknown Gachiakuta design ID.');
 const existing = new Set(catalog.templates.map(template => template.id));
 const publishedAt = new Date().toISOString();
-const additions = gachiakutaTemplates.filter(template => !existing.has(template.id)).map(template => {
+const additions = gachiakutaTemplates.filter(template => (!onlyIds || onlyIds.includes(template.id)) && !existing.has(template.id)).map(template => {
   const asset = manifest[template.image];
   if (!asset?.url || asset.cloud !== process.env.CLOUDINARY_CLOUD_NAME
     || asset.width !== 1080 || asset.height !== 2400) throw new Error(`Verified mobile upload missing: ${template.id}`);

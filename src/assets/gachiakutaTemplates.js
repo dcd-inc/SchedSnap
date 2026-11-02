@@ -1,4 +1,4 @@
-// Ten generated designs explicitly approved by the user.
+// Generated designs explicitly approved by the user, including the November 2 reference set.
 const designs = [
   [
     "cleaners-in-ochre",
@@ -69,7 +69,17 @@ const designs = [
     "#eeeae1",
     "#252525",
     "Rudo, full body, red eye, salvage, debris, black and white, monochrome, crimson, ink shards, manga"
-  ]
+  ],
+  ['violet-armored-coat', 'Violet Armored Coat', '#181516', '#f3e9dc', 'violet, purple, black, armored coat, swept hair, stitched leather, ribbons, dark, ink, crosshatching'],
+  ['ember-ribbon', 'Ember Ribbon', '#ded2c2', '#302820', 'orange, ember, black hair, orange eyes, ribbons, boots, cream paper, warm, textured manga'],
+  ['violet-dreadlocks', 'Violet Dreadlocks', '#181219', '#f1e7d7', 'purple, violet, dreadlocks, gold hair bands, hood, grin, rings, cream sleeves, dark, hatching'],
+  ['ivory-blue-wanderer', 'Ivory Blue Wanderer', '#cccac5', '#253346', 'ivory, blue, cobalt, gray, pale hair, long coat, tie, wrapped forearms, ink wash'],
+  ['crimson-respirator', 'Crimson Respirator', '#300c10', '#fff0df', 'crimson, red, black, respirator, mask, silver hair, red eyes, hoses, canister, worn tool, industrial'],
+  ['antique-gold-gauntlet', 'Antique Gold Gauntlet', '#18130e', '#f6e9ce', 'gold, olive, black, ivory hat, elderly man, beard, armored glove, gauntlet, purple lining'],
+  ['teal-fur-collar', 'Teal Fur Collar', '#21434b', '#fff0dc', 'teal, petrol blue, gray green hair, cream coat, fur collar, violet quilted sleeves, profile, hardware clips'],
+  ['graffiti-red-eye', 'Graffiti Red Eye', '#d9a04d', '#32271e', 'Rudo, red eye, graphic eye patch, white hair, ochre, yellow, graffiti, collage, stickers, creatures, halftone'],
+  ['crimson-motion', 'Crimson Motion', '#b92125', '#fff0d9', 'Rudo, crimson, red, cream, ochre, charcoal, silver hair, gloved hand, leap, action, motion, ink wash'],
+  ['turquoise-beast', 'Turquoise Beast', '#171b1a', '#f5ead8', 'turquoise, teal, coral, red, ivory, masked fighter, amber eyes, white hair, spiked mantle, fur, claws, crouching']
 ];
 
 export const gachiakutaTemplates = designs.map(([slug, name, background, ink, keywords]) => ({
@@ -78,9 +88,9 @@ export const gachiakutaTemplates = designs.map(([slug, name, background, ink, ke
   collection: 'gachiakuta', family: 'reference-minimal', mobileOnly: true,
   keywords: `Gachiakuta, manga, anime, mobile, wallpaper, ${name}, ${keywords}`,
   background, ink, muted: ink, surface: background, line: `${ink}44`,
-  containerStyle: 'solid', containerShape: 'rounded', containerRadius: 10,
+  containerStyle: 'solid', containerShape: 'pill', containerRadius: 50,
   containerOpacity: 92, containerFill: true, containerBorder: false,
-  particleStyle: 'none', artworkFooter: false, showScheduleTitle: true,
+  particleStyle: 'none', artworkFooter: false, showTitle: true, showScheduleTitle: true,
   fontFamily: 'DM Sans Variable',
   image: `/wallpapers/scenic/gachiakuta-${slug}/mobile.png`,
   deviceImages: { mobile: `/wallpapers/scenic/gachiakuta-${slug}/mobile.png` },

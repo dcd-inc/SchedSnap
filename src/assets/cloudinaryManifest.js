@@ -6922,5 +6922,75 @@ export default {
     "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793531801/schedsnap/wallpapers/scenic/space-white-event-horizon/mobile-079f10879dd6b8c1.png",
     "width": 1080,
     "height": 2400
+  },
+  "/wallpapers/scenic/gachiakuta-ember-ribbon/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/gachiakuta-ember-ribbon/mobile-6a0525302486895a",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793624108/schedsnap/wallpapers/scenic/gachiakuta-ember-ribbon/mobile-6a0525302486895a.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/gachiakuta-antique-gold-gauntlet/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/gachiakuta-antique-gold-gauntlet/mobile-0be1e5545f16ae10",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793624108/schedsnap/wallpapers/scenic/gachiakuta-antique-gold-gauntlet/mobile-0be1e5545f16ae10.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/gachiakuta-graffiti-red-eye/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/gachiakuta-graffiti-red-eye/mobile-2f891ec96a435ca0",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793624110/schedsnap/wallpapers/scenic/gachiakuta-graffiti-red-eye/mobile-2f891ec96a435ca0.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/gachiakuta-crimson-respirator/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/gachiakuta-crimson-respirator/mobile-eaf002cee7e114cc",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793624110/schedsnap/wallpapers/scenic/gachiakuta-crimson-respirator/mobile-eaf002cee7e114cc.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/gachiakuta-teal-fur-collar/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/gachiakuta-teal-fur-collar/mobile-712fb1d85378909b",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793624112/schedsnap/wallpapers/scenic/gachiakuta-teal-fur-collar/mobile-712fb1d85378909b.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/gachiakuta-ivory-blue-wanderer/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/gachiakuta-ivory-blue-wanderer/mobile-76156631c5764385",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793624112/schedsnap/wallpapers/scenic/gachiakuta-ivory-blue-wanderer/mobile-76156631c5764385.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/gachiakuta-crimson-motion/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/gachiakuta-crimson-motion/mobile-7553c63170c9fa81",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793624113/schedsnap/wallpapers/scenic/gachiakuta-crimson-motion/mobile-7553c63170c9fa81.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/gachiakuta-violet-dreadlocks/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/gachiakuta-violet-dreadlocks/mobile-a94cfc0f40618f16",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793624114/schedsnap/wallpapers/scenic/gachiakuta-violet-dreadlocks/mobile-a94cfc0f40618f16.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/gachiakuta-violet-armored-coat/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/gachiakuta-violet-armored-coat/mobile-12022d4d16f4c7f7",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793624114/schedsnap/wallpapers/scenic/gachiakuta-violet-armored-coat/mobile-12022d4d16f4c7f7.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/gachiakuta-turquoise-beast/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/gachiakuta-turquoise-beast/mobile-563cf4030a5602c3",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793624115/schedsnap/wallpapers/scenic/gachiakuta-turquoise-beast/mobile-563cf4030a5602c3.png",
+    "width": 1080,
+    "height": 2400
   }
 };

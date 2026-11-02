@@ -1,0 +1,106 @@
+{
+  "assets": [
+    {
+      "id": "gachiakuta-violet-armored-coat",
+      "path": "public/wallpapers/scenic/gachiakuta-violet-armored-coat/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "width": 1080,
+      "height": 2400,
+      "sha256": "12022d4d16f4c7f746b5590df89c198804eb69718bf34989ae3634eec6f5fc5b",
+      "sourceSha256": "99c1cafd5439d60abf9013b230a58d7e05a0ac121bcfceca168c9a8dcf3c209f"
+    },
+    {
+      "id": "gachiakuta-ember-ribbon",
+      "path": "public/wallpapers/scenic/gachiakuta-ember-ribbon/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "width": 1080,
+      "height": 2400,
+      "sha256": "6a0525302486895a69846d3ca5f578b15868de59ae11a71ec83b18f878ca1e5c",
+      "sourceSha256": "6f62b0a9745ce8c11bf957c3b6c9a2c4d56de639fc5d70b860ad3b8ed287a4a6"
+    },
+    {
+      "id": "gachiakuta-violet-dreadlocks",
+      "path": "public/wallpapers/scenic/gachiakuta-violet-dreadlocks/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "width": 1080,
+      "height": 2400,
+      "sha256": "a94cfc0f40618f16078aa169f3eb799a88e2188aaf40959f33e7ccd43288abb8",
+      "sourceSha256": "ed7247c70217bcf2f107be59c6e504cbb0d5d7a7c137b22b196e48c3338a8d7a"
+    },
+    {
+      "id": "gachiakuta-ivory-blue-wanderer",
+      "path": "public/wallpapers/scenic/gachiakuta-ivory-blue-wanderer/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "width": 1080,
+      "height": 2400,
+      "sha256": "76156631c5764385e273a3a867a74d666aee265c6bc346aa64daad9a95bb0411",
+      "sourceSha256": "48304681faaa6727cba5126611f5cc5202f58e5c8eb26b775af2a50783b1814e"
+    },
+    {
+      "id": "gachiakuta-crimson-respirator",
+      "path": "public/wallpapers/scenic/gachiakuta-crimson-respirator/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "width": 1080,
+      "height": 2400,
+      "sha256": "eaf002cee7e114ccb0ca465088287a05e4d3088e85d86a74a07df500d96ae0f0",
+      "sourceSha256": "20509a2bef278f1b4ac36ef0dfc96d93894c6a32807efd2331eea0c62821af97"
+    },
+    {
+      "id": "gachiakuta-antique-gold-gauntlet",
+      "path": "public/wallpapers/scenic/gachiakuta-antique-gold-gauntlet/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "width": 1080,
+      "height": 2400,
+      "sha256": "0be1e5545f16ae10791e2f9f3c84fab742eb1d6c683edf07f9a5ab169e484b4d",
+      "sourceSha256": "95dbf73f7da995a606a984b5699ee5f187f2245a659229d446b8744b6f7860f5"
+    },
+    {
+      "id": "gachiakuta-teal-fur-collar",
+      "path": "public/wallpapers/scenic/gachiakuta-teal-fur-collar/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "width": 1080,
+      "height": 2400,
+      "sha256": "712fb1d85378909bdb753c9b257c72d8f9d194afdc394091c35daad63e6d57c4",
+      "sourceSha256": "8a10f4abe920ccd79db8e9d0c6ac9d0d8918d1dcc187f4ce2208726eb51089db"
+    },
+    {
+      "id": "gachiakuta-graffiti-red-eye",
+      "path": "public/wallpapers/scenic/gachiakuta-graffiti-red-eye/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "width": 1080,
+      "height": 2400,
+      "sha256": "2f891ec96a435ca0de23d5293b87f1f4458e7948b8e5cebad4c4a2906a4f082a",
+      "sourceSha256": "23e01464984ddb7b9f03fc7637890edd224d469d4a18e655cebf57f5e744c62b"
+    },
+    {
+      "id": "gachiakuta-crimson-motion",
+      "path": "public/wallpapers/scenic/gachiakuta-crimson-motion/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "width": 1080,
+      "height": 2400,
+      "sha256": "7553c63170c9fa81ccd355f4492f308efb6071a7e69d29922c775b32ad6b651d",
+      "sourceSha256": "6c5aa1922b164b7815a4eaeca34e0cc2182489f6e5034d5d817ee1819e42d4cb"
+    },
+    {
+      "id": "gachiakuta-turquoise-beast",
+      "path": "public/wallpapers/scenic/gachiakuta-turquoise-beast/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "width": 1080,
+      "height": 2400,
+      "sha256": "563cf4030a5602c3de7d1e5e553c8ea9920a4f436823b9a256c767f09b4a4d43",
+      "sourceSha256": "da1b72404b121a35d532965cf3964c9fcd85aff9c11bbdd419c7adf248f7d75f"
+    }
+  ],
+  "approval": "User approved all 10 designs for Cloudinary upload, individual keywords, and Gachiakuta catalog publication.",
+  "processing": "Full-image resize to 1080x2400; no crop or repaint."
+}
