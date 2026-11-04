@@ -6992,5 +6992,75 @@ export default {
     "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793624115/schedsnap/wallpapers/scenic/gachiakuta-turquoise-beast/mobile-563cf4030a5602c3.png",
     "width": 1080,
     "height": 2400
+  },
+  "/wallpapers/scenic/capybara-cream-orange-bows/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-cream-orange-bows/mobile-d78133286befb32b",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793793032/schedsnap/wallpapers/scenic/capybara-cream-orange-bows/mobile-d78133286befb32b.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/capybara-duck-cuddle-stars/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-duck-cuddle-stars/mobile-1f5b0d1316dd2e9d",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793793033/schedsnap/wallpapers/scenic/capybara-duck-cuddle-stars/mobile-1f5b0d1316dd2e9d.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/capybara-chocolate-heart-wave/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-chocolate-heart-wave/mobile-20133a31fb10bc46",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793793034/schedsnap/wallpapers/scenic/capybara-chocolate-heart-wave/mobile-20133a31fb10bc46.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/capybara-little-star-border/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-little-star-border/mobile-69bea99a2aa5dab6",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793793034/schedsnap/wallpapers/scenic/capybara-little-star-border/mobile-69bea99a2aa5dab6.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/capybara-orange-hello-ledge/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-orange-hello-ledge/mobile-41304f1d2a952af3",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793793035/schedsnap/wallpapers/scenic/capybara-orange-hello-ledge/mobile-41304f1d2a952af3.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/capybara-rooftop-cloud-gazing/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-rooftop-cloud-gazing/mobile-f20fe052595d2e3c",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793793037/schedsnap/wallpapers/scenic/capybara-rooftop-cloud-gazing/mobile-f20fe052595d2e3c.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/capybara-starry-bottom-peek/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-starry-bottom-peek/mobile-dcffd9c75e6f09e6",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793793038/schedsnap/wallpapers/scenic/capybara-starry-bottom-peek/mobile-dcffd9c75e6f09e6.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/capybara-caramel-corner-peek/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-caramel-corner-peek/mobile-0386f3f2b364b187",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793793038/schedsnap/wallpapers/scenic/capybara-caramel-corner-peek/mobile-0386f3f2b364b187.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/capybara-mocha-head-pattern/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-mocha-head-pattern/mobile-c4bdfb9004b64486",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793793039/schedsnap/wallpapers/scenic/capybara-mocha-head-pattern/mobile-c4bdfb9004b64486.png",
+    "width": 1080,
+    "height": 2400
+  },
+  "/wallpapers/scenic/capybara-blushing-closeup/mobile.png": {
+    "cloud": "djfyq0jyz",
+    "publicId": "schedsnap/wallpapers/scenic/capybara-blushing-closeup/mobile-3cba08b2c5102d21",
+    "url": "https://res.cloudinary.com/djfyq0jyz/image/upload/v1793793044/schedsnap/wallpapers/scenic/capybara-blushing-closeup/mobile-3cba08b2c5102d21.png",
+    "width": 1080,
+    "height": 2400
   }
 };
