@@ -1,5 +1,7 @@
 import useMobileSheetDismiss from '../../lib/useMobileSheetDismiss.js';
 import { useEffect, useMemo, useRef, useState } from 'react';
+import { Link } from 'react-router';
+import { SUBMIT_DESIGN_PATH } from '../../../shared/seo.js';
 import { ArrowRight, ChevronDown, Heart, Plus, X } from 'lucide-react';
 import { deviceResolutions, galleryScheduleFor } from '../../assets/wallpaperPresets.js';
 import useInfiniteGallery from '../../lib/useInfiniteGallery.js';
@@ -67,6 +69,13 @@ export default function TemplateGallery({ onUpload, selectedId, settings = {}, s
         }
       }} />
     </div>
+    {activeCategory === 'community' && <section className="gallery-contribute" aria-labelledby="gallery-contribute-title">
+      <div>
+        <h2 id="gallery-contribute-title">Get your design featured</h2>
+        <p>Share a wallpaper you made.</p>
+      </div>
+      <Link className="button-primary" to={SUBMIT_DESIGN_PATH}>Share design <ArrowRight size={16} aria-hidden="true" /></Link>
+    </section>}
     {downloadError && <div className="gallery-like-error" role="alert"><span>{downloadError}</span><button type="button" className="text-link" onClick={refreshDownloads}>Retry</button></div>}
     {likeError && <div className="gallery-like-error" role="alert"><span>{likeError}</span><button type="button" className="text-link" onClick={() => refreshLikes(true)} disabled={!!pending}>Retry</button></div>}
     <div id="template-gallery" role="group" aria-label={`${activeCategoryName} gallery`} aria-busy={loading} className={`template-grid template-grid-${device}`}>
@@ -123,17 +132,19 @@ export default function TemplateGallery({ onUpload, selectedId, settings = {}, s
         <div className="template-card-caption">
           <div className="template-card-details">
             <button type="button" className="template-card-name" aria-haspopup="dialog" onClick={openPreview}>{item.name}</button>
+            {item.artistCredit && <p className="template-downloads break-words">By {item.artistCredit}</p>}
+            {item.collection === 'community' && item.aiGenerated === true && <span className="template-ai-label">AI-generated</span>}
             <p className="template-downloads">{downloads[item.id] === undefined ? 'Downloads unavailable' : `${downloads[item.id].toLocaleString()} ${downloads[item.id] === 1 ? 'download' : 'downloads'}`}</p>
           </div>
           <ClickSpark sparkColor="#be123c" sparkSize={14} sparkRadius={30} sparkCount={8} duration={500} disabled={!vote} style={{ width: 'auto', height: 'auto', flexShrink: 0 }}>
           <button type="button" className="template-heart" aria-pressed={vote?.liked || false} aria-label={`${vote?.liked ? 'Unlike' : 'Like'} ${item.name}${vote ? `, ${vote.count} ${vote.count === 1 ? 'like' : 'likes'}` : ', likes unavailable'}`} disabled={!vote} onClick={() => toggleLike(item.id)}>
-            <Heart size={20} fill={vote?.liked ? 'currentColor' : 'none'} aria-hidden="true" /><span aria-hidden="true">{vote ? vote.count.toLocaleString() : '—'}</span>
+            <Heart size={20} fill={vote?.liked ? 'currentColor' : 'none'} aria-hidden="true" /><span aria-hidden="true">{vote ? vote.count.toLocaleString() : 'â€”'}</span>
           </button>
           </ClickSpark>
         </div>
       </div>; })}
     </div>
-    {loading && <p role="status" className="sr-only">Loading designs…</p>}
+    {loading && <p role="status" className="sr-only">Loading designsâ€¦</p>}
     {!loading && error && <p role="alert">{error}</p>}
     {!loading && visibleTemplates.length > 0 && hasMore && <div ref={sentinel} className="gallery-load-more"><button type="button" className="button-secondary" onClick={loadMore}>Load more designs</button></div>}
     {preview && <DesignPreview template={preview} schedule={schedule} resolution={designResolution(preview)} onClose={() => setPreview(null)} onSelect={() => onSelect(preview.id)} onLayoutChange={layout => { const current = { ...settings[preview.id] }; delete current.fontScale; setPreview({ ...customizeWallpaperTemplate(galleryPreviewTemplate(wallpaperTemplates.find(item => item.id === preview.id)), { ...current, scheduleLayout: layout, containerStyle: previewStyle }, device), scheduleTitle, device }); onLayoutChange(layout); }} />}
@@ -177,7 +188,7 @@ export function DesignPreview({ template, schedule, resolution, onClose, onSelec
     };
   }, []);
   return <dialog ref={dialog} className="design-preview-dialog" data-custom-background={template.customBackground || undefined} data-device={resolution.id} data-orientation={resolution.width > resolution.height ? 'landscape' : 'portrait'} style={{ '--design-preview-ratio': resolution.width / resolution.height }} aria-labelledby="design-preview-title" onCancel={onClose} onClick={(event) => { if (event.target === event.currentTarget) onClose(); }}>
-    <header><h2 id="design-preview-title">{template.name}</h2><button type="button" className="template-modal-control" aria-label="Close design preview" onClick={onClose}><X size={20} aria-hidden="true" /></button></header>
+    <header><div className="min-w-0"><h2 id="design-preview-title">{template.name}</h2>{template.artistCredit && <p className="template-downloads break-words">By {template.artistCredit}</p>}{template.collection === 'community' && template.aiGenerated === true && <span className="template-ai-label">AI-generated</span>}</div><button type="button" className="template-modal-control" aria-label="Close design preview" onClick={onClose}><X size={20} aria-hidden="true" /></button></header>
     <div className="design-preview-body"><button type="button" className="design-preview-enlarge" aria-label={`Enlarge ${template.name} preview`} aria-haspopup="dialog" onClick={() => setEnlarged(true)}><WallpaperCanvas schedule={schedule?.classes.length ? schedule : previewSchedule(template)} template={template} resolution={resolution} className="block h-auto w-full" label={`${template.name} with ${schedule?.classes.length ? 'your' : 'sample'} classes`} /></button></div>
     <footer>
       <details ref={layoutPicker} className="device-picker preview-layout-picker">

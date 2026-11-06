@@ -10,8 +10,7 @@ export async function inspectImage(file) {
   return bitmap;
 }
 
-export async function prepareImage(file, crop) {
-  const bitmap = await inspectImage(file);
+export async function prepareImage(file, crop) {  const bitmap = await inspectImage(file);
   try {
     if (bitmap.width * bitmap.height > 40_000_000) throw new Error('This image is too large to process. Try a smaller copy.');
     const region = crop ?? { x: 0, y: 0, width: 1, height: 1 };
@@ -44,5 +43,26 @@ export async function prepareImage(file, crop) {
       return { image: preview.split(',')[1], mimeType: blob.type, preview, name: file.name };
     }
     throw new Error('This image is still too large after compression. Try a smaller copy.');
+  } finally { bitmap.close(); }
+}
+
+export async function prepareAvatar(file) {
+  const bitmap = await inspectImage(file);
+  try {
+    const side = Math.min(bitmap.width, bitmap.height);
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = 160;
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, 160, 160);
+    ctx.drawImage(bitmap, (bitmap.width - side) / 2, (bitmap.height - side) / 2, side, side, 0, 0, 160, 160);
+    const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/jpeg', 0.85));
+    if (!blob) throw new Error('This image could not be prepared. Try another image.');
+    return await new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = () => reject(new Error('This image could not be prepared. Try another image.'));
+      reader.readAsDataURL(blob);
+    });
   } finally { bitmap.close(); }
 }

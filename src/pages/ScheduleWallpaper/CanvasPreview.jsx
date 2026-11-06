@@ -6,7 +6,7 @@ import { downloadBlob } from '../../utils/downloadBlob.js';
 import WallpaperViewer from './WallpaperViewer.jsx';
 import Toast from '../../components/Toast.jsx';
 
-export function WallpaperCanvas({ schedule, template, resolution, className = '', label = 'Schedule wallpaper preview', onLayout, lazy = false }) {
+export function WallpaperCanvas({ schedule, template, resolution, className = '', label = 'Schedule wallpaper preview', onLayout, lazy = false, showLoadingSkeleton = true }) {
   const canvas = useRef(null);
   const [failure, setFailure] = useState('');
   const [readyKey, setReadyKey] = useState('');
@@ -58,7 +58,7 @@ export function WallpaperCanvas({ schedule, template, resolution, className = ''
     } else render();
     return () => { ++version; observer?.disconnect(); if (lazy) { node.width = 1; node.height = 1; } };
   }, [drawSchedule, drawTemplate, drawResolution, renderKey, onLayout, lazy]);
-  return <><canvas ref={canvas} width={lazy ? 1 : renderResolution.width} height={lazy ? 1 : renderResolution.height} role="img" aria-label={pending ? `Loading ${label}` : label} aria-busy={pending} className={`${className} ${pending && nearby ? 'wallpaper-skeleton' : ''}`} style={{ backgroundColor: template.background, aspectRatio: `${renderResolution.width} / ${renderResolution.height}` }} />{!pending && failure && <span role="alert" className="text-xs text-muted">{failure}</span>}</>;
+  return <><canvas ref={canvas} width={lazy ? 1 : renderResolution.width} height={lazy ? 1 : renderResolution.height} role="img" aria-label={pending ? `Loading ${label}` : label} aria-busy={pending} className={`${className} ${showLoadingSkeleton && pending && nearby ? 'wallpaper-skeleton' : ''}`} style={{ backgroundColor: template.background, aspectRatio: `${renderResolution.width} / ${renderResolution.height}` }} />{!pending && failure && <span role="alert" className="text-xs text-muted">{failure}</span>}</>;
 }
 
 export default function CanvasPreview({ schedule, template, resolution, confirmed, issues, onChangeTemplate }) {

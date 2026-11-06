@@ -9,12 +9,12 @@ export default function WallpaperSearch({ value, onChange }) {
   return <WallpaperSearchField value={value} onChange={onChange} placeholder={placeholder} iconLeft />;
 }
 
-export function WallpaperSearchField({ value, onChange, placeholder, label = 'Search designs or categories', iconLeft = false }) {
+export function WallpaperSearchField({ value, onChange, placeholder, label = 'Search designs or categories', iconLeft = false, showPopular = true }) {
   const [open, setOpen] = useState(false);
   const input = useRef(null);
   const suggestionsId = useId();
   const suggestions = suggestedSearches.filter(term => !value.trim() || term.toLowerCase().includes(value.trim().toLowerCase()));
-  const showSuggestions = open && suggestions.length > 0;
+  const showSuggestions = showPopular && open && suggestions.length > 0;
   return <div className={`wallpaper-search-wrap${iconLeft ? ' wallpaper-search-left' : ''}`} role="search" onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false); }} onKeyDown={event => { if (event.key === 'Escape') { event.preventDefault(); event.stopPropagation(); input.current?.focus(); setOpen(false); } }}>
     <input
       ref={input}

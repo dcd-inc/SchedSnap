@@ -1,3 +1,4 @@
+import { SUBMIT_DESIGN_PATH } from '../../shared/seo.js';
 import { getCookieConsent, subscribeCookieConsent } from './cookieConsent.js';
 
 const token = import.meta.env?.VITE_POSTHOG_TOKEN;
@@ -53,7 +54,7 @@ async function applyCookieConsent() {
         }
       },
       before_send: (event) => {
-        if (getCookieConsent() !== 'granted') return null;
+        if (getCookieConsent() !== 'granted' || window.location.pathname.replace(/\/$/, '') === SUBMIT_DESIGN_PATH) return null;
         if (event) event.properties = { ...event.properties, ...siteProperties };
         return event;
       },

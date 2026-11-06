@@ -1,6 +1,7 @@
 
 export const designCollections = [
   { id: 'all', name: 'All designs' },
+  { id: 'community', name: 'Community' },
   { id: 'gachiakuta', name: 'Gachiakuta', searchTerms: ['Rudo', 'Enjin', 'Zanka', 'Riyo', 'Cleaners'] },
   { id: 'transformers', name: 'Transformers', searchTerms: ['Autobots', 'Decepticons', 'Cybertron'] },
   { id: 'wuthering-waves', name: 'Wuthering Waves', searchTerms: ['WuWa', 'Wuthering'] },

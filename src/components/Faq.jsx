@@ -1,5 +1,4 @@
 import { ChevronDown } from 'lucide-react';
-import { Link } from 'react-router';
 import FeedbackDialog from './FeedbackDialog.jsx';
 
 const questions = [
@@ -30,7 +29,6 @@ export default function Faq() {
     <div className="faq-intro">
       <h2 id="faq-heading">Frequently asked questions</h2>
       <p>What to know before making your class schedule wallpaper.</p>
-      <Link to="/guides/class-schedule-wallpaper" className="faq-guide-link underline underline-offset-4">How to make a class schedule wallpaper</Link>
     </div>
     <div className="faq-questions">
       {questions.map(({ question, answer }) => <details key={question} name="landing-faq">

@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFile, stat } from 'node:fs/promises';
 import { resolve } from 'node:path';
-import { CREATOR_PATH, SEO_PAGES, SITE_URL, SOCIAL_IMAGE_PATH } from '../shared/seo.js';
+import { COMMUNITY_GUIDE_PATH, CREATOR_PATH, SEO_PAGES, SITE_URL, SOCIAL_IMAGE_PATH } from '../shared/seo.js';
 
 for (const path of Object.keys(SEO_PAGES)) {
   const file = path === '/' ? 'index.html' : `${path.slice(1)}/index.html`;
@@ -24,9 +24,8 @@ for (const path of Object.keys(SEO_PAGES)) {
     assert.ok(html.includes('Your schedule.'));
     assert.ok(html.includes('href="/services/schedule-wallpaper"'));
     assert.ok(html.includes('How it works'));
-  }
-  if (path === '/') {
-    assert.ok(html.includes('href="/guides/class-schedule-wallpaper"'), path);
+    assert.ok(html.includes(`href="${COMMUNITY_GUIDE_PATH}"`), path);
+    assert.ok(!html.includes('href="/guides/class-schedule-wallpaper"'), path);
   }
   if (path === CREATOR_PATH) {
     assert.ok(!html.includes('aria-label="About the wallpaper creator"'));
@@ -50,6 +49,7 @@ assert.equal((sitemap.match(/<loc>/g) || []).length, Object.keys(SEO_PAGES).leng
 assert.ok(!sitemap.includes('/admin'));
 for (const [, url] of sitemap.matchAll(/<loc>(.*?)<\/loc>/g)) assert.ok(!url.includes('?'));
 assert.ok(!sitemap.includes('/wallpapers/'));
+assert.ok(!sitemap.includes('/guides/class-schedule-wallpaper'));
 for (const [path, page] of Object.entries(SEO_PAGES)) {
   if (page.lastModified) {
     assert.match(page.lastModified, /^\d{4}-\d{2}-\d{2}$/);

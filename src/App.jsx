@@ -8,17 +8,20 @@ import InAppBrowserBanner from './components/InAppBrowserBanner.jsx';
 import { CatalogProvider } from './lib/catalog.jsx';
 import PageSeo from './components/PageSeo.jsx';
 import CookieBanner from './components/CookieBanner.jsx';
-import AdminSignIn from './components/AdminSignIn.jsx';
+import AccountLoading from './components/AccountLoading.jsx';
 import WallpaperLoading from './components/WallpaperLoading.jsx';
+import { COMMUNITY_GUIDE_PATH, SUBMIT_DESIGN_PATH } from '../shared/seo.js';
 
+const Creator = lazy(() => import('./pages/Creator/Creator.jsx'));
 const ScheduleWallpaper = lazy(() => import('./pages/ScheduleWallpaper/Index.jsx'));
 const Admin = lazy(() => import('./pages/Admin.jsx'));
 const Legal = lazy(() => import('./pages/Legal.jsx'));
-const ScheduleGuide = lazy(() => import('./pages/ScheduleGuide.jsx'));
+const CommunityDesignGuide = lazy(() => import('./pages/CommunityDesignGuide.jsx'));
 
 export default function App() {
   const { pathname, hash } = useLocation();
   const isAdmin = pathname === '/admin' || pathname.startsWith('/admin/');
+  const isCreatorPortal = pathname.replace(/\/+$/, '') === SUBMIT_DESIGN_PATH;
 
   useEffect(() => {
     const section = hash ? document.getElementById(hash.slice(1)) : null;
@@ -35,11 +38,12 @@ export default function App() {
     <div className="flex min-h-dvh flex-col">
       <a href="#main" className="skip-link">Skip to content</a>
       {!isAdmin && <InAppBrowserBanner />}
-      {!isAdmin && <Navbar />}
+      {!isAdmin && !isCreatorPortal && <Navbar />}
       <main id="main" className="flex-1" tabIndex={-1}>
-        <Suspense fallback={isAdmin ? <AdminSignIn checking /> : pathname.startsWith('/services/schedule-wallpaper') ? <WallpaperLoading /> : <p className="page-wrap py-20" role="status">Loading page…</p>}>
+        <Suspense fallback={isAdmin || isCreatorPortal ? <AccountLoading /> : pathname.startsWith('/services/schedule-wallpaper') ? <WallpaperLoading /> : <p className="page-wrap py-20" role="status">Loading page…</p>}>
           <Routes>
-            <Route path="/guides/class-schedule-wallpaper" element={<ScheduleGuide />} />
+            <Route path={COMMUNITY_GUIDE_PATH} element={<CommunityDesignGuide />} />
+            <Route path={SUBMIT_DESIGN_PATH} element={<Creator />} />
             <Route path="/admin/*" element={<Admin />} />
             <Route path="/terms" element={<Legal kind="terms" />} />
             <Route path="/privacy" element={<Legal kind="privacy" />} />
@@ -57,8 +61,8 @@ export default function App() {
           </Routes>
         </Suspense>
       </main>
-      {!isAdmin && !pathname.startsWith('/services/schedule-wallpaper') && <Footer />}
-      {!isAdmin && pathname !== '/cookies' && <CookieBanner />}
+      {!isAdmin && !isCreatorPortal && !pathname.startsWith('/services/schedule-wallpaper') && <Footer />}
+      {!isAdmin && !isCreatorPortal && pathname !== '/cookies' && <CookieBanner />}
     </div>
   </CatalogProvider>);
 }

@@ -1,8 +1,11 @@
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from 'react';
 import { Link, useLocation } from 'react-router';
+import { ChevronDown, Images, LogOut } from 'lucide-react';
 import BrandMark from './BrandMark.jsx';
 import MakerBanner from './MakerBanner.jsx';
 import SocialLinks from './SocialLinks.jsx';
+import { SUBMIT_DESIGN_PATH } from '../../shared/seo.js';
+import CreatorAvatar from '../pages/Creator/CreatorAvatar.jsx';
 
 function subscribeToScroll(onChange) {
   window.addEventListener('scroll', onChange, { passive: true });
@@ -29,9 +32,67 @@ function scrollToLandingTarget(id) {
 }
 
 export default function Navbar() {
-  const isHome = useLocation().pathname === '/';
+  const { pathname } = useLocation();
+  const isHome = pathname === '/';
   const scrolled = useSyncExternalStore(subscribeToScroll, hasScrolled, () => false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [creatorAccount, setCreatorAccount] = useState(null);
+  const [creatorAvatar, setCreatorAvatar] = useState(null);
+  const [signingOut, setSigningOut] = useState(false);
+  const [signOutError, setSignOutError] = useState('');
+  const profile = useRef(null);
+  useEffect(() => {
+    let active = true;
+    let subscription;
+    import('../lib/creatorAuth.js').then(({ googleAvatarUrl, supabase }) => {
+      if (!active || !supabase) return;
+      subscription = supabase.auth.onAuthStateChange((_event, session) => {
+        if (!session) setCreatorAvatar(null);
+        setCreatorAccount(session ? { auth: supabase.auth, id: session.user.id, token: session.access_token, photo: googleAvatarUrl(session.user) } : null);
+      }).data.subscription;
+    }).catch(() => {});
+    return () => { active = false; subscription?.unsubscribe(); };
+  }, []);
+
+  const creatorId = creatorAccount?.id;
+  const creatorToken = creatorAccount?.token;
+  const loadedCreatorAvatar = creatorAvatar?.id === creatorId ? creatorAvatar : null;
+  useEffect(() => {
+    if (!creatorId || !creatorToken) return;
+    const controller = new AbortController();
+    fetch('/api/creator-submissions', {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${creatorToken}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action: 'profile' }),
+      signal: controller.signal,
+    }).then(async response => {
+      if (!response.ok) throw new Error('Could not load creator profile.');
+      const { avatar } = await response.json();
+      if (!controller.signal.aborted) setCreatorAvatar({ id: creatorId, avatar });
+    }).catch(() => {
+      if (!controller.signal.aborted) setCreatorAvatar(current => current?.id === creatorId ? current : { id: creatorId, failed: true });
+    });
+    return () => controller.abort();
+  }, [creatorId, creatorToken]);
+
+  useEffect(() => {
+    if (!creatorAccount) return;
+    const dismiss = event => {
+      if (profile.current?.open && !profile.current.contains(event.target)) profile.current.open = false;
+    };
+    document.addEventListener('pointerdown', dismiss);
+    return () => document.removeEventListener('pointerdown', dismiss);
+  }, [creatorAccount]);
+
+  async function signOut() {
+    setSigningOut(true);
+    setSignOutError('');
+    try {
+      const { error } = await creatorAccount.auth.signOut({ scope: 'local' });
+      if (error) throw error;
+    } catch { setSignOutError('Could not sign out. Try again.'); }
+    finally { setSigningOut(false); }
+  }
   const menuRef = useRef(null);
   const toggleRef = useRef(null);
   const pendingTargetRef = useRef(null);
@@ -87,6 +148,25 @@ export default function Navbar() {
         <nav className="landing-nav" aria-label="Main navigation">
           {isHome ? sectionLinks : <Link to="/">Home</Link>}
         </nav>
+        {creatorAccount && <div className="site-account">
+          <details ref={profile} className="site-profile" onBlur={event => {
+            if (event.relatedTarget && !event.currentTarget.contains(event.relatedTarget)) event.currentTarget.open = false;
+          }} onKeyDown={event => {
+            if (event.key !== 'Escape' || !event.currentTarget.open) return;
+            event.currentTarget.open = false;
+            event.currentTarget.querySelector('summary')?.focus();
+          }}>
+            <summary aria-label="Creator profile" aria-busy={!loadedCreatorAvatar}>
+              <CreatorAvatar loading={!loadedCreatorAvatar} avatar={loadedCreatorAvatar?.avatar} googlePhoto={loadedCreatorAvatar?.failed ? null : creatorAccount.photo} />
+              <ChevronDown size={14} aria-hidden="true" />
+            </summary>
+            <div className="site-profile-menu">
+              <Link to={SUBMIT_DESIGN_PATH}><Images size={16} aria-hidden="true" />My designs</Link>
+              <button type="button" onClick={signOut} disabled={signingOut}><LogOut size={16} aria-hidden="true" />{signingOut ? 'Signing out…' : 'Sign out'}</button>
+              {signOutError && <p role="alert">{signOutError}</p>}
+            </div>
+          </details>
+        </div>}
         <div className="mobile-navigation" ref={menuRef} onBlur={event => {
           if (event.relatedTarget && !event.currentTarget.contains(event.relatedTarget)) setMenuOpen(false);
         }}>

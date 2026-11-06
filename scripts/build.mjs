@@ -3,7 +3,7 @@ import { dirname, relative, resolve, sep } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { build } from 'vite';
 import react from '@vitejs/plugin-react';
-import { CREATOR_PATH, SEO_PAGES, SITE_URL } from '../shared/seo.js';
+import { CREATOR_PATH, SEO_PAGES, SITE_URL, SUBMIT_DESIGN_PATH } from '../shared/seo.js';
 import { replaceSeoHead } from './seo-html.mjs';
 import { isPublicDeploymentAsset } from './public-assets.mjs';
 
@@ -47,9 +47,8 @@ try {
     if (path === '/') {
       html = html.replace('<meta name="theme-color" content="#ffffff" />', '<meta name="theme-color" content="#ffffff" />\n    <link rel="preload" as="image" type="image/avif" imagesrcset="/images/hero/hero-phones-stacked-640.avif 640w, /images/hero/hero-phones-stacked-768.avif 768w, /images/hero/hero-phones-stacked-960.avif 960w, /images/hero/hero-phones-stacked-1448.avif 1448w" imagesizes="(max-width: 800px) 100vw, (max-width: 1100px) 60vw, 640px" fetchpriority="high" />');
     }
-    if (path === '/terms' || path === '/privacy' || path === '/cookies' || path === '/guides/class-schedule-wallpaper') {
-      const entry = path.startsWith('/guides/') ? 'src/pages/ScheduleGuide.jsx' : 'src/pages/Legal.jsx';
-      const css = manifest[entry]?.css || [];
+    if (path === '/terms' || path === '/privacy' || path === '/cookies') {
+      const css = manifest['src/pages/Legal.jsx']?.css || [];
       html = html.replace('</head>', () => `${css.map(file => `<link rel="stylesheet" href="/${file}" />`).join('\n')}\n</head>`);
     }
     await mkdir(dirname(target), { recursive: true });
@@ -58,6 +57,7 @@ try {
   // Editor and admin routes must never fall back to the homepage's canonical/content.
   await writeFile(resolve(output, 'app.html'), prepareCreator(replaceSeoHead(shell, `${CREATOR_PATH}/editor`)));
   await writeFile(resolve(output, 'admin.html'), replaceSeoHead(shell, '/admin'));
+  await writeFile(resolve(output, 'submit-design.html'), replaceSeoHead(shell, SUBMIT_DESIGN_PATH));
   const urls = Object.entries(SEO_PAGES).map(([path, page]) => `  <url><loc>${SITE_URL}${path}</loc>${page.lastModified ? `<lastmod>${page.lastModified}</lastmod>` : ''}</url>`).join('\n');
   await writeFile(resolve(output, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`);
   await writeFile(resolve(output, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`);

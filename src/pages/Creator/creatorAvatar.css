@@ -1,0 +1,12 @@
+.creator-avatar { position: relative; display: inline-grid; place-items: center; flex: none; width: 32px; height: 32px; overflow: hidden; border-radius: 50%; color: var(--color-ink); background: var(--color-soft); }
+.creator-avatar img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.creator-avatar-skeleton { position: absolute; inset: 0; }
+.creator-avatar[data-avatar="cat"] { background: #f9e8dc; }
+.creator-avatar[data-avatar="dog"] { background: #e9e0d8; }
+.creator-avatar[data-avatar="rabbit"] { background: #f7e2ec; }
+.creator-avatar[data-avatar="bird"] { background: #efe8f9; }
+.creator-avatar[data-avatar="fish"] { background: #dceef6; }
+.creator-avatar[data-avatar="turtle"] { background: #e2efe4; }
+.creator-avatar[data-avatar="custom"] { background: var(--color-soft); }
+:is(.creator-topbar .creator-account, .site-profile) summary { position: relative; display: grid; place-items: center; width: 44px; min-height: 44px; padding: 0; border-radius: 50%; }
+:is(.creator-topbar .creator-account, .site-profile) summary > svg { position: absolute; right: 2px; bottom: 3px; box-sizing: content-box; width: 11px; height: 11px; border: 2px solid var(--color-paper); border-radius: 50%; background: var(--color-soft); }
