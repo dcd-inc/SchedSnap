@@ -1,0 +1,348 @@
+{
+  "assets": [
+    {
+      "path": "public/wallpapers/scenic/space-starlight-shaka/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "010cc0353a7d64e2cd4999476c3fa09b64d5a29cb43cfc046e903b8e51b2d928"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-cosmic-doodle-jam/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "e9d03dec43e6f2a2ad535aa0055a586a2ffe29ba000b4e6bbbe35434fffe701d"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-saturn-explorer/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "97d29cc666f8edbae9aa124493bd49132eebb8617a106baefd4b413bd557982c"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-monster-orbit-border/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "8bd2742e1ed612b5b592c535105063dd7abd70689e0b45c6c01ae34273ab5257"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-moon-hugger/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "9656543bfb78151fc7c757547240d60a607a60beb73a7f952f0533faa21fb451"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-midnight-planet-sketches/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "7a47a2d05c31a630daf2a2e150713f3277fb25ecb4075ebf9e8d681f6de8fd2b"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-pastel-cosmic-parade/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "4598948b9d463558653d7706bc5c1ccf9bf0cb7e126da957d27cb41ccadb79aa"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-blue-planet-orbits/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "cd7d39ddd7eb356107a2665d95b6bb173706a4212fca637841be44bd16014cf0"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-silver-saturn-doodles/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "62b80378d6854e8be17aa1bdaa761a379e17099ec71813efbf4089d5679fc076"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-lime-alien-crowd/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "33ccba19393eff490d54dc9fd46bb7bcd9514765b13c35636527ec32b290eaa6"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-pastel-space-drift/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "a5f8107d7821112387d3e63676aeef3608b69c7b0682ae4680fcf0ecf0a98a44"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-galactic-chalkboard/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "e0ab738dc0a09455e641b8a809c7b828a6d277c8e63995f59e58b1a80d9da551"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-pencil-solar-system/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "04f11f4025c2bea7685aec4c0bab5db8ec74a9c517182f322d15ecb30c6709aa"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-tiny-planet-night/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "9d223ea83213ce61e6ca707d638b5548a3255672230071985800e82927a5da01"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-looping-space-adventure/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "6ddd5b9bd6f3f9e6d699c95d53fa996cc57b7e91d8b9cf2c933d40acad141ecc"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-planet-alignment/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "f0c0caf9bb4684c68771a9a31590c6aef59cbdac8c3bbcd2fd94e47ca9863ef2"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-lunar-archive/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "bfb2b065349398192e60377bc98611e099f756465d79eb3f9b8b3d6e78d33ae7"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-antique-moon-atlas/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "b5e3749537e9449ae83b834b956842e3293715cd8deb7252e2c9aa8388c78b91"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-midnight-blue-nebula/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "d0c5d5ec18df1092f377fc06d3af4f59603dc680f75cecc4efca21ba704c7e19"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-astronaut-equations/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "4a45fde9c18451fcccfec47e49fba09aa779faec259edb287b4f968012076f46"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-earth-at-twilight/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "8332fd6f9c22e9920bf3bc06381f24b896289db0e6c2e270cd2c69a5e689cf65"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-teal-alien-signals/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "b048ddfdaa3cc46ba5dfec16e235cf7b1fff7b978161fdfd6d99b5186298f6cf"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-little-green-visitors/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "741aab3da1285fd596e2040a88fe7fc8f9e6d1834256a9b5e9e6ba09ccab5924"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-celestial-astronaut-engraving/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "01f11766c210182289679ed9fec2a1b563f899feed0add9ad0a099e163a70a91"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-golden-celestial-map/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "def2d8231c5b2823a71354669f91b1f90ba4e0097ec2e045fbb595c25d51c3b7"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-blue-sky-space-notes/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "adbf32d5b0206fa350c195a08a14ff6b53f4d91e226d1f9c0cf7e580570e45f6"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-white-event-horizon/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "079f10879dd6b8c14bb82ce8838fda854e6d0440a0ac081d19793bb58128e972"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-coral-skull-explorer/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "8f69f0e36e43ba07f425b307125f722fbcb7bb1df97f9dc20bb6583b6217fa5a"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-magenta-galaxy-voyage/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "ea8947b9471478a7808ed71277b1a1811479793ee24df20f3b77a2216af7e97c"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-silver-starry-night/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "d2b297641765b43caf6ab7de72acef08f8b32adb89a3bf5816c1c9b4c7781ec6"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-rainbow-planet-outlines/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "2f62e935f06dfb55321ca0296a27019b6e4f487970f6b8cee2db4741eba41037"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-amber-rocket-sketches/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "aeb6fa05d1b0d35556b940294741a465611dc502ba7983e9f3ddbffa2eda4ba1"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-quiet-cosmic-dust/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "fe5688a959a71163c81cdcf4ce056a009e18d46f15578d5cfccca2bbdf735330"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-deep-starfield/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "836c64b49581442be0dbd8ac328efb4a4a1a0a11dca2bc532a51be2ef4a02aa6"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-golden-singularity/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "62b05a3e94bc698971aa9dacae0088b6a2ffc0786c96e81d553395252591878e"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-marbled-lunar-edge/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "579e489294a4157f95313fe6618bcb52862e454d7ff8be56840ee5bd9b92c2a1"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-silent-skull-voyager/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "2652f13971ae90dab0dd70cbe2a929cd6b99e1e73276b07afe43676975c99727"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-orbital-dot-waves/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "381f825065a07594e0bb76329b98ecce2de32320efc0fbb16c1000ffc0ea9ece"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-snoopy-moonwatch/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "3a574b26da2847b1a4632c2a02c8f2420f41c8676e0566f98db9c10a5f862588"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-minimal-orbit-lines/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "ab3881352eda7931565133f20eb26f722fc5c359b99a59471eb81d1822d75ca3"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-skull-space-reverie/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "9c515a62c91956a3b52addc4335519a265b3716f4026494e4e060058d9e7c1aa"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-chalk-planet-scatter/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "8618d350cf0f7f34e70b46f1c00b9c0f3c1d652aa7fae17af5c23b98f403a4ff"
+    },
+    {
+      "path": "public/wallpapers/scenic/space-distant-black-hole/mobile.png",
+      "width": 1080,
+      "height": 2400,
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "0a55d83ee1d4e37ebe350df662f990aeaccf0e66ed4be0b6f7be2d63f17bc212"
+    }
+  ]
+}
