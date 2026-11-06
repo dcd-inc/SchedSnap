@@ -1,0 +1,64 @@
+{
+  "assets": [
+    {
+      "path": "public/wallpapers/scenic/capybara-rooftop-cloud-gazing/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "f20fe052595d2e3c539250217a40129c147ed84734b9e80dfb12e85693d57865"
+    },
+    {
+      "path": "public/wallpapers/scenic/capybara-cream-orange-bows/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "d78133286befb32b2fdfe29030fdb5e246046d6123808f81afe4385627e5236b"
+    },
+    {
+      "path": "public/wallpapers/scenic/capybara-duck-cuddle-stars/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "1f5b0d1316dd2e9d1b5a6b0e3bffce6f8d0c408d88eafcd07af1c6bbdbd84202"
+    },
+    {
+      "path": "public/wallpapers/scenic/capybara-mocha-head-pattern/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "c4bdfb9004b64486fbac66ffda9ab610954656dd3c1d61e20a9050daa0f75313"
+    },
+    {
+      "path": "public/wallpapers/scenic/capybara-blushing-closeup/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "3cba08b2c5102d21bfd3324a14b0558212d516ab7f4b5ca673e217bb6b8f559e"
+    },
+    {
+      "path": "public/wallpapers/scenic/capybara-caramel-corner-peek/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "0386f3f2b364b18743b31559805080c948221264cfebe688b74ca7897f0bbd0a"
+    },
+    {
+      "path": "public/wallpapers/scenic/capybara-little-star-border/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "69bea99a2aa5dab6c5aa9d4f1f0b88d37048ff7aa16d25b11d9a7dd4b3274149"
+    },
+    {
+      "path": "public/wallpapers/scenic/capybara-starry-bottom-peek/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "dcffd9c75e6f09e6292f287e2f3e51d88ef08defa1da645348c6860d946005fb"
+    },
+    {
+      "path": "public/wallpapers/scenic/capybara-chocolate-heart-wave/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "20133a31fb10bc4678fb0e5ef64d8094e20b47601e10b7cccb3cd640339e73dd"
+    },
+    {
+      "path": "public/wallpapers/scenic/capybara-orange-hello-ledge/mobile.png",
+      "dimensionsValid": true,
+      "opaque": true,
+      "sha256": "41304f1d2a952af33c24ed61b5d893b8e7cef795979d9ce463089f7934d518f5"
+    }
+  ]
+}
