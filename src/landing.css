@@ -41,15 +41,16 @@
   .landing-how-it-works { position: relative; padding-block: clamp(40px, 5vw, 64px) clamp(48px, 6vw, 80px); background: var(--color-paper); scroll-margin-top: 100px; }
   .landing-how-it-works::before { content: ''; position: absolute; inset-inline: 0; bottom: 100%; height: clamp(24px, 3vw, 40px); background: var(--color-paper); backdrop-filter: blur(6px); -webkit-mask-image: linear-gradient(to bottom, transparent, #000); mask-image: linear-gradient(to bottom, transparent, #000); pointer-events: none; }
   .how-it-works-heading { text-align: center; }
-  .how-it-works-heading h2 { font-size: clamp(1.75rem, 3vw, 2.25rem); font-weight: 600; line-height: 1.15; letter-spacing: -0.03em; text-wrap: balance; }
+  .how-it-works-heading :is(h1, h2) { font-size: clamp(1.75rem, 3vw, 2.25rem); font-weight: 600; line-height: 1.15; letter-spacing: -0.03em; text-wrap: balance; }
   .how-it-works-heading p { margin-top: 12px; font-size: 16px; line-height: 1.6; color: #5b5b55; text-wrap: balance; }
   .how-it-works-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(24px, 4vw, 56px); margin-top: clamp(28px, 4vw, 48px); list-style: none; }
   .how-it-works-step { min-width: 0; }
+  .how-it-works-short { display: none; }
   .how-it-works-art { display: flex; align-items: center; justify-content: center; width: 100%; height: clamp(180px, 20vw, 240px); }
   .how-it-works-art img { display: block; width: 100%; height: 100%; object-fit: contain; }
   .how-it-works-art picture { display: block; width: 100%; height: 100%; }
   .how-it-works-copy { margin-top: 24px; }
-  .how-it-works-copy h3 { display: flex; align-items: center; gap: 10px; font-size: clamp(1.125rem, 1.6vw, 1.25rem); font-weight: 600; letter-spacing: -0.02em; line-height: 1.35; }
+  .how-it-works-copy :is(h2, h3) { display: flex; align-items: center; gap: 10px; font-size: clamp(1.125rem, 1.6vw, 1.25rem); font-weight: 600; letter-spacing: -0.02em; line-height: 1.35; }
   .how-it-works-number { display: inline-flex; flex: 0 0 28px; align-items: center; justify-content: center; height: 28px; border: 1px solid #c9c2b6; border-radius: 50%; font-size: 13px; font-weight: 600; letter-spacing: 0; font-variant-numeric: tabular-nums; }
   .how-it-works-copy p { max-width: 32ch; margin-top: 12px; font-size: 15px; line-height: 1.7; color: #5b5b55; }
   .landing-showcase { padding-block: clamp(40px, 5vw, 76px) clamp(40px, 4vw, 56px); scroll-margin-top: 100px; }
@@ -216,8 +217,17 @@
   .how-it-works-steps { grid-template-columns: minmax(0, 1fr); gap: 36px; max-width: 400px; margin-inline: auto; }
   .how-it-works-art { height: 210px; }
   .how-it-works-copy { margin-top: 16px; text-align: center; }
-  .how-it-works-copy h3 { justify-content: center; }
+  .how-it-works-copy :is(h2, h3) { justify-content: center; }
   .how-it-works-copy p { margin-inline: auto; }
+  .landing-how-it-works .how-it-works-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; max-width: none; }
+  .landing-how-it-works .how-it-works-art { height: clamp(82px, 26vw, 150px); }
+  .landing-how-it-works .how-it-works-art picture { flex: none; width: calc(100% + 18px); }
+  .landing-how-it-works .how-it-works-wide { display: none; }
+  .landing-how-it-works .how-it-works-short { display: inline; }
+  .landing-how-it-works .how-it-works-copy { margin-top: 10px; }
+  .landing-how-it-works .how-it-works-copy h3 { flex-direction: column; gap: 6px; font-size: 14px; text-wrap: balance; }
+  .landing-how-it-works .how-it-works-number { flex-basis: auto; width: 22px; height: 22px; font-size: 11px; }
+  .landing-how-it-works .how-it-works-copy p { margin-top: 6px; font-size: 13px; line-height: 1.45; }
   .landing-showcase { padding-block: 40px; scroll-margin-top: 84px; }
   .footer-content { grid-template-columns: 1fr; justify-items: center; gap: 24px; padding-block: 24px; }
   .landing-faq { grid-template-columns: minmax(0, 1fr); }

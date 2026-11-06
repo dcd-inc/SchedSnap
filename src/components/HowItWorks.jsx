@@ -1,19 +1,25 @@
 const steps = [
   {
     title: 'Choose a design',
+    mobileTitle: 'Pick a design',
     description: 'Pick your device and find a wallpaper that fits your style, or upload your own wallpaper.',
+    mobileDescription: 'Pick a wallpaper or upload your own.',
     image: '/images/how-it-works/choose-design.webp',
     height: 512,
   },
   {
     title: 'Add your classes',
+    mobileTitle: 'Add classes',
     description: 'Upload your timetable or enter classes manually, then check the details.',
+    mobileDescription: 'Upload a timetable or enter classes.',
     image: '/images/how-it-works/add-classes.webp',
     height: 512,
   },
   {
     title: 'Customize and download',
+    mobileTitle: 'Download',
     description: 'Adjust the layout and colors, then download your schedule as a wallpaper.',
+    mobileDescription: 'Adjust the look and download.',
     image: '/images/how-it-works/download-wallpaper.webp',
     height: 576,
   },
@@ -28,14 +34,14 @@ export default function HowItWorks() {
           <p>Turn your class schedule into a wallpaper in three simple steps.</p>
         </div>
         <ol className="how-it-works-steps">
-          {steps.map(({ title, description, image, height }, index) => (
+          {steps.map(({ title, mobileTitle, description, mobileDescription, image, height }, index) => (
             <li key={title} className="how-it-works-step">
               <div className="how-it-works-art">
-                <picture><source type="image/avif" srcSet={[360, 560, 768].map(width => `${image.replace('.webp', `-${width}.avif`)} ${width}w`).join(', ')} sizes={`(max-width: 640px) min(calc(100vw - 32px), ${Math.round(210 * 768 / height)}px), (max-width: 1200px) 28vw, 384px`} /><img src={image} srcSet={`${image.replace('.webp', '-560.webp')} 560w, ${image} 768w`} sizes={`(max-width: 640px) min(calc(100vw - 32px), ${Math.round(210 * 768 / height)}px), (max-width: 1200px) 28vw, 384px`} alt="" width="768" height={height} loading="lazy" decoding="async" /></picture>
+                <picture><source type="image/avif" srcSet={[360, 560, 768].map(width => `${image.replace('.webp', `-${width}.avif`)} ${width}w`).join(', ')} sizes={`(max-width: 640px) calc((100vw - 52px) / 3), (max-width: 1200px) 28vw, 384px`} /><img src={image} srcSet={`${image.replace('.webp', '-560.webp')} 560w, ${image} 768w`} sizes={`(max-width: 640px) calc((100vw - 52px) / 3), (max-width: 1200px) 28vw, 384px`} alt="" width="768" height={height} loading="lazy" decoding="async" /></picture>
               </div>
               <div className="how-it-works-copy">
-                <h3><span className="how-it-works-number" aria-hidden="true">{index + 1}</span>{title}</h3>
-                <p>{description}</p>
+                <h3><span className="how-it-works-number" aria-hidden="true">{index + 1}</span><span className="how-it-works-wide">{title}</span><span className="how-it-works-short">{mobileTitle}</span></h3>
+                <p><span className="how-it-works-wide">{description}</span><span className="how-it-works-short">{mobileDescription}</span></p>
               </div>
             </li>
           ))}
