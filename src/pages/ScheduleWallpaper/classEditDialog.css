@@ -25,6 +25,20 @@
 .class-edit-dialog .field-input { width: 100%; min-width: 0; min-height: 44px; border-radius: 10px; }
 .flow-class-editor .class-edit-dialog .field-input[aria-invalid='true'] { background: #fffbeb; border-color: #b45309; }
 .class-dialog-times { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.flow-class-editor .class-dialog-times input[type='time'] {
+  position: relative;
+  padding-inline-end: 34px;
+}
+.class-dialog-times input[type='time']::-webkit-calendar-picker-indicator {
+  position: absolute;
+  inset-inline-end: 10px;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+  transform: translateY(-50%);
+}
 .class-shared-name-note { font-size: 13px; line-height: 1.5; color: var(--color-muted); }
 .class-dialog-incomplete { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 16px; padding: 12px 14px; border: 1px solid #fcd34d; border-radius: 10px; background: #fffbeb; color: #b45309; font-size: 14px; line-height: 1.5; }
 .class-dialog-incomplete > svg { flex-shrink: 0; margin-top: 2px; }
