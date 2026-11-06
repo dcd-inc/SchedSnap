@@ -6,10 +6,12 @@ const artwork = z.string().max(500).refine(value => /^\/wallpapers\/[a-z0-9/_.-]
 export const templateSchema = z.object({
   id: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/).max(80),
   name: z.string().trim().min(1, 'Enter a title for this design.').max(80), description: z.string().max(240).optional(),
+  artistCredit: z.string().trim().max(60).optional(),
+  aiGenerated: z.boolean().optional(),
   keywords: z.string().trim().max(500, 'Keep keywords under 500 characters.').optional(),
   status: z.enum(['draft', 'published', 'hidden']),
   createdAt: z.iso.datetime().optional(), publishedAt: z.iso.datetime().optional(),
-  collection: z.enum(['gachiakuta', 'transformers', 'wuthering-waves', 'cars', 'scenic', 'anime', 'naruto', 'arcane', 'collage', 'graffiti', 'space', 'fruits', 'flowers', 'doodle', 'sanrio', 'snoopy', 'genshin', 'hunter-x-hunter', 'we-bare-bears', 'domo', 'adventure-time', 'chiikawa', 'chikawa', 'ghibli', 'mascot', 'meep', 'capybara', 'little-friends', 'pattern', 'original']).optional(),
+  collection: z.enum(['gachiakuta', 'transformers', 'wuthering-waves', 'cars', 'scenic', 'anime', 'naruto', 'arcane', 'collage', 'graffiti', 'space', 'fruits', 'flowers', 'doodle', 'sanrio', 'snoopy', 'genshin', 'hunter-x-hunter', 'we-bare-bears', 'domo', 'adventure-time', 'chiikawa', 'chikawa', 'ghibli', 'mascot', 'meep', 'capybara', 'little-friends', 'pattern', 'original', 'community']).optional(),
   mobileOnly: z.boolean().optional(),
   hiddenDevices: z.array(z.enum(['mobile', 'tablet', 'laptop'])).max(3).optional(),
   family: z.string().max(80).optional(),

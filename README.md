@@ -77,6 +77,14 @@ documentation/   Setup guides, audits, and artwork provenance
 
 Built with React, Vite, Tailwind CSS, React Router, HTML5 Canvas, and Vercel Node.js functions. AI extraction uses Gemini with an optional DeepSeek fallback. Cloudinary delivers artwork; Upstash Redis supports shared counters and voting.
 
+## Creator submissions
+
+Creators use Google through Supabase Auth at `/submit-design`. In Supabase Auth → URL Configuration, set **Site URL** to `https://schedsnap.chrbuilds.dev` and add `https://schedsnap.chrbuilds.dev/submit-design` and `http://localhost:5173/submit-design` as **Redirect URLs** for production and local development. Use the exact host and port you open in the browser. Start `npm run dev` and leave that terminal running while Google redirects back to the local site.
+
+The client needs `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY`. The API needs the same project settings, a private `SUPABASE_DB_URL` and the existing Cloudinary credentials. It verifies the pooler hostname and TLS certificate using the bundled Supabase root CA.
+
+Apply the SQL files in [supabase/migrations](supabase/migrations) in version order on a fresh project. They create the server-only `schedsnap_creator` schema for profiles, submissions, and private artwork bookkeeping. The creator name becomes the artist credit. Open **Creator submissions** in the existing admin to approve, request changes, or decline. Approval adds a mobile design to the Template library and public Community collection.
+
 ## Deployment and artwork
 
 Deploy to Vercel and configure the required server environment variables in the project settings. The production build prerenders public content and generates page metadata, `sitemap.xml`, and `robots.txt`. See the [SEO guide](documentation/SEO.md) for details.
