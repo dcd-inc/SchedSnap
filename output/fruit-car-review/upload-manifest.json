@@ -1,0 +1,364 @@
+{
+  "assets": [
+    {
+      "path": "public/wallpapers/scenic/fruits-strawberry-cream/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "e2d19a9461351cd050d99a12d4e57ec736c849dedd58636b92f3d4c7bc9fc850"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-citrus-watercolor-medley/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "7c8c7e393a3c9e0996a63232e1684728fd9dab374aea3c87e5b153964c1d4974"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-orange-ink-slices/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "aa9041565e527fda3028183e151a0383117f1cc225bc8fae94026795b7dbe8a9"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-lemon-watercolor-layers/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "265061c259c73058d122df0c96f9ee285815df28387a572e6b86a69fb3df8614"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-hot-pink-watermelon/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "ec8a810ed01a2ff8b0435dbba8682f0d25d9b6479c7a85e40e60d8a80ecf683c"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-turquoise-lemon-drop/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "87f096b3a26edf1616c42bdefcbd56e7ef54e47b5efc7665b61a85c7c8c12f81"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-tropical-harvest-shapes/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "2195f40d2ef75c583ed659b63903e7d68179169c451cb5e67c3e881ca2552185"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-lemon-line-repeat/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "56e7744944367a08bf1adda719bb89664436604b3a970449a381c1a3c1aa510c"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-orange-blossom-orchard/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "26a806dc3399e2fc480d4234107fe2e1b71e1e62f854570d3be061e0a8792f8e"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-rainbow-citrus-rounds/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "63be9c5c74a108589fa9a3188c5abbbe35dd8758603d1ec1a0fb9e488c0cb5f9"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-soft-citrus-botanicals/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "a209fd79b12b023fade71983c119bd512a28acdd9eab4754e5aa54e77f44cdb4"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-teal-banana-pop/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "0ee4ff015cfff1ffde138f8143fc0a6115fea9cfcfde3e8159108e39903fac36"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-blush-strawberry-fig/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "923d7dbd1c0d529085b92c3a05717df0c324e2e30c32461820fe74b9ec3594b8"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-golden-pineapple-rings/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "de8dcf379b3794b0aae4ade5385ddd51ff1dce63eab2065f3701100da1b020d7"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-market-garden-lines/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "4b3d5b4c9df5c05420ab1cfa97d52c98034be27fb7caf5bb3cd4e5c9a3586c5d"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-kiwi-slice-mosaic/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "efd204a6a8d815d381886b314caaa672f94d6c9179e392f713aaa5905ef3a99f"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-mint-lemon-blossom/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "f701283248676abe6b1c7c21f3dcd944bd821a15067f1c935e698e115fd19c46"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-fruit-picnic-patchwork/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "39d57bedddec1c9b9d407bcf7ace8588741add981c8ae173c93554ba1abbc878"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-watermelon-candy-stripes/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "e5e70c3e432929593da90e89fffdc5e395f92c62d030a02e4c12b347e1a3f9fd"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-lemon-blueberry-watercolor/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "2b5dffc545ad683a566336afbb605fbc2a073456f32b3ea954f5fa85520d55a4"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-tropical-slice-collage/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "38ef2f03960591bf265a15d9f42da27d751084e9de428360f7f3576083434c3b"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-smiling-summer-fruit/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "0f681f99aa03e4fe93b83004d37d204063070052bbf8c5282acaf5ebf56df615"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-orange-grove-graphics/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "11c9f1db67dd3a20ff8a48f956be6ebc558d6b2b34bc66a0c540b77e225cb0eb"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-kiwi-cream-scatter/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "2f6eaf4e44a873407db30e3f6200f8d18a0f93cc5bd22d0b6e900057e4e982b6"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-cyan-lemon-sketch/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "49812c2fd8c31604467c430d7e00c75120abead306b69737f6f43a16671bcc77"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-neon-fruit-party/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "caf5be0c510102547eb516affee7e60b111a2e414ea206002e3929d49f74350b"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-happy-market-friends/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "48f0024fcfd82b9f1737d17a80cbba35971f72fb32c34d74f897c9751cd4ae9e"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-fresh-lime-watercolor/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "2472ca8f9cbbe8761684b5c5ef0ecfac606493b1bd2b76daadec63930306d06e"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-kiwi-meadow-stripes/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "e0e36da41ace3626af4eaea6271b4870f3ed905288f6d7a721d8c128223ffddc"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-pink-watermelon-wedges/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "e61d740ccdfb2bf9efcbc628edbc6892e1313b4bc5795798abd9844fd4c658ff"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-mint-avocado-sprinkles/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "35e9cd151b7d2c7a807ee0ed7135146334c01234561efc3cc2dc788716153e28"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-pineapple-color-splash/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "6ffa046cefa78fbe1b37df3ef753d776fa20816624be374d2ded7ee01a034fed"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-aqua-watermelon-confetti/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "576a48efc988a37c90297d0970a6da6d956ff3cf54b7719aae2ee6841e60c120"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-pink-banana-pop/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "b13014d04eb21b383b1b8a21e605e39a7e333ab74af019a4d1d6fc7f62c7faa8"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-coconut-palm-sketch/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "a0ff85d552b6508cc8c14b4f69cb1e30d6acce7adba5fdd5f6735f4517616d05"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-turquoise-grapefruit/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "c7f03fd221a93ed1bd8e76d14b1da9b709140010438384dd3a351ad1ec77f9a0"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-avocado-green-minimal/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "6be4f1b8a123c9a1399544aa71131bbf5200f23fe361205d5e3f758c33c0fb2d"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-sunset-snoopy-porsche/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "bf4bc540be8c04aa9a6b68c449da0ffb191177b8325b303bcaccbcff0860b61c"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-turquoise-mercedes/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "a1628e732a98cbaae0ce8c1aa3b415bc6a7cc0f5e4b52c2bce926011022091f1"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-crimson-muscle-poster/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "098894203ac46d3ad6ff9f4b4ac7991b1f9e4592999d28e732a96888ece96d66"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-rx7-snoopy-city/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "b9a0b9945be74212cada2175895aded29ed76800f8701bc2fbed84ca2e1d2641"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-skyline-neon-type/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "2e6114111544e7d5faf79ac070d59994e950eb0d31e1e22d853e052f75fb60cb"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-bmw-midnight-coupe/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "67ee6e6a0a977c555f8cc07b76d82460dc8b16b218f58bca65fd7f62c4883c55"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-porsche-ink-hood/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "29e058dfa9815623f213ddfb50e0448e1cd4f7992eb5cf1f5960ec85cc148453"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-scarlet-sideways-coupe/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "da85faf1cf6bd0ab143a9849eb9220e8f95e574df275ab7febb595a25eab4177"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-porsche-silver-studio/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "aea586c744243eae2e87688640edf14091f1410e359a860adcc4345c019f63f9"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-porsche-weathered-olive/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "b2a54fad206068957439db38d53523a4d45b76f58b65470283fde20a8d3210a7"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-skyline-crimson-rear/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "063d15b8070a71148c38fc2dd0e93743586b6281c62815bf09dad0747123750b"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-tokyo-skyline-supra-collage/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "ab817f2e914060439dee15345ced7f8daadfe5b52c7e0418635a0ac732534975"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-skyline-engine-scrapbook/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "ac121ed99c987bb48bb2bbc4c8c10dd7ad7c85b1e73658a007a523a24470094f"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-gtr-crimson-rear-poster/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "7a2aad849f1807ae758d75f38aeab9136a72e7756400ce40b8bdb24653c03a94"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-porsche-911-editorial-collage/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "27f8197f0de8daeda9d16be6289bfbb090d6a1c13e172a6075b47dff8d6e8626"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-ivory-red-racing-poster/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "27abf0224b3141cb333e9f274201faca10028a41be90d2a1b363076bdeced2df"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-supra-smoke-red/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "449b9e0c782a30d23a30220e61b6e0d5c9612343ecaa91b5301ae22785b11784"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-supra-orange-editorial/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "5816583e086020d5c32321af2c6dbd5601735c51f282a4635746e15e7f6d99a8"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-manga-drift-lineup/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "be807adce2e37d7e451d927205843e0fb306818c9f2ff7b4485c212d2315be6d"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-skyline-blueprint-stripes/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "c4a1e03432db350358fecbf780b7aba7178537addb80e0968e2e7cbf8b5800aa"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-formula-one-crimson-ink/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "c859311cb5db2828e55d0becb0c6f7f54068a8b408761445da4142f740989f52"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-gtr-snoopy-wing/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "3b1c8516c35c1893067684c346f2c9b11e4429c04ee5cb7dd45583f7c4604550"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-supra-warm-garage/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "7adb2f37475dc21c5a9f522a88b825227fcfc232967601b6cd49516cce28e8c9"
+    }
+  ]
+}

@@ -1,0 +1,226 @@
+{
+  "assets": [
+    {
+      "path": "public/wallpapers/scenic/fruits-strawberry-cream/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "e2d19a9461351cd050d99a12d4e57ec736c849dedd58636b92f3d4c7bc9fc850"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-citrus-watercolor-medley/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "7c8c7e393a3c9e0996a63232e1684728fd9dab374aea3c87e5b153964c1d4974"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-orange-ink-slices/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "aa9041565e527fda3028183e151a0383117f1cc225bc8fae94026795b7dbe8a9"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-lemon-watercolor-layers/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "265061c259c73058d122df0c96f9ee285815df28387a572e6b86a69fb3df8614"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-hot-pink-watermelon/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "ec8a810ed01a2ff8b0435dbba8682f0d25d9b6479c7a85e40e60d8a80ecf683c"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-turquoise-lemon-drop/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "87f096b3a26edf1616c42bdefcbd56e7ef54e47b5efc7665b61a85c7c8c12f81"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-tropical-harvest-shapes/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "2195f40d2ef75c583ed659b63903e7d68179169c451cb5e67c3e881ca2552185"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-lemon-line-repeat/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "56e7744944367a08bf1adda719bb89664436604b3a970449a381c1a3c1aa510c"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-orange-blossom-orchard/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "26a806dc3399e2fc480d4234107fe2e1b71e1e62f854570d3be061e0a8792f8e"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-rainbow-citrus-rounds/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "63be9c5c74a108589fa9a3188c5abbbe35dd8758603d1ec1a0fb9e488c0cb5f9"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-soft-citrus-botanicals/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "a209fd79b12b023fade71983c119bd512a28acdd9eab4754e5aa54e77f44cdb4"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-teal-banana-pop/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "0ee4ff015cfff1ffde138f8143fc0a6115fea9cfcfde3e8159108e39903fac36"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-blush-strawberry-fig/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "923d7dbd1c0d529085b92c3a05717df0c324e2e30c32461820fe74b9ec3594b8"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-golden-pineapple-rings/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "de8dcf379b3794b0aae4ade5385ddd51ff1dce63eab2065f3701100da1b020d7"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-market-garden-lines/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "4b3d5b4c9df5c05420ab1cfa97d52c98034be27fb7caf5bb3cd4e5c9a3586c5d"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-kiwi-slice-mosaic/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "efd204a6a8d815d381886b314caaa672f94d6c9179e392f713aaa5905ef3a99f"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-mint-lemon-blossom/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "f701283248676abe6b1c7c21f3dcd944bd821a15067f1c935e698e115fd19c46"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-fruit-picnic-patchwork/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "39d57bedddec1c9b9d407bcf7ace8588741add981c8ae173c93554ba1abbc878"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-watermelon-candy-stripes/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "e5e70c3e432929593da90e89fffdc5e395f92c62d030a02e4c12b347e1a3f9fd"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-lemon-blueberry-watercolor/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "2b5dffc545ad683a566336afbb605fbc2a073456f32b3ea954f5fa85520d55a4"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-tropical-slice-collage/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "38ef2f03960591bf265a15d9f42da27d751084e9de428360f7f3576083434c3b"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-smiling-summer-fruit/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "0f681f99aa03e4fe93b83004d37d204063070052bbf8c5282acaf5ebf56df615"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-orange-grove-graphics/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "11c9f1db67dd3a20ff8a48f956be6ebc558d6b2b34bc66a0c540b77e225cb0eb"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-kiwi-cream-scatter/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "2f6eaf4e44a873407db30e3f6200f8d18a0f93cc5bd22d0b6e900057e4e982b6"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-cyan-lemon-sketch/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "49812c2fd8c31604467c430d7e00c75120abead306b69737f6f43a16671bcc77"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-neon-fruit-party/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "caf5be0c510102547eb516affee7e60b111a2e414ea206002e3929d49f74350b"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-happy-market-friends/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "48f0024fcfd82b9f1737d17a80cbba35971f72fb32c34d74f897c9751cd4ae9e"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-fresh-lime-watercolor/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "2472ca8f9cbbe8761684b5c5ef0ecfac606493b1bd2b76daadec63930306d06e"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-kiwi-meadow-stripes/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "e0e36da41ace3626af4eaea6271b4870f3ed905288f6d7a721d8c128223ffddc"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-pink-watermelon-wedges/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "e61d740ccdfb2bf9efcbc628edbc6892e1313b4bc5795798abd9844fd4c658ff"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-mint-avocado-sprinkles/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "35e9cd151b7d2c7a807ee0ed7135146334c01234561efc3cc2dc788716153e28"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-pineapple-color-splash/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "6ffa046cefa78fbe1b37df3ef753d776fa20816624be374d2ded7ee01a034fed"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-aqua-watermelon-confetti/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "576a48efc988a37c90297d0970a6da6d956ff3cf54b7719aae2ee6841e60c120"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-pink-banana-pop/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "b13014d04eb21b383b1b8a21e605e39a7e333ab74af019a4d1d6fc7f62c7faa8"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-coconut-palm-sketch/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "a0ff85d552b6508cc8c14b4f69cb1e30d6acce7adba5fdd5f6735f4517616d05"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-turquoise-grapefruit/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "c7f03fd221a93ed1bd8e76d14b1da9b709140010438384dd3a351ad1ec77f9a0"
+    },
+    {
+      "path": "public/wallpapers/scenic/fruits-avocado-green-minimal/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "6be4f1b8a123c9a1399544aa71131bbf5200f23fe361205d5e3f758c33c0fb2d"
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "assets": [
+    {
+      "path": "public/wallpapers/scenic/cars-sunset-snoopy-porsche/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "bf4bc540be8c04aa9a6b68c449da0ffb191177b8325b303bcaccbcff0860b61c"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-turquoise-mercedes/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "a1628e732a98cbaae0ce8c1aa3b415bc6a7cc0f5e4b52c2bce926011022091f1"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-crimson-muscle-poster/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "098894203ac46d3ad6ff9f4b4ac7991b1f9e4592999d28e732a96888ece96d66"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-rx7-snoopy-city/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "b9a0b9945be74212cada2175895aded29ed76800f8701bc2fbed84ca2e1d2641"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-skyline-neon-type/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "2e6114111544e7d5faf79ac070d59994e950eb0d31e1e22d853e052f75fb60cb"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-bmw-midnight-coupe/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "67ee6e6a0a977c555f8cc07b76d82460dc8b16b218f58bca65fd7f62c4883c55"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-porsche-ink-hood/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "29e058dfa9815623f213ddfb50e0448e1cd4f7992eb5cf1f5960ec85cc148453"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-scarlet-sideways-coupe/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "da85faf1cf6bd0ab143a9849eb9220e8f95e574df275ab7febb595a25eab4177"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-porsche-silver-studio/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "aea586c744243eae2e87688640edf14091f1410e359a860adcc4345c019f63f9"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-porsche-weathered-olive/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "b2a54fad206068957439db38d53523a4d45b76f58b65470283fde20a8d3210a7"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-skyline-crimson-rear/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "063d15b8070a71148c38fc2dd0e93743586b6281c62815bf09dad0747123750b"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-tokyo-skyline-supra-collage/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "ab817f2e914060439dee15345ced7f8daadfe5b52c7e0418635a0ac732534975"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-skyline-engine-scrapbook/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "ac121ed99c987bb48bb2bbc4c8c10dd7ad7c85b1e73658a007a523a24470094f"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-gtr-crimson-rear-poster/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "7a2aad849f1807ae758d75f38aeab9136a72e7756400ce40b8bdb24653c03a94"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-porsche-911-editorial-collage/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "27f8197f0de8daeda9d16be6289bfbb090d6a1c13e172a6075b47dff8d6e8626"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-ivory-red-racing-poster/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "27abf0224b3141cb333e9f274201faca10028a41be90d2a1b363076bdeced2df"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-supra-smoke-red/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "449b9e0c782a30d23a30220e61b6e0d5c9612343ecaa91b5301ae22785b11784"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-supra-orange-editorial/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "5816583e086020d5c32321af2c6dbd5601735c51f282a4635746e15e7f6d99a8"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-manga-drift-lineup/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "be807adce2e37d7e451d927205843e0fb306818c9f2ff7b4485c212d2315be6d"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-skyline-blueprint-stripes/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "c4a1e03432db350358fecbf780b7aba7178537addb80e0968e2e7cbf8b5800aa"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-formula-one-crimson-ink/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "c859311cb5db2828e55d0becb0c6f7f54068a8b408761445da4142f740989f52"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-gtr-snoopy-wing/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "3b1c8516c35c1893067684c346f2c9b11e4429c04ee5cb7dd45583f7c4604550"
+    },
+    {
+      "path": "public/wallpapers/scenic/cars-supra-warm-garage/mobile.png",
+      "opaque": true,
+      "dimensionsValid": true,
+      "sha256": "7adb2f37475dc21c5a9f522a88b825227fcfc232967601b6cd49516cce28e8c9"
+    }
+  ]
+}

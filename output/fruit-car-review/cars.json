@@ -1,0 +1,121 @@
+[
+  {
+    "label": "cars-10a",
+    "description": "single card: white Porsche with Snoopy sitting on roof, ink illustration, dramatic mountain landscape and pink sunset",
+    "master": "C:\\Users\\picar\\.codex\\generated_images\\01a187df-f2b5-7301-949f-8f0c8b7759d1\\exec-03273b07-7e8c-4ac6-b71d-c45af39e0e0c.png"
+  },
+  {
+    "label": "cars-11a",
+    "description": "left card: vintage white Mercedes sedan shown vertically sideways against turquoise sky with cream clouds",
+    "master": "C:\\Users\\picar\\.codex\\generated_images\\01a187df-f2b5-7301-949f-8f0c8b7759d1\\exec-773dfee7-5355-41a0-b497-8f8e11bd93cb.png"
+  },
+  {
+    "label": "cars-11b",
+    "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 70d74e5c-6347-4a7f-994a-d276bd456fcb.\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"other\\\"\\n      ]\\n    }\\n  }\\n}\")"
+  },
+  {
+    "label": "cars-11c",
+    "description": "right card: gritty American muscle car closeup front quarter on black and crimson grunge poster",
+    "master": "C:\\Users\\picar\\.codex\\generated_images\\01a187df-f2b5-7301-949f-8f0c8b7759d1\\exec-bbc8a8f5-7d6d-4e8b-9101-f808c453ace7.png"
+  },
+  {
+    "label": "cars-12a",
+    "description": "single card: red Mazda RX-7 with Snoopy lying on roof in foggy pink-gray city street with vertical red Japanese poster lettering",
+    "master": "C:\\Users\\picar\\.codex\\generated_images\\01a187df-f2b5-7301-949f-8f0c8b7759d1\\exec-411f5c57-ebb5-4b34-90f2-0de729b37f93.png"
+  },
+  {
+    "label": "cars-13a",
+    "description": "single card: gray Nissan Skyline front quarter with gray teal and neon pink Japanese typographic grunge poster",
+    "master": "C:\\Users\\picar\\.codex\\generated_images\\01a187df-f2b5-7301-949f-8f0c8b7759d1\\exec-0eedffc6-a365-4a9b-b18b-adba7db11a23.png"
+  },
+  {
+    "label": "cars-14a",
+    "description": "complete central card: sleek nearly black BMW coupe emerging from darkness with huge black negative space above",
+    "master": "C:\\Users\\picar\\.codex\\generated_images\\01a187df-f2b5-7301-949f-8f0c8b7759d1\\exec-3ebce5c9-1542-495e-9855-b975c8c7d4ef.png"
+  },
+  {
+    "label": "cars-15a",
+    "description": "complete lower-left card: monochrome black Porsche from overhead oblique angle with intricate graphic markings on hood, deep black background",
+    "master": "C:\\Users\\picar\\.codex\\generated_images\\01a187df-f2b5-7301-949f-8f0c8b7759d1\\exec-92e19055-7748-4fa4-a7e0-ec803f56df56.png"
+  },
+  {
+    "label": "cars-15b",
+    "description": "complete right card: red sports coupe shown sideways vertically on dark grunge crimson Japanese typography poster",
+    "master": "C:\\Users\\picar\\.codex\\generated_images\\01a187df-f2b5-7301-949f-8f0c8b7759d1\\exec-133fc6ab-beab-4977-97db-cda3ebca915f.png"
+  },
+  {
+    "label": "cars-16a",
+    "description": "complete left-center card: front half of white Porsche sports car on smooth gray studio background",
+    "master": "C:\\Users\\picar\\.codex\\generated_images\\01a187df-f2b5-7301-949f-8f0c8b7759d1\\exec-b4093b65-72da-4f6e-ab3a-00b606afdad7.png"
+  },
+  {
+    "label": "cars-16b",
+    "description": "complete right card: weathered olive green Porsche closeup against black cream and red distressed racing graphics",
+    "master": "C:\\Users\\picar\\.codex\\generated_images\\01a187df-f2b5-7301-949f-8f0c8b7759d1\\exec-1cce69e1-1ec2-4e72-adb9-1b6473aea493.png"
+  },
+  {
+    "label": "cars-17a",
+    "description": "complete central card: black Nissan Skyline rear three-quarter with wing and glowing circular tail lights, gray and vivid crimson grunge poster",
+    "master": "C:\\Users\\picar\\.codex\\generated_images\\01a187df-f2b5-7301-949f-8f0c8b7759d1\\exec-ba7ffc7f-183e-4172-961a-1e4001bb5ac6.png"
+  },
+  {
+    "label": "cars-18a",
+    "description": "single complete card: black-and-white Japanese automotive scrapbook collage of Nissan Skyline R34 and Toyota Supra, bold condensed SKYLINE and SUPRA headlines, lanterns and two cars",
+    "master": "C:\\Users\\picar\\.codex\\generated_images\\01a187df-f2b5-7301-949f-8f0c8b7759d1\\exec-330b15e4-ba80-43d7-b882-4faf8c44b380.png"
+  },
+  {
+    "label": "cars-19b",
+    "description": "second full card: black and white Nissan Skyline scrapbook with engine, rear car view, magazine clippings and automotive parts",
+    "master": "C:\\Users\\picar\\.codex\\generated_images\\01a187df-f2b5-7301-949f-8f0c8b7759d1\\exec-366d6514-94bd-43c4-a5dc-998a1000993a.png"
+  },
+  {
+    "label": "cars-19c",
+    "description": "third full card: white Nissan GT-R rear view centered low against crimson distressed Japanese typography poster",
+    "master": "C:\\Users\\picar\\.codex\\generated_images\\01a187df-f2b5-7301-949f-8f0c8b7759d1\\exec-2024f9ff-2153-4c48-9aa3-8d31c68d4a4c.png"
+  },
+  {
+    "label": "cars-19d",
+    "description": "fourth full card: monochrome Porsche 911 GT3 RS collage with sports car photos, wheels, blueprint and bold editorial lettering",
+    "master": "C:\\Users\\picar\\.codex\\generated_images\\01a187df-f2b5-7301-949f-8f0c8b7759d1\\exec-0f009df4-beb9-4688-b765-74139de460fc.png"
+  },
+  {
+    "label": "cars-20b",
+    "description": "second complete card: weathered pale sports car front quarter in red and cream distressed Japanese poster, huge red block lettering",
+    "master": "C:\\Users\\picar\\.codex\\generated_images\\01a187df-f2b5-7301-949f-8f0c8b7759d1\\exec-6a4c843d-5dcf-4163-a9dd-57bcbacce226.png"
+  },
+  {
+    "label": "cars-20c",
+    "description": "third complete card: red Toyota Supra front view in smoky dark setting with giant red Japanese typography",
+    "master": "C:\\Users\\picar\\.codex\\generated_images\\01a187df-f2b5-7301-949f-8f0c8b7759d1\\exec-32458422-df06-478e-b441-7f2321b73b9f.png"
+  },
+  {
+    "label": "cars-21a",
+    "description": "first complete card: orange Toyota Supra street racing editorial poster on black and aged cream, bold orange SUPRA headline, JDM 94 accents, wet reflections",
+    "master": "C:\\Users\\picar\\.codex\\generated_images\\01a187df-f2b5-7301-949f-8f0c8b7759d1\\exec-77d7e857-720c-4521-b9bc-8648b195259b.png"
+  },
+  {
+    "label": "cars-21b",
+    "description": "second complete card: black and white Japanese manga racing scene with multiple sports cars drifting, dramatic speed lines",
+    "master": "C:\\Users\\picar\\.codex\\generated_images\\01a187df-f2b5-7301-949f-8f0c8b7759d1\\exec-8546d6b5-72f6-45a8-8224-f92dd373e689.png"
+  },
+  {
+    "label": "cars-21c",
+    "description": "third complete card: front view silver Nissan Skyline with twin blue racing stripes over white technical blueprint sheet",
+    "master": "C:\\Users\\picar\\.codex\\generated_images\\01a187df-f2b5-7301-949f-8f0c8b7759d1\\exec-6edc51ab-c78d-45d0-8918-d6692c4a86ae.png"
+  },
+  {
+    "label": "cars-22a",
+    "description": "first complete card: white Red Bull Oracle Formula One race car in dynamic diagonal closeup, white gray and crimson ink-like racing illustration",
+    "master": "C:\\Users\\picar\\.codex\\generated_images\\01a187df-f2b5-7301-949f-8f0c8b7759d1\\exec-9dc8a8d0-e2f4-46c3-8901-5646b1e94845.png"
+  },
+  {
+    "label": "cars-22b",
+    "description": "second complete card: monochrome Nissan GT-R rear three-quarter with large black rear wing and Snoopy sitting on wing, white background with red Japanese calligraphy and red smoke",
+    "master": "C:\\Users\\picar\\.codex\\generated_images\\01a187df-f2b5-7301-949f-8f0c8b7759d1\\exec-f547f29b-d705-4ae0-ad23-05134927ac10.png"
+  },
+  {
+    "label": "cars-22c",
+    "description": "third complete card: cream Toyota Supra frontal view in warm dim garage, large red Japanese banner behind it",
+    "master": "C:\\Users\\picar\\.codex\\generated_images\\01a187df-f2b5-7301-949f-8f0c8b7759d1\\exec-ca25a685-8b73-4c60-8b35-72cd525b980e.png"
+  }
+]
