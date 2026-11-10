@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import '../wallpaper-fonts.css';
 import { generativePatterns } from '../assets/generativePatterns.js';
 import { Link, useSearchParams } from 'react-router';
-import { Download, Heart, Plus, LogOut, ArrowLeft, X, Menu, CheckCircle2, Pencil, Eye, EyeOff, Trash2, RotateCcw, MoreVertical, UserRound, LayoutDashboard, PanelsTopLeft, ExternalLink, ChevronLeft, ChevronRight, ChevronDown, Save, Send, Minus, Maximize2, ListFilter, Inbox, Images } from 'lucide-react';
+import { Plus, LogOut, ArrowLeft, X, Menu, CheckCircle2, Pencil, Eye, EyeOff, Trash2, RotateCcw, MoreVertical, UserRound, LayoutDashboard, PanelsTopLeft, ExternalLink, ChevronLeft, ChevronRight, ChevronDown, Save, Send, Minus, Maximize2, ListFilter, Inbox, Images } from 'lucide-react';
 import { deviceResolutions, tabletLandscapeResolution } from '../assets/wallpaperPresets.js';
 import { sampleSchedule } from '../assets/sampleSchedule.js';
 import { designCollections, galleryCategories, matchesGalleryCategory } from '../config/collections.js';
@@ -31,8 +31,20 @@ import FeedbackInbox from './FeedbackInbox.jsx';
 import CreatorReviewQueue from './CreatorReviewQueue.jsx';
 import AdminDesignArtwork from './AdminDesignArtwork.jsx';
 import DesignCardDevices from './DesignCardDevices.jsx';
+import DeviceNavCount from './DeviceNavCount.jsx';
+import DesignCardStats from './DesignCardStats.jsx';
 import DesignGridSkeleton from './DesignGridSkeleton.jsx';
 import AccountLoading from '../components/AccountLoading.jsx';
+
+function AdminDeviceNavigation({ label, value, onChange, counts }) {
+  return <div className="admin-device-nav device-nav-children" role="group" aria-label={label}>
+    {templateDevices.map(device => <button key={device} className="admin-nav-item" type="button" aria-label={deviceLabels[device]} title={deviceLabels[device]} aria-description={counts ? `${counts[device]} items` : undefined} aria-pressed={value === device} onClick={() => onChange(device)}>
+      <DesignCardDevices devices={[device]} />
+      <span className="admin-sidebar-label">{deviceLabels[device]}</span>
+      <DeviceNavCount count={counts === undefined ? undefined : counts?.[device] ?? null} />
+    </button>)}
+  </div>;
+}
 
 async function request(action, body) {
   const response = await fetch(`/api/admin?action=${action}`, { method: body ? 'POST' : 'GET', headers: body ? { 'Content-Type': 'application/json' } : {}, body: body ? JSON.stringify(body) : undefined, signal: AbortSignal.timeout(60000) });
@@ -46,6 +58,7 @@ const statusIcons = { all: ListFilter, published: CheckCircle2, hidden: EyeOff, 
 export default function Admin() {
   const [authenticated, setAuthenticated] = useState(null);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [closedDeviceSection, setClosedDeviceSection] = useState(null);
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
   const [adminParams, setAdminParams] = useSearchParams();
   const section = ['library', 'feedback', 'creator-review'].includes(adminParams.get('section')) ? adminParams.get('section') : 'dashboard';
@@ -92,6 +105,17 @@ export default function Admin() {
   const [searchQuery, setSearchQuery] = useState('');
   const [statusFilter, setStatusFilter] = useState('all');
   const [device, setDevice] = useState('mobile');
+  const [reviewDevice, setReviewDevice] = useState('mobile');
+  const [reviewCounts, setReviewCounts] = useState(undefined);
+  const [reviewCountVersion, setReviewCountVersion] = useState(0);
+  useEffect(() => {
+    if (!authenticated) return;
+    let active = true;
+    request('creator-submission-counts')
+      .then(({ counts }) => { if (active) setReviewCounts(counts); })
+      .catch(() => { if (active) setReviewCounts(null); });
+    return () => { active = false; };
+  }, [authenticated, section, reviewCountVersion]);
   const [sort, setSort] = useState('likes');
   const [previewLayout, setPreviewLayout] = useState('stacked');
   const { downloads, error: downloadError, refresh: refreshDownloads } = useDesignDownloads(device);
@@ -160,18 +184,33 @@ export default function Admin() {
   if (authenticated === null) return <AccountLoading />;
   if (!authenticated) return <AdminSignIn password={password} onPasswordChange={setPassword} onSubmit={login} busy={busy} error={error} />;
   const visible = filtered.slice(0, galleryCount);
+  const libraryCounts = catalog ? Object.fromEntries(templateDevices.map(option => [option, catalog.templates.filter(template => availableTemplateDevices(template).includes(option)).length])) : error ? null : undefined;
+  const reviewTotal = reviewCounts && templateDevices.reduce((total, option) => total + reviewCounts[option], 0);
+  const libraryOpen = section === 'library' && !editor && closedDeviceSection !== 'library';
+  const requestsOpen = section === 'creator-review' && closedDeviceSection !== 'creator-review';
   function openLibrary() {
     if (editorDirty && !window.confirm('Discard your unsaved changes?')) return;
     setEditor(null); setEditorDirty(false); setSection('library');
   }
   return <div className={`admin-shell ${sidebarCollapsed ? 'admin-sidebar-collapsed' : ''} ${mobileSidebarOpen ? 'admin-mobile-sidebar-open' : ''}`}>
     <button type="button" className="admin-mobile-backdrop" aria-label="Close navigation" onClick={() => setMobileSidebarOpen(false)} />
-    <aside id="admin-sidebar" className="admin-sidebar"><button type="button" className="admin-icon-action admin-sidebar-toggle" aria-label={sidebarCollapsed ? 'Expand sidebar' : 'Collapse sidebar'} title={sidebarCollapsed ? 'Expand sidebar' : 'Collapse sidebar'} aria-expanded={!sidebarCollapsed} aria-controls="admin-sidebar" onClick={() => setSidebarCollapsed(value => !value)}>{sidebarCollapsed ? <ChevronRight size={18} aria-hidden="true" /> : <ChevronLeft size={18} aria-hidden="true" />}</button><Link to="/" className="site-brand" target="_blank" rel="noopener noreferrer" aria-label="SchedSnap website (opens in a new tab)"><BrandMark /><span className="admin-sidebar-label">SchedSnap</span></Link><nav aria-label="Admin navigation"><button className="admin-nav-item" aria-label="Website analytics" title="Website analytics" aria-current={section === 'dashboard' ? 'page' : undefined} onClick={() => { if (editorDirty && !window.confirm('Discard your unsaved changes?')) return; setEditor(null); setEditorDirty(false); setSection('dashboard'); setMobileSidebarOpen(false); }}><LayoutDashboard size={18} aria-hidden="true" /><span className="admin-sidebar-label">Website analytics</span></button><button className="admin-nav-item" aria-label="Template library" title="Template library" aria-current={section === 'library' && !editor ? 'page' : undefined} onClick={() => { openLibrary(); setMobileSidebarOpen(false); }}><PanelsTopLeft size={18} aria-hidden="true" /><span className="admin-sidebar-label">Template library</span></button><button className="admin-nav-item" aria-label="Requests" title="Requests" aria-current={section === 'creator-review' ? 'page' : undefined} onClick={() => { if (editorDirty && !window.confirm('Discard your unsaved changes?')) return; setEditor(null); setEditorDirty(false); setSection('creator-review'); setMobileSidebarOpen(false); }}><Images size={18} aria-hidden="true" /><span className="admin-sidebar-label">Requests</span></button><button className="admin-nav-item" aria-label="Feedback" title="Feedback" aria-current={section === 'feedback' ? 'page' : undefined} onClick={() => { if (editorDirty && !window.confirm('Discard your unsaved changes?')) return; setEditor(null); setEditorDirty(false); setSection('feedback'); setMobileSidebarOpen(false); }}><Inbox size={18} aria-hidden="true" /><span className="admin-sidebar-label">Feedback</span></button></nav><details className="admin-profile admin-sidebar-account"><summary aria-label="Administrator profile actions"><span className="admin-sidebar-account-icon"><UserRound size={17} aria-hidden="true" /></span><span className="admin-sidebar-label">Administrator</span><ChevronDown className="admin-account-chevron admin-sidebar-label" size={16} aria-hidden="true" /></summary><div className="admin-profile-menu"><Link to="/" target="_blank" rel="noopener noreferrer" onClick={event => { event.currentTarget.closest('details').open = false; }}><ExternalLink size={16} aria-hidden="true" />View website<span className="sr-only"> (opens in a new tab)</span></Link><button disabled={busy} onClick={logout}><LogOut size={16} aria-hidden="true" />Sign out</button></div></details></aside>
+    <aside id="admin-sidebar" className="admin-sidebar"><button type="button" className="admin-icon-action admin-sidebar-toggle" aria-label={sidebarCollapsed ? 'Expand sidebar' : 'Collapse sidebar'} title={sidebarCollapsed ? 'Expand sidebar' : 'Collapse sidebar'} aria-expanded={!sidebarCollapsed} aria-controls="admin-sidebar" onClick={() => setSidebarCollapsed(value => !value)}>{sidebarCollapsed ? <ChevronRight size={18} aria-hidden="true" /> : <ChevronLeft size={18} aria-hidden="true" />}</button><Link to="/" className="site-brand" target="_blank" rel="noopener noreferrer" aria-label="SchedSnap website (opens in a new tab)"><BrandMark /><span className="admin-sidebar-label">SchedSnap</span></Link><nav aria-label="Admin navigation"><button className="admin-nav-item" aria-label="Website analytics" title="Website analytics" aria-current={section === 'dashboard' ? 'page' : undefined} onClick={() => { if (editorDirty && !window.confirm('Discard your unsaved changes?')) return; setEditor(null); setEditorDirty(false); setSection('dashboard'); setMobileSidebarOpen(false); }}><LayoutDashboard size={18} aria-hidden="true" /><span className="admin-sidebar-label">Website analytics</span></button><button className="admin-nav-item device-nav-parent" aria-label="Templates" aria-description={catalog ? `${catalog.templates.length} designs` : undefined} title="Templates" aria-current={section === 'library' && !editor ? 'page' : undefined} aria-expanded={libraryOpen} onClick={() => {
+        if (section === 'library' && !editor) setClosedDeviceSection(libraryOpen ? 'library' : null);
+        else { openLibrary(); setClosedDeviceSection(null); }
+      }}><PanelsTopLeft size={18} aria-hidden="true" /><span className="admin-sidebar-label">Templates</span><DeviceNavCount count={catalog ? catalog.templates.length : libraryCounts} /><ChevronDown className="device-nav-chevron" size={16} aria-hidden="true" /></button>
+      {libraryOpen && <AdminDeviceNavigation label="Templates device" counts={libraryCounts} value={device} onChange={next => { setDevice(next); setPreviewLayout('stacked'); setMobileSidebarOpen(false); }} />}
+      <button className="admin-nav-item device-nav-parent" aria-label="Requests" aria-description={reviewCounts ? `${reviewTotal} pending requests` : undefined} title="Requests" aria-current={section === 'creator-review' ? 'page' : undefined} aria-expanded={requestsOpen} onClick={() => {
+        if (section === 'creator-review') { setClosedDeviceSection(requestsOpen ? 'creator-review' : null); return; }
+        if (editorDirty && !window.confirm('Discard your unsaved changes?')) return;
+        setEditor(null); setEditorDirty(false); setSection('creator-review'); setClosedDeviceSection(null);
+      }}><Images size={18} aria-hidden="true" /><span className="admin-sidebar-label">Requests</span><DeviceNavCount count={reviewTotal} /><ChevronDown className="device-nav-chevron" size={16} aria-hidden="true" /></button>
+      {requestsOpen && <AdminDeviceNavigation label="Requests device" counts={reviewCounts} value={reviewDevice} onChange={next => { setReviewDevice(next); setMobileSidebarOpen(false); }} />}
+      <button className="admin-nav-item" aria-label="Feedback" title="Feedback" aria-current={section === 'feedback' ? 'page' : undefined} onClick={() => { if (editorDirty && !window.confirm('Discard your unsaved changes?')) return; setEditor(null); setEditorDirty(false); setSection('feedback'); setMobileSidebarOpen(false); }}><Inbox size={18} aria-hidden="true" /><span className="admin-sidebar-label">Feedback</span></button></nav><details className="admin-profile admin-sidebar-account"><summary aria-label="Administrator profile actions"><span className="admin-sidebar-account-icon"><UserRound size={17} aria-hidden="true" /></span><span className="admin-sidebar-label">Administrator</span><ChevronDown className="admin-account-chevron admin-sidebar-label" size={16} aria-hidden="true" /></summary><div className="admin-profile-menu"><Link to="/" target="_blank" rel="noopener noreferrer" onClick={event => { event.currentTarget.closest('details').open = false; }}><ExternalLink size={16} aria-hidden="true" />View website<span className="sr-only"> (opens in a new tab)</span></Link><button disabled={busy} onClick={logout}><LogOut size={16} aria-hidden="true" />Sign out</button></div></details></aside>
     <div className={`admin-content ${section === 'dashboard' ? 'admin-content-dashboard' : ''}`}>
     <header className="admin-topbar"><button type="button" className="admin-mobile-menu-button" aria-label="Open navigation" aria-expanded={mobileSidebarOpen} aria-controls="admin-sidebar" onClick={() => setMobileSidebarOpen(true)}><Menu size={20} aria-hidden="true" /></button><div className="admin-topbar-copy"><h1>{editor ? (editor.isNew ? 'New design' : editor.template.name) : section === 'dashboard' ? 'Website analytics' : section === 'feedback' ? 'Feedback' : section === 'creator-review' ? 'Creator submissions' : 'Template library'}</h1><p><span className="admin-topbar-description-full">{editor ? 'Set the artwork and appearance, then check your preview.' : section === 'dashboard' ? 'Track how your templates are being used.' : section === 'feedback' ? 'Review suggestions and reported problems.' : section === 'creator-review' ? 'Review pending artwork before publishing it to the library.' : 'Upload artwork, preview every device, and choose what goes live.'}</span><span className="admin-topbar-description-short">{editor ? 'Artwork, appearance, and preview.' : section === 'dashboard' ? 'Template usage overview.' : section === 'feedback' ? 'Review suggestions and problems.' : section === 'creator-review' ? 'Review submitted artwork.' : 'Manage your designs.'}</span></p></div><details className="admin-profile admin-topbar-profile"><summary aria-label="Profile actions"><UserRound size={20} aria-hidden="true" /></summary><div className="admin-profile-menu"><Link to="/" target="_blank" rel="noopener noreferrer" onClick={event => { event.currentTarget.closest('details').open = false; }}><ExternalLink size={16} aria-hidden="true" />View website<span className="sr-only"> (opens in a new tab)</span></Link><button disabled={busy} onClick={logout}><LogOut size={16} aria-hidden="true" />Sign out</button></div></details></header>
     {error && <div className="admin-error" role="alert">{error} {catalog && reloadNeeded && <button className="text-link" disabled={busy} onClick={load}>Reload library</button>}</div>}
     {notice && <div className="admin-toast" role="status" aria-live="polite"><CheckCircle2 size={18} aria-hidden="true" /><span>{notice}</span><button type="button" className="admin-toast-close" aria-label="Dismiss notification" onClick={() => setNotice('')}><X size={16} aria-hidden="true" /></button></div>}
-    {section === 'dashboard' ? <AdminDashboard /> : section === 'feedback' ? <FeedbackInbox request={request} /> : section === 'creator-review' ? <CreatorReviewQueue request={request} onPublished={load} onSessionExpired={setAuthenticated} /> : editor ? <DesignEditor key={editor.key} initial={editor.template} isNew={editor.isNew} existingIds={catalog.templates.map(t => t.id)} busy={busy} onDirty={setEditorDirty} onBack={() => { setEditor(null); setEditorDirty(false); }} onSave={async template => {
+    {section === 'dashboard' ? <AdminDashboard /> : section === 'feedback' ? <FeedbackInbox request={request} /> : section === 'creator-review' ? <CreatorReviewQueue key={reviewDevice} device={reviewDevice} request={request} onPublished={load} onReviewed={() => setReviewCountVersion(version => version + 1)} onSessionExpired={setAuthenticated} /> : editor ? <DesignEditor key={editor.key} initial={editor.template} isNew={editor.isNew} existingIds={catalog.templates.map(t => t.id)} busy={busy} onDirty={setEditorDirty} onBack={() => { setEditor(null); setEditorDirty(false); }} onSave={async template => {
       setBusy(true); setError(''); setNotice('');
       try {
         const result = await request('save', { revision: catalog.revision, template, create: editor.isNew });
@@ -194,7 +233,7 @@ export default function Admin() {
         <button className="button-primary admin-library-cta" disabled={busy || !catalog} onClick={() => setEditor({ key: crypto.randomUUID(), template: blankTemplate(), isNew: true })}><Plus size={18} />New design</button>
       </div>
       <div className="template-filters gallery-filter-row" role="group" aria-label="Filter designs">
-        <DevicePicker value={device} onChange={setDevice} label="Filter by device" />
+
         <SortPicker value={sort} onChange={setSort} />
         <DevicePicker value={previewLayout} onChange={setPreviewLayout} label="Preview schedule layout" options={scheduleLayoutOptions(device).map(option => [option.value, option.label, layoutIcons[option.value]])} />
         <DevicePicker value={statusFilter} onChange={setStatusFilter} label="Status" options={statusFilters.map(option => [option.id, option.name, statusIcons[option.id]])} />
@@ -233,8 +272,8 @@ export default function Admin() {
             actionLabel={`Edit ${template.name}`} disabled={busy}
             onOpen={() => setEditor({ key: template.id, template, isNew: false })} />
           <div className="admin-design-footer">
-          <div className="admin-design-info"><h2 title={template.name}>{template.name}</h2><div className="admin-design-meta"><DesignCardDevices devices={visibleTemplateDevices(template)} /><span className="text-muted">{designCollections.find(c => c.id === (template.collection || 'original'))?.name}</span></div></div>
-          <span className="admin-design-stats"><span title="Downloads" aria-label={`${downloads[template.id] ?? 'Unavailable'} downloads`}><Download size={16} aria-hidden="true" /><span aria-hidden="true">{downloads[template.id]?.toLocaleString() ?? '—'}</span></span><span title="Hearts" aria-label={`${metrics.likes[template.id]?.count ?? 'Unavailable'} hearts`}><Heart className="admin-stat-heart" size={16} fill="currentColor" aria-hidden="true" /><span aria-hidden="true">{metrics.likes[template.id]?.count.toLocaleString() ?? '—'}</span></span></span>
+          <div className="admin-design-info"><h2 title={template.name}>{template.name}</h2><div className="admin-design-meta"><span className="text-muted">{designCollections.find(c => c.id === (template.collection || 'original'))?.name}</span><DesignCardDevices devices={visibleTemplateDevices(template)} /></div></div>
+          <DesignCardStats downloads={downloads[template.id]} hearts={metrics.likes[template.id]?.count} />
           <div className="admin-design-actions"><button id={`actions-${template.id}`} className="admin-icon-action" aria-label={`Actions for ${template.name}`} title="Actions" aria-expanded={actionMenu === template.id} aria-controls={`action-list-${template.id}`} onClick={() => setActionMenu(actionMenu === template.id ? null : template.id)}><MoreVertical size={20} aria-hidden="true" /></button>{actionMenu === template.id && <div id={`action-list-${template.id}`} className="admin-action-menu" onClick={() => setActionMenu(null)}><button className="admin-icon-action" aria-label={`Edit ${template.name}`} title="Edit" disabled={busy || template.deletionPending} onClick={() => { setError(''); setEditor({ key: template.id, template, isNew: false }); }}><Pencil size={16} aria-hidden="true" />Edit</button><button className="admin-icon-action" aria-label={`Visibility for ${template.name}`} title="Visibility" disabled={busy || template.deletionPending} onClick={() => { setError(''); setHiding(template); }}><Eye size={16} aria-hidden="true" />Visibility</button><button className="admin-icon-action admin-delete" aria-label={`${template.deletionPending ? 'Retry delete' : 'Delete'} ${template.name}`} title={template.deletionPending ? 'Retry delete' : 'Delete'} disabled={busy} onClick={() => { setError(''); setDeleting(template); }}>{template.deletionPending ? <RotateCcw size={18} aria-hidden="true" /> : <Trash2 size={16} aria-hidden="true" />}{template.deletionPending ? 'Retry delete' : 'Delete'}</button></div>}</div>
           </div>
         </article>;

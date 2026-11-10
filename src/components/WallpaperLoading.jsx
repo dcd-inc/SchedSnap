@@ -15,7 +15,7 @@ export default function WallpaperLoading() {
     <div aria-hidden="true">
       <div className="tool-back"><div className="wallpaper-skeleton h-4 w-14 rounded" /></div>
       <header className="wallpaper-flow-header">
-        <h1 className="wallpaper-skeleton rounded-lg"><span className="invisible">Choose a design</span></h1>
+        <h1 className="wallpaper-skeleton rounded-lg"><span className="invisible">Design Gallery</span></h1>
         <div className="wallpaper-flow-header-actions">
           <div className="wallpaper-search-wrap"><div className="wallpaper-skeleton w-full rounded-full" style={{ height: 46 }} /></div>
         </div>

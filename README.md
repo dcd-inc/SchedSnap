@@ -87,6 +87,8 @@ Apply the SQL files in [supabase/migrations](supabase/migrations) in version ord
 
 ## Deployment and artwork
 
+To schedule a protected Supabase database check, follow the [keep-alive setup](documentation/SUPABASE_KEEP_ALIVE.md).
+
 Deploy to Vercel and configure the required server environment variables in the project settings. The production build prerenders public content and generates page metadata, `sitemap.xml`, and `robots.txt`. See the [SEO guide](documentation/SEO.md) for details.
 
 Wallpaper originals and mascot master folders stay local and are excluded from Git and deployment output. After uploading artwork to Cloudinary, commit the template metadata and `src/assets/cloudinaryManifest.js`. Keep landing-page delivery images, icons, and fonts in Git. Use the [artwork workflow](documentation/skills/schedsnap-artwork/SKILL.md) and [asset inventory](documentation/IMAGE_ASSETS.md) when updating designs.

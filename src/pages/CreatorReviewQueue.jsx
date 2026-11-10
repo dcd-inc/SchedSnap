@@ -7,7 +7,7 @@ import DesignGridSkeleton from './DesignGridSkeleton.jsx';
 import { WallpaperSearchField } from '../components/WallpaperSearch.jsx';
 import { useDebouncedSearch } from '../lib/useWallpaperSearch.js';
 
-export default function CreatorReviewQueue({ request, onPublished, onSessionExpired }) {
+export default function CreatorReviewQueue({ device, request, onPublished, onReviewed, onSessionExpired }) {
   const [page, setPage] = useState(1);
   const [version, setVersion] = useState(0);
   const [result, setResult] = useState(null);
@@ -25,7 +25,7 @@ export default function CreatorReviewQueue({ request, onPublished, onSessionExpi
   useEffect(() => {
     if (query.trim() !== search) return;
     let active = true;
-    request(`creator-submissions&page=${page}&query=${encodeURIComponent(search)}`).then(data => {
+    request(`creator-submissions&device=${device}&page=${page}&query=${encodeURIComponent(search)}`).then(data => {
       if (active) { setResult(data); setLoading(false); }
     }).catch(error => {
       if (!active) return;
@@ -34,7 +34,7 @@ export default function CreatorReviewQueue({ request, onPublished, onSessionExpi
       setLoading(false);
     });
     return () => { active = false; };
-  }, [request, onSessionExpired, page, version, query, search]);
+  }, [request, onSessionExpired, device, page, version, query, search]);
 
   useEffect(() => {
     if (!menu) return;
@@ -80,7 +80,12 @@ export default function CreatorReviewQueue({ request, onPublished, onSessionExpi
         setNotice('Design published and added to the Template library.');
         void onPublished();
       } else setNotice(result.status === 'needs_changes' ? 'Changes requested.' : 'Submission declined.');
-      reload(1);
+      onReviewed();
+      setSelected(null);
+      setConfirming(null);
+      setResult(current => current && { ...current, submissions: current.submissions.filter(item => item.id !== row.id) });
+      if (page > 1 && result?.submissions.length === 1) setPage(page - 1);
+      setVersion(value => value + 1);
     } catch (error) {
       if (error.status === 401) onSessionExpired(false);
       setError(error.message);
@@ -103,30 +108,29 @@ export default function CreatorReviewQueue({ request, onPublished, onSessionExpi
   }
 
   return <section className="admin-review" aria-label="Pending creator requests" aria-busy={loading}>
-    <div className="admin-review-toolbar">
+    <div className="admin-library-search">
       <WallpaperSearchField value={query} onChange={changeSearch} label="Search submissions by design or creator"
         placeholder="Search by design or creator" iconLeft showPopular={false} />
     </div>
     {notice && <p role="status">{notice}</p>}
-    {error && !selected && !confirming && <p className="admin-error" role="alert">{error}</p>}
-    {loading ? <DesignGridSkeleton label="Loading creator submissions" /> : result?.submissions.length === 0 && !error ?
-      <div className="gallery-empty-state admin-review-empty" role="status">
-        <h2>{search ? 'No matching submissions' : 'You’re all caught up'}</h2>
-        <p>{search ? 'Try a different design or creator name.' : 'New submissions will appear here when they’re ready for review.'}</p>
+    {error && !selected && !confirming && <p className="admin-error" role="alert">{error} <button type="button" className="text-link" onClick={() => reload()}>Retry</button></p>}
+    {loading ? <DesignGridSkeleton device={device} label="Loading creator submissions" /> : result?.submissions.length === 0 && !error ?
+      <div className="gallery-empty-state admin-empty" role="status">
+        <p>{search ? <>No submissions found matching &ldquo;{search}&rdquo;</> : 'No submissions waiting for review.'}</p>
         {search && <button type="button" className="button-secondary" onClick={() => changeSearch('')}>Clear search</button>}
       </div> : result &&
-      <div className="admin-design-grid admin-grid-mobile">
+      <div className={`admin-design-grid admin-grid-${device}`}>
         {result.submissions.map(row => {
           const status = row.status === 'publishing' ? 'Publishing' : 'In review';
           return <article key={row.id} className="admin-design">
             <AdminDesignArtwork template={{ ...communityWallpaperStyle, id: row.id, name: row.title, image: row.preview }}
-              device="mobile" previewLayout="stacked" status={status}
+              device={row.device ?? 'mobile'} previewLayout="stacked" status={status}
               statusClass={row.status === 'in_review' ? 'admin-status-draft' : ''}
               actionLabel={`Review ${row.title}, ${status}`} id={`review-${row.id}`} onOpen={() => openReview(row)} />
             <div className="admin-design-footer">
               <div className="admin-design-info">
                 <h2 title={row.title}>{row.title}</h2>
-                <div className="admin-design-meta"><DesignCardDevices devices={['mobile']} /><span className="text-muted">{row.artist}</span></div>
+                <div className="admin-design-meta"><span className="text-muted">{row.artist}</span><DesignCardDevices devices={[row.device ?? 'mobile']} /></div>
               </div>
               <div className="admin-design-actions">
                 <button id={`review-actions-${row.id}`} type="button" className="admin-icon-action" aria-label={`Actions for ${row.title}`} title="Actions" aria-expanded={menu === row.id} aria-controls={`review-menu-${row.id}`} onClick={() => setMenu(menu === row.id ? null : row.id)}><MoreVertical size={20} aria-hidden="true" /></button>
@@ -163,7 +167,7 @@ function ReviewDialog({ row, busy, error, note, setNote, onClose, onSubmit }) {
   return <dialog ref={dialog} className="admin-delete-dialog admin-review-dialog" aria-labelledby="review-title" onCancel={event => { event.preventDefault(); if (!busy) onClose(); }}>
     <header><h2 id="review-title">{row.title}</h2><button type="button" aria-label="Close review" disabled={busy} onClick={onClose}><X size={20} aria-hidden="true" /></button></header>
     <div className="admin-review-detail">
-      <img src={row.preview} referrerPolicy="no-referrer" alt={`Artwork for ${row.title}`} width="1080" height="2400" />
+      <img src={row.preview} referrerPolicy="no-referrer" alt={`Artwork for ${row.title}`} />
       <form onSubmit={event => { event.preventDefault(); if (!busy) onSubmit('approve'); }}>
         <p>By {row.artist}</p>
         <p>AI disclosure: {row.aiGenerated == null ? 'Not provided' : row.aiGenerated ? 'AI-generated' : 'No AI-generated content declared'}</p>

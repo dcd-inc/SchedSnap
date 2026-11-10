@@ -6,6 +6,7 @@ import { cloudImageApi, cloudTimestamp, creatorArtworkPreview, signedArtworkPara
 import { templateSchema } from '../shared/templateSchema.js';
 import { communityWallpaperStyle } from '../shared/communityWallpaperStyle.js';
 import { withTemplateKeywords } from '../shared/templateKeywords.js';
+import { templateDevices } from '../shared/templateVisibility.js';
 
 const reviewSchema = z.strictObject({
   id: z.uuid(),
@@ -55,20 +56,38 @@ export function createCreatorReview({ env, store, fetcher = fetch, db } = {}) {
   return {
     withCatalogLock,
 
+    async counts(response) {
+      try {
+        const rows = await database()`select coalesce(to_jsonb(submission)->>'device', 'mobile') as device, count(*)::integer as count
+          from schedsnap_creator.submissions as submission where status in ('in_review', 'publishing') group by 1`;
+        const counts = Object.fromEntries(templateDevices.map(device => [device, 0]));
+        for (const row of rows) counts[row.device] = row.count;
+        return response.status(200).json({ counts });
+      } catch {
+        return response.status(503).json({ error: { message: 'Creator submission counts could not load.' } });
+      }
+    },
+
     async list(request, response) {
       const params = new URL(request.url, 'http://localhost').searchParams;
       const page = Number(params.get('page') ?? 1);
       const query = (params.get('query') ?? '').trim().slice(0, 100);
+      const device = params.get('device');
       if (!Number.isInteger(page) || page < 1 || page > 10000) return response.status(400).json({ error: { message: 'Invalid review page.' } });
+      if (device !== null && !templateDevices.includes(device)) return response.status(400).json({ error: { message: 'Invalid review device.' } });
       try {
-        const rows = await database()`select id, title, artist, status, artwork_id, revision, updated_at, ai_generated
-          from schedsnap_creator.submissions where status in ('in_review', 'publishing')
+        // Older databases may not have the optional AI disclosure column yet.
+        const rows = await database()`select id, title, artist, status, artwork_id, revision, updated_at,
+          (to_jsonb(submission)->>'ai_generated')::boolean as ai_generated, to_jsonb(submission)->>'device' as device
+          from schedsnap_creator.submissions as submission where status in ('in_review', 'publishing')
           and (strpos(lower(title), lower(${query}::text)) > 0 or strpos(lower(artist), lower(${query}::text)) > 0)
+          and coalesce(to_jsonb(submission)->>'device', 'mobile') = coalesce(${device}::text, to_jsonb(submission)->>'device', 'mobile')
           order by updated_at, id limit ${pageSize + 1} offset ${(page - 1) * pageSize}`;
         return response.status(200).json({
           submissions: rows.slice(0, pageSize).map(row => ({
             id: row.id, title: row.title, artist: row.artist, status: row.status, revision: row.revision,
             aiGenerated: row.ai_generated ?? null,
+            device: row.device ?? 'mobile',
             updatedAt: row.updated_at, preview: creatorArtworkPreview(row.artwork_id, env),
           })),
           hasMore: rows.length > pageSize,
@@ -97,21 +116,27 @@ export function createCreatorReview({ env, store, fetcher = fetch, db } = {}) {
 
         // Reserve the reviewed revision before any external write. A retry completes
         // the same approval, while the creator cannot replace the approved artwork.
-        const [row] = await db`update schedsnap_creator.submissions set status = 'publishing'
-          where id = ${id} and revision = ${revision} and status in ('in_review', 'publishing') returning *`;
+        const [reservation, catalogRead] = await Promise.allSettled([
+          db`update schedsnap_creator.submissions set status = 'publishing'
+            where id = ${id} and revision = ${revision} and status in ('in_review', 'publishing') returning *`,
+          store.read(true),
+        ]);
+        if (reservation.status === 'rejected') throw reservation.reason;
+        const [row] = reservation.value;
         if (!row) throw new ReviewConflict();
-        let catalog = await store.read(true);
-        if (!catalog.templates.some(item => item.id === designId(id))) {
+        if (catalogRead.status === 'rejected') throw catalogRead.reason;
+        if (!catalogRead.value.templates.some(item => item.id === designId(id))) {
           const image = await approvedImage(row);
           const time = new Date().toISOString();
+          const device = row.device ?? 'mobile';
           const template = withTemplateKeywords(templateSchema.parse({
-            id: designId(id), name: row.title, artistCredit: row.artist, collection: 'community', mobileOnly: true,
+            id: designId(id), name: row.title, artistCredit: row.artist, collection: 'community', mobileOnly: device === 'mobile',
             aiGenerated: row.ai_generated ?? undefined,
-            status: 'published', createdAt: time, publishedAt: time, image, deviceImages: { mobile: image },
+            status: 'published', createdAt: time, publishedAt: time, image, deviceImages: { [device]: image },
             ...communityWallpaperStyle,
           }));
           await withCatalogLock(async () => {
-            catalog = await store.read(true);
+            const catalog = await store.read(true);
             if (!catalog.templates.some(item => item.id === template.id)) {
               await store.write({ ...catalog, templates: [template, ...catalog.templates] });
             }

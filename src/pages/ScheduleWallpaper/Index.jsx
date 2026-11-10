@@ -268,7 +268,7 @@ export default function ScheduleWallpaper() {
       navigate(devicePath(`${basePath}/upload${selectedId ? `?return=${selectedId}&step=${step === 'preview' || search.get('step') === 'preview' ? 'preview' : 'classes'}` : ''}`, next));
     }} />}
     <header className="wallpaper-flow-header" data-importing={choosingImage}>
-      <h1 tabIndex={-1} ref={heading}>{step === 'upload' ? 'Upload your background' : step === 'design' ? 'Choose a design' : step === 'classes' ? 'Add your classes' : 'Live Preview'}</h1>
+      <h1 tabIndex={-1} ref={heading}>{step === 'upload' ? 'Upload your background' : step === 'design' ? 'Design Gallery' : step === 'classes' ? 'Add your classes' : 'Live Preview'}</h1>
       <div id="wallpaper-flow-header-actions" className="wallpaper-flow-header-actions">
         {step === 'preview' && <button type="button" className="button-secondary preview-customize" aria-controls="wallpaper-customization" onClick={() => setCustomizeRequest(value => value + 1)}><SlidersHorizontal size={16} aria-hidden="true" />Customize</button>}
         {step === 'design' && <WallpaperSearch value={searchQuery} onChange={setSearchQuery} />}

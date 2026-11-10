@@ -53,6 +53,8 @@ export const templateSchema = z.object({
   if (t.status !== 'published') return;
   if (t.layout === 'mascot' && !t.image) ctx.addIssue({ code: 'custom', message: 'Upload a character image.', path: ['image'] });
   if (t.layout !== 'mascot' && !t.pattern && (t.image || t.deviceImages || t.collection === 'scenic')) {
+    const communityVariants = Object.values(t.deviceImages ?? {}).filter(Boolean);
+    if (t.collection === 'community' && !t.mobileOnly && communityVariants.length === 1 && t.image === communityVariants[0]) return;
     const devices = t.mobileOnly ? ['mobile'] : ['mobile', 'tablet', 'laptop'];
     const variants = devices.map(device => t.deviceImages?.[device]);
     if (!t.image || variants.some(value => !value) || new Set(variants).size !== devices.length || t.image !== t.deviceImages?.mobile) ctx.addIssue({ code: 'custom', message: t.mobileOnly ? 'Add a matching mobile background to publish.' : 'Add a mobile, tablet, and laptop background to publish. You can save a draft while uploading.', path: ['deviceImages'] });

@@ -1,17 +1,29 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Link, useSearchParams } from 'react-router';
 import { googleAvatarUrl, supabase } from '../../lib/creatorAuth.js';
-import { ArrowUpRight, CheckCircle2, ChevronDown, ImagePlus, Images, LoaderCircle, LogOut, MoreVertical, Pencil, Plus, Search, Trash2, UserRound, X } from 'lucide-react';
+import useDesignDownloads from '../../lib/useDesignDownloads.js';
+import useDesignLikes from '../../lib/useDesignLikes.js';
+import { CheckCircle2, ChevronDown, ChevronLeft, ChevronRight, Clock, Eye, House, ImagePlus, Images, ListFilter, LoaderCircle, LogOut, MoreVertical, Pencil, Plus, Trash2, TriangleAlert, UserRound, X, XCircle } from 'lucide-react';
 import BrandMark from '../../components/BrandMark.jsx';
 import DesignCardDevices from '../DesignCardDevices.jsx';
+import DeviceNavCount from '../DeviceNavCount.jsx';
+import DesignCardStats from '../DesignCardStats.jsx';
+import DevicePicker from '../../components/DevicePicker.jsx';
+import SortPicker from '../../components/SortPicker.jsx';
+import { layoutIcons } from '../../components/wallpaperOptionIcons.js';
+import { scheduleLayoutOptions } from '../../utils/canvasHelpers.js';
+import { sortTemplatesByLikes } from '../../utils/sortTemplatesByLikes.js';
+import { deviceLabels, templateDevices } from '../../../shared/templateVisibility.js';
+import { BackgroundDeviceDialog } from '../ScheduleWallpaper/CustomBackgroundUpload.jsx';
 import DesignGridSkeleton from '../DesignGridSkeleton.jsx';
 import AccountLoading from '../../components/AccountLoading.jsx';
+import { WallpaperSearchField } from '../../components/WallpaperSearch.jsx';
 import CreatorAvatar from './CreatorAvatar.jsx';
 import { creatorAvatarKeys } from '../../../shared/creatorAvatars.js';
 import { communityWallpaperStyle } from '../../../shared/communityWallpaperStyle.js';
 import { sampleSchedule } from '../../assets/sampleSchedule.js';
-import { CREATOR_PATH, SUBMIT_DESIGN_PATH } from '../../../shared/seo.js';
-import { mobileResolution, galleryScheduleFor } from '../../assets/wallpaperPresets.js';
+import { SUBMIT_DESIGN_PATH } from '../../../shared/seo.js';
+import { deviceResolutions, galleryScheduleFor } from '../../assets/wallpaperPresets.js';
 import { createCustomBackground } from '../../lib/customBackground.js';
 import { inspectImage, prepareAvatar, prepareImage } from '../../utils/imageHelpers.js';
 import ImageCropDialog from '../ScheduleWallpaper/ImageCropDialog.jsx';
@@ -21,10 +33,11 @@ import googleSignIn from './google-sign-in.png';
 import '../designCards.css';
 import './creator.css';
 
-const ratio = mobileResolution.width / mobileResolution.height;
-const schedule = galleryScheduleFor('mobile');
-const artworkCardSize = { id: 'mobile', width: 270, height: 600 };
-const gallery = `${CREATOR_PATH}?device=mobile`;
+function artworkCardSize(device) {
+  const { width, height } = deviceResolutions[device];
+  const previewWidth = device === 'laptop' ? 480 : 270;
+  return { id: device, width: previewWidth, height: Math.round(previewWidth * height / width) };
+}
 const statuses = { in_review: 'In review', needs_changes: 'Needs changes', publishing: 'Publishing', published: 'Published', declined: 'Declined' };
 let initialSession;
 
@@ -57,7 +70,7 @@ async function submissionsRequest(change, signal) {
 }
 
 function CreatorBrand() {
-  return <Link to="/" className="site-brand"><BrandMark /> SchedSnap</Link>;
+  return <Link to="/" className="site-brand" aria-label="SchedSnap homepage"><BrandMark /><span>SchedSnap</span></Link>;
 }
 
 function placeCardMenu(details) {
@@ -84,7 +97,17 @@ function CreatorWorkspace({ profile, onProfileChange, googlePhoto, onSignOut, si
   const [params, setParams] = useSearchParams();
   const profileOpen = params.get('view') === 'profile';
   const [editing, setEditing] = useState(undefined);
+  const [choosingDevice, setChoosingDevice] = useState(false);
+  const [uploadDevice, setUploadDevice] = useState('mobile');
+  const [device, setDevice] = useState('mobile');
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [devicesOpen, setDevicesOpen] = useState(true);
+  const [sort, setSort] = useState('likes');
+  const [previewLayout, setPreviewLayout] = useState('stacked');
+  const [viewing, setViewing] = useState(null);
   const [rows, setRows] = useState(null);
+  const { downloads } = useDesignDownloads(device);
+  const { likes } = useDesignLikes();
   const [loading, setLoading] = useState(true);
   const [notice, setNotice] = useState('');
   const [error, setError] = useState('');
@@ -145,9 +168,19 @@ function CreatorWorkspace({ profile, onProfileChange, googlePhoto, onSignOut, si
   }
 
   const search = query.trim().toLowerCase();
-  const visible = rows?.filter(row => (filter === 'all' || row.status === filter || (filter === 'in_review' && row.status === 'publishing'))
+  const deviceCounts = rows && Object.fromEntries(templateDevices.map(option => [
+    option, rows.filter(row => (row.device ?? 'mobile') === option).length,
+  ]));
+  const matching = rows?.filter(row => (row.device ?? 'mobile') === device && (filter === 'all' || row.status === filter || (filter === 'in_review' && row.status === 'publishing'))
     && row.title.toLowerCase().includes(search));
-  const filters = [['all', 'All'], ['in_review', statuses.in_review], ['needs_changes', statuses.needs_changes], ['published', statuses.published], ['declined', statuses.declined]];
+  const visible = matching && sortTemplatesByLikes(matching, likes, sort, downloads, row => `community-${row.id}`);
+  const filters = [
+    ['all', 'All', ListFilter],
+    ['in_review', statuses.in_review, Clock],
+    ['needs_changes', statuses.needs_changes, Pencil],
+    ['published', statuses.published, CheckCircle2],
+    ['declined', statuses.declined, XCircle],
+  ];
   const accountMenu = (inSidebar = false) => <details className="creator-account" onBlur={event => {
       if (!event.currentTarget.contains(event.relatedTarget)) event.currentTarget.open = false;
     }} onKeyDown={event => {
@@ -161,6 +194,7 @@ function CreatorWorkspace({ profile, onProfileChange, googlePhoto, onSignOut, si
         <ChevronDown size={15} aria-hidden="true" />
       </summary>
       <div className="creator-account-menu">
+        <Link to="/"><House size={16} aria-hidden="true" />Homepage</Link>
         <button type="button" aria-haspopup="dialog" disabled={saving} onClick={event => {
           const menu = event.currentTarget.closest('details');
           menu.open = false;
@@ -170,51 +204,68 @@ function CreatorWorkspace({ profile, onProfileChange, googlePhoto, onSignOut, si
         <button type="button" disabled={signingOut || saving} onClick={onSignOut}><LogOut size={16} aria-hidden="true" />{signingOut ? 'Signing out…' : 'Sign out'}</button>
       </div>
     </details>;
-  return <div className="creator-portal">
-    <aside className="creator-sidebar" aria-label="Creator portal sidebar">
+  return <div className="creator-portal" data-sidebar-collapsed={sidebarCollapsed}>
+    <aside className="creator-sidebar" id="creator-sidebar" aria-label="Creator portal sidebar">
       <CreatorBrand />
+      <button type="button" className="creator-sidebar-toggle" aria-label={sidebarCollapsed ? 'Expand sidebar' : 'Collapse sidebar'} aria-expanded={!sidebarCollapsed} aria-controls="creator-sidebar" onClick={() => setSidebarCollapsed(value => !value)}>
+        {sidebarCollapsed ? <ChevronRight size={18} aria-hidden="true" /> : <ChevronLeft size={18} aria-hidden="true" />}
+      </button>
       <nav aria-label="Creator portal" className="creator-nav">
-        <button type="button" aria-current="page"><Images size={18} aria-hidden="true" />My designs</button>
-        <Link to={gallery}><ArrowUpRight size={18} aria-hidden="true" />Gallery</Link>
+        <button type="button" className="device-nav-parent" aria-label="My designs" aria-description={rows ? `${rows.length} designs` : undefined} aria-current="page" aria-expanded={devicesOpen} onClick={() => setDevicesOpen(open => !open)}>
+          <Images size={18} aria-hidden="true" /><span>My designs</span>
+          <DeviceNavCount count={rows ? rows.length : loading ? undefined : null} />
+          <ChevronDown className="device-nav-chevron" size={16} aria-hidden="true" />
+        </button>
       </nav>
+      {devicesOpen && <div className="creator-device-nav device-nav-children" role="group" aria-label="Filter designs by device">
+        {templateDevices.map(option => <button key={option} type="button" aria-label={deviceLabels[option]} title={deviceLabels[option]} aria-description={deviceCounts ? `${deviceCounts[option]} designs` : undefined} aria-pressed={device === option} onClick={() => { setDevice(option); setPreviewLayout('stacked'); }}>
+          <DesignCardDevices devices={[option]} /><span className="creator-device-label">{deviceLabels[option]}</span>
+          <DeviceNavCount count={deviceCounts ? deviceCounts[option] : loading ? undefined : null} />
+        </button>)}
+      </div>}
       {accountMenu(true)}
     </aside>
     <div className="creator-workspace">
       <header className="creator-topbar">
-        <h1 ref={heading} tabIndex={-1}>My designs</h1>
+        <div>
+          <h1 ref={heading} tabIndex={-1}>My designs</h1>
+          <p>Upload wallpapers and track your Community submissions.</p>
+        </div>
         {accountMenu()}
       </header>
       <div className="creator-content">
         {authError && <p className="creator-error" role="alert">{authError}</p>}
         <section className="creator-submissions" aria-label="Artwork list" aria-busy={loading}>
             <div className="creator-toolbar">
-              <label className="creator-search">
-                <Search size={17} aria-hidden="true" />
-                <span className="sr-only">Search designs</span>
-                <input type="search" value={query} placeholder="Search designs" onChange={event => setQuery(event.target.value)} />
-              </label>
-              <button className="button-primary" type="button" aria-haspopup="dialog" disabled={saving} onClick={() => setEditing(null)}><ImagePlus size={18} aria-hidden="true" />Upload design</button>
+              <WallpaperSearchField value={query} onChange={setQuery} label="Search designs" placeholder="Search designs" iconLeft showPopular={false} />
+              <button className="button-primary" type="button" aria-haspopup="dialog" disabled={saving} onClick={() => setChoosingDevice(true)}><ImagePlus size={18} aria-hidden="true" />Upload design</button>
             </div>
             <div className="creator-filters" role="group" aria-label="Filter by status">
-              {filters.map(([value, label]) => <button key={value} type="button" aria-pressed={filter === value} onClick={() => setFilter(value)}>{label}</button>)}
+              <SortPicker value={sort} onChange={setSort} />
+              <DevicePicker value={previewLayout} onChange={setPreviewLayout} label="Preview schedule layout" options={scheduleLayoutOptions(device).map(option => [option.value, option.label, layoutIcons[option.value]])} />
+              <DevicePicker value={filter} onChange={setFilter} label="Status" options={filters} />
             </div>
             {error && <div className="creator-error" role="alert">{error} <button className="creator-link" type="button" onClick={loadRows}>Refresh artwork</button></div>}
             {loading && !rows && <DesignGridSkeleton label="Loading artwork" />}
             {!loading && !error && visible?.length === 0 && <div className="gallery-empty-state" role="status">
-              <p>{rows?.length ? 'No artwork matches your filters.' : 'No artwork yet.'}</p>
-              {!!rows?.length && <button className="button-secondary" type="button" onClick={() => { setFilter('all'); setQuery(''); }}>Clear filters</button>}
+              <p>{search || filter !== 'all' ? 'No artwork matches your filters.' : `No ${deviceLabels[device].toLowerCase()} artwork yet.`}</p>
+              {(search || filter !== 'all') && <button className="button-secondary" type="button" onClick={() => { setFilter('all'); setQuery(''); }}>Clear filters</button>}
             </div>}
             {!!visible?.length && <div className="admin-design-grid creator-design-grid">{visible.map(row => <article key={row.id} className="admin-design">
               <div className="admin-design-artwork">
-                <WallpaperCanvas lazy showLoadingSkeleton={false} schedule={sampleSchedule} template={{ ...communityWallpaperStyle, id: row.id, device: 'mobile', image: row.preview }}
-                  resolution={artworkCardSize} className="block w-full h-auto" label={`${row.title} preview`} />
+                <WallpaperCanvas lazy showLoadingSkeleton={false} schedule={sampleSchedule} template={{ ...communityWallpaperStyle, id: row.id, device, image: row.preview, scheduleLayout: previewLayout }}
+                  resolution={artworkCardSize(device)} className="block w-full h-auto" label={`${row.title} preview`} />
                 <span className={`admin-status ${row.status === 'published' ? 'admin-status-published' : ['in_review', 'needs_changes'].includes(row.status) ? 'admin-status-draft' : ''}`}>{statuses[row.status]}</span>
               </div>
               <div className="admin-design-footer">
                 <div className="admin-design-info">
                   <h2 title={row.title}>{row.title}</h2>
-                  <div className="admin-design-meta"><DesignCardDevices devices={['mobile']} /><span className="text-muted">Community</span></div>
+                  <div className="admin-design-meta"><span className="text-muted">Community</span><DesignCardDevices devices={[device]} /></div>
                 </div>
+                <DesignCardStats
+                  downloads={row.status === 'published' ? downloads[`community-${row.id}`] : undefined}
+                  hearts={row.status === 'published' ? likes[`community-${row.id}`]?.count : undefined}
+                />
                   {row.status !== 'publishing' && <details className="creator-card-actions admin-design-actions" onToggle={event => { if (event.currentTarget.open) placeCardMenu(event.currentTarget); }} onBlur={event => {
                     if (!event.currentTarget.contains(event.relatedTarget)) event.currentTarget.open = false;
                   }} onKeyDown={event => {
@@ -224,14 +275,19 @@ function CreatorWorkspace({ profile, onProfileChange, googlePhoto, onSignOut, si
                   }}>
                     <summary aria-label={`Actions for ${row.title}`}><MoreVertical size={20} aria-hidden="true" /></summary>
                     <div className="creator-card-menu" onClick={event => { event.currentTarget.parentElement.open = false; }}>
-                      {row.status === 'published' ? <Link to={`${CREATOR_PATH}/community-${row.id}?device=mobile`}><ArrowUpRight size={16} aria-hidden="true" />View design</Link> : <>
-                        <button type="button" disabled={saving || loading} onClick={() => { setConfirmDelete(null); setEditing(row); }}><Pencil size={16} aria-hidden="true" />Edit</button>
+                      {row.status === 'published' ? <button type="button" aria-haspopup="dialog" onClick={event => {
+                        event.currentTarget.closest('details').querySelector('summary').focus();
+                        setViewing(row);
+                      }}><Eye size={16} aria-hidden="true" />View</button> : <>
+                        <button type="button" disabled={saving || loading} onClick={() => { setConfirmDelete(null); setEditing(row); }}>
+                          {row.status === 'needs_changes' ? <TriangleAlert className="creator-review-warning-icon" size={16} aria-hidden="true" /> : <Pencil size={16} aria-hidden="true" />}
+                          Edit{row.status === 'needs_changes' && <span className="sr-only">, changes requested</span>}
+                        </button>
                         <button type="button" className="creator-danger" disabled={saving || loading} onClick={() => setConfirmDelete(row.id)}><Trash2 size={16} aria-hidden="true" />Delete</button>
                       </>}
                     </div>
                   </details>}
               </div>
-                {row.reviewNote && <p className="creator-review-note">{row.reviewNote}</p>}
                 {confirmDelete === row.id && <div className="creator-row-actions">
                   <p>Delete this artwork?</p>
                   <button className="creator-link" type="button" disabled={saving} onClick={() => setConfirmDelete(null)}>Cancel</button>
@@ -246,17 +302,43 @@ function CreatorWorkspace({ profile, onProfileChange, googlePhoto, onSignOut, si
       onProfileChange(next);
       showProfile(false);
     }} />}
-    {editing !== undefined && <SubmissionDialog editing={editing} busy={saving} setBusy={setSaving} onClose={() => setEditing(undefined)} onSaved={() => {
+    {viewing && <CreatorDialog heading={viewing.title} onClose={() => setViewing(null)} previewDevice={device}>
+      <div className="design-preview-body">
+        <div className="admin-design-artwork creator-design-view-artwork">
+          <WallpaperCanvas schedule={sampleSchedule} template={{ ...communityWallpaperStyle, id: viewing.id, device, image: viewing.preview, scheduleLayout: previewLayout }}
+            resolution={artworkCardSize(device)} label={`${viewing.title} preview`} />
+          <span className="admin-status admin-status-published">{statuses[viewing.status]}</span>
+        </div>
+      </div>
+      <footer className="creator-design-view-meta">
+        <div className="creator-design-view-collection">
+          <span className="text-muted">Community</span>
+          <DesignCardDevices devices={[device]} />
+        </div>
+        <DesignCardStats downloads={downloads[`community-${viewing.id}`]} hearts={likes[`community-${viewing.id}`]?.count} />
+      </footer>
+    </CreatorDialog>}
+    {choosingDevice && <BackgroundDeviceDialog device={device} onClose={() => setChoosingDevice(false)} onContinue={next => {
+      setChoosingDevice(false);
+      setUploadDevice(next);
+      setEditing(null);
+    }} />}
+    {editing !== undefined && <SubmissionDialog editing={editing} device={editing ? editing.device ?? 'mobile' : uploadDevice} busy={saving} setBusy={setSaving} onClose={() => setEditing(undefined)} onSaved={submission => {
       setEditing(undefined);
+      if (!editing) { setDevice(uploadDevice); setPreviewLayout('stacked'); }
       setNotice(editing ? 'Changes submitted for review.' : 'Submitted for review.');
       setFilter('all');
       setQuery('');
-      void loadRows();
+      if (rows) {
+        request.current?.abort();
+        setRows(current => [submission, ...current.filter(row => row.id !== submission.id)]);
+        setLoading(false);
+      } else void loadRows();
     }} />}
   </div>;
 }
 
-function CreatorDialog({ heading, busy, onClose, children, className = '' }) {
+function CreatorDialog({ heading, busy, onClose, children, className = '', previewDevice }) {
   const dialog = useRef(null);
   const title = useRef(null);
 
@@ -264,29 +346,40 @@ function CreatorDialog({ heading, busy, onClose, children, className = '' }) {
     const node = dialog.current;
     const trigger = document.activeElement;
     node.showModal();
-    title.current?.focus();
+    title.current?.focus({ preventScroll: true });
     return () => {
       node.close();
-      if (trigger instanceof HTMLElement && trigger.isConnected) trigger.focus();
+      if (trigger instanceof HTMLElement && trigger.isConnected) trigger.focus({ preventScroll: true });
     };
   }, []);
 
-  return <dialog ref={dialog} className={`creator-dialog ${className}`} aria-labelledby="creator-dialog-title" onCancel={event => {
+  const resolution = deviceResolutions[previewDevice];
+  return <dialog ref={dialog} className={previewDevice ? 'design-preview-dialog creator-design-view' : `creator-dialog ${className}`} data-device={previewDevice} data-orientation={previewDevice === 'tablet' ? 'portrait' : undefined} style={resolution && { '--design-preview-ratio': resolution.width / resolution.height }} aria-labelledby="creator-dialog-title" onClick={event => {
+    if (previewDevice && event.target === event.currentTarget) onClose();
+  }} onCancel={event => {
     if (event.target !== event.currentTarget) return;
     event.preventDefault();
     if (!busy) onClose();
   }}>
     <header>
       <h2 id="creator-dialog-title" ref={title} tabIndex={-1}>{heading}</h2>
-      <button type="button" className="creator-dialog-close" aria-label="Close dialog" disabled={busy} onClick={onClose}><X size={20} aria-hidden="true" /></button>
+      <button type="button" className={previewDevice ? 'template-modal-control' : 'creator-dialog-close'} aria-label="Close dialog" disabled={busy} onClick={onClose}><X size={20} aria-hidden="true" /></button>
     </header>
     {children}
   </dialog>;
 }
 
-function SubmissionDialog({ editing, busy, setBusy, onClose, onSaved }) {
+function SubmissionDialog({ editing, device, busy, setBusy, onClose, onSaved }) {
+  const needsChanges = editing?.status === 'needs_changes';
   return <CreatorDialog heading={editing ? 'Edit design' : 'Upload design'} busy={busy} onClose={onClose} className="creator-upload-dialog">
-    <SubmissionForm editing={editing} busy={busy} setBusy={setBusy} onCancel={onClose} onSaved={onSaved} />
+    {(needsChanges || editing?.reviewNote) && <section className="creator-review-warning" aria-labelledby="creator-review-warning-title">
+      <TriangleAlert size={18} aria-hidden="true" />
+      <div>
+        <h3 id="creator-review-warning-title">{needsChanges ? 'Changes requested' : 'Reviewer feedback'}</h3>
+        <p>{editing.reviewNote || 'The reviewer did not leave a note.'}</p>
+      </div>
+    </section>}
+    <SubmissionForm editing={editing} device={device} busy={busy} setBusy={setBusy} onCancel={onClose} onSaved={onSaved} />
   </CreatorDialog>;
 }
 
@@ -355,7 +448,10 @@ function CreatorProfileDialog({ profile, googlePhoto, onClose, onSaved }) {
   </CreatorDialog>;
 }
 
-function SubmissionForm({ editing, busy, setBusy, onCancel, onSaved }) {
+function SubmissionForm({ editing, device, busy, setBusy, onCancel, onSaved }) {
+  const resolution = deviceResolutions[device];
+  const ratio = resolution.width / resolution.height;
+  const [submitting, setSubmitting] = useState(false);
   const [source, setSource] = useState(null);
   const [cropping, setCropping] = useState(false);
   const [prepared, setPrepared] = useState(null);
@@ -408,35 +504,23 @@ function SubmissionForm({ editing, busy, setBusy, onCancel, onSaved }) {
       fileInput.current?.focus();
       return;
     }
+    setSubmitting(true);
     setBusy(true);
     try {
-      const change = editing ? { action: 'update', revision: editing.revision } : { action: 'create' };
-      await submissionsRequest({
+      const change = editing ? { action: 'update', revision: editing.revision } : { action: 'create', device };
+      const { submission } = await submissionsRequest({
         ...change, id: submissionId.current, title, rights, aiGenerated,
         ...(prepared && { image: prepared.image }),
       });
-      onSaved();
+      onSaved(submission);
     } catch (error) { setError(error.message); }
-    finally { setBusy(false); }
+    finally { setSubmitting(false); setBusy(false); }
   }
 
   const hasArtwork = Boolean(prepared || editing);
   return <>
     <form className="creator-form" onSubmit={submit} aria-busy={busy}>
       <div className="creator-form-fields">
-        <div className="creator-file" onDragOver={event => event.preventDefault()} onDrop={event => {
-          event.preventDefault();
-          const [file] = event.dataTransfer.files;
-          if (!busy && file) void openCrop(file);
-        }}>
-          <input className="sr-only" id="creator-artwork" ref={fileInput} type="file" aria-describedby="creator-file-help" accept="image/jpeg,image/png,image/webp" disabled={busy} onChange={pick} />
-          <label className="creator-file-target" htmlFor="creator-artwork">
-            <ImagePlus size={21} aria-hidden="true" />
-            <strong>{hasArtwork ? 'Replace image' : <>Choose<span className="creator-drop-hint"> or drop</span> an image</>}</strong>
-            <span id="creator-file-help">JPG, PNG or WebP · up to 10 MB</span>
-          </label>
-          {prepared && <button type="button" className="creator-link" disabled={busy} onClick={() => openCrop(prepared.file)}>Crop again</button>}
-        </div>
         <label className="creator-field">Design name<input required maxLength={80} className="field-input" placeholder="e.g. Moonlit Garden" value={title} disabled={busy} onChange={event => setTitle(event.target.value)} /></label>
         <label className="creator-ai-setting">
           <span><strong id="creator-ai-label">Label as AI-generated</strong><small id="creator-ai-help">Turn this on if any part of the image was generated with AI.</small></span>
@@ -449,15 +533,29 @@ function SubmissionForm({ editing, busy, setBusy, onCancel, onSaved }) {
         </div>
         {error && <p className="creator-error" role="alert">{error}</p>}
       </div>
-      <figure className="creator-preview">
-        {prepared ? <WallpaperCanvas schedule={schedule} template={createCustomBackground(prepared.preview)} resolution={mobileResolution} label="Artwork with a sample class schedule" /> :
-          editing ? <img src={editing.preview} referrerPolicy="no-referrer" alt="Current submitted artwork" width="1080" height="2400" /> :
-            <div className="creator-preview-placeholder" aria-hidden="true"><Images size={24} /></div>}
-        <figcaption>{prepared ? 'Wallpaper preview' : editing ? 'Current artwork' : 'Mobile preview'}</figcaption>
+      <figure className="creator-preview" style={{ '--creator-preview-ratio': ratio }} onDragOver={event => event.preventDefault()} onDrop={event => {
+        event.preventDefault();
+        const [file] = event.dataTransfer.files;
+        if (!busy && file) void openCrop(file);
+      }}>
+        <input className="sr-only" id="creator-artwork" ref={fileInput} type="file" aria-describedby={hasArtwork ? undefined : 'creator-file-help'} accept="image/jpeg,image/png,image/webp" disabled={busy} onChange={pick} />
+        <label className={hasArtwork ? 'creator-preview-replace' : 'creator-file-target'} htmlFor="creator-artwork" title={hasArtwork ? 'Change image' : undefined}>
+          <ImagePlus size={20} aria-hidden="true" />
+          {hasArtwork ? <span className="sr-only">Change image</span> : <>
+            <strong>Choose<span className="creator-drop-hint"> or drop</span> an image</strong>
+            <span id="creator-file-help">JPG, PNG or WebP · up to 10 MB</span>
+          </>}
+        </label>
+        {prepared ? <WallpaperCanvas schedule={galleryScheduleFor({})} template={createCustomBackground(prepared.preview, device)} resolution={resolution} label="Artwork with a sample class schedule" /> :
+          editing && <img src={editing.preview} referrerPolicy="no-referrer" alt="Current submitted artwork" width={resolution.width} height={resolution.height} />}
+        <figcaption>
+          {prepared ? 'Wallpaper preview' : editing ? 'Current artwork' : `${deviceLabels[device]} preview`}
+          {prepared && <button type="button" className="creator-link" disabled={busy} onClick={() => openCrop(prepared.file)}>Crop again</button>}
+        </figcaption>
       </figure>
       <footer className="creator-dialog-actions creator-upload-actions">
         <button type="button" className="button-secondary" disabled={busy} onClick={onCancel}>Cancel</button>
-        <button type="submit" className="button-primary" disabled={busy}>{busy ? 'Working…' : editing ? 'Resubmit for review' : 'Submit for review'}</button>
+        <button type="submit" className="button-primary" disabled={busy}>{submitting ? <><LoaderCircle className="animate-spin motion-reduce:animate-none" size={16} aria-hidden="true" />Submitting…</> : editing ? 'Resubmit for review' : 'Submit for review'}</button>
       </footer>
     </form>
     {cropping && source && <ImageCropDialog source={source} background aspectRatio={ratio} busy={busy} error={cropError} onClose={() => {

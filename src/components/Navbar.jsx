@@ -4,7 +4,7 @@ import { ChevronDown, Images, LogOut } from 'lucide-react';
 import BrandMark from './BrandMark.jsx';
 import MakerBanner from './MakerBanner.jsx';
 import SocialLinks from './SocialLinks.jsx';
-import { SUBMIT_DESIGN_PATH } from '../../shared/seo.js';
+import { CREATOR_PATH, SUBMIT_DESIGN_PATH } from '../../shared/seo.js';
 import CreatorAvatar from '../pages/Creator/CreatorAvatar.jsx';
 
 function subscribeToScroll(onChange) {
@@ -34,6 +34,7 @@ function scrollToLandingTarget(id) {
 export default function Navbar() {
   const { pathname } = useLocation();
   const isHome = pathname === '/';
+  const showHomeLink = pathname !== CREATOR_PATH && pathname !== `${CREATOR_PATH}/`;
   const scrolled = useSyncExternalStore(subscribeToScroll, hasScrolled, () => false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [creatorAccount, setCreatorAccount] = useState(null);
@@ -132,7 +133,7 @@ export default function Navbar() {
     event.preventDefault();
     navigateTo(event.currentTarget.hash.slice(1));
   }
-  const sectionLinks = [['how-it-works', 'How it works'], ['collections', 'Collections'], ['faq', 'FAQs']].map(([id, label]) => <Link key={id} to={isHome ? `#${id}` : `/#${id}`} onClick={isHome ? handleSectionClick : () => setMenuOpen(false)}>{label}</Link>);
+  const sectionLinks = [['how-it-works', 'How it works'], ['collections', 'Collections'], ['community', 'Community'], ['faq', 'FAQs']].map(([id, label]) => <Link key={id} to={isHome ? `#${id}` : `/#${id}`} onClick={isHome ? handleSectionClick : () => setMenuOpen(false)}>{label}</Link>);
   return (
     <header className={`site-header${menuOpen ? ' mobile-menu-open' : ''}${isHome ? ` site-header-home${!scrolled ? ' is-at-top' : ''}` : ''}`}>
       <div className="page-wrap site-header-inner">
@@ -145,9 +146,9 @@ export default function Navbar() {
         }}>
           <BrandMark /> SchedSnap
         </Link>
-        <nav className="landing-nav" aria-label="Main navigation">
+        {(isHome || showHomeLink) && <nav className="landing-nav" aria-label="Main navigation">
           {isHome ? sectionLinks : <Link to="/">Home</Link>}
-        </nav>
+        </nav>}
         {creatorAccount && <div className="site-account">
           <details ref={profile} className="site-profile" onBlur={event => {
             if (event.relatedTarget && !event.currentTarget.contains(event.relatedTarget)) event.currentTarget.open = false;
@@ -178,7 +179,7 @@ export default function Navbar() {
           </button>
           <div id="mobile-section-nav" className="mobile-nav-panel" data-open={menuOpen} inert={!menuOpen}>
             <nav className="mobile-section-links" aria-label="Mobile navigation">
-              <Link to="/" onClick={event => { setMenuOpen(false); if (isHome) { event.preventDefault(); navigateTo('top'); } }}>Home</Link>
+              {showHomeLink && <Link to="/" onClick={event => { setMenuOpen(false); if (isHome) { event.preventDefault(); navigateTo('top'); } }}>Home</Link>}
               {sectionLinks}
             </nav>
             <div className="mobile-menu-footer"><p className="mobile-social-label">Find us on</p><SocialLinks /><MakerBanner /></div>

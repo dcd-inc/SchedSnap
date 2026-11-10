@@ -32,6 +32,7 @@ export function createAdminHandler({ env = process.env, store = createCatalogSto
       if (action === 'session') return response.status(200).json({ authenticated });
       if (!authenticated) return fail(401, 'Sign in to manage designs.');
       if (action === 'creator-submissions') return creatorReview.list(request, response);
+      if (action === 'creator-submission-counts') return creatorReview.counts(response);
       if (action === 'feedback') {
         let options;
         const params = new URL(request.url, 'http://localhost').searchParams;

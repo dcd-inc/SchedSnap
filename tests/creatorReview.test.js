@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { createCreatorReview } from '../server/creatorReview.js';
+import { visibleTemplateDevices } from '../shared/templateVisibility.js';
 
 const id = '6db812a3-eabe-4b7f-b9b9-f19e73587e09';
 const revision = '8902a93a-6d29-4bca-8921-66ce071b6e47';
@@ -15,22 +16,23 @@ test('review search filters pending titles and artists before applying paginatio
     const query = parts.join('?');
     assert.match(query, /status in \('in_review', 'publishing'\)/);
     assert.match(query, /strpos\(lower\(title\).*strpos\(lower\(artist\).*order by.*limit/s);
-    assert.deepEqual(values, ['Fern%_&', 'Fern%_&', 25, 24]);
-    return [{ id, title: 'Fern%_&', artist: 'Studio Fern', status: 'in_review', artwork_id: id, revision }];
+    assert.deepEqual(values, ['Fern%_&', 'Fern%_&', 'tablet', 25, 24]);
+    return [{ id, title: 'Fern%_&', artist: 'Studio Fern', status: 'in_review', artwork_id: id, revision, device: 'tablet' }];
   };
   const review = createCreatorReview({ env, db });
   const reply = {};
-  await review.list({ url: '/api/admin?action=creator-submissions&page=2&query=%20Fern%25_%26%20' }, {
+  await review.list({ url: '/api/admin?action=creator-submissions&device=tablet&page=2&query=%20Fern%25_%26%20' }, {
     status(code) { reply.status = code; return this; },
     json(data) { reply.data = data; },
   });
   assert.equal(called, true);
   assert.equal(reply.status, 200);
   assert.equal(reply.data.submissions[0].id, id);
+  assert.equal(reply.data.submissions[0].device, 'tablet');
   assert.equal(reply.data.hasMore, false);
 });
 
-function fixture({ templates = [], failWrite = false } = {}) {
+function fixture({ templates = [], failWrite = false, device } = {}) {
   let status = 'in_review';
   const calls = [];
   const db = async (parts, ...values) => {
@@ -39,7 +41,7 @@ function fixture({ templates = [], failWrite = false } = {}) {
     if (sql.includes("set status = 'publishing'")) {
       assert.deepEqual(values, [id, revision]);
       status = 'publishing';
-      return [{ id, title: 'Fern at dusk', artist: 'Studio Fern', artwork_id: id, ai_generated: true }];
+      return [{ id, title: 'Fern at dusk', artist: 'Studio Fern', artwork_id: id, ai_generated: true, device }];
     }
     if (sql.includes("set status = 'published'")) {
       assert.equal(status, 'publishing');
@@ -92,6 +94,16 @@ test('approval publishes a mobile-only catalog design credited to the creator', 
   assert.equal(templates[0].aiGenerated, true);
   assert.match(templates[0].image, /\/image\/upload\//);
   assert.equal(calls.length, 2);
+});
+
+test('tablet and laptop approvals publish only the submitted device variant', async () => {
+  for (const device of ['tablet', 'laptop']) {
+    const review = fixture({ device });
+    assert.equal((await review.decide('approve')).status, 200);
+    const [template] = review.state().templates;
+    assert.deepEqual(visibleTemplateDevices(template), [device]);
+    assert.deepEqual(template.deviceImages, { [device]: template.image });
+  }
 });
 
 test('approval retries use the existing catalog record and a failed write stays retryable', async () => {

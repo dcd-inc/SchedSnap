@@ -5,6 +5,8 @@ import { z } from 'zod';
 import { cloudConfigured } from '../server/catalogStore.js';
 import { cloudImageApi, cloudTimestamp, creatorArtworkId, creatorArtworkPreview, signedArtworkParams } from '../server/creatorArtwork.js';
 import { MAX_IMAGE_BYTES } from '../shared/uploadLimits.js';
+import { templateDevices } from '../shared/templateVisibility.js';
+import { deviceResolutions } from '../src/assets/wallpaperPresets.js';
 
 const limit = 20;
 const maxUploadsPerHour = 12;
@@ -21,7 +23,7 @@ const avatarValue = z.union([
 ]).nullable().optional();
 const mutation = z.discriminatedUnion('action', [
   z.strictObject({ action: z.literal('profile'), creatorName: z.string().trim().min(1).max(60).optional(), avatar: avatarValue }),
-  z.strictObject({ action: z.literal('create'), id, ...metadata, image }),
+  z.strictObject({ action: z.literal('create'), id, ...metadata, image, device: z.enum(templateDevices).default('mobile') }),
   z.strictObject({ action: z.literal('update'), id, revision: id, ...metadata, image: image.optional() }),
   z.strictObject({ action: z.literal('delete'), id, revision: id }),
 ]);
@@ -53,16 +55,18 @@ export function createCreatorSubmissionsHandler({ env = process.env, fetcher = f
     return {
       id: row.id, title: row.title, artist: row.artist, status: row.status,
       aiGenerated: row.ai_generated ?? null,
-      reviewNote: row.review_note, updatedAt: row.updated_at, revision: row.revision,
+      device: row.device ?? 'mobile',
+      reviewNote: row.review_note, createdAt: row.created_at, updatedAt: row.updated_at, revision: row.revision,
       preview: creatorArtworkPreview(row.artwork_id, env),
     };
   }
 
-  async function upload(artworkId, { bytes, format }) {
+  async function upload(artworkId, { bytes, format }, device) {
+    const { width, height } = deviceResolutions[device];
     const fields = signed({
       public_id: creatorArtworkId(artworkId), type: 'authenticated', timestamp: cloudTimestamp(),
       allowed_formats: 'jpg,jpeg,png,webp', overwrite: 'false', format: 'jpg',
-      transformation: 'c_limit,h_2400,w_1080/f_jpg,q_90',
+      transformation: `c_limit,h_${height},w_${width}/f_jpg,q_90`,
     });
     const body = new FormData();
     for (const [key, value] of Object.entries(fields)) body.set(key, value);
@@ -76,8 +80,8 @@ export function createCreatorSubmissionsHandler({ env = process.env, fetcher = f
     if (result.type !== 'authenticated' || result.public_id !== creatorArtworkId(artworkId) || result.format !== 'jpg') {
       throw new Error('Unexpected artwork upload response.');
     }
-    if (!result.width || !result.height || Math.abs(result.width / result.height - 0.45) > 0.01) {
-      throw new RequestError(400, 'Crop the artwork to fit the phone preview.');
+    if (!result.width || !result.height || Math.abs(result.width / result.height - width / height) > 0.01) {
+      throw new RequestError(400, 'Crop the artwork to fit the selected device.');
     }
   }
 
@@ -158,8 +162,9 @@ export function createCreatorSubmissionsHandler({ env = process.env, fetcher = f
       if (request.method === 'GET') {
         const rows = await sql`select * from schedsnap_creator.submissions where owner_id = ${owner}
           order by updated_at desc limit ${limit}`;
+        response.status(200).json({ submissions: rows.map(view) });
         await cleanRetired(owner);
-        return response.status(200).json({ submissions: rows.map(view) });
+        return;
       }
 
       const bytes = change.image ? imageBytes(change.image) : null;
@@ -180,10 +185,10 @@ export function createCreatorSubmissionsHandler({ env = process.env, fetcher = f
 
       const artworkId = bytes ? randomUUID() : null;
       if (artworkId) {
-        const existing = await sql.begin(async tx => {
+        const { existing, device } = await sql.begin(async tx => {
           await lockOwner(tx);
           const row = await findEditable(tx);
-          if (change.action === 'create' && row) return row;
+          if (change.action === 'create' && row) return { existing: row };
           if (change.action === 'create') {
             const [{ count }] = await tx`select count(*) from schedsnap_creator.submissions where owner_id = ${owner}`;
             if (Number(count) >= limit) throw new RequestError(409, 'You can have up to 20 submissions. Delete one before submitting another.');
@@ -192,10 +197,10 @@ export function createCreatorSubmissionsHandler({ env = process.env, fetcher = f
             where owner_id = ${owner} and created_at > now() - interval '1 hour'`;
           if (Number(count) >= maxUploadsPerHour) throw new RequestError(429, 'You have uploaded several designs. Try again in an hour.');
           await tx`insert into schedsnap_creator.artwork (id, owner_id) values (${artworkId}, ${owner})`;
-          return null;
+          return { device: change.action === 'create' ? change.device : row.device ?? 'mobile' };
         });
         if (existing) return response.status(200).json({ submission: view(existing) });
-        await upload(artworkId, bytes);
+        await upload(artworkId, bytes, device);
       }
 
       const submission = await sql.begin(async tx => {
@@ -224,12 +229,12 @@ export function createCreatorSubmissionsHandler({ env = process.env, fetcher = f
               artwork_id = ${artworkId ?? row.artwork_id}, ai_generated = ${change.aiGenerated}, status = 'in_review', review_note = null,
               revision = ${revision}, updated_at = now(), rights_accepted_at = now()
               where id = ${row.id} and owner_id = ${owner} returning *`
-          : await tx`insert into schedsnap_creator.submissions (id, owner_id, artwork_id, title, artist, revision, ai_generated)
-              values (${change.id}, ${owner}, ${artworkId}, ${change.title}, ${creatorName}, ${revision}, ${change.aiGenerated}) returning *`;
+          : await tx`insert into schedsnap_creator.submissions (id, owner_id, artwork_id, title, artist, revision, ai_generated, device)
+              values (${change.id}, ${owner}, ${artworkId}, ${change.title}, ${creatorName}, ${revision}, ${change.aiGenerated}, ${change.device}) returning *`;
         return saved;
       });
+      response.status(200).json({ submission: submission ? view(submission) : null });
       await cleanRetired(owner);
-      return response.status(200).json({ submission: submission ? view(submission) : null });
     } catch (error) {
       if (error instanceof RequestError) return fail(error.status, error.message);
       return fail(503, 'Could not reach creator submissions. Please try again.');

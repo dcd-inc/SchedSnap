@@ -1,4 +1,6 @@
 import { ChevronDown } from 'lucide-react';
+import { Link } from 'react-router';
+import { SUBMIT_DESIGN_PATH } from '../../shared/seo.js';
 import FeedbackDialog from './FeedbackDialog.jsx';
 
 const questions = [
@@ -22,13 +24,17 @@ const questions = [
     question: 'Which devices are supported?',
     answer: 'Create class schedule wallpapers for your phone, tablet, or laptop. Select your device in the creator, then download the PNG and set it as your wallpaper.',
   },
+  {
+    question: 'How do I submit a design to the Community collection?',
+    answer: <>Open <Link className="text-link" to={SUBMIT_DESIGN_PATH}>Submit a design</Link>, sign in with Google, and upload a wallpaper you have permission to share. Track your submission in My designs. If it’s approved, it will appear in the Community collection with your creator name credited.</>,
+  },
 ];
 
 export default function Faq() {
   return <section id="faq" className="page-wrap landing-faq" aria-labelledby="faq-heading">
     <div className="faq-intro">
       <h2 id="faq-heading">Frequently asked questions</h2>
-      <p>What to know before making your class schedule wallpaper.</p>
+      <p>What to know about making class schedule wallpapers and sharing your designs.</p>
     </div>
     <div className="faq-questions">
       {questions.map(({ question, answer }) => <details key={question} name="landing-faq">
