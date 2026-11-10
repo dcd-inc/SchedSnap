@@ -10,6 +10,11 @@
     { "source": "/wallpapers/laptop", "destination": "/services/schedule-wallpaper?device=laptop", "permanent": true }
   ],
   "headers": [
+    { "source": "/(.*)", "headers": [
+      { "key": "Content-Security-Policy", "value": "base-uri 'self'; object-src 'none'; frame-ancestors 'self'" },
+      { "key": "X-Content-Type-Options", "value": "nosniff" },
+      { "key": "X-Frame-Options", "value": "SAMEORIGIN" }
+    ] },
     { "source": "/submit-design", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, follow" }] },
     { "source": "/admin/:path*", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }] },
     { "source": "/api/:path*", "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }] },
