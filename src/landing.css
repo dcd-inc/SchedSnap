@@ -21,16 +21,50 @@
   .landing-nav a:focus-visible { outline: 2px solid var(--color-ink); outline-offset: 4px; }
   #faq { scroll-margin-top: 84px; }
   .landing-contribute { background: white; scroll-margin-top: calc(84px + var(--iab-h, 0px)); }
-  .landing-contribute-inner { display: grid; max-width: 1120px; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); align-items: center; gap: clamp(24px, 4vw, 56px); padding-block: clamp(32px, 5vw, 56px); }
-  .landing-contribute-visual { width: min(100%, 560px); height: auto; justify-self: center; }
-  .landing-contribute h2 { font-size: clamp(1.5rem, 3vw, 2.4rem); font-weight: 650; line-height: 1.15; letter-spacing: -.025em; text-wrap: balance; }
-  .landing-contribute p { max-width: 38ch; margin-top: 8px; color: var(--color-muted); font-size: clamp(.875rem, calc(.625rem + .625vw), 1.125rem); line-height: 1.5; }
-  .landing-contribute .community-guide-actions { margin-top: 18px; }
-  @media (max-width: 640px) {
-    .landing-contribute-inner { grid-template-columns: 1fr; text-align: center; }
-    .landing-contribute-visual { grid-row: 1; max-width: 360px; }
+  .landing-contribute-inner {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    align-items: center;
+    width: min(100% - 3rem, 1120px);
+    margin-inline: auto;
+    min-height: clamp(360px, 40vw, 490px);
+    overflow: hidden;
+    padding: clamp(24px, 6vw, 76px);
+    border-radius: 12px;
+    background: #191c23;
+    color: white;
+  }
+  .landing-contribute-visual,
+  .landing-contribute-inner::before { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .landing-contribute-visual { z-index: -2; }
+  .landing-contribute-visual img { width: 100%; height: 100%; object-fit: cover; }
+  .landing-contribute-inner::before {
+    z-index: -1;
+    content: "";
+    background: linear-gradient(90deg, rgb(17 19 26 / 95%), rgb(17 19 26 / 82%) 39%, rgb(17 19 26 / 12%) 88%);
+  }
+  .landing-contribute-copy { max-width: 31rem; }
+  .landing-contribute h2 { font-size: clamp(2rem, 4.6vw, 4rem); font-weight: 700; line-height: 1.02; letter-spacing: -.05em; }
+  .landing-contribute p { max-width: 38ch; margin-top: 14px; font-size: clamp(1rem, 1.6vw, 1.25rem); line-height: 1.5; }
+  .landing-contribute .community-guide-actions { margin-top: 24px; }
+  .landing-contribute .button-primary { background: white; color: var(--color-ink); }
+  .landing-contribute .button-primary:hover { background: var(--color-soft); }
+  .landing-contribute .button-secondary { border-color: rgb(255 255 255 / 52%); background: transparent; color: white; }
+  .landing-contribute .button-secondary:hover { background: rgb(255 255 255 / 12%); }
+  .landing-contribute a:focus-visible { outline: 2px solid white; outline-offset: 4px; }
+  @media (max-width: 767px) {
+    .landing-contribute-inner {
+      width: 100%;
+      min-height: 440px;
+      padding: 48px clamp(24px, 7vw, 48px);
+      border-radius: 0;
+    }
+    .landing-contribute-inner::before { background: rgb(12 14 20 / 51%); }
+    .landing-contribute-copy { justify-self: center; text-align: center; }
+    .landing-contribute h2 { font-size: clamp(2rem, 8.5vw, 3rem); }
     .landing-contribute p { margin-inline: auto; }
-    .landing-contribute .community-guide-actions { justify-content: center; }
+    .landing-contribute .community-guide-actions { flex-direction: column; gap: 8px; }
   }
   .community-guide-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
   .community-guide { max-width: 1000px; padding-block: clamp(32px, 7vw, 80px); }
