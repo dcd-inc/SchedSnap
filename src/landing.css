@@ -200,6 +200,14 @@
   .faq-questions details[open] summary svg { transform: rotate(180deg); }
   .faq-questions summary:focus-visible { outline: 2px solid var(--color-ink); outline-offset: 4px; }
   .faq-questions details > p { max-width: 65ch; padding-bottom: 24px; font-size: clamp(1rem, calc(0.9375rem + 0.2vw), 1.125rem); line-height: 1.7; color: var(--color-muted); text-align: left; }
+  .faq-questions details[data-faq-motion]::details-content { block-size: var(--faq-answer-size, auto); overflow: clip; contain: layout; }
+  .faq-questions details[data-faq-motion="closed"]::details-content { block-size: 0; }
+  /* Keep the answer visible through the collapse, then restore native hiding. */
+  .faq-questions details[data-faq-motion="open"]::details-content { content-visibility: visible; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .faq-questions summary svg { transition: transform 240ms ease; }
+  }
   .landing-footer { position: relative; isolation: isolate; background: #faf6ef; }
   .landing-footer::before { content: ''; position: absolute; inset-inline: 0; top: 0; height: clamp(32px, 5vw, 72px); background: var(--color-paper); backdrop-filter: blur(6px); -webkit-mask-image: linear-gradient(to bottom, #000, transparent); mask-image: linear-gradient(to bottom, #000, transparent); pointer-events: none; }
   .maker-banner { position: relative; }

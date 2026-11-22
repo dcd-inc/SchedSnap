@@ -1,6 +1,8 @@
 import { ChevronDown } from 'lucide-react';
+import { useRef } from 'react';
 import { Link } from 'react-router';
 import { SUBMIT_DESIGN_PATH } from '../../shared/seo.js';
+import { gsap, useGSAP } from '../lib/animation.js';
 import FeedbackDialog from './FeedbackDialog.jsx';
 
 const questions = [
@@ -31,12 +33,59 @@ const questions = [
 ];
 
 export default function Faq() {
+  const questionsRef = useRef(null);
+
+  useGSAP(() => {
+    if (!CSS.supports('selector(::details-content)')) return;
+
+    const motion = gsap.matchMedia();
+    motion.add('(prefers-reduced-motion: no-preference)', (context) => {
+      const items = Array.from(questionsRef.current.children);
+      const animateToggle = context.add(null, ({ currentTarget: item }) => {
+        const answer = item.lastElementChild;
+        const isOpen = item.open;
+        const currentHeight = parseFloat(getComputedStyle(item, '::details-content').blockSize);
+
+        if (!isOpen && answer.contains(document.activeElement)) item.firstElementChild.focus();
+        answer.inert = !isOpen;
+        item.dataset.faqMotion = 'open';
+
+        gsap.fromTo(item, { '--faq-answer-size': `${currentHeight}px` }, {
+          '--faq-answer-size': `${isOpen ? answer.getBoundingClientRect().height : 0}px`,
+          duration: isOpen ? 0.34 : 0.24,
+          ease: isOpen ? 'power2.out' : 'power2.inOut',
+          overwrite: true,
+          onComplete: () => {
+            item.dataset.faqMotion = isOpen ? 'open' : 'closed';
+            item.style.removeProperty('--faq-answer-size');
+            answer.inert = false;
+          },
+        });
+      });
+
+      for (const item of items) {
+        item.dataset.faqMotion = item.open ? 'open' : 'closed';
+        item.addEventListener('toggle', animateToggle);
+      }
+
+      return () => {
+        for (const item of items) {
+          item.removeEventListener('toggle', animateToggle);
+          delete item.dataset.faqMotion;
+          item.lastElementChild.inert = false;
+        }
+      };
+    });
+
+    return () => motion.revert();
+  }, { scope: questionsRef });
+
   return <section id="faq" className="page-wrap landing-faq" aria-labelledby="faq-heading">
     <div className="faq-intro">
       <h2 id="faq-heading">Frequently asked questions</h2>
       <p>What to know about making class schedule wallpapers and sharing your designs.</p>
     </div>
-    <div className="faq-questions">
+    <div className="faq-questions" ref={questionsRef}>
       {questions.map(({ question, answer }) => <details key={question} name="landing-faq">
         <summary><h3>{question}</h3><ChevronDown size={20} aria-hidden="true" /></summary>
         <p>{answer}</p>
